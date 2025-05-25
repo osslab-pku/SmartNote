@@ -1,0 +1,12 @@
+repo_name,rn_name,commit_coverage,info_entropy,tokens_count,automated_readability_index,dale_chall_readability,entity_percent,project_domain
+GyulyVGC/sniffnet,4_zero_shot_promp_rn,0.0,2.2641333326355917,699,11.2,10.35,3.400309119010819,Application_Software
+GyulyVGC/sniffnet,3_conventional_changelog,0.0390625,0.7219280948873623,303,77.7,17.27,0.5405405405405406,Application_Software
+GyulyVGC/sniffnet,1_smartdraft_random_ctx,0.9453125,2.1268299639446213,2590,26.3,11.87,0.0343878954607978,Application_Software
+GyulyVGC/sniffnet,1_smartdraft_rn_expository,0.9375,2.2083835445600584,2805,49.3,12.37,0.0,Application_Software
+GyulyVGC/sniffnet,1_smartdraft_rn_automatic,0.9296875,2.347948911826241,3260,31.5,11.48,0.2733900364520049,Application_Software
+GyulyVGC/sniffnet,1_smartdraft_no_rn_composer,0.4453125,2.214812224859865,1400,25.9,12.31,0.489853044086774,Application_Software
+GyulyVGC/sniffnet,0_original_rn,0.46875,1.0214554656116666,694,35.9,15.46,0.5369127516778524,Application_Software
+GyulyVGC/sniffnet,1_smartdraft_rn_automatic_no_llm,0.5859375,2.2269608142719166,1455,46.1,12.39,0.0,Application_Software
+GyulyVGC/sniffnet,1_smartdraft_rn_descriptive,0.6015625,2.256650413125812,1833,29.6,11.73,0.05515719801434087,Application_Software
+GyulyVGC/sniffnet,1_smartdraft_rn_persuasive,0.6015625,2.218542602257215,1882,27.5,11.38,0.05302226935312832,Application_Software
+GyulyVGC/sniffnet,2_deeprelease_rn,0.546875,0.9132829641650988,222,20.1,13.02,6.122448979591836,Application_Software

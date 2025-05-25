@@ -1,0 +1,2647 @@
+Changes between 2.21.13 and 2.21.14
+================================================================================
+
+COMMITS
+--------------------------------------------------------------------------------
+
+Commit: 87695aac09a8407f99bbb37426b77b6c63f62bcc
+Author: Col-E
+Date: 2022-03-29 08:19:22+00:00
+Message: Minor cleanup
+----------------------------------------
+
+Commit: cd7cb1d0a474a5a9dc4f262b3f784e0051e8c863
+Author: Hcat
+Date: 2022-04-08 01:09:33+00:00
+Message: Add Jadx mapping file support
+----------------------------------------
+
+Commit: 7666f6b1fddde64bc1a3e8ee9dcec350e5f92259
+Author: Matt
+Date: 2022-04-08 08:08:32+00:00
+Message: Merge pull request #516 from AdminHcat/master
+
+Add Jadx mapping file to mapping file dialog
+----------------------------------------
+
+Commit: 8c9229f6d1f4a8dcc7acb7383175dfce1c2217b8
+Author: Toshimichi0915
+Date: 2022-04-20 07:33:35+00:00
+Message: Use utf-8 instead of default charset in FileViewport text mode
+----------------------------------------
+
+Commit: 4409f96c75feda66ba57851d57cf2b5e0111ea7d
+Author: Matt
+Date: 2022-04-20 09:51:44+00:00
+Message: Merge pull request #524 from Toshimichi0915/utf8
+
+Use utf-8 instead of default charset in FileViewport text mode
+----------------------------------------
+
+Commit: bae536ec2ab2d8a8542a3e689239ac9da45eb4f2
+Author: Nowilltolife
+Date: 2022-07-08 21:35:19+00:00
+Message: Fixed typo
+----------------------------------------
+
+Commit: 49462adb248e3cdf0d4d0fffb3a3f44bed59cf8b
+Author: Matt
+Date: 2022-07-08 21:39:11+00:00
+Message: Merge pull request #557 from Nowilltolife/patch-1
+
+Fixed typo in PRIMER.md
+----------------------------------------
+
+Commit: 2e137646d9cc7066e20e2261d6768f207a23be6b
+Author: HyrKG.cn
+Date: 2022-08-12 14:18:42+00:00
+Message: Add new zh-cn translations and optimize old translations
+----------------------------------------
+
+Commit: bcabb86fda125a043e8dc7449ead11194ce604c9
+Author: Joe
+Date: 2022-08-26 12:27:03+00:00
+Message: Introduce "itf" suffix to invokestatic calls
+----------------------------------------
+
+Commit: c2ef9bb6c76ee15f0f35fe73863f6438043d9344
+Author: Joe
+Date: 2022-08-26 12:31:37+00:00
+Message: Add missing javadoc comments
+----------------------------------------
+
+Commit: dde08b9c7de451b488203540a17035e5e3a70898
+Author: Matt
+Date: 2022-08-27 10:39:07+00:00
+Message: Merge pull request #591 from Earthcomputer/fix-454
+
+Introduce "itf" suffix to invokestatic calls
+----------------------------------------
+
+Commit: d0e9987979b30dd20a7a20f9f15bfdad87f125f5
+Author: Matt
+Date: 2022-08-27 11:53:56+00:00
+Message: Merge pull request #587 from HyrKG/master
+
+Add new zh-cn translations and optimize old translations
+----------------------------------------
+
+Commit: e24e82d4c5f117118af36e01284305c4f449a4c9
+Author: dependabot[bot]
+Date: 2022-09-01 23:49:16+00:00
+Message: chore(deps): bump jsoup from 1.14.3 to 1.15.3
+
+Bumps [jsoup](https://github.com/jhy/jsoup) from 1.14.3 to 1.15.3.
+- [Release notes](https://github.com/jhy/jsoup/releases)
+- [Changelog](https://github.com/jhy/jsoup/blob/master/CHANGES)
+- [Commits](https://github.com/jhy/jsoup/compare/jsoup-1.14.3...jsoup-1.15.3)
+
+---
+updated-dependencies:
+- dependency-name: org.jsoup:jsoup
+  dependency-type: direct:production
+...
+
+Signed-off-by: dependabot[bot] <support@github.com>
+----------------------------------------
+
+Commit: ca07fc05038ec8697a863bf471bdd244adbfb8bb
+Author: Matt
+Date: 2022-09-02 03:35:25+00:00
+Message: Merge pull request #599 from Col-E/dependabot/maven/org.jsoup-jsoup-1.15.3
+----------------------------------------
+
+Commit: 3877b1a840b0fd8bfc4c3b655f5f9e080e621f65
+Author: Matt
+Date: 2023-03-24 18:50:18+00:00
+Message: Add video explaining where the development stuff is
+----------------------------------------
+
+Commit: 55582f02f8fde14f13e92c625e009b9cf05265e5
+Author: dependabot[bot]
+Date: 2023-08-18 17:46:20+00:00
+Message: chore(deps): bump com.google.guava:guava from 31.1-jre to 32.0.0-jre
+
+Bumps [com.google.guava:guava](https://github.com/google/guava) from 31.1-jre to 32.0.0-jre.
+- [Release notes](https://github.com/google/guava/releases)
+- [Commits](https://github.com/google/guava/commits)
+
+---
+updated-dependencies:
+- dependency-name: com.google.guava:guava
+  dependency-type: direct:production
+...
+
+Signed-off-by: dependabot[bot] <support@github.com>
+----------------------------------------
+
+Commit: e9765d4e02991a9dd48e67c9572a063c14552e7c
+Author: Matt
+Date: 2023-08-18 18:47:49+00:00
+Message: Merge pull request #662 from Col-E/dependabot/maven/com.google.guava-guava-32.0.0-jre
+
+chore(deps): bump com.google.guava:guava from 31.1-jre to 32.0.0-jre
+----------------------------------------
+
+Commit: 65361a130b2767c7c78fa8aa4ddb5034cc696b8d
+Author: Max Demydenko
+Date: 2024-01-01 13:40:41+00:00
+Message: fix: infinite spin
+----------------------------------------
+
+Commit: d2e9dc723fbf6fe3f6a94577291c132a7054c5cd
+Author: Matt
+Date: 2024-01-01 22:45:23+00:00
+Message: Merge pull request #756 from demkom58/master
+
+fix: infinite loading on launch
+----------------------------------------
+
+Commit: b7f607ab329b769e4fe01bb13adb0f2bd827f9d4
+Author: Andrew Lemmingson
+Date: 2024-01-02 05:14:49+00:00
+Message: fix: Fixed misspelling of "parameters" in some instruction parsers
+----------------------------------------
+
+Commit: 7e0add91f65bc01f28a3e216e82c59049e92501d
+Author: Matt
+Date: 2024-01-02 17:14:06+00:00
+Message: Merge pull request #757 from NoSkillPureAndy/master
+
+fix: Fixed misspelling of "parameters" in some instruction parsers
+----------------------------------------
+
+Commit: e5669cd90c7ea6e1a3851ff9065ee687cf7bdeb9
+Author: Matt
+Date: 2024-04-27 06:30:09+00:00
+Message: Remove auto-updater, make it very obvious that 4.X is the next intended version for users to migrate to
+----------------------------------------
+
+
+PULL REQUESTS
+--------------------------------------------------------------------------------
+
+PR #775: JDK 22 migraiton
+Author: xxDark
+Merged at: 2024-04-27 04:38:56+00:00
+URL: https://github.com/Col-E/Recaf/pull/775
+Description:
+## What's new
+
+Migrate to JDK 22. Blocked on https://github.com/Col-E/LL-Java-Zip/pull/28
+
+Pros:
+- Newest API
+- Can upgrade JavaFX
+
+Cons:
+- Not LTS
+- Will probably have to do something about these nasty warns in `ReflectUtil` at some point..
+- Some people would cry
+
+----------------------------------------
+
+PR #773: [BUGFIX] Remove .class.class extension
+Author: 036
+Merged at: 2024-04-03 03:35:19+00:00
+URL: https://github.com/Col-E/Recaf/pull/773
+Description:
+## What's fixed
+
+Exported class files are no longer exported as .class.class 
+----------------------------------------
+
+PR #769: Update zh_CN.lang
+Author: Enaium
+Merged at: 2024-03-23 04:01:30+00:00
+URL: https://github.com/Col-E/Recaf/pull/769
+Description:
+## What's new
+
+* Update zh_CN from the new en_US
+
+## What's fixed
+
+* Nothing
+
+----------------------------------------
+
+PR #768: Feature/dependency catalogs
+Author: Amejonah1200
+Merged at: 2024-03-17 23:03:37+00:00
+URL: https://github.com/Col-E/Recaf/pull/768
+Description:
+## What's new
+
+* Update Gradle Wrapper to 8.6
+* Migrate from dependencies.gradle to gradle/libs.versions.toml to reduce the need to recompile if versions are changed
+
+----------------------------------------
+
+PR #765: Fix jitpack
+Author: crazycat256
+Merged at: 2024-02-18 19:21:18+00:00
+URL: https://github.com/Col-E/Recaf/pull/765
+Description:
+## What's new
+
+Nothing
+
+## What's fixed
+
+Jitpack
+By default, jitpack uses java 8, this PR adds a `jitpack.yml` that tells it to use java 17
+
+----------------------------------------
+
+PR #761: perf: 2x speed up reading contents from zip/jar
+Author: 1fxe
+Merged at: 2024-01-19 12:15:23+00:00
+URL: https://github.com/Col-E/Recaf/pull/761
+Description:
+This specific optimistaions is targeted towards JVM Class resources, in is isAsmCompliantClass we would read the class and check for custom attributes, then we would read the class again to build the class info in this pr I merged the functionality of isASMCompliantClass into ClassBuilderAppender
+
+## What's new
+
+
+Before ~ 5746ms on a 100mb jar
+![image](https://github.com/Col-E/Recaf/assets/37674069/77849f1e-ca96-4a2e-a91b-b881fe14a56a)
+
+After ~ 2823ms
+![image](https://github.com/Col-E/Recaf/assets/37674069/8fb2d48e-4649-4c64-8a94-6cc171e56104)
+
+----------------------------------------
+
+PR #759: Add VineFlower decompiler and refactor DecompilerResult and JvmDecompiler
+Author: therathatter
+Merged at: 2024-01-14 11:48:19+00:00
+URL: https://github.com/Col-E/Recaf/pull/759
+Description:
+None
+----------------------------------------
+
+PR #722: 4x: Added new JASM 2.0 
+Author: jumanji144
+Merged at: 2024-01-07 22:38:33+00:00
+URL: https://github.com/Col-E/Recaf/pull/722
+Description:
+## What's new
+
+- Assembler ability for:
+ - classes
+ - methods
+ - fields
+ - annotations
+
+## Checklist
+Basic jasm integration
+- [x] Class
+- [x] Method
+- [x] Field
+- [ ]  Annotation (partially implemented)
+Editing Tools
+- [x] Auto indent
+- [x] Analysis
+ - [x] Frame view on each instructions
+- [ ] Auto complete
+- [ ] Context menus 
+
+## Preview 
+![image](https://github.com/Col-E/Recaf/assets/55301990/e7868889-a351-4ce7-9966-8b220f6acd9a)
+
+----------------------------------------
+
+PR #757: fix: Fixed misspelling of "parameters" in some instruction parsers
+Author: PurelyAndy
+Merged at: 2024-01-02 17:14:06+00:00
+URL: https://github.com/Col-E/Recaf/pull/757
+Description:
+## What's new
+
+* Nada
+
+## What's fixed
+
+* A bunch of instruction parsers had the word "parameters" misspelled as "paramters" in an error except for one, which was already fixed 3 years ago.
+
+----------------------------------------
+
+PR #756: fix: infinite loading on launch
+Author: demkom58
+Merged at: 2024-01-01 22:45:23+00:00
+URL: https://github.com/Col-E/Recaf/pull/756
+Description:
+## What's fixed
+
+- infinite loading on launch
+
+----------------------------------------
+
+PR #747: fix: hierarchy pane not being scrollable
+Author: Jydett
+Merged at: 2023-12-08 05:41:20+00:00
+URL: https://github.com/Col-E/Recaf/pull/747
+Description:
+## What's fixed
+When a class has a lot of children, the hierarchy pane is not scrollable, before:
+![image](https://github.com/Col-E/Recaf/assets/48091696/5ad20f89-9e7f-41b6-a56f-88fb1fa762d4)
+
+
+After:
+![image](https://github.com/Col-E/Recaf/assets/48091696/dc6104ac-961f-4a2a-92de-b823286c5b9c)
+
+Somehow, the custom implementation of TreeItem was preventing the layout to compute correctly the size of the tree ¯\_(ツ)_/¯
+
+
+----------------------------------------
+
+PR #735: Bump some libs version for dev3 branch
+Author: meiMingle
+Merged at: 2023-10-21 07:07:15+00:00
+URL: https://github.com/Col-E/Recaf/pull/735
+Description:
+None
+----------------------------------------
+
+PR #734: Fix: unescape string using apache library
+Author: lanvent
+Merged at: 2023-10-21 07:07:03+00:00
+URL: https://github.com/Col-E/Recaf/pull/734
+Description:
+## What's fixed
+
+* fix unescape bug in #723.
+
+----------------------------------------
+
+PR #665: [Feature] Added New Input Boxes for Config Options and Wrote Swedish Translation
+Author: phazon0
+Merged at: 2023-08-29 07:35:40+00:00
+URL: https://github.com/Col-E/Recaf/pull/665
+Description:
+## What's new
+
+#### Added Input Boxes for Config Options
+- Introduced a number input box for Config Options that uses type Integer.
+- Implemented a String input box for Config Options that uses type String.
+![bild](https://github.com/Col-E/Recaf/assets/74259011/b6eba629-c636-4248-9aa8-26b03b1cec84)
+
+#### Translated recaf to Swedish
+- Wrote a Swedish translation of Recafs dialogoues
+
+## What's fixed
+
+- No more "Unsupporrted java.lang.Integer/java.lang.String
+
+----------------------------------------
+
+PR #664: Fix toolchain resolving
+Author: virustotalop
+Merged at: 2023-08-23 20:06:35+00:00
+URL: https://github.com/Col-E/Recaf/pull/664
+Description:
+## What's new
+
+* N/A
+
+## What's fixed
+
+* Automatic toolchain resolving
+
+----------------------------------------
+
+PR #662: chore(deps): bump com.google.guava:guava from 31.1-jre to 32.0.0-jre
+Author: dependabot[bot]
+Merged at: 2023-08-18 18:47:50+00:00
+URL: https://github.com/Col-E/Recaf/pull/662
+Description:
+Bumps [com.google.guava:guava](https://github.com/google/guava) from 31.1-jre to 32.0.0-jre.
+<details>
+<summary>Release notes</summary>
+<p><em>Sourced from <a href="https://github.com/google/guava/releases">com.google.guava:guava's releases</a>.</em></p>
+<blockquote>
+<h2>32.0.0</h2>
+<h3>Maven</h3>
+<pre lang="xml"><code>&lt;dependency&gt;
+  &lt;groupId&gt;com.google.guava&lt;/groupId&gt;
+  &lt;artifactId&gt;guava&lt;/artifactId&gt;
+  &lt;version&gt;32.0.0-jre&lt;/version&gt;
+  &lt;!-- or, for Android: --&gt;
+  &lt;version&gt;32.0.0-android&lt;/version&gt;
+&lt;/dependency&gt;
+</code></pre>
+<h3>Jar files</h3>
+<ul>
+<li><a href="https://repo1.maven.org/maven2/com/google/guava/guava/32.0.0-jre/guava-32.0.0-jre.jar">32.0.0-jre.jar</a></li>
+<li><a href="https://repo1.maven.org/maven2/com/google/guava/guava/32.0.0-android/guava-32.0.0-android.jar">32.0.0-android.jar</a></li>
+</ul>
+<p>Guava requires <a href="https://github.com/google/guava/wiki/UseGuavaInYourBuild#what-about-guavas-own-dependencies">one runtime dependency</a>, which you can download here:</p>
+<ul>
+<li><a href="https://repo1.maven.org/maven2/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar">failureaccess-1.0.1.jar</a></li>
+</ul>
+<h3>Javadoc</h3>
+<ul>
+<li><a href="http://guava.dev/releases/32.0.0-jre/api/docs/">32.0.0-jre</a></li>
+<li><a href="http://guava.dev/releases/32.0.0-android/api/docs/">32.0.0-android</a></li>
+</ul>
+<h3>JDiff</h3>
+<ul>
+<li><a href="http://guava.dev/releases/32.0.0-jre/api/diffs/">32.0.0-jre vs. 31.1-jre</a></li>
+<li><a href="http://guava.dev/releases/32.0.0-android/api/diffs/">32.0.0-android vs. 31.1-android</a></li>
+<li><a href="http://guava.dev/releases/32.0.0-android/api/androiddiffs/">32.0.0-android vs. 32.0.0-jre</a></li>
+</ul>
+<h3>Changelog</h3>
+<h4>Security fixes</h4>
+<ul>
+<li>Reimplemented <code>Files.createTempDir</code> and <code>FileBackedOutputStream</code> to further address CVE-2020-8908 (<a href="https://redirect.github.com/google/guava/issues/4011">#4011</a>) and CVE-2023-2976 (<a href="https://redirect.github.com/google/guava/issues/2575">#2575</a>). (feb83a1c8f)</li>
+</ul>
+<p>While CVE-2020-8908 was officially closed when we deprecated <code>Files.createTempDir</code> in <a href="https://github.com/google/guava/releases/tag/v30.0">Guava 30.0</a>, we've heard from users that even recent versions of Guava have been listed as vulnerable in <em>other</em> databases of security vulnerabilities. In response, we've reimplemented the method (and the very rarely used <code>FileBackedOutputStream</code> class, which had a similar issue) to eliminate the insecure behavior entirely. This change could technically affect users in a number of different ways (discussed under &quot;Incompatible changes&quot; below), but in practice, the only problem users are likely to encounter is with Windows. If you are using those APIs under Windows, you should skip 32.0.0 and go straight to <a href="https://github.com/google/guava/releases/tag/v32.0.1">32.0.1</a> which fixes the problem. (Unfortunately, we didn't think of the Windows problem until after the release. And while we <a href="https://github.com/google/guava#important-warnings">warn that <code>common.io</code> in particular may not work under Windows</a>, we didn't intend to regress support.) Sorry for the trouble.</p>
+<h4>Incompatible changes</h4>
+<p>Although this release bumps Guava's major version number, it makes <strong>no binary-incompatible changes to the <code>guava</code> artifact</strong>.</p>
+<p>One change could cause issues for Widows users, and a few other changes could cause issues for users in more usual situations:</p>
+<ul>
+<li><strong>The new implementations of <code>Files.createTempDir</code> and <code>FileBackedOutputStream</code> <a href="https://redirect.github.com/google/guava/issues/6535">throw an exception under Windows</a>.</strong> This is fixed in <a href="https://github.com/google/guava/releases/tag/v32.0.1">32.0.1</a>. Sorry for the trouble.</li>
+<li><code>guava-gwt</code> now <a href="https://redirect.github.com/google/guava/issues/6627">requires</a> GWT <a href="https://github.com/gwtproject/gwt/releases/tag/2.10.0">2.10.0</a>.</li>
+<li>This release makes a binary-incompatible change to a <code>@Beta</code> API in the <strong>separate artifact</strong> <code>guava-testlib</code>. Specifically, we changed the return type of <code>TestingExecutors.sameThreadScheduledExecutor</code> to <code>ListeningScheduledExecutorService</code>. The old return type was a package-private class, which caused the Kotlin compiler to produce warnings. (dafaa3e435)</li>
+</ul>
+<!-- raw HTML omitted -->
+</blockquote>
+<p>... (truncated)</p>
+</details>
+<details>
+<summary>Commits</summary>
+<ul>
+<li>See full diff in <a href="https://github.com/google/guava/commits">compare view</a></li>
+</ul>
+</details>
+<br />
+
+
+[![Dependabot compatibility score](https://dependabot-badges.githubapp.com/badges/compatibility_score?dependency-name=com.google.guava:guava&package-manager=maven&previous-version=31.1-jre&new-version=32.0.0-jre)](https://docs.github.com/en/github/managing-security-vulnerabilities/about-dependabot-security-updates#about-compatibility-scores)
+
+Dependabot will resolve any conflicts with this PR as long as you don't alter it yourself. You can also trigger a rebase manually by commenting `@dependabot rebase`.
+
+[//]: # (dependabot-automerge-start)
+[//]: # (dependabot-automerge-end)
+
+---
+
+<details>
+<summary>Dependabot commands and options</summary>
+<br />
+
+You can trigger Dependabot actions by commenting on this PR:
+- `@dependabot rebase` will rebase this PR
+- `@dependabot recreate` will recreate this PR, overwriting any edits that have been made to it
+- `@dependabot merge` will merge this PR after your CI passes on it
+- `@dependabot squash and merge` will squash and merge this PR after your CI passes on it
+- `@dependabot cancel merge` will cancel a previously requested merge and block automerging
+- `@dependabot reopen` will reopen this PR if it is closed
+- `@dependabot close` will close this PR and stop Dependabot recreating it. You can achieve the same result by closing it manually
+- `@dependabot show <dependency name> ignore conditions` will show all of the ignore conditions of the specified dependency
+- `@dependabot ignore this major version` will close this PR and stop Dependabot creating any more for this major version (unless you reopen the PR or upgrade to it yourself)
+- `@dependabot ignore this minor version` will close this PR and stop Dependabot creating any more for this minor version (unless you reopen the PR or upgrade to it yourself)
+- `@dependabot ignore this dependency` will close this PR and stop Dependabot creating any more for this dependency (unless you reopen the PR or upgrade to it yourself)
+You can disable automated security fix PRs for this repo from the [Security Alerts page](https://github.com/Col-E/Recaf/network/alerts).
+
+</details>
+----------------------------------------
+
+PR #660: Update some libraries and Gradle
+Author: Amejonah1200
+Merged at: 2023-08-10 22:38:48+00:00
+URL: https://github.com/Col-E/Recaf/pull/660
+Description:
+```yml
+asmVersion: 9.4 -> 9.5
+junitVersion: 5.9.1 -> 5.10.0
+commons-io: 2.11.0 -> 2.13.0
+gson: 2.9.1 -> 2.10.1
+javassist: 3.28.0-GA -> 3.29.2-GA
+jelf: 0.7.0 -> 0.9.0
+picocli: 4.6.3 -> 4.7.4
+
+gradle: 7.4 -> 8.2.1
+```
+----------------------------------------
+
+PR #645: Fix exception caused by mismatching types when setting default decompiler
+Author: leonardvdj
+Merged at: 2023-05-03 23:41:35+00:00
+URL: https://github.com/Col-E/Recaf/pull/645
+Description:
+## What's fixed
+
+* Fix IllegalArgumentException by setting decompiler field to decompiler name.
+----------------------------------------
+
+PR #629: update german translations
+Author: outsparkled
+Merged at: 2022-12-31 14:10:18+00:00
+URL: https://github.com/Col-E/Recaf/pull/629
+Description:
+## What's new
+
+The en_US file has gained a lot of new keys since the last German translation, this PR adds translations for said new keys.
+
+## What's fixed
+
+Several keys were improperly translated (e.g. informal capitalization, "sie" -> "Sie"), these have been fixed.
+----------------------------------------
+
+PR #625: JASM update with support for records
+Author: jumanji144
+Merged at: 2022-12-16 04:30:39+00:00
+URL: https://github.com/Col-E/Recaf/pull/625
+Description:
+## What's new
+
+* Records
+* Deprecated attribute
+* Attributes moved to `Attributable` interface
+
+## What's fixed
+
+* Some inconsistent attribute parsing
+
+----------------------------------------
+
+PR #623: Fix ow2 handle cast towards HandleInfo
+Author: jumanji144
+Merged at: 2022-11-22 21:15:47+00:00
+URL: https://github.com/Col-E/Recaf/pull/623
+Description:
+## What's fixed
+
+* Fix ow2 handle cast towards HandleInfo
+
+----------------------------------------
+
+PR #622: Fix args causing null pointer exception
+Author: jumanji144
+Merged at: 2022-11-22 20:59:43+00:00
+URL: https://github.com/Col-E/Recaf/pull/622
+Description:
+## What's fixed
+
+* Fix indy args causing npe
+
+----------------------------------------
+
+PR #611: Assembler class editing
+Author: jumanji144
+Merged at: 2022-11-20 22:00:15+00:00
+URL: https://github.com/Col-E/Recaf/pull/611
+Description:
+## What's planned
+- Full class assembler editing
+- Full analysis of multiple members in the same context
+
+## What's done
+- [x] Full class editing skeleton
+- [x] Analysis engine for more than one member
+
+## To consider
+- Current prs like: #606 need to be adapted if this gets merged
+- The context menu logic needs to be tweaked as well
+
+Both of these points tie into the problem of needed a 3rd info when getting AST groups via position: the member owner.
+
+### Site notes
+Current draft will cause exception because alot of around things depend on the member being a method
+
+![image](https://user-images.githubusercontent.com/55301990/202911500-dac2aa71-0903-488f-9a08-84537eca3310.png)
+
+----------------------------------------
+
+PR #553: Implemented BYTECODE option for diff-viewer
+Author: jumanji144
+Merged at: 2022-06-30 12:25:49+00:00
+URL: https://github.com/Col-E/Recaf/pull/553
+Description:
+![diff-demo](https://user-images.githubusercontent.com/55301990/176454479-4a7b9f52-f6a8-4196-a642-d93f38e71c87.png)
+
+### Changes
+- Implemented Bytecode diff-viewer
+- New config value for changing between the two
+- Internal: partial implementation of class level assembly
+----------------------------------------
+
+PR #615: Add some Chinese translations
+Author: ksqeib
+Merged at: 2022-11-06 23:42:49+00:00
+URL: https://github.com/Col-E/Recaf/pull/615
+Description:
+## What's new
+
+* Just added some Chinese translations
+
+----------------------------------------
+
+PR #606: Better suggestions in ASM Editor
+Author: Amejonah1200
+Merged at: 2022-10-14 09:27:55+00:00
+URL: https://github.com/Col-E/Recaf/pull/606
+Description:
+![image](https://user-images.githubusercontent.com/21371686/195811875-d5d8a902-23be-4fde-a946-f87dcf79cbe6.png)
+
+- [x] Sort suggestions based on proximity of the findings: yer > **y**our/proj**e**ct/**r**ight
+----------------------------------------
+
+PR #614: Fixed `NaNf` not being a constant
+Author: jumanji144
+Merged at: 2022-10-31 16:43:49+00:00
+URL: https://github.com/Col-E/Recaf/pull/614
+Description:
+## What's fixed
+- Fixed NaNf not being a constant
+
+----------------------------------------
+
+PR #610: Fix assembler escaping issues
+Author: jumanji144
+Merged at: 2022-10-14 09:27:55+00:00
+URL: https://github.com/Col-E/Recaf/pull/610
+Description:
+## What's fixed
+- `EscapeUtil` method name is now `escapeNonValid` instead of `escapeSpace`
+- Escaping of parser tropes like: `"` or `//`
+- Added escaping to some instructions who didn't have it
+
+----------------------------------------
+
+PR #609: Fix zoom in PannableImageView
+Author: jumanji144
+Merged at: 2022-10-14 09:27:55+00:00
+URL: https://github.com/Col-E/Recaf/pull/609
+Description:
+## What's fixed
+- Fixed small zoom bug that sometimes occurs
+
+----------------------------------------
+
+PR #596: Blinking no more in workspace outline for files and classes
+Author: Amejonah1200
+Merged at: 2022-08-31 00:41:07+00:00
+URL: https://github.com/Col-E/Recaf/pull/596
+Description:
+## What's fixed
+- https://github.com/Col-E/recaf-3x-issues/issues/106
+
+Co-authored by: @xxDark 
+----------------------------------------
+
+PR #601: Fix local classes and add outer method in breadcrumbs
+Author: Amejonah1200
+Merged at: 2022-09-09 06:47:00+00:00
+URL: https://github.com/Col-E/Recaf/pull/601
+Description:
+## What's new
+
+* Outer method in breadcrumbs
+* Anonymous and method local classes in class outline
+
+## What's fixed
+
+* https://github.com/Col-E/recaf-3x-issues/issues/110
+
+----------------------------------------
+
+PR #603: Providing more information about dependency downloads
+Author: Amejonah1200
+Merged at: 2022-09-13 05:20:14+00:00
+URL: https://github.com/Col-E/Recaf/pull/603
+Description:
+Addressing https://github.com/Col-E/recaf-3x-issues/issues/114
+![grafik](https://user-images.githubusercontent.com/50181314/189761704-4ecb827c-ce65-4549-9b38-60b07043d4aa.png)
+
+
+----------------------------------------
+
+PR #564: 3X: Suggestion menu for assembler
+Author: jumanji144
+Merged at: 2022-09-08 11:10:16+00:00
+URL: https://github.com/Col-E/Recaf/pull/564
+Description:
+None
+----------------------------------------
+
+PR #599: chore(deps): bump jsoup from 1.14.3 to 1.15.3
+Author: dependabot[bot]
+Merged at: 2022-09-02 03:35:26+00:00
+URL: https://github.com/Col-E/Recaf/pull/599
+Description:
+Bumps [jsoup](https://github.com/jhy/jsoup) from 1.14.3 to 1.15.3.
+<details>
+<summary>Release notes</summary>
+<p><em>Sourced from <a href="https://github.com/jhy/jsoup/releases">jsoup's releases</a>.</em></p>
+<blockquote>
+<h2>jsoup 1.15.3</h2>
+<p><strong>jsoup 1.15.3</strong> is out now, and includes a security fix for potential XSS attacks, along with other bug fixes and improvements, including more descriptive validation error messages.</p>
+<p>Details:</p>
+<ul>
+<li><a href="https://github.com/jhy/jsoup/security/advisories/GHSA-gp7f-rwcx-9369">Security advisory</a></li>
+<li><a href="https://jsoup.org/news/release-1.15.3">Release notes</a></li>
+<li><a href="https://jsoup.org/download">Download</a></li>
+</ul>
+<p>jsoup 1.15.2 is out now with a bunch of <a href="https://jsoup.org/news/release-1.15.2">improvements and bug fixes</a>.</p>
+<p>jsoup 1.15.1 is out now with a bunch of <a href="https://jsoup.org/news/release-1.15.1">improvements and bug fixes</a>.</p>
+</blockquote>
+</details>
+<details>
+<summary>Changelog</summary>
+<p><em>Sourced from <a href="https://github.com/jhy/jsoup/blob/master/CHANGES">jsoup's changelog</a>.</em></p>
+<blockquote>
+<p>jsoup changelog</p>
+<p>Release 1.15.3 [2022-Aug-24]</p>
+<ul>
+<li>
+<p>Security: fixed an issue where the jsoup cleaner may incorrectly sanitize crafted XSS attempts if
+SafeList.preserveRelativeLinks is enabled.
+<a href="https://github.com/jhy/jsoup/security/advisories/GHSA-gp7f-rwcx-9369">https://github.com/jhy/jsoup/security/advisories/GHSA-gp7f-rwcx-9369</a></p>
+</li>
+<li>
+<p>Improvement: the Cleaner will preserve the source position of cleaned elements, if source tracking is enabled in the
+original parse.</p>
+</li>
+<li>
+<p>Improvement: the error messages output from Validate are more descriptive. Exceptions are now ValidationExceptions
+(extending IllegalArgumentException). Stack traces do not include the Validate class, to make it simpler to see
+where the exception originated. Common validation errors including malformed URLs and empty selector results have
+more explicit error messages.</p>
+</li>
+<li>
+<p>Bugfix: the DataUtil would incorrectly read from InputStreams that emitted reads less than the requested size. This
+lead to incorrect results when parsing from chunked server responses, for e.g.
+<a href="https://github-redirect.dependabot.com/jhy/jsoup/issues/1807">jhy/jsoup#1807</a></p>
+</li>
+<li>
+<p>Build Improvement: added implementation version and related fields to the jar manifest.
+<a href="https://github-redirect.dependabot.com/jhy/jsoup/issues/1809">jhy/jsoup#1809</a></p>
+</li>
+</ul>
+<p>*** Release 1.15.2 [2022-Jul-04]</p>
+<ul>
+<li>
+<p>Improvement: added the ability to track the position (line, column, index) in the original input source from where
+a given node was parsed. Accessible via Node.sourceRange() and Element.endSourceRange().
+<a href="https://github-redirect.dependabot.com/jhy/jsoup/pull/1790">jhy/jsoup#1790</a></p>
+</li>
+<li>
+<p>Improvement: added Element.firstElementChild(), Element.lastElementChild(), Node.firstChild(), Node.lastChild(),
+as convenient accessors to those child nodes and elements.</p>
+</li>
+<li>
+<p>Improvement: added Element.expectFirst(cssQuery), which is just like Element.selectFirst(), but instead of returning
+a null if there is no match, will throw an IllegalArgumentException. This is useful if you want to simply abort
+processing if an expected match is not found.</p>
+</li>
+<li>
+<p>Improvement: when pretty-printing HTML, doctypes are emitted on a newline if there is a preceding comment.
+<a href="https://github-redirect.dependabot.com/jhy/jsoup/pull/1664">jhy/jsoup#1664</a></p>
+</li>
+<li>
+<p>Improvement: when pretty-printing, trim the leading and trailing spaces of textnodes in block tags when possible,
+so that they are indented correctly.
+<a href="https://github-redirect.dependabot.com/jhy/jsoup/issues/1798">jhy/jsoup#1798</a></p>
+</li>
+<li>
+<p>Improvement: in Element#selectXpath(), disable namespace awareness. This makes it possible to always select elements
+by their simple local name, regardless of whether an xmlns attribute was set.
+<a href="https://github-redirect.dependabot.com/jhy/jsoup/issues/1801">jhy/jsoup#1801</a></p>
+</li>
+<li>
+<p>Bugfix: when using the readToByteBuffer method, such as in Connection.Response.body(), if the document has not
+already been parsed and must be read fully, and there is any maximum buffer size being applied, only the default
+internal buffer size is read.
+<a href="https://github-redirect.dependabot.com/jhy/jsoup/issues/1774">jhy/jsoup#1774</a></p>
+</li>
+</ul>
+<!-- raw HTML omitted -->
+</blockquote>
+<p>... (truncated)</p>
+</details>
+<details>
+<summary>Commits</summary>
+<ul>
+<li><a href="https://github.com/jhy/jsoup/commit/c5964172763e1495786ad584c368ac3346d0ca8c"><code>c596417</code></a> [maven-release-plugin] prepare release jsoup-1.15.3</li>
+<li><a href="https://github.com/jhy/jsoup/commit/d2d9ac341dbd48e75c6dd09c571216a81939604f"><code>d2d9ac3</code></a> Changelog for URL cleaner improvement</li>
+<li><a href="https://github.com/jhy/jsoup/commit/4ea768d96b3d232e63edef9594766d44597b3882"><code>4ea768d</code></a> Strip control characters from URLs when resolving absolute URLs</li>
+<li><a href="https://github.com/jhy/jsoup/commit/985f1fe13aa0b1d37c6f6f17a948fc240a03dcef"><code>985f1fe</code></a> Include help link for malformed URLs</li>
+<li><a href="https://github.com/jhy/jsoup/commit/6b67d05d883fdfe0f978d77d219e80324e0a223d"><code>6b67d05</code></a> Improved Validate error messages</li>
+<li><a href="https://github.com/jhy/jsoup/commit/653da57a61dc6fcb5a94efb44f514239bdef8613"><code>653da57</code></a> Normalized API doc link</li>
+<li><a href="https://github.com/jhy/jsoup/commit/5ed84f631e8889abc9b20ebcc898d053d77bb05d"><code>5ed84f6</code></a> Simplified the Test Server startup</li>
+<li><a href="https://github.com/jhy/jsoup/commit/c58112a2eddd630a4f6d76450034c1227ef5f842"><code>c58112a</code></a> Set the read size correctly when capped</li>
+<li><a href="https://github.com/jhy/jsoup/commit/fa13c8066b13f27a92d0057d55bf64e6d66ddff2"><code>fa13c80</code></a> Added jar manifest default implementation entries.</li>
+<li><a href="https://github.com/jhy/jsoup/commit/5b193902029a453b95cfc8850d17e630079cf0a2"><code>5b19390</code></a> Bump maven-resources-plugin from 3.2.0 to 3.3.0 (<a href="https://github-redirect.dependabot.com/jhy/jsoup/issues/1814">#1814</a>)</li>
+<li>Additional commits viewable in <a href="https://github.com/jhy/jsoup/compare/jsoup-1.14.3...jsoup-1.15.3">compare view</a></li>
+</ul>
+</details>
+<br />
+
+
+[![Dependabot compatibility score](https://dependabot-badges.githubapp.com/badges/compatibility_score?dependency-name=org.jsoup:jsoup&package-manager=maven&previous-version=1.14.3&new-version=1.15.3)](https://docs.github.com/en/github/managing-security-vulnerabilities/about-dependabot-security-updates#about-compatibility-scores)
+
+Dependabot will resolve any conflicts with this PR as long as you don't alter it yourself. You can also trigger a rebase manually by commenting `@dependabot rebase`.
+
+[//]: # (dependabot-automerge-start)
+[//]: # (dependabot-automerge-end)
+
+---
+
+<details>
+<summary>Dependabot commands and options</summary>
+<br />
+
+You can trigger Dependabot actions by commenting on this PR:
+- `@dependabot rebase` will rebase this PR
+- `@dependabot recreate` will recreate this PR, overwriting any edits that have been made to it
+- `@dependabot merge` will merge this PR after your CI passes on it
+- `@dependabot squash and merge` will squash and merge this PR after your CI passes on it
+- `@dependabot cancel merge` will cancel a previously requested merge and block automerging
+- `@dependabot reopen` will reopen this PR if it is closed
+- `@dependabot close` will close this PR and stop Dependabot recreating it. You can achieve the same result by closing it manually
+- `@dependabot ignore this major version` will close this PR and stop Dependabot creating any more for this major version (unless you reopen the PR or upgrade to it yourself)
+- `@dependabot ignore this minor version` will close this PR and stop Dependabot creating any more for this minor version (unless you reopen the PR or upgrade to it yourself)
+- `@dependabot ignore this dependency` will close this PR and stop Dependabot creating any more for this dependency (unless you reopen the PR or upgrade to it yourself)
+- `@dependabot use these labels` will set the current labels as the default for future PRs for this repo and language
+- `@dependabot use these reviewers` will set the current reviewers as the default for future PRs for this repo and language
+- `@dependabot use these assignees` will set the current assignees as the default for future PRs for this repo and language
+- `@dependabot use this milestone` will set the current milestone as the default for future PRs for this repo and language
+
+You can disable automated security fix PRs for this repo from the [Security Alerts page](https://github.com/Col-E/Recaf/network/alerts).
+
+</details>
+----------------------------------------
+
+PR #591: Introduce "itf" suffix to invokestatic calls
+Author: Earthcomputer
+Merged at: 2022-08-27 10:39:07+00:00
+URL: https://github.com/Col-E/Recaf/pull/591
+Description:
+## What's new
+
+* Introduced an "itf" suffix to invokestatic calls to preserve the fact that it is calling an interface method, which is required by the JVM verifier.
+
+## What's fixed
+
+* #454 
+
+----------------------------------------
+
+PR #595: Add tab press for indent code in SyntaxArea
+Author: Amejonah1200
+Merged at: 2022-08-29 02:20:26+00:00
+URL: https://github.com/Col-E/Recaf/pull/595
+Description:
+## What's new
+![recaf](https://user-images.githubusercontent.com/50181314/187093162-cf60a6a9-5ab2-4362-87ce-c011caf8e0c3.gif)
+
+https://github.com/Col-E/recaf-3x-issues/issues/102
+It's this feature, but it adds only a `\t` before each line.
+----------------------------------------
+
+PR #576: Add some QoL in class members tab
+Author: Amejonah1200
+Merged at: 2022-08-29 02:20:26+00:00
+URL: https://github.com/Col-E/Recaf/pull/576
+Description:
+## What's new
+- [x] Search field
+- [x] Member type filter
+- [x] Visibility filter
+- [x] Alphabetical sort
+- [x] Visibility sort 
+- [x] Nested/inner class (?)
+- [x] Outer class breadcrumbs
+- [x] Finishing touches
+  - [x] Add copyright notice from Jetbrains
+  - [x] documentation
+  - [x] "Oracle's Java Virtual Machine implementation does not check the consistency of an InnerClasses attribute against a class file representing a class or interface referenced by the attribute. "
+    seems like we need to check cyclic and strange phenomenon caused by obfuscators, just to be safe
+----------------------------------------
+
+PR #588: Add zh-cn translations to dev3
+Author: HyrKG
+Merged at: 2022-08-27 11:52:07+00:00
+URL: https://github.com/Col-E/Recaf/pull/588
+Description:
+None
+----------------------------------------
+
+PR #587: Add new zh-cn translations and optimize old translations
+Author: HyrKG
+Merged at: 2022-08-27 11:53:56+00:00
+URL: https://github.com/Col-E/Recaf/pull/587
+Description:
+None
+----------------------------------------
+
+PR #592: More support for itf aware instructions
+Author: jumanji144
+Merged at: 2022-08-27 10:59:35+00:00
+URL: https://github.com/Col-E/Recaf/pull/592
+Description:
+## What's new
+
+- added `invokestaticinterface`, `invokespecialinterface` for itf support in assembler
+
+## What's fixed
+
+- Method transformers not reading and writing `itf`
+
+----------------------------------------
+
+PR #567: Changing font size
+Author: Amejonah1200
+Merged at: 2022-08-04 17:40:25+00:00
+URL: https://github.com/Col-E/Recaf/pull/567
+Description:
+## What's new
+- Add scrolling with control key and also with a shortcut changing font size
+
+TODO:
+- [x] ~~Hooking into tab closing for removing listener~~
+- [x] Add keyboard shortcuts: #457
+- [x] Use WeakChangeListener instead of a trust chain for removing it
+- [x] Prepare easy Gson TypeAdapter building for Observables
+- [x] Localize config (find a better name for "Decompiler" section
+- [x] Bind FontSize change for other types (Manifest, and simple text)
+  - [x] DiffableTextView
+  - [x] DiffViewPane
+  - [x] BinXML
+----------------------------------------
+
+PR #575: Fix ComboBox translation not updating when changing language
+Author: tth05
+Merged at: 2022-08-01 16:52:03+00:00
+URL: https://github.com/Col-E/Recaf/pull/575
+Description:
+## What's fixed
+
+This fixes combo boxes not updating when changing the language in the settings. The previous change introduced in c30b21c177a01dca2fcc78e85d127b5fd1adb070 seems to be ineffective. The fix is still a bit of a hack, but I couldn't find a better way to force the combo box to refresh without messing with the associated skin.
+Before:
+![before](https://user-images.githubusercontent.com/36999320/182042812-8f2d9fac-957d-4cd1-b2af-4f053b7f9b8e.gif)
+After
+![after](https://user-images.githubusercontent.com/36999320/182042758-a2dbd58e-1c8c-4f51-a511-b39fdffce521.gif)
+:
+----------------------------------------
+
+PR #572: fix: update czech translation
+Author: zlataovce
+Merged at: 2022-08-01 16:51:52+00:00
+URL: https://github.com/Col-E/Recaf/pull/572
+Description:
+## What's new
+
+* updated Czech translation with better grammar
+
+## What's fixed
+
+* translated missing keys
+
+----------------------------------------
+
+PR #571: Add procyon decompiler
+Author: xxDark
+Merged at: 2022-07-31 09:39:05+00:00
+URL: https://github.com/Col-E/Recaf/pull/571
+Description:
+## What's new
+
+Procyon decompiler
+
+----------------------------------------
+
+PR #566: Add constant folding context menu for literals
+Author: Amejonah1200
+Merged at: 2022-07-28 01:45:26+00:00
+URL: https://github.com/Col-E/Recaf/pull/566
+Description:
+## What's new
+- Simple AST evaluation for literals in expressions
+- Ability to convert literals hex-dec-bin
+
+TODO:
+- [x] Remove conversions which are already in the code. Ex. 0x10 in code, remove 0x10 from the context menu.
+- [x] Remove context for double if it's a literal
+- [x] Add short and byte support
+- [x] Fix int/long literals exceeding range and throwing Exception
+![image](https://user-images.githubusercontent.com/50181314/181389871-87b018e2-1b94-442b-a099-e6cbb3300964.png)
+----------------------------------------
+
+PR #560: 3X: Optimized bytecode backed context resolving
+Author: Col-E
+Merged at: 2022-07-17 10:35:31+00:00
+URL: https://github.com/Col-E/Recaf/pull/560
+Description:
+The performance is notably better than the existing Javassist based bytecode backed symbol solver types... but JavaParser's source is incredibly messy and there is a lot of ugly static interdependence on utility classes. ~~That sort of setup cannot be easily extensible, which makes it impossible as is to support all forms of resolution that the standard bundle does~~ Thankfully we can successfully work around it!
+----------------------------------------
+
+PR #562: Audio file visualization / playback
+Author: Col-E
+Merged at: 2022-07-20 09:46:35+00:00
+URL: https://github.com/Col-E/Recaf/pull/562
+Description:
+## What's new
+
+https://user-images.githubusercontent.com/21371686/179505933-553921fe-6921-440e-8e3a-a558b13856c1.mp4
+
+* Support for visualizing audio files _(mp3/m4a/wav)_
+
+Sadly ogg is not supported by the JFX player.
+
+----------------------------------------
+
+PR #557: Fixed typo in PRIMER.md
+Author: jumanji144
+Merged at: 2022-07-08 21:39:11+00:00
+URL: https://github.com/Col-E/Recaf/pull/557
+Description:
+## What's fixed
+
+- Typo
+
+----------------------------------------
+
+PR #556: Added method graph
+Author: jumanji144
+Merged at: 2022-07-08 21:27:10+00:00
+URL: https://github.com/Col-E/Recaf/pull/556
+Description:
+![Preview](https://cdn.discordapp.com/attachments/622276442280951810/995024190019219496/unknown.png)
+
+- Method graph
+
+## What's fixed
+
+- Block generation
+- Correct styling of areas
+
+----------------------------------------
+
+PR #550: Added optional description tooltips to config values
+Author: jumanji144
+Merged at: 2022-06-29 07:45:16+00:00
+URL: https://github.com/Col-E/Recaf/pull/550
+Description:
+## What's new
+
+- Added optional tooltips to config values using the translation key `[conf.[id].description]`
+![Preview](https://user-images.githubusercontent.com/55301990/175776447-91dfb480-ea5b-4b33-a914-50e8237a1094.png)
+
+----------------------------------------
+
+PR #544: Fix name escaping in Assembler
+Author: jumanji144
+Merged at: 2022-06-12 15:47:19+00:00
+URL: https://github.com/Col-E/Recaf/pull/544
+Description:
+## What's new
+- Nothing
+
+## What's fixed
+- The name escaping 
+
+----------------------------------------
+
+PR #537: Integrated work related to plugin UI
+Author: xtherk
+Merged at: 2022-06-10 03:52:51+00:00
+URL: https://github.com/Col-E/Recaf/pull/537
+Description:
+## What's new
+The data used for UI is ready, and the work of the remaining UI window has not begun. 
+> Hate the follow up JavaFX work, Can someone help me finish it. lol
+1. Add CellUpdateListener to allow plugin and script applications to update the context menu's ability.
+2. The prototype of UI is IDEA Plugin
+![image](https://user-images.githubusercontent.com/33031194/169437494-980a31a2-86b5-4ac0-83fd-cbf2e07e08a8.png)
+
+
+## What's fixed
+Fix some plugin related errors
+
+----------------------------------------
+
+PR #539: Assembler context menus for instruction
+Author: jumanji144
+Merged at: 2022-05-24 01:56:06+00:00
+URL: https://github.com/Col-E/Recaf/pull/539
+Description:
+## What's new
+
+- Added context menus for instructions
+
+## What's fixed
+
+- Bugs 🎲 🤔 
+- Annotations not showing up on field
+- Signature not showing up at all
+- Lables not wrapped
+
+----------------------------------------
+
+PR #536: New assembler
+Author: jumanji144
+Merged at: 2022-05-20 21:18:17+00:00
+URL: https://github.com/Col-E/Recaf/pull/536
+Description:
+## What's new
+
+- New assembler
+
+## What's fixed
+
+- Removed ANTLR 
+- Some assembler bugs 🥱 
+
+----------------------------------------
+
+PR #531: Add new script manager
+Author: yapht
+Merged at: 2022-05-07 01:10:08+00:00
+URL: https://github.com/Col-E/Recaf/pull/531
+Description:
+## What's new
+
+* Add a new script manager window to make script management easier
+
+![image](https://user-images.githubusercontent.com/54250528/166721879-745d0fd4-2283-4189-847b-cdf798731a24.png)
+
+----------------------------------------
+
+PR #517: ContentSource refactoring
+Author: Col-E
+Merged at: 2022-04-11 05:57:26+00:00
+URL: https://github.com/Col-E/Recaf/pull/517
+Description:
+## What's new
+
+`ContentSource#onRead` no longer directly dumps classes/files into `Resource` instances. Instead it puts them into a `ContentCollection` instance. This class has fields for:
+
+* normal classes/files
+* various obfuscated/illegal input 
+
+The `ContentSourceListener` has been repurposed to only have a `pre` and `post` operation, where `post` can be used to handle the illegal input. 
+
+---------
+
+At the moment not all forms of illegal input are handled in the UI. The end goal would be to prompt users what they would like to do with different kinds of input if there are conflicts. For most inputs this shouldn't affect end-users dropping in normal jar files and stuff.
+----------------------------------------
+
+PR #524: Use utf-8 instead of default charset in FileViewport text mode
+Author: Toshimichi0915
+Merged at: 2022-04-20 09:51:45+00:00
+URL: https://github.com/Col-E/Recaf/pull/524
+Description:
+## What's fixed
+It's reasonable to show text in UTF-8 instead of system default charset as most java developers use UTF-8.
+This PR fixes encoding issue in text mode.
+[sample.zip](https://github.com/Col-E/Recaf/files/8519355/sample.zip)
+----------------------------------------
+
+PR #519: feat: revamp IO
+Author: xxDark
+Merged at: 2022-04-16 09:37:27+00:00
+URL: https://github.com/Col-E/Recaf/pull/519
+Description:
+## What's new
+
+Revamps IO to allow parallelization in the future
+
+
+----------------------------------------
+
+PR #522: Updated german language translations
+Author: jumanji144
+Merged at: 2022-04-15 08:05:08+00:00
+URL: https://github.com/Col-E/Recaf/pull/522
+Description:
+## Added
+Just a quick german translation push
+
+----------------------------------------
+
+PR #521: Added warning for renaming classes and files (#478)
+Author: jumanji144
+Merged at: 2022-04-15 08:05:08+00:00
+URL: https://github.com/Col-E/Recaf/pull/521
+Description:
+## What's new
+
+* Added a warning for when trying to rename a file or a class to a name that is already present in the resource (#478)
+
+## What's fixed
+
+* No bugs fixed
+
+----------------------------------------
+
+PR #520: Added support Hyperlinking to main class in manifest. (#288)
+Author: jumanji144
+Merged at: 2022-04-15 08:05:08+00:00
+URL: https://github.com/Col-E/Recaf/pull/520
+Description:
+## What's new
+Added support for Hyperlinking to main class in manfiest (as for #288)
+![preview](https://user-images.githubusercontent.com/55301990/163462969-e4869230-25d0-471b-aa77-8bd5e12d2a3b.gif)
+
+## What's fixed
+Nothing fixed
+
+----------------------------------------
+
+PR #514: Fix double backslash before escaped unicode character causing lexing error
+Author: win32kbase
+Merged at: 2022-03-29 08:07:22+00:00
+URL: https://github.com/Col-E/Recaf/pull/514
+Description:
+Fix double backslash before escaped unicode character causing lexing error
+
+## What's fixed
+
+* Fixes https://github.com/Col-E/Recaf/issues/513
+----------------------------------------
+
+PR #516: Add Jadx mapping file to mapping file dialog
+Author: AdminHcat
+Merged at: 2022-04-08 08:08:32+00:00
+URL: https://github.com/Col-E/Recaf/pull/516
+Description:
+## What's new
+
+* Add Jadx mapping file support
+----------------------------------------
+
+PR #511: Fix chinese translations, make it more localized
+Author: xtherk
+Merged at: 2022-04-08 08:07:31+00:00
+URL: https://github.com/Col-E/Recaf/pull/511
+Description:
+## What's fixed
+
+Fix chinese translations, make it more localized
+
+----------------------------------------
+
+
+FILE CHANGES
+--------------------------------------------------------------------------------
+
+File: .mvn/wrapper/MavenWrapperDownloader.java
+Status: removed
+Changes: +0 -117
+Diff:
+@@ -1,117 +0,0 @@
+-/*
+- * Copyright 2007-present the original author or authors.
+- *
+- * Licensed under the Apache License, Version 2.0 (the "License");
+- * you may not use this file except in compliance with the License.
+- * You may obtain a copy of the License at
+- *
+- *      http://www.apache.org/licenses/LICENSE-2.0
+- *
+- * Unless required by applicable law or agreed to in writing, software
+- * distributed under the License is distributed on an "AS IS" BASIS,
+- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+- * See the License for the specific language governing permissions and
+- * limitations under the License.
+- */
+-import java.net.*;
+-import java.io.*;
+-import java.nio.channels.*;
+-import java.util.Properties;
+-
+-public class MavenWrapperDownloader {
+-
+-    private static final String WRAPPER_VERSION = "0.5.6";
+-    /**
+-     * Default URL to download the maven-wrapper.jar from, if no 'downloadUrl' is provided.
+-     */
+-    private static final String DEFAULT_DOWNLOAD_URL = "https://repo.maven.apache.org/maven2/io/takari/maven-wrapper/"
+-        + WRAPPER_VERSION + "/maven-wrapper-" + WRAPPER_VERSION + ".jar";
+-
+-    /**
+-     * Path to the maven-wrapper.properties file, which might contain a downloadUrl property to
+-     * use instead of the default one.
+-     */
+-    private static final String MAVEN_WRAPPER_PROPERTIES_PATH =
+-            ".mvn/wrapper/maven-wrapper.properties";
+-
+-    /**
+-     * Path where the maven-wrapper.jar will be saved to.
+
+----------------------------------------
+
+File: .mvn/wrapper/maven-wrapper.jar
+Status: modified
+Changes: +0 -0
+
+----------------------------------------
+
+File: .mvn/wrapper/maven-wrapper.properties
+Status: modified
+Changes: +4 -4
+Diff:
+@@ -5,14 +5,14 @@
+ # to you under the Apache License, Version 2.0 (the
+ # "License"); you may not use this file except in compliance
+ # with the License.  You may obtain a copy of the License at
+-# 
++#
+ #   http://www.apache.org/licenses/LICENSE-2.0
+-# 
++#
+ # Unless required by applicable law or agreed to in writing,
+
+----------------------------------------
+
+File: PRIMER.md
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -4,7 +4,7 @@
+ 
+ ### General concepts
+ 
+-A basic understanding of the JVM / class file format is _highly_ reccomended before contributing. 
++A basic understanding of the JVM / class file format is _highly_ recommended before contributing. 
+ Here are some articles that should bring you up to speed:
+ 
+  * [JVM Architecture 101: Get to Know Your Virtual Machine](https://blog.overops.com/jvm-architecture-101-get-to-know-your-virtual-machine/)
+
+----------------------------------------
+
+File: README.md
+Status: modified
+Changes: +6 -0
+Diff:
+@@ -14,6 +14,12 @@ Don't know bytecode? That's ok because Recaf supports [recompiling decompiled co
+ 
+ For more information: _[Read the documentation](https://col-e.github.io/Recaf-documentation/)_
+ 
++## Important notice for newer versions: 3X and 4X
++
++[![](https://img.youtube.com/vi/IIFnXFoiiSo/sddefault.jpg)](https://www.youtube.com/watch?v=IIFnXFoiiSo)
++
++This video explains what's going on in the the Recaf developer space. What's going on with 3x and 4x, and plans for the future.
++
+
+----------------------------------------
+
+File: docs/index.html
+Status: modified
+Changes: +24 -0
+Diff:
+@@ -11,9 +11,26 @@
+     <link rel="stylesheet" href="css/pure/pure-min.css">
+     <link rel="stylesheet" href="css/pure/grids-responsive-min.css">
+     <link rel="stylesheet" href="css/scroll.css">
++    <link rel="stylesheet" href="css/code.css">
+     <link rel="stylesheet" href="css/common.css">
+     <link rel="stylesheet" href="css/menu.css">
+     <link rel="stylesheet" href="css/banner.css">
++    <style>
++        #announce {
++            color: white;
++            background: rgba(50, 110, 145, 0.7);
++            border: 1px solid rgb(0, 0, 0, 0.6);
+
+----------------------------------------
+
+File: mvnw
+Status: modified
+Changes: +105 -113
+Diff:
+@@ -19,15 +19,14 @@
+ # ----------------------------------------------------------------------------
+ 
+ # ----------------------------------------------------------------------------
+-# Maven Start Up Batch script
++# Apache Maven Wrapper startup batch script, version 3.2.0
+ #
+ # Required ENV vars:
+ # ------------------
+ #   JAVA_HOME - location of a JDK home dir
+ #
+ # Optional ENV vars
+ # -----------------
+-#   M2_HOME - location of maven2's installed home dir
+ #   MAVEN_OPTS - parameters passed to the Java VM when running Maven
+ #     e.g. to debug Maven itself, use
+ #       set MAVEN_OPTS=-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=8000
+@@ -54,86 +53,56 @@ fi
+ cygwin=false;
+ darwin=false;
+ mingw=false
+-case "`uname`" in
++case "$(uname)" in
+   CYGWIN*) cygwin=true ;;
+   MINGW*) mingw=true;;
+   Darwin*) darwin=true
+     # Use /usr/libexec/java_home if available, otherwise fall back to /Library/Java/Home
+     # See https://developer.apple.com/library/mac/qa/qa1170/_index.html
+     if [ -z "$JAVA_HOME" ]; then
+       if [ -x "/usr/libexec/java_home" ]; then
+-        export JAVA_HOME="`/usr/libexec/java_home`"
++        JAVA_HOME="$(/usr/libexec/java_home)"; export JAVA_HOME
+       else
+-        export JAVA_HOME="/Library/Java/Home"
++        JAVA_HOME="/Library/Java/Home"; export JAVA_HOME
+       fi
+     fi
+     ;;
+ esac
+ 
+ if [ -z "$JAVA_HOME" ] ; then
+   if [ -r /etc/gentoo-release ] ; then
+-    JAVA_HOME=`java-config --jre-home`
++    JAVA_HOME=$(java-config --jre-home)
+   fi
+ fi
+ 
+-if [ -z "$M2_HOME" ] ; then
+-  ## resolve links - $0 may be a link to maven's home
+-  PRG="$0"
+-
+-  # need this for relative symlinks
+-  while [ -h "$PRG" ] ; do
+-    ls=`ls -ld "$PRG"`
+-    link=`expr "$ls" : '.*-> \(.*\)$'`
+-    if expr "$link" : '/.*' > /dev/null; then
+-      PRG="$link"
+-    else
+-      PRG="`dirname "$PRG"`/$link"
+-    fi
+-  done
+-
+-  saveddir=`pwd`
+-
+-  M2_HOME=`dirname "$PRG"`/..
+-
+-  # make it fully qualified
+-  M2_HOME=`cd "$M2_HOME" && pwd`
+-
+-  cd "$saveddir"
+-  # echo Using m2 at $M2_HOME
+-fi
+-
+ # For Cygwin, ensure paths are in UNIX format before anything is touched
+ if $cygwin ; then
+-  [ -n "$M2_HOME" ] &&
+-    M2_HOME=`cygpath --unix "$M2_HOME"`
+   [ -n "$JAVA_HOME" ] &&
+-    JAVA_HOME=`cygpath --unix "$JAVA_HOME"`
++    JAVA_HOME=$(cygpath --unix "$JAVA_HOME")
+   [ -n "$CLASSPATH" ] &&
+-    CLASSPATH=`cygpath --path --unix "$CLASSPATH"`
++    CLASSPATH=$(cygpath --path --unix "$CLASSPATH")
+ fi
+ 
+ # For Mingw, ensure paths are in UNIX format before anything is touched
+ if $mingw ; then
+-  [ -n "$M2_HOME" ] &&
+-    M2_HOME="`(cd "$M2_HOME"; pwd)`"
+-  [ -n "$JAVA_HOME" ] &&
+-    JAVA_HOME="`(cd "$JAVA_HOME"; pwd)`"
++  [ -n "$JAVA_HOME" ] && [ -d "$JAVA_HOME" ] &&
++    JAVA_HOME="$(cd "$JAVA_HOME" || (echo "cannot cd into $JAVA_HOME."; exit 1); pwd)"
+ fi
+ 
+ if [ -z "$JAVA_HOME" ]; then
+-  javaExecutable="`which javac`"
+-  if [ -n "$javaExecutable" ] && ! [ "`expr \"$javaExecutable\" : '\([^ ]*\)'`" = "no" ]; then
++  javaExecutable="$(which javac)"
++  if [ -n "$javaExecutable" ] && ! [ "$(expr "\"$javaExecutable\"" : '\([^ ]*\)')" = "no" ]; then
+     # readlink(1) is not available as standard on Solaris 10.
+-    readLink=`which readlink`
+-    if [ ! `expr "$readLink" : '\([^ ]*\)'` = "no" ]; then
++    readLink=$(which readlink)
++    if [ ! "$(expr "$readLink" : '\([^ ]*\)')" = "no" ]; then
+       if $darwin ; then
+-        javaHome="`dirname \"$javaExecutable\"`"
+-        javaExecutable="`cd \"$javaHome\" && pwd -P`/javac"
++        javaHome="$(dirname "\"$javaExecutable\"")"
++        javaExecutable="$(cd "\"$javaHome\"" && pwd -P)/javac"
+       else
+-        javaExecutable="`readlink -f \"$javaExecutable\"`"
++        javaExecutable="$(readlink -f "\"$javaExecutable\"")"
+       fi
+-      javaHome="`dirname \"$javaExecutable\"`"
+-      javaHome=`expr "$javaHome" : '\(.*\)/bin'`
++      javaHome="$(dirname "\"$javaExecutable\"")"
++      javaHome=$(expr "$javaHome" : '\(.*\)/bin')
+       JAVA_HOME="$javaHome"
+       export JAVA_HOME
+
+----------------------------------------
+
+File: mvnw.cmd
+Status: modified
+Changes: +24 -7
+Diff:
+@@ -18,13 +18,12 @@
+ @REM ----------------------------------------------------------------------------
+ 
+ @REM ----------------------------------------------------------------------------
+-@REM Maven Start Up Batch script
++@REM Apache Maven Wrapper startup batch script, version 3.2.0
+ @REM
+ @REM Required ENV vars:
+ @REM JAVA_HOME - location of a JDK home dir
+ @REM
+ @REM Optional ENV vars
+-@REM M2_HOME - location of maven2's installed home dir
+ @REM MAVEN_BATCH_ECHO - set to 'on' to enable the echoing of the batch commands
+ @REM MAVEN_BATCH_PAUSE - set to 'on' to wait for a keystroke before ending
+ @REM MAVEN_OPTS - parameters passed to the Java VM when running Maven
+@@ -120,10 +119,10 @@ SET MAVEN_JAVA_EXE="%JAVA_HOME%\bin\java.exe"
+ set WRAPPER_JAR="%MAVEN_PROJECTBASEDIR%\.mvn\wrapper\maven-wrapper.jar"
+ set WRAPPER_LAUNCHER=org.apache.maven.wrapper.MavenWrapperMain
+ 
+-set DOWNLOAD_URL="https://repo.maven.apache.org/maven2/org/apache/maven/wrapper/maven-wrapper/3.1.0/maven-wrapper-3.1.0.jar"
++set WRAPPER_URL="https://repo.maven.apache.org/maven2/org/apache/maven/wrapper/maven-wrapper/3.2.0/maven-wrapper-3.2.0.jar"
+ 
+ FOR /F "usebackq tokens=1,2 delims==" %%A IN ("%MAVEN_PROJECTBASEDIR%\.mvn\wrapper\maven-wrapper.properties") DO (
+-    IF "%%A"=="wrapperUrl" SET DOWNLOAD_URL=%%B
++    IF "%%A"=="wrapperUrl" SET WRAPPER_URL=%%B
+
+----------------------------------------
+
+File: pom.xml
+Status: modified
+Changes: +12 -11
+Diff:
+@@ -3,22 +3,22 @@
+ 	<groupId>me.coley</groupId>
+ 	<artifactId>recaf</artifactId>
+ 	<url>https://github.com/Col-E/Recaf/</url>
+-	<version>2.21.13</version>
++	<version>2.21.14</version>
+ 	<name>Recaf</name>
+ 	<description>A modern java bytecode editor</description>
+ 	<!-- Variables -->
+ 	<properties>
+ 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+-		<asm.version>9.2</asm.version>
++		<asm.version>9.7</asm.version>
+ 		<analysis.version>1.6.0</analysis.version>
+-		<dude.version>1.9.6</dude.version>
++		<dude.version>2.0.1</dude.version>
+ 		<cfr.version>0.152</cfr.version>
+ 		<ff.version>1.5.498.29</ff.version>
+ 		<procyon.version>0.6.0</procyon.version>
+ 		<junit.version>5.8.2</junit.version>
+ 		<pico.version>4.6.3</pico.version>
+ 		<jline.version>3.21.0</jline.version>
+-		<jp.version>3.24.2</jp.version>
++		<jp.version>3.25.9</jp.version>
+ 		<jfx.version>18</jfx.version>
+ 		<spotbugs.version>4.0.0</spotbugs.version>
+ 		<spotbugs-mvn.version>3.1.12.2</spotbugs-mvn.version>
+@@ -93,7 +93,7 @@
+ 		<dependency>
+ 			<groupId>com.github.Col-E</groupId>
+ 			<artifactId>jphantom</artifactId>
+
+----------------------------------------
+
+File: src/main/java/me/coley/recaf/Recaf.java
+Status: modified
+Changes: +9 -13
+Diff:
+@@ -31,7 +31,7 @@
+  * @author Matt
+  */
+ public class Recaf {
+-	public static final String VERSION = "2.21.13";
++	public static final String VERSION = "2.21.14";
+ 	public static final String DOC_URL = "https://col-e.github.io/Recaf-documentation/";
+ 	public static final int ASM_VERSION = Opcodes.ASM9;
+ 	private static Controller currentController;
+@@ -108,7 +108,6 @@ private static void launch(String[] args) {
+ 		loadPlugins();
+ 		// Do version check
+ 		SelfUpdater.setController(initializer.getController());
+-		SelfUpdater.setArgs(args);
+ 		SelfUpdater.checkForUpdates();
+
+----------------------------------------
+
+File: src/main/java/me/coley/recaf/parse/bytecode/Disassembler.java
+Status: modified
+Changes: +3 -0
+Diff:
+@@ -297,6 +297,9 @@ private void visitMethodInsn(StringBuilder line, MethodInsnNode insn) {
+ 		String name = EscapeUtil.escapeCommon(insn.name);
+ 		String desc = EscapeUtil.escapeCommon(insn.desc);
+ 		line.append(' ').append(owner).append('.').append(name).append(desc);
++		if (insn.getOpcode() == Opcodes.INVOKESTATIC && insn.itf) {
++			line.append(" itf");
++		}
+ 	}
+ 
+ 	private void visitJumpInsn(StringBuilder line, JumpInsnNode insn) {
+
+----------------------------------------
+
+File: src/main/java/me/coley/recaf/parse/bytecode/ast/ItfAST.java
+Status: added
+Changes: +21 -0
+Diff:
+@@ -0,0 +1,21 @@
++package me.coley.recaf.parse.bytecode.ast;
++
++/**
++ * Itf AST for static interface method invocations.
++ *
++ * @author Earthcomputer
++ */
++public class ItfAST extends AST {
++	/**
+
+----------------------------------------
+
+File: src/main/java/me/coley/recaf/parse/bytecode/ast/MethodInsnAST.java
+Status: modified
+Changes: +46 -3
+Diff:
+@@ -2,6 +2,7 @@
+ 
+ import me.coley.recaf.parse.bytecode.MethodCompilation;
+ import me.coley.recaf.parse.bytecode.exception.AssemblerException;
++import org.objectweb.asm.Opcodes;
+ import org.objectweb.asm.tree.*;
+ 
+ /**
+@@ -13,6 +14,7 @@ public class MethodInsnAST extends InsnAST {
+ 	private final TypeAST owner;
+ 	private final NameAST name;
+ 	private final DescAST desc;
++	private final ItfAST itf;
+ 
+ 	/**
+ 	 * @param line
+@@ -29,13 +31,37 @@ public class MethodInsnAST extends InsnAST {
+ 	 * 		Method descriptor AST.
+ 	 */
+ 	public MethodInsnAST(int line, int start, OpcodeAST opcode, TypeAST owner, NameAST name, DescAST desc) {
++		this(line, start, opcode, owner, name, desc, null);
++	}
++
++	/**
++	 * @param line
++	 * 		Line number this node is written on.
++	 * @param start
++	 * 		Offset from line start this node starts at.
++	 * @param opcode
+
+----------------------------------------
+
+File: src/main/java/me/coley/recaf/parse/bytecode/parser/AliasDeclarationParser.java
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -15,7 +15,7 @@ public AliasAST visit(int lineNo, String line) throws ASTParseException {
+ 		try {
+ 			String[] trim = line.trim().split("\\s+");
+ 			if (trim.length < 2)
+-				throw new ASTParseException(lineNo, "Not enough paramters");
++				throw new ASTParseException(lineNo, "Not enough parameters");
+ 			int start = line.indexOf(trim[0]);
+ 			// op
+ 			OpcodeParser opParser = new OpcodeParser();
+
+----------------------------------------
+
+File: src/main/java/me/coley/recaf/parse/bytecode/parser/HandleParser.java
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -29,7 +29,7 @@ public HandleAST visit(int lineNo, String line) throws ASTParseException {
+ 		try {
+ 			String[] trim = line.trim().split("\\s+");
+ 			if (trim.length < 2)
+-				throw new ASTParseException(lineNo, "Not enough paramters");
++				throw new ASTParseException(lineNo, "Not enough parameters");
+ 			int start = line.indexOf(trim[0]);
+ 			// op
+ 			TagParser opParser = new TagParser();
+
+----------------------------------------
+
+File: src/main/java/me/coley/recaf/parse/bytecode/parser/IincInsnParser.java
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -18,7 +18,7 @@ public IincInsnAST visit(int lineNo, String line) throws ASTParseException {
+ 		try {
+ 			String[] trim = line.trim().split("\\s+");
+ 			if (trim.length < 3)
+-				throw new ASTParseException(lineNo, "Not enough paramters");
++				throw new ASTParseException(lineNo, "Not enough parameters");
+ 			int start = line.indexOf(trim[0]);
+ 			// op
+ 			OpcodeParser opParser = new OpcodeParser();
+
+----------------------------------------
+
+File: src/main/java/me/coley/recaf/parse/bytecode/parser/IntInsnParser.java
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -18,7 +18,7 @@ public IntInsnAST visit(int lineNo, String line) throws ASTParseException {
+ 		try {
+ 			String[] trim = line.trim().split("\\s+");
+ 			if (trim.length < 2)
+-				throw new ASTParseException(lineNo, "Not enough paramters");
++				throw new ASTParseException(lineNo, "Not enough parameters");
+ 			int start = line.indexOf(trim[0]);
+ 			// op
+ 			OpcodeParser opParser = new OpcodeParser();
+
+----------------------------------------
+
+File: src/main/java/me/coley/recaf/parse/bytecode/parser/InvokeDynamicParser.java
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -24,7 +24,7 @@ public InvokeDynamicAST visit(int lineNo, String line) throws ASTParseException
+ 			// INVOKEDYNAMIC name desc handle[...] args[...]
+ 			String[] trim = line.trim().split("\\s+(?=.*\\[(?=.*\\[))");
+ 			if (trim.length < 4)
+-				throw new ASTParseException(lineNo, "Not enough paramters");
++				throw new ASTParseException(lineNo, "Not enough parameters");
+ 			// 0 = op
+ 			// 1 = name
+ 			// 2 = desc
+
+----------------------------------------
+
+File: src/main/java/me/coley/recaf/parse/bytecode/parser/JumpInsnParser.java
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -18,7 +18,7 @@ public JumpInsnAST visit(int lineNo, String line) throws ASTParseException {
+ 		try {
+ 			String[] trim = line.trim().split("\\s+");
+ 			if (trim.length < 2)
+-				throw new ASTParseException(lineNo, "Not enough paramters");
++				throw new ASTParseException(lineNo, "Not enough parameters");
+ 			int start = line.indexOf(trim[0]);
+ 			// op
+ 			OpcodeParser opParser = new OpcodeParser();
+
+----------------------------------------
+
+File: src/main/java/me/coley/recaf/parse/bytecode/parser/LineInsnParser.java
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -18,7 +18,7 @@ public LineInsnAST visit(int lineNo, String line) throws ASTParseException {
+ 		try {
+ 			String[] trim = line.trim().split("\\s+");
+ 			if (trim.length < 3)
+-				throw new ASTParseException(lineNo, "Not enough paramters");
++				throw new ASTParseException(lineNo, "Not enough parameters");
+ 			int start = line.indexOf(trim[0]);
+ 			// op
+ 			OpcodeParser opParser = new OpcodeParser();
+
+----------------------------------------
+
+File: src/main/java/me/coley/recaf/parse/bytecode/parser/LookupSwitchInsnParser.java
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -27,7 +27,7 @@ public LookupSwitchInsnAST visit(int lineNo, String line) throws ASTParseExcepti
+ 			// Collect parameters
+ 			String[] data = RegexUtil.allMatches(line, "(?<=\\[).*?(?=\\])");
+ 			if (data.length < 2)
+-				throw new ASTParseException(lineNo, "Not enough paramters");
++				throw new ASTParseException(lineNo, "Not enough parameters");
+ 			// mapping
+ 			String mapS = data[0];
+ 			Map<NumberAST, NameAST> mapping = new LinkedHashMap<>();
+
+----------------------------------------
+
+File: src/main/java/me/coley/recaf/parse/bytecode/parser/MethodInsnParser.java
+Status: modified
+Changes: +20 -3
+Diff:
+@@ -4,6 +4,7 @@
+ import me.coley.recaf.parse.bytecode.ast.*;
+ import me.coley.recaf.parse.bytecode.exception.ASTParseException;
+ import me.coley.recaf.util.AutoCompleteUtil;
++import org.objectweb.asm.Opcodes;
+ 
+ import java.util.Collections;
+ import java.util.List;
+@@ -19,7 +20,7 @@ public MethodInsnAST visit(int lineNo, String line) throws ASTParseException {
+ 		try {
+ 			String[] trim = line.trim().split("\\s+");
+ 			if (trim.length < 2)
+-				throw new ASTParseException(lineNo, "Not enough paramters");
++				throw new ASTParseException(lineNo, "Not enough parameters");
+ 			int start = line.indexOf(trim[0]);
+ 			// op
+ 			OpcodeParser opParser = new OpcodeParser();
+
+----------------------------------------
+
+File: src/main/java/me/coley/recaf/parse/bytecode/parser/MultiArrayParser.java
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -18,7 +18,7 @@ public MultiArrayInsnAST visit(int lineNo, String line) throws ASTParseException
+ 		try {
+ 			String[] trim = line.trim().split("\\s+");
+ 			if (trim.length < 2)
+-				throw new ASTParseException(lineNo, "Not enough paramters");
++				throw new ASTParseException(lineNo, "Not enough parameters");
+ 			int start = line.indexOf(trim[0]);
+ 			// op
+ 			OpcodeParser opParser = new OpcodeParser();
+
+----------------------------------------
+
+File: src/main/java/me/coley/recaf/parse/bytecode/parser/SignatureParser.java
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -21,7 +21,7 @@ public SignatureAST visit(int lineNo, String line) throws ASTParseException {
+ 		try {
+ 			String[] trim = line.trim().split("\\s+");
+ 			if (trim.length < 2)
+-				throw new ASTParseException(lineNo, "Not enough paramters");
++				throw new ASTParseException(lineNo, "Not enough parameters");
+ 			String sig = trim[1];
+ 			// TODO: Verify signature?
+ 			//  - Technically you can put in garbage data in here...
+
+----------------------------------------
+
+File: src/main/java/me/coley/recaf/parse/bytecode/parser/TableSwitchInsnParser.java
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -27,7 +27,7 @@ public TableSwitchInsnAST visit(int lineNo, String line) throws ASTParseExceptio
+ 			// Collect parameters
+ 			String[] data = RegexUtil.allMatches(line, "(?<=\\[).*?(?=\\])");
+ 			if (data.length < 3)
+-				throw new ASTParseException(lineNo, "Not enough paramters");
++				throw new ASTParseException(lineNo, "Not enough parameters");
+ 			// min & max
+ 			String minMaxS = data[0];
+ 			if (!minMaxS.contains(":"))
+
+----------------------------------------
+
+File: src/main/java/me/coley/recaf/parse/bytecode/parser/TypeInsnParser.java
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -18,7 +18,7 @@ public TypeInsnAST visit(int lineNo, String line) throws ASTParseException {
+ 		try {
+ 			String[] trim = line.trim().split("\\s+");
+ 			if (trim.length < 2)
+-				throw new ASTParseException(lineNo, "Not enough paramters");
++				throw new ASTParseException(lineNo, "Not enough parameters");
+ 			int start = line.indexOf(trim[0]);
+ 			// op
+ 			OpcodeParser opParser = new OpcodeParser();
+
+----------------------------------------
+
+File: src/main/java/me/coley/recaf/parse/bytecode/parser/VarInsnParser.java
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -18,7 +18,7 @@ public VarInsnAST visit(int lineNo, String line) throws ASTParseException {
+ 		try {
+ 			String[] trim = line.trim().split("\\s+");
+ 			if (trim.length < 2)
+-				throw new ASTParseException(lineNo, "Not enough paramters");
++				throw new ASTParseException(lineNo, "Not enough parameters");
+ 			int start = line.indexOf(trim[0]);
+ 			// op
+ 			OpcodeParser opParser = new OpcodeParser();
+
+----------------------------------------
+
+File: src/main/java/me/coley/recaf/parse/source/SourceCode.java
+Status: modified
+Changes: +3 -1
+Diff:
+@@ -157,8 +157,10 @@ public Node getNodeAt(int line, int column) {
+ 			if (!node.getBegin().isPresent() || !node.getEnd().isPresent())
+ 				return false;
+ 			// Same as above, we want to return the node with actual context.
+-			return !(node instanceof NameExpr);
++			if (node instanceof NameExpr)
++				return false;
+ 			// Should be fine
++			return true;
+ 		});
+
+----------------------------------------
+
+File: src/main/java/me/coley/recaf/parse/source/WorkspaceTypeResolver.java
+Status: modified
+Changes: +2 -2
+Diff:
+@@ -1,8 +1,8 @@
+ package me.coley.recaf.parse.source;
+ 
++import com.github.javaparser.resolution.TypeSolver;
+ import com.github.javaparser.resolution.declarations.ResolvedReferenceTypeDeclaration;
+-import com.github.javaparser.symbolsolver.model.resolution.SymbolReference;
+-import com.github.javaparser.symbolsolver.model.resolution.TypeSolver;
++import com.github.javaparser.resolution.model.SymbolReference;
+ import com.github.javaparser.symbolsolver.reflectionmodel.ReflectionClassDeclaration;
+ import com.github.javaparser.symbolsolver.resolution.typesolvers.ReflectionTypeSolver;
+
+----------------------------------------
+
+File: src/main/java/me/coley/recaf/ui/MainMenu.java
+Status: modified
+Changes: +1 -17
+Diff:
+@@ -128,11 +128,6 @@ public MainMenu(GuiController controller) {
+ 			mHistory.getItems().add(new ActionMenuItem(translate("misc.open"), this::showHistory));
+ 		}
+ 		mHelp = new Menu(translate("ui.menubar.help"));
+-		if (SelfUpdater.hasUpdate()) {
+-			mHelp.getItems().add(0,
+-					new ActionMenuItem(translate("ui.menubar.help.update") + SelfUpdater.getLatestVersion(),
+-							this::showUpdatePrompt));
+-		}
+ 		mHelp.getItems().addAll(
+ 				new ActionMenuItem(translate("ui.menubar.help.documentation"), this::showDocumentation),
+ 				new ActionMenuItem(translate("ui.menubar.help.info"), this::showInformation),
+@@ -163,7 +158,7 @@ public MainMenu(GuiController controller) {
+
+----------------------------------------
+
+File: src/main/java/me/coley/recaf/ui/MainWindow.java
+Status: modified
+Changes: +64 -5
+Diff:
+@@ -2,27 +2,33 @@
+ 
+ import javafx.application.Application;
+ import javafx.application.Platform;
++import javafx.geometry.Insets;
+ import javafx.geometry.Orientation;
++import javafx.geometry.Pos;
++import javafx.scene.Group;
++import javafx.scene.Node;
+ import javafx.scene.Scene;
++import javafx.scene.control.ScrollPane;
+ import javafx.scene.control.SplitPane;
++import javafx.scene.control.Tab;
+ import javafx.scene.image.Image;
+ import javafx.scene.layout.BorderPane;
++import javafx.scene.layout.StackPane;
+ import javafx.stage.Stage;
+ import me.coley.recaf.Recaf;
+ import me.coley.recaf.control.gui.GuiController;
+ import me.coley.recaf.plugin.PluginsManager;
+ import me.coley.recaf.plugin.api.InternalPlugin;
+ import me.coley.recaf.plugin.api.WorkspacePlugin;
++import me.coley.recaf.ui.controls.MarkdownView;
+ import me.coley.recaf.ui.controls.ViewportTabs;
+ import me.coley.recaf.ui.controls.WorkspaceNavigator;
+-import me.coley.recaf.ui.controls.popup.UpdateWindow;
+ import me.coley.recaf.ui.controls.view.ClassViewport;
+ import me.coley.recaf.ui.controls.view.FileViewport;
+ import me.coley.recaf.util.OSUtil;
+ import me.coley.recaf.util.ThreadUtil;
+ import me.coley.recaf.util.UiUtil;
+ import me.coley.recaf.util.VMUtil;
+-import me.coley.recaf.util.self.SelfUpdater;
+ import me.coley.recaf.workspace.InstrumentationResource;
+
+----------------------------------------
+
+File: src/main/java/me/coley/recaf/ui/controls/MarkdownView.java
+Status: added
+Changes: +315 -0
+Diff:
+@@ -0,0 +1,315 @@
++package me.coley.recaf.ui.controls;
++
++import javafx.beans.property.BooleanProperty;
++import javafx.beans.property.SimpleBooleanProperty;
++import javafx.css.PseudoClass;
++import javafx.geometry.Insets;
++import javafx.geometry.Pos;
++import javafx.scene.Cursor;
++import javafx.scene.Node;
++import javafx.scene.control.Label;
++import javafx.scene.layout.*;
++import javafx.scene.text.Text;
++import javafx.scene.text.TextFlow;
++import me.coley.recaf.util.Log;
++import me.coley.recaf.util.UiUtil;
++import org.commonmark.node.*;
++import org.commonmark.parser.Parser;
++
++import javax.annotation.Nullable;
++import java.net.URL;
++import java.util.ArrayList;
++import java.util.List;
++
++/**
++ * Displays markdown text.
++ * <br>
++ * Adapted from <a href="https://github.com/JPro-one/markdown-javafx-renderer/blob/master/src/main/java/com/sandec/mdfx/impl/MDFXNodeHelper.java#L523">MDFX</a>,
++ * which couldn't be used directly in order to support targeting Java 8. Some minor changes to the visitor internals were also made.
++ */
++public class MarkdownView extends BorderPane {
++	private final static String ITALICE_CLASS_NAME = "italic";
++	private final static String BOLD_CLASS_NAME = "bold";
++	private static final PseudoClass PSEUDO_HOVER = PseudoClass.getPseudoClass("hover");
++	// State
++	private VBox root = newVBox();
++	private TextFlow flow = null;
++
++	public MarkdownView(String markdown) {
++		Parser parser = Parser.builder().build();
++		Document document = (Document) parser.parse(markdown);
++		document.accept(new AbstractVisitor() {
++			private boolean nodePerWord;
++			private boolean isListOrdered;
++			private int listCounter;
++
++			@Override
++			public void visit(Document document) {
++				visitChildren(document);
++			}
++
++			@Override
++			public void visit(BlockQuote customBlock) {
++				VBox oldRoot = root;
++				root = newVBox();
++				root.getStyleClass().add("block-quote");
++				oldRoot.getChildren().add(root);
++
++				visitChildren(customBlock);
++
++				root = oldRoot;
++				newParagraph();
++			}
++
++			@Override
++			public void visit(Code code) {
++				Label label = new Label(code.getLiteral());
++				label.getStyleClass().add("code");
++
++				Region background = new Region();
++				background.setManaged(false);
++				background.getStyleClass().add("code-background");
++				label.boundsInParentProperty().addListener((p, oldV, newV) -> {
++					background.setTranslateX(newV.getMinX() + 2);
++					background.setTranslateY(newV.getMinY() - 2);
++					background.resize(newV.getWidth() - 4, newV.getHeight() + 4);
++				});
++
++				flow.getChildren().add(background);
++				flow.getChildren().add(label);
++			}
++
++			@Override
++			public void visit(FencedCodeBlock code) {
++				Label label = new Label(code.getLiteral());
++				label.getStyleClass().add("codeblock");
++
++				VBox vbox = newVBox();
++				vbox.getChildren().add(label);
++				vbox.getStyleClass().add("codeblock-background");
++
++				root.getChildren().add(vbox);
++			}
++
++			@Override
++			public void visit(SoftLineBreak softLineBreak) {
++				flow.getChildren().add(new Text("\n"));
++				visitChildren(softLineBreak);
++			}
++
++			@Override
++			public void visit(HardLineBreak hardLineBreak) {
++				newParagraph();
++				flow.getChildren().add(new Text("\n"));
++				visitChildren(hardLineBreak);
+
+----------------------------------------
+
+File: src/main/java/me/coley/recaf/ui/controls/SplitableTabPane.java
+Status: modified
+Changes: +2 -1
+Diff:
+@@ -36,6 +36,7 @@ public class SplitableTabPane extends TabPane {
+ 	 */
+ 	public SplitableTabPane() {
+ 		TabPane selfPane = this;
++		/* Disabled in the 2.21.14 update because the splitting logic is garbage. 4x docking is leagues better.
+ 		// Allow this pane to accept transfers
+ 		setOnDragOver(dragEvent -> {
+ 			Dragboard dragboard = dragEvent.getDragboard();
+@@ -112,7 +113,7 @@ public SplitableTabPane() {
+ 					&& draggedTab.get().getTabPane() != selfPane) {
+
+----------------------------------------
+
+File: src/main/java/me/coley/recaf/ui/controls/pane/UpdatePane.java
+Status: removed
+Changes: +0 -192
+Diff:
+@@ -1,192 +0,0 @@
+-package me.coley.recaf.ui.controls.pane;
+-
+-import javafx.geometry.Insets;
+-import javafx.scene.control.Button;
+-import javafx.scene.control.Hyperlink;
+-import javafx.scene.control.Label;
+-import javafx.scene.layout.BorderPane;
+-import javafx.scene.layout.GridPane;
+-import javafx.scene.layout.VBox;
+-import javafx.scene.text.TextFlow;
+-import me.coley.recaf.control.gui.GuiController;
+-import me.coley.recaf.ui.controls.ActionButton;
+-import me.coley.recaf.ui.controls.ExceptionAlert;
+-import me.coley.recaf.util.Log;
+-import me.coley.recaf.util.UiUtil;
+-import me.coley.recaf.util.self.SelfUpdater;
+-import org.commonmark.node.*;
+-import org.commonmark.parser.Parser;
+-
+-import java.io.IOException;
+-import java.net.URL;
+-import java.util.function.Consumer;
+-
+-import static me.coley.recaf.util.LangUtil.translate;
+-
+-/**
+- * Panel that shows update information.
+- *
+- * @author Matt
+- */
+-public class UpdatePane extends BorderPane {
+-	private final GuiController controller;
+-
+-	/**
+-	 * @param controller
+-	 * 		Controller to use to close Recaf.
+-	 */
+-	public UpdatePane(GuiController controller) {
+-		this.controller = controller;
+-		Button btn = getButton();
+-		GridPane grid = new GridPane();
+-		GridPane.setFillHeight(btn, true);
+-		GridPane.setFillWidth(btn, true);
+-		grid.setMaxWidth(800);
+-		grid.setPadding(new Insets(10));
+-		grid.setVgap(10);
+-		grid.setHgap(10);
+-		grid.add(getNotes(), 0, 0, 2, 1);
+-		grid.add(getInfo(), 0, 1, 1, 1);
+-		grid.add(btn, 1, 1, 1, 1);
+-		grid.add(getSubMessage(), 0, 2, 2, 1);
+-		setTop(getHeader());
+-		setCenter(grid);
+-	}
+-
+-	private BorderPane getHeader() {
+-		Label header = new Label("Recaf: " + SelfUpdater.getLatestVersion());
+-		header.getStyleClass().add("h1");
+-		BorderPane pane = new BorderPane(header);
+-		pane.getStyleClass().add("update-header");
+-		return pane;
+-	}
+-
+
+----------------------------------------
+
+File: src/main/java/me/coley/recaf/ui/controls/popup/UpdateWindow.java
+Status: removed
+Changes: +0 -52
+Diff:
+@@ -1,52 +0,0 @@
+-package me.coley.recaf.ui.controls.popup;
+-
+-import javafx.geometry.HPos;
+-import javafx.geometry.Insets;
+-import javafx.geometry.Pos;
+-import javafx.scene.Node;
+-import javafx.scene.control.Control;
+-import javafx.scene.control.Label;
+-import javafx.scene.layout.GridPane;
+-import me.coley.recaf.Recaf;
+-import me.coley.recaf.ui.MainWindow;
+-import me.coley.recaf.ui.controls.ActionButton;
+-import me.coley.recaf.util.self.SelfUpdater;
+-
+-import static me.coley.recaf.util.LangUtil.translate;
+-
+
+----------------------------------------
+
+File: src/main/java/me/coley/recaf/ui/controls/view/FileViewport.java
+Status: modified
+Changes: +2 -1
+Diff:
+@@ -18,6 +18,7 @@
+ import me.coley.recaf.workspace.JavaResource;
+ 
+ import java.awt.image.BufferedImage;
++import java.nio.charset.StandardCharsets;
+ import java.util.Map;
+ 
+ /**
+@@ -144,7 +145,7 @@ private void updateTextMode() {
+ 		EditorPane pane = lang.getName().equals("Java") ?
+
+----------------------------------------
+
+File: src/main/java/me/coley/recaf/util/IllegalBytecodePatcherUtil.java
+Status: modified
+Changes: +4 -22
+Diff:
+@@ -1,11 +1,11 @@
+ package me.coley.recaf.util;
+ 
+-import me.coley.cafedude.classfile.ClassFile;
+-import me.coley.cafedude.io.ClassFileReader;
+-import me.coley.cafedude.io.ClassFileWriter;
++import software.coley.cafedude.classfile.ClassFile;
++import software.coley.cafedude.io.ClassFileReader;
++import software.coley.cafedude.io.ClassFileWriter;
+ 
+ import java.util.Map;
+-import me.coley.cafedude.transform.IllegalStrippingTransformer;
++import software.coley.cafedude.transform.IllegalStrippingTransformer;
+ 
+ /**
+  * Utility to attempt basic recovery of classes that crash ASM.
+@@ -27,37 +27,19 @@ public class IllegalBytecodePatcherUtil {
+ 	public static byte[] fix(Map<String, byte[]> classes, Map<String, byte[]> invalidClasses, byte[] value) {
+
+----------------------------------------
+
+File: src/main/java/me/coley/recaf/util/JavaParserUtil.java
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -266,7 +266,7 @@ public static String getDescriptor(ResolvedFieldDeclaration type) {
+ 	 * @return Descriptor of the resolved method.
+ 	 */
+ 	public static String getDescriptor(ResolvedMethodDeclaration type) {
+-		Optional<MethodDeclaration> ast = type.toAst();
++		Optional<MethodDeclaration> ast = type.toAst(MethodDeclaration.class);
+ 		String desc = null;
+ 		if (ast.isPresent()) {
+ 			desc = getDescriptor(ast.get());
+
+----------------------------------------
+
+File: src/main/java/me/coley/recaf/util/self/SelfUpdater.java
+Status: modified
+Changes: +0 -26
+Diff:
+@@ -32,23 +32,6 @@ public class SelfUpdater {
+ 	private static Instant latestVersionDate;
+ 	private static int latestArtifactSize;
+ 	private static Controller controller;
+-	private static String[] args;
+-
+-	/**
+-	 * Start the update process.
+-	 *
+-	 * @throws IOException
+-	 * 		When starting the update task fails.
+-	 */
+-	public static void updateRecaf() throws IOException {
+
+----------------------------------------
+
+File: src/main/java/me/coley/recaf/util/self/UpdateTaskStarter.java
+Status: removed
+Changes: +0 -277
+Diff:
+@@ -1,277 +0,0 @@
+-package me.coley.recaf.util.self;
+-
+-import me.coley.recaf.Recaf;
+-import org.objectweb.asm.*;
+-
+-import java.io.File;
+-import java.io.IOException;
+-import java.nio.file.Files;
+-import java.nio.file.Path;
+-import java.nio.file.StandardOpenOption;
+-import java.util.Collections;
+-import java.util.LinkedList;
+-import java.util.List;
+-
+-/**
+- * Creates an independent update script and executes it.
+- *
+- * @author Matt
+- */
+-public class UpdateTaskStarter implements Opcodes {
+-	private static final String CLASS_NAME = "UpdateRunner";
+-	private final String filePath;
+-	private final String url;
+-	private final long delay;
+-	private final String[] args;
+-
+-	/**
+-	 * @param filePath
+-	 * 		Destination of downloaded artifact.
+-	 * @param url
+-	 * 		Artifact url to download.
+-	 * @param delay
+-	 * 		Delay before starting download.
+-	 * @param args
+-	 * 		Arguments to pass to downloaded artifact.
+-	 */
+-	public UpdateTaskStarter(String filePath, String url, long delay, String[] args) {
+-		this.filePath = filePath;
+-		this.url = url;
+-		this.delay = delay;
+-		this.args = args;
+-	}
+-
+-	/**
+-	 * Start the updater.
+-	 *
+-	 * @throws IOException
+-	 * 		When the update runner class cannot be written to,
+-	 * 		or when the process failed to start.
+-	 */
+-	public void start() throws IOException {
+-		// Write updater class
+-		Path updaterPath = Recaf.getDirectory().resolve(CLASS_NAME +".class");
+-		Files.write(updaterPath, dump(), StandardOpenOption.CREATE);
+-		// Execute
+-		List<String> procArgs = new LinkedList<>();
+-		procArgs.add(System.getProperty("java.home") + File.separator + "bin" + File.separator + "java");
+-		procArgs.add("-cp");
+-		procArgs.add(Recaf.getDirectory().toString());
+-		procArgs.add(CLASS_NAME);
+-		if (args != null)
+-			Collections.addAll(procArgs, args);
+-		new ProcessBuilder(procArgs).start();
+-	}
+-
+-	/**
+-	 * Auto-generated code by ASMifier, slightly modified.
+-	 *
+-	 * @return Bytecode of runner class.
+-	 */
+-	private byte[] dump() {
+-		// This is the original method code that we will be writing to a file.
+-		/*
+-		public static void main(String[] args) throws Throwable {
+-			// Wait
+-			Thread.sleep(DELAY_HERE);
+-			// Download
+-			String pathStr = "FILE_PATH_HERE";
+-			try(InputStream is = new URL("URL_HERE").openStream()) {
+-				Files.copy(is, Paths.get(pathStr), StandardCopyOption.REPLACE_EXISTING);
+-			}
+-			// Execute downloaded jar
+-			List<String> procArgs = new ArrayList<>();
+-			procArgs.add(System.getProperty("java.home") + File.separator + "bin" + File.separator + "java");
+-			procArgs.add("-jar");
+-			procArgs.add(pathStr);
+-			Collections.addAll(procArgs, args);
+-			new ProcessBuilder(procArgs).start();
+-		}
+-		*/
+-		ClassWriter cw = new ClassWriter(ClassWriter.COMPUTE_FRAMES);
+
+----------------------------------------
+
+File: src/main/java/me/coley/recaf/workspace/EntryLoader.java
+Status: modified
+Changes: +2 -2
+Diff:
+@@ -1,14 +1,14 @@
+ package me.coley.recaf.workspace;
+ 
+-import me.coley.cafedude.InvalidClassException;
+-import me.coley.cafedude.io.ClassFileReader;
+ import me.coley.recaf.plugin.PluginsManager;
+ import me.coley.recaf.plugin.api.LoadInterceptorPlugin;
+ import me.coley.recaf.util.ClassUtil;
+ import me.coley.recaf.util.IOUtil;
+ import me.coley.recaf.util.IllegalBytecodePatcherUtil;
+
+----------------------------------------
+
+File: src/main/java/me/coley/recaf/workspace/PhantomResource.java
+Status: modified
+Changes: +47 -8
+Diff:
+@@ -12,12 +12,14 @@
+ import org.clyze.jphantom.access.FieldAccessStateMachine;
+ import org.clyze.jphantom.access.MethodAccessStateMachine;
+ import org.clyze.jphantom.adapters.ClassPhantomExtractor;
++import org.clyze.jphantom.exc.IllegalBytecodeException;
+ import org.clyze.jphantom.hier.ClassHierarchy;
+ import org.clyze.jphantom.hier.IncrementalClassHierarchy;
+ import org.objectweb.asm.*;
+ import org.objectweb.asm.tree.ClassNode;
+ 
+ import java.io.IOException;
++import java.lang.reflect.Field;
+ import java.util.*;
+ 
+ /**
+@@ -95,14 +97,51 @@ public void populatePhantoms(Map<String, byte[]> classes) throws IOException {
+ 		});
+ 		// Execute and populate the current resource with generated classes
+ 		JPhantom phantom = new JPhantom(nodes, hierarchy, members);
+-		phantom.run();
+-		phantom.getGenerated().forEach((k, v) -> getClasses().put(k.getInternalName(), decorate(v)));
+-		Log.debug("Phantom analysis complete, generated {} classes", classes.size());
+-		// Cleanup
+-		Phantoms.refresh();
+-		ClassAccessStateMachine.refresh();
+
+----------------------------------------
+
+File: src/main/java/me/coley/recaf/workspace/Workspace.java
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -3,8 +3,8 @@
+ import com.github.javaparser.ParseResult;
+ import com.github.javaparser.ParserConfiguration;
+ import com.github.javaparser.ast.CompilationUnit;
++import com.github.javaparser.resolution.TypeSolver;
+ import com.github.javaparser.symbolsolver.JavaSymbolSolver;
+-import com.github.javaparser.symbolsolver.model.resolution.TypeSolver;
+ import me.coley.recaf.Recaf;
+ import me.coley.recaf.compiler.JavacCompiler;
+ import me.coley.recaf.control.Controller;
+
+----------------------------------------
+
+File: src/main/resources/style/base.css
+Status: modified
+Changes: +29 -4
+Diff:
+@@ -3,27 +3,52 @@
+  * =========================
+  */
+ .h1 {
+-	-fx-font-size: 18px;
++	-fx-font-size: 24px;
+ 	-fx-font-weight: bold;
+ }
+ .h2 {
+-	-fx-font-size: 15px;
++	-fx-font-size: 20px;
+ 	-fx-font-weight: bold;
+ }
++.h3 {
++	-fx-font-size: 17px;
++	-fx-font-weight: bold;
++}
++.text {
++	-fx-fill: rgb(240, 245, 255);
+
+----------------------------------------
+
+File: src/main/resources/translations/zh-cn.json
+Status: modified
+Changes: +81 -28
+Diff:
+@@ -7,6 +7,7 @@
+ 	"misc.duplicate": "复制",
+ 	"misc.rename": "重命名",
+ 	"misc.error": "错误",
++	"misc.errors": "错误",
+ 	"misc.access": "访问",
+ 	"misc.yes": "是",
+ 	"misc.no": "不",
+@@ -15,7 +16,9 @@
+ 	"misc.enabled": "启用",
+ 	"misc.open": "开",
+ 	"misc.select": "选择",
+-
++	"misc.firsttime.cli": "这是你首次使用 Recaf.\n在开始使用前建议请先阅读文档.\n - 输入 'y' 打开文档.\n - 按下 <enter> 跳过.",
++	"misc.firsttime.gui": "这是你首次使用 Recaf.\n在开始使用前建议请先阅读文档.\n - 按下 'yes' 打开文档.",
++	"misc.firsttime.gui.title": "欢迎使用 Recaf",
+ 	"ui.verify": "验证失败",
+ 	"ui.config": "配置",
+ 	"ui.history": "历史",
+@@ -26,6 +29,7 @@
+ 	"ui.info.other": "其他",
+ 	"ui.attach": "注入",
+ 	"ui.attach.copy": "复制到工作空间",
++	"ui.createjvm": "创建新的JVM",
+ 	"ui.noerrormsg": "无错误消息",
+ 	"ui.openissue": "如果您认为这是一个错误,请报告此异常",
+ 	"ui.quitonattach.name": "退出注入",
+@@ -44,7 +48,14 @@
+ 	"ui.fileprompt.open": "打开文件",
+ 	"ui.fileprompt.open.extensions": "Java程序和工作空间",
+ 	"ui.fileprompt.export": "导出文件",
+-	
++	"ui.fileprompt.export.extensions": "Java程序和工作空间",
++	"ui.fileprompt.workspace": "导出工作环境",
++	"ui.fileprompt.workspace.extensions": "Recaf 工作环境",
++	"ui.fileprompt.mapping": "选择映射",
++	"ui.fileprompt.mapping.extensions": "映射",
++	"ui.fileprompt.export.mapping": "导出映射",
++	"ui.fileprompt.export.mapping.extensions": "简单映射",
++
+ 	"ui.menubar.file": "文件",
+ 	"ui.menubar.file.addlib": "添加库",
+ 	"ui.menubar.file.newwizard": "新建工作空间",
+@@ -53,6 +64,9 @@
+ 	"ui.menubar.file.saveapp": "导出程序",
+ 	"ui.menubar.file.saveworkspace": "导出工作空间",
+ 	"ui.menubar.file.agentexport": "应用更改",
++	"ui.menubar.mapping": "映射",
++	"ui.menubar.mapping.apply": "应用映射文件",
++	"ui.menubar.mapping.export": "导出映射文件",
+ 	"ui.menubar.config": "配置",
+ 	"ui.menubar.themeeditor": "主题编辑器",
+ 	"ui.menubar.search": "搜索",
+@@ -66,6 +80,8 @@
+ 	"ui.menubar.history.new": "创建保存状态",
+ 	"ui.menubar.history.view": "查看保存状态",
+ 	"ui.menubar.attach": "注入",
++	"ui.menubar.attach.existing": "运行中的进程",
++	"ui.menubar.attach.create": "创建新的进程",
+ 	"ui.menubar.plugins": "插件",
+ 	"ui.menubar.plugins.manage": "管理插件",
+ 	"ui.menubar.plugins.opendir": "打开插件目录",
+@@ -76,6 +92,9 @@
+ 	"ui.menubar.help.contact": "联系",
+ 	"ui.menubar.help.update": "下载更新:",
+ 	"ui.edit.search": "搜索引用",
++	"ui.edit.copypath": "复制路径",
++	"ui.edit.tab.close": "关闭",
++	"ui.edit.tab.closeothers": "关闭非当前",
+ 	"ui.edit.tab.closeall": "关闭所有",
+ 	"ui.edit.tab.classinfo": "类",
+ 	"ui.edit.tab.methods": "方法",
+@@ -100,13 +119,15 @@
+ 	"ui.edit.method.insertassembly": "插入汇编代码",
+ 	"ui.edit.method.move.up": "上移",
+ 	"ui.edit.method.move.down": "下移",
+-	"ui.edit.method.stackhelper": "locals/stack",
+-	"ui.edit.method.stackhelper.colstackopcode": "Stack源操作码",
++	"ui.edit.method.stackhelper": "堆栈分析",
++	"ui.edit.method.stackhelper.stack": "堆栈",
+
+----------------------------------------
+
+File: src/test/java/me/coley/recaf/AssemblyAstTest.java
+Status: modified
+Changes: +33 -0
+Diff:
+@@ -281,6 +281,30 @@ public void testMethodInsnArrayReturn() {
+ 			assertEquals("()[B", methodAST.getDesc().getDesc());
+ 		}
+ 
++		@Test
++		public void testMethodInsnInvokeStatic() {
++			String text = "INVOKESTATIC java/lang/System.exit(I)V";
++			MethodInsnAST methodAST = single(text);
++			assertEquals(text, methodAST.print());
++			assertEquals("INVOKESTATIC", methodAST.getOpcode().print());
++			assertEquals("java/lang/System", methodAST.getOwner().getType());
++			assertEquals("exit", methodAST.getName().getName());
++			assertEquals("(I)V", methodAST.getDesc().getDesc());
++			assertNull(methodAST.getItf());
++		}
+
+----------------------------------------
+
+File: src/test/java/me/coley/recaf/AssemblyCasesTest.java
+Status: modified
+Changes: +16 -0
+Diff:
+@@ -8,6 +8,7 @@
+ import me.coley.recaf.parse.bytecode.exception.VerifierException;
+ import me.coley.recaf.workspace.LazyClasspathResource;
+ import org.junit.jupiter.api.*;
++import org.objectweb.asm.Opcodes;
+ import org.objectweb.asm.tree.*;
+ import org.objectweb.asm.tree.analysis.Frame;
+ 
+@@ -687,6 +688,21 @@ public void testMergeWithOpaquePredicate() {
+ 			assertNotEquals(one, retFrameLocal.getValue());
+
+----------------------------------------
+

@@ -1,0 +1,1 @@
+# [1.2.0](https://github.com/getumbrel/umbrel/compare/1.2.0-beta.2...1.2.0) (2024-06-18)

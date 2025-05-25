@@ -1,0 +1,8 @@
+SmartDraft Command:
+pixi run ipython --pdb -m smartdraft.generator -- bevyengine/bevy --previous-release v0.14.0 --current-release v0.14.1 --project-domain System --min-significance 0 --writing-style "Automatic" --structure-type "Change Type" --group-commits --show-significance
+
+DeepRelease Command:
+docker run -it -v $(pwd):/outputs --env GITHUB_TOKEN=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 --network host --rm fgksgf/deeprelease run bevyengine/bevy --since 202408030000 --until 202408032359 --save_dir=/outputs/bevy
+
+ConventionalChangelog Command:
+cd ../.cache/repo/bevyengine_bevy && git checkout v0.14.1 && conventional-changelog -p angular -r 2 --tag-prefix v && git checkout -

@@ -1,0 +1,8 @@
+SmartDraft Command:
+pixi run ipython --pdb -m smartdraft.generator -- zulip/zulip --previous-release 9.0 --current-release 9.1 --project-domain Application --min-significance 0.1 --writing-style "Automatic" --structure-type "Change Type" --group-commits --show-significance
+
+DeepRelease Command:
+docker run -it -v $(pwd):/outputs --env GITHUB_TOKEN=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 --network host --rm fgksgf/deeprelease run zulip/zulip --since 202407260000 --until 202408032359 --save_dir=/outputs/zulip
+
+ConventionalChangelog Command:
+cd ../.cache/repo/zulip_zulip && git checkout 9.1 && conventional-changelog -p angular -r 2 && git checkout -

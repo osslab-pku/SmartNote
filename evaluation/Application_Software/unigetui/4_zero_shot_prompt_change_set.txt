@@ -1,0 +1,3538 @@
+Changes between 3.1.1-beta3 and 3.1.1
+================================================================================
+
+COMMITS
+--------------------------------------------------------------------------------
+
+Commit: bc271bd20b02f35b92cac65c2ec15a1d030f6ad7
+Author: Adam Stachowicz
+Date: 2024-07-21 14:36:56+00:00
+Message: Redundant string interpolation
+----------------------------------------
+
+Commit: 25f6440a5452aae97a109a53c8ad896b840aa943
+Author: Adam Stachowicz
+Date: 2024-07-21 14:38:02+00:00
+Message: Redundant base() constructor call
+----------------------------------------
+
+Commit: 4f34849680f4ec7aaab3e9fb263fb7c3e9142d76
+Author: Adam Stachowicz
+Date: 2024-07-21 14:40:03+00:00
+Message: Use string param in Exception message
+----------------------------------------
+
+Commit: d3c21a710fd32b134d288b9ca361389f9a062159
+Author: Adam Stachowicz
+Date: 2024-07-21 14:41:02+00:00
+Message: Redundant ;
+----------------------------------------
+
+Commit: 1d732ce47fc8a951106eff6a9d1630eb4b4bb55f
+Author: Adam Stachowicz
+Date: 2024-07-21 14:42:58+00:00
+Message: Fix multiple blank lines in project part 1
+----------------------------------------
+
+Commit: dd092065e43ba13aab1a73d1d53a12deb8b3239d
+Author: Adam Stachowicz
+Date: 2024-07-21 14:48:30+00:00
+Message: Remove multiple blank lines in project part 2
+----------------------------------------
+
+Commit: 5af2617fd9d7cb39bbf87b02a49c8a85b31ce3d5
+Author: Adam Stachowicz
+Date: 2024-07-21 14:48:46+00:00
+Message: Remove redundant ctor
+----------------------------------------
+
+Commit: b8edf810417767562d2198d813ca0c4e25bd8538
+Author: Adam Stachowicz
+Date: 2024-07-21 14:49:34+00:00
+Message: Remove redundant () in solution
+----------------------------------------
+
+Commit: 073017d3ac1a99d42da99d31573196b5db862f72
+Author: Adam Stachowicz
+Date: 2024-07-21 14:51:25+00:00
+Message: Remove multiple blank lines in project part 3 (new opened files from prev commit)
+----------------------------------------
+
+Commit: b2341bf4c9ed775a9542c09969d3ae9651bc1255
+Author: Adam Stachowicz
+Date: 2024-07-21 14:51:33+00:00
+Message: Fix XML comment
+----------------------------------------
+
+Commit: 0c2e51650ac281a0ae9e75496cc583c814f26fc1
+Author: Adam Stachowicz
+Date: 2024-07-21 15:00:00+00:00
+Message: Fix other warnings in opened files
+----------------------------------------
+
+Commit: 2b8e9ac56db565943f0fa1ca40a8608dc24d23f6
+Author: Adam Stachowicz
+Date: 2024-07-21 15:03:27+00:00
+Message: Fix warnings in UniGetUI.Core.* projects
+----------------------------------------
+
+Commit: ce5ef812a47a66902aaaef6b9aac4b00db4ff4b0
+Author: Adam Stachowicz
+Date: 2024-07-21 15:12:58+00:00
+Message: Fix warnings in projects inside UniGetUI.PackageEngine folder
+----------------------------------------
+
+Commit: 9245f8f25cb6ffefb5880b1885748320915d01ad
+Author: Adam Stachowicz
+Date: 2024-07-21 15:14:00+00:00
+Message: Inline out variable declaration
+----------------------------------------
+
+Commit: e9210e7dfc7df47504066c3ed5a6bfd99d2a05a6
+Author: Adam Stachowicz
+Date: 2024-07-21 15:25:26+00:00
+Message: Fix small issues related to XML comments - reduce code
+----------------------------------------
+
+Commit: e600de6d84c40020308946c54612fe4cf139723a
+Author: Adam Stachowicz
+Date: 2024-07-21 15:35:19+00:00
+Message: Fix typos
+----------------------------------------
+
+Commit: 947a06655af7f18c50077e5a56b07191ee4a930e
+Author: Martí Climent
+Date: 2024-07-21 22:24:15+00:00
+Message: Merge branch 'main' into pr/2531
+----------------------------------------
+
+Commit: cf4544c1ea7b9d458aab248d2d1673def412df7a
+Author: Tolgee Bot
+Date: 2024-07-24 00:12:50+00:00
+Message: Update translations from Tolgee
+----------------------------------------
+
+Commit: ab8634cd142275f8117f86cdf5213c5dd6bc34c6
+Author: Martí Climent
+Date: 2024-07-24 08:27:17+00:00
+Message: Merge pull request #2537 from marticliment/pull-request/update-translation
+
+Update translations from Tolgee
+----------------------------------------
+
+Commit: 752c96d802de7e4040f6b2dd7a7be3fcec8aae4d
+Author: Adam Stachowicz
+Date: 2024-07-24 17:07:05+00:00
+Message: Merge branch 'main' into fix_warnings
+----------------------------------------
+
+Commit: 8b058b26131c00f72cac1ff00bb7589c508a68e6
+Author: Adam Stachowicz
+Date: 2024-07-24 17:08:03+00:00
+Message: Simplify code in PackageCacher
+----------------------------------------
+
+Commit: 215eebedce4ccc764ba870ba247385d68e1917a8
+Author: Adam Stachowicz
+Date: 2024-07-24 17:22:41+00:00
+Message: Fixes after merge conflicts
+----------------------------------------
+
+Commit: d9dfaed308ca7f88c24fc07284c848037c211d8e
+Author: Adam Stachowicz
+Date: 2024-07-24 17:22:48+00:00
+Message: Remove unused usings
+----------------------------------------
+
+Commit: b32b207e3922268739a8a819e8fe48663a4edf79
+Author: Tolgee Bot
+Date: 2024-07-25 00:11:37+00:00
+Message: Update translations from Tolgee
+----------------------------------------
+
+Commit: ab7427e38e2b64a98093fb5f793628737d1c1d1a
+Author: Martí Climent
+Date: 2024-07-25 10:34:40+00:00
+Message: Merge pull request #2539 from marticliment/pull-request/update-translation
+
+Update translations from Tolgee
+----------------------------------------
+
+Commit: e38cc1d133166ad0bd17370a9995d60e960477af
+Author: Martí Climent
+Date: 2024-07-25 10:41:35+00:00
+Message: Merge branch 'main' into fix_warnings
+----------------------------------------
+
+Commit: 254de6e1a1d7999b826983f1a0082eccdb899b45
+Author: Martí Climent
+Date: 2024-07-25 10:44:57+00:00
+Message: Merge pull request #2531 from Saibamen/fix_warnings
+
+Fix warnings + fix typos
+----------------------------------------
+
+Commit: c66c0ea3610ecea586712fd6b92522cb893eba7a
+Author: Martí Climent
+Date: 2024-07-25 13:20:29+00:00
+Message: Fix and optimize the recently broken WinGet local source parser
+----------------------------------------
+
+Commit: 3952e4ab260f2c59da25bb74f56c32450e7b7599
+Author: Martí Climent
+Date: 2024-07-25 13:47:08+00:00
+Message: Fix Local Packages sources duplicated aftger reloading installed packages (fix #2540, fix #2462)
+----------------------------------------
+
+Commit: 8437963c7f98a6464ce905d10c1964b095e6023b
+Author: Martí Climent
+Date: 2024-07-25 16:06:07+00:00
+Message: Possible fix for non-rendering ItemViews (#2391)
+----------------------------------------
+
+Commit: 6aee6dd609430926debcfed51ddba543c106a806
+Author: Tolgee Bot
+Date: 2024-07-27 00:11:40+00:00
+Message: Update translations from Tolgee
+----------------------------------------
+
+Commit: a7b343ecd7ce8e037437ce9ad809e96b2951d5b7
+Author: Martí Climent
+Date: 2024-07-27 08:50:04+00:00
+Message: Merge pull request #2546 from marticliment/pull-request/update-translation
+
+Update translations from Tolgee
+----------------------------------------
+
+Commit: 9ed7e4e279a558163f87530661c0c6aec87df06d
+Author: Martí Climent
+Date: 2024-07-27 15:10:42+00:00
+Message: Improvements to the close buttons
+----------------------------------------
+
+Commit: 24452482d7232c7bd1571958be9a65a2877a590e
+Author: Martí Climent
+Date: 2024-07-27 16:17:58+00:00
+Message: fix warning
+----------------------------------------
+
+Commit: 87bd9e14a026a2a17cec86e235ff2a3ad33b14d8
+Author: Martí Climent
+Date: 2024-07-27 17:13:18+00:00
+Message: Fix Package Manager logs not showing
+----------------------------------------
+
+Commit: b185194e08797993b2cfe6478fc9919cc2ee6e45
+Author: Martí Climent
+Date: 2024-07-27 17:14:27+00:00
+Message: Improvements to how WinGet finds packages
+----------------------------------------
+
+Commit: cf599038578b4c6842cced74f1df66c1cca842d1
+Author: Martí Climent
+Date: 2024-07-27 17:45:53+00:00
+Message: Fix an issue where sources wouldn't show the Package Manager name
+----------------------------------------
+
+Commit: 5abc21668176f649f506f112768866fe1aecae33
+Author: Martí Climent
+Date: 2024-07-27 17:52:48+00:00
+Message: Fix an issue where non-sources package managers would have their sources loaded and crashed (fix #2535)
+----------------------------------------
+
+Commit: 5f4027e75c8e70175b82625e48e0b6d6d70e8463
+Author: Martí Climent
+Date: 2024-07-27 18:11:00+00:00
+Message: Fix an issue where Widgets server would crash (fix https://github.com/marticliment/UniGetUI/discussions/2534#discussioncomment-10164427)
+----------------------------------------
+
+Commit: 2cd66658a3dd42f04656ff76655e8f7de05b1bee
+Author: Martí Climent
+Date: 2024-07-27 18:11:51+00:00
+Message: fix typo
+----------------------------------------
+
+Commit: 2dca79879e394eaa7c136f5c547d855356cb84bc
+Author: Tolgee Bot
+Date: 2024-07-28 00:13:33+00:00
+Message: Update translations from Tolgee
+----------------------------------------
+
+Commit: 06355755322b3f592c7270c60f95d93c07a45c63
+Author: Martí Climent
+Date: 2024-07-28 10:54:07+00:00
+Message: Merge pull request #2548 from marticliment/pull-request/update-translation
+
+Update translations from Tolgee
+----------------------------------------
+
+Commit: 41f8d4a0bae91f28a8c67e2a2e97af441e24949a
+Author: Martí Climent
+Date: 2024-07-28 11:12:01+00:00
+Message: Disable notifications when System Tray is disabled (fix #2403)
+----------------------------------------
+
+Commit: 07d392d4329c2ef86baad4b87bbc339a2af9e4e8
+Author: Martí Climent
+Date: 2024-07-28 13:53:17+00:00
+Message: Update version number
+----------------------------------------
+
+Commit: f3f87cd86e4b9974b22674f021977ea7eaa284dc
+Author: Martí Climent
+Date: 2024-07-28 14:35:21+00:00
+Message: update build script
+----------------------------------------
+
+
+PULL REQUESTS
+--------------------------------------------------------------------------------
+
+PR #2548: Update translations from Tolgee
+Author: github-actions[bot]
+Merged at: 2024-07-28 10:54:07+00:00
+URL: https://github.com/marticliment/UniGetUI/pull/2548
+Description:
+Automated changes by [create-pull-request](https://github.com/peter-evans/create-pull-request) GitHub action
+----------------------------------------
+
+PR #2546: Update translations from Tolgee
+Author: github-actions[bot]
+Merged at: 2024-07-27 08:50:04+00:00
+URL: https://github.com/marticliment/UniGetUI/pull/2546
+Description:
+Automated changes by [create-pull-request](https://github.com/peter-evans/create-pull-request) GitHub action
+----------------------------------------
+
+PR #2531: Fix warnings + fix typos
+Author: Saibamen
+Merged at: 2024-07-25 10:44:58+00:00
+URL: https://github.com/marticliment/UniGetUI/pull/2531
+Description:
+<!-- Provide a general summary of your changes in the title above -->
+- [x] **I have read the [contributing guidelines](https://github.com/marticliment/WingetUI/blob/main/CONTRIBUTING.md#coding), and I agree with the [Code of Conduct](https://github.com/marticliment/WingetUI/blob/main/CODE_OF_CONDUCT.md)**.
+- [x] **Have you checked that there aren't other open [pull requests](https://github.com/marticliment/WingetUI/pulls) for the same changes?**
+- [x] **Have you tested that the committed code can be executed without errors?**
+- [x] **This PR is not composed of garbage changes used to farm GitHub activity to enter potential Crypto AirDrops.**
+Any user suspected of farming GitHub activity with crypto purposes will get banned. Submitting broken code wastes the contributors' time, who have to spend their free time reviewing, fixing, and testing code that does not even compile breaks other features, or does not introduce any useful changes. Thank you for your understanding.
+-----
+Fix warnings by opening all `.cs` files in Visual Studio + fix typos
+
+-----
+Relates to https://github.com/marticliment/UniGetUI/pull/2527
+
+----------------------------------------
+
+PR #2539: Update translations from Tolgee
+Author: github-actions[bot]
+Merged at: 2024-07-25 10:34:40+00:00
+URL: https://github.com/marticliment/UniGetUI/pull/2539
+Description:
+Automated changes by [create-pull-request](https://github.com/peter-evans/create-pull-request) GitHub action
+----------------------------------------
+
+PR #2537: Update translations from Tolgee
+Author: github-actions[bot]
+Merged at: 2024-07-24 08:27:17+00:00
+URL: https://github.com/marticliment/UniGetUI/pull/2537
+Description:
+Automated changes by [create-pull-request](https://github.com/peter-evans/create-pull-request) GitHub action
+----------------------------------------
+
+
+FILE CHANGES
+--------------------------------------------------------------------------------
+
+File: README.md
+Status: modified
+Changes: +4 -4
+Diff:
+@@ -131,12 +131,12 @@ To translate UniGetUI to other languages or to update an old translation, please
+ | <img src='https://flagcdn.com/in.svg' width=20> &nbsp; Hindi - हिंदी | 54% | [atharva_xoxo](https://github.com/atharva_xoxo), [satanarious](https://github.com/satanarious) |
+ | <img src='https://flagcdn.com/hr.svg' width=20> &nbsp; Croatian - Hrvatski | 57% | Stjepan Treger |
+ | <img src='https://flagcdn.com/il.svg' width=20> &nbsp; Hebrew - עִבְרִית‎ | 48% | Oryan |
+-| <img src='https://flagcdn.com/hu.svg' width=20> &nbsp; Hungarian - Magyar | 95% | [gidano](https://github.com/gidano) |
++| <img src='https://flagcdn.com/hu.svg' width=20> &nbsp; Hungarian - Magyar | 100% | [gidano](https://github.com/gidano) |
+ | <img src='https://flagcdn.com/it.svg' width=20> &nbsp; Italian - Italiano | 100% | David Senoner, [giacobot](https://github.com/giacobot), [maicol07](https://github.com/maicol07), [mapi68](https://github.com/mapi68), [mrfranza](https://github.com/mrfranza), Rosario Di Mauro |
+ | <img src='https://flagcdn.com/id.svg' width=20> &nbsp; Indonesian - Bahasa Indonesia | 83% | [arthackrc](https://github.com/arthackrc), [joenior](https://github.com/joenior) |
+ | <img src='https://flagcdn.com/jp.svg' width=20> &nbsp; Japanese - 日本語 | 94% | [nob-swik](https://github.com/nob-swik), sho9029, [tacostea](https://github.com/tacostea), Yuki Takase |
+ | <img src='https://flagcdn.com/kr.svg' width=20> &nbsp; Korean - 한국어 | 85% | [minbert](https://github.com/minbert), [shblue21](https://github.com/shblue21), [VenusGirl](https://github.com/VenusGirl) |
+
+----------------------------------------
+
+File: UniGetUI.iss
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -1,7 +1,7 @@
+ ﻿; Script generated by the Inno Setup Script Wizard.
+ ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
+ 
+-#define MyAppVersion "3.1.1-beta3"
++#define MyAppVersion "3.1.1"
+ #define MyAppName "UniGetUI (formerly WingetUI)"
+ #define MyAppPublisher "Martí Climent"
+ #define MyAppURL "https://github.com/marticliment/UniGetUI"
+
+----------------------------------------
+
+File: build_release.bat
+Status: modified
+Changes: +4 -3
+Diff:
+@@ -12,6 +12,7 @@ popd ..
+ 
+ rem clean old builds
+ taskkill /im wingetui.exe /f
++taskkill /im unigetui.exe /f
+ 
+ rem Run tests
+ dotnet test src/UniGetUI.sln -v q --nologo
+@@ -34,8 +35,8 @@ mkdir unigetui_bin
+ robocopy src\UniGetUI\bin\x64\Release\net8.0-windows10.0.19041.0\win-x64\publish unigetui_bin *.* /MOVE /E
+
+----------------------------------------
+
+File: src/ExternalLibraries.FilePickers/Enums/SIATTRIBFLAGS.cs
+Status: modified
+Changes: +2 -2
+Diff:
+@@ -1,9 +1,9 @@
+-﻿namespace ExternalLibraries.Pickers.Enums;
++namespace ExternalLibraries.Pickers.Enums;
+ 
+ // https://learn.microsoft.com/en-us/windows/win32/api/shobjidl_core/nf-shobjidl_core-ishellitemarray-getattributes
+ internal enum SIATTRIBFLAGS
+ {
+-    SIATTRIBFLAGS_AND = 0x00000001, // if multiple items and the attirbutes together.
++    SIATTRIBFLAGS_AND = 0x00000001, // if multiple items and the attributes together.
+     SIATTRIBFLAGS_OR = 0x00000002, // if multiple items or the attributes together.
+
+----------------------------------------
+
+File: src/SharedAssemblyInfo.cs
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -5,5 +5,5 @@
+ [assembly: AssemblyCopyright("2024, Martí Climent")]
+ [assembly: AssemblyVersion("3.1.1.0")]
+ [assembly: AssemblyFileVersion("3.1.1.0")]
+-[assembly: AssemblyInformationalVersion("3.1.1-beta3")]
++[assembly: AssemblyInformationalVersion("3.1.1")]
+ [assembly: SupportedOSPlatform("windows10.0.19041")]
+
+----------------------------------------
+
+File: src/UniGetUI.Core.Classes/SingletonBase.cs
+Status: modified
+Changes: +1 -3
+Diff:
+@@ -1,12 +1,10 @@
+-﻿namespace UniGetUI.Core.Classes
++namespace UniGetUI.Core.Classes
+ {
+     public abstract class SingletonBase<T> where T : SingletonBase<T>
+     {
+         private static readonly Lazy<T> Lazy =
+             new(() => (Activator.CreateInstance(typeof(T), true) as T)!);
+ 
+         public static T Instance => Lazy.Value;
+
+----------------------------------------
+
+File: src/UniGetUI.Core.Data/Assets/Data/Contributors.list
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -2,8 +2,8 @@ marticliment
+ skanda890
+ ppvnf
+ panther7
+-RavenMacDaddy
+ Saibamen
++RavenMacDaddy
+ Mikey1993
+ flatron4eg
+ Malus-risus
+
+----------------------------------------
+
+File: src/UniGetUI.Core.Data/CoreData.cs
+Status: modified
+Changes: +4 -6
+Diff:
+@@ -13,9 +13,9 @@ private static int GetCodePage()
+         {
+             try
+             {
+-                Process p = new Process()
++                Process p = new Process
+                 {
+-                    StartInfo = new ProcessStartInfo()
++                    StartInfo = new ProcessStartInfo
+                     {
+                         FileName = "chcp.com",
+                         RedirectStandardOutput = true,
+@@ -34,8 +34,8 @@ private static int GetCodePage()
+
+----------------------------------------
+
+File: src/UniGetUI.Core.Data/Licenses.cs
+Status: modified
+Changes: +12 -12
+Diff:
+@@ -1,4 +1,4 @@
+-﻿namespace UniGetUI.Core.Data
++namespace UniGetUI.Core.Data
+ {
+     public static class LicenseData
+     {
+@@ -12,8 +12,8 @@ public static class LicenseData
+             {"Windows App Sdk",         "MIT"},
+             {"NancyFx",                 "MIT"},
+             {"YamlDotNet",              "MIT"},
+-            {"InnoDependencyInstaller", "CPOL 1.02" }, 
+-            
++            {"InnoDependencyInstaller", "CPOL 1.02" },
++
+             // Package managers and related
+             {"Winget",                  "MIT"},
+             {"Scoop",                   "MIT"},
+@@ -33,16 +33,16 @@ public static class LicenseData
+ 
+         public static Dictionary<string, Uri> LicenseURLs = new(){
+             {"UniGetUI",                new Uri("https://github.com/marticliment/WingetUI/blob/main/LICENSE")},
+-                                       
+-            // C# Libraries            
++
++            // C# Libraries
+
+----------------------------------------
+
+File: src/UniGetUI.Core.IconEngine.Tests/IconCacheEngineTests.cs
+Status: modified
+Changes: +1 -2
+Diff:
+@@ -1,4 +1,4 @@
+-﻿using UniGetUI.Core.Data;
++using UniGetUI.Core.Data;
+ 
+ namespace UniGetUI.Core.IconEngine.Tests
+ {
+@@ -68,7 +68,6 @@ public static async Task TestCacheEngineForPackageVersion(string url, string ver
+             Assert.True(File.Exists(path));
+         }
+ 
+
+----------------------------------------
+
+File: src/UniGetUI.Core.IconStore/IconCacheEngine.cs
+Status: modified
+Changes: +3 -4
+Diff:
+@@ -1,4 +1,4 @@
+-﻿using System.Security.Cryptography;
++using System.Security.Cryptography;
+ using UniGetUI.Core.Data;
+ using UniGetUI.Core.Logging;
+ using UniGetUI.Core.Tools;
+@@ -55,7 +55,7 @@ public static class IconCacheEngine
+         /// <summary>
+         /// Returns the path to the icon file, downloading it if necessary
+         /// </summary>
+
+----------------------------------------
+
+File: src/UniGetUI.Core.IconStore/IconDatabase.cs
+Status: modified
+Changes: +4 -8
+Diff:
+@@ -5,6 +5,9 @@
+ 
+ namespace UniGetUI.Core.IconEngine
+ {
++    /// <summary>
++    /// This class represents the structure of the icon and screenshot database. It is used to deserialize the JSON data.
++    /// </summary>
+     public class IconDatabase
+     {
+         public struct IconCount
+@@ -42,15 +45,9 @@ public static void InitializeInstance()
+         private Dictionary<string, IconScreenshotDatabase_v2.PackageIconAndScreenshots> IconDatabaseData = [];
+         private IconCount __icon_count = new();
+ 
+
+----------------------------------------
+
+File: src/UniGetUI.Core.Language.Tests/LanguageDataTests.cs
+Status: modified
+Changes: +1 -2
+Diff:
+@@ -19,7 +19,6 @@ public void TranslatorsListNotEmptyTest()
+         public void TranslatorsListTest(Person translator)
+             => Assert.NotEmpty(translator.Name);
+ 
+-
+         [Fact]
+         public void LanguageReferenceNotEmptyTest()
+         {
+@@ -44,4 +43,4 @@ public void TranslatedPercentageNotEmptyTests()
+             }
+
+----------------------------------------
+
+File: src/UniGetUI.Core.Language.Tests/LanguageEngineTests.cs
+Status: modified
+Changes: +1 -2
+Diff:
+@@ -1,4 +1,4 @@
+-﻿using UniGetUI.PackageEngine.Enums;
++using UniGetUI.PackageEngine.Enums;
+ 
+ namespace UniGetUI.Core.Language.Tests
+ {
+@@ -39,7 +39,6 @@ public void TestUniGetUIRefactoring(string language, string uniGetUILogTranslati
+             Assert.Equal(uniGetUITranslation, engine.Translate("WingetUI"));
+         }
+ 
+
+----------------------------------------
+
+File: src/UniGetUI.Core.LanguageEngine/Assets/Data/TranslatedPercentages.json
+Status: modified
+Changes: +1 -2
+Diff:
+@@ -11,11 +11,10 @@
+   "he": "48%",
+   "hi": "54%",
+   "hr": "57%",
+-  "hu": "95%",
+   "id": "83%",
+   "ja": "94%",
+   "ko": "85%",
+-  "lt": "38%",
++  "lt": "64%",
+
+----------------------------------------
+
+File: src/UniGetUI.Core.LanguageEngine/Assets/Data/Translators.json
+Status: modified
+Changes: +14 -2
+Diff:
+@@ -318,8 +318,8 @@
+   ],
+   "lt": [
+     {
+-      "name": "Džiugas Januševičius",
+-      "link": ""
++      "name": "dziugas1959",
++      "link": "https://github.com/dziugas1959"
+     }
+   ],
+   "mk": [
+
+----------------------------------------
+
+File: src/UniGetUI.Core.LanguageEngine/Assets/Languages/lang_hu.json
+Status: modified
+Changes: +31 -31
+Diff:
+@@ -4,16 +4,16 @@
+   "0 0 0 Contributors, please add your names/usernames separated by comas (for credit purposes). DO NOT Translate this entry" : "@gidano",
+   "0 packages found" : "0 csomag található",
+   "0 updates found" : "0 talált frissítés",
+-  "1 - Errors" : null,
++  "1 - Errors" : "Hibák",
+   "1 day" : "1 nap",
+   "1 hour" : "1 óra",
+   "1 package was found" : "1 csomagot találtunk",
+   "1 update is available" : "1 frissítés érhető el",
+   "1 week" : "1 hét",
+-  "2 - Warnings" : null,
+-  "3 - Information (less)" : null,
+-  "4 - Information (more)" : null,
+-  "5 - information (debug)" : null,
++  "2 - Warnings" : "Figyelmeztetések",
++  "3 - Information (less)" : "Információ (kevesebb)",
++  "4 - Information (more)" : "Információ (több)",
++  "5 - information (debug)" : "Információ (hibakeresés)",
+   "A repository full of tools and executables designed with Microsoft's .NET ecosystem in mind.<br>Contains: <b>.NET related tools and scripts</b>" : "A Microsoft .NET ökoszisztémára tervezett eszközök és futtatható fájlok tárháza.<br>Tatalma: <b>.NET kapcsolódó eszközök és szkriptek</b>\n",
+   "A repository full of tools designed with Microsoft's .NET ecosystem in mind.<br>Contains: <b>.NET related Tools</b>" : "A Microsoft .NET ökoszisztémáját szem előtt tartva tervezett eszközökkel teli tárház.<br>Tartalmaz: <b>.NET-hez kapcsolódó eszközöket</b>",
+   "A restart is required" : "Újraindításra van szükség",
+@@ -37,7 +37,7 @@
+   "Administrator rights" : "Rendszergazdai jogok",
+   "All files" : "Összes fájl",
+   "All versions" : "Minden változat",
+-  "Allow package operations to be performed in parallel" : null,
++  "Allow package operations to be performed in parallel" : "A csomagműveletek párhuzamos végrehajtásának lehetővé tétele",
+   "Allow parallel installs (NOT RECOMMENDED)" : "Párhuzamos telepítések engedélyezése (NEM AJÁNLOTT)",
+   "Allow {pm} operations to be performed in parallel" : "{pm} műveletek párhuzamos végrehajtásának engedélyezése",
+   "Always elevate {pm} installations by default" : "Alapértelmezés szerint mindig emelje ki a {pm} telepítéseket",
+@@ -46,7 +46,7 @@
+   "An error occurred when adding the source: " : "Hiba történt a forrás hozzáadásakor:",
+   "An error occurred when checking for updates: " : "Hiba történt a frissítések ellenőrzése során:",
+   "An error occurred while processing this package" : "Hiba történt a csomag feldolgozása során",
+-  "An error occurred:" : null,
++  "An error occurred:" : "Hiba történt:",
+   "An interal error occurred. Please view the log for further details." : "Belső hiba történt. További részletekért tekintse meg a naplót.",
+   "An unexpected error occurred:" : "Váratlan hiba történt:",
+   "An update was found!" : "Találtunk egy frissítést!",
+@@ -76,14 +76,14 @@
+   "Beta features and other options that shouldn't be touched" : "Béta funkciók és egyéb opciók, amelyekhez nem szabadna hozzányúlni",
+   "Both" : "Mindkettő",
+   "But here are other things you can do to learn about WingetUI even more:" : "De vannak más dolgok is amiket megtehet, hogy még többet tudjon meg a WingetUI-ról:",
+-  "By toggling a package manager off, you will no longer be able to see or update its packages." : null,
++  "By toggling a package manager off, you will no longer be able to see or update its packages." : "Ha kikapcsol egy csomagkezelőt, akkor többé nem láthatja vagy frissítheti a csomagjait.",
+   "Cache administrator rights and elevate installers by default" : "Rendszergazdai jogok gyorsítótárba helyezése és a telepítési szint  emelése alapértelmezésben",
+   "Cache administrator rights, but elevate installers only when required" : "Rendszergazdai jogok gyorsítótárba helyezése, de csak szükség esetén adjon jogot a telepítőnek.",
+   "Cache was reset successfully!" : "A gyorsítótár törlése sikeres!",
+   "Can't {0} {1}" : "Nem lehet {0} {1}",
+   "Cancel" : "Mégse",
+   "Change backup output directory" : "A biztonsági mentés kimeneti könyvtárának módosítása",
+-  "Change how UniGetUI checks and installs available updates for your packages" : null,
++  "Change how UniGetUI checks and installs available updates for your packages" : "Az UniGetUI csomagok elérhető frissítései ellenőrzésének és telepítési módjának módosítása",
+   "Change install location" : "Telepítés helyének módosítása",
+   "Check for package updates periodically" : "Rendszeresen ellenőrizze a csomag frissítéseit",
+   "Check for updates every:" : "Ellenőrzés gyakorisága:",
+@@ -103,7 +103,7 @@
+   "Command-line Output" : "Parancssori kimenet",
+   "Compare query against" : "Hasonlítsa össze a lekérdezést",
+   "Component Information" : "Komponens információ",
+-  "Continue" : null,
++  "Continue" : "Folytatás",
+   "Contribute to the icon and screenshot repository" : "Hozzájárulás az ikon- és képernyőkép-tárhoz",
+   "Contributors" : "Közreműködők",
+   "Copy" : "Másol",
+@@ -125,7 +125,7 @@
+   "Developing is hard, and this application is free. But if you liked the application, you can always <b>buy me a coffee</b> :)" : "A fejlesztés nehéz, és ez az alkalmazás ingyenes. De ha tetszett az app, bármikor <b>meghívhat egy kávéra</b> :)",
+   "Directly install when double-clicking an item on the \"{discoveryTab}\" tab (instead of showing the package info)" : "Közvetlen telepítés a \"{discoveryTab}\" lapon lévő elemre való dupla kattintással (a csomaginformáció megjelenítése helyett)",
+   "Disable new share API (port 7058)" : "Új megosztási API letiltása (7058-as port)",
+-  "Disclaimer" : null,
++  "Disclaimer" : "Nyilatkozat",
+   "Discover Packages" : "Csomagok felfedezése",
+   "Distinguish between\nuppercase and lowercase" : "Megkülönböztetve a nagy- és kisbetűk",
+   "Distinguish between uppercase and lowercase" : "Tegyen különbséget a kis- és nagybetűk között",
+
+----------------------------------------
+
+File: src/UniGetUI.Core.LanguageEngine/Assets/Languages/lang_it.json
+Status: modified
+Changes: +3 -3
+Diff:
+@@ -372,7 +372,7 @@
+   "Retrying, please wait..." : "Nuovo tentativo, attendi...",
+   "Return to top" : "Torna in alto",
+   "Run" : "Esegui",
+-  "Run as admin" : "Esegui come amministratore",
++  "Run as admin" : "Amministratore",
+   "Run cleanup and clear cache" : "Esegui pulizia e svuota cache",
+   "Running the installer..." : "Esecuzione del programma di installazione...",
+   "Running the uninstaller..." : "Esecuzione del programma di disinstallazione...",
+@@ -561,8 +561,8 @@
+
+----------------------------------------
+
+File: src/UniGetUI.Core.LanguageEngine/Assets/Languages/lang_lt.json
+Status: modified
+Changes: +178 -178
+Diff:
+@@ -1,7 +1,7 @@
+ {
+   "(Last checked: {0})" : "(Paskutinį kartą tikrinta: {0})",
+   "(Number {0} in the queue)" : "(Skaičius – {0} eilėje)",
+-  "0 0 0 Contributors, please add your names/usernames separated by comas (for credit purposes). DO NOT Translate this entry" : "Džiugas Januševičius",
++  "0 0 0 Contributors, please add your names/usernames separated by comas (for credit purposes). DO NOT Translate this entry" : "@dziugas1959",
+   "0 packages found" : "0 paketas/-ų rastas/-a",
+   "0 updates found" : "0 rastas/-ų atnaujinimas/-ų",
+   "1 - Errors" : "1 – Klaida/-os",
+@@ -14,48 +14,48 @@
+   "3 - Information (less)" : "3 – Informacija (mažiau)",
+   "4 - Information (more)" : "4 – Informacija (daugiau)",
+   "5 - information (debug)" : "5 – Informacija (derinimas)",
+-  "A repository full of tools and executables designed with Microsoft's .NET ecosystem in mind.<br>Contains: <b>.NET related tools and scripts</b>" : null,
+-  "A repository full of tools designed with Microsoft's .NET ecosystem in mind.<br>Contains: <b>.NET related Tools</b>" : null,
++  "A repository full of tools and executables designed with Microsoft's .NET ecosystem in mind.<br>Contains: <b>.NET related tools and scripts</b>" : "Saugykla, pilna įrankių ir vykdomųjų, sukurti su „Microsoft'o“ „.NET ekosistemą“ mintyje.<br>Sudaro: <b>„.NET“ susijsiais įrankiais ir skriptais</b>",
++  "A repository full of tools designed with Microsoft's .NET ecosystem in mind.<br>Contains: <b>.NET related Tools</b>" : "Saugykla, pilna įrankių, sukurti su „Microsoft'o“ „.NET ekosistemą“ mintyje.<br>Sudaro: <b>„.NET“ susijsiais įrankiais</b>",
+   "A restart is required" : "Paleidimas iš naujo, yra reikalingas",
+   "About" : "Apie",
+   "About Qt6" : "Apie „Qt6“",
+   "About WingetUI" : "Apie „WingetUI“",
+   "About WingetUI version {0}" : "Apie „WingetUI“ versiją – {0}",
+   "About the dev" : "Apie kūrėją",
+-  "Action when double-clicking packages, hide successful installations" : null,
++  "Action when double-clicking packages, hide successful installations" : "Veiksmas dvigubai paspaudus ant paketų, paslėpti sėkmingo įdiegimo metu",
+   "Add" : "Pridėti",
+   "Add a source to {0}" : "Pridėti šaltinį prie – {0}",
+-  "Add a timestamp to the backup file names" : null,
+-  "Add a timestamp to the backup files" : null,
+-  "Add packages or open an existing bundle" : null,
++  "Add a timestamp to the backup file names" : "Pridėti laiko žymę prie atsarginių failų pavadinimų",
++  "Add a timestamp to the backup files" : "Pridėti laiko žymę prie atsarginių failų",
++  "Add packages or open an existing bundle" : "Pridėti paketus arba atidaryti jau esantį rinkinį",
+   "Add selection to bundle" : "Pridėti pažymėtus į rinkinį",
+   "Add source" : "Pridėti šaltinį",
+   "Adding source {source} to {manager}" : "Pridėdamas šaltinis – „{source}“ į „{manager}“",
+-  "Addition succeeded" : null,
++  "Addition succeeded" : "Pridėjimas sėkmingas",
+   "Administrator privileges" : "Administratoriaus privilegijos",
+   "Administrator privileges preferences" : "Administratoriaus privilegijų nurodymai",
+   "Administrator rights" : "Administratoriaus teisės",
+   "All files" : "Visi failai",
+   "All versions" : "Visos versijos",
+-  "Allow package operations to be performed in parallel" : null,
+-  "Allow parallel installs (NOT RECOMMENDED)" : null,
+-  "Allow {pm} operations to be performed in parallel" : null,
+-  "Always elevate {pm} installations by default" : null,
+-  "Always run {pm} operations with administrator rights" : null,
++  "Allow package operations to be performed in parallel" : "Leisti paketų operacijos atlikti lygiagrečiai",
++  "Allow parallel installs (NOT RECOMMENDED)" : "Leisti lygiagrečius įdiegimus (NEREKOMENDUOJAMA)",
++  "Allow {pm} operations to be performed in parallel" : "Leisti „{pm}“ operacijas atlikti lygiagrečiai",
++  "Always elevate {pm} installations by default" : "Visada numatytai iškelti „{pm}“ įdiegimus",
++  "Always run {pm} operations with administrator rights" : "Visada vykdyti „{pm}“ operacijas su administratoriaus teisėmis",
+   "An error occurred" : "Įvyko klaida",
+-  "An error occurred when adding the source: " : null,
+-  "An error occurred when checking for updates: " : null,
+-  "An error occurred while processing this package" : null,
++  "An error occurred when adding the source: " : "Pridėdant šaltinį įvyko klaida:",
++  "An error occurred when checking for updates: " : "Tikrinant ar yra atnaujinimų įvyko klaida:",
++  "An error occurred while processing this package" : "Apdorjant šį paketą įvyko klaida:",
+   "An error occurred:" : "Įvyko klaida:",
+-  "An interal error occurred. Please view the log for further details." : null,
++  "An interal error occurred. Please view the log for further details." : "Įvyko vidinė klaida. Prašome peržiūrėti žurnalą, norint sužinoti daugiau.",
+   "An unexpected error occurred:" : "Įvyko netikėta klaida:",
+-  "An update was found!" : null,
+-  "Android Subsystem" : null,
++  "An update was found!" : "Buvo rastas atnaujinimas!",
++  "Android Subsystem" : "„Android“ posistema",
+   "Another source" : "Kitas/-oks šaltinis",
+   "App Name" : "Programos pavadinimas",
+-  "Application theme:" : null,
+-  "Architecture to install:" : null,
+-  "Are these screenshots wron or blurry?" : null,
++  "Application theme:" : "Aplikacijos apipavidalinimas",
++  "Architecture to install:" : "Architektūra, kurią įdiegti:",
++  "Are these screenshots wron or blurry?" : "Ar šios ekrano kopijos/iškarpos neteisingas ar neryškios?",
+   "Are you sure?" : "Ar Jūs esate tikras (-a)?",
+   "Ask for administrator privileges once for each batch of operations" : null,
+   "Ask for administrator rights when required" : null,
+@@ -69,33 +69,33 @@
+   "Available Updates" : "Pasiekiami atnaujinimai",
+   "Available updates: {0}" : "Pasiekiami atnaujinimai: {0}",
+   "Available updates: {0}, not finished yet..." : "Pasiekiami atnaujinimai: {0}. dar nebaigta...",
+-  "Backup" : null,
+-  "Backup installed packages" : null,
+-  "Become a contributor" : null,
+-  "Become a translator" : null,
+-  "Beta features and other options that shouldn't be touched" : null,
++  "Backup" : "Sukurti atsarginę kopiją",
++  "Backup installed packages" : "Sukurti įdiegtų paketų atsarginę kopiją",
++  "Become a contributor" : "Tapkite talkininku",
++  "Become a translator" : "Tapkite vertėju",
++  "Beta features and other options that shouldn't be touched" : "„Beta“ funkcijos ir kitos parinktys, kurios neturėtų būti sąveikaujamos",
+   "Both" : "Abu",
+   "But here are other things you can do to learn about WingetUI even more:" : null,
+   "By toggling a package manager off, you will no longer be able to see or update its packages." : null,
+   "Cache administrator rights and elevate installers by default" : null,
+   "Cache administrator rights, but elevate installers only when required" : null,
+   "Cache was reset successfully!" : null,
+-  "Can't {0} {1}" : null,
++  "Can't {0} {1}" : "Negalima/-e {0} {1}",
+   "Cancel" : "Atšaukti",
+-  "Change backup output directory" : null,
++  "Change backup output directory" : "Pakeisti atsarginės kopijos išvesties katalogą",
+   "Change how UniGetUI checks and installs available updates for your packages" : null,
+   "Change install location" : "Pakeisti įdiegimo vietovę",
+   "Check for package updates periodically" : "Periodiškai tikrinti ar yra paketų atnaujinimų",
+   "Check for updates every:" : "Tikrinti ar yra atnaujinimų kas:",
+   "Check for updates periodically" : "Periodiškai tikrinti ar yra atnaujinimų",
+   "Check for updates regularly, and ask me what to do when updates are found." : null,
+   "Check for updates regularly, and automatically install available ones." : null,
+-  "Check out my {0} and my {1}!" : null,
++  "Check out my {0} and my {1}!" : "Peržiūrėkite mano – {0} ir {1}!",
+   "Check out some WingetUI overviews" : null,
+   "Checking for other running instances..." : null,
+   "Checking for updates..." : "Tikrinama ar yra atnaujinimų...",
+   "Checking found instace(s)..." : null,
+-  "Clear selection" : null,
++  "Clear selection" : "Atžymėti pasirinktus",
+   "Clearing Scoop cache - WingetUI" : null,
+   "Clearing Scoop cache..." : null,
+   "Close" : "Uždaryti",
+@@ -114,8 +114,8 @@
+   "Could not remove source {source} from {manager}" : null,
+   "Current Version" : "Dabartinė versija",
+   "Current user" : "Dabartinis naudotojas/vartotojas",
+-  "Custom arguments:" : null,
+-  "Custom command-line arguments:" : null,
++  "Custom arguments:" : "Pasirinktiniai argumentai:",
++  "Custom command-line arguments:" : "Pasirinktiniai komandinės eilutės argumentai:",
+   "Customize WingetUI - for hackers and advanced users only" : null,
+   "DISCLAIMER: WE ARE NOT RESPONSIBLE FOR THE DOWNLOADED PACKAGES. PLEASE MAKE SURE TO INSTALL ONLY TRUSTED SOFTWARE." : null,
+   "Dark" : "Tamsus",
+@@ -127,8 +127,8 @@
+   "Disable new share API (port 7058)" : null,
+   "Disclaimer" : null,
+   "Discover Packages" : "Atrasti paketus",
+-  "Distinguish between\nuppercase and lowercase" : null,
+-  "Distinguish between uppercase and lowercase" : null,
++  "Distinguish between\nuppercase and lowercase" : "Atskirti didžiąsias ir mažąsias raides",
++  "Distinguish between uppercase and lowercase" : "Atskirti didžiąsias ir mažąsias raides ",
+   "Do NOT check for updates" : null,
+   "Do an interactive install for the selected packages" : null,
+   "Do an interactive uninstall for the selected packages" : null,
+@@ -144,22 +144,22 @@
+   "Do you want to restart your computer now?" : "Ar norite paleisti iš naujo savo kompiuterį dabar?",
+   "Do you want to translate WingetUI to your language? See how to contribute <a style=\"color:{0}\" href=\"{1}\"a>HERE!</a>" : null,
+   "Don't feel like donating? Don't worry, you can always share WingetUI with your friends. Spread the word about WingetUI." : null,
+-  "Donate" : null,
+-  "Download installer" : null,
++  "Donate" : "Paremti",
++  "Download installer" : "Atsisiųsti įdiegiklį",
+   "Download succeeded" : "Atsisiuntimas buvo sėkmingas",
+-  "Download updated language files from GitHub automatically" : null,
++  "Download updated language files from GitHub automatically" : "Automatiškai atsisiųsti atnaujintus kalbos failus iš „Github“",
+   "Downloading" : "Atsisiunčiama",
+   "Downloading package metadata..." : null,
+   "Enable Scoop cleanup on launch" : null,
+   "Enable WingetUI notifications" : null,
+   "Enable background api (WingetUI Widgets and Sharing, port 7058)" : null,
+   "Enable it to install packages from {pm}." : null,
+-  "Enable {pm}" : null,
++  "Enable {pm}" : "Įjungti/Įgalinti „{pm}“",
+   "Error" : "Klaida",
+   "Everything is up to date" : "Viskas yra atnaujinta (Liuks!)",
+   "Exact match" : "Tikslus sutapimas",
+-  "Expand version" : null,
+-  "Experimental settings and developer options" : null,
++  "Expand version" : "Išplėsti versiją",
++  "Experimental settings and developer options" : "Eksperimentiniai nustatymai ir kūrėjo parinktys",
+   "Export" : "Eksportuoti",
+   "Export log as a file" : "Eksportuoti žurnalą kaip failą",
+   "Export packages" : "Eksportuoti paketus",
+@@ -169,24 +169,24 @@
+   "Fetching latest announcements, please wait..." : null,
+   "Filters" : "Filtrai",
+   "Finish" : "Baigti",
+-  "Follow system color scheme" : "Sekti sistemos spalvų schemą/parinktis",
+-  "Force ARM compiled winget version (ONLY FOR ARM64 SYSTEMS)" : null,
++  "Follow system color scheme" : "Sekti sistemos spalvų schemą/parinktį",
++  "Force ARM compiled winget version (ONLY FOR ARM64 SYSTEMS)" : "Priversti „ARM“ sukurtai „winget“ versijai (SKIRTA TIK „ARM64“ SISTEMOMS)",
+   "Formerly known as WingetUI" : "Seniau žinomas kaip „WingetUI“",
+   "Found" : "Rasta",
+   "Found packages: " : "Rasti paketai:",
+   "Found packages: {0}" : "Rasti paketai: {0}",
+   "Found packages: {0}, not finished yet..." : "Rasti paketai: {0}, dar nebaigta...",
+-  "General preferences" : null,
++  "General preferences" : "Bendros parinktys",
+   "GitHub profile" : "„GitHub“ profilis",
+-  "Global" : null,
++  "Global" : "Visuotinis/-ė",
+   "Great repository of unknown but useful utilities and other interesting packages.<br>Contains: <b>Utilities, Command-line programs, General Software (extras bucket required)</b>" : null,
+   "Help" : "Pagalba",
+   "Help and documentation" : "Pagalba ir dokumentacija",
+   "Hi, my name is Martí, and i am the <i>developer</i> of WingetUI. WingetUI has been entirely made on my free time!" : null,
+-  "Hide details" : null,
+-  "Homepage" : null,
+-  "Hooray! No updates were found." : null,
+-  "How should installations that require administrator privileges be treated?" : null,
++  "Hide details" : "Slėpti išsamumą",
++  "Homepage" : "Pagrindinis puslapis",
++  "Hooray! No updates were found." : "Sveikinam! Naujinių nerasta.",
++  "How should installations that require administrator privileges be treated?" : "Kaip elgtis su įdiegimais, kurie reikalauja administratoriaus privilegijų?",
+   "I understand" : "Aš supratau",
+   "Ignore future updates for this package" : "Ignoruoti paskesnius atnaujinimus šiam paketui",
+   "Ignore selected packages" : "Ignoruoti pasirinktus/-ą paketus/-ą",
+@@ -199,7 +199,7 @@
+   "Import packages" : "Importuoti paketus",
+   "Import packages from a file" : "Importuoti paketus iš failo",
+   "Import settings from a local file" : "Importuoti nustatymus iš failo",
+-  "Initializing WingetUI..." : null,
++  "Initializing WingetUI..." : "Paleidžiamas „WingetUI“...",
+   "Install" : "Įdiegti",
+   "Install Scoop" : "Įdiegti „Scoop“",
+   "Install as administrator" : "Įdiegti kaip administratorių",
+@@ -209,9 +209,9 @@
+   "Install selected packages" : "Įdiegti pasirinktus paketus",
+   "Install selected packages with administrator privileges" : "Įdiegti pasirinktus paketus su administratoriaus privilegijom",
+   "Install selection" : null,
+-  "Install the latest prerelease version" : null,
+-  "Install updates automatically" : null,
+-  "Installation canceled by the user!" : null,
++  "Install the latest prerelease version" : "Įdiegti paskiausią/naujausią išankstinę laidos versiją",
++  "Install updates automatically" : "Įdiegti atnaujinimus automatiškai",
++  "Installation canceled by the user!" : "Įdiegimas atšauktas vartotojo/naudotojo!",
+   "Installation failed" : "Įdiegimas nepavyko",
+   "Installation options" : "Įdiegimo parinktys",
+
+----------------------------------------
+
+File: src/UniGetUI.Core.LanguageEngine/Assets/Languages/lang_sq.json
+Status: modified
+Changes: +4 -4
+Diff:
+@@ -190,7 +190,7 @@
+   "I understand" : "Kuptoj",
+   "Ignore future updates for this package" : "Mos merr parasysh përditësimet e ardhshme për këtë paketë",
+   "Ignore selected packages" : "Mos merr parasysh paketat e përzgjedhura",
+-  "Ignore special characters" : "Mos merr parasysh shenjat e veçanta",
++  "Ignore special characters" : "Mos merr parasysh shkronjat e veçanta",
+   "Ignore updates for the selected packages" : "Mos merr parasysh përditësimet për paketën e përzgjedhur",
+   "Ignore updates for this package" : "Mos merr parasysh përditësimet për këtë paketë",
+   "Ignored updates" : "Përditësimet të mos marra parasysh",
+@@ -220,7 +220,7 @@
+   "Installed Version" : "Versioni i instaluar",
+
+----------------------------------------
+
+File: src/UniGetUI.Core.LanguageEngine/Assets/Languages/lang_ur.json
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -15,7 +15,7 @@
+   "4 - Information (more)" : "۴ - معلومات (زیادہ)",
+   "5 - information (debug)" : "۵ - معلومات (ڈی بگ)",
+   "A repository full of tools and executables designed with Microsoft's .NET ecosystem in mind.<br>Contains: <b>.NET related tools and scripts</b>" : "مائیکروسافٹ کے .NET ایکو سسٹم کے لئے تیار کردہ ٹولز اور ایگزیکیوشن فائلز سے بھرا ہوا ریپوزیٹری۔<br>اس میں شامل ہے: <b>.NET سے متعلق ٹولز اور سکرپٹس</b>",
+-  "A repository full of tools designed with Microsoft's .NET ecosystem in mind.<br>Contains: <b>.NET related Tools</b>" : "مائیکروسافٹ کے .NET ایکو سسٹم کے لئے تیار کردہ ٹولز سے بھرا ہوا ریپوزیٹری۔<br>اس میں شامل ہے: <b>.NET سے متعلق ٹولز</b>",
++  "A repository full of tools designed with Microsoft's .NET ecosystem in mind.<br>Contains: <b>.NET related Tools</b>" : "مائیکروسافٹ کے .NET ایکو سسٹم کے لئے تیار کردہ ٹولز سے بھرا ہوا ریپوزیٹری۔<br>اس میں شامل ہے: b>.NET>سے متعلق ٹولز</b>",
+   "A restart is required" : "دوبارہ شروع کرنا ضروری ہے",
+   "About" : "کے بارے میں",
+   "About Qt6" : "Qt6 کے بارے میں",
+
+----------------------------------------
+
+File: src/UniGetUI.Core.LanguageEngine/Assets/Languages/lang_zh_CN.json
+Status: modified
+Changes: +47 -47
+Diff:
+@@ -1,7 +1,7 @@
+ {
+   "(Last checked: {0})" : "（上次检查时间：{0}）",
+   "(Number {0} in the queue)" : "（{0} 个包排队中）",
+-  "0 0 0 Contributors, please add your names/usernames separated by comas (for credit purposes). DO NOT Translate this entry" : "Aaron Liu, BUGP Association, ciaran, Cololi, CnYeSheng, adfnekc, @FloatStream, @arthurfsy2, @bai0012, @SpaceTimee, Yisme",
++  "0 0 0 Contributors, please add your names/usernames separated by comas (for credit purposes). DO NOT Translate this entry" : "Aaron Liu, BUGP Association, ciaran, Cololi, CnYeSheng, adfnekc, @FloatStream, @arthurfsy2, @bai0012, @SpaceTimee, Yisme, @dongfengweixiao, @seanyu0, @Sigechaishijie(Albert Peng)",
+   "0 packages found" : "未找到软件包",
+   "0 updates found" : "未找到更新",
+   "1 - Errors" : "1 - 错误",
+@@ -11,8 +11,8 @@
+   "1 update is available" : "有 1 个可用更新",
+   "1 week" : "1 周",
+   "2 - Warnings" : "2 - 警告",
+-  "3 - Information (less)" : "3 - 信息（更少）",
+-  "4 - Information (more)" : "4 - 信息（更多）",
++  "3 - Information (less)" : "3 - 信息（简要）",
++  "4 - Information (more)" : "4 - 信息（详情）",
+   "5 - information (debug)" : "5 - 信息（调试）",
+   "A repository full of tools and executables designed with Microsoft's .NET ecosystem in mind.<br>Contains: <b>.NET related tools and scripts</b>" : "一个包含有全为微软的 .NET 生态系统而设计的工具和可执行程序的存储库。<br>包括：<b>与 .NET 相关的工具和脚本</b>\n",
+   "A repository full of tools designed with Microsoft's .NET ecosystem in mind.<br>Contains: <b>.NET related Tools</b>" : "一个包含有全为微软 .NET 生态系统而设计的工具的存储库。<br>包括：<b>与 .NET 相关的工具</b>",
+@@ -55,7 +55,7 @@
+   "App Name" : "应用名称",
+   "Application theme:" : "应用程序主题：",
+   "Architecture to install:" : "安装架构：",
+-  "Are these screenshots wron or blurry?" : "这些屏幕截图有错误或者不清楚吗？",
++  "Are these screenshots wron or blurry?" : "这些屏幕截图有错误或者模糊不清吗？",
+   "Are you sure?" : "您确定要进行吗 ？",
+   "Ask for administrator privileges once for each batch of operations" : "每批操作请求一次管理员权限",
+   "Ask for administrator rights when required" : "需要时请求管理员权限",
+@@ -68,7 +68,7 @@
+   "Autostart WingetUI in the notifications area" : "开机自动启动 WingetUI 并最小化到任务栏",
+   "Available Updates" : "可用更新",
+   "Available updates: {0}" : "可用更新：{0}",
+-  "Available updates: {0}, not finished yet..." : "可用更新：{0}，仍在进行中...",
++  "Available updates: {0}, not finished yet..." : "可用更新：{0}，仍在进行中……",
+   "Backup" : "备份",
+   "Backup installed packages" : "备份已安装软件包",
+   "Become a contributor" : "成为贡献者",
+@@ -88,7 +88,7 @@
+   "Check for package updates periodically" : "定期检查软件包更新",
+   "Check for updates every:" : "更新检查间隔：",
+   "Check for updates periodically" : "定期检查更新",
+-  "Check for updates regularly, and ask me what to do when updates are found." : "定期检查更新，并在发现更新时询问是否要安装",
++  "Check for updates regularly, and ask me what to do when updates are found." : "定期检查更新，并在发现更新时询问是否要安装。",
+   "Check for updates regularly, and automatically install available ones." : "定期检查更新并自动安装可用更新。",
+   "Check out my {0} and my {1}!" : "检查我的 {0} 和 {1}！",
+   "Check out some WingetUI overviews" : "查阅 WingetUI 的概述",
+@@ -99,12 +99,12 @@
+   "Clearing Scoop cache - WingetUI" : "清理 Scoop 缓存 - WingetUI",
+   "Clearing Scoop cache..." : "正在清理 Scoop 缓存…",
+   "Close" : "关闭",
+-  "Close WingetUI to the notification area" : "关闭窗口到系统托盘",
++  "Close WingetUI to the notification area" : "关闭 WingetUI 到系统托盘",
+   "Command-line Output" : "命令行输出",
+   "Compare query against" : "比较的查询字段",
+   "Component Information" : "组件信息",
+   "Continue" : "继续",
+-  "Contribute to the icon and screenshot repository" : "贡献屏幕截图和图标",
++  "Contribute to the icon and screenshot repository" : "为图标和屏幕截图存储库做出贡献",
+   "Contributors" : "贡献者",
+   "Copy" : "复制",
+   "Copy to clipboard" : "复制到剪贴板",
+@@ -116,7 +116,7 @@
+   "Current user" : "当前用户",
+   "Custom arguments:" : "自定义参数：",
+   "Custom command-line arguments:" : "自定义命令行参数：",
+-  "Customize WingetUI - for hackers and advanced users only" : "定制 WingetUI – 仅供极客与高级用户",
++  "Customize WingetUI - for hackers and advanced users only" : "定制 WingetUI – 仅供黑客与高级用户",
+   "DISCLAIMER: WE ARE NOT RESPONSIBLE FOR THE DOWNLOADED PACKAGES. PLEASE MAKE SURE TO INSTALL ONLY TRUSTED SOFTWARE." : "请注意：我们并不为您下载的软件包负责。请自行确保只安装受信任的软件。",
+   "Dark" : "深色",
+   "Default" : "默认",
+@@ -161,12 +161,12 @@
+   "Expand version" : "查看版本",
+   "Experimental settings and developer options" : "实验性设置和开发者选项",
+   "Export" : "导出",
+-  "Export log as a file" : "导出日志到文件",
++  "Export log as a file" : "导出日志到一个文件",
+   "Export packages" : "导出软件包列表",
+   "Export selected packages to a file" : "导出所选软件包到文件",
+   "Export settings to a local file" : "导出设置到本地文件",
+   "Export to a file" : "导出到文件",
+-  "Fetching latest announcements, please wait..." : "正在获取最新公告，请稍候...",
++  "Fetching latest announcements, please wait..." : "正在获取最新公告，请稍候……",
+   "Filters" : "筛选器",
+   "Finish" : "完成",
+   "Follow system color scheme" : "跟随系统颜色方案",
+@@ -175,7 +175,7 @@
+   "Found" : "已找到",
+   "Found packages: " : "已找到软件包：",
+   "Found packages: {0}" : "已找到软件包：{0}",
+-  "Found packages: {0}, not finished yet..." : "已找到 {0} 个软件包，仍在查找中...",
++  "Found packages: {0}, not finished yet..." : "已找到 {0} 个软件包，仍在查找中……",
+   "General preferences" : "通用首选项",
+   "GitHub profile" : "GitHub 个人资料",
+   "Global" : "全局",
+@@ -187,7 +187,7 @@
+   "Homepage" : "主页",
+   "Hooray! No updates were found." : "好极了！没有待更新的软件！",
+   "How should installations that require administrator privileges be treated?" : "该怎么处理需要管理员权限的安装操作？",
+-  "I understand" : "了解",
++  "I understand" : "我明白",
+   "Ignore future updates for this package" : "忽略此软件包的后续更新",
+   "Ignore selected packages" : "忽略所选软件包",
+   "Ignore special characters" : "忽略特殊字符",
+@@ -199,7 +199,7 @@
+   "Import packages" : "导入软件包",
+
+----------------------------------------
+
+File: src/UniGetUI.Core.LanguageEngine/LanguageData.cs
+Status: modified
+Changes: +1 -4
+Diff:
+@@ -1,4 +1,4 @@
+-﻿using System.Collections.ObjectModel;
++using System.Collections.ObjectModel;
+ using System.Runtime.InteropServices;
+ using System.Text.Json.Nodes;
+ using UniGetUI.Core.Classes;
+@@ -10,9 +10,6 @@ namespace UniGetUI.Core.Language
+ {
+     public static class LanguageData
+     {
+
+----------------------------------------
+
+File: src/UniGetUI.Core.LanguageEngine/LanguageEngine.cs
+Status: modified
+Changes: +0 -3
+Diff:
+@@ -72,7 +72,6 @@ public Dictionary<string, string> LoadLanguageFile(string LangKey, bool ForceBun
+                     }
+                 }
+ 
+-
+                 Dictionary<string, string>? __LangDict = (JsonNode.Parse(File.ReadAllText(LangFileToLoad)) as JsonObject)?.ToDictionary(x => x.Key, x => x.Value != null ? x.Value.ToString() : "");
+ 
+                 if (__LangDict != null)
+@@ -103,8 +102,6 @@ public Dictionary<string, string> LoadLanguageFile(string LangKey, bool ForceBun
+         /// Downloads and saves an updated version of the translations for the specified language.
+
+----------------------------------------
+
+File: src/UniGetUI.Core.Logger/Logger.cs
+Status: modified
+Changes: +1 -3
+Diff:
+@@ -1,4 +1,4 @@
+-﻿using Diagnostics = System.Diagnostics;
++using Diagnostics = System.Diagnostics;
+ 
+ namespace UniGetUI.Core.Logging
+ {
+@@ -37,7 +37,6 @@ public static void Error(string s)
+             LogContents.Add(new LogEntry(s, LogEntry.SeverityLevel.Error));
+         }
+ 
+
+----------------------------------------
+
+File: src/UniGetUI.Core.Settings/SettingsEngine.cs
+Status: modified
+Changes: +6 -1
+Diff:
+@@ -1,10 +1,15 @@
+-﻿using UniGetUI.Core.Data;
++using UniGetUI.Core.Data;
+ using UniGetUI.Core.Logging;
+ 
+ namespace UniGetUI.Core.SettingsEngine
+ {
+     public static class Settings
+     {
++        public static bool AreNotificationsDisabled()
+
+----------------------------------------
+
+File: src/UniGetUI.Core.Tools.Tests/ToolsTests.cs
+Status: modified
+Changes: +2 -2
+Diff:
+@@ -89,7 +89,7 @@ public void TestRandomStringGenerator(int length)
+                 Assert.NotEqual(string1, string3);
+             }
+ 
+-            foreach (string s in new []{string1, string2, string3})
++            foreach (string s in new[] { string1, string2, string3 })
+             {
+                 foreach (char c in s)
+                 {
+@@ -137,4 +137,4 @@ public void TestSafeQueryString(string query, string expected)
+
+----------------------------------------
+
+File: src/UniGetUI.Core.Tools/Tools.cs
+Status: modified
+Changes: +7 -12
+Diff:
+@@ -53,8 +53,6 @@ public static void ReloadLanguageEngineInstance(string ForceLanguage = "")
+         /// <summary>
+         /// Dummy function to capture the strings that need to be translated but the translation is handled by a custom widget
+         /// </summary>
+-        /// <param name="text"></param>
+-        /// <returns></returns>
+         public static string AutoTranslated(string text)
+         {
+             return text;
+@@ -75,14 +73,14 @@ public static void RelaunchProcess()
+         /// Finds an executable in path and returns its location
+         /// </summary>
+         /// <param name="command">The executable alias to find</param>
+-        /// <returns>A tuple containing: a boolean hat represents wether the path was found or not; the path to the file if found.</returns>
++        /// <returns>A tuple containing: a boolean hat represents whether the path was found or not; the path to the file if found.</returns>
+         public static async Task<Tuple<bool, string>> Which(string command)
+         {
+             command = command.Replace(";", "").Replace("&", "").Trim();
+             Logger.Debug($"Begin \"which\" search for command {command}");
+             Process process = new()
+             {
+-                StartInfo = new ProcessStartInfo()
++                StartInfo = new ProcessStartInfo
+                 {
+                     FileName = Path.Join(Environment.SystemDirectory, "where.exe"),
+                     Arguments = command,
+@@ -257,8 +255,7 @@ public static async Task<long> GetFileSizeAsyncAsLong(Uri? url)
+ #pragma warning restore SYSLIB0014 // Type or member is obsolete
+                 req.Method = "HEAD";
+
+----------------------------------------
+
+File: src/UniGetUI.Interface.BackgroundApi/BackgroundApi.cs
+Status: modified
+Changes: +4 -6
+Diff:
+@@ -46,7 +46,6 @@ public static bool AuthenticateToken(string token)
+         /// <summary>
+         /// Run the background api and wait for it for being stopped with the Stop() method
+         /// </summary>
+-        /// <returns></returns>
+         public async Task Start()
+         {
+             try
+@@ -151,7 +150,6 @@ public void BuildShareApi()
+                 }
+             });
+ 
+-
+             // Basic entrypoint to know if UniGetUI is running
+             Get("/is-running", (parameters) =>
+             {
+
+----------------------------------------
+
+File: src/UniGetUI.PAckageEngine.Interfaces/IInstallationOptions.cs
+Status: modified
+Changes: +0 -13
+Diff:
+@@ -1,16 +1,6 @@
+-﻿using System;
+-using System.Collections.Generic;
+-using System.Linq;
+ using System.Runtime.InteropServices;
+-using System.Text;
+-using System.Text.Json;
+-using System.Threading.Tasks;
+-using UniGetUI.Core.Data;
+-using UniGetUI.Core.Language;
+-using UniGetUI.Core.Logging;
+ using UniGetUI.PackageEngine.Enums;
+ using UniGetUI.PackageEngine.Serializable;
+
+----------------------------------------
+
+File: src/UniGetUI.PAckageEngine.Interfaces/IManagerSource.cs
+Status: modified
+Changes: +6 -11
+Diff:
+@@ -1,8 +1,3 @@
+-using System;
+-using System.Collections.Generic;
+-using System.Linq;
+-using System.Text;
+-using System.Threading.Tasks;
+ using UniGetUI.Interface.Enums;
+ 
+ namespace UniGetUI.PackageEngine.Interfaces
+@@ -23,16 +18,16 @@ public interface IManagerSource
+
+----------------------------------------
+
+File: src/UniGetUI.PAckageEngine.Interfaces/IPackage.cs
+Status: modified
+Changes: +10 -25
+Diff:
+@@ -1,5 +1,4 @@
+ using System.ComponentModel;
+-using System.Runtime.CompilerServices;
+ using UniGetUI.Interface.Enums;
+ using UniGetUI.PackageEngine.Classes.Serializable;
+ using UniGetUI.PackageEngine.Enums;
+@@ -24,15 +23,13 @@ public interface IPackage : INotifyPropertyChanged, IEquatable<IPackage>
+         public string SourceAsString { get; }
+         public string AutomationName { get; }
+ 
+-
+         /// <summary>
+         /// Returns an identifier that can be used to compare different packahe instances that refer to the same package.
+         /// What is taken into account:
+         ///    - Manager and Source
+         ///    - Package Identifier
+-        /// For more specific comparsion use GetVersionedHash()
++        /// For more specific comparison use GetVersionedHash()
+         /// </summary>
+-        /// <returns></returns>
+         public long GetHash();
+ 
+         /// <summary>
+@@ -43,30 +40,27 @@ public interface IPackage : INotifyPropertyChanged, IEquatable<IPackage>
+         ///    - Package version
+         ///    - Package new version (if any)
+         /// </summary>
+-        /// <returns></returns>
+         public long GetVersionedHash();
+ 
+         /// <summary>
+-        /// Check wether two packages are **REALLY** the same package.
++        /// Check whether two packages are **REALLY** the same package.
+         /// What is taken into account:
+         ///    - Manager and Source
+         ///    - Package Identifier
+         ///    - Package version
+         ///    - Package new version (if any)
+         /// </summary>
+
+----------------------------------------
+
+File: src/UniGetUI.PAckageEngine.Interfaces/IPackageDetails.cs
+Status: modified
+Changes: +1 -9
+Diff:
+@@ -1,11 +1,3 @@
+-using System;
+-using System.Collections.Generic;
+-using System.Linq;
+-using System.Text;
+-using System.Threading.Tasks;
+-using UniGetUI.Core.Logging;
+-using UniGetUI.PackageEngine.Interfaces;
+-
+ namespace UniGetUI.PackageEngine.Interfaces
+
+----------------------------------------
+
+File: src/UniGetUI.PAckageEngine.Interfaces/IPackageManager.cs
+Status: modified
+Changes: +9 -25
+Diff:
+@@ -1,10 +1,4 @@
+-using System;
+-using System.Collections.Generic;
+ using System.Diagnostics;
+-using System.Linq;
+-using System.Text;
+-using System.Threading.Tasks;
+-using UniGetUI.Core.IconEngine;
+ using UniGetUI.PackageEngine.Classes.Manager.ManagerHelpers;
+ using UniGetUI.PackageEngine.Enums;
+ using UniGetUI.PackageEngine.Interfaces.ManagerProviders;
+@@ -15,58 +9,49 @@ namespace UniGetUI.PackageEngine.Interfaces
+ {
+     public interface IPackageManager : ISourceProvider, IPackageDetailsProvider
+     {
+-        public ManagerProperties Properties { get; set; }
+-        public ManagerCapabilities Capabilities { get; set; }
+-        public ManagerStatus Status { get; set; }
+-        public string Name { get; set; }
++        public ManagerProperties Properties { get; }
++        public ManagerCapabilities Capabilities { get; }
++        public ManagerStatus Status { get; }
++        public string Name { get; }
+         public string DisplayName { get; }
+-        public IManagerSource DefaultSource { get; set; }
+-        public bool ManagerReady { get; set; }
++        public IManagerSource DefaultSource { get; }
++        public bool ManagerReady { get; }
+         public IManagerLogger TaskLogger { get; }
+
+----------------------------------------
+
+File: src/UniGetUI.PAckageEngine.Interfaces/ISourceFactory.cs
+Status: modified
+Changes: +0 -6
+Diff:
+@@ -1,5 +1,3 @@
+-﻿using UniGetUI.PackageEngine.ManagerClasses.Manager;
+-
+ namespace UniGetUI.PackageEngine.Interfaces
+ {
+     public interface ISourceFactory
+@@ -14,20 +12,16 @@ public interface ISourceFactory
+         /// <summary>
+         /// Returns the existing source for the given name, or null if it does not exist.
+         /// </summary>
+
+----------------------------------------
+
+File: src/UniGetUI.PAckageEngine.Interfaces/ManagerProperties.cs
+Status: modified
+Changes: +0 -1
+Diff:
+@@ -1,4 +1,3 @@
+-using UniGetUI.PackageEngine.Classes.Manager.ManagerHelpers;
+ using UniGetUI.PackageEngine.Interfaces;
+ using UniGetUI.Interface.Enums;
+ 
+
+----------------------------------------
+
+File: src/UniGetUI.PAckageEngine.Interfaces/ManagerProviders/IPackageDetailsProvider.cs
+Status: modified
+Changes: +5 -7
+Diff:
+@@ -1,21 +1,20 @@
+-﻿using UniGetUI.Core.IconEngine;
++using UniGetUI.Core.IconEngine;
+ 
+ namespace UniGetUI.PackageEngine.Interfaces.ManagerProviders
+ {
+     public interface IPackageDetailsProvider
+     {
+         /// <summary>
+         /// Returns a PackageDetails object that represents the details for the given Package object.
+-        /// This method is fail-safe and will return a valid but empty PackageDetails object with the package 
++        /// This method is fail-safe and will return a valid but empty PackageDetails object with the package
+         /// id if an error occurs.
+         /// </summary>
+
+----------------------------------------
+
+File: src/UniGetUI.PAckageEngine.Interfaces/ManagerProviders/ISourceProvider.cs
+Status: modified
+Changes: +3 -3
+Diff:
+@@ -1,4 +1,4 @@
+-﻿using UniGetUI.PackageEngine.Enums;
++using UniGetUI.PackageEngine.Enums;
+ 
+ namespace UniGetUI.PackageEngine.Interfaces.ManagerProviders
+ {
+@@ -24,7 +24,7 @@ public interface ISourceProvider
+         /// Checks the result of attempting to add a source
+         /// </summary>
+         /// <param name="source">The added (or not) source</param>
+
+----------------------------------------
+
+File: src/UniGetUI.PackageEngine.Enums/Enums.cs
+Status: modified
+Changes: +1 -2
+Diff:
+@@ -1,4 +1,4 @@
+-﻿namespace UniGetUI.PackageEngine.Enums
++namespace UniGetUI.PackageEngine.Enums
+ {
+     /// <summary>
+     /// Represents the installation scope of a package
+@@ -27,7 +27,6 @@ public enum BundleFormatType
+         XML
+     }
+ 
+
+----------------------------------------
+
+File: src/UniGetUI.PackageEngine.Enums/ManagerCapabilities.cs
+Status: modified
+Changes: +0 -1
+Diff:
+@@ -1,5 +1,4 @@
+ ﻿using System.Runtime.InteropServices;
+-using UniGetUI.PackageEngine.Classes.Manager.ManagerHelpers;
+ 
+ namespace UniGetUI.PackageEngine.ManagerClasses.Manager
+ {
+
+----------------------------------------
+
+File: src/UniGetUI.PackageEngine.Enums/ManagerStatus.cs
+Status: modified
+Changes: +1 -2
+Diff:
+@@ -1,4 +1,4 @@
+-﻿namespace UniGetUI.PackageEngine.Classes.Manager.ManagerHelpers
++namespace UniGetUI.PackageEngine.Classes.Manager.ManagerHelpers
+ {
+     public struct ManagerStatus
+     {
+@@ -7,6 +7,5 @@ public struct ManagerStatus
+         public string ExecutablePath = "";
+         public ManagerStatus()
+         { }
+
+----------------------------------------
+
+File: src/UniGetUI.PackageEngine.Managers.Chocolatey/Chocolatey.cs
+Status: modified
+Changes: +7 -7
+Diff:
+@@ -23,9 +23,9 @@ public class Chocolatey : BaseNuGet
+         public static new string[] FALSE_PACKAGE_IDS = ["Directory", "", "Did", "Features?", "Validation", "-", "being", "It", "Error", "L'accs", "Maximum", "This", "Output is package name ", "operable", "Invalid"];
+         public static new string[] FALSE_PACKAGE_VERSIONS = ["", "Did", "Features?", "Validation", "-", "being", "It", "Error", "L'accs", "Maximum", "This", "packages", "current version", "installed version", "is", "program", "validations", "argument", "no"];
+ 
+-        public Chocolatey() : base()
++        public Chocolatey()
+         {
+-            Capabilities = new ManagerCapabilities()
++            Capabilities = new ManagerCapabilities
+             {
+                 CanRunAsAdmin = true,
+                 CanSkipIntegrityChecks = true,
+@@ -36,14 +36,14 @@ public Chocolatey() : base()
+                 SupportsPreRelease = true,
+                 SupportsCustomSources = true,
+                 SupportsCustomPackageIcons = true,
+-                Sources = new SourceCapabilities()
++                Sources = new SourceCapabilities
+
+----------------------------------------
+
+File: src/UniGetUI.PackageEngine.Managers.Chocolatey/ChocolateyDetailsProvider.cs
+Status: modified
+Changes: +1 -2
+Diff:
+@@ -3,7 +3,6 @@
+ using UniGetUI.PackageEngine.Interfaces;
+ using UniGetUI.PackageEngine.ManagerClasses.Classes;
+ using UniGetUI.PackageEngine.Managers.PowerShellManager;
+-using UniGetUI.PackageEngine.PackageClasses;
+ 
+ namespace UniGetUI.PackageEngine.Managers.Chocolatey
+ {
+@@ -16,7 +15,7 @@ protected override async Task<string[]> GetPackageVersions_Unsafe(IPackage packa
+         {
+
+----------------------------------------
+
+File: src/UniGetUI.PackageEngine.Managers.Dotnet/DotNet.cs
+Status: modified
+Changes: +9 -9
+Diff:
+@@ -21,7 +21,7 @@ public class DotNet : BaseNuGet
+         public static new string[] FALSE_PACKAGE_IDS = [""];
+         public static new string[] FALSE_PACKAGE_VERSIONS = [""];
+ 
+-        public DotNet() : base()
++        public DotNet()
+         {
+             Dependencies = [
+                 new ManagerDependency(
+@@ -32,7 +32,7 @@ public DotNet() : base()
+                     async () => (await CoreTools.Which("dotnet-tools-outdated.exe")).Item1)
+             ];
+ 
+-            Capabilities = new ManagerCapabilities()
++            Capabilities = new ManagerCapabilities
+             {
+                 CanRunAsAdmin = true,
+                 SupportsCustomScopes = true,
+@@ -44,7 +44,7 @@ public DotNet() : base()
+                 SupportsCustomVersions = true,
+             };
+ 
+-            Properties = new ManagerProperties()
++            Properties = new ManagerProperties
+             {
+
+----------------------------------------
+
+File: src/UniGetUI.PackageEngine.Managers.Generic.NuGet/BaseNuGet.cs
+Status: modified
+Changes: +2 -3
+Diff:
+@@ -2,7 +2,6 @@
+ using System.Web;
+ using UniGetUI.Core.Data;
+ using UniGetUI.Core.Tools;
+-using UniGetUI.PackageEngine.Classes.Manager;
+ using UniGetUI.PackageEngine.Interfaces;
+ using UniGetUI.PackageEngine.ManagerClasses.Classes;
+ using UniGetUI.PackageEngine.ManagerClasses.Manager;
+@@ -16,7 +15,7 @@ public abstract class BaseNuGet : PackageManager
+         public static new string[] FALSE_PACKAGE_IDS = [""];
+
+----------------------------------------
+
+File: src/UniGetUI.PackageEngine.Managers.Generic.NuGet/BaseNuGetDetailsProvider.cs
+Status: modified
+Changes: +4 -6
+Diff:
+@@ -6,10 +6,8 @@
+ using UniGetUI.PackageEngine.Classes.Manager.BaseProviders;
+ using UniGetUI.PackageEngine.Enums;
+ using UniGetUI.PackageEngine.Interfaces;
+-using UniGetUI.PackageEngine.ManagerClasses.Classes;
+ using UniGetUI.PackageEngine.ManagerClasses.Manager;
+ using UniGetUI.PackageEngine.Managers.Generic.NuGet.Internal;
+-using UniGetUI.PackageEngine.PackageClasses;
+ 
+ namespace UniGetUI.PackageEngine.Managers.PowerShellManager
+ {
+@@ -47,20 +45,20 @@ protected override async Task GetPackageDetails_Unsafe(IPackageDetails details)
+
+----------------------------------------
+
+File: src/UniGetUI.PackageEngine.Managers.Generic.NuGet/Internal/PackageManifestLoader.cs
+Status: modified
+Changes: +0 -1
+Diff:
+@@ -1,7 +1,6 @@
+ using UniGetUI.Core.Data;
+ using UniGetUI.Core.Logging;
+ using UniGetUI.PackageEngine.Interfaces;
+-using UniGetUI.PackageEngine.PackageClasses;
+ 
+ namespace UniGetUI.PackageEngine.Managers.Generic.NuGet.Internal
+ {
+
+----------------------------------------
+
+File: src/UniGetUI.PackageEngine.Managers.Npm/Npm.cs
+Status: modified
+Changes: +7 -7
+Diff:
+@@ -17,17 +17,17 @@ public class Npm : PackageManager
+         public static new string[] FALSE_PACKAGE_IDS = [""];
+         public static new string[] FALSE_PACKAGE_VERSIONS = [""];
+ 
+-        public Npm() : base()
++        public Npm()
+         {
+-            Capabilities = new ManagerCapabilities()
++            Capabilities = new ManagerCapabilities
+             {
+                 CanRunAsAdmin = true,
+                 SupportsCustomVersions = true,
+                 SupportsCustomScopes = true,
+                 SupportsPreRelease = true,
+             };
+ 
+-            Properties = new ManagerProperties()
++            Properties = new ManagerProperties
+             {
+
+----------------------------------------
+
+File: src/UniGetUI.PackageEngine.Managers.Npm/NpmPackageDetailsProvider.cs
+Status: modified
+Changes: +2 -3
+Diff:
+@@ -6,7 +6,6 @@
+ using UniGetUI.PackageEngine.Interfaces;
+ using UniGetUI.PackageEngine.ManagerClasses.Classes;
+ using UniGetUI.PackageEngine.ManagerClasses.Manager;
+-using UniGetUI.PackageEngine.PackageClasses;
+ 
+ namespace UniGetUI.PackageEngine.Managers.NpmManager
+ {
+@@ -23,7 +22,7 @@ protected override async Task GetPackageDetails_Unsafe(IPackageDetails details)
+                 details.ReleaseNotesUrl = new Uri($"https://www.npmjs.com/package/{details.Package.Id}?activeTab=versions");
+
+----------------------------------------
+
+File: src/UniGetUI.PackageEngine.Managers.Pip/Pip.cs
+Status: modified
+Changes: +8 -8
+Diff:
+@@ -18,17 +18,17 @@ public class Pip : PackageManager
+         public static new string[] FALSE_PACKAGE_IDS = ["", "WARNING:", "[notice]", "Package", "DEPRECATION:"];
+         public static new string[] FALSE_PACKAGE_VERSIONS = ["", "Ignoring", "invalid"];
+ 
+-        public Pip() : base()
++        public Pip()
+         {
+-            Capabilities = new ManagerCapabilities()
++            Capabilities = new ManagerCapabilities
+             {
+                 CanRunAsAdmin = true,
+                 SupportsCustomVersions = true,
+                 SupportsCustomScopes = true,
+                 SupportsPreRelease = true,
+             };
+ 
+-            Properties = new ManagerProperties()
++            Properties = new ManagerProperties
+             {
+                 Name = "Pip",
+                 Description = CoreTools.Translate("Python's library manager. Full of python libraries and other python-related utilities<br>Contains: <b>Python libraries and related utilities</b>"),
+@@ -57,7 +57,7 @@ protected override async Task<Package[]> FindPackages_UnSafe(string query)
+
+----------------------------------------
+
+File: src/UniGetUI.PackageEngine.Managers.Pip/PipPackageDetailsProvider.cs
+Status: modified
+Changes: +1 -3
+Diff:
+@@ -7,7 +7,6 @@
+ using UniGetUI.PackageEngine.Interfaces;
+ using UniGetUI.PackageEngine.ManagerClasses.Classes;
+ using UniGetUI.PackageEngine.ManagerClasses.Manager;
+-using UniGetUI.PackageEngine.PackageClasses;
+ 
+ namespace UniGetUI.PackageEngine.Managers.PipManager
+ {
+@@ -24,7 +23,6 @@ protected override async Task GetPackageDetails_Unsafe(IPackageDetails details)
+             client.DefaultRequestHeaders.UserAgent.ParseAdd(CoreData.UserAgentString);
+
+----------------------------------------
+
+File: src/UniGetUI.PackageEngine.Managers.PowerShell/PowerShell.cs
+Status: modified
+Changes: +7 -7
+Diff:
+@@ -19,9 +19,9 @@ public class PowerShell : BaseNuGet
+         public static new string[] FALSE_PACKAGE_IDS = [""];
+         public static new string[] FALSE_PACKAGE_VERSIONS = [""];
+ 
+-        public PowerShell() : base()
++        public PowerShell()
+         {
+-            Capabilities = new ManagerCapabilities()
++            Capabilities = new ManagerCapabilities
+             {
+                 CanRunAsAdmin = true,
+                 CanSkipIntegrityChecks = true,
+@@ -30,14 +30,14 @@ public PowerShell() : base()
+                 SupportsCustomSources = true,
+                 SupportsPreRelease = true,
+                 SupportsCustomPackageIcons = true,
+-                Sources = new SourceCapabilities()
++                Sources = new SourceCapabilities
+
+----------------------------------------
+
+File: src/UniGetUI.PackageEngine.Managers.PowerShell7/PowerShell7.cs
+Status: modified
+Changes: +7 -7
+Diff:
+@@ -20,9 +20,9 @@ public class PowerShell7 : BaseNuGet
+         public static new string[] FALSE_PACKAGE_IDS = [""];
+         public static new string[] FALSE_PACKAGE_VERSIONS = [""];
+ 
+-        public PowerShell7() : base()
++        public PowerShell7()
+         {
+-            Capabilities = new ManagerCapabilities()
++            Capabilities = new ManagerCapabilities
+             {
+                 CanRunAsAdmin = true,
+                 CanSkipIntegrityChecks = true,
+@@ -31,14 +31,14 @@ public PowerShell7() : base()
+                 SupportsCustomSources = true,
+                 SupportsPreRelease = true,
+                 SupportsCustomPackageIcons = true,
+-                Sources = new SourceCapabilities()
++                Sources = new SourceCapabilities
+
+----------------------------------------
+
+File: src/UniGetUI.PackageEngine.Managers.PowerShell7/PowerShell7SourceProvider.cs
+Status: modified
+Changes: +0 -1
+Diff:
+@@ -2,7 +2,6 @@
+ using System.Text.RegularExpressions;
+ using UniGetUI.Core.Logging;
+ using UniGetUI.PackageEngine.Classes.Manager;
+-using UniGetUI.PackageEngine.Classes.Manager.ManagerHelpers;
+ using UniGetUI.PackageEngine.Classes.Manager.Providers;
+ using UniGetUI.PackageEngine.Enums;
+ using UniGetUI.PackageEngine.Interfaces;
+
+----------------------------------------
+
+File: src/UniGetUI.PackageEngine.Managers.Scoop/Scoop.cs
+Status: modified
+Changes: +10 -10
+Diff:
+@@ -25,7 +25,7 @@ public class Scoop : PackageManager
+ 
+         private long LastScoopSourceUpdateTime;
+ 
+-        public Scoop() : base()
++        public Scoop()
+         {
+             Dependencies = [
+                 // Scoop-Search is required for search to work
+@@ -44,7 +44,7 @@ public Scoop() : base()
+                     async () => (await CoreTools.Which("git.exe")).Item1)
+             ];
+ 
+-            Capabilities = new ManagerCapabilities()
++            Capabilities = new ManagerCapabilities
+             {
+                 CanRunAsAdmin = true,
+                 CanSkipIntegrityChecks = true,
+@@ -53,14 +53,14 @@ public Scoop() : base()
+                 SupportedCustomArchitectures = [Architecture.X86, Architecture.X64, Architecture.Arm64],
+                 SupportsCustomScopes = true,
+                 SupportsCustomSources = true,
+-                Sources = new SourceCapabilities()
++                Sources = new SourceCapabilities
+                 {
+                     KnowsPackageCount = true,
+                     KnowsUpdateDate = true
+                 }
+             };
+
+----------------------------------------
+
+File: src/UniGetUI.PackageEngine.Managers.Scoop/ScoopPackageDetailsProvider.cs
+Status: modified
+Changes: +1 -2
+Diff:
+@@ -7,7 +7,6 @@
+ using UniGetUI.PackageEngine.Interfaces;
+ using UniGetUI.PackageEngine.ManagerClasses.Classes;
+ using UniGetUI.PackageEngine.ManagerClasses.Manager;
+-using UniGetUI.PackageEngine.PackageClasses;
+ 
+ namespace UniGetUI.PackageEngine.Managers.ScoopManager
+ {
+@@ -32,7 +31,7 @@ protected override async Task GetPackageDetails_Unsafe(IPackageDetails details)
+ 
+
+----------------------------------------
+
+File: src/UniGetUI.PackageEngine.Managers.WinGet/BundledWinGetLegacyMethods.cs
+Status: modified
+Changes: +1 -2
+Diff:
+@@ -1,6 +1,5 @@
+ using System.Diagnostics;
+ using UniGetUI.Core.Logging;
+-using UniGetUI.PackageEngine.Classes.Manager.ManagerHelpers;
+ using UniGetUI.PackageEngine.Enums;
+ using UniGetUI.PackageEngine.Interfaces;
+ using UniGetUI.PackageEngine.ManagerClasses.Classes;
+@@ -289,7 +288,7 @@ private static IManagerSource GetLocalSource(WinGet Manager, string id)
+                 return Manager.AndroidSubsystemSource;
+             }
+
+----------------------------------------
+
+File: src/UniGetUI.PackageEngine.Managers.WinGet/WinGet.cs
+Status: modified
+Changes: +36 -43
+Diff:
+@@ -22,19 +22,19 @@ public class WinGet : PackageManager
+         public static new string[] FALSE_PACKAGE_NAMES = ["", "e(s)", "have", "the", "Id"];
+         public static new string[] FALSE_PACKAGE_IDS = ["", "e(s)", "have", "an", "'winget", "pin'", "have", "an", "Version"];
+         public static new string[] FALSE_PACKAGE_VERSIONS = ["", "have", "an", "'winget", "pin'", "have", "an", "Version"];
+-        public LocalWingetSource LocalPcSource { get; set; }
+-        public LocalWingetSource AndroidSubsystemSource { get; set; }
+-        public LocalWingetSource SteamSource { get; set; }
+-        public LocalWingetSource UbisoftConnectSource { get; set; }
+-        public LocalWingetSource GOGSource { get; set; }
+-        public LocalWingetSource MicrosoftStoreSource { get; set; }
++        public LocalWinGetSource LocalPcSource { get; }
++        public LocalWinGetSource AndroidSubsystemSource { get; }
++        public LocalWinGetSource SteamSource { get; }
++        public LocalWinGetSource UbisoftConnectSource { get; }
++        public LocalWinGetSource GOGSource { get; }
++        public LocalWinGetSource MicrosoftStoreSource { get; }
+ 
+         public readonly string PowerShellPath;
+         public readonly string PowerShellPromptArgs;
+         public readonly string PowerShellInlineArgs;
+         public string WinGetBundledPath;
+ 
+-        public WinGet() : base()
++        public WinGet()
+         {
+             PowerShellPath = Path.Join(Environment.SystemDirectory, "windowspowershell\\v1.0\\powershell.exe");
+             PowerShellPromptArgs = "-ExecutionPolicy Bypass -NoLogo -NoProfile";
+@@ -58,7 +58,8 @@ public WinGet() : base()
+ 
+                         Process p = new()
+                         {
+-                            StartInfo = new ProcessStartInfo() {
++                            StartInfo = new ProcessStartInfo
++                            {
+                                 FileName = PowerShellPath,
+                                 Arguments = PowerShellPromptArgs,
+                                 RedirectStandardInput = true,
+@@ -73,7 +74,7 @@ public WinGet() : base()
+                      })
+             ];
+ 
+-            Capabilities = new ManagerCapabilities()
++            Capabilities = new ManagerCapabilities
+             {
+                 CanRunAsAdmin = true,
+                 CanSkipIntegrityChecks = true,
+@@ -86,15 +87,15 @@ public WinGet() : base()
+                 SupportsCustomSources = true,
+                 SupportsCustomPackageIcons = true,
+                 SupportsCustomPackageScreenshots = true,
+-                Sources = new SourceCapabilities()
++                Sources = new SourceCapabilities
+                 {
+                     KnowsPackageCount = false,
+                     KnowsUpdateDate = true,
+                     MustBeInstalledAsAdmin = true,
+                 }
+             };
+ 
+-            Properties = new ManagerProperties()
++            Properties = new ManagerProperties
+             {
+                 Name = "Winget",
+
+----------------------------------------
+
+File: src/UniGetUI.PackageEngine.Managers.WinGet/WinGetHelpers/BundledWinGetHelper.cs
+Status: modified
+Changes: +5 -11
+Diff:
+@@ -6,7 +6,6 @@
+ using UniGetUI.Core.SettingsEngine;
+ using UniGetUI.Core.Tools;
+ using UniGetUI.PackageEngine.Classes.Manager;
+-using UniGetUI.PackageEngine.Classes.Manager.ManagerHelpers;
+ using UniGetUI.PackageEngine.Enums;
+ using UniGetUI.PackageEngine.Interfaces;
+ using UniGetUI.PackageEngine.ManagerClasses.Classes;
+@@ -16,10 +15,6 @@ namespace UniGetUI.PackageEngine.Managers.WingetManager;
+ 
+ internal sealed class BundledWinGetHelper : IWinGetManagerHelper
+ {
+-    public BundledWinGetHelper()
+-    {
+-    }
+-
+     public async Task<Package[]> GetAvailableUpdates_UnSafe(WinGet Manager)
+     {
+         if (Settings.Get("ForceLegacyBundledWinGet"))
+@@ -31,7 +26,7 @@ public async Task<Package[]> GetAvailableUpdates_UnSafe(WinGet Manager)
+ 
+         Process p = new()
+         {
+-            StartInfo = new ProcessStartInfo()
+
+----------------------------------------
+
+File: src/UniGetUI.PackageEngine.Managers.WinGet/WinGetHelpers/IWinGetManagerHelpers.cs
+Status: modified
+Changes: +0 -3
+Diff:
+@@ -1,4 +1,3 @@
+-using UniGetUI.PackageEngine.Classes.Manager.ManagerHelpers;
+ using UniGetUI.PackageEngine.Interfaces;
+ using UniGetUI.PackageEngine.PackageClasses;
+ 
+@@ -35,5 +34,3 @@ internal interface IWinGetManagerHelper
+         public Task GetPackageDetails_UnSafe(WinGet Manager, IPackageDetails details);
+     }
+ }
+-
+
+----------------------------------------
+
+File: src/UniGetUI.PackageEngine.Managers.WinGet/WinGetHelpers/NativeWinGetHelper.cs
+Status: modified
+Changes: +59 -66
+Diff:
+@@ -37,40 +37,34 @@ public async Task<Package[]> FindPackages_UnSafe(WinGet Manager, string query)
+     {
+         List<Package> Packages = [];
+         INativeTaskLogger logger = Manager.TaskLogger.CreateNew(LoggableTaskType.FindPackages);
+-        foreach (string query_part in query.Replace(".", " ").Split(" "))
++        Dictionary<(PackageCatalogReference, PackageMatchField), Task<FindPackagesResult>> FindPackageTasks = [];
++        
++        // Load catalogs
++        logger.Log("Loading available catalogs...");
++        IReadOnlyList<PackageCatalogReference> AvailableCatalogs = WinGetManager.GetPackageCatalogs();
++
++        // Spawn Tasks to find packages on catalogs
++        logger.Log("Spawning catalog fetching tasks...");
++        foreach (PackageCatalogReference CatalogReference in AvailableCatalogs.ToArray())
+         {
+-            FindPackagesOptions PackageFilters = Factory.CreateFindPackagesOptions();
+-
+-            logger.Log("Generating filters...");
+-            // Name filter
+-            PackageMatchFilter FilterName = Factory.CreatePackageMatchFilter();
+-            FilterName.Field = PackageMatchField.Name;
+-            FilterName.Value = query_part;
+-            FilterName.Option = PackageFieldMatchOption.ContainsCaseInsensitive;
+-            PackageFilters.Filters.Add(FilterName);
+-
+-            // Id filter
+-            PackageMatchFilter FilterId = Factory.CreatePackageMatchFilter();
+-            FilterId.Field = PackageMatchField.Id;
+-            FilterId.Value = query_part;
+-            FilterId.Option = PackageFieldMatchOption.ContainsCaseInsensitive;
+-            PackageFilters.Filters.Add(FilterId);
+-
+-            // Load catalogs
+-            logger.Log("Loading available catalogs...");
+-            IReadOnlyList<PackageCatalogReference> AvailableCatalogs = WinGetManager.GetPackageCatalogs();
+-            Dictionary<PackageCatalogReference, Task<FindPackagesResult>> FindPackageTasks = [];
+-
+-            // Spawn Tasks to find packages on catalogs
+-            logger.Log("Spawning catalog fetching tasks...");
+-            foreach (PackageCatalogReference CatalogReference in AvailableCatalogs.ToArray())
++            logger.Log($"Begin search on catalog {CatalogReference.Info.Name}");
++            // Connect to catalog
++            CatalogReference.AcceptSourceAgreements = true;
++            ConnectResult result = await CatalogReference.ConnectAsync();
++            if (result.Status == ConnectResultStatus.Ok)
+             {
+-                logger.Log($"Begin search on catalog {CatalogReference.Info.Name}");
+-                // Connect to catalog
+-                CatalogReference.AcceptSourceAgreements = true;
+-                ConnectResult result = await CatalogReference.ConnectAsync();
+-                if (result.Status == ConnectResultStatus.Ok)
++                foreach (var filter_type in new PackageMatchField[] { PackageMatchField.Name, PackageMatchField.Id, PackageMatchField.Moniker })
+                 {
+
+----------------------------------------
+
+File: src/UniGetUI.PackageEngine.Managers.WinGet/WinGetPackageDetailsProvider.cs
+Status: modified
+Changes: +7 -12
+Diff:
+@@ -1,12 +1,10 @@
+-using Microsoft.Management.Deployment;
+ using System.Globalization;
+ using System.Net;
+ using System.Text.RegularExpressions;
+ using UniGetUI.Core.IconEngine;
+ using UniGetUI.Core.Logging;
+ using UniGetUI.PackageEngine.Classes.Manager.BaseProviders;
+ using UniGetUI.PackageEngine.Interfaces;
+-using UniGetUI.PackageEngine.PackageClasses;
+ using UniGetUIManagers = UniGetUI.PackageEngine.ManagerClasses.Manager;
+ 
+ namespace UniGetUI.PackageEngine.Managers.WingetManager
+@@ -21,7 +19,7 @@ private struct MicrosoftStoreProductType
+         }
+ 
+         public WinGetPackageDetailsProvider(WinGet manager) : base(manager) { }
+-        
++
+         protected override async Task<string[]> GetPackageVersions_Unsafe(IPackage package)
+         {
+             return await WinGetHelper.Instance.GetPackageVersions_Unsafe((WinGet)Manager, package);
+@@ -61,7 +59,7 @@ protected override async Task<Uri[]> GetPackageScreenshots_Unsafe(IPackage packa
+
+----------------------------------------
+
+File: src/UniGetUI.PackageEngine.Managers.WinGet/WinGetSourceProvider.cs
+Status: modified
+Changes: +0 -2
+Diff:
+@@ -1,5 +1,3 @@
+-using UniGetUI.PackageEngine.Classes.Manager;
+-using UniGetUI.PackageEngine.Classes.Manager.ManagerHelpers;
+ using UniGetUI.PackageEngine.Classes.Manager.Providers;
+ using UniGetUI.PackageEngine.Enums;
+ using UniGetUI.PackageEngine.Interfaces;
+
+----------------------------------------
+
+File: src/UniGetUI.PackageEngine.PackageEngine/PEInterface.cs
+Status: modified
+Changes: +0 -3
+Diff:
+@@ -1,7 +1,5 @@
+-using System.Diagnostics;
+ using UniGetUI.Core.Logging;
+ using UniGetUI.PackageEngine.Interfaces;
+-using UniGetUI.PackageEngine.ManagerClasses.Manager;
+ using UniGetUI.PackageEngine.Managers.ChocolateyManager;
+ using UniGetUI.PackageEngine.Managers.DotNetManager;
+ using UniGetUI.PackageEngine.Managers.NpmManager;
+@@ -10,7 +8,6 @@
+ using UniGetUI.PackageEngine.Managers.PowerShellManager;
+
+----------------------------------------
+
+File: src/UniGetUI.PackageEngine.PackageLoader/AbstractPackageLoader.cs
+Status: modified
+Changes: +7 -15
+Diff:
+@@ -1,8 +1,5 @@
+-using System.Collections.ObjectModel;
+ using UniGetUI.Core.Logging;
+ using UniGetUI.PackageEngine.Interfaces;
+-using UniGetUI.PackageEngine.ManagerClasses.Manager;
+-using UniGetUI.PackageEngine.PackageClasses;
+ 
+ namespace UniGetUI.PackageEngine.PackageLoader
+ {
+@@ -39,10 +36,10 @@ public abstract class AbstractPackageLoader
+         /// </summary>
+         public event EventHandler<EventArgs>? StartedLoading;
+ 
+-        readonly bool ALLOW_MULTIPLE_PACKAGE_VERSIONS = false;
+-        readonly bool DISABLE_RELOAD = false;
++        readonly bool ALLOW_MULTIPLE_PACKAGE_VERSIONS;
++        readonly bool DISABLE_RELOAD;
+         protected string LOADER_IDENTIFIER;
+-        private int LoadOperationIdentifier = 0;
++        private int LoadOperationIdentifier;
+         protected IEnumerable<IPackageManager> Managers { get; private set; }
+ 
+         public AbstractPackageLoader(IEnumerable<IPackageManager> managers, string identifier, bool AllowMultiplePackageVersions = false, bool DisableReload = false) 
+@@ -81,7 +78,6 @@ protected void InvokeFinishedLoadingEvent()
+         /// <summary>
+         /// Will trigger a forceful reload of the packages
+         /// </summary>
+
+----------------------------------------
+
+File: src/UniGetUI.PackageEngine.PackageLoader/DiscoverablePackagesLoader.cs
+Status: modified
+Changes: +0 -2
+Diff:
+@@ -1,8 +1,6 @@
+ using UniGetUI.Core.Tools;
+ using UniGetUI.Interface.Enums;
+ using UniGetUI.PackageEngine.Interfaces;
+-using UniGetUI.PackageEngine.ManagerClasses.Manager;
+-using UniGetUI.PackageEngine.PackageClasses;
+ 
+ namespace UniGetUI.PackageEngine.PackageLoader
+ {
+
+----------------------------------------
+
+File: src/UniGetUI.PackageEngine.PackageLoader/InstalledPackagesLoader.cs
+Status: modified
+Changes: +0 -2
+Diff:
+@@ -1,7 +1,5 @@
+ using UniGetUI.Interface.Enums;
+ using UniGetUI.PackageEngine.Interfaces;
+-using UniGetUI.PackageEngine.ManagerClasses.Manager;
+-using UniGetUI.PackageEngine.PackageClasses;
+ 
+ namespace UniGetUI.PackageEngine.PackageLoader
+ {
+
+----------------------------------------
+
+File: src/UniGetUI.PackageEngine.PackageLoader/PackageBundlesLoader.cs
+Status: modified
+Changes: +0 -3
+Diff:
+@@ -1,9 +1,6 @@
+ using UniGetUI.Core.Logging;
+ using UniGetUI.Interface.Enums;
+-using UniGetUI.PackageEngine.Classes.Manager;
+-using UniGetUI.PackageEngine.Classes.Serializable;
+ using UniGetUI.PackageEngine.Interfaces;
+-using UniGetUI.PackageEngine.ManagerClasses.Manager;
+ using UniGetUI.PackageEngine.PackageClasses;
+ 
+ namespace UniGetUI.PackageEngine.PackageLoader
+
+----------------------------------------
+
+File: src/UniGetUI.PackageEngine.PackageLoader/UpgradablePackagesLoader.cs
+Status: modified
+Changes: +0 -2
+Diff:
+@@ -2,8 +2,6 @@
+ using UniGetUI.Core.SettingsEngine;
+ using UniGetUI.Interface.Enums;
+ using UniGetUI.PackageEngine.Interfaces;
+-using UniGetUI.PackageEngine.ManagerClasses.Manager;
+-using UniGetUI.PackageEngine.PackageClasses;
+ 
+ namespace UniGetUI.PackageEngine.PackageLoader
+ {
+
+----------------------------------------
+
+File: src/UniGetUI.PackageEngine.PackageManagerClasses/Manager/BaseProviders/BasePackageDetailsProvider.cs
+Status: modified
+Changes: +0 -1
+Diff:
+@@ -2,7 +2,6 @@
+ using UniGetUI.Core.Logging;
+ using UniGetUI.PackageEngine.Interfaces;
+ using UniGetUI.PackageEngine.Interfaces.ManagerProviders;
+-using UniGetUI.PackageEngine.PackageClasses;
+ 
+ namespace UniGetUI.PackageEngine.Classes.Manager.BaseProviders
+ {
+
+----------------------------------------
+
+File: src/UniGetUI.PackageEngine.PackageManagerClasses/Manager/BaseProviders/BaseSourceProvider.cs
+Status: modified
+Changes: +0 -2
+Diff:
+@@ -1,7 +1,6 @@
+ using UniGetUI.PackageEngine.Enums;
+ using UniGetUI.PackageEngine.Interfaces;
+ using UniGetUI.PackageEngine.Interfaces.ManagerProviders;
+-using UniGetUI.PackageEngine.PackageClasses;
+ 
+ namespace UniGetUI.PackageEngine.Classes.Manager.Providers
+ {
+@@ -24,7 +23,6 @@ public BaseSourceProvider(ManagerT manager)
+         /// <summary>
+
+----------------------------------------
+
+File: src/UniGetUI.PackageEngine.PackageManagerClasses/Manager/Classes/ManagerDependency.cs
+Status: modified
+Changes: +1 -2
+Diff:
+@@ -1,4 +1,4 @@
+-﻿namespace UniGetUI.PackageEngine.Classes.Manager.Classes
++namespace UniGetUI.PackageEngine.Classes.Manager.Classes
+ {
+     public readonly struct ManagerDependency
+     {
+@@ -20,7 +20,6 @@ public ManagerDependency(
+             InstallArguments = installArguments;
+             IsInstalled = isInstalled;
+             FancyInstallCommand = fancyInstallCommand;
+
+----------------------------------------
+
+File: src/UniGetUI.PackageEngine.PackageManagerClasses/Manager/ManagerLogger.cs
+Status: modified
+Changes: +6 -10
+Diff:
+@@ -1,9 +1,6 @@
+ using System.Diagnostics;
+-using System.Net;
+ using UniGetUI.PackageEngine.Enums;
+ using UniGetUI.PackageEngine.Interfaces;
+-using UniGetUI.PackageEngine.ManagerClasses.Manager;
+-using UniGetUI.PackageEngine.PackageClasses;
+ 
+ namespace UniGetUI.PackageEngine.ManagerClasses.Classes
+ {
+@@ -39,7 +36,7 @@ public INativeTaskLogger CreateNew(LoggableTaskType type)
+         }
+     }
+ 
+-    public abstract class TaskLogger
++    public abstract class TaskLogger : ITaskLogger
+     {
+         protected DateTime StartTime;
+         protected DateTime? EndTime;
+@@ -77,15 +74,14 @@ public void Close(int returnCode)
+         }
+ 
+         /// <summary>
+-        /// Returns the output with a preceeding digit representing the color of the line:
+
+----------------------------------------
+
+File: src/UniGetUI.PackageEngine.PackageManagerClasses/Manager/ManagerSource.cs
+Status: modified
+Changes: +16 -14
+Diff:
+@@ -1,7 +1,5 @@
+-using UniGetUI.PackageEngine.ManagerClasses.Manager;
+ using UniGetUI.PackageEngine.Interfaces;
+ using UniGetUI.Interface.Enums;
+-using UniGetUI.PackageEngine.PackageClasses;
+ 
+ namespace UniGetUI.PackageEngine.Classes.Manager
+ {
+@@ -22,7 +20,7 @@ public class ManagerSource : IManagerSource
+         public ManagerSource(IPackageManager manager, string name, Uri url, int? packageCount = 0, string updateDate = "", bool isVirtualManager = false)
+         {
+             IsVirtualManager = isVirtualManager;
+-            Manager = manager as IPackageManager;
++            Manager = manager;
+             Name = name;
+             Url = url;
+             if (manager.Capabilities.Sources.KnowsPackageCount)
+@@ -31,16 +29,9 @@ public ManagerSource(IPackageManager manager, string name, Uri url, int? package
+             }
+ 
+
+----------------------------------------
+
+File: src/UniGetUI.PackageEngine.PackageManagerClasses/Manager/NullPackageManager.cs
+Status: modified
+Changes: +2 -9
+Diff:
+@@ -1,12 +1,5 @@
+-using System;
+-using System.Collections.Generic;
+ using System.Diagnostics;
+-using System.Linq;
+-using System.Text;
+-using System.Threading.Tasks;
+-using UniGetUI.Core.Classes;
+ using UniGetUI.Core.IconEngine;
+-using UniGetUI.Core.Logging;
+
+----------------------------------------
+
+File: src/UniGetUI.PackageEngine.PackageManagerClasses/Manager/PackageManager.cs
+Status: modified
+Changes: +20 -48
+Diff:
+@@ -15,8 +15,6 @@
+ using UniGetUI.PackageEngine.Interfaces;
+ using UniGetUI.PackageEngine.ManagerClasses.Classes;
+ using UniGetUI.PackageEngine.PackageClasses;
+-using UniGetUI.PackageEngine.Classes.Manager;
+-using UniGetUI.Core.Tools;
+ 
+ namespace UniGetUI.PackageEngine.ManagerClasses.Manager
+ {
+@@ -25,37 +23,34 @@ public abstract class PackageManager : SingletonBase<PackageManager>, ISourcePro
+         public ManagerProperties Properties { get; set; } = new(IsDummy: true);
+         public ManagerCapabilities Capabilities { get; set; } = new(IsDummy: true);
+         public ManagerStatus Status { get; set; } = new() { Found = false };
+-        public string Name { get; set; } = "Unset";
++        public string Name { get => Properties.Name ?? "Unset"; }
+         public string DisplayName { get => Properties.DisplayName ?? Name; }
+-        public IManagerSource DefaultSource { get; set; }
++        public IManagerSource DefaultSource { get => Properties.DefaultSource; }
++
+         public static string[] FALSE_PACKAGE_NAMES = [""];
+         public static string[] FALSE_PACKAGE_IDS = [""];
+         public static string[] FALSE_PACKAGE_VERSIONS = [""];
+-        public bool ManagerReady { get; set; } = false;
++        public bool ManagerReady { get; set; }
+         public IManagerLogger TaskLogger { get; }
+ 
+         public ISourceProvider SourceProvider { get; set; }
+         public ISourceFactory SourceFactory { get => SourceProvider.SourceFactory; }
+         public IEnumerable<ManagerDependency> Dependencies { get; protected set; } = [];
+ 
+         public IPackageDetailsProvider? PackageDetailsProvider { get; set; }
+-        private readonly bool __base_constructor_called = false;
++        private readonly bool __base_constructor_called;
+ 
+         public PackageManager()
+         {
+-            DefaultSource = Properties.DefaultSource;
+-            Name = Properties.Name;
+             __base_constructor_called = true;
+             TaskLogger = new ManagerLogger(this);
+             SourceProvider = new NullSourceProvider(this);
+             PackageDetailsProvider = new NullPackageDetailsProvider(this);
+         }
+ 
+-
+         /// <summary>
+         /// Initializes the Package Manager (asynchronously). Must be run before using any other method of the manager.
+         /// </summary>
+-        /// <returns></returns>
+         public virtual async Task InitializeAsync()
+         {
+             // BEGIN integrity check
+@@ -80,13 +75,14 @@ public virtual async Task InitializeAsync()
+             }
+             // END integrity check
+ 
+-            DefaultSource = Properties.DefaultSource;
+-            Name = Properties.Name;
++            Properties.DefaultSource.RefreshSourceNames();
++            foreach(var source in Properties.KnownSources) source.RefreshSourceNames();
++
+             try
+             {
+                 Status = await LoadManager();
+ 
+-                if (IsReady() && SourceProvider != null)
++                if (IsReady() && Capabilities.SupportsCustomSources)
+                 {
+                     Task<IManagerSource[]> SourcesTask = GetSources();
+                     Task winner = await Task.WhenAny(
+@@ -111,7 +107,7 @@ public virtual async Task InitializeAsync()
+                                (IsEnabled() ?
+                                "\n█ Found: " + Status.Found.ToString() +
+                                (Status.Found ?
+-                               "\n█ Fancye exe name: " + Properties.ExecutableFriendlyName +
++                               "\n█ Fancy exe name: " + Properties.ExecutableFriendlyName +
+                                "\n█ Executable path: " + Status.ExecutablePath +
+                                "\n█ Call arguments: " + Properties.ExecutableCallArgs +
+                                "\n█ Version: \n" + "█   " + Status.Version.Replace("\n", "\n█   ")
+@@ -134,17 +130,14 @@ public virtual async Task InitializeAsync()
+             }
+         }
+ 
+-
+         /// <summary>
+         /// Returns a ManagerStatus object representing the current status of the package manager. This method runs asynchronously.
+
+----------------------------------------
+
+File: src/UniGetUI.PackageEngine.PackageManagerClasses/Manager/SourceFactory.cs
+Status: modified
+Changes: +4 -9
+Diff:
+@@ -1,10 +1,8 @@
+ using UniGetUI.PackageEngine.Interfaces;
+-using UniGetUI.PackageEngine.ManagerClasses.Manager;
+-using UniGetUI.PackageEngine.PackageClasses;
+ 
+ namespace UniGetUI.PackageEngine.Classes.Manager
+ {
+-    public class SourceFactory: ISourceFactory
++    public class SourceFactory : ISourceFactory
+     {
+         private readonly IPackageManager __manager;
+         private readonly Dictionary<string, IManagerSource> __reference;
+@@ -28,8 +26,7 @@ public void Reset()
+
+----------------------------------------
+
+File: src/UniGetUI.PackageEngine.PackageManagerClasses/Packages/ImportedPackage.cs
+Status: modified
+Changes: +1 -17
+Diff:
+@@ -1,30 +1,14 @@
+-using System.ComponentModel;
+-using System.Runtime.CompilerServices;
+-using System.Text.Json.Nodes;
+-using UniGetUI.Core.Data;
+-using UniGetUI.Core.IconEngine;
+-using UniGetUI.Core.Logging;
+-using UniGetUI.Core.Tools;
+-using UniGetUI.Interface.Enums;
+-using UniGetUI.PackageEngine.Classes.Manager;
+
+----------------------------------------
+
+File: src/UniGetUI.PackageEngine.PackageManagerClasses/Packages/InstallationOptions.cs
+Status: modified
+Changes: +4 -10
+Diff:
+@@ -13,7 +13,7 @@ namespace UniGetUI.PackageEngine.PackageClasses
+     /// <summary>
+     /// This class represents the options in which a package must be installed, updated or uninstalled.
+     /// </summary>
+-    public class InstallationOptions: IInstallationOptions
++    public class InstallationOptions : IInstallationOptions
+     {
+         private static readonly Dictionary<long, InstallationOptions?> OptionsCache = [];
+ 
+@@ -43,7 +43,7 @@ private InstallationOptions(IPackage package)
+         /// </summary>
+         /// <param name="package">The package from which to load the InstallationOptions</param>
+         /// <returns>The package's InstallationOptions instance</returns>
+-        public static InstallationOptions FromPackage(IPackage package, bool? elevated = null, bool? 
++        public static InstallationOptions FromPackage(IPackage package, bool? elevated = null, bool?
+             interactive = null, bool? no_integrity = null, bool? remove_data = null)
+         {
+             InstallationOptions instance;
+@@ -87,7 +87,7 @@ public static InstallationOptions FromPackage(IPackage package, bool? elevated =
+         /// </summary>
+         /// <param name="package">The package from which to load the InstallationOptions</param>
+         /// <returns>The package's InstallationOptions instance</returns>
+-        public static async Task<InstallationOptions> FromPackageAsync(IPackage package, bool? elevated = null, 
+
+----------------------------------------
+
+File: src/UniGetUI.PackageEngine.PackageManagerClasses/Packages/InvalidImportedPackage.cs
+Status: modified
+Changes: +8 -14
+Diff:
+@@ -1,20 +1,11 @@
+ using System.ComponentModel;
+-using System.ComponentModel.DataAnnotations;
+ using System.Runtime.CompilerServices;
+-using System.Text.Json.Nodes;
+-using UniGetUI.Core.Classes;
+-using UniGetUI.Core.Data;
+-using UniGetUI.Core.IconEngine;
+-using UniGetUI.Core.Logging;
+ using UniGetUI.Core.Tools;
+ using UniGetUI.Interface.Enums;
+ using UniGetUI.PackageEngine.Classes.Manager;
+-using UniGetUI.PackageEngine.Classes.Manager.ManagerHelpers;
+-using UniGetUI.PackageEngine.Classes.Packages;
+ using UniGetUI.PackageEngine.Classes.Serializable;
+ using UniGetUI.PackageEngine.Enums;
+ using UniGetUI.PackageEngine.Interfaces;
+-using UniGetUI.PackageEngine.ManagerClasses.Manager;
+ 
+ namespace UniGetUI.PackageEngine.PackageClasses
+ {
+
+----------------------------------------
+
+File: src/UniGetUI.PackageEngine.PackageManagerClasses/Packages/ObservablePackageCollection.cs
+Status: modified
+Changes: +1 -9
+Diff:
+@@ -1,7 +1,4 @@
+-using System.ComponentModel;
+ using UniGetUI.Core.Classes;
+-using UniGetUI.Core.Tools;
+-using UniGetUI.Interface.Enums;
+ using UniGetUI.PackageEngine.Interfaces;
+ 
+ namespace UniGetUI.PackageEngine.PackageClasses
+@@ -22,16 +19,13 @@ public enum Sorter
+         }
+ 
+         public ObservablePackageCollection()
+-            : base()
+         {
+
+----------------------------------------
+
+File: src/UniGetUI.PackageEngine.PackageManagerClasses/Packages/Package.cs
+Status: modified
+Changes: +8 -29
+Diff:
+@@ -1,16 +1,11 @@
+-using System;
+ using System.ComponentModel;
+-using System.ComponentModel.Design;
+ using System.Runtime.CompilerServices;
+ using System.Text.Json.Nodes;
+-using System.Xml.Linq;
+-using UniGetUI.Core.Classes;
+ using UniGetUI.Core.Data;
+ using UniGetUI.Core.IconEngine;
+ using UniGetUI.Core.Logging;
+ using UniGetUI.Core.Tools;
+ using UniGetUI.Interface.Enums;
+-using UniGetUI.PackageEngine.Classes.Manager;
+ using UniGetUI.PackageEngine.Classes.Packages;
+ using UniGetUI.PackageEngine.Classes.Serializable;
+ using UniGetUI.PackageEngine.Enums;
+@@ -60,7 +55,7 @@ public bool IsChecked
+         public IManagerSource Source { get; }
+ 
+         /// <summary>
+-        /// IPackageManager is guaranteed to be IPackageManager, but C# doesn't allow covariant attributes 
++        /// IPackageManager is guaranteed to be IPackageManager, but C# doesn't allow covariant attributes
+         /// </summary>
+         public IPackageManager Manager { get; }
+         public string NewVersion { get; }
+@@ -69,14 +64,8 @@ public bool IsChecked
+         public string SourceAsString { get => Source.AsString; }
+ 
+         /// <summary>
+-        /// Constuct a package with a given name, id, version, source and manager, and an optional scope.
++        /// Construct a package with a given name, id, version, source and manager, and an optional scope.
+         /// </summary>
+-        /// <param name="name"></param>
+-        /// <param name="id"></param>
+-        /// <param name="version"></param>
+-        /// <param name="source"></param>
+-        /// <param name="manager"></param>
+-        /// <param name="scope"></param>
+
+----------------------------------------
+
+File: src/UniGetUI.PackageEngine.PackageManagerClasses/Packages/PackageCacher.cs
+Status: modified
+Changes: +12 -25
+Diff:
+@@ -1,4 +1,3 @@
+-using UniGetUI.PackageEngine.Interfaces;
+ using UniGetUI.PackageEngine.PackageClasses;
+ 
+ namespace UniGetUI.PackageEngine.Classes.Packages
+@@ -14,7 +13,7 @@ internal static class PackageCacher
+         /// This checks only the "Discover Packages" cache
+         /// </summary>
+         /// <param name="p">The package to check</param>
+-        /// <returns>The already existing package if any, otherwhise p</returns>
++        /// <returns>The already existing package if any, otherwise p</returns>
+         public static Package GetAvailablePackage(Package p)
+         {
+             Package? new_package = GetAvailablePackageOrNull(p);
+@@ -31,7 +30,7 @@ public static Package GetAvailablePackage(Package p)
+         /// This checks only the "Software Updates" cache
+         /// </summary>
+         /// <param name="p">The package to check</param>
+-        /// <returns>The already existing package if any, otherwhise p</returns>
++        /// <returns>The already existing package if any, otherwise p</returns>
+         public static Package GetUpgradablePackage(Package p)
+         {
+             Package? new_package = GetUpgradablePackageOrNull(p);
+@@ -48,7 +47,7 @@ public static Package GetUpgradablePackage(Package p)
+         /// This checks only the "Installed Packages" cache
+         /// </summary>
+         /// <param name="p">The package to check</param>
+-        /// <returns>The already existing package if any, otherwhise p</returns>
++        /// <returns>The already existing package if any, otherwise p</returns>
+         public static Package GetInstalledPackage(Package p)
+         {
+
+----------------------------------------
+
+File: src/UniGetUI.PackageEngine.PackageManagerClasses/Packages/PackageDetails.cs
+Status: modified
+Changes: +2 -3
+Diff:
+@@ -6,15 +6,15 @@ namespace UniGetUI.PackageEngine.PackageClasses
+     /// <summary>
+     /// Holds the details of a Package.
+     /// </summary>
+-    public class PackageDetails: IPackageDetails
++    public class PackageDetails : IPackageDetails
+     {
+         /// <summary>
+         /// The package to which this details instance corresponds
+         /// </summary>
+
+----------------------------------------
+
+File: src/UniGetUI.PackageEngine.Serializable/SerializableBundle_v1.cs
+Status: modified
+Changes: +1 -7
+Diff:
+@@ -1,10 +1,4 @@
+-﻿using System;
+-using System.Collections.Generic;
+-using System.Linq;
+-using System.Text;
+-using System.Threading.Tasks;
+-
+-namespace UniGetUI.PackageEngine.Classes.Serializable
++﻿namespace UniGetUI.PackageEngine.Classes.Serializable
+ {
+
+----------------------------------------
+
+File: src/UniGetUI.PackageEngine.Serializable/SerializableIncompatiblePackage_v1.cs
+Status: modified
+Changes: +1 -7
+Diff:
+@@ -1,10 +1,4 @@
+-﻿using System;
+-using System.Collections.Generic;
+-using System.Linq;
+-using System.Text;
+-using System.Threading.Tasks;
+-
+-namespace UniGetUI.PackageEngine.Classes.Serializable
++﻿namespace UniGetUI.PackageEngine.Classes.Serializable
+ {
+
+----------------------------------------
+
+File: src/UniGetUI.PackageEngine.Serializable/SerializablePackage_v1.cs
+Status: modified
+Changes: +1 -7
+Diff:
+@@ -1,8 +1,3 @@
+-﻿using System;
+-using System.Collections.Generic;
+-using System.Linq;
+-using System.Text;
+-using System.Threading.Tasks;
+ using UniGetUI.PackageEngine.Serializable;
+ 
+ namespace UniGetUI.PackageEngine.Classes.Serializable
+@@ -48,10 +43,9 @@ public class SerializablePackage_v1
+
+----------------------------------------
+
+File: src/UniGetUI.PackageEngine.Serializable/SerializableUpdatesOptions_v1.cs
+Status: modified
+Changes: +1 -7
+Diff:
+@@ -1,10 +1,4 @@
+-﻿using System;
+-using System.Collections.Generic;
+-using System.Linq;
+-using System.Text;
+-using System.Threading.Tasks;
+-
+-namespace UniGetUI.PackageEngine.Classes.Serializable
++﻿namespace UniGetUI.PackageEngine.Classes.Serializable
+ {
+
+----------------------------------------
+
+File: src/UniGetUI/App.xaml.cs
+Status: modified
+Changes: +1 -5
+Diff:
+@@ -40,13 +40,12 @@ public class __tooltip_options
+         public MainWindow MainWindow;
+         public ThemeListener ThemeListener;
+ 
+-
+         private readonly BackgroundApiRunner BackgroundApi = new();
+ #pragma warning disable CS8618
+         public static MainApp Instance;
+         public __tooltip_options TooltipStatus = new();
+ 
+-        public MainApp() : base()
++        public MainApp()
+         {
+
+----------------------------------------
+
+File: src/UniGetUI/EntryPoint.cs
+Status: modified
+Changes: +3 -6
+Diff:
+@@ -29,7 +29,7 @@ private static void Main(string[] args)
+                 else
+                 {
+                     // Otherwise, run UniGetUI as normal
+-                    _ = AsyncMain(args);
++                    _ = AsyncMain();
+                 }
+             }
+             catch (Exception e)
+@@ -41,9 +41,7 @@ private static void Main(string[] args)
+         /// <summary>
+
+----------------------------------------
+
+File: src/UniGetUI/Interface/Dialogs/AboutUniGetUI.xaml
+Status: modified
+Changes: +1 -11
+Diff:
+@@ -46,18 +46,8 @@
+ 
+         <Frame Grid.Row="1" x:Name="ContentFrame" IsNavigationStackEnabled="False" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10,0,10,0"/>
+ 
+-
+         <!-- Close Button -->
+-        <Button HorizontalAlignment="Right" VerticalAlignment="Top" CornerRadius="0,0,0,0" 
+-             BorderThickness="0" Margin="0,-24,-24,0" Width="46" Height="31" Name="CloseButton"
+-             Click="CloseButton_Click"
+-             Padding="0" Background="Transparent">
+
+----------------------------------------
+
+File: src/UniGetUI/Interface/Dialogs/IgnoredUpdates.xaml
+Status: modified
+Changes: +1 -10
+Diff:
+@@ -42,15 +42,6 @@
+             </ScrollViewer>
+         </StackPanel>
+         <!-- Close Button -->
+-        <Button HorizontalAlignment="Right" VerticalAlignment="Top" CornerRadius="0,0,0,0" 
+-             BorderThickness="0" Margin="0,-63,-24,0" Width="46" Height="31" Name="CloseButton"
+-             Click="CloseButton_Click"
+-             Padding="0" Background="Transparent">
+-            <Button.Resources>
+-                <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="Red"/>
+
+----------------------------------------
+
+File: src/UniGetUI/Interface/Dialogs/InstallOptions.xaml
+Status: modified
+Changes: +1 -10
+Diff:
+@@ -109,15 +109,6 @@
+             </StackPanel>
+         </ScrollView>
+         <!-- Close Button -->
+-        <Button HorizontalAlignment="Right" VerticalAlignment="Top" CornerRadius="0,0,0,0" 
+-            BorderThickness="0" Margin="0,-63,-24,0" Width="46" Height="31" Name="CloseButton"
+-            Click="CloseButton_Click"
+-            Padding="0" Background="Transparent">
+-            <Button.Resources>
+-                <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="Red"/>
+
+----------------------------------------
+
+File: src/UniGetUI/Interface/Dialogs/InstallOptions.xaml.cs
+Status: modified
+Changes: +0 -3
+Diff:
+@@ -5,7 +5,6 @@
+ using UniGetUI.Core.Tools;
+ using UniGetUI.PackageEngine.Enums;
+ using UniGetUI.PackageEngine.Interfaces;
+-using UniGetUI.PackageEngine.PackageClasses;
+ using UniGetUI.PackageEngine.Serializable;
+ 
+ // To learn more about WinUI, the WinUI project structure,
+@@ -43,7 +42,6 @@ public InstallOptionsPage(IPackage package, OperationType Operation, Serializabl
+             ArchitectureComboBox.Items.Add(CoreTools.Translate("Default"));
+
+----------------------------------------
+
+File: src/UniGetUI/Interface/Dialogs/ReleaseNotes.xaml
+Status: modified
+Changes: +2 -0
+Diff:
+@@ -6,6 +6,7 @@
+     xmlns:local="using:UniGetUI.Interface.Dialogs"
+     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:controls="using:Microsoft.UI.Xaml.Controls"
++    xmlns:widgets="using:UniGetUI.Interface.Widgets"
+     mc:Ignorable="d"
+     HorizontalAlignment="Stretch" VerticalAlignment="Stretch" >
+     <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+@@ -19,5 +20,6 @@
+             <controls:WebView2 Name="WebView" Source="https://www.google.com/"/>
+
+----------------------------------------
+
+File: src/UniGetUI/Interface/Dialogs/ReleaseNotes.xaml.cs
+Status: modified
+Changes: +6 -1
+Diff:
+@@ -12,6 +12,8 @@ namespace UniGetUI.Interface.Dialogs
+     /// </summary>
+     public sealed partial class ReleaseNotes : Page
+     {
++
++        public event EventHandler<EventArgs>? Close;
+         public ReleaseNotes()
+         {
+             InitializeComponent();
+@@ -32,6 +34,9 @@ public void Dispose()
+
+----------------------------------------
+
+File: src/UniGetUI/Interface/MainView.xaml.cs
+Status: modified
+Changes: +12 -17
+Diff:
+@@ -76,7 +76,6 @@ public MainView()
+                 WarnAboutAdminRights();
+             }
+ 
+-
+             Dictionary<Page, NavButton> NextPageReference = new()
+             {
+                 { DiscoverPage, UpdatesNavButton },
+@@ -271,8 +270,8 @@ public async Task<ContentDialogResult> ShowOperationFailedDialog(
+                 VerticalAlignment = VerticalAlignment.Stretch,
+             };
+ 
+-            grid.RowDefinitions.Add(new RowDefinition() { Height = GridLength.Auto });
+-            grid.RowDefinitions.Add(new RowDefinition() { Height = new GridLength(1, GridUnitType.Star) });
++            grid.RowDefinitions.Add(new RowDefinition { Height = GridLength.Auto });
++            grid.RowDefinitions.Add(new RowDefinition { Height = new GridLength(1, GridUnitType.Star) });
+ 
+             TextBlock headerContent = new()
+             {
+@@ -302,7 +301,6 @@ public async Task<ContentDialogResult> ShowOperationFailedDialog(
+                 VerticalAlignment = VerticalAlignment.Center
+             });
+ 
+-
+             RichTextBlock CommandLineOutput = new()
+             {
+                 FontFamily = new FontFamily("Consolas"),
+@@ -321,8 +319,8 @@ public async Task<ContentDialogResult> ShowOperationFailedDialog(
+ 
+
+----------------------------------------
+
+File: src/UniGetUI/Interface/MainWindow.xaml.cs
+Status: modified
+Changes: +4 -13
+Diff:
+@@ -17,7 +17,6 @@
+ using UniGetUI.PackageEngine;
+ using UniGetUI.PackageEngine.Interfaces;
+ using UniGetUI.PackageEngine.Classes.Manager.Classes;
+-using UniGetUI.PackageEngine.PackageClasses;
+ using Windows.ApplicationModel.DataTransfer;
+ using Windows.Foundation.Collections;
+ using Microsoft.UI.Xaml.Media;
+@@ -125,12 +124,9 @@ public void HandleNotificationActivation(ToastArguments args, ValueSet input)
+             Logger.Debug("Notification activated: " + args.ToString() + " " + input.ToString());
+         }
+ 
+-
+         /// <summary>
+         /// Handle the window closing event, and divert it when the window must be hidden.
+         /// </summary>
+-        /// <param name="sender"></param>
+-        /// <param name="args"></param>
+         public async void HandleClosingEvent(AppWindow sender, AppWindowClosingEventArgs args)
+         {
+             SaveGeometry(Force: true);
+@@ -255,7 +251,6 @@ private void LoadTrayMenu()
+             TrayMenu.Items.Add(new MenuFlyoutItem { Command = ShowUniGetUI });
+             TrayMenu.Items.Add(new MenuFlyoutItem { Command = QuitUniGetUI });
+ 
+-
+             TrayMenu.AreOpenCloseAnimationsEnabled = false;
+ 
+             TrayIcon = new TaskbarIcon();
+@@ -459,7 +454,7 @@ public void SharePackage(IPackage? package)
+
+----------------------------------------
+
+File: src/UniGetUI/Interface/Pages/AboutPages/Contributors.xaml.cs
+Status: modified
+Changes: +0 -3
+Diff:
+@@ -11,9 +11,6 @@ namespace UniGetUI.Interface.Pages.AboutPages
+     /// <summary>
+     /// An empty page that can be used on its own or navigated to within a Frame.
+     /// </summary>
+-    /// 
+-
+-
+     public sealed partial class Contributors : Page
+     {
+         public ObservableCollection<Person> ContributorList = [];
+
+----------------------------------------
+
+File: src/UniGetUI/Interface/Pages/AboutPages/ThirdPartyLicenses.xaml.cs
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -30,7 +30,7 @@ public ThirdPartyLicenses()
+             InitializeComponent();
+             foreach (string license in LicenseData.LicenseNames.Keys)
+             {
+-                Licenses.Add(new LibraryLicense()
++                Licenses.Add(new LibraryLicense
+                 {
+                     Name = license,
+                     License = LicenseData.LicenseNames[license],
+
+----------------------------------------
+
+File: src/UniGetUI/Interface/Pages/LogPage/LogPage.xaml.cs
+Status: modified
+Changes: +2 -5
+Diff:
+@@ -15,8 +15,6 @@ namespace UniGetUI.Interface.Pages
+     /// <summary>
+     /// An empty page that can be used on its own or navigated to within a Frame.
+     /// </summary>
+-    /// 
+-
+     public abstract partial class BaseLogPage : Page, IPageWithKeyboardShortcuts
+     {
+         protected int LOG_LEVEL = 4;
+@@ -25,15 +23,14 @@ public abstract partial class BaseLogPage : Page, IPageWithKeyboardShortcuts
+         protected abstract void LoadLogLevels();
+
+----------------------------------------
+
+File: src/UniGetUI/Interface/Pages/LogPage/ManagerLogsPage.cs
+Status: modified
+Changes: +7 -6
+Diff:
+@@ -3,6 +3,7 @@
+ using UniGetUI.Core.Tools;
+ using UniGetUI.PackageEngine;
+ using UniGetUI.PackageEngine.ManagerClasses.Classes;
++using UniGetUI.PackageEngine.ManagerClasses.Manager;
+ 
+ namespace UniGetUI.Interface.Pages.LogPage
+ {
+@@ -18,16 +19,16 @@ public override void LoadLog()
+             bool IS_DARK = ActualTheme == Microsoft.UI.Xaml.ElementTheme.Dark;
+ 
+             bool verbose = LogLevelCombo.SelectedValue?.ToString()?.Contains('(') ?? false;
+-            foreach (PackageEngine.ManagerClasses.Manager.PackageManager manager in PEInterface.Managers)
+
+----------------------------------------
+
+File: src/UniGetUI/Interface/Pages/PackageDetailsPage.xaml
+Status: modified
+Changes: +7 -19
+Diff:
+@@ -29,14 +29,14 @@
+                             Height="128" Width="128" CornerRadius="24">
+                         <Image Name="PackageIcon" Height="80" Width="80" Margin="8"/>
+                     </Border>
+-                    
++
+                     <TextBlock Grid.Column="1" Name="PackageName" 
+                         HorizontalAlignment="Left" VerticalAlignment="Center" 
+                         FontFamily="Segoe UI Variable Display" 
+                         FontWeight="Bold" FontSize="50"
+                         TextWrapping="Wrap"/>
+                 </Grid>
+-                
++
+                 <!-- Tags + Description -->
+                 <StackPanel Name="DescriptionPanel" Orientation="Vertical" VerticalAlignment="Top">
+                     <xaml:ItemsRepeater Name="TagGridView" ItemsSource="{x:Bind ShowableTags}">
+@@ -61,16 +61,16 @@
+                         <Run x:Name="DescriptionContent"/>
+
+----------------------------------------
+
+File: src/UniGetUI/Interface/Pages/PackageDetailsPage.xaml.cs
+Status: modified
+Changes: +9 -15
+Diff:
+@@ -17,7 +17,6 @@
+ using Windows.UI;
+ using Windows.UI.Text;
+ using UniGetUI.PackageEngine.Managers.PowerShellManager;
+-using Windows.ApplicationModel;
+ 
+ // To learn more about WinUI, the WinUI project structure,
+ // and more about our project templates, see: http://aka.ms/winui-project-info.
+@@ -44,7 +43,6 @@ private enum LayoutMode
+             Unloaded
+         }
+ 
+-
+         private LayoutMode __layout_mode = LayoutMode.Unloaded;
+         public PackageDetailsPage(IPackage package, OperationType operationRole)
+         {
+@@ -117,7 +115,7 @@ public PackageDetailsPage(IPackage package, OperationType operationRole)
+             SetTextToItem(InstallerHash_Content, LoadingString);
+             SetTextToItem(InstallerUrl_Label, CoreTools.Translate("Installer URL") + ": ");
+             SetTextToItem(InstallerUrl_Content, LoadingString);
+-            DownloadInstaller_Button.Click += (s, e) => { DownloadInstallerButton_Click(s, e); };
++            DownloadInstaller_Button.Click += DownloadInstallerButton_Click;
+             SetTextToItem(DownloadInstaller_Button, CoreTools.Translate("Download installer"));
+             SetTextToItem(UpdateDate_Label, CoreTools.Translate("Last updated:") + " ");
+             SetTextToItem(UpdateDate_Content, LoadingString);
+@@ -136,8 +134,6 @@ public async Task LoadInformation()
+             LoadIcon();
+             LoadScreenshots();
+ 
+-            string NotFound = CoreTools.Translate("Not available");
+-
+             IPackageDetails details = Package.Details;
+             if (!details.IsPopulated)
+             {
+@@ -222,7 +218,7 @@ public async Task LoadInformation()
+
+----------------------------------------
+
+File: src/UniGetUI/Interface/Pages/SettingsPage.xaml.cs
+Status: modified
+Changes: +1 -8
+Diff:
+@@ -28,7 +28,6 @@ public sealed partial class SettingsInterface : Page
+         private readonly HyperlinkButton OpenBackupDirectory;
+         private readonly TextBlock BackupDirectoryLabel;
+ 
+-
+         public SettingsInterface()
+         {
+             InitializeComponent();
+@@ -99,7 +98,6 @@ public SettingsInterface()
+             // Experimental Settings Section
+             ExperimentalSettingsExpander.HideRestartRequiredBanner();
+ 
+-
+             // Package Manager banners;
+             Dictionary<PackageManager, SettingsEntry> PackageManagerExpanders = [];
+             Dictionary<PackageManager, List<SettingsCard>> ExtraSettingsCards = [];
+@@ -109,7 +107,6 @@ public SettingsInterface()
+                 ExtraSettingsCards.Add(Manager, []);
+             }
+ 
+
+----------------------------------------
+
+File: src/UniGetUI/Interface/SoftwarePages/AbstractPackagesPage.xaml.cs
+Status: modified
+Changes: +16 -38
+Diff:
+@@ -2,18 +2,12 @@
+ using Microsoft.UI.Xaml;
+ using Microsoft.UI.Xaml.Controls;
+ using Microsoft.UI.Xaml.Input;
+-using System.Diagnostics;
+-using System.Runtime.InteropServices.WindowsRuntime;
+-using System.Runtime.Serialization.Formatters;
+ using UniGetUI.Core.Logging;
+ using UniGetUI.Core.SettingsEngine;
+ using UniGetUI.Core.Tools;
+-using UniGetUI.Interface.Pages;
+ using UniGetUI.Interface.Widgets;
+-using UniGetUI.PackageEngine.Classes.Manager;
+ using UniGetUI.PackageEngine.Enums;
+ using UniGetUI.PackageEngine.Interfaces;
+-using UniGetUI.PackageEngine.ManagerClasses.Manager;
+ using UniGetUI.PackageEngine.Operations;
+ using UniGetUI.PackageEngine.PackageClasses;
+ using UniGetUI.PackageEngine.PackageLoader;
+@@ -267,12 +261,6 @@ protected AbstractPackagesPage(PackagesPageData data)
+                 FilterPackages();
+             };
+ 
+-            // Handle when a key is pressed on the package list
+-            PackageList.KeyUp += (s, e) =>
+-            {
+-                // TODO: Check if needed
+-            };
+-
+             if (MEGA_QUERY_BOX_ENABLED)
+             {
+                 MegaQueryBlockGrid.Visibility = Visibility.Visible;
+@@ -391,23 +379,22 @@ protected void AddPackageToSourcesList(IPackage package)
+             if (!UsedManagers.Contains(source.Manager))
+             {
+                 UsedManagers.Add(source.Manager);
+-                TreeViewNode Node;
+-                Node = new TreeViewNode { Content = source.Manager.DisplayName + "                                                                                    .", IsExpanded = false };
+-                SourcesTreeView.RootNodes.Add(Node);
++                var node = new TreeViewNode { Content = source.Manager.DisplayName + "                                                                                    .", IsExpanded = false };
++                SourcesTreeView.RootNodes.Add(node);
+ 
+                 // Smart way to decide whether to check a source or not.
+                 // - Always check a source by default if no sources are present
+                 // - Otherwise, Check a source only if half of the sources have already been checked
+                 if (SourcesTreeView.RootNodes.Count == 0)
+                 {
+-                    SourcesTreeView.SelectedNodes.Add(Node);
++                    SourcesTreeView.SelectedNodes.Add(node);
+                 }
+                 else if (SourcesTreeView.SelectedNodes.Count >= SourcesTreeView.RootNodes.Count / 2)
+                 {
+-                    SourcesTreeView.SelectedNodes.Add(Node);
+
+----------------------------------------
+
+File: src/UniGetUI/Interface/SoftwarePages/DiscoverSoftwarePage.cs
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -20,7 +20,7 @@ public class DiscoverSoftwarePage : AbstractPackagesPage
+         private BetterMenuItem? MenuInteractive;
+         private BetterMenuItem? MenuSkipHash;
+         public DiscoverSoftwarePage()
+-        : base(new PackagesPageData()
++        : base(new PackagesPageData
+         {
+             DisableAutomaticPackageLoadOnStart = true,
+             MegaQueryBlockEnabled = true,
+
+----------------------------------------
+
+File: src/UniGetUI/Interface/SoftwarePages/InstalledPackagesPage.cs
+Status: modified
+Changes: +1 -2
+Diff:
+@@ -7,7 +7,6 @@
+ using UniGetUI.Interface.Enums;
+ using UniGetUI.Interface.Widgets;
+ using UniGetUI.PackageEngine;
+-using UniGetUI.PackageEngine.Classes;
+ using UniGetUI.PackageEngine.Enums;
+ using UniGetUI.PackageEngine.Interfaces;
+ using UniGetUI.PackageEngine.Operations;
+@@ -24,7 +23,7 @@ public class InstalledPackagesPage : AbstractPackagesPage
+         private BetterMenuItem? MenuRemoveData;
+
+----------------------------------------
+
+File: src/UniGetUI/Interface/SoftwarePages/PackageBundlesPage.cs
+Status: modified
+Changes: +4 -18
+Diff:
+@@ -1,33 +1,19 @@
+ using ExternalLibraries.Pickers;
+ using Microsoft.UI.Xaml;
+ using Microsoft.UI.Xaml.Controls;
+-using System;
+-using System.Collections.Generic;
+-using System.ComponentModel;
+ using System.Diagnostics;
+-using System.Linq;
+-using System.Reflection.Emit;
+-using System.Runtime.CompilerServices;
+-using System.Text;
+ using System.Text.Json;
+-using System.Threading.Tasks;
+ using System.Xml.Serialization;
+-using UniGetUI.Core.Data;
+ using UniGetUI.Core.Logging;
+-using UniGetUI.Core.SettingsEngine;
+ using UniGetUI.Core.Tools;
+ using UniGetUI.Interface.Enums;
+ using UniGetUI.Interface.Widgets;
+ using UniGetUI.PackageEngine;
+-using UniGetUI.PackageEngine.Classes;
+
+----------------------------------------
+
+File: src/UniGetUI/Interface/SoftwarePages/SoftwareUpdatesPage.cs
+Status: modified
+Changes: +8 -9
+Diff:
+@@ -22,7 +22,7 @@ public class SoftwareUpdatesPage : AbstractPackagesPage
+         private BetterMenuItem? MenuskipHash;
+ 
+         public SoftwareUpdatesPage()
+-        : base(new PackagesPageData()
++        : base(new PackagesPageData
+         {
+             DisableAutomaticPackageLoadOnStart = false,
+             MegaQueryBlockEnabled = false,
+@@ -69,21 +69,21 @@ public override BetterMenu GenerateContextMenu()
+                 ShowInstallationOptionsForPackage(SelectedItem);
+             };
+ 
+-            MenuAsAdmin = new BetterMenuItem()
++            MenuAsAdmin = new BetterMenuItem
+             {
+                 Text = "Update as administrator",
+                 IconName = IconType.UAC,
+             };
+             MenuAsAdmin.Click += MenuAsAdmin_Invoked;
+ 
+-            MenuInteractive = new BetterMenuItem()
++            MenuInteractive = new BetterMenuItem
+             {
+                 Text = "Interactive update",
+                 IconName = IconType.Interactive,
+
+----------------------------------------
+
+File: src/UniGetUI/Interface/Widgets/Announcer.xaml.cs
+Status: modified
+Changes: +0 -1
+Diff:
+@@ -23,7 +23,6 @@ public Uri Url
+ 
+         private readonly DependencyProperty UrlProperty;
+ 
+-
+         private static readonly HttpClient NetClient = new(CoreData.GenericHttpClientParameters);
+         public Announcer()
+         {
+
+----------------------------------------
+
+File: src/UniGetUI/Interface/Widgets/ButtonCard.cs
+Status: modified
+Changes: +0 -1
+Diff:
+@@ -1,5 +1,4 @@
+ using CommunityToolkit.WinUI.Controls;
+-using Microsoft.UI.Xaml;
+ using Microsoft.UI.Xaml.Controls;
+ using UniGetUI.Core.Tools;
+ 
+
+----------------------------------------
+
+File: src/UniGetUI/Interface/Widgets/CheckboxCard.cs
+Status: modified
+Changes: +0 -1
+Diff:
+@@ -3,7 +3,6 @@
+ using Microsoft.UI.Xaml.Controls;
+ using UniGetUI.Core.SettingsEngine;
+ using UniGetUI.Core.Tools;
+-using Windows.UI.ApplicationSettings;
+ 
+ // To learn more about WinUI, the WinUI project structure,
+ // and more about our project templates, see: http://aka.ms/winui-project-info.
+
+----------------------------------------
+
+File: src/UniGetUI/Interface/Widgets/ComboboxCard.cs
+Status: modified
+Changes: +0 -2
+Diff:
+@@ -1,9 +1,7 @@
+ using CommunityToolkit.WinUI.Controls;
+-using Microsoft.UI.Xaml;
+ using Microsoft.UI.Xaml.Controls;
+ using Microsoft.UI.Xaml.Data;
+ using System.Collections.ObjectModel;
+-using System.Linq.Expressions;
+ using UniGetUI.Core.Logging;
+ using UniGetUI.Core.SettingsEngine;
+ using UniGetUI.Core.Tools;
+
+----------------------------------------
+
+File: src/UniGetUI/Interface/Widgets/DialogCloseButton.xaml
+Status: added
+Changes: +23 -0
+Diff:
+@@ -0,0 +1,23 @@
++<?xml version="1.0" encoding="utf-8"?>
++<UserControl
++    x:Class="UniGetUI.Interface.Widgets.DialogCloseButton"
++    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
++    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
++    xmlns:widgets="using:UniGetUI.Interface.Widgets"
++    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
++    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
++    mc:Ignorable="d" HorizontalAlignment="Right" VerticalAlignment="Top"
+
+----------------------------------------
+
+File: src/UniGetUI/Interface/Widgets/DialogCloseButton.xaml.cs
+Status: added
+Changes: +34 -0
+Diff:
+@@ -0,0 +1,34 @@
++using System;
++using System.Collections.Generic;
++using System.Drawing.Printing;
++using System.IO;
++using System.Linq;
++using System.Runtime.InteropServices.WindowsRuntime;
++using Microsoft.UI.Xaml;
++using Microsoft.UI.Xaml.Controls;
++using Microsoft.UI.Xaml.Controls.Primitives;
++using Microsoft.UI.Xaml.Data;
+
+----------------------------------------
+
+File: src/UniGetUI/Interface/Widgets/MenuForPackage.cs
+Status: modified
+Changes: +4 -6
+Diff:
+@@ -1,24 +1,22 @@
+ using Microsoft.UI.Xaml;
+ using Microsoft.UI.Xaml.Controls;
+ using UniGetUI.Core.Tools;
+-using UniGetUI.PackageEngine.Interfaces;
+-using UniGetUI.PackageEngine.PackageClasses;
+ using UniGetUI.Interface.Enums;
+ 
+ namespace UniGetUI.Interface.Widgets
+ {
+     public class BetterMenu : MenuFlyout
+     {
+         private readonly Style menuyStyle = (Style)Application.Current.Resources["BetterContextMenu"];
+
+----------------------------------------
+
+File: src/UniGetUI/Interface/Widgets/NavButton.xaml.cs
+Status: modified
+Changes: +1 -7
+Diff:
+@@ -44,10 +44,4 @@ public void ForceClick()
+             Click?.Invoke(this, EventArgs.Empty);
+         }
+     }
+-}
+-
+-
+-/*
+-
+-
+
+----------------------------------------
+
+File: src/UniGetUI/Interface/Widgets/SourceManager.xaml.cs
+Status: modified
+Changes: +0 -3
+Diff:
+@@ -5,9 +5,7 @@
+ using UniGetUI.Core.Tools;
+ using UniGetUI.PackageEngine.Classes.Manager;
+ using UniGetUI.PackageEngine.Interfaces;
+-using UniGetUI.PackageEngine.ManagerClasses.Manager;
+ using UniGetUI.PackageEngine.Operations;
+-using UniGetUI.PackageEngine.PackageClasses;
+ 
+ // To learn more about WinUI, the WinUI project structure,
+ // and more about our project templates, see: http://aka.ms/winui-project-info.
+
+----------------------------------------
+
+File: src/UniGetUI/PackageEngine/Operations/OperationControl.xaml.cs
+Status: modified
+Changes: +3 -10
+Diff:
+@@ -12,7 +12,6 @@
+ using UniGetUI.Interface.Enums;
+ using UniGetUI.PackageEngine.Enums;
+ 
+-
+ // To learn more about WinUI, the WinUI project structure,
+ // and more about our project templates, see: http://aka.ms/winui-project-info.
+ 
+@@ -33,7 +32,6 @@ private enum WidgetLayout
+             Compact,
+         }
+ 
+-
+         private string __button_text = "";
+         private string __line_info_text = "Please wait...";
+         private Uri __icon_source = new("ms-appx:///Assets/Images/package_color.png");
+@@ -129,7 +127,7 @@ protected SolidColorBrush? ProgressBarColor
+             {
+                 __progressbar_color = value; if (ProgressIndicator != null)
+                 {
+
+----------------------------------------
+
+File: src/UniGetUI/PackageEngine/Operations/PackageOperations.cs
+Status: modified
+Changes: +7 -8
+Diff:
+@@ -1,4 +1,4 @@
+-﻿using CommunityToolkit.WinUI.Notifications;
++using CommunityToolkit.WinUI.Notifications;
+ using Microsoft.UI.Xaml.Controls;
+ using System.Diagnostics;
+ using UniGetUI.Core.Data;
+@@ -121,7 +121,7 @@ protected override async Task<AfterFinshAction> HandleFailure()
+ 
+             Package.SetTag(PackageTag.Failed);
+ 
+-            if (!Settings.Get("DisableErrorNotifications") && !Settings.Get("DisableNotifications"))
++            if (!(Settings.Get("DisableErrorNotifications") || Settings.AreNotificationsDisabled()))
+             {
+                 try
+                 {
+@@ -160,7 +160,7 @@ protected override async Task<AfterFinshAction> HandleSuccess()
+             Package.SetTag(PackageTag.AlreadyInstalled);
+             PEInterface.InstalledPackagesLoader.AddForeign(Package);
+ 
+-            if (!Settings.Get("DisableSuccessNotifications") && !Settings.Get("DisableNotifications"))
++            if (!Settings.Get("DisableSuccessNotifications") && !Settings.AreNotificationsDisabled())
+             {
+
+----------------------------------------
+
+File: src/UniGetUI/PackageEngine/Operations/SourceOperations.cs
+Status: modified
+Changes: +4 -5
+Diff:
+@@ -5,7 +5,6 @@
+ using UniGetUI.Core.Logging;
+ using UniGetUI.Core.SettingsEngine;
+ using UniGetUI.Core.Tools;
+-using UniGetUI.PackageEngine.Classes.Manager;
+ using UniGetUI.PackageEngine.Enums;
+ using UniGetUI.PackageEngine.Interfaces;
+ 
+@@ -67,7 +66,7 @@ protected override OperationVeredict GetProcessVeredict(int ReturnCode, string[]
+         protected override async Task<AfterFinshAction> HandleFailure()
+         {
+             LineInfoText = CoreTools.Translate("Could not add source {source} to {manager}", new Dictionary<string, object?> { { "source", Source.Name }, { "manager", Source.Manager.Name } });
+-            if (!Settings.Get("DisableErrorNotifications") && !Settings.Get("DisableNotifications"))
++            if (!Settings.Get("DisableErrorNotifications") && !Settings.AreNotificationsDisabled())
+
+----------------------------------------
+
+File: src/UniGetUI/UniGetUI.csproj
+Status: modified
+Changes: +9 -0
+Diff:
+@@ -59,6 +59,7 @@
+     <None Remove="Interface\Pages\PackageBundle.xaml" />
+     <None Remove="Interface\SoftwarePages\AbstractPackagesPage.xaml" />
+     <None Remove="Interface\SoftwareUpdates.xaml" />
++    <None Remove="Interface\Widgets\DialogCloseButton.xaml" />
+     <None Remove="Interface\Widgets\NavButton.xaml" />
+     <None Remove="MainWindow.xaml" />
+     <None Remove="PackageEngine\OperationControl.xaml" />
+@@ -298,4 +299,12 @@
+   <ItemGroup>
+
+----------------------------------------
+
+File: src/UniGetUI/UniGetUI.csproj.user
+Status: modified
+Changes: +3 -0
+Diff:
+@@ -37,6 +37,9 @@
+     <Page Update="Interface\SoftwarePages\AbstractPackagesPage.xaml">
+       <SubType>Designer</SubType>
+     </Page>
++    <Page Update="Interface\Widgets\DialogCloseButton.xaml">
++      <SubType>Designer</SubType>
++    </Page>
+     <Page Update="Interface\Widgets\NavButton.xaml">
+       <SubType>Designer</SubType>
+     </Page>
+
+----------------------------------------
+
+File: src/WindowsPackageManager.Interop/WindowsPackageManager/ClassesDefinition.cs
+Status: modified
+Changes: +7 -8
+Diff:
+@@ -1,4 +1,4 @@
+-﻿// Copyright (c) Microsoft Corporation.
++// Copyright (c) Microsoft Corporation.
+ // Licensed under the MIT License.
+ 
+ using Microsoft.Management.Deployment;
+@@ -13,7 +13,7 @@ internal static class ClassesDefinition
+         {
+             ProjectedClassType = typeof(PackageManager),
+             InterfaceType = typeof(IPackageManager),
+-            Clsids = new Dictionary<ClsidContext, Guid>()
++            Clsids = new Dictionary<ClsidContext, Guid>
+             {
+                 [ClsidContext.Prod] = new Guid("C53A4F16-787E-42A4-B304-29EFFB4BF597"),
+                 [ClsidContext.Dev] = new Guid("74CB3139-B7C5-4B9E-9388-E6616DEA288C"),
+@@ -24,7 +24,7 @@ internal static class ClassesDefinition
+         {
+             ProjectedClassType = typeof(FindPackagesOptions),
+             InterfaceType = typeof(IFindPackagesOptions),
+-            Clsids = new Dictionary<ClsidContext, Guid>()
++            Clsids = new Dictionary<ClsidContext, Guid>
+             {
+
+----------------------------------------
+
+File: src/WindowsPackageManager.Interop/WindowsPackageManager/WindowsPackageManagerStandardFactory.cs
+Status: modified
+Changes: +1 -2
+Diff:
+@@ -1,4 +1,4 @@
+-﻿// Copyright (c) Microsoft Corporation.
++// Copyright (c) Microsoft Corporation.
+ // Licensed under the MIT License.
+ 
+ using System.Runtime.InteropServices;
+@@ -29,7 +29,6 @@ protected override T CreateInstance<T>(Guid clsid, Guid iid)
+             // above are met.
+             Marshal.ThrowExceptionForHR(hr);
+ 
+
+----------------------------------------
+

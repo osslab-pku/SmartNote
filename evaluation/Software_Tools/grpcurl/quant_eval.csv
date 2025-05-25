@@ -1,0 +1,12 @@
+repo_name,rn_name,commit_coverage,info_entropy,tokens_count,automated_readability_index,dale_chall_readability,entity_percent,project_domain
+fullstorydev/grpcurl,4_zero_shot_promp_rn,0.9333333333333333,2.4137995646056805,597,11.2,10.72,3.2590051457975986,Software_Tools
+fullstorydev/grpcurl,3_conventional_changelog,0.0,0.0,42,151.5,66.9,0.0,Software_Tools
+fullstorydev/grpcurl,1_smartdraft_random_ctx,1.0,1.807354922057604,657,25.1,14.09,1.7496635262449527,Software_Tools
+fullstorydev/grpcurl,1_smartdraft_rn_expository,1.0,1.5546097612655665,879,39.7,13.73,0.0,Software_Tools
+fullstorydev/grpcurl,1_smartdraft_rn_automatic,0.9333333333333333,2.199687794731328,811,31.7,14.26,1.540436456996149,Software_Tools
+fullstorydev/grpcurl,1_smartdraft_no_rn_composer,1.0,1.5546097612655665,861,31.5,13.14,0.0,Software_Tools
+fullstorydev/grpcurl,0_original_rn,1.0,0.3372900666170139,393,10.0,13.58,0.9433962264150944,Software_Tools
+fullstorydev/grpcurl,1_smartdraft_rn_automatic_no_llm,1.0,1.5546097612655665,879,39.7,13.73,0.0,Software_Tools
+fullstorydev/grpcurl,1_smartdraft_rn_descriptive,0.9333333333333333,2.199687794731328,811,31.7,14.26,0.7702182284980745,Software_Tools
+fullstorydev/grpcurl,1_smartdraft_rn_persuasive,0.9333333333333333,1.610577243331642,807,31.5,13.85,0.6345177664974619,Software_Tools
+fullstorydev/grpcurl,2_deeprelease_rn,0.8666666666666667,1.7232314287976207,232,14.9,12.72,0.7490636704119851,Software_Tools

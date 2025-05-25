@@ -1,0 +1,1 @@
+# [](https://github.com/sisong/HDiffPatch/compare/v4.8.0...v) (2024-08-21)

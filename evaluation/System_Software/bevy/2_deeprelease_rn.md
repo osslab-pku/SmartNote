@@ -1,0 +1,1 @@
+ERROR: No PRs to process!

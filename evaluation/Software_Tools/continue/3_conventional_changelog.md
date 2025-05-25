@@ -1,0 +1,41 @@
+## [0.8.45-vscode](https://github.com/continuedev/continue/compare/v0.8.43-vscode...v0.8.45-vscode) (2024-08-06)
+
+### Bug Fixes
+
+* filepath replacements in prompt files ([#1939](https://github.com/continuedev/continue/issues/1939)) ([c0923a0](https://github.com/continuedev/continue/commit/c0923a0dd7ca3a6e9dcbd9b02bfc34250269d2ef))
+* handle closed webview on quick edit ([#1942](https://github.com/continuedev/continue/issues/1942)) ([fe05db5](https://github.com/continuedev/continue/commit/fe05db541dafc45c9870d52d9f15e812e1ea90ad))
+* ignore CSV files ([#1972](https://github.com/continuedev/continue/issues/1972)) ([1272f34](https://github.com/continuedev/continue/commit/1272f3402a1fc12e5eb0566ad4a4aadc3db7dc06))
+* transpile dynamic imports to cjs ([#1975](https://github.com/continuedev/continue/issues/1975)) ([1e3e8eb](https://github.com/continuedev/continue/commit/1e3e8ebe408de1bbb5f9fe0dc61fefef3b85ca69))
+* ts ignore declaration file issue w/ dbinfoz ([#1945](https://github.com/continuedev/continue/issues/1945)) ([477ecd6](https://github.com/continuedev/continue/commit/477ecd63acc85be25ec992d4329f6460c42c6785))
+* improve textarea ux ([#1901](https://github.com/continuedev/continue/issues/1901)) ([228bc30](https://github.com/continuedev/continue/commit/228bc30e895b87e06c170775974c49e2781d9ae0))
+* update CodebaseIndexer path ([#1870](https://github.com/continuedev/continue/issues/1870)) ([00d19e6](https://github.com/continuedev/continue/commit/00d19e623f8abb04fc4a022d354a909e2087aa3c))
+* missing Content-Type header in OllamaEmbeddingsProvider ([#1855](https://github.com/continuedev/continue/issues/1855)) ([841294d](https://github.com/continuedev/continue/commit/841294d15f3ad6ea4a9f7cf277fbcb905d9bd978))
+* convert `walkDir` to an async generator ([#1783](https://github.com/continuedev/continue/issues/1783)) ([6824497](https://github.com/continuedev/continue/commit/68244977d377e1706a20892abc059bf5cb70bc71))
+* delete old docs index on force re-index ([#1778](https://github.com/continuedev/continue/issues/1778)) ([0d632ea](https://github.com/continuedev/continue/commit/0d632eabbfd512c813e65212c3f5765bbc3fc8c7))
+* layout alignment ([#1779](https://github.com/continuedev/continue/issues/1779)) ([6e8fc12](https://github.com/continuedev/continue/commit/6e8fc1247c44c344a48db9758437cb7b3028591c))
+* handle line removal diff ([#1744](https://github.com/continuedev/continue/issues/1744)) ([6126eca](https://github.com/continuedev/continue/commit/6126eca35ab981c7b8cd6a56769dfe7cb9e69349))
+* wrap editor buttons when out of space ([#1727](https://github.com/continuedev/continue/issues/1727)) ([b38ec0e](https://github.com/continuedev/continue/commit/b38ec0e6153e9077d1e39dfd7a453746da31c75b))
+* cmd+shft+l closes sidebar if focused ([#1638](https://github.com/continuedev/continue/issues/1638)) ([92b5c4c](https://github.com/continuedev/continue/commit/92b5c4ccf64a88c461bb32abc9ab02329651e6be)), closes [#1536](https://github.com/continuedev/continue/issues/1536) [#1456](https://github.com/continuedev/continue/issues/1456) [#1564](https://github.com/continuedev/continue/issues/1564) [#1576](https://github.com/continuedev/continue/issues/1576) [#1570](https://github.com/continuedev/continue/issues/1570) [#1582](https://github.com/continuedev/continue/issues/1582) [#1600](https://github.com/continuedev/continue/issues/1600) [#1618](https://github.com/continuedev/continue/issues/1618) [#1626](https://github.com/continuedev/continue/issues/1626) [#1637](https://github.com/continuedev/continue/issues/1637)
+* scroll issues w/ code blocks ([#1688](https://github.com/continuedev/continue/issues/1688)) ([ceb8da0](https://github.com/continuedev/continue/commit/ceb8da0b20db70707a3443ff6f705bba6922488d))
+
+
+### Features
+
+* add "onboarding" slash command ([#1961](https://github.com/continuedev/continue/issues/1961)) ([5819ffb](https://github.com/continuedev/continue/commit/5819ffb43901eec8ad6af85737c28896f20c4e6e))
+* enable WAL (Write-Ahead Logging) for improved performance and stability ([#1885](https://github.com/continuedev/continue/issues/1885)) ([e93ce84](https://github.com/continuedev/continue/commit/e93ce84cd57eacfe820c1f22668ed069020ee46e))
+* items used text ([#1973](https://github.com/continuedev/continue/issues/1973)) ([28a2042](https://github.com/continuedev/continue/commit/28a2042b7f604889cd0c7c76ee3ec0791a00e3ba))
+* improve input and tooltip ux ([#1923](https://github.com/continuedev/continue/issues/1923)) ([2c13776](https://github.com/continuedev/continue/commit/2c13776c06cfe9c775777bf2fffdcf7dfa2169ee))
+* recursively apply quick actions codelens ([#1925](https://github.com/continuedev/continue/issues/1925)) ([d5155da](https://github.com/continuedev/continue/commit/d5155dac697e5fa8b4241ebebe48bbfa66dc2c55))
+* configure docs through config.json ([#1864](https://github.com/continuedev/continue/issues/1864)) ([d7dbdff](https://github.com/continuedev/continue/commit/d7dbdfff485f3970b8595c5a2680a012443747a5))
+* include recently + open files in codebase search ([#1833](https://github.com/continuedev/continue/issues/1833)) ([3e0fae3](https://github.com/continuedev/continue/commit/3e0fae35a75bb8dc117bc3eb008eee122e0e12ae))
+* make [@codebase](https://github.com/codebase) a hardcoded ctx provider ([#1818](https://github.com/continuedev/continue/issues/1818)) ([7b86678](https://github.com/continuedev/continue/commit/7b866787d947106b77ac0cef92b75ba36e09e7fc))
+* add Llama 3.1 8B to cloudflare provider options ([#1811](https://github.com/continuedev/continue/issues/1811)) ([bccbff2](https://github.com/continuedev/continue/commit/bccbff273c176c54f0209c5927a19b8c6d9375f9))
+* allow JetBrains users to index docs ([#1797](https://github.com/continuedev/continue/issues/1797)) ([e0079a4](https://github.com/continuedev/continue/commit/e0079a43721f6002ff59e2eaa79dc8768a6f66f5))
+* crawl `.mdx` docs ([d9f0c4f](https://github.com/continuedev/continue/commit/d9f0c4f131010bd4dae111b5e4290f3460d49e3a))
+* improve chat thread ui for better readability ([#1786](https://github.com/continuedev/continue/issues/1786)) ([8478af6](https://github.com/continuedev/continue/commit/8478af63c18b0c35d59d2326ca4e8687a42a624b))
+* add azure provider config ([#1764](https://github.com/continuedev/continue/issues/1764)) ([c9635de](https://github.com/continuedev/continue/commit/c9635def237e0bb4e1d899057e6b651b6a6cd1b2))
+* enhance help center ([#1755](https://github.com/continuedev/continue/issues/1755)) ([f2a04ef](https://github.com/continuedev/continue/commit/f2a04ef3e9e49876042077f36da5f457630dcaf1))
+* single default quick pick to edit ([#1743](https://github.com/continuedev/continue/issues/1743)) ([ca7bde9](https://github.com/continuedev/continue/commit/ca7bde9b5e10d684ea44291c67eb294edc357240))
+* add file search to quick edit ([#1714](https://github.com/continuedev/continue/issues/1714)) ([21d1b0c](https://github.com/continuedev/continue/commit/21d1b0c16dd9cd454d543e4b387f873e54d89aa5))
+* add rich quick pick for quick edit ([#1706](https://github.com/continuedev/continue/issues/1706)) ([f3b15eb](https://github.com/continuedev/continue/commit/f3b15eb1b14dcc3f4c28ebfb95150b0d6627cecb))
+* add tutorial card ([#1716](https://github.com/continuedev/continue/issues/1716)) ([cb8b207](https://github.com/continuedev/continue/commit/cb8b207582dec6ce997c2c602c9998a5a64504db))

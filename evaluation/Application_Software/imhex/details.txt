@@ -1,0 +1,8 @@
+SmartDraft Command:
+pixi run ipython --pdb -m smartdraft.generator -- WerWolv/ImHex --previous-release v1.35.3 --current-release v1.35.4 --project-domain Application --min-significance 0.1 --writing-style "Automatic" --structure-type "Change Type" --group-commits --show-significance
+
+DeepRelease Command:
+docker run -it -v $(pwd):/outputs --env GITHUB_TOKEN=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 --network host --rm fgksgf/deeprelease run WerWolv/ImHex --since 202406300000 --until 202407092359 --save_dir=/outputs/imhex
+
+ConventionalChangelog Command:
+cd ../.cache/repo/WerWolv_ImHex && git checkout v1.35.4 && conventional-changelog -p angular -r 2 && git checkout -

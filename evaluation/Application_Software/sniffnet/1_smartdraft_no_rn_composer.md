@@ -1,0 +1,25 @@
+# v1.3.1
+## 📦 build
+- The update improves formatting code performance, adds a new method for the Weekday type, and manually implements the Copy trait for DateTime when the offset is Copy. It also fixes an error when rounding with a zero duration. [#509](https://github.com/GyulyVGC/sniffnet/pull/509) <span style='color:grey;'>(significance=0.15)</span>
+- The update replaces lazy_static with once_cell and dashmap with scc in the serial_test library. It also improves the standard test attribute functionality. [#517](https://github.com/GyulyVGC/sniffnet/pull/517) <span style='color:grey;'>(significance=0.11)</span>
+- Includes a dependency change. [#537](https://github.com/GyulyVGC/sniffnet/pull/537) <span style='color:grey;'>(significance=0.23)</span>
+- Improved encoding process by preferring literals over escaping double-quotes. Removed unused features and resolved deprecations. [#545](https://github.com/GyulyVGC/sniffnet/pull/545) <span style='color:grey;'>(significance=0.13)</span>
+- Minor update to the project. [#562](https://github.com/GyulyVGC/sniffnet/pull/562) <span style='color:grey;'>(significance=0.10)</span>
+## ✨ feat
+- Uzbek language translations introduced and updated. [#510](https://github.com/GyulyVGC/sniffnet/pull/510) <span style='color:grey;'>(significance=0.16)</span>
+- Support for IPinfo database entries allows flexible ASN data handling using a string for the code instead of a number. Logic updates ensure compatibility with standard and IPinfo ASN entries. Tests validate ASN and country retrieval from IP addresses for `get_asn()` and `get_country()` functions. [#558](https://github.com/GyulyVGC/sniffnet/pull/558) <span style='color:grey;'>(significance=0.25)</span>
+- Keyboard shortcuts now allow users to change the zoom level. [99295e9](https://github.com/GyulyVGC/sniffnet/commit/99295e956858259869ab0112ca3f0405f8b36984) <span style='color:grey;'>(significance=0.18)</span>
+## 🐛 fix
+- This update improves thumbnail mode by resolving an issue that prevented exiting on Linux systems. It introduces the Ctrl+T shortcut to toggle thumbnail mode, enhancing accessibility. It also fixes duplicated entries in the network hosts list for better clarity and accuracy. [#512](https://github.com/GyulyVGC/sniffnet/pull/512) <span style='color:grey;'>(significance=0.16)</span>
+- The Swedish translation for Sniffnet has been updated, removing the outdated warning. [#522](https://github.com/GyulyVGC/sniffnet/pull/522) <span style='color:grey;'>(significance=0.13)</span>
+- Optimized translation code by reducing unnecessary `String` allocations, enhancing performance and efficiency. Eliminated redundant `to_string()` calls and refined string handling in the GUI's modal component, improving code readability and maintainability. [#524](https://github.com/GyulyVGC/sniffnet/pull/524) <span style='color:grey;'>(significance=0.14)</span>
+- The pull request updates the plotters library with enhancements and bug fixes. New features include adding Clone and PartialEq traits to SeriesLabelPosition and ShapeStyle, a function to draw and save an evcxr figure, and a dotted line style. Bug fixes address infinite size for collinear line segments, overflow in blit_bitmap, and the dashed line algorithm. [#538](https://github.com/GyulyVGC/sniffnet/pull/538) <span style='color:grey;'>(significance=0.12)</span>
+- The update expands the range of selectable zoom values for more precise adjustments in the user interface. [61b6d6b](https://github.com/GyulyVGC/sniffnet/commit/61b6d6b365859d3a7b4c44649dd9b2e9e2cdd037) <span style='color:grey;'>(significance=0.11)</span>
+- Adjusted the zoom slider step for improved precision. [c34dd6e](https://github.com/GyulyVGC/sniffnet/commit/c34dd6ecdee6f59206946466f0e8cbc700c9f422) <span style='color:grey;'>(significance=0.16)</span>
+## 🔧 chore
+- The update enhances thumbnail mode, supports IPinfo ASN and Country databases, and introduces keyboard shortcuts for zoom levels. It fixes exiting thumbnail mode on some Linux distributions and optimizes `String` allocations in translation code. The relative width of filter columns is improved to prevent label truncation, and footer URLs now link to Sniffnet's official website and GitHub Sponsor page. [#564](https://github.com/GyulyVGC/sniffnet/pull/564) <span style='color:grey;'>(significance=0.12)</span>
+- Updated various project dependencies. [461486f](https://github.com/GyulyVGC/sniffnet/commit/461486f4d7d347b2c36197e6105fcc629c413912) <span style='color:grey;'>(significance=0.12)</span>
+- Updated various dependencies and packages. [d113c26](https://github.com/GyulyVGC/sniffnet/commit/d113c26376ba1397ceb506277e23170c762cbef9) <span style='color:grey;'>(significance=0.12)</span>
+## 📚 docs
+- Added CosminPerRam as a contributor. [#546](https://github.com/GyulyVGC/sniffnet/pull/546) <span style='color:grey;'>(significance=0.11)</span>
+- Cornelius Roemer added as a contributor for ideas. [#557](https://github.com/GyulyVGC/sniffnet/pull/557) <span style='color:grey;'>(significance=0.12)</span>

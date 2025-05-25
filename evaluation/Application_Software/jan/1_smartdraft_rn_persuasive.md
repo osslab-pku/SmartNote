@@ -1,0 +1,6 @@
+# v0.5.2
+## 🔧 chore
+- Release 0.5.2 includes significant improvements and fixes. Enhanced model dropdown search prioritizes downloaded models and filters based on configured models. Improved error handling for missing API keys with a new authentication error code and updated error message display logic. Added a new stop token to the Gemma 2b model. Introduced Claude 3.5 Sonnet model, outperforming competitors while maintaining speed and cost efficiency. System monitor now features a button for direct access to shortcut app logs, enhancing log file accessibility. [#2](https://github.com/janhq/jan/pull/2) [#3158](https://github.com/janhq/jan/pull/3158) <span style='color:grey;'>(significance=0.17)</span>
+
+## 🐛 fix
+- The update fixes handling of long words and thread titles without spaces, ensuring the right panel and search bar function correctly. It introduces right-click settings on thread items and options for spell check configuration in chat input. Improved error handling for API key setups and correct thread title updates on input edits. Fixed right panel disappearing issue caused by long words without spaces. [#3160](https://github.com/janhq/jan/pull/3160) <span style='color:grey;'>(significance=0.01)</span>

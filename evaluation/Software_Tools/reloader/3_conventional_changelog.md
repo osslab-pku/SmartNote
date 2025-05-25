@@ -1,0 +1,1 @@
+## [1.0.121](https://github.com/stakater/Reloader/compare/v1.0.120...v1.0.121) (2024-08-07)

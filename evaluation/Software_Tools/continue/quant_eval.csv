@@ -1,0 +1,12 @@
+repo_name,rn_name,commit_coverage,info_entropy,tokens_count,automated_readability_index,dale_chall_readability,entity_percent,project_domain
+continuedev/continue,4_zero_shot_promp_rn,0.0,2.25,472,14.5,11.29,3.6290322580645165,Software_Tools
+continuedev/continue,3_conventional_changelog,0.0,0.9940302114769565,2515,99.7,19.96,0.0968054211035818,Software_Tools
+continuedev/continue,1_smartdraft_random_ctx,0.8666666666666667,1.7381493331928661,885,24.0,10.74,0.7928642220019821,Software_Tools
+continuedev/continue,1_smartdraft_rn_expository,1.0,1.456564762130954,880,75.7,15.54,0.2304147465437788,Software_Tools
+continuedev/continue,1_smartdraft_rn_automatic,0.9333333333333333,1.7244078178625923,1160,27.0,11.28,1.1437908496732025,Software_Tools
+continuedev/continue,1_smartdraft_no_rn_composer,0.8,1.7841591278514217,938,29.4,11.88,0.6160164271047228,Software_Tools
+continuedev/continue,0_original_rn,0.0,1.5,101,22.5,14.84,1.1111111111111112,Software_Tools
+continuedev/continue,1_smartdraft_rn_automatic_no_llm,0.9333333333333333,1.4926140680171256,836,75.7,15.67,0.24067388688327318,Software_Tools
+continuedev/continue,1_smartdraft_rn_descriptive,0.9333333333333333,1.7244078178625923,1160,27.0,11.28,0.40849673202614384,Software_Tools
+continuedev/continue,1_smartdraft_rn_persuasive,0.9333333333333333,1.4926140680171258,1145,29.0,11.67,0.7377049180327869,Software_Tools
+continuedev/continue,2_deeprelease_rn,0.33333333333333337,1.7988408112139527,690,22.4,14.18,0.0,Software_Tools

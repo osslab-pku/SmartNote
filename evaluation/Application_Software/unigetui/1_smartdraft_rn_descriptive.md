@@ -1,0 +1,7 @@
+# 3.1.1
+## 🐛 fix
+- Addressed incorrect ItemViews rendering by modifying event handling and ensuring proper invalidation and rearrangement of the package list. [8437963](https://github.com/marticliment/UniGetUI/commit/8437963c7f98a6464ce905d10c1964b095e6023b) <span style='color:grey;'>(significance=0.21)</span>
+- Fixed an issue where sources wouldn't display the Package Manager name. [cf59903](https://github.com/marticliment/UniGetUI/commit/cf599038578b4c6842cced74f1df66c1cca842d1) <span style='color:grey;'>(significance=0.15)</span>
+- Fixed duplication of local package sources after reloading installed packages. [3952e4a](https://github.com/marticliment/UniGetUI/commit/3952e4ab260f2c59da25bb74f56c32450e7b7599) <span style='color:grey;'>(significance=0.14)</span>
+- Disabled notifications when the System Tray is disabled, addressing issue #2403. [41f8d4a](https://github.com/marticliment/UniGetUI/commit/41f8d4a0bae91f28a8c67e2a2e97af441e24949a) <span style='color:grey;'>(significance=0.11)</span>
+- Fixed and optimized local source parser functionality. [c66c0ea](https://github.com/marticliment/UniGetUI/commit/c66c0ea3610ecea586712fd6b92522cb893eba7a) <span style='color:grey;'>(significance=0.11)</span>

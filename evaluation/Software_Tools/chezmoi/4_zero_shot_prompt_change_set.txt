@@ -1,0 +1,476 @@
+Changes between v2.52.0 and v2.52.1
+================================================================================
+
+COMMITS
+--------------------------------------------------------------------------------
+
+Commit: ca0d13356da87e4dcb3dc508dc830cf347fbdaf1
+Author: Tom Payne
+Date: 2024-08-13 11:11:30+00:00
+Message: feat: Add github.com/johan-weitner/chezmoi-ui to related software
+----------------------------------------
+
+Commit: 4843d5543731aad944f5b1fbacc6caf9bb3a9948
+Author: Tom Payne
+Date: 2024-08-14 13:25:37+00:00
+Message: docs: Add links to two articles
+----------------------------------------
+
+Commit: 8e40c439736ff5dc597eb39e0cee244f40826839
+Author: Tom Payne
+Date: 2024-08-14 13:31:42+00:00
+Message: docs: Add link to video
+----------------------------------------
+
+Commit: f893f65d6abeeed86da43e790fe0f387d335c678
+Author: Tom Payne
+Date: 2024-07-06 13:52:31+00:00
+Message: chore: Build with Go 1.23
+----------------------------------------
+
+Commit: cba7e403e56d52074016aa07a5f162ea901ee645
+Author: Tom Payne
+Date: 2024-08-14 23:20:38+00:00
+Message: fix: Set User-Agent header to chezmoi.io/version on all HTTP requests
+----------------------------------------
+
+Commit: 9042768f8dcd0bd87ae59ab40f8f707194d3bad7
+Author: Tom Payne
+Date: 2024-08-15 11:54:27+00:00
+Message: chore: Update dependencies
+----------------------------------------
+
+Commit: b18b769fb75b7d2f89df651dc4076501ce6ebe6b
+Author: Tom Payne
+Date: 2024-08-15 11:55:59+00:00
+Message: chore: Update GitHub Actions
+----------------------------------------
+
+Commit: 7f44957f0bbcdea196c2a6b0547f50d7aac6d7eb
+Author: Tom Payne
+Date: 2024-08-15 11:57:00+00:00
+Message: chore: Update GoReleaser
+----------------------------------------
+
+
+PULL REQUESTS
+--------------------------------------------------------------------------------
+
+PR #3903: fix: Set User-Agent header to chezmoi.io/version on all HTTP requests
+Author: twpayne
+Merged at: 2024-08-15 10:55:18+00:00
+URL: https://github.com/twpayne/chezmoi/pull/3903
+Description:
+Fixes #3900.
+----------------------------------------
+
+PR #3860: chore: Build with Go 1.23
+Author: twpayne
+Merged at: 2024-08-14 18:12:32+00:00
+URL: https://github.com/twpayne/chezmoi/pull/3860
+Description:
+This is a draft PR for when Go 1.23 is released (sometime in August).
+
+The release of Go 1.23 means that Go 1.21 will no longer be supported so we can use Go 1.22 features.
+----------------------------------------
+
+PR #3893: fix: Ignore permission changes in re-add command on Windows
+Author: twpayne
+Merged at: 2024-08-07 13:38:55+00:00
+URL: https://github.com/twpayne/chezmoi/pull/3893
+Description:
+Fixes #3891.
+----------------------------------------
+
+PR #3894: chore: Limit commit hash length to seven characters in website
+Author: twpayne
+Merged at: 2024-08-07 20:11:15+00:00
+URL: https://github.com/twpayne/chezmoi/pull/3894
+Description:
+@bradenhilton spotted the long commit hashes in the 2.51.0 [release notes](https://www.chezmoi.io/reference/release-history/) in https://github.com/twpayne/chezmoi/pull/3867#issuecomment-2229751267. This should fix it.
+----------------------------------------
+
+
+FILE CHANGES
+--------------------------------------------------------------------------------
+
+File: .github/workflows/main.yml
+Status: modified
+Changes: +9 -9
+Diff:
+@@ -16,11 +16,11 @@ env:
+   CHOCOLATEY_VERSION: 2.2.2 # https://github.com/chocolatey/choco/releases
+   EDITORCONFIG_CHECKER_VERSION: 3.0.3 # https://github.com/editorconfig-checker/editorconfig-checker/releases
+   FIND_TYPOS_VERSION: 0.0.3 # https://github.com/twpayne/find-typos/tags
+-  GO_VERSION: 1.22.6 # https://go.dev/doc/devel/release
++  GO_VERSION: 1.23.0 # https://go.dev/doc/devel/release
+   GOFUMPT_VERSION: 0.6.0 # https://github.com/mvdan/gofumpt/releases
+-  GOLANGCI_LINT_VERSION: 1.59.1 # https://github.com/golangci/golangci-lint/releases
++  GOLANGCI_LINT_VERSION: 1.60.1 # https://github.com/golangci/golangci-lint/releases
+   GOLINES_VERSION: 0.12.2 # https://github.com/segmentio/golines/releases
+-  GORELEASER_VERSION: 2.1.0 # https://github.com/goreleaser/goreleaser/releases
++  GORELEASER_VERSION: 2.2.0 # https://github.com/goreleaser/goreleaser/releases
+   GOVERSIONINFO_VERSION: 1.4.0 # https://github.com/josephspurrier/goversioninfo/releases
+   RAGE_VERSION: 0.10.0 # https://github.com/str4d/rage/releases
+ jobs:
+@@ -202,31 +202,31 @@ jobs:
+         args: release --skip=sign --snapshot --timeout=1h
+     - name: upload-artifact-chezmoi-darwin-amd64
+       if: github.event_name == 'push' || needs.changes.outputs.code == 'true'
+-      uses: actions/upload-artifact@89ef406dd8d7e03cfd12d9e0a4a378f454709029
+
+----------------------------------------
+
+File: .golangci.yml
+Status: modified
+Changes: +4 -3
+Diff:
+@@ -1,5 +1,5 @@
+ run:
+-  go: '1.21'
++  go: '1.23'
+ 
+ linters:
+   enable:
+@@ -8,6 +8,7 @@ linters:
+   - bodyclose
+   - canonicalheader
+   - containedctx
++  - copyloopvar
+   - decorder
+   - dogsled
+   - dupword
+
+----------------------------------------
+
+File: assets/chezmoi.io/docs/developer-guide/index.md
+Status: modified
+Changes: +4 -3
+Diff:
+@@ -2,7 +2,7 @@
+ 
+ chezmoi is written in [Go](https://golang.org) and development happens on
+ [GitHub](https://github.com). chezmoi is a standard Go project, using standard
+-Go tooling. chezmoi requires Go 1.21 or later.
++Go tooling. chezmoi requires Go 1.22 or later.
+ 
+ Checkout chezmoi:
+ 
+@@ -25,8 +25,9 @@ $ go test ./...
+
+----------------------------------------
+
+File: assets/chezmoi.io/docs/install.md.tmpl
+Status: modified
+Changes: +2 -2
+Diff:
+@@ -250,13 +250,13 @@ pre-built binary and shell completions.
+ 
+ === "OpenBSD"
+ 
+-{{ range $arch := list "amd64" "arm" "arm64" "i386" "ppc64" }}
++{{ range $arch := list "amd64" "arm" "arm64" "i386" "ppc64" "riscv64" }}
+     [`{{ $arch }}`](https://github.com/twpayne/chezmoi/releases/download/v{{ $version }}/chezmoi_{{ $version }}_openbsd_{{ $arch }}.tar.gz)
+ {{- end }}
+ 
+ ## Install from source
+
+----------------------------------------
+
+File: assets/chezmoi.io/docs/links/articles.md.yaml
+Status: modified
+Changes: +8 -0
+Diff:
+@@ -425,3 +425,11 @@ articles:
+   version: 2.49.1
+   title: 'Automate Your Dotfiles with Chezmoi'
+   url: https://learn.typecraft.dev/tutorial/our-place-chezmoi/
++- date: '2024-07-28'
++  version: 2.51.0
++  title: 'Development Environment Setup with Chezmoi'
++  url: https://danielmschmidt.de/posts/dev-env-setup-with-chezmoi/
++- date: '2024-07-31'
++  version: 2.51.0
+
+----------------------------------------
+
+File: assets/chezmoi.io/docs/links/related-software.md
+Status: modified
+Changes: +4 -0
+Diff:
+@@ -33,6 +33,10 @@ Sync, search and backup shell history .
+ 
+ Installs chezmoi on Ubuntu and Debian servers.
+ 
++### [`github.com/johan-weitner/chezmoi-ui`](https://github.com/johan-weitner/chezmoi-ui)
++
++A web UI for managing a list of apps to seed/feed a Chezmoi setup.
++
+ ### [`github.com/joke/asdf-chezmoi`](https://github.com/joke/asdf-chezmoi)
+ 
+
+----------------------------------------
+
+File: assets/chezmoi.io/docs/links/videos.md.yaml
+Status: modified
+Changes: +4 -0
+Diff:
+@@ -53,3 +53,7 @@ videos:
+   version: 2.47.0
+   title: '12 GREAT command line programs YOU recommended!'
+   url: https://www.youtube.com/watch?v=nCS4BtJ34-o&t=324s
++- date: '2024-06-22'
++  version: '2.47.1'
++  title: 'Automating Development Environments with Ansible & Chezmoi'
++  url: https://www.youtube.com/watch?v=P4nI1VhoN2Y
+
+----------------------------------------
+
+File: assets/scripts/install-local-bin.sh
+Status: modified
+Changes: +1 -0
+Diff:
+@@ -172,6 +172,7 @@ check_goos_goarch() {
+ 	openbsd/arm) return 0 ;;
+ 	openbsd/arm64) return 0 ;;
+ 	openbsd/ppc64) return 0 ;;
++	openbsd/riscv64) return 0 ;;
+ 	windows/386) return 0 ;;
+ 	windows/amd64) return 0 ;;
+ 	windows/arm) return 0 ;;
+
+----------------------------------------
+
+File: assets/scripts/install.sh
+Status: modified
+Changes: +1 -0
+Diff:
+@@ -172,6 +172,7 @@ check_goos_goarch() {
+ 	openbsd/arm) return 0 ;;
+ 	openbsd/arm64) return 0 ;;
+ 	openbsd/ppc64) return 0 ;;
++	openbsd/riscv64) return 0 ;;
+ 	windows/386) return 0 ;;
+ 	windows/amd64) return 0 ;;
+ 	windows/arm) return 0 ;;
+
+----------------------------------------
+
+File: go.mod
+Status: modified
+Changes: +14 -16
+Diff:
+@@ -1,12 +1,10 @@
+ module github.com/twpayne/chezmoi/v2
+ 
+-go 1.21.4
+-
+-toolchain go1.22.0
++go 1.22.0
+ 
+ require (
+ 	filippo.io/age v1.2.0
+-	github.com/1password/onepassword-sdk-go v0.1.0-beta.12
++	github.com/1password/onepassword-sdk-go v0.1.1
+ 	github.com/Azure/azure-sdk-for-go/sdk/azidentity v1.7.0
+ 	github.com/Azure/azure-sdk-for-go/sdk/security/keyvault/azsecrets v1.1.0
+ 	github.com/Masterminds/sprig/v3 v3.2.3
+@@ -47,12 +45,12 @@ require (
+ 	github.com/zalando/go-keyring v0.2.5
+ 	github.com/zricethezav/gitleaks/v8 v8.18.4
+ 	go.etcd.io/bbolt v1.3.10
+-	golang.org/x/crypto v0.25.0
+-	golang.org/x/crypto/x509roots/fallback v0.0.0-20240726163919-3375612bf41a
++	golang.org/x/crypto v0.26.0
++	golang.org/x/crypto/x509roots/fallback v0.0.0-20240806160748-b2d3a6a4b4d3
+ 	golang.org/x/oauth2 v0.22.0
+ 	golang.org/x/sync v0.8.0
+
+----------------------------------------
+
+File: go.sum
+Status: modified
+Changes: +28 -28
+Diff:
+@@ -20,10 +20,10 @@ filippo.io/age v1.2.0 h1:vRDp7pUMaAJzXNIWJVAZnEf/Dyi4Vu4wI8S1LBzufhE=
+ filippo.io/age v1.2.0/go.mod h1:JL9ew2lTN+Pyft4RiNGguFfOpewKwSHm5ayKD/A4004=
+ filippo.io/edwards25519 v1.1.0 h1:FNf4tywRC1HmFuKW5xopWpigGjJKiJSV0Cqo0cJWDaA=
+ filippo.io/edwards25519 v1.1.0/go.mod h1:BxyFTGdWcka3PhytdK4V28tE5sGfRvvvRV7EaN4VDT4=
+-github.com/1password/onepassword-sdk-go v0.1.0-beta.12 h1:v9b2fow1cutaCWRsIU1sVxVSzzR90mfkDCwYJeaadWc=
+-github.com/1password/onepassword-sdk-go v0.1.0-beta.12/go.mod h1:7wEQynLBXBC4svNx3X82QmCy0Adhm4e+UkM9t9mSSWA=
+-github.com/Azure/azure-sdk-for-go/sdk/azcore v1.13.0 h1:GJHeeA2N7xrG3q30L2UXDyuWRzDM900/65j70wcM4Ww=
+-github.com/Azure/azure-sdk-for-go/sdk/azcore v1.13.0/go.mod h1:l38EPgmsp71HHLq9j7De57JcKOWPyhrsW1Awm1JS6K0=
++github.com/1password/onepassword-sdk-go v0.1.1 h1:smvVI7OTTqFf6M7jOU7s+VbYbYHrStnT/GYZ9+hDy4o=
++github.com/1password/onepassword-sdk-go v0.1.1/go.mod h1:7wEQynLBXBC4svNx3X82QmCy0Adhm4e+UkM9t9mSSWA=
++github.com/Azure/azure-sdk-for-go/sdk/azcore v1.14.0 h1:nyQWyZvwGTvunIMxi1Y9uXkcyr+I7TeNrr/foo4Kpk8=
++github.com/Azure/azure-sdk-for-go/sdk/azcore v1.14.0/go.mod h1:l38EPgmsp71HHLq9j7De57JcKOWPyhrsW1Awm1JS6K0=
+ github.com/Azure/azure-sdk-for-go/sdk/azidentity v1.7.0 h1:tfLQ34V6F7tVSwoTf/4lH5sE0o6eCJuNDTmH09nDpbc=
+ github.com/Azure/azure-sdk-for-go/sdk/azidentity v1.7.0/go.mod h1:9kIvujWAA58nmPmWB1m23fyWic1kYZMxD9CxaWn4Qpg=
+ github.com/Azure/azure-sdk-for-go/sdk/internal v1.10.0 h1:ywEEhmNahHBihViHepv3xPBn1663uRv2t2q/ESv9seY=
+@@ -92,8 +92,8 @@ github.com/aws/aws-sdk-go-v2/service/ssooidc v1.26.4 h1:yiwVzJW2ZxZTurVbYWA7QOrA
+ github.com/aws/aws-sdk-go-v2/service/ssooidc v1.26.4/go.mod h1:0oxfLkpz3rQ/CHlx5hB7H69YUpFiI1tql6Q6Ne+1bCw=
+ github.com/aws/aws-sdk-go-v2/service/sts v1.30.3 h1:ZsDKRLXGWHk8WdtyYMoGNO7bTudrvuKpDKgMVRlepGE=
+ github.com/aws/aws-sdk-go-v2/service/sts v1.30.3/go.mod h1:zwySh8fpFyXp9yOr/KVzxOl8SRqgf/IDw5aUt9UKFcQ=
+-github.com/aws/smithy-go v1.20.3 h1:ryHwveWzPV5BIof6fyDvor6V3iUL7nTfiTKXHiW05nE=
+-github.com/aws/smithy-go v1.20.3/go.mod h1:krry+ya/rV9RDcV/Q16kpu6ypI4K2czasz0NC3qS14E=
++github.com/aws/smithy-go v1.20.4 h1:2HK1zBdPgRbjFOHlfeQZfpC4r72MOb9bZkiFwggKO+4=
++github.com/aws/smithy-go v1.20.4/go.mod h1:irrKGvNn1InZwb2d7fkIRNucdfwR8R+Ts3wxYa/cJHg=
+ github.com/aymanbagabas/go-osc52/v2 v2.0.1 h1:HwpRHbFMcZLEVr42D4p7XBqjyuxQH5SMiErDT4WkJ2k=
+ github.com/aymanbagabas/go-osc52/v2 v2.0.1/go.mod h1:uYgXzlJ7ZpABp8OJ+exZzJJhRNQ2ASbcXHWsFqH8hp8=
+ github.com/aymanbagabas/go-udiff v0.2.0 h1:TK0fH4MteXUDspT88n8CKzvK0X9O2xu9yQjWpi6yML8=
+@@ -411,8 +411,8 @@ github.com/sourcegraph/conc v0.3.0/go.mod h1:Sdozi7LEKbFPqYX2/J+iBAM6HpqSLTASQIK
+ github.com/spf13/afero v1.11.0 h1:WJQKhtpdm3v2IzqG8VMqrr6Rf3UYpEF239Jy9wNepM8=
+ github.com/spf13/afero v1.11.0/go.mod h1:GH9Y3pIexgf1MTIWtNGyogA5MwRIDXGUr+hbWNoBjkY=
+ github.com/spf13/cast v1.3.1/go.mod h1:Qx5cxh0v+4UWYiBimWS+eyWzqEqokIECu5etghLkUJE=
+-github.com/spf13/cast v1.6.0 h1:GEiTHELF+vaR5dhz3VqZfFSzZjYbgeKDpBxQVS4GYJ0=
+-github.com/spf13/cast v1.6.0/go.mod h1:ancEpBxwJDODSW/UG4rDrAqiKolqNNh2DX3mk86cAdo=
++github.com/spf13/cast v1.7.0 h1:ntdiHjuueXFgm5nzDRdOS4yfT43P5Fnud6DH50rz/7w=
++github.com/spf13/cast v1.7.0/go.mod h1:ancEpBxwJDODSW/UG4rDrAqiKolqNNh2DX3mk86cAdo=
+ github.com/spf13/cobra v1.8.1 h1:e5/vxKd/rZsfSJMUX1agtjeTDf+qv1/JdBF8gg5k9ZM=
+ github.com/spf13/cobra v1.8.1/go.mod h1:wHxEcudfqmLYa8iTfL+OuZPbBZkmvliBWKIezN3kD9Y=
+ github.com/spf13/jwalterweatherman v1.1.0 h1:ue6voC5bR5F8YxI5S67j9i582FU4Qvo2bmqnqMYADFk=
+@@ -439,8 +439,8 @@ github.com/subosito/gotenv v1.6.0 h1:9NlTDc1FTs4qu0DDq7AEtTPNw6SVm7uBMsUCUjABIf8
+ github.com/subosito/gotenv v1.6.0/go.mod h1:Dk4QP5c2W3ibzajGcXpNraDfq2IrhjMIvMSWPKKo0FU=
+ github.com/tailscale/hujson v0.0.0-20221223112325-20486734a56a h1:SJy1Pu0eH1C29XwJucQo73FrleVK6t4kYz4NVhp34Yw=
+ github.com/tailscale/hujson v0.0.0-20221223112325-20486734a56a/go.mod h1:DFSS3NAGHthKo1gTlmEcSBiZrRJXi28rLNd/1udP1c8=
+-github.com/tetratelabs/wazero v1.7.3 h1:PBH5KVahrt3S2AHgEjKu4u+LlDbbk+nsGE3KLucy6Rw=
+
+----------------------------------------
+
+File: internal/chezmoi/encryption_test.go
+Status: modified
+Changes: +2 -2
+Diff:
+@@ -2,7 +2,7 @@ package chezmoi
+ 
+ import (
+ 	"errors"
+-	"math/rand"
++	"math/rand/v2"
+ 	"os"
+ 	"os/exec"
+ 	"testing"
+@@ -118,7 +118,7 @@ func testEncryptionEncryptFile(t *testing.T, encryption Encryption) {
+
+----------------------------------------
+
+File: internal/chezmoi/sourcestate.go
+Status: modified
+Changes: +0 -1
+Diff:
+@@ -1341,7 +1341,6 @@ func (s *SourceState) addExternal(sourceAbsPath, parentAbsPath AbsPath) error {
+ 	s.Lock()
+ 	defer s.Unlock()
+ 	for path, external := range externals {
+-		external := external
+ 		if strings.HasPrefix(path, "/") || filepath.IsAbs(path) {
+ 			return fmt.Errorf("%s: %s: path is not relative", sourceAbsPath, path)
+ 		}
+
+----------------------------------------
+
+File: internal/chezmoi/sourcestate_test.go
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -2028,7 +2028,7 @@ func withTemplates(templates map[string]*Template) SourceStateOption {
+ 
+ func manyScripts(amount int) map[string]any {
+ 	scripts := map[string]any{}
+-	for i := 0; i < amount; i++ {
++	for i := range amount {
+ 		scripts[fmt.Sprintf("run_onchange_before_%d.sh", i)] = ""
+ 	}
+ 	return scripts
+
+----------------------------------------
+
+File: internal/cmd/applycmd_test.go
+Status: modified
+Changes: +25 -0
+Diff:
+@@ -5,6 +5,7 @@ import (
+ 	"net/http"
+ 	"net/http/httptest"
+ 	"path/filepath"
++	"strings"
+ 	"testing"
+ 
+ 	"github.com/alecthomas/assert/v2"
+@@ -214,6 +215,30 @@ func TestApplyCmd(t *testing.T) {
+ 	}
+ }
+ 
++func TestUserAgent(t *testing.T) {
+
+----------------------------------------
+
+File: internal/cmd/config.go
+Status: modified
+Changes: +40 -3
+Diff:
+@@ -3,6 +3,7 @@ package cmd
+ import (
+ 	"bufio"
+ 	"bytes"
++	"cmp"
+ 	"context"
+ 	"encoding/json"
+ 	"errors"
+@@ -1221,7 +1222,7 @@ func (c *Config) editor(args []string) (string, []string, error) {
+ 	}
+ 
+ 	// Prefer $VISUAL over $EDITOR and fallback to the OS's default editor.
+-	editCommand = firstNonEmptyString(os.Getenv("VISUAL"), os.Getenv("EDITOR"), defaultEditor)
++	editCommand = cmp.Or(os.Getenv("VISUAL"), os.Getenv("EDITOR"), defaultEditor)
+ 
+ 	return parseCommand(editCommand, append(editArgs, args...))
+ }
+@@ -1388,6 +1389,33 @@ func (c *Config) getGitleaksDetector() (*detect.Detector, error) {
+ 	return c.gitleaksDetector, c.gitleaksDetectorErr
+ }
+ 
++// A modifyHTTPRequestFunc is a function that modifies a net/http.Request before
++// it is sent.
++type modifyHTTPRequestFunc func(*http.Request) (*http.Request, error)
++
++// A modifyHTTPRequestRoundTripper is a net/http.Transport that modifies the
++// request before it is sent.
++type modifyHTTPRequestRoundTripper struct {
+
+----------------------------------------
+
+File: internal/cmd/doctorcmd_unix.go
+Status: modified
+Changes: +0 -4
+Diff:
+@@ -8,7 +8,6 @@ import (
+ 	"log/slog"
+ 	"os"
+ 	"os/exec"
+-	"runtime"
+ 
+ 	"golang.org/x/sys/unix"
+ 
+@@ -41,9 +40,6 @@ func (unameCheck) Name() string {
+ }
+
+----------------------------------------
+
+File: internal/cmd/util.go
+Status: modified
+Changes: +0 -11
+Diff:
+@@ -89,17 +89,6 @@ func englishListWithNoun(ss []string, singular, plural string) string {
+ 	}
+ }
+ 
+-// firstNonEmptyString returns its first non-empty argument, or "" if all
+-// arguments are empty.
+-func firstNonEmptyString(ss ...string) string {
+-	for _, s := range ss {
+-		if s != "" {
+-			return s
+
+----------------------------------------
+

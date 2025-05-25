@@ -1,0 +1,50 @@
+[categories]
+# 11 conventional commits categories
+# check https://www.conventionalcommits.org/en/v1.0.0/
+conventional_commits = ['build',
+    'chore',
+    'ci',
+    'docs',
+    'feat',
+    'fix',
+    'perf',
+    'refactor',
+    'revert',
+    'style',
+    'test']
+# 4 project domains, see Jianyu's paper
+project_domains = ['Application', 'Library', 'System', 'Tool']
+# 3 semantic versioning release types
+release_types = ['Major', 'Minor', 'Patch', 'Unknown']
+
+[paths]
+datasets = "datasets/"
+plots = "plots/"
+models = "models/"
+cache = "cache/"
+results = "results/"
+
+[embed]
+# settings for the sentence embedding model
+model_name = "Alibaba-NLP/gte-base-en-v1.5"
+l2_normalize = false
+batch_size = 32
+max_length = 128
+
+[rngen]
+cls_model_path = "./models/gte_xgb_cls_model.json"
+flt_model_path = "./models/gte_xgb_flt_model.json"
+writing_style = -1 # If writing style is set to -1 it will automatically be determined using the project domain, otherwise the specified style will be used.
+min_significance = 0.15 # The minimum significance required to be included in the release note. 
+structure_type = 1 # Organization Strategies of the RN (See StructureType(Enum) in rn_formatter.py). 0: Plain List, 1: Hierarchical List by Change Type, 2: Hierarchical List by Affected Module, 3: Hierarchical List by Change Priority 
+group_commits = true # Group commits by PR and summarize them into a single entry (taking into consideration PR title and body) which constitutes the PR.
+
+[openai]
+model = "gpt-4o"
+tpm = 30000  # Tokens per min (TPM) limit. Each ASCII character is approx 4 tokens. Organizations begin with a limit of 30000 but it can increase (see: https://platform.openai.com/docs/guides/rate-limits/usage-tiers).
+temperature = 0.0
+top_k = 0
+top_p = 0.1
+max_string_length = 1048576
+max_model_context_length = 128000 # Specified in tokens (different for each model)
+ascii_token_len = 4 # 1 ASCII character is 4 tokens.

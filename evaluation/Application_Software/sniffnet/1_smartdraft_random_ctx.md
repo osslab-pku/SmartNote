@@ -1,0 +1,58 @@
+# v1.3.1
+## ✨ feat
+- Translations updated to v1.3 for Uzbek. [#510](https://github.com/GyulyVGC/sniffnet/pull/510)
+- Improvements to thumbnail mode: new keyboard shortcut for toggling, resolved exit issue on Linux, eliminated duplicate entries in network hosts list, and improved logic to prevent rapid toggling. [#512](https://github.com/GyulyVGC/sniffnet/pull/512)
+- Addressed Clippy pedantic lints: modified `get_code` in `mmdb_asn_entry.rs` for proper string conversion, refactored match arms in `mmdb_country_entry.rs` for better readability and maintainability. Added new services to the upper layer service list, increasing the total number of services and distinct services. [#564](https://github.com/GyulyVGC/sniffnet/pull/564)
+- Added Persian translation; right-to-left (RTL) text support pending. [9163e95](https://github.com/GyulyVGC/sniffnet/commit/9163e95e5b3eedb93958800c178782fb2a7bbd64)
+- Increased range of selectable zoom values. [61b6d6b](https://github.com/GyulyVGC/sniffnet/commit/61b6d6b365859d3a7b4c44649dd9b2e9e2cdd037)
+- Added keyboard shortcuts to change the zoom level, enhancing user control over the interface. [99295e9](https://github.com/GyulyVGC/sniffnet/commit/99295e956858259869ab0112ca3f0405f8b36984)
+
+## 🐛 fix
+- Romanian translations added for various UI elements, improving the experience for Romanian-speaking users. The update resolves merge conflicts, includes updates and fixes, and adds new contributors. UI enhancements include updated language picklists and improved button styles. A new script for subsetting font files has been introduced, and several translations have been corrected or added for better localization. [#499](https://github.com/GyulyVGC/sniffnet/pull/499)
+- Created a script to subset font files to include only necessary glyphs. [2cb90fa](https://github.com/GyulyVGC/sniffnet/commit/2cb90fadd9d2bffa47721ab171d6d7e40a1300b3)
+- Adjusted zoom slider step for improved precision. [c34dd6e](https://github.com/GyulyVGC/sniffnet/commit/c34dd6ecdee6f59206946466f0e8cbc700c9f422)
+
+## 🛠️ chore
+- Updated etherparse dependency from 0.14.3 to 0.15.0, addressing a build error. Modified code to replace Ethernet2Header with LinkHeader in packet management logic due to API changes. [#540](https://github.com/GyulyVGC/sniffnet/pull/540)
+- Support for IPinfo MMDB database format added, allowing import and use with Sniffnet. New enums ensure proper deserialization during lookups. Introduced `MmdbAsnEntry` and `MmdbCountryEntry` structs for IPinfo entries, with ASN structure modifications and methods to retrieve ASN information. Added `lookup` method to `MmdbReader` struct for querying ASN and country information, simplifying implementations and improving readability. [#558](https://github.com/GyulyVGC/sniffnet/pull/558)
+- Introduced French translations for various user interface elements to enhance multilingual support. [#494](https://github.com/GyulyVGC/sniffnet/pull/494)
+- Added new and adjusted existing German translations. [#495](https://github.com/GyulyVGC/sniffnet/pull/495)
+- Images optimized, resulting in a 29% reduction in file size. [#508](https://github.com/GyulyVGC/sniffnet/pull/508)
+- Updated Swedish translation for Sniffnet to version 1.3, including enhancements and fixes. Resolved warning about the translation being outdated. [#522](https://github.com/GyulyVGC/sniffnet/pull/522)
+- Optimized translation code by reducing unnecessary `String` allocations and improving memory usage. Removed redundant `.to_string()` calls and replaced them with more efficient string handling methods. Addressed codebase formatting issues to enhance readability and maintainability. [#524](https://github.com/GyulyVGC/sniffnet/pull/524)
+- Enhancements and bug fixes for the plotters library. New features: Clone and PartialEq traits for SeriesLabelPosition and ShapeStyle, function to draw and save an evcxr figure, and dotted line style. Bug fixes: infinite size for collinear line segments, overflow in blit_bitmap, and dashed line algorithm. [#538](https://github.com/GyulyVGC/sniffnet/pull/538)
+- Minor patch to the rodio library, fixing an issue where seeking would hang if the sink was empty. [#539](https://github.com/GyulyVGC/sniffnet/pull/539)
+- Introduced a new source, `track_position`, tracking the duration since the beginning of the underlying source. Fixed an issue where Mp4a files with decodable tracks following undecodable tracks now play correctly, aligning with VLC's behavior. [#550](https://github.com/GyulyVGC/sniffnet/pull/550)
+- Updated various project dependencies. [461486f](https://github.com/GyulyVGC/sniffnet/commit/461486f4d7d347b2c36197e6105fcc629c413912)
+- Addressed new Clippy lints and replaced direct assignments with `clone_from` for better performance and clarity. [f3acc04](https://github.com/GyulyVGC/sniffnet/commit/f3acc041e589e75730ec018b48c8b423df700e97)
+- Dependencies updated to improve functionality and performance. [64cf251](https://github.com/GyulyVGC/sniffnet/commit/64cf251b013cc6f87b71d350b310be26728aec0a)
+- A new sample theme, "sniffnet_rebrand.toml," added. [fad521a](https://github.com/GyulyVGC/sniffnet/commit/fad521a8f5fb41e260ee0bdada53633a3d72a560)
+- Addressed new Clippy lints with code adjustments: added conditional compilation attributes for Windows-specific fields in multiple structs and fixed syntax issues in `Cargo.toml`. [24f1623](https://github.com/GyulyVGC/sniffnet/commit/24f1623b155dee5beca7bc0162a955eeb8100f01)
+- Updated various dependencies to their latest versions. [d113c26](https://github.com/GyulyVGC/sniffnet/commit/d113c26376ba1397ceb506277e23170c762cbef9)
+- Added "pmsm-webrctl" to the list of safe words for service names. [91c5f31](https://github.com/GyulyVGC/sniffnet/commit/91c5f31ceb258c3caac599307ea25dd064f09eb4)
+
+## 📦 build
+- Bumps chrono to 0.4.38. [#509](https://github.com/GyulyVGC/sniffnet/pull/509)
+- Updated serde dependency. [#511](https://github.com/GyulyVGC/sniffnet/pull/511)
+- Bumps rustls from 0.22.3 to 0.22.4. [#513](https://github.com/GyulyVGC/sniffnet/pull/513)
+- Updated the pcap dependency from version 1.3.0 to 2.0.0. [#516](https://github.com/GyulyVGC/sniffnet/pull/516)
+- Updated the serde dependency to fix "invalid type" and "invalid value" deserialization error messages for NaN or infinite floats. [#526](https://github.com/GyulyVGC/sniffnet/pull/526)
+- Bumped serde from 1.0.201 to 1.0.202. [#536](https://github.com/GyulyVGC/sniffnet/pull/536)
+- Bumped toml dependency from 0.8.12 to 0.8.13. [#537](https://github.com/GyulyVGC/sniffnet/pull/537)
+- Updated serde library from version 1.0.202 to 1.0.203, including minor codebase improvements. [#541](https://github.com/GyulyVGC/sniffnet/pull/541)
+- Updated `rstest` dependency from 0.20.0 to 0.21.0. [#544](https://github.com/GyulyVGC/sniffnet/pull/544)
+- Updated `toml` dependency. [#545](https://github.com/GyulyVGC/sniffnet/pull/545)
+- Bumps serde from 1.0.203 to 1.0.204. [#559](https://github.com/GyulyVGC/sniffnet/pull/559)
+- Fixed encoding issues for keys with mixed quotes and improved string representation inference. Added property-based tests for keys and strings to enhance encoding robustness. [#562](https://github.com/GyulyVGC/sniffnet/pull/562)
+
+## 📚 docs
+- Added Russian translation v3 and fixed errors in v1 and v2. Improved translation for the message indicating only the top 30 items are displayed. Added missing characters to the font subset and updated translation files. [#496](https://github.com/GyulyVGC/sniffnet/pull/496)
+- Added Japanese translation for various user interface elements. [#504](https://github.com/GyulyVGC/sniffnet/pull/504)
+- Updated the Polish translation for v1.3, adding new translations for various UI elements and tweaking existing ones for consistency and naturalness. [#498](https://github.com/GyulyVGC/sniffnet/pull/498)
+- Dinar Shagaliev added as a contributor for translation. [#519](https://github.com/GyulyVGC/sniffnet/pull/519)
+- Abdullah added as a contributor for ideas and content. [#534](https://github.com/GyulyVGC/sniffnet/pull/534)
+- The security policy now supports version 1.3.x and discontinues support for versions below 1.3. Guidelines for reporting vulnerabilities have been streamlined, removing out-of-scope vulnerabilities and emphasizing confidentiality and prompt resolution. [68aac1e](https://github.com/GyulyVGC/sniffnet/commit/68aac1ed86fca2a670aae5dbada8d90807064d6c)
+- Added CosminPerRam as a contributor. [#546](https://github.com/GyulyVGC/sniffnet/pull/546)
+- Added Cornelius Roemer as a contributor for ideas. [#557](https://github.com/GyulyVGC/sniffnet/pull/557)
+- Improvements to thumbnail mode, increased range of selectable zoom values, and reduced `String` allocations in translation code. Fixed a bug preventing exit from thumbnail mode on Ubuntu. [bbc4943](https://github.com/GyulyVGC/sniffnet/commit/bbc4943c3636c9576e5553ba754e99f53236237e)
+- Updated cargo install instructions to include the `--locked` flag. [d6d3c27](https://github.com/GyulyVGC/sniffnet/commit/d6d3c273329aef9722493a4b4f746759c92b6cac)

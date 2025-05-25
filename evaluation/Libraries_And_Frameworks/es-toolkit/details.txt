@@ -1,0 +1,8 @@
+SmartDraft Command:
+pixi run ipython --pdb -m smartdraft.generator -- toss/es-toolkit --previous-release v1.15.1 --current-release v1.16.0 --project-domain Library --min-significance 0.1 --writing-style "Automatic" --structure-type "Change Type" --group-commits --show-significance
+
+DeepRelease Command:
+docker run -it -v $(pwd):/outputs --env GITHUB_TOKEN=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 --network host --rm fgksgf/deeprelease run toss/es-toolkit --since 202408100000 --until 202408152359 --save_dir=/outputs/ess-toolkit
+
+ConventionalChangelog Command:
+cd ../.cache/repo/toss_es-toolkit  && git checkout v1.16.0 && conventional-changelog -p angular -r 2 && git checkout -

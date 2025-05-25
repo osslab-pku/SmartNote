@@ -1,0 +1,12 @@
+repo_name,rn_name,commit_coverage,info_entropy,tokens_count,automated_readability_index,dale_chall_readability,entity_percent,project_domain
+stakater/Reloader,4_zero_shot_promp_rn,0.75,1.4591479170272448,388,15.8,10.33,2.2222222222222223,Software_Tools
+stakater/Reloader,3_conventional_changelog,0.0,0.0,42,158.5,66.9,0.0,Software_Tools
+stakater/Reloader,1_smartdraft_random_ctx,1.0,0.0,98,42.4,19.95,3.4482758620689653,Software_Tools
+stakater/Reloader,1_smartdraft_rn_expository,1.0,0.0,134,45.1,18.98,0.0,Software_Tools
+stakater/Reloader,1_smartdraft_rn_automatic,1.0,0.0,133,44.7,18.53,0.0,Software_Tools
+stakater/Reloader,1_smartdraft_no_rn_composer,1.0,1.0,166,31.6,16.22,0.0,Software_Tools
+stakater/Reloader,0_original_rn,1.0,0.0,154,42.8,15.59,0.0,Software_Tools
+stakater/Reloader,1_smartdraft_rn_automatic_no_llm,1.0,0.0,134,45.1,18.98,0.0,Software_Tools
+stakater/Reloader,1_smartdraft_rn_descriptive,1.0,0.0,133,44.7,18.53,0.0,Software_Tools
+stakater/Reloader,1_smartdraft_rn_persuasive,1.0,0.0,144,38.2,17.91,0.0,Software_Tools
+stakater/Reloader,2_deeprelease_rn,0.75,1.0,40,14.2,13.34,2.2222222222222223,Software_Tools

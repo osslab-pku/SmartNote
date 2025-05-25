@@ -1,0 +1,1 @@
+# [0.28.0](https://github.com/Stirling-Tools/Stirling-PDF/compare/v0.27.0...v0.28.0) (2024-08-16)

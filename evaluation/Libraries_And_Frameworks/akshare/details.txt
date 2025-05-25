@@ -1,0 +1,8 @@
+SmartDraft Command:
+pixi run ipython --pdb -m smartdraft.generator -- akfamily/akshare --previous-release release-v1.14.61 --current-release release-v1.14.62 --project-domain Library --min-significance 0 --writing-style "Automatic" --structure-type "Change Type" --group-commits --show-significance
+
+DeepRelease Command:
+docker run -it -v $(pwd):/outputs --env GITHUB_TOKEN=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 --network host --rm fgksgf/deeprelease run akfamily/akshare --since 202408060000 --until 202408142359 --save_dir=/outputs/akshare
+
+ConventionalChangelog Command:
+cd ../.cache/repo/akfamily_akshare && git checkout release-v1.14.62 && conventional-changelog -p angular -r 2 --tag-prefix release- && git checkout -

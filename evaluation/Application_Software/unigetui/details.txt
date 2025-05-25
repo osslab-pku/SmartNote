@@ -1,0 +1,8 @@
+SmartDraft Command:
+pixi run ipython --pdb -m smartdraft.generator -- marticliment/UniGetUI --previous-release 3.1.1-beta3 --current-release 3.1.1 --project-domain Application --min-significance 0.1 --writing-style "Automatic" --structure-type "Change Type" --group-commits --show-significance
+
+DeepRelease Command:
+docker run -it -v $(pwd):/outputs --env GITHUB_TOKEN=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 --network host --rm fgksgf/deeprelease run marticliment/UniGetUI --since 202407210000 --until 202407282359 --save_dir=/outputs/unigetui
+
+ConventionalChangelog Command:
+cd ../.cache/repo/marticliment_UniGetUI && git checkout 3.1.1 && conventional-changelog -p angular -r 2 && git checkout -

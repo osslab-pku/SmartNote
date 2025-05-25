@@ -1,0 +1,2858 @@
+Changes between v1.3.1 and v1.3.2
+================================================================================
+
+COMMITS
+--------------------------------------------------------------------------------
+
+Commit: 7e1f10cf46613aa8bffe2610768ad5a330206565
+Author: xianxian.zhang
+Date: 2024-08-06 07:01:11+00:00
+Message: fix: press text (#4898)
+----------------------------------------
+
+Commit: bdaa41b9d35835d862d3725ca444dbd521d0ccaf
+Author: pre-commit-ci[bot]
+Date: 2024-08-06 07:01:33+00:00
+Message: ci: pre-commit autoupdate (#4897)
+
+* ci: pre-commit autoupdate [skip ci]
+
+updates:
+- [github.com/astral-sh/ruff-pre-commit: v0.5.0 → v0.5.6](https://github.com/astral-sh/ruff-pre-commit/compare/v0.5.0...v0.5.6)
+- [github.com/pdm-project/pdm: 2.16.1 → 2.17.3](https://github.com/pdm-project/pdm/compare/2.16.1...2.17.3)
+- [github.com/bufbuild/buf: v1.34.0 → v1.35.1](https://github.com/bufbuild/buf/compare/v1.34.0...v1.35.1)
+
+* chore: update check to use isinstance
+
+Signed-off-by: Aaron Pham <contact@aarnphm.xyz>
+
+---------
+
+Signed-off-by: Aaron Pham <contact@aarnphm.xyz>
+Co-authored-by: pre-commit-ci[bot] <66853113+pre-commit-ci[bot]@users.noreply.github.com>
+Co-authored-by: Aaron Pham <contact@aarnphm.xyz>
+----------------------------------------
+
+Commit: be4abebb5353bf89a6f8f6903f96f4f6c3ebf5d2
+Author: Sherlock Xu
+Date: 2024-08-06 11:48:50+00:00
+Message: docs: Update doc images (#4901)
+
+Update doc images
+
+Signed-off-by: Sherlock113 <sherlockxu07@gmail.com>
+----------------------------------------
+
+Commit: fca3489e20a18cec9d77d18b72721d7dfa0cbeb7
+Author: Tianxin Dong
+Date: 2024-08-07 09:10:25+00:00
+Message: fix: fix resource type (#4904)
+
+* fix: fix resource type
+
+Signed-off-by: FogDong <fog@bentoml.com>
+
+* ci: auto fixes from pre-commit.ci
+
+For more information, see https://pre-commit.ci
+
+---------
+
+Signed-off-by: FogDong <fog@bentoml.com>
+Co-authored-by: pre-commit-ci[bot] <66853113+pre-commit-ci[bot]@users.noreply.github.com>
+----------------------------------------
+
+Commit: ede50d3f0edfe46b1be5078511039802f3e916b1
+Author: Tianxin Dong
+Date: 2024-08-07 09:10:56+00:00
+Message: fix: direct return response if tracer id is null (#4899)
+
+* fix: direct return response if tracer id is null
+
+Signed-off-by: FogDong <fog@bentoml.com>
+
+* ci: auto fixes from pre-commit.ci
+
+For more information, see https://pre-commit.ci
+
+---------
+
+Signed-off-by: FogDong <fog@bentoml.com>
+Co-authored-by: pre-commit-ci[bot] <66853113+pre-commit-ci[bot]@users.noreply.github.com>
+----------------------------------------
+
+Commit: 03a7f850f26216967565bad18c19467680900f66
+Author: Sean Sheng
+Date: 2024-08-07 11:23:13+00:00
+Message: docs: update azure byoc instructions (#4905)
+----------------------------------------
+
+Commit: 29214bf535fa81cd2ad60e38b64d4da649d8c086
+Author: Frost Ming
+Date: 2024-08-08 02:18:30+00:00
+Message: fix: metrics duration defined with min,max,factor not taking effect (#4903)
+----------------------------------------
+
+Commit: da6c30bfd7790cbc640937306329f6d57a5c0e1c
+Author: Frost Ming
+Date: 2024-08-08 06:21:42+00:00
+Message: refactor: store the cloud context into the container instead of passing it around (#4907)
+----------------------------------------
+
+Commit: 6bbb195379fe72de6eae83aaa155983d58052d6a
+Author: Chaoyu
+Date: 2024-08-08 16:02:45+00:00
+Message: docs: Update README.md (#4906)
+
+* Update README.md
+
+* ci: auto fixes from pre-commit.ci
+
+For more information, see https://pre-commit.ci
+
+* Update service.py
+
+* ci: auto fixes from pre-commit.ci
+
+For more information, see https://pre-commit.ci
+
+* Update bentofile.yaml
+
+* Delete docs/source/_static/img/bentocloud/get-started/bentocloud-playground-quickstart.png
+
+* Add files via upload
+
+* Update README.md
+
+* Update service.py
+
+* ci: auto fixes from pre-commit.ci
+
+For more information, see https://pre-commit.ci
+
+* Update service.py
+
+* Update __init__.py
+
+* ci: auto fixes from pre-commit.ci
+
+For more information, see https://pre-commit.ci
+
+* Update pyproject.toml
+
+* Update README.md
+
+* ci: auto fixes from pre-commit.ci
+
+For more information, see https://pre-commit.ci
+
+---------
+
+Co-authored-by: pre-commit-ci[bot] <66853113+pre-commit-ci[bot]@users.noreply.github.com>
+----------------------------------------
+
+Commit: 063328de1584130d99f0017f1d345bfe1d62b71b
+Author: Sherlock Xu
+Date: 2024-08-12 03:24:10+00:00
+Message: docs: Update messages (#4910)
+
+Update messages
+
+Signed-off-by: Sherlock113 <sherlockxu07@gmail.com>
+----------------------------------------
+
+Commit: 1b377af15b89cc97a037a2c3d26da79a7a71aa76
+Author: Sherlock Xu
+Date: 2024-08-13 01:11:30+00:00
+Message: docs: Update index.rst (#4913)
+
+Update index.rst
+----------------------------------------
+
+Commit: bc856010032a1dd2d1de5c5404d2c728fba9c677
+Author: Frost Ming
+Date: 2024-08-13 04:53:53+00:00
+Message: doc: update the HTTP behavior test instruction (#4915)
+
+* doc: update the HTTP behavior test instruction
+
+Signed-off-by: Frost Ming <me@frostming.com>
+
+* fix: update docs
+
+Signed-off-by: Frost Ming <me@frostming.com>
+
+---------
+
+Signed-off-by: Frost Ming <me@frostming.com>
+----------------------------------------
+
+Commit: 408ef26055182664a18ee5196490a6d251d6f2ed
+Author: Sherlock Xu
+Date: 2024-08-13 06:10:37+00:00
+Message: docs: Add metrics doc (#4912)
+
+* Add metrics doc
+
+Signed-off-by: Sherlock113 <sherlockxu07@gmail.com>
+
+* ci: auto fixes from pre-commit.ci
+
+For more information, see https://pre-commit.ci
+
+---------
+
+Signed-off-by: Sherlock113 <sherlockxu07@gmail.com>
+Co-authored-by: pre-commit-ci[bot] <66853113+pre-commit-ci[bot]@users.noreply.github.com>
+----------------------------------------
+
+Commit: 5621a230f34165d8b14031b814ebc039a9de3102
+Author: Frost Ming
+Date: 2024-08-13 07:05:05+00:00
+Message: feat(cli): reload option for start-http-server (#4916)
+
+* feat: reload option for start-http-server
+
+Signed-off-by: Frost Ming <me@frostming.com>
+----------------------------------------
+
+Commit: 6e7875a037367fcb9ecd6ae02effb6f63aa06ef8
+Author: Frost Ming
+Date: 2024-08-13 08:20:11+00:00
+Message: chore: update pdm.lock file witht the lock targets (#4911)
+
+* chore: update pdm.lock file witht the lock targets
+
+Signed-off-by: Frost Ming <me@frostming.com>
+
+* fix: update lock
+
+Signed-off-by: Frost Ming <me@frostming.com>
+
+* fix tests
+
+Signed-off-by: Frost Ming <me@frostming.com>
+
+* fix new sdk tests
+
+Signed-off-by: Frost Ming <me@frostming.com>
+
+---------
+
+Signed-off-by: Frost Ming <me@frostming.com>
+----------------------------------------
+
+Commit: 9db7acfa4483bd4e70b9ae0c20ff8b4379ef7079
+Author: Frost Ming
+Date: 2024-08-13 09:10:22+00:00
+Message: fix(build): preserve the index url options in requirements.txt file (#4914)
+
+fix(build): reserve the index url options in requirements.txt file
+
+Signed-off-by: Frost Ming <me@frostming.com>
+----------------------------------------
+
+Commit: 4dd3c7a22ec572e4f44a34119afa8eadacfab1ce
+Author: Frost Ming
+Date: 2024-08-14 06:58:49+00:00
+Message: fix: try to fix the timeout test cases (#4917)
+
+* fix: try to fix the timeout test cases
+
+Signed-off-by: Frost Ming <me@frostming.com>
+
+* fix: exclude tests on 3.12
+
+Signed-off-by: Frost Ming <me@frostming.com>
+
+---------
+
+Signed-off-by: Frost Ming <me@frostming.com>
+----------------------------------------
+
+Commit: c323ef44ea772edef4c1f15ee47d0263c1e0fb19
+Author: Frost Ming
+Date: 2024-08-14 09:23:52+00:00
+Message: doc: update CI status badge (#4918)
+
+Signed-off-by: Frost Ming <me@frostming.com>
+----------------------------------------
+
+
+PULL REQUESTS
+--------------------------------------------------------------------------------
+
+PR #4895: fix: Cannot define custom duration histogram buckets via `@bentoml.service(metrics=...)`
+Author: frostming
+Merged at: 2024-08-02 03:16:10+00:00
+URL: https://github.com/bentoml/BentoML/pull/4895
+Description:
+Fixes #4859
+
+Signed-off-by: Frost Ming <me@frostming.com>
+
+## What does this PR address?
+
+<!--
+Thanks for sending a pull request!
+
+Congrats for making it this far! Here's a 🍱 for you. There are still a few steps ahead.
+
+Please make sure to read the contribution guidelines, then fill out the blanks below before requesting a code review.
+
+Name your Pull Request with one of the following prefixes, e.g. "feat: add support for PyTorch", to indicate the type of changes proposed. This is based on the [Conventional Commits specification](https://www.conventionalcommits.org/en/v1.0.0/#summary).
+  - feat: (new feature for the user, not a new feature for build script)
+  - fix: (bug fix for the user, not a fix to a build script)
+  - docs: (changes to the documentation)
+  - style: (formatting, missing semicolons, etc; no production code change)
+  - refactor: (refactoring production code, eg. renaming a variable)
+  - perf: (code changes that improve performance)
+  - test: (adding missing tests, refactoring tests; no production code change)
+  - chore: (updating grunt tasks etc; no production code change)
+  - build: (changes that affect the build system or external dependencies)
+  - ci: (changes to configuration files and scripts)
+  - revert: (reverts a previous commit)
+
+Describe your changes in detail. Attach screenshots here if appropriate.
+
+Once you're done with this, someone from BentoML team or community member will help review your PR (see "Who can help review?" section for potential reviewers.). If no one has reviewed your PR after a week have passed, don't hesitate to post a new comment and ping @-the same person. Notifications sometimes get lost 🥲.
+-->
+
+<!-- Remove if not applicable -->
+
+Fixes #(issue)
+
+## Before submitting:
+
+<!--- Go over all the following points, and put an `x` in all the boxes that apply. -->
+<!--- If you're unsure about any of these, don't hesitate to ask. We're here to help! -->
+<!--- If you plan to update documentation or tests in follow-up, please note -->
+
+- [ ] Does the Pull Request follow [Conventional Commits specification](https://www.conventionalcommits.org/en/v1.0.0/#summary) naming? Here are [GitHub's
+      guide](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) on how to create a pull request.
+- [ ] Does the code follow BentoML's code style, `pre-commit run -a` script has passed ([instructions](https://github.com/bentoml/BentoML/blob/main/DEVELOPMENT.md#style-check-auto-formatting-type-checking))?
+- [ ] Did you read through [contribution guidelines](https://github.com/bentoml/BentoML/blob/main/CONTRIBUTING.md#ways-to-contribute) and follow [development guidelines](https://github.com/bentoml/BentoML/blob/main/DEVELOPMENT.md#start-developing)?
+- [ ] Did your changes require updates to the documentation? Have you updated
+      those accordingly? Here are [documentation guidelines](https://github.com/bentoml/BentoML/tree/main/docs) and [tips on writting docs](https://github.com/bentoml/BentoML/tree/main/docs#writing-documentation).
+- [ ] Did you write tests to cover your changes?
+
+----------------------------------------
+
+PR #4918: doc: update CI status badge
+Author: frostming
+Merged at: 2024-08-14 09:23:52+00:00
+URL: https://github.com/bentoml/BentoML/pull/4918
+Description:
+Signed-off-by: Frost Ming <me@frostming.com>
+
+----------------------------------------
+
+PR #4917: fix: try to fix the timeout test cases
+Author: frostming
+Merged at: 2024-08-14 06:58:49+00:00
+URL: https://github.com/bentoml/BentoML/pull/4917
+Description:
+Signed-off-by: Frost Ming <me@frostming.com>
+
+## What does this PR address?
+
+<!--
+Thanks for sending a pull request!
+
+Congrats for making it this far! Here's a 🍱 for you. There are still a few steps ahead.
+
+Please make sure to read the contribution guidelines, then fill out the blanks below before requesting a code review.
+
+Name your Pull Request with one of the following prefixes, e.g. "feat: add support for PyTorch", to indicate the type of changes proposed. This is based on the [Conventional Commits specification](https://www.conventionalcommits.org/en/v1.0.0/#summary).
+  - feat: (new feature for the user, not a new feature for build script)
+  - fix: (bug fix for the user, not a fix to a build script)
+  - docs: (changes to the documentation)
+  - style: (formatting, missing semicolons, etc; no production code change)
+  - refactor: (refactoring production code, eg. renaming a variable)
+  - perf: (code changes that improve performance)
+  - test: (adding missing tests, refactoring tests; no production code change)
+  - chore: (updating grunt tasks etc; no production code change)
+  - build: (changes that affect the build system or external dependencies)
+  - ci: (changes to configuration files and scripts)
+  - revert: (reverts a previous commit)
+
+Describe your changes in detail. Attach screenshots here if appropriate.
+
+Once you're done with this, someone from BentoML team or community member will help review your PR (see "Who can help review?" section for potential reviewers.). If no one has reviewed your PR after a week have passed, don't hesitate to post a new comment and ping @-the same person. Notifications sometimes get lost 🥲.
+-->
+
+<!-- Remove if not applicable -->
+
+Fixes #(issue)
+
+## Before submitting:
+
+<!--- Go over all the following points, and put an `x` in all the boxes that apply. -->
+<!--- If you're unsure about any of these, don't hesitate to ask. We're here to help! -->
+<!--- If you plan to update documentation or tests in follow-up, please note -->
+
+- [ ] Does the Pull Request follow [Conventional Commits specification](https://www.conventionalcommits.org/en/v1.0.0/#summary) naming? Here are [GitHub's
+      guide](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) on how to create a pull request.
+- [ ] Does the code follow BentoML's code style, `pre-commit run -a` script has passed ([instructions](https://github.com/bentoml/BentoML/blob/main/DEVELOPMENT.md#style-check-auto-formatting-type-checking))?
+- [ ] Did you read through [contribution guidelines](https://github.com/bentoml/BentoML/blob/main/CONTRIBUTING.md#ways-to-contribute) and follow [development guidelines](https://github.com/bentoml/BentoML/blob/main/DEVELOPMENT.md#start-developing)?
+- [ ] Did your changes require updates to the documentation? Have you updated
+      those accordingly? Here are [documentation guidelines](https://github.com/bentoml/BentoML/tree/main/docs) and [tips on writting docs](https://github.com/bentoml/BentoML/tree/main/docs#writing-documentation).
+- [ ] Did you write tests to cover your changes?
+
+----------------------------------------
+
+PR #4914: fix(build): preserve the index url options in requirements.txt file
+Author: frostming
+Merged at: 2024-08-13 09:10:23+00:00
+URL: https://github.com/bentoml/BentoML/pull/4914
+Description:
+Signed-off-by: Frost Ming <me@frostming.com>
+
+## What does this PR address?
+
+<!--
+Thanks for sending a pull request!
+
+Congrats for making it this far! Here's a 🍱 for you. There are still a few steps ahead.
+
+Please make sure to read the contribution guidelines, then fill out the blanks below before requesting a code review.
+
+Name your Pull Request with one of the following prefixes, e.g. "feat: add support for PyTorch", to indicate the type of changes proposed. This is based on the [Conventional Commits specification](https://www.conventionalcommits.org/en/v1.0.0/#summary).
+  - feat: (new feature for the user, not a new feature for build script)
+  - fix: (bug fix for the user, not a fix to a build script)
+  - docs: (changes to the documentation)
+  - style: (formatting, missing semicolons, etc; no production code change)
+  - refactor: (refactoring production code, eg. renaming a variable)
+  - perf: (code changes that improve performance)
+  - test: (adding missing tests, refactoring tests; no production code change)
+  - chore: (updating grunt tasks etc; no production code change)
+  - build: (changes that affect the build system or external dependencies)
+  - ci: (changes to configuration files and scripts)
+  - revert: (reverts a previous commit)
+
+Describe your changes in detail. Attach screenshots here if appropriate.
+
+Once you're done with this, someone from BentoML team or community member will help review your PR (see "Who can help review?" section for potential reviewers.). If no one has reviewed your PR after a week have passed, don't hesitate to post a new comment and ping @-the same person. Notifications sometimes get lost 🥲.
+-->
+
+<!-- Remove if not applicable -->
+
+Fixes #(issue)
+
+## Before submitting:
+
+<!--- Go over all the following points, and put an `x` in all the boxes that apply. -->
+<!--- If you're unsure about any of these, don't hesitate to ask. We're here to help! -->
+<!--- If you plan to update documentation or tests in follow-up, please note -->
+
+- [ ] Does the Pull Request follow [Conventional Commits specification](https://www.conventionalcommits.org/en/v1.0.0/#summary) naming? Here are [GitHub's
+      guide](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) on how to create a pull request.
+- [ ] Does the code follow BentoML's code style, `pre-commit run -a` script has passed ([instructions](https://github.com/bentoml/BentoML/blob/main/DEVELOPMENT.md#style-check-auto-formatting-type-checking))?
+- [ ] Did you read through [contribution guidelines](https://github.com/bentoml/BentoML/blob/main/CONTRIBUTING.md#ways-to-contribute) and follow [development guidelines](https://github.com/bentoml/BentoML/blob/main/DEVELOPMENT.md#start-developing)?
+- [ ] Did your changes require updates to the documentation? Have you updated
+      those accordingly? Here are [documentation guidelines](https://github.com/bentoml/BentoML/tree/main/docs) and [tips on writting docs](https://github.com/bentoml/BentoML/tree/main/docs#writing-documentation).
+- [ ] Did you write tests to cover your changes?
+
+----------------------------------------
+
+PR #4911: chore: update pdm.lock file witht the lock targets
+Author: frostming
+Merged at: 2024-08-13 08:20:11+00:00
+URL: https://github.com/bentoml/BentoML/pull/4911
+Description:
+Signed-off-by: Frost Ming <me@frostming.com>
+
+## What does this PR address?
+
+<!--
+Thanks for sending a pull request!
+
+Congrats for making it this far! Here's a 🍱 for you. There are still a few steps ahead.
+
+Please make sure to read the contribution guidelines, then fill out the blanks below before requesting a code review.
+
+Name your Pull Request with one of the following prefixes, e.g. "feat: add support for PyTorch", to indicate the type of changes proposed. This is based on the [Conventional Commits specification](https://www.conventionalcommits.org/en/v1.0.0/#summary).
+  - feat: (new feature for the user, not a new feature for build script)
+  - fix: (bug fix for the user, not a fix to a build script)
+  - docs: (changes to the documentation)
+  - style: (formatting, missing semicolons, etc; no production code change)
+  - refactor: (refactoring production code, eg. renaming a variable)
+  - perf: (code changes that improve performance)
+  - test: (adding missing tests, refactoring tests; no production code change)
+  - chore: (updating grunt tasks etc; no production code change)
+  - build: (changes that affect the build system or external dependencies)
+  - ci: (changes to configuration files and scripts)
+  - revert: (reverts a previous commit)
+
+Describe your changes in detail. Attach screenshots here if appropriate.
+
+Once you're done with this, someone from BentoML team or community member will help review your PR (see "Who can help review?" section for potential reviewers.). If no one has reviewed your PR after a week have passed, don't hesitate to post a new comment and ping @-the same person. Notifications sometimes get lost 🥲.
+-->
+
+<!-- Remove if not applicable -->
+
+Fixes #(issue)
+
+## Before submitting:
+
+<!--- Go over all the following points, and put an `x` in all the boxes that apply. -->
+<!--- If you're unsure about any of these, don't hesitate to ask. We're here to help! -->
+<!--- If you plan to update documentation or tests in follow-up, please note -->
+
+- [ ] Does the Pull Request follow [Conventional Commits specification](https://www.conventionalcommits.org/en/v1.0.0/#summary) naming? Here are [GitHub's
+      guide](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) on how to create a pull request.
+- [ ] Does the code follow BentoML's code style, `pre-commit run -a` script has passed ([instructions](https://github.com/bentoml/BentoML/blob/main/DEVELOPMENT.md#style-check-auto-formatting-type-checking))?
+- [ ] Did you read through [contribution guidelines](https://github.com/bentoml/BentoML/blob/main/CONTRIBUTING.md#ways-to-contribute) and follow [development guidelines](https://github.com/bentoml/BentoML/blob/main/DEVELOPMENT.md#start-developing)?
+- [ ] Did your changes require updates to the documentation? Have you updated
+      those accordingly? Here are [documentation guidelines](https://github.com/bentoml/BentoML/tree/main/docs) and [tips on writting docs](https://github.com/bentoml/BentoML/tree/main/docs#writing-documentation).
+- [ ] Did you write tests to cover your changes?
+
+----------------------------------------
+
+PR #4916: feat(cli): reload option for start-http-server
+Author: frostming
+Merged at: 2024-08-13 07:05:05+00:00
+URL: https://github.com/bentoml/BentoML/pull/4916
+Description:
+Signed-off-by: Frost Ming <me@frostming.com>
+
+## What does this PR address?
+
+<!--
+Thanks for sending a pull request!
+
+Congrats for making it this far! Here's a 🍱 for you. There are still a few steps ahead.
+
+Please make sure to read the contribution guidelines, then fill out the blanks below before requesting a code review.
+
+Name your Pull Request with one of the following prefixes, e.g. "feat: add support for PyTorch", to indicate the type of changes proposed. This is based on the [Conventional Commits specification](https://www.conventionalcommits.org/en/v1.0.0/#summary).
+  - feat: (new feature for the user, not a new feature for build script)
+  - fix: (bug fix for the user, not a fix to a build script)
+  - docs: (changes to the documentation)
+  - style: (formatting, missing semicolons, etc; no production code change)
+  - refactor: (refactoring production code, eg. renaming a variable)
+  - perf: (code changes that improve performance)
+  - test: (adding missing tests, refactoring tests; no production code change)
+  - chore: (updating grunt tasks etc; no production code change)
+  - build: (changes that affect the build system or external dependencies)
+  - ci: (changes to configuration files and scripts)
+  - revert: (reverts a previous commit)
+
+Describe your changes in detail. Attach screenshots here if appropriate.
+
+Once you're done with this, someone from BentoML team or community member will help review your PR (see "Who can help review?" section for potential reviewers.). If no one has reviewed your PR after a week have passed, don't hesitate to post a new comment and ping @-the same person. Notifications sometimes get lost 🥲.
+-->
+
+<!-- Remove if not applicable -->
+
+Fixes #(issue)
+
+## Before submitting:
+
+<!--- Go over all the following points, and put an `x` in all the boxes that apply. -->
+<!--- If you're unsure about any of these, don't hesitate to ask. We're here to help! -->
+<!--- If you plan to update documentation or tests in follow-up, please note -->
+
+- [ ] Does the Pull Request follow [Conventional Commits specification](https://www.conventionalcommits.org/en/v1.0.0/#summary) naming? Here are [GitHub's
+      guide](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) on how to create a pull request.
+- [ ] Does the code follow BentoML's code style, `pre-commit run -a` script has passed ([instructions](https://github.com/bentoml/BentoML/blob/main/DEVELOPMENT.md#style-check-auto-formatting-type-checking))?
+- [ ] Did you read through [contribution guidelines](https://github.com/bentoml/BentoML/blob/main/CONTRIBUTING.md#ways-to-contribute) and follow [development guidelines](https://github.com/bentoml/BentoML/blob/main/DEVELOPMENT.md#start-developing)?
+- [ ] Did your changes require updates to the documentation? Have you updated
+      those accordingly? Here are [documentation guidelines](https://github.com/bentoml/BentoML/tree/main/docs) and [tips on writting docs](https://github.com/bentoml/BentoML/tree/main/docs#writing-documentation).
+- [ ] Did you write tests to cover your changes?
+
+----------------------------------------
+
+PR #4912: docs: Add metrics doc
+Author: Sherlock113
+Merged at: 2024-08-13 06:10:37+00:00
+URL: https://github.com/bentoml/BentoML/pull/4912
+Description:
+## What does this PR address?
+
+<!--
+Thanks for sending a pull request!
+
+Congrats for making it this far! Here's a 🍱 for you. There are still a few steps ahead.
+
+Please make sure to read the contribution guidelines, then fill out the blanks below before requesting a code review.
+
+Name your Pull Request with one of the following prefixes, e.g. "feat: add support for PyTorch", to indicate the type of changes proposed. This is based on the [Conventional Commits specification](https://www.conventionalcommits.org/en/v1.0.0/#summary).
+  - feat: (new feature for the user, not a new feature for build script)
+  - fix: (bug fix for the user, not a fix to a build script)
+  - docs: (changes to the documentation)
+  - style: (formatting, missing semicolons, etc; no production code change)
+  - refactor: (refactoring production code, eg. renaming a variable)
+  - perf: (code changes that improve performance)
+  - test: (adding missing tests, refactoring tests; no production code change)
+  - chore: (updating grunt tasks etc; no production code change)
+  - build: (changes that affect the build system or external dependencies)
+  - ci: (changes to configuration files and scripts)
+  - revert: (reverts a previous commit)
+
+Describe your changes in detail. Attach screenshots here if appropriate.
+
+Once you're done with this, someone from BentoML team or community member will help review your PR (see "Who can help review?" section for potential reviewers.). If no one has reviewed your PR after a week have passed, don't hesitate to post a new comment and ping @-the same person. Notifications sometimes get lost 🥲.
+-->
+
+<!-- Remove if not applicable -->
+
+Fixes #(issue)
+
+## Before submitting:
+
+<!--- Go over all the following points, and put an `x` in all the boxes that apply. -->
+<!--- If you're unsure about any of these, don't hesitate to ask. We're here to help! -->
+<!--- If you plan to update documentation or tests in follow-up, please note -->
+
+- [ ] Does the Pull Request follow [Conventional Commits specification](https://www.conventionalcommits.org/en/v1.0.0/#summary) naming? Here are [GitHub's
+      guide](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) on how to create a pull request.
+- [ ] Does the code follow BentoML's code style, `pre-commit run -a` script has passed ([instructions](https://github.com/bentoml/BentoML/blob/main/DEVELOPMENT.md#style-check-auto-formatting-type-checking))?
+- [ ] Did you read through [contribution guidelines](https://github.com/bentoml/BentoML/blob/main/CONTRIBUTING.md#ways-to-contribute) and follow [development guidelines](https://github.com/bentoml/BentoML/blob/main/DEVELOPMENT.md#start-developing)?
+- [x] Did your changes require updates to the documentation? Have you updated
+      those accordingly? Here are [documentation guidelines](https://github.com/bentoml/BentoML/tree/main/docs) and [tips on writting docs](https://github.com/bentoml/BentoML/tree/main/docs#writing-documentation).
+- [ ] Did you write tests to cover your changes?
+
+----------------------------------------
+
+PR #4915: doc: update the HTTP behavior test instruction
+Author: frostming
+Merged at: 2024-08-13 04:53:53+00:00
+URL: https://github.com/bentoml/BentoML/pull/4915
+Description:
+Signed-off-by: Frost Ming <me@frostming.com>
+
+## What does this PR address?
+
+<!--
+Thanks for sending a pull request!
+
+Congrats for making it this far! Here's a 🍱 for you. There are still a few steps ahead.
+
+Please make sure to read the contribution guidelines, then fill out the blanks below before requesting a code review.
+
+Name your Pull Request with one of the following prefixes, e.g. "feat: add support for PyTorch", to indicate the type of changes proposed. This is based on the [Conventional Commits specification](https://www.conventionalcommits.org/en/v1.0.0/#summary).
+  - feat: (new feature for the user, not a new feature for build script)
+  - fix: (bug fix for the user, not a fix to a build script)
+  - docs: (changes to the documentation)
+  - style: (formatting, missing semicolons, etc; no production code change)
+  - refactor: (refactoring production code, eg. renaming a variable)
+  - perf: (code changes that improve performance)
+  - test: (adding missing tests, refactoring tests; no production code change)
+  - chore: (updating grunt tasks etc; no production code change)
+  - build: (changes that affect the build system or external dependencies)
+  - ci: (changes to configuration files and scripts)
+  - revert: (reverts a previous commit)
+
+Describe your changes in detail. Attach screenshots here if appropriate.
+
+Once you're done with this, someone from BentoML team or community member will help review your PR (see "Who can help review?" section for potential reviewers.). If no one has reviewed your PR after a week have passed, don't hesitate to post a new comment and ping @-the same person. Notifications sometimes get lost 🥲.
+-->
+
+<!-- Remove if not applicable -->
+
+Fixes #(issue)
+
+## Before submitting:
+
+<!--- Go over all the following points, and put an `x` in all the boxes that apply. -->
+<!--- If you're unsure about any of these, don't hesitate to ask. We're here to help! -->
+<!--- If you plan to update documentation or tests in follow-up, please note -->
+
+- [ ] Does the Pull Request follow [Conventional Commits specification](https://www.conventionalcommits.org/en/v1.0.0/#summary) naming? Here are [GitHub's
+      guide](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) on how to create a pull request.
+- [ ] Does the code follow BentoML's code style, `pre-commit run -a` script has passed ([instructions](https://github.com/bentoml/BentoML/blob/main/DEVELOPMENT.md#style-check-auto-formatting-type-checking))?
+- [ ] Did you read through [contribution guidelines](https://github.com/bentoml/BentoML/blob/main/CONTRIBUTING.md#ways-to-contribute) and follow [development guidelines](https://github.com/bentoml/BentoML/blob/main/DEVELOPMENT.md#start-developing)?
+- [ ] Did your changes require updates to the documentation? Have you updated
+      those accordingly? Here are [documentation guidelines](https://github.com/bentoml/BentoML/tree/main/docs) and [tips on writting docs](https://github.com/bentoml/BentoML/tree/main/docs#writing-documentation).
+- [ ] Did you write tests to cover your changes?
+
+----------------------------------------
+
+PR #4913: docs: Update index.rst
+Author: Sherlock113
+Merged at: 2024-08-13 01:11:30+00:00
+URL: https://github.com/bentoml/BentoML/pull/4913
+Description:
+## What does this PR address?
+
+<!--
+Thanks for sending a pull request!
+
+Congrats for making it this far! Here's a 🍱 for you. There are still a few steps ahead.
+
+Please make sure to read the contribution guidelines, then fill out the blanks below before requesting a code review.
+
+Name your Pull Request with one of the following prefixes, e.g. "feat: add support for PyTorch", to indicate the type of changes proposed. This is based on the [Conventional Commits specification](https://www.conventionalcommits.org/en/v1.0.0/#summary).
+  - feat: (new feature for the user, not a new feature for build script)
+  - fix: (bug fix for the user, not a fix to a build script)
+  - docs: (changes to the documentation)
+  - style: (formatting, missing semicolons, etc; no production code change)
+  - refactor: (refactoring production code, eg. renaming a variable)
+  - perf: (code changes that improve performance)
+  - test: (adding missing tests, refactoring tests; no production code change)
+  - chore: (updating grunt tasks etc; no production code change)
+  - build: (changes that affect the build system or external dependencies)
+  - ci: (changes to configuration files and scripts)
+  - revert: (reverts a previous commit)
+
+Describe your changes in detail. Attach screenshots here if appropriate.
+
+Once you're done with this, someone from BentoML team or community member will help review your PR (see "Who can help review?" section for potential reviewers.). If no one has reviewed your PR after a week have passed, don't hesitate to post a new comment and ping @-the same person. Notifications sometimes get lost 🥲.
+-->
+
+<!-- Remove if not applicable -->
+
+Fixes #(issue)
+
+## Before submitting:
+
+<!--- Go over all the following points, and put an `x` in all the boxes that apply. -->
+<!--- If you're unsure about any of these, don't hesitate to ask. We're here to help! -->
+<!--- If you plan to update documentation or tests in follow-up, please note -->
+
+- [ ] Does the Pull Request follow [Conventional Commits specification](https://www.conventionalcommits.org/en/v1.0.0/#summary) naming? Here are [GitHub's
+      guide](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) on how to create a pull request.
+- [ ] Does the code follow BentoML's code style, `pre-commit run -a` script has passed ([instructions](https://github.com/bentoml/BentoML/blob/main/DEVELOPMENT.md#style-check-auto-formatting-type-checking))?
+- [ ] Did you read through [contribution guidelines](https://github.com/bentoml/BentoML/blob/main/CONTRIBUTING.md#ways-to-contribute) and follow [development guidelines](https://github.com/bentoml/BentoML/blob/main/DEVELOPMENT.md#start-developing)?
+- [x] Did your changes require updates to the documentation? Have you updated
+      those accordingly? Here are [documentation guidelines](https://github.com/bentoml/BentoML/tree/main/docs) and [tips on writting docs](https://github.com/bentoml/BentoML/tree/main/docs#writing-documentation).
+- [ ] Did you write tests to cover your changes?
+
+----------------------------------------
+
+PR #4910: docs: Update messages
+Author: Sherlock113
+Merged at: 2024-08-12 03:24:10+00:00
+URL: https://github.com/bentoml/BentoML/pull/4910
+Description:
+## What does this PR address?
+
+<!--
+Thanks for sending a pull request!
+
+Congrats for making it this far! Here's a 🍱 for you. There are still a few steps ahead.
+
+Please make sure to read the contribution guidelines, then fill out the blanks below before requesting a code review.
+
+Name your Pull Request with one of the following prefixes, e.g. "feat: add support for PyTorch", to indicate the type of changes proposed. This is based on the [Conventional Commits specification](https://www.conventionalcommits.org/en/v1.0.0/#summary).
+  - feat: (new feature for the user, not a new feature for build script)
+  - fix: (bug fix for the user, not a fix to a build script)
+  - docs: (changes to the documentation)
+  - style: (formatting, missing semicolons, etc; no production code change)
+  - refactor: (refactoring production code, eg. renaming a variable)
+  - perf: (code changes that improve performance)
+  - test: (adding missing tests, refactoring tests; no production code change)
+  - chore: (updating grunt tasks etc; no production code change)
+  - build: (changes that affect the build system or external dependencies)
+  - ci: (changes to configuration files and scripts)
+  - revert: (reverts a previous commit)
+
+Describe your changes in detail. Attach screenshots here if appropriate.
+
+Once you're done with this, someone from BentoML team or community member will help review your PR (see "Who can help review?" section for potential reviewers.). If no one has reviewed your PR after a week have passed, don't hesitate to post a new comment and ping @-the same person. Notifications sometimes get lost 🥲.
+-->
+
+<!-- Remove if not applicable -->
+
+Fixes #(issue)
+
+## Before submitting:
+
+<!--- Go over all the following points, and put an `x` in all the boxes that apply. -->
+<!--- If you're unsure about any of these, don't hesitate to ask. We're here to help! -->
+<!--- If you plan to update documentation or tests in follow-up, please note -->
+
+- [ ] Does the Pull Request follow [Conventional Commits specification](https://www.conventionalcommits.org/en/v1.0.0/#summary) naming? Here are [GitHub's
+      guide](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) on how to create a pull request.
+- [ ] Does the code follow BentoML's code style, `pre-commit run -a` script has passed ([instructions](https://github.com/bentoml/BentoML/blob/main/DEVELOPMENT.md#style-check-auto-formatting-type-checking))?
+- [ ] Did you read through [contribution guidelines](https://github.com/bentoml/BentoML/blob/main/CONTRIBUTING.md#ways-to-contribute) and follow [development guidelines](https://github.com/bentoml/BentoML/blob/main/DEVELOPMENT.md#start-developing)?
+- [x] Did your changes require updates to the documentation? Have you updated
+      those accordingly? Here are [documentation guidelines](https://github.com/bentoml/BentoML/tree/main/docs) and [tips on writting docs](https://github.com/bentoml/BentoML/tree/main/docs#writing-documentation).
+- [ ] Did you write tests to cover your changes?
+
+----------------------------------------
+
+PR #4906: docs: Update README.md
+Author: parano
+Merged at: 2024-08-08 16:02:45+00:00
+URL: https://github.com/bentoml/BentoML/pull/4906
+Description:
+## What does this PR address?
+
+<!--
+Thanks for sending a pull request!
+
+Congrats for making it this far! Here's a 🍱 for you. There are still a few steps ahead.
+
+Please make sure to read the contribution guidelines, then fill out the blanks below before requesting a code review.
+
+Name your Pull Request with one of the following prefixes, e.g. "feat: add support for PyTorch", to indicate the type of changes proposed. This is based on the [Conventional Commits specification](https://www.conventionalcommits.org/en/v1.0.0/#summary).
+  - feat: (new feature for the user, not a new feature for build script)
+  - fix: (bug fix for the user, not a fix to a build script)
+  - docs: (changes to the documentation)
+  - style: (formatting, missing semicolons, etc; no production code change)
+  - refactor: (refactoring production code, eg. renaming a variable)
+  - perf: (code changes that improve performance)
+  - test: (adding missing tests, refactoring tests; no production code change)
+  - chore: (updating grunt tasks etc; no production code change)
+  - build: (changes that affect the build system or external dependencies)
+  - ci: (changes to configuration files and scripts)
+  - revert: (reverts a previous commit)
+
+Describe your changes in detail. Attach screenshots here if appropriate.
+
+Once you're done with this, someone from BentoML team or community member will help review your PR (see "Who can help review?" section for potential reviewers.). If no one has reviewed your PR after a week have passed, don't hesitate to post a new comment and ping @-the same person. Notifications sometimes get lost 🥲.
+-->
+
+<!-- Remove if not applicable -->
+
+Fixes #(issue)
+
+## Before submitting:
+
+<!--- Go over all the following points, and put an `x` in all the boxes that apply. -->
+<!--- If you're unsure about any of these, don't hesitate to ask. We're here to help! -->
+<!--- If you plan to update documentation or tests in follow-up, please note -->
+
+- [ ] Does the Pull Request follow [Conventional Commits specification](https://www.conventionalcommits.org/en/v1.0.0/#summary) naming? Here are [GitHub's
+      guide](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) on how to create a pull request.
+- [ ] Does the code follow BentoML's code style, `pre-commit run -a` script has passed ([instructions](https://github.com/bentoml/BentoML/blob/main/DEVELOPMENT.md#style-check-auto-formatting-type-checking))?
+- [ ] Did you read through [contribution guidelines](https://github.com/bentoml/BentoML/blob/main/CONTRIBUTING.md#ways-to-contribute) and follow [development guidelines](https://github.com/bentoml/BentoML/blob/main/DEVELOPMENT.md#start-developing)?
+- [ ] Did your changes require updates to the documentation? Have you updated
+      those accordingly? Here are [documentation guidelines](https://github.com/bentoml/BentoML/tree/main/docs) and [tips on writting docs](https://github.com/bentoml/BentoML/tree/main/docs#writing-documentation).
+- [ ] Did you write tests to cover your changes?
+
+----------------------------------------
+
+PR #4907: refactor: store the cloud context into the container instead of passing it around
+Author: frostming
+Merged at: 2024-08-08 06:21:43+00:00
+URL: https://github.com/bentoml/BentoML/pull/4907
+Description:
+Signed-off-by: Frost Ming <me@frostming.com>
+
+## What does this PR address?
+
+<!--
+Thanks for sending a pull request!
+
+Congrats for making it this far! Here's a 🍱 for you. There are still a few steps ahead.
+
+Please make sure to read the contribution guidelines, then fill out the blanks below before requesting a code review.
+
+Name your Pull Request with one of the following prefixes, e.g. "feat: add support for PyTorch", to indicate the type of changes proposed. This is based on the [Conventional Commits specification](https://www.conventionalcommits.org/en/v1.0.0/#summary).
+  - feat: (new feature for the user, not a new feature for build script)
+  - fix: (bug fix for the user, not a fix to a build script)
+  - docs: (changes to the documentation)
+  - style: (formatting, missing semicolons, etc; no production code change)
+  - refactor: (refactoring production code, eg. renaming a variable)
+  - perf: (code changes that improve performance)
+  - test: (adding missing tests, refactoring tests; no production code change)
+  - chore: (updating grunt tasks etc; no production code change)
+  - build: (changes that affect the build system or external dependencies)
+  - ci: (changes to configuration files and scripts)
+  - revert: (reverts a previous commit)
+
+Describe your changes in detail. Attach screenshots here if appropriate.
+
+Once you're done with this, someone from BentoML team or community member will help review your PR (see "Who can help review?" section for potential reviewers.). If no one has reviewed your PR after a week have passed, don't hesitate to post a new comment and ping @-the same person. Notifications sometimes get lost 🥲.
+-->
+
+<!-- Remove if not applicable -->
+
+Fixes #(issue)
+
+## Before submitting:
+
+<!--- Go over all the following points, and put an `x` in all the boxes that apply. -->
+<!--- If you're unsure about any of these, don't hesitate to ask. We're here to help! -->
+<!--- If you plan to update documentation or tests in follow-up, please note -->
+
+- [ ] Does the Pull Request follow [Conventional Commits specification](https://www.conventionalcommits.org/en/v1.0.0/#summary) naming? Here are [GitHub's
+      guide](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) on how to create a pull request.
+- [ ] Does the code follow BentoML's code style, `pre-commit run -a` script has passed ([instructions](https://github.com/bentoml/BentoML/blob/main/DEVELOPMENT.md#style-check-auto-formatting-type-checking))?
+- [ ] Did you read through [contribution guidelines](https://github.com/bentoml/BentoML/blob/main/CONTRIBUTING.md#ways-to-contribute) and follow [development guidelines](https://github.com/bentoml/BentoML/blob/main/DEVELOPMENT.md#start-developing)?
+- [ ] Did your changes require updates to the documentation? Have you updated
+      those accordingly? Here are [documentation guidelines](https://github.com/bentoml/BentoML/tree/main/docs) and [tips on writting docs](https://github.com/bentoml/BentoML/tree/main/docs#writing-documentation).
+- [ ] Did you write tests to cover your changes?
+
+----------------------------------------
+
+PR #4903: fix: metrics duration defined with min,max,factor not taking effect
+Author: frostming
+Merged at: 2024-08-08 02:18:30+00:00
+URL: https://github.com/bentoml/BentoML/pull/4903
+Description:
+Signed-off-by: Frost Ming <me@frostming.com>
+
+## What does this PR address?
+
+<!--
+Thanks for sending a pull request!
+
+Congrats for making it this far! Here's a 🍱 for you. There are still a few steps ahead.
+
+Please make sure to read the contribution guidelines, then fill out the blanks below before requesting a code review.
+
+Name your Pull Request with one of the following prefixes, e.g. "feat: add support for PyTorch", to indicate the type of changes proposed. This is based on the [Conventional Commits specification](https://www.conventionalcommits.org/en/v1.0.0/#summary).
+  - feat: (new feature for the user, not a new feature for build script)
+  - fix: (bug fix for the user, not a fix to a build script)
+  - docs: (changes to the documentation)
+  - style: (formatting, missing semicolons, etc; no production code change)
+  - refactor: (refactoring production code, eg. renaming a variable)
+  - perf: (code changes that improve performance)
+  - test: (adding missing tests, refactoring tests; no production code change)
+  - chore: (updating grunt tasks etc; no production code change)
+  - build: (changes that affect the build system or external dependencies)
+  - ci: (changes to configuration files and scripts)
+  - revert: (reverts a previous commit)
+
+Describe your changes in detail. Attach screenshots here if appropriate.
+
+Once you're done with this, someone from BentoML team or community member will help review your PR (see "Who can help review?" section for potential reviewers.). If no one has reviewed your PR after a week have passed, don't hesitate to post a new comment and ping @-the same person. Notifications sometimes get lost 🥲.
+-->
+
+<!-- Remove if not applicable -->
+
+Fixes #(issue)
+
+## Before submitting:
+
+<!--- Go over all the following points, and put an `x` in all the boxes that apply. -->
+<!--- If you're unsure about any of these, don't hesitate to ask. We're here to help! -->
+<!--- If you plan to update documentation or tests in follow-up, please note -->
+
+- [ ] Does the Pull Request follow [Conventional Commits specification](https://www.conventionalcommits.org/en/v1.0.0/#summary) naming? Here are [GitHub's
+      guide](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) on how to create a pull request.
+- [ ] Does the code follow BentoML's code style, `pre-commit run -a` script has passed ([instructions](https://github.com/bentoml/BentoML/blob/main/DEVELOPMENT.md#style-check-auto-formatting-type-checking))?
+- [ ] Did you read through [contribution guidelines](https://github.com/bentoml/BentoML/blob/main/CONTRIBUTING.md#ways-to-contribute) and follow [development guidelines](https://github.com/bentoml/BentoML/blob/main/DEVELOPMENT.md#start-developing)?
+- [ ] Did your changes require updates to the documentation? Have you updated
+      those accordingly? Here are [documentation guidelines](https://github.com/bentoml/BentoML/tree/main/docs) and [tips on writting docs](https://github.com/bentoml/BentoML/tree/main/docs#writing-documentation).
+- [ ] Did you write tests to cover your changes?
+
+----------------------------------------
+
+PR #4905: docs: update azure byoc instructions
+Author: ssheng
+Merged at: 2024-08-07 11:23:13+00:00
+URL: https://github.com/bentoml/BentoML/pull/4905
+Description:
+## What does this PR address?
+
+<!--
+Thanks for sending a pull request!
+
+Congrats for making it this far! Here's a 🍱 for you. There are still a few steps ahead.
+
+Please make sure to read the contribution guidelines, then fill out the blanks below before requesting a code review.
+
+Name your Pull Request with one of the following prefixes, e.g. "feat: add support for PyTorch", to indicate the type of changes proposed. This is based on the [Conventional Commits specification](https://www.conventionalcommits.org/en/v1.0.0/#summary).
+  - feat: (new feature for the user, not a new feature for build script)
+  - fix: (bug fix for the user, not a fix to a build script)
+  - docs: (changes to the documentation)
+  - style: (formatting, missing semicolons, etc; no production code change)
+  - refactor: (refactoring production code, eg. renaming a variable)
+  - perf: (code changes that improve performance)
+  - test: (adding missing tests, refactoring tests; no production code change)
+  - chore: (updating grunt tasks etc; no production code change)
+  - build: (changes that affect the build system or external dependencies)
+  - ci: (changes to configuration files and scripts)
+  - revert: (reverts a previous commit)
+
+Describe your changes in detail. Attach screenshots here if appropriate.
+
+Once you're done with this, someone from BentoML team or community member will help review your PR (see "Who can help review?" section for potential reviewers.). If no one has reviewed your PR after a week have passed, don't hesitate to post a new comment and ping @-the same person. Notifications sometimes get lost 🥲.
+-->
+
+<!-- Remove if not applicable -->
+
+Fixes #(issue)
+
+## Before submitting:
+
+<!--- Go over all the following points, and put an `x` in all the boxes that apply. -->
+<!--- If you're unsure about any of these, don't hesitate to ask. We're here to help! -->
+<!--- If you plan to update documentation or tests in follow-up, please note -->
+
+- [ ] Does the Pull Request follow [Conventional Commits specification](https://www.conventionalcommits.org/en/v1.0.0/#summary) naming? Here are [GitHub's
+      guide](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) on how to create a pull request.
+- [ ] Does the code follow BentoML's code style, `pre-commit run -a` script has passed ([instructions](https://github.com/bentoml/BentoML/blob/main/DEVELOPMENT.md#style-check-auto-formatting-type-checking))?
+- [ ] Did you read through [contribution guidelines](https://github.com/bentoml/BentoML/blob/main/CONTRIBUTING.md#ways-to-contribute) and follow [development guidelines](https://github.com/bentoml/BentoML/blob/main/DEVELOPMENT.md#start-developing)?
+- [ ] Did your changes require updates to the documentation? Have you updated
+      those accordingly? Here are [documentation guidelines](https://github.com/bentoml/BentoML/tree/main/docs) and [tips on writting docs](https://github.com/bentoml/BentoML/tree/main/docs#writing-documentation).
+- [ ] Did you write tests to cover your changes?
+
+----------------------------------------
+
+PR #4899: fix: direct return response if tracer id is null
+Author: FogDong
+Merged at: 2024-08-07 09:10:56+00:00
+URL: https://github.com/bentoml/BentoML/pull/4899
+Description:
+## What does this PR address?
+
+<!--
+Thanks for sending a pull request!
+
+Congrats for making it this far! Here's a 🍱 for you. There are still a few steps ahead.
+
+Please make sure to read the contribution guidelines, then fill out the blanks below before requesting a code review.
+
+Name your Pull Request with one of the following prefixes, e.g. "feat: add support for PyTorch", to indicate the type of changes proposed. This is based on the [Conventional Commits specification](https://www.conventionalcommits.org/en/v1.0.0/#summary).
+  - feat: (new feature for the user, not a new feature for build script)
+  - fix: (bug fix for the user, not a fix to a build script)
+  - docs: (changes to the documentation)
+  - style: (formatting, missing semicolons, etc; no production code change)
+  - refactor: (refactoring production code, eg. renaming a variable)
+  - perf: (code changes that improve performance)
+  - test: (adding missing tests, refactoring tests; no production code change)
+  - chore: (updating grunt tasks etc; no production code change)
+  - build: (changes that affect the build system or external dependencies)
+  - ci: (changes to configuration files and scripts)
+  - revert: (reverts a previous commit)
+
+Describe your changes in detail. Attach screenshots here if appropriate.
+
+Once you're done with this, someone from BentoML team or community member will help review your PR (see "Who can help review?" section for potential reviewers.). If no one has reviewed your PR after a week have passed, don't hesitate to post a new comment and ping @-the same person. Notifications sometimes get lost 🥲.
+-->
+
+<!-- Remove if not applicable -->
+
+Fixes #(issue)
+
+## Before submitting:
+
+<!--- Go over all the following points, and put an `x` in all the boxes that apply. -->
+<!--- If you're unsure about any of these, don't hesitate to ask. We're here to help! -->
+<!--- If you plan to update documentation or tests in follow-up, please note -->
+
+- [ ] Does the Pull Request follow [Conventional Commits specification](https://www.conventionalcommits.org/en/v1.0.0/#summary) naming? Here are [GitHub's
+      guide](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) on how to create a pull request.
+- [ ] Does the code follow BentoML's code style, `pre-commit run -a` script has passed ([instructions](https://github.com/bentoml/BentoML/blob/main/DEVELOPMENT.md#style-check-auto-formatting-type-checking))?
+- [ ] Did you read through [contribution guidelines](https://github.com/bentoml/BentoML/blob/main/CONTRIBUTING.md#ways-to-contribute) and follow [development guidelines](https://github.com/bentoml/BentoML/blob/main/DEVELOPMENT.md#start-developing)?
+- [ ] Did your changes require updates to the documentation? Have you updated
+      those accordingly? Here are [documentation guidelines](https://github.com/bentoml/BentoML/tree/main/docs) and [tips on writting docs](https://github.com/bentoml/BentoML/tree/main/docs#writing-documentation).
+- [ ] Did you write tests to cover your changes?
+
+----------------------------------------
+
+PR #4904: fix: fix resource type
+Author: FogDong
+Merged at: 2024-08-07 09:10:26+00:00
+URL: https://github.com/bentoml/BentoML/pull/4904
+Description:
+## What does this PR address?
+
+<!--
+Thanks for sending a pull request!
+
+Congrats for making it this far! Here's a 🍱 for you. There are still a few steps ahead.
+
+Please make sure to read the contribution guidelines, then fill out the blanks below before requesting a code review.
+
+Name your Pull Request with one of the following prefixes, e.g. "feat: add support for PyTorch", to indicate the type of changes proposed. This is based on the [Conventional Commits specification](https://www.conventionalcommits.org/en/v1.0.0/#summary).
+  - feat: (new feature for the user, not a new feature for build script)
+  - fix: (bug fix for the user, not a fix to a build script)
+  - docs: (changes to the documentation)
+  - style: (formatting, missing semicolons, etc; no production code change)
+  - refactor: (refactoring production code, eg. renaming a variable)
+  - perf: (code changes that improve performance)
+  - test: (adding missing tests, refactoring tests; no production code change)
+  - chore: (updating grunt tasks etc; no production code change)
+  - build: (changes that affect the build system or external dependencies)
+  - ci: (changes to configuration files and scripts)
+  - revert: (reverts a previous commit)
+
+Describe your changes in detail. Attach screenshots here if appropriate.
+
+Once you're done with this, someone from BentoML team or community member will help review your PR (see "Who can help review?" section for potential reviewers.). If no one has reviewed your PR after a week have passed, don't hesitate to post a new comment and ping @-the same person. Notifications sometimes get lost 🥲.
+-->
+
+<!-- Remove if not applicable -->
+
+Fixes #(issue)
+
+## Before submitting:
+
+<!--- Go over all the following points, and put an `x` in all the boxes that apply. -->
+<!--- If you're unsure about any of these, don't hesitate to ask. We're here to help! -->
+<!--- If you plan to update documentation or tests in follow-up, please note -->
+
+- [ ] Does the Pull Request follow [Conventional Commits specification](https://www.conventionalcommits.org/en/v1.0.0/#summary) naming? Here are [GitHub's
+      guide](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) on how to create a pull request.
+- [ ] Does the code follow BentoML's code style, `pre-commit run -a` script has passed ([instructions](https://github.com/bentoml/BentoML/blob/main/DEVELOPMENT.md#style-check-auto-formatting-type-checking))?
+- [ ] Did you read through [contribution guidelines](https://github.com/bentoml/BentoML/blob/main/CONTRIBUTING.md#ways-to-contribute) and follow [development guidelines](https://github.com/bentoml/BentoML/blob/main/DEVELOPMENT.md#start-developing)?
+- [ ] Did your changes require updates to the documentation? Have you updated
+      those accordingly? Here are [documentation guidelines](https://github.com/bentoml/BentoML/tree/main/docs) and [tips on writting docs](https://github.com/bentoml/BentoML/tree/main/docs#writing-documentation).
+- [ ] Did you write tests to cover your changes?
+
+----------------------------------------
+
+PR #4901: docs: Update doc images
+Author: Sherlock113
+Merged at: 2024-08-06 11:48:50+00:00
+URL: https://github.com/bentoml/BentoML/pull/4901
+Description:
+## What does this PR address?
+
+<!--
+Thanks for sending a pull request!
+
+Congrats for making it this far! Here's a 🍱 for you. There are still a few steps ahead.
+
+Please make sure to read the contribution guidelines, then fill out the blanks below before requesting a code review.
+
+Name your Pull Request with one of the following prefixes, e.g. "feat: add support for PyTorch", to indicate the type of changes proposed. This is based on the [Conventional Commits specification](https://www.conventionalcommits.org/en/v1.0.0/#summary).
+  - feat: (new feature for the user, not a new feature for build script)
+  - fix: (bug fix for the user, not a fix to a build script)
+  - docs: (changes to the documentation)
+  - style: (formatting, missing semicolons, etc; no production code change)
+  - refactor: (refactoring production code, eg. renaming a variable)
+  - perf: (code changes that improve performance)
+  - test: (adding missing tests, refactoring tests; no production code change)
+  - chore: (updating grunt tasks etc; no production code change)
+  - build: (changes that affect the build system or external dependencies)
+  - ci: (changes to configuration files and scripts)
+  - revert: (reverts a previous commit)
+
+Describe your changes in detail. Attach screenshots here if appropriate.
+
+Once you're done with this, someone from BentoML team or community member will help review your PR (see "Who can help review?" section for potential reviewers.). If no one has reviewed your PR after a week have passed, don't hesitate to post a new comment and ping @-the same person. Notifications sometimes get lost 🥲.
+-->
+
+<!-- Remove if not applicable -->
+
+Fixes #(issue)
+
+## Before submitting:
+
+<!--- Go over all the following points, and put an `x` in all the boxes that apply. -->
+<!--- If you're unsure about any of these, don't hesitate to ask. We're here to help! -->
+<!--- If you plan to update documentation or tests in follow-up, please note -->
+
+- [ ] Does the Pull Request follow [Conventional Commits specification](https://www.conventionalcommits.org/en/v1.0.0/#summary) naming? Here are [GitHub's
+      guide](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) on how to create a pull request.
+- [ ] Does the code follow BentoML's code style, `pre-commit run -a` script has passed ([instructions](https://github.com/bentoml/BentoML/blob/main/DEVELOPMENT.md#style-check-auto-formatting-type-checking))?
+- [ ] Did you read through [contribution guidelines](https://github.com/bentoml/BentoML/blob/main/CONTRIBUTING.md#ways-to-contribute) and follow [development guidelines](https://github.com/bentoml/BentoML/blob/main/DEVELOPMENT.md#start-developing)?
+- [x] Did your changes require updates to the documentation? Have you updated
+      those accordingly? Here are [documentation guidelines](https://github.com/bentoml/BentoML/tree/main/docs) and [tips on writting docs](https://github.com/bentoml/BentoML/tree/main/docs#writing-documentation).
+- [ ] Did you write tests to cover your changes?
+
+----------------------------------------
+
+PR #4897: ci: pre-commit autoupdate
+Author: pre-commit-ci[bot]
+Merged at: 2024-08-06 07:01:33+00:00
+URL: https://github.com/bentoml/BentoML/pull/4897
+Description:
+<!--pre-commit.ci start-->
+updates:
+- [github.com/astral-sh/ruff-pre-commit: v0.5.0 → v0.5.6](https://github.com/astral-sh/ruff-pre-commit/compare/v0.5.0...v0.5.6)
+- [github.com/pdm-project/pdm: 2.16.1 → 2.17.3](https://github.com/pdm-project/pdm/compare/2.16.1...2.17.3)
+- [github.com/bufbuild/buf: v1.34.0 → v1.35.1](https://github.com/bufbuild/buf/compare/v1.34.0...v1.35.1)
+<!--pre-commit.ci end-->
+----------------------------------------
+
+PR #4898: fix: press text
+Author: xianml
+Merged at: 2024-08-06 07:01:11+00:00
+URL: https://github.com/bentoml/BentoML/pull/4898
+Description:
+## What does this PR address?
+
+<!--
+Thanks for sending a pull request!
+
+Congrats for making it this far! Here's a 🍱 for you. There are still a few steps ahead.
+
+Please make sure to read the contribution guidelines, then fill out the blanks below before requesting a code review.
+
+Name your Pull Request with one of the following prefixes, e.g. "feat: add support for PyTorch", to indicate the type of changes proposed. This is based on the [Conventional Commits specification](https://www.conventionalcommits.org/en/v1.0.0/#summary).
+  - feat: (new feature for the user, not a new feature for build script)
+  - fix: (bug fix for the user, not a fix to a build script)
+  - docs: (changes to the documentation)
+  - style: (formatting, missing semicolons, etc; no production code change)
+  - refactor: (refactoring production code, eg. renaming a variable)
+  - perf: (code changes that improve performance)
+  - test: (adding missing tests, refactoring tests; no production code change)
+  - chore: (updating grunt tasks etc; no production code change)
+  - build: (changes that affect the build system or external dependencies)
+  - ci: (changes to configuration files and scripts)
+  - revert: (reverts a previous commit)
+
+Describe your changes in detail. Attach screenshots here if appropriate.
+
+Once you're done with this, someone from BentoML team or community member will help review your PR (see "Who can help review?" section for potential reviewers.). If no one has reviewed your PR after a week have passed, don't hesitate to post a new comment and ping @-the same person. Notifications sometimes get lost 🥲.
+-->
+
+<!-- Remove if not applicable -->
+
+Fixes #(issue)
+
+## Before submitting:
+
+<!--- Go over all the following points, and put an `x` in all the boxes that apply. -->
+<!--- If you're unsure about any of these, don't hesitate to ask. We're here to help! -->
+<!--- If you plan to update documentation or tests in follow-up, please note -->
+
+- [x] Does the Pull Request follow [Conventional Commits specification](https://www.conventionalcommits.org/en/v1.0.0/#summary) naming? Here are [GitHub's
+      guide](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) on how to create a pull request.
+- [x] Does the code follow BentoML's code style, `pre-commit run -a` script has passed ([instructions](https://github.com/bentoml/BentoML/blob/main/DEVELOPMENT.md#style-check-auto-formatting-type-checking))?
+- [x] Did you read through [contribution guidelines](https://github.com/bentoml/BentoML/blob/main/CONTRIBUTING.md#ways-to-contribute) and follow [development guidelines](https://github.com/bentoml/BentoML/blob/main/DEVELOPMENT.md#start-developing)?
+- [ ] Did your changes require updates to the documentation? Have you updated
+      those accordingly? Here are [documentation guidelines](https://github.com/bentoml/BentoML/tree/main/docs) and [tips on writting docs](https://github.com/bentoml/BentoML/tree/main/docs#writing-documentation).
+- [ ] Did you write tests to cover your changes?
+
+----------------------------------------
+
+
+FILE CHANGES
+--------------------------------------------------------------------------------
+
+File: .github/workflows/ci.yml
+Status: modified
+Changes: +7 -0
+Diff:
+@@ -144,6 +144,13 @@ jobs:
+         os: [ubuntu-latest, macos-latest]
+         python-version: [3.8, 3.11, 3.12]
+         suite: ['bento_server_http', 'bento_new_sdk']
++        exclude:
++          - os: macos-latest
++            suite: bento_server_http
++            python-version: 3.12
++          - os: ubuntu-latest
++            suite: bento_server_http
+
+----------------------------------------
+
+File: .pre-commit-config.yaml
+Status: modified
+Changes: +3 -3
+Diff:
+@@ -8,7 +8,7 @@ ci:
+ exclude: '(.*\.(css|js|svg))|(.*/(snippets|grpc|proto)/.*)$'
+ repos:
+   - repo: https://github.com/astral-sh/ruff-pre-commit
+-    rev: 'v0.5.0'
++    rev: 'v0.5.6'
+     hooks:
+       - id: ruff
+         args: [--fix, --exit-non-zero-on-fix, --show-fixes]
+@@ -22,11 +22,11 @@ repos:
+
+----------------------------------------
+
+File: README.md
+Status: modified
+Changes: +22 -15
+Diff:
+@@ -11,18 +11,18 @@
+ 
+ [![License: Apache-2.0](https://img.shields.io/badge/License-Apache%202-green.svg)](https://github.com/bentoml/BentoML?tab=Apache-2.0-1-ov-file)
+ [![Releases](https://img.shields.io/github/v/release/bentoml/bentoml.svg)](https://github.com/bentoml/bentoml/releases)
+-[![CI](https://github.com/bentoml/bentoml/workflows/CI/badge.svg?branch=main)](https://github.com/bentoml/BentoML/actions/workflows/ci.yml?query=branch%3Amain)
++[![CI](https://github.com/bentoml/bentoml/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/bentoml/BentoML/actions/workflows/ci.yml?query=branch%3Amain)
+ [![Twitter](https://badgen.net/badge/icon/@bentomlai/1DA1F2?icon=twitter&label=Follow)](https://twitter.com/bentomlai)
+ [![Community](https://badgen.net/badge/Join/Community/cyan?icon=slack)](https://l.bentoml.com/join-slack)
+ 
+ ## What is BentoML?
+ 
+-BentoML is an open-source model serving framework, simplifying how AI/ML models gets into production:
++BentoML is a Python library for building online serving systems optimized for AI apps and model inference.
+ 
+ - **🍱 Easily build APIs for Any AI/ML Model.** Turn any model inference script into a REST API server with just a few lines of code and standard Python type hints.
+ - **🐳 Docker Containers made simple.** No more dependency hell! Manage your environments, dependencies and model versions with a simple config file. BentoML automatically generates Docker images, ensures reproducibility, and simplifies how you deploy to different environments.
+ - **🧭 Maximize CPU/GPU utilization.** Build high performance inference APIs leveraging built-in serving optimization features like dynamic batching, model parallelism, multi-stage pipeline and multi-model inference-graph orchestration.
+-- **👩‍💻 Build Custom AI Applications.** Easily implement your own API specifications, asynchronous inference tasks; customize pre/post-processing, model inference and model composition logic, all using Python code. Supports any ML framework, modality, and inference runtime.
++- **👩‍💻 Fully customizable.** Easily implement your own APIs or task queues, with custom business logic, model inference and multi-model composition. Supports any ML framework, modality, and inference runtime.
+ - **🚀 Ready for Production.** Develop, run and debug locally. Seamlessly deploy to production with Docker containers or [BentoCloud](https://www.bentoml.com/).
+ 
+ 
+@@ -33,7 +33,6 @@ Install BentoML:
+ ```
+ # Requires Python≥3.8
+ pip install -U bentoml
+-pip install torch transformers  # additional dependencies for demo purpose
+ ```
+ 
+ Define APIs in a `service.py` file.
+@@ -42,23 +41,29 @@ Define APIs in a `service.py` file.
+ from __future__ import annotations
+ 
+ import bentoml
+-from typing import List
+
+----------------------------------------
+
+File: docs/source/_static/img/bentocloud/best-practices/bento-building-and-deployment/bento-build-deployment-workflow.png
+Status: removed
+Changes: +0 -0
+
+----------------------------------------
+
+File: docs/source/_static/img/bentocloud/create-deployment.png
+Status: removed
+Changes: +0 -0
+
+----------------------------------------
+
+File: docs/source/_static/img/bentocloud/events-homepage.png
+Status: removed
+Changes: +0 -0
+
+----------------------------------------
+
+File: docs/source/_static/img/bentocloud/get-started/bentocloud-playground-quickstart.png
+Status: modified
+Changes: +0 -0
+
+----------------------------------------
+
+File: docs/source/_static/img/bentocloud/grafana.png
+Status: removed
+Changes: +0 -0
+
+----------------------------------------
+
+File: docs/source/_static/img/bentocloud/how-to/call-deployment-endpoints/deployment-endpoint-url.png
+Status: modified
+Changes: +0 -0
+
+----------------------------------------
+
+File: docs/source/_static/img/bentocloud/how-to/call-deployment-endpoints/swagger-ui.png
+Status: modified
+Changes: +0 -0
+
+----------------------------------------
+
+File: docs/source/_static/img/bentocloud/how-to/manage-access-tokens/token-creation-dialog.png
+Status: modified
+Changes: +0 -0
+
+----------------------------------------
+
+File: docs/source/_static/img/bentocloud/how-to/manage-secrets/create-a-secret-bentocloud.png
+Status: modified
+Changes: +0 -0
+
+----------------------------------------
+
+File: docs/source/_static/img/bentocloud/how-to/manage-secrets/use-a-secret-for-deployment.png
+Status: modified
+Changes: +0 -0
+
+----------------------------------------
+
+File: docs/source/_static/img/bentocloud/manage-bentos.gif
+Status: removed
+Changes: +0 -0
+
+----------------------------------------
+
+File: docs/source/_static/img/bentocloud/manage-models.gif
+Status: removed
+Changes: +0 -0
+
+----------------------------------------
+
+File: docs/source/_static/img/bentocloud/manage-user-page.png
+Status: removed
+Changes: +0 -0
+
+----------------------------------------
+
+File: docs/source/_static/img/bentocloud/scale-autoscale.png
+Status: removed
+Changes: +0 -0
+
+----------------------------------------
+
+File: docs/source/_static/img/bentocloud/scale-serverless.png
+Status: removed
+Changes: +0 -0
+
+----------------------------------------
+
+File: docs/source/_static/img/bentocloud/scale-traffic-control.png
+Status: removed
+Changes: +0 -0
+
+----------------------------------------
+
+File: docs/source/_static/img/bentocloud/ship-pushed-bento.png
+Status: removed
+Changes: +0 -0
+
+----------------------------------------
+
+File: docs/source/_static/img/bentocloud/ship-versioning.png
+Status: removed
+Changes: +0 -0
+
+----------------------------------------
+
+File: docs/source/_static/img/bentocloud/type-of-deployment.png
+Status: removed
+Changes: +0 -0
+
+----------------------------------------
+
+File: docs/source/_static/img/bentocloud/viewing-deployment.png
+Status: removed
+Changes: +0 -0
+
+----------------------------------------
+
+File: docs/source/_static/img/get-started/quickstart/service-ui.png
+Status: modified
+Changes: +0 -0
+
+----------------------------------------
+
+File: docs/source/_static/img/guides/asgi/inside-the-class.png
+Status: modified
+Changes: +0 -0
+
+----------------------------------------
+
+File: docs/source/_static/img/guides/asgi/outside-the-class.png
+Status: modified
+Changes: +0 -0
+
+----------------------------------------
+
+File: docs/source/_static/img/guides/asgi/two-asgi-fastapi-routes.png
+Status: modified
+Changes: +0 -0
+
+----------------------------------------
+
+File: docs/source/_static/img/guides/deployment/deployment-replica.png
+Status: modified
+Changes: +0 -0
+
+----------------------------------------
+
+File: docs/source/_static/img/guides/observability/metrics/grafana-bentoml-1.png
+Status: added
+Changes: +0 -0
+
+----------------------------------------
+
+File: docs/source/_static/img/guides/observability/metrics/grafana-bentoml-2.png
+Status: added
+Changes: +0 -0
+
+----------------------------------------
+
+File: docs/source/_static/img/guides/observability/metrics/prome-ui-bentoml.png
+Status: added
+Changes: +0 -0
+
+----------------------------------------
+
+File: docs/source/_static/img/guides/observability/tracing/jaeger-ui-tracing-bentoml.png
+Status: modified
+Changes: +0 -0
+
+----------------------------------------
+
+File: docs/source/_static/img/guides/observability/tracing/zipkin-ui-tracing-bentoml.png
+Status: modified
+Changes: +0 -0
+
+----------------------------------------
+
+File: docs/source/_static/img/guides/tasks/task-workflow.png
+Status: modified
+Changes: +0 -0
+
+----------------------------------------
+
+File: docs/source/bentocloud/byoc/azure.rst
+Status: modified
+Changes: +1 -5
+Diff:
+@@ -28,11 +28,7 @@ Setup
+ 
+    The permission set in the script allows for the creation and management of all required resources, including Azure Kubernetes Service, Blob Storage, and Redis Cache, for the setup and maintenance of BentoCloud cluster on Azure. The scope of the grant is strictly limited to the resource group ``bentocloud-<region>`` and does not grant permissions to any other resources.
+ 
+-   .. note::
+-
+-      The service principal ID ``d0e2f715-76af-469a-96b9-7d9d9a62b741`` used in the script is the BentoCloud Azure account's service principal.
+-
+-5. Share the ``account_info.json`` file created by the script with the BentoML team. The file contains non-sensitive information about your Azure account and region needed for the BentoCloud installation.
++5. Share the ``bcAdminSP.json`` file created by the script with the BentoML team through a secure channel.
+
+----------------------------------------
+
+File: docs/source/get-started/introduction.rst
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -2,7 +2,7 @@
+ Introduction
+ ============
+ 
+-`BentoML <https://github.com/bentoml/BentoML>`_ is a unified model serving framework for building performant and scalable AI applications with Python. It provides everything you need for serving optimization, model packaging, and production deployment.
++`BentoML <https://github.com/bentoml/BentoML>`_ is a Python library for building online serving systems optimized for AI applications and model inference. It supports serving any model format/runtime and custom Python code, offering the key primitives for serving optimizations, task queues, batching, multi-model chains, distributed orchestration, and multi-GPU serving.
+ 
+ Who is BentoML for?
+ -------------------
+
+----------------------------------------
+
+File: docs/source/guides/configurations.rst
+Status: modified
+Changes: +21 -56
+Diff:
+@@ -105,62 +105,6 @@ Here is an example of configuring these settings in your Service definition:
+     class MyService:
+         # Service implementation
+ 
+-``metrics``
+-^^^^^^^^^^^
+-
+-``metrics`` defines the collection and customization of performance metrics. BentoML uses `Prometheus <https://prometheus.io/>`_ to collect these metrics, providing insights into the Service's performance. By default, this feature is enabled.
+-
+-To disable metrics collection:
+-
+-.. code-block:: python
+-
+-    @bentoml.service(metrics={"enabled": False})
+-    class MyService:
+-        # Service implementation
+-
+-Following the `labeling convention <https://prometheus.io/docs/practices/naming/#metric-and-label-naming>`_ of Prometheus, metrics generated by BentoML Services will have namespace ``bentoml_service``. To set a custom namespace:
+-
+-.. code-block:: python
+-
+-    @bentoml.service(metrics={"namespace": "custom_namespace"})
+-    class MyService:
+-        # Service implementation
+-
+-.. note::
+-
+-   For most use cases, you don't need to change the default namespace name.
+-
+-Every BentoML Service will generate three types of metrics:
+
+----------------------------------------
+
+File: docs/source/guides/observability/index.rst
+Status: modified
+Changes: +7 -0
+Diff:
+@@ -21,6 +21,12 @@ This section explains observability in BentoML.
+ 
+         Learn how to configure logging in BentoML.
+ 
++    .. grid-item-card:: :doc:`/guides/observability/metrics`
++        :link: /guides/observability/tracing
++        :link-type: doc
++
++        Learn how to configure metrics in BentoML.
++
+
+----------------------------------------
+
+File: docs/source/guides/observability/metrics.rst
+Status: added
+Changes: +433 -0
+Diff:
+@@ -0,0 +1,433 @@
++=======
++Metrics
++=======
++
++Metrics are important measurements that provide insights into the usage and performance of :doc:`/guides/services`. BentoML provides a set of default metrics for performance analysis while you can also define custom metrics with `Prometheus <https://prometheus.io/>`_.
++
++In this document, you will:
++
++- Learn and configure the default metrics in BentoML
++- Create custom metrics for BentoML Services
++- Use `Prometheus <https://prometheus.io/>`_ to scrape metrics
++- Create a `Grafana <https://grafana.com/>`_ dashboard to visualize metrics
++
++Understand metrics
++------------------
++
++You can access metrics via the ``metrics`` endpoint of a BentoML Service. This endpoint is enabled by default and outputs metrics that Prometheus can scrape to monitor your Services continuously.
++
++Default metrics
++^^^^^^^^^^^^^^^
++
++BentoML automatically collects a set of default metrics for each Service. These metrics are tracked across different dimensions to provide detailed visibility into Service operations:
++
++.. list-table::
++   :widths: 30 10 60
++   :header-rows: 1
++
++   * - Name
++     - Type
++     - Dimension
++   * - ``bentoml_service_request_in_progress``
++     - Gauge
++     - ``endpoint``, ``runner_name``, ``service_name``, ``service_version``
++   * - ``bentoml_service_request_total``
++     - Counter
++     - ``endpoint``, ``service_name``, ``runner_name``, ``service_version``, ``http_response_code``
++   * - ``bentoml_service_request_duration_seconds_sum``, ``bentoml_service_request_duration_seconds_count``, ``bentoml_service_request_duration_seconds_bucket``
++     - Histogram
++     - ``endpoint``, ``service_name``, ``runner_name``, ``service_version``, ``http_response_code``
++   * - ``bentoml_service_adaptive_batch_size_sum``, ``bentoml_service_adaptive_batch_size_count``, ``bentoml_service_adaptive_batch_size_bucket``
++     - Histogram
++     - ``method_name``, ``service_name``, ``runner_name``, ``service_version``, ``worker_index``
++
++- ``request_in_progress``: The number of requests that are currently being processed by a Service.
++- ``request_total``: The total number of requests that a Service has processed.
++- ``request_duration_seconds``: The time taken to process requests, including the total sum of request processing time, count of requests processed, and distribution across specified duration buckets.
++- ``adaptive_batch_size``: The adaptive batch sizes used during Service execution, which is relevant for optimizing performance in batch processing scenarios. You need to enable :doc:`adaptive batching </guides/adaptive-batching>` to collect this metric.
++
++Metric types
++^^^^^^^^^^^^
++
++BentoML supports all metric types provided by Prometheus.
++
++- ``Gauge``: A metric that represents a single numerical value that can arbitrarily go up and down.
++- ``Counter``: A cumulative metric that only increases, useful for counting total requests.
++- ``Histogram``: Tracks the number of observations and the sum of the observed values in configurable buckets, allowing you to calculate averages, percentiles, and so on.
++- ``Summary``: Similar to Histogram but provides a total count of observations and a sum of observed values.
++
++For more information, see `the Prometheus documentation <https://prometheus.io/docs/concepts/metric_types/>`_.
++
++Dimensions
++^^^^^^^^^^
++
++Dimensions tracked for the default BentoML metrics include:
++
++- ``endpoint``: The specific API endpoint being accessed.
++- ``runner_name``: The name of the running Service handling the request.
++- ``service_name``: The name of the Bento Service handling the request.
++- ``service_version``: The version of the Service.
++- ``http_response_code``: The HTTP response code of the request.
++- ``worker_index``: The worker instance that is running the inference.
++
++Configure default metrics
++-------------------------
++
++To customize how metrics are collected and reported in BentoML, use the ``metrics`` parameter within the ``@bentoml.service`` decorator:
++
++.. code-block:: python
++
++    @bentoml.service(metrics={
++        "enabled": True,
++        "namespace": "custom_namespace",
++    })
++    class MyService:
++        # Service implementation
++
++- ``enabled``: This option is enabled by default. When enabled, you can access the metrics through the ``metrics`` endpoint of a BentoML Service.
++- ``namespace``: Follows the `labeling convention <https://prometheus.io/docs/practices/naming/#metric-and-label-naming>`_ of Prometheus. The default namespace is ``bentoml_service``, which covers most use cases.
++
++Customize the duration bucket size
++^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
++
++You can customize the `duration bucket size <https://prometheus.io/docs/practices/histograms/#count-and-sum-of-observations>`_ of ``request_duration_seconds`` in the following two ways:
++
++- **Manual bucket definition**. Specify explicit steps using ``buckets``:
++
++  .. code-block:: python
++
++        @bentoml.service(metrics={
++            "enabled": True,
++            "namespace": "bentoml_service",
++            "duration": {
++                "buckets": [0.1, 0.2, 0.5, 1, 2, 5, 10]
++            }
++        })
++        class MyService:
++            # Service implementation
++
++- **Exponential bucket generation**. Automatically generate exponential buckets with any given ``min``, ``max`` and ``factor`` values.
++
++  - ``min``: The lower bound of the smallest bucket in the histogram.
++  - ``max``: The upper bound of the largest bucket in the histogram.
++  - ``factor``: Determines the exponential growth rate of the bucket sizes. Each subsequent bucket boundary is calculated by multiplying the previous boundary by the factor.
++
++  .. code-block:: python
++
++        @bentoml.service(metrics={
++            "enabled": True,
++            "namespace": "bentoml_service",
++            "duration": {
++                "min": 0.1,
++                "max": 10,
++                "factor": 1.2
++            }
++        })
++        class MyService:
++            # Service implementation
++
++.. note::
++
++    - ``duration.min``, ``duration.max`` and ``duration.factor`` are mutually exclusive with ``duration.buckets``.
++    - ``duration.factor`` must be greater than 1 to ensure each subsequent bucket is larger than the previous one.
++    - The buckets for the ``adaptive_batch_size`` Histogram are calculated based on the ``max_batch_size`` defined. The bucket sizes start at 1 and increase exponentially up to the ``max_batch_size`` with a factor of 2.
++
++By default, BentoML uses the `duration buckets <https://github.com/prometheus/client_python/blob/f17a8361ad3ed5bc47f193ac03b00911120a8d81/prometheus_client/metrics.py#L544>`_ provided by Prometheus.
++
++Create custom metrics
++---------------------
++
++You can define and use custom metrics of ``Counter``, ``Histogram``, ``Summary``, and ``Gauge`` within your BentoML Service using the ``prometheus_client`` API.
++
++Prerequisites
++^^^^^^^^^^^^^
+
+----------------------------------------
+
+File: docs/source/guides/testing.rst
+Status: modified
+Changes: +16 -21
+Diff:
+@@ -172,35 +172,34 @@ HTTP behavior tests
+ 
+ To test the HTTP behavior of a BentoML Service, you can simulate HTTP requests and assert the responses match expected outcomes.
+ 
+-You can use the ``httpx`` library to create a test client. This allows you to send HTTP requests directly to your BentoML Service, which can be converted to an :doc:`ASGI application </guides/asgi>` via the ``to_asgi()`` method. The ``init`` parameter of ``to_asgi()``, when set to ``true``, initializes the middleware, routing, and other necessary configurations, preparing the application for handling requests.
++You can use the ``starlette.testclient`` module to create a test client. This allows you to send HTTP requests directly to your BentoML Service, which can be converted to an :doc:`ASGI application </guides/asgi>` via the ``to_asgi()`` method. The test client exposes the same interface as any other ``httpx`` session.
+ 
+ An example:
+ 
+ .. code-block:: python
+     :caption: `test_http.py`
+ 
+-    import httpx
++    from starlette.testclient import TestClient
+     from service import Summarization, EXAMPLE_INPUT # Imported from the Summarization service.py file
+     import pytest
+ 
+-    @pytest.mark.asyncio
+-    async def test_request():
+-        # Initialize the ASGI transport with the Summarization Service
+-        transport=httpx.ASGITransport(app=Summarization.to_asgi(init=True))
++    def test_request():
++        # Initialize the ASGI app with the Summarization Service
+
+----------------------------------------
+
+File: docs/source/index.rst
+Status: modified
+Changes: +2 -2
+Diff:
+@@ -6,7 +6,7 @@ Unified Model Serving Framework
+ 
+ ----
+ 
+-`BentoML <https://github.com/bentoml/BentoML>`_ is an open-source model serving library for **building performant and scalable AI applications with Python**. It comes with everything you need for **serving optimization, model packaging, and production deployment**.
++`BentoML <https://github.com/bentoml/BentoML>`_ is a Python library for building online serving systems optimized for AI applications and model inference.
+ 
+ Featured use cases
+ ------------------
+@@ -122,7 +122,7 @@ For release notes and detailed changelogs, see the `Releases <https://github.com
+
+----------------------------------------
+
+File: docs/source/reference/index.rst
+Status: modified
+Changes: +0 -1
+Diff:
+@@ -11,7 +11,6 @@ This section contains detailed API specifications. Use them to dig deeper into B
+   sdk
+   cli
+   client
+-  metrics
+   frameworks/index
+   batch
+   exceptions
+
+----------------------------------------
+
+File: docs/source/reference/metrics.rst
+Status: removed
+Changes: +0 -75
+Diff:
+@@ -1,75 +0,0 @@
+-===========
+-Metrics API
+-===========
+-
+-BentoML provides metrics API that uses `Prometheus <https://prometheus.io/>`_ under the hood.
+-
+-BentoML's ``bentoml.metrics`` is a drop-in replacement for ``prometheus_client`` that should be used in BentoML services:
+-
+-.. code-block:: diff
+-
+-   diff --git a/service.py b/service.py
+-   index acd8467e..0f3e6e77 100644
+-   --- a/service.py
+-   +++ b/service.py
+-   @@ -1,11 +1,10 @@
+-   -from prometheus_client import Summary
+-   +from bentoml.metrics import Summary
+-    import random
+-    import time
+-
+-   REQUEST_TIME = Summary("request_processing_seconds", "Time spent processing request")
+-
+-   @REQUEST_TIME.time()
+-   def process_request(t):
+
+----------------------------------------
+
+File: docs/source/use-cases/index.rst
+Status: modified
+Changes: +0 -5
+Diff:
+@@ -45,11 +45,6 @@ This section provides a variety of example projects for you to learn how BentoML
+ 
+         Deploy custom models with BentoML.
+ 
+-    .. grid-item-card:: :doc:`/use-cases/custom-models/index`
+-        :link: /use-cases/custom-models/index
+-        :link-type: doc
+-
+-        Deploy custom models with BentoML.
+ 
+
+----------------------------------------
+
+File: examples/quickstart/bentofile.yaml
+Status: modified
+Changes: +8 -4
+Diff:
+@@ -1,8 +1,12 @@
+ service: "service:Summarization"
+ labels:
+-  owner: bentoml-team
+-  project: gallery
++  project: quickstart
++  stage: dev
+ include:
+-  - "*.py"
++  - "service.py"
+
+----------------------------------------
+
+File: examples/quickstart/service.py
+Status: modified
+Changes: +11 -22
+Diff:
+@@ -1,29 +1,18 @@
+-from __future__ import annotations
+-
+-from transformers import pipeline
++from __future__ import annotations  # I001
+ 
+ import bentoml
+ 
+-EXAMPLE_INPUT = "Breaking News: In an astonishing turn of events, the small \
+-town of Willow Creek has been taken by storm as local resident Jerry Thompson's cat, \
+-Whiskers, performed what witnesses are calling a 'miraculous and gravity-defying leap.' \
+-Eyewitnesses report that Whiskers, an otherwise unremarkable tabby cat, jumped \
+-a record-breaking 20 feet into the air to catch a fly. The event, which took \
+
+----------------------------------------
+
+File: noxfile.py
+Status: modified
+Changes: +0 -6
+Diff:
+@@ -44,8 +44,6 @@
+ 
+ @nox.session(python=PYTHON_VERSIONS, name="unit")
+ def run_unittest(session: nox.Session):
+-    if session.python == "3.12":
+-        session.env["PDM_LOCKFILE"] = "pdm.py312.lock"
+     session.run("pdm", "sync", "-G", "grpc,io,testing", external=True)
+     session.run(*TEST_ARGS, "-n", "auto", "tests/unit")
+ 
+@@ -76,8 +74,6 @@ def run_framework_integration_test(session: nox.Session, framework: str):
+
+----------------------------------------
+
+File: pdm.lock
+Status: modified
+Changes: +1299 -121
+
+----------------------------------------
+
+File: pdm.py312.lock
+Status: removed
+Changes: +0 -4061
+
+----------------------------------------
+
+File: pyproject.toml
+Status: modified
+Changes: +4 -3
+Diff:
+@@ -1,9 +1,9 @@
+ [project]
+ name = "bentoml"
+-description = "BentoML: Build Production-Grade AI Applications"
++description = "BentoML: The easiest way to serve AI apps and models"
+ readme = { file = "README.md", content-type = "text/markdown" }
+ requires-python = ">=3.8"
+-keywords = ["MLOps", "AI", "BentoML", "Model Serving", "Model Deployment"]
++keywords = ["BentoML", "Compound AI Systems", "MLOps", "LLMOps", "Model Serving", "Model Inference", "Model Deployment"]
+ license = { text = "Apache-2.0" }
+
+----------------------------------------
+
+File: src/_bentoml_sdk/service/config.py
+Status: modified
+Changes: +29 -3
+Diff:
+@@ -28,11 +28,37 @@ class TrafficSchema(TypedDict, total=False):
+ 
+ 
+ class ResourceSchema(TypedDict, total=False):
+-    cpu: str
+-    memory: str
++    """
++    cpu: str | Posint | Posfloat
++        CPU resource requirement.
++        If int or float: Value is interpreted as number of cores.
++        If str: You can include unit (e.g., '100m', '0.5').
++        Default unit (for int/float): cores
++    Examples:
+
+----------------------------------------
+
+File: src/bentoml/__init__.py
+Status: modified
+Changes: +9 -9
+Diff:
+@@ -2,16 +2,16 @@
+ BentoML
+ =======
+ 
+-BentoML is the unified ML Model Serving framework. Data Scientists and ML Engineers use
+-BentoML to:
++BentoML is a Python library for building online serving systems optimized for AI apps
++and model inference. It supports serving any model format/runtime and custom Python
++code, offering the key primitives for serving optimizations, task queues, batching,
++multi-model chains, distributed orchestration, and multi-GPU serving.
+
+----------------------------------------
+
+File: src/bentoml/_internal/bento/build_config.py
+Status: modified
+Changes: +2 -1
+Diff:
+@@ -635,7 +635,8 @@ def write_to_bento(self, bento_fs: FS, build_ctx: str) -> None:
+                     "--allow-unsafe",
+                     "--no-header",
+                     f"--output-file={pip_compile_out}",
+-                    "--resolver=backtracking",
++                    "--emit-index-url",
++                    "--emit-find-links",
+                     "--no-annotate",
+                 ]
+             )
+
+----------------------------------------
+
+File: src/bentoml/_internal/cloud/base.py
+Status: modified
+Changes: +0 -4
+Diff:
+@@ -166,7 +166,6 @@ def push_model(
+         *,
+         force: bool = False,
+         threads: int = 10,
+-        context: str | None = None,
+     ):
+         pass
+ 
+@@ -177,7 +176,6 @@ def push_bento(
+         *,
+
+----------------------------------------
+
+File: src/bentoml/_internal/cloud/bentocloud.py
+Status: modified
+Changes: +71 -97
+Diff:
+@@ -27,7 +27,6 @@
+ from .base import FILE_CHUNK_SIZE
+ from .base import CallbackIOWrapper
+ from .base import CloudClient
+-from .config import get_rest_api_client
+ from .schemas.modelschemas import BentoApiSchema
+ from .schemas.modelschemas import BentoRunnerResourceSchema
+ from .schemas.modelschemas import BentoRunnerSchema
+@@ -54,26 +53,25 @@
+ 
+     from rich.progress import TaskID
+ 
++    from .client import RestApiClient
+     from .schemas.schemasv1 import BentoWithRepositoryListSchema
+     from .schemas.schemasv1 import ModelWithRepositoryListSchema
+ 
+ 
+ class BentoCloudClient(CloudClient):
++    @inject
+     def push_bento(
+         self,
+         bento: Bento,
+         *,
+         force: bool = False,
+         threads: int = 10,
+-        context: str | None = None,
+     ):
+         with self.spinner:
+             upload_task_id = self.spinner.transmission_progress.add_task(
+                 f'Pushing Bento "{bento.tag}"', start=False, visible=False
+             )
+-            self._do_push_bento(
+-                bento, upload_task_id, force=force, threads=threads, context=context
+-            )
++            self._do_push_bento(bento, upload_task_id, force=force, threads=threads)
+             self.spinner.log(f'✅ Pushed Bento "{bento.tag}"')
+ 
+     @inject
+@@ -84,10 +82,9 @@ def _do_push_bento(
+         *,
+         force: bool = False,
+         threads: int = 10,
+-        context: str | None = None,
++        rest_client: RestApiClient = Provide[BentoMLContainer.rest_api_client],
+         model_store: ModelStore = Provide[BentoMLContainer.model_store],
+     ):
+-        yatai_rest_client = get_rest_api_client(context)
+         name = bento.tag.name
+         version = bento.tag.version
+         if version is None:
+@@ -109,26 +106,25 @@ def push_model(model: Model) -> None:
+                     model_upload_task_id,
+                     force=force,
+                     threads=threads,
+-                    context=context,
+                 )
+ 
+             futures: t.Iterator[None] = executor.map(push_model, models)
+             list(futures)
+         with self.spinner.spin(text=f'Fetching Bento repository "{name}"'):
+-            bento_repository = yatai_rest_client.v1.get_bento_repository(
++            bento_repository = rest_client.v1.get_bento_repository(
+                 bento_repository_name=name
+             )
+         if not bento_repository:
+             with self.spinner.spin(
+                 text=f'Bento repository "{name}" not found, creating now..'
+             ):
+-                bento_repository = yatai_rest_client.v1.create_bento_repository(
++                bento_repository = rest_client.v1.create_bento_repository(
+                     req=CreateBentoRepositorySchema(name=name, description="")
+                 )
+         with self.spinner.spin(
+             text=f'Try fetching Bento "{bento.tag}" from remote Bento store..'
+         ):
+-            remote_bento = yatai_rest_client.v1.get_bento(
++            remote_bento = rest_client.v1.get_bento(
+                 bento_repository_name=name, version=version
+             )
+         if (
+@@ -179,7 +175,7 @@ def push_model(model: Model) -> None:
+             with self.spinner.spin(
+                 text=f'Registering Bento "{bento.tag}" with remote Bento store..'
+             ):
+-                remote_bento = yatai_rest_client.v1.create_bento(
++                remote_bento = rest_client.v1.create_bento(
+                     bento_repository_name=bento_repository.name,
+                     req=CreateBentoSchema(
+                         description="",
+@@ -191,7 +187,7 @@ def push_model(model: Model) -> None:
+                 )
+         else:
+             with self.spinner.spin(text=f'Updating Bento "{bento.tag}"..'):
+-                remote_bento = yatai_rest_client.v1.update_bento(
++                remote_bento = rest_client.v1.update_bento(
+                     bento_repository_name=bento_repository.name,
+                     version=version,
+                     req=UpdateBentoSchema(
+@@ -209,7 +205,7 @@ def push_model(model: Model) -> None:
+             with self.spinner.spin(
+                 text=f'Getting a presigned upload url for bento "{bento.tag}" ..'
+             ):
+-                remote_bento = yatai_rest_client.v1.presign_bento_upload_url(
++                remote_bento = rest_client.v1.presign_bento_upload_url(
+                     bento_repository_name=bento_repository.name, version=version
+                 )
+                 if remote_bento.presigned_upload_url:
+@@ -239,7 +235,7 @@ def filter_(
+             tar_io.seek(0, 0)
+ 
+             with self.spinner.spin(text=f'Start uploading bento "{bento.tag}"..'):
+-                yatai_rest_client.v1.start_upload_bento(
++                rest_client.v1.start_upload_bento(
+                     bento_repository_name=bento_repository.name, version=version
+                 )
+ 
+@@ -254,7 +250,7 @@ def filter_(
+ 
+             if transmission_strategy == "proxy":
+                 try:
+-                    yatai_rest_client.v1.upload_bento(
++                    rest_client.v1.upload_bento(
+                         bento_repository_name=bento_repository.name,
+                         version=version,
+                         data=tar_io,
+@@ -282,11 +278,9 @@ def filter_(
+                     with self.spinner.spin(
+                         text=f'Start multipart uploading Bento "{bento.tag}"...'
+                     ):
+-                        remote_bento = (
+-                            yatai_rest_client.v1.start_bento_multipart_upload(
+-                                bento_repository_name=bento_repository.name,
+-                                version=version,
+-                            )
++                        remote_bento = rest_client.v1.start_bento_multipart_upload(
++                            bento_repository_name=bento_repository.name,
++                            version=version,
+                         )
+                         if not remote_bento.upload_id:
+                             raise BentoMLException(
+@@ -304,7 +298,7 @@ def chunk_upload(
+                             text=f'({chunk_number}/{chunks_count}) Presign multipart upload url of Bento "{bento.tag}"...'
+                         ):
+                             remote_bento = (
+-                                yatai_rest_client.v1.presign_bento_multipart_upload_url(
++                                rest_client.v1.presign_bento_multipart_upload_url(
+                                     bento_repository_name=bento_repository.name,
+                                     version=version,
+                                     req=PreSignMultipartUploadUrlSchema(
+@@ -374,15 +368,13 @@ def chunk_upload(
+                     with self.spinner.spin(
+                         text=f'Completing multipart upload of Bento "{bento.tag}"...'
+                     ):
+-                        remote_bento = (
+-                            yatai_rest_client.v1.complete_bento_multipart_upload(
+-                                bento_repository_name=bento_repository.name,
+-                                version=version,
+-                                req=CompleteMultipartUploadSchema(
+-                                    upload_id=upload_id,
+-                                    parts=parts,
+-                                ),
+-                            )
++                        remote_bento = rest_client.v1.complete_bento_multipart_upload(
++                            bento_repository_name=bento_repository.name,
++                            version=version,
++                            req=CompleteMultipartUploadSchema(
++                                upload_id=upload_id,
++                                parts=parts,
++                            ),
+                         )
+ 
+             except Exception as e:  # pylint: disable=broad-except
+@@ -395,7 +387,7 @@ def chunk_upload(
+             with self.spinner.spin(
+                 text="Submitting upload status to remote Bento store"
+             ):
+
+----------------------------------------
+
+File: src/bentoml/_internal/cloud/client.py
+Status: modified
+Changes: +9 -3
+Diff:
+@@ -76,9 +76,15 @@ def _is_not_found(self, resp: httpx.Response) -> bool:
+ 
+     def _check_resp(self, resp: httpx.Response) -> None:
+         if resp.status_code >= 500:
+-            raise CloudRESTApiClientError(
+-                f"Oops, something went wrong with BentoCloud. Please report to us with trace ID <{resp.headers['x-trace-id']}>: https://bentoml.com/support"
+-            )
++            if "x-trace-id" in resp.headers:
++                raise CloudRESTApiClientError(
++                    f"Oops, something went wrong with BentoCloud. Please report to us with trace ID <{resp.headers['x-trace-id']}>: https://bentoml.com/support"
+
+----------------------------------------
+
+File: src/bentoml/_internal/cloud/deployment.py
+Status: modified
+Changes: +43 -58
+Diff:
+@@ -18,8 +18,10 @@
+ if t.TYPE_CHECKING:
+     from _bentoml_impl.client import AsyncHTTPClient
+     from _bentoml_impl.client import SyncHTTPClient
+-    from bentoml._internal.bento.bento import BentoStore
+-    from bentoml._internal.cloud.bentocloud import BentoCloudClient
++
++    from ..bento.bento import BentoStore
++    from .bentocloud import BentoCloudClient
++    from .client import RestApiClient
+ 
+ from ...exceptions import BentoMLException
+ from ...exceptions import NotFound
+@@ -29,7 +31,6 @@
+ from ..utils import bentoml_cattr
+ from ..utils import resolve_user_filepath
+ from .base import Spinner
+-from .config import get_rest_api_client
+ from .schemas.modelschemas import DeploymentStatus
+ from .schemas.modelschemas import DeploymentTargetHPAConf
+ from .schemas.schemasv2 import CreateDeploymentSchema as CreateDeploymentSchemaV2
+@@ -54,7 +55,6 @@
+ class DeploymentConfigParameters:
+     name: str | None = None
+     path_context: str | None = None
+-    context: str | None = None
+     bento: Tag | str | None = None
+     cluster: str | None = None
+     access_authorization: bool | None = None
+@@ -163,19 +163,11 @@ def verify(
+                 # target is a path
+                 if self.cli:
+                     rich.print(f"building bento from [green]{bento_name}[/] ...")
+-                bento_info = get_bento_info(
+-                    project_path=bento_name,
+-                    context=self.context,
+-                    cli=self.cli,
+-                )
++                bento_info = get_bento_info(project_path=bento_name, cli=self.cli)
+             else:
+                 if self.cli:
+                     rich.print(f"using bento [green]{bento_name}[/]...")
+-                bento_info = get_bento_info(
+-                    bento=str(bento_name),
+-                    context=self.context,
+-                    cli=self.cli,
+-                )
++                bento_info = get_bento_info(bento=str(bento_name), cli=self.cli)
+             self.cfg_dict["bento"] = bento_info.tag
+             if self.service_name is None:
+                 self.service_name = bento_info.entry_service
+@@ -208,10 +200,7 @@ def get_config_dict(self, bento: str | None = None):
+                     raise BentoMLException("Bento is required")
+                 bento = self.cfg_dict.get("bento")
+ 
+-            info = get_bento_info(
+-                bento=bento,
+-                context=self.context,
+-            )
++            info = get_bento_info(bento=bento)
+             if info.entry_service == "":
+                 # for compatibility
+                 self.service_name = "apiserver"
+@@ -293,7 +282,6 @@ def get_bento_info(
+     project_path: str | None = None,
+     bento: str | Tag | None = None,
+     cli: bool = False,
+-    context: str | None = None,
+     _bento_store: BentoStore = Provide[BentoMLContainer.bento_store],
+     _cloud_client: BentoCloudClient = Provide[BentoMLContainer.bentocloud_client],
+ ) -> BentoInfo:
+@@ -314,7 +302,7 @@ def get_bento_info(
+                 build_ctx=project_path, _bento_store=_bento_store
+             )
+ 
+-        _cloud_client.push_bento(bento=bento_obj, context=context)
++        _cloud_client.push_bento(bento=bento_obj)
+         return bento_obj.info
+     elif bento:
+         bento = Tag.from_taglike(bento)
+@@ -326,14 +314,14 @@ def get_bento_info(
+         # try to get from bentocloud
+         try:
+             bento_schema = _cloud_client.get_bento(
+-                context=context, name=bento.name, version=bento.version
++                name=bento.name, version=bento.version
+             )
+         except NotFound:
+             bento_schema = None
+ 
+         if bento_obj is not None:
+             # push to bentocloud
+-            _cloud_client.push_bento(bento=bento_obj, context=context)
++            _cloud_client.push_bento(bento=bento_obj)
+             return bento_obj.info
+         if bento_schema is not None:
+             assert bento_schema.manifest is not None
+@@ -389,7 +377,6 @@ class DeploymentInfo:
+     created_at: str
+     created_by: str
+     cluster: str
+-    _context: t.Optional[str] = attr.field(alias="_context", repr=False)
+     _schema: DeploymentSchema = attr.field(alias="_schema", repr=False)
+     _urls: t.Optional[list[str]] = attr.field(alias="_urls", default=None, repr=False)
+ 
+@@ -414,7 +401,7 @@ def to_yaml(self):
+         return yaml.dump(self.to_dict(), sort_keys=False)
+
+----------------------------------------
+
+File: src/bentoml/_internal/cloud/secret.py
+Status: modified
+Changes: +14 -9
+Diff:
+@@ -4,15 +4,20 @@
+ 
+ import attr
+ import yaml
++from simple_di import Provide
++from simple_di import inject
+ 
++from ..configuration.containers import BentoMLContainer
+ from ..utils import bentoml_cattr
+-from .config import get_rest_api_client
+ from .schemas.schemasv1 import CreateSecretSchema
+ from .schemas.schemasv1 import SecretContentSchema
+ from .schemas.schemasv1 import SecretItem
+ from .schemas.schemasv1 import SecretSchema
+ from .schemas.schemasv1 import UpdateSecretSchema
+ 
++if t.TYPE_CHECKING:
++    from .client import RestApiClient
++
+ 
+ @attr.define
+ class SecretInfo(SecretSchema):
+@@ -45,24 +50,25 @@ def from_secret_schema(cls, secret_schema: SecretSchema) -> SecretInfo:
+ @attr.define
+ class Secret:
+     @classmethod
++    @inject
+     def list(
+         cls,
+-        context: str | None = None,
+         search: str | None = None,
+
+----------------------------------------
+
+File: src/bentoml/_internal/configuration/containers.py
+Status: modified
+Changes: +21 -7
+Diff:
+@@ -34,6 +34,7 @@
+ 
+     from .. import external_typing as ext
+     from ..bento import BentoStore
++    from ..cloud.client import RestApiClient
+     from ..models import ModelStore
+     from ..server.metrics.prometheus import PrometheusClient
+     from ..utils.analytics import ServeInfo
+@@ -475,16 +476,20 @@ def duration_buckets(
+         from ..utils.metrics import INF
+         from ..utils.metrics import exponential_buckets
+ 
+-        if "buckets" in duration:
++        if None not in (
++            duration.get("min"),
++            duration.get("max"),
++            duration.get("factor"),
+
+----------------------------------------
+
+File: src/bentoml/_internal/configuration/v2/__init__.py
+Status: modified
+Changes: +2 -2
+Diff:
+@@ -72,8 +72,8 @@
+     # in configuration for a specific runner, it will override the global configuration.
+     s.Optional("resources"): s.Or(
+         {
+-            s.Optional("cpu"): str,
+-            s.Optional("memory"): str,
++            s.Optional("cpu"): s.Or(str, int, float),
++            s.Optional("memory"): s.Or(str, int, float),
+             s.Optional("gpu"): s.And(Real, ensure_larger_than_zero),
+             s.Optional("gpu_type"): str,
+
+----------------------------------------
+
+File: src/bentoml/_internal/frameworks/transformers.py
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -1074,7 +1074,7 @@ def save_model(
+             assert "impl" in task_definition, "'task_definition' requires 'impl' key."
+ 
+             impl = task_definition["impl"]
+-            if type(pipeline_) != impl:
++            if isinstance(pipeline_, impl):
+                 raise BentoMLException(
+                     f"Argument 'pipeline' is not an instance of {impl}. It is an instance of {type(pipeline_)}."
+                 )
+
+----------------------------------------
+
+File: src/bentoml/_internal/utils/analytics/usage_stats.py
+Status: modified
+Changes: +3 -3
+Diff:
+@@ -49,20 +49,20 @@
+ 
+ @lru_cache(maxsize=None)
+ def _bentoml_serve_from_server_api() -> bool:
+-    return os.environ.get(BENTOML_SERVE_FROM_SERVER_API, str(False)).lower() == "true"
++    return os.environ.get(BENTOML_SERVE_FROM_SERVER_API, "False").lower() == "true"
+ 
+ 
+ @lru_cache(maxsize=1)
+ def do_not_track() -> bool:  # pragma: no cover
+
+----------------------------------------
+
+File: src/bentoml/deployment.py
+Status: modified
+Changes: +6 -52
+Diff:
+@@ -8,7 +8,6 @@
+ 
+ import attr
+ from simple_di import Provide
+-from simple_di import inject
+ 
+ from bentoml._internal.cloud.deployment import Deployment
+ from bentoml._internal.cloud.deployment import DeploymentConfigParameters
+@@ -27,8 +26,6 @@
+ def create(
+     name: str | None = ...,
+     path_context: str | None = ...,
+-    context: str | None = ...,
+-    _bento_store: BentoStore = Provide[BentoMLContainer.bento_store],
+     *,
+     bento: Tag | str | None = ...,
+     cluster: str | None = ...,
+@@ -46,8 +43,6 @@ def create(
+ def create(
+     name: str | None = ...,
+     path_context: str | None = ...,
+-    context: str | None = ...,
+-    _bento_store: BentoStore = Provide[BentoMLContainer.bento_store],
+     *,
+     bento: Tag | str | None = ...,
+     config_file: str | None = ...,
+@@ -58,20 +53,15 @@ def create(
+ def create(
+     name: str | None = ...,
+     path_context: str | None = ...,
+-    context: str | None = ...,
+-    _bento_store: BentoStore = Provide[BentoMLContainer.bento_store],
+     *,
+     bento: Tag | str | None = ...,
+     config_dict: dict[str, t.Any] | None = ...,
+ ) -> DeploymentInfo: ...
+ 
+ 
+-@inject
+ def create(
+     name: str | None = None,
+     path_context: str | None = None,
+-    context: str | None = None,
+-    _bento_store: BentoStore = Provide[BentoMLContainer.bento_store],
+     *,
+     bento: Tag | str | None = None,
+     cluster: str | None = None,
+@@ -88,7 +78,6 @@ def create(
+     config_params = DeploymentConfigParameters(
+         name=name,
+         path_context=path_context,
+-        context=context,
+         bento=bento,
+         cluster=cluster,
+         access_authorization=access_authorization,
+@@ -114,10 +103,7 @@ def create(
+         raise BentoMLException(
+             f"Failed to create deployment due to invalid configuration: {e}"
+         )
+-    return Deployment.create(
+-        deployment_config_params=config_params,
+-        context=context,
+-    )
++    return Deployment.create(deployment_config_params=config_params)
+ 
+
+----------------------------------------
+
+File: src/bentoml_cli/bentos.py
+Status: modified
+Changes: +3 -20
+Diff:
+@@ -25,7 +25,6 @@
+     from bentoml._internal.cloud import BentoCloudClient
+     from bentoml._internal.container import DefaultBuilder
+ 
+-    from .utils import SharedOptions
+ 
+ BENTOML_FIGLET = """
+ ██████╗ ███████╗███╗   ██╗████████╗ ██████╗ ███╗   ███╗██╗
+@@ -282,18 +281,14 @@ def import_bento_(bento_path: str) -> None:  # type: ignore (not accessed)
+         default=False,
+         help="Force pull from remote Bento store to local and overwrite even if it already exists in local",
+     )
+-    @click.pass_obj
+     @inject
+     def pull(
+-        shared_options: SharedOptions,
+         bento_tag: str,
+         force: bool,
+         cloud_client: BentoCloudClient = Provide[BentoMLContainer.bentocloud_client],
+     ) -> None:  # type: ignore (not accessed)
+         """Pull Bento from a remote Bento store server."""
+-        cloud_client.pull_bento(
+
+----------------------------------------
+
+File: src/bentoml_cli/cloud.py
+Status: modified
+Changes: +5 -10
+Diff:
+@@ -2,7 +2,6 @@
+ 
+ import contextlib
+ import sys
+-import typing as t
+ import urllib.parse
+ import webbrowser
+ 
+@@ -15,16 +14,14 @@
+ from bentoml._internal.cloud.client import RestApiClient
+ from bentoml._internal.cloud.config import CloudClientConfig
+ from bentoml._internal.cloud.config import CloudClientContext
++from bentoml._internal.configuration.containers import BentoMLContainer
+ from bentoml._internal.utils import bentoml_cattr
+ from bentoml._internal.utils import reserve_free_port
+ from bentoml.exceptions import CLIException
+ from bentoml.exceptions import CloudRESTApiClientError
+ from bentoml_cli.auth_server import AuthCallbackHttpServer
+ from bentoml_cli.utils import BentoMLCommandGroup
+
+----------------------------------------
+
+File: src/bentoml_cli/deployment.py
+Status: modified
+Changes: +10 -51
+Diff:
+@@ -20,8 +20,6 @@
+ 
+ if t.TYPE_CHECKING:
+     TupleStrAny = tuple[str, ...]
+-
+-    from .utils import SharedOptions
+ else:
+     TupleStrAny = tuple
+ 
+@@ -120,9 +118,7 @@ def raise_deployment_config_error(err: BentoMLException, action: str) -> t.NoRet
+     default=3600,
+     help="Timeout for deployment to be ready in seconds",
+ )
+-@click.pass_obj
+ def deploy_command(
+-    shared_options: SharedOptions,
+     bento: str | None,
+     name: str | None,
+     cluster: str | None,
+@@ -144,7 +140,6 @@ def deploy_command(
+     Create a deployment using parameters, or using config yaml file.
+     """
+     create_deployment(
+-        context=shared_options.cloud_context,
+         bento=bento,
+         name=name,
+         cluster=cluster,
+@@ -256,9 +251,7 @@ def deployment_command():
+     help="Configuration json string",
+     default=None,
+ )
+-@click.pass_obj
+ def update(  # type: ignore
+-    shared_options: SharedOptions,
+     name: str | None,
+     cluster: str | None,
+     bento: str | None,
+@@ -282,7 +275,6 @@ def update(  # type: ignore
+         cfg_dict = json.loads(config_dict)
+     config_params = DeploymentConfigParameters(
+         name=name,
+-        context=shared_options.cloud_context,
+         bento=bento,
+         cluster=cluster,
+         access_authorization=access_authorization,
+@@ -303,10 +295,7 @@ def update(  # type: ignore
+         config_params.verify()
+     except BentoMLException as e:
+         raise_deployment_config_error(e, "update")
+-    deployment_info = Deployment.update(
+-        deployment_config_params=config_params,
+-        context=shared_options.cloud_context,
+-    )
++    deployment_info = Deployment.update(deployment_config_params=config_params)
+ 
+     rich.print(f"Deployment [green]'{deployment_info.name}'[/] updated successfully.")
+ 
+@@ -380,9 +369,7 @@ def update(  # type: ignore
+     help="Configuration json string",
+     default=None,
+ )
+-@click.pass_obj
+ def apply(  # type: ignore
+-    shared_options: SharedOptions,
+     bento: str | None,
+     name: str | None,
+     cluster: str | None,
+@@ -405,7 +392,6 @@ def apply(  # type: ignore
+         cfg_dict = json.loads(config_dict)
+     config_params = DeploymentConfigParameters(
+         name=name,
+-        context=shared_options.cloud_context,
+         bento=bento,
+
+----------------------------------------
+
+File: src/bentoml_cli/env.py
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -161,7 +161,7 @@ def env_command(ctx: click.Context, output: t.Literal["md", "bash"]) -> None:  #
+             conda_version = run_cmd([conda_like, "--version"])[0].split(" ")[-1]
+ 
+         info_dict[conda_like] = conda_version
+-        info_dict["in_conda_env"] = str(True)
++        info_dict["in_conda_env"] = "True"
+         info_dict["conda_packages"] = conda_packages
+ 
+     # process info from `pip freeze`
+
+----------------------------------------
+
+File: src/bentoml_cli/models.py
+Status: modified
+Changes: +1 -7
+Diff:
+@@ -33,8 +33,6 @@
+     from bentoml._internal.cloud import BentoCloudClient
+     from bentoml._internal.models import ModelStore
+ 
+-    from .utils import SharedOptions
+-
+ 
+ def parse_delete_targets_argument_callback(
+     ctx: Context,
+@@ -302,7 +300,7 @@ def pull(
+     if model_tag is not None:
+         if ctx.get_parameter_source("bentofile") != ParameterSource.DEFAULT:
+             rich.print("-f bentofile is ignored when model_tag is provided")
+-        cloud_client.pull_model(model_tag, force=force, context=ctx.obj.cloud_context)
+
+----------------------------------------
+
+File: src/bentoml_cli/secret.py
+Status: modified
+Changes: +3 -14
+Diff:
+@@ -21,8 +21,6 @@
+     from click import Context
+     from click import Parameter
+ 
+-    from .utils import SharedOptions
+-
+ 
+ @click.group(name="secret", cls=BentoMLCommandGroup)
+ def secret_command():
+@@ -33,7 +31,6 @@ def secret_command():
+ @click.option(
+     "--search", type=click.STRING, default=None, help="Search for list request."
+ )
+-@click.pass_obj
+ @click.option(
+     "-o",
+     "--output",
+@@ -42,12 +39,11 @@ def secret_command():
+     default="table",
+ )
+ def list(
+-    shared_options: SharedOptions,
+     search: str | None,
+     output: t.Literal["json", "yaml", "table"],
+ ):
+     """List all secrets on BentoCloud."""
+-    secrets = Secret.list(context=shared_options.cloud_context, search=search)
++    secrets = Secret.list(search=search)
+     if output == "table":
+         table = Table(box=None, expand=True)
+         table.add_column("Secret", overflow="fold")
+@@ -154,7 +150,6 @@ def map_choice_to_type(ctx: Context, params: Parameter, value: t.Any):
+
+----------------------------------------
+
+File: src/bentoml_cli/start.py
+Status: modified
+Changes: +10 -0
+Diff:
+@@ -117,6 +117,12 @@ def cli():
+         default=None,
+         help="Maximum number of seconds to wait for graceful shutdown. After this timeout, the server will start terminating requests.",
+     )
++    @click.option(
++        "--reload",
++        is_flag=True,
++        help="Reload Service when code changes detected",
++        default=False,
++    )
+     @add_experimental_docstring
+     def start_http_server(  # type: ignore (unused warning)
+
+----------------------------------------
+
+File: src/bentoml_cli/utils.py
+Status: modified
+Changes: +8 -21
+Diff:
+@@ -8,7 +8,6 @@
+ import time
+ import typing as t
+ 
+-import attr
+ import click
+ import click_option_group as cog
+ from click import ClickException
+@@ -188,17 +187,6 @@ def opt_callback(ctx: Context, param: Parameter, value: ClickParamType):
+     return value
+ 
+ 
+-@attr.define
+-class SharedOptions:
+-    """This is the click.Context object that will be used in BentoML CLI."""
+-
+-    cloud_context: str | None = attr.field(default=None)
+-    do_not_track: bool = attr.field(default=False)
+-
+-    def with_options(self, **attrs: t.Any) -> t.Any:
+-        return attr.evolve(self, **attrs)
+-
+-
+
+----------------------------------------
+
+File: tests/e2e/bento_new_sdk/test_quickstart.py
+Status: modified
+Changes: +4 -4
+Diff:
+@@ -40,19 +40,19 @@ async def test_async_serve_and_prediction(examples: Path) -> None:
+ 
+     try:
+         with bentoml.SyncHTTPClient(f"http://127.0.0.1:{port}") as client:
+-            result = client.summarize(EXAMPLE_INPUT)
++            result = client.summarize([EXAMPLE_INPUT])[0]
+         assert "Whiskers" in result
+ 
+         async with bentoml.AsyncHTTPClient(f"http://127.0.0.1:{port}") as client:
+-            result = await client.summarize(EXAMPLE_INPUT)
+
+----------------------------------------
+
+File: tests/e2e/bento_server_http/tests/test_serve.py
+Status: modified
+Changes: +32 -51
+Diff:
+@@ -1,7 +1,7 @@
+ import asyncio
+ import os
++import subprocess
+ import sys
+-import time
+ from pathlib import Path
+ 
+ import pytest
+@@ -29,24 +29,17 @@ def test_http_server():
+     server.stop()
+ 
+     assert server.process is not None  # process should not be removed
++    try:
++        retcode = server.process.wait(10)
++        assert retcode is not None
+ 
+-    timeout = 10
+-    start_time = time.time()
+-    while time.time() - start_time < timeout:
+-        retcode = server.process.poll()
+-        if retcode is not None and retcode <= 0:
+-            break
+-
+-    retcode = server.process.poll()
+-    assert retcode is not None
+-
+-    if sys.platform == "win32":
+-        # on Windows, because of the way that terminate is run, it seems the exit code is set.
+-        pass
+-    else:
+-        # negative return codes mean the process was terminated; since we will be terminating
+-        # the process, it should be negative.
+-        assert retcode <= 0
++        if sys.platform != "win32":
++            # on Windows, because of the way that terminate is run, it seems the exit code is set.
++            # negative return codes mean the process was terminated; since we will be terminating
+
+----------------------------------------
+
+File: tests/unit/_internal/cloud/test_deployment.py
+Status: modified
+Changes: +19 -54
+Diff:
+@@ -2,7 +2,6 @@
+ 
+ import typing as t
+ from datetime import datetime
+-from unittest.mock import patch
+ 
+ import attr
+ import pytest
+@@ -43,9 +42,6 @@
+     UpdateDeploymentSchema as UpdateDeploymentSchemaV2,
+ )
+ 
+-if t.TYPE_CHECKING:
+-    from unittest.mock import MagicMock
+-
+ 
+ @attr.define
+ class DummyUpdateSchema(UpdateDeploymentSchemaV2):
+@@ -160,8 +156,10 @@ def dummy_generate_deployment_schema(
+     )
+ 
+ 
+-@pytest.fixture(name="rest_client", scope="function")
+-def fixture_rest_client() -> RestApiClient:
++@pytest.fixture(autouse=True)
++def mock_rest_client() -> t.Generator[RestApiClient, None, None]:
++    from bentoml._internal.configuration.containers import BentoMLContainer
++
+     def dummy_create_deployment(
+         create_schema: CreateDeploymentSchemaV2, cluster: str | None = None
+     ):
+@@ -256,13 +254,14 @@ def dummy_get_deployment(
+             )
+         ],
+     )  # type: ignore
+-
+-    return client
++    try:
++        BentoMLContainer.rest_api_client.set(client)
++        yield client
++    finally:
++        BentoMLContainer.rest_api_client.reset()
+ 
+ 
+-@patch("bentoml._internal.cloud.deployment.get_rest_api_client")
+-def test_create_deployment(mock_get_client: MagicMock, rest_client: RestApiClient):
+-    mock_get_client.return_value = rest_client
++def test_create_deployment():
+     deployment = Deployment.create(
+         deployment_config_params=DeploymentConfigParameters(
+             cfg_dict={
+@@ -282,11 +281,7 @@ def test_create_deployment(mock_get_client: MagicMock, rest_client: RestApiClien
+         )
+ 
+ 
+
+----------------------------------------
+

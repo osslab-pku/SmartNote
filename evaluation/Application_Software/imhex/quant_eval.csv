@@ -1,0 +1,12 @@
+repo_name,rn_name,commit_coverage,info_entropy,tokens_count,automated_readability_index,dale_chall_readability,entity_percent,project_domain
+WerWolv/ImHex,4_zero_shot_promp_rn,0.0,2.2551230440172545,621,12.9,10.34,1.8691588785046727,Application_Software
+WerWolv/ImHex,3_conventional_changelog,0.2941176470588235,0.0,655,49.5,15.1,0.6218905472636816,Application_Software
+WerWolv/ImHex,1_smartdraft_random_ctx,0.8529411764705882,1.5020047009050883,1638,48.2,13.41,0.10282776349614395,Application_Software
+WerWolv/ImHex,1_smartdraft_rn_expository,0.8529411764705882,1.5020047009050883,2132,51.9,12.54,0.08722197993894462,Application_Software
+WerWolv/ImHex,1_smartdraft_rn_automatic,0.8529411764705882,1.5020047009050883,2132,51.9,12.54,0.08722197993894462,Application_Software
+WerWolv/ImHex,1_smartdraft_no_rn_composer,1.0,1.4660791465834446,1941,47.7,13.19,0.0,Application_Software
+WerWolv/ImHex,0_original_rn,0.0,2.6794494967204967,1200,39.5,12.61,1.0726072607260726,Application_Software
+WerWolv/ImHex,1_smartdraft_rn_automatic_no_llm,1.0,1.4516607643577664,1941,47.7,13.19,0.0,Application_Software
+WerWolv/ImHex,1_smartdraft_rn_descriptive,1.0,1.3004032104603251,2294,36.8,11.97,0.03650967506389193,Application_Software
+WerWolv/ImHex,1_smartdraft_rn_persuasive,0.9705882352941176,1.4762595471560016,2221,32.8,12.2,0.15174506828528073,Application_Software
+WerWolv/ImHex,2_deeprelease_rn,0.0,0.8112781244591328,56,19.3,15.61,0.0,Application_Software

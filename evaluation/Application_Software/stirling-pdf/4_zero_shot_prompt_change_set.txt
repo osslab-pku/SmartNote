@@ -1,0 +1,3666 @@
+Changes between v0.27.0 and v0.28.0
+================================================================================
+
+COMMITS
+--------------------------------------------------------------------------------
+
+Commit: 8dbbacb09e458946a13d9acadbaf83e29b210b7a
+Author: github-actions[bot]
+Date: 2024-08-08 21:29:02+00:00
+Message: :memo: Update README: Translation Progress Table (#1651)
+
+:memo: Sync README
+> Made via sync_files.yml
+
+Co-authored-by: GitHub Action action@github.com <GitHub Action action@github.com>
+----------------------------------------
+
+Commit: 6649ffd7a0c257da4b1a6958a453ae2981eeacb9
+Author: tkymmm
+Date: 2024-08-09 06:39:35+00:00
+Message: Updated Japanese translation (#1654)
+
+* Update messages_ja_JP.properties
+
+Updated Japanese translation
+
+* Update messages_ja_JP.properties
+
+Updated Japanese translation
+----------------------------------------
+
+Commit: f165439d2614f321e897e64829c1e6073e09e28e
+Author: Anthony Stirling
+Date: 2024-08-09 07:57:29+00:00
+Message: Update remove-pages.html
+
+#1656
+----------------------------------------
+
+Commit: 68c387086ce000d353791a260ea208693a3c9b02
+Author: github-actions[bot]
+Date: 2024-08-09 07:58:31+00:00
+Message: :memo: Update README: Translation Progress Table (#1655)
+
+:memo: Sync README
+> Made via sync_files.yml
+
+Co-authored-by: GitHub Action action@github.com <GitHub Action action@github.com>
+----------------------------------------
+
+Commit: f176558a39a13ae8457c5791187b7fd5046a9eb7
+Author: Ludy
+Date: 2024-08-12 16:22:32+00:00
+Message: Fix: Conditional Attribute Binding for the multiple Attribute in the File Selector Fragment (#1665)
+----------------------------------------
+
+Commit: 503a1c9526900c445f4e71a1655873ac6ac175bc
+Author: Ludy
+Date: 2024-08-13 21:54:33+00:00
+Message: redesign footer (#1674)
+
+* redesign footer
+
+* remove about test
+----------------------------------------
+
+Commit: b54d73d723b2cd0bedb63abce4f2c084d54f9979
+Author: Rafael Martins
+Date: 2024-08-14 10:59:06+00:00
+Message: Updated brazilian portuguese translation (#1673)
+
+Co-authored-by: Anthony Stirling <77850077+Frooodle@users.noreply.github.com>
+----------------------------------------
+
+Commit: d32da95f551fbc514cf2e0bff1156005cd1e779e
+Author: Ludy
+Date: 2024-08-15 09:43:56+00:00
+Message:  tessdata available to local Windows users (#1677)
+
+tessdata available to local Windows users
+----------------------------------------
+
+Commit: e45b5120874b6d9799bddc00c3533933a5a91be9
+Author: github-actions[bot]
+Date: 2024-08-15 09:45:19+00:00
+Message: :memo: Update README: Translation Progress Table (#1675)
+
+:memo: Sync README
+> Made via sync_files.yml
+
+Co-authored-by: GitHub Action action@github.com <GitHub Action action@github.com>
+----------------------------------------
+
+Commit: 711501a382f8f4cf6d7534fe4801c756618394e6
+Author: kmau
+Date: 2024-08-15 09:46:54+00:00
+Message: Update messages_it_IT.properties - remove image in home (#1661)
+----------------------------------------
+
+Commit: 909054a49d8b3befa25d81682e9ab7528cbea257
+Author: Anthony Stirling
+Date: 2024-08-15 20:57:37+00:00
+Message: Update dependabot.yml
+----------------------------------------
+
+Commit: 6fa7c2e5e128b23658ea6203444f46b2bae89b95
+Author: Anthony Stirling
+Date: 2024-08-15 21:00:02+00:00
+Message: Update dependabot.yml
+----------------------------------------
+
+Commit: eafbfb8dbfa928ba5164b30f1b6028d201cf3ebd
+Author: dependabot[bot]
+Date: 2024-08-15 21:01:03+00:00
+Message: Bump org.apache.pdfbox:xmpbox from 3.0.2 to 3.0.3 (#1670)
+
+Bumps org.apache.pdfbox:xmpbox from 3.0.2 to 3.0.3.
+
+---
+updated-dependencies:
+- dependency-name: org.apache.pdfbox:xmpbox
+  dependency-type: direct:production
+  update-type: version-update:semver-patch
+...
+
+Signed-off-by: dependabot[bot] <support@github.com>
+Co-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>
+----------------------------------------
+
+Commit: 264763dd4c21eee19d541ab3da3eb6d1bbbb8616
+Author: dependabot[bot]
+Date: 2024-08-15 21:01:41+00:00
+Message: Bump io.github.pixee:java-security-toolkit from 1.1.3 to 1.2.0 (#1667)
+
+Bumps [io.github.pixee:java-security-toolkit](https://github.com/pixee/java-security-toolkit) from 1.1.3 to 1.2.0.
+- [Release notes](https://github.com/pixee/java-security-toolkit/releases)
+- [Commits](https://github.com/pixee/java-security-toolkit/compare/v1.1.3...v1.2.0)
+
+---
+updated-dependencies:
+- dependency-name: io.github.pixee:java-security-toolkit
+  dependency-type: direct:production
+  update-type: version-update:semver-minor
+...
+
+Signed-off-by: dependabot[bot] <support@github.com>
+Co-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>
+----------------------------------------
+
+Commit: 1cca13334e548fe28bfb7db5610f6f23674ef17d
+Author: dependabot[bot]
+Date: 2024-08-15 21:31:57+00:00
+Message: Bump org.projectlombok:lombok from 1.18.32 to 1.18.34 (#1684)
+
+Bumps [org.projectlombok:lombok](https://github.com/projectlombok/lombok) from 1.18.32 to 1.18.34.
+- [Changelog](https://github.com/projectlombok/lombok/blob/master/doc/changelog.markdown)
+- [Commits](https://github.com/projectlombok/lombok/compare/v1.18.32...v1.18.34)
+
+---
+updated-dependencies:
+- dependency-name: org.projectlombok:lombok
+  dependency-type: direct:production
+  update-type: version-update:semver-patch
+...
+
+Signed-off-by: dependabot[bot] <support@github.com>
+Co-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>
+----------------------------------------
+
+Commit: 96a8898c15f39abd52bef55d484a875a48977a4e
+Author: dependabot[bot]
+Date: 2024-08-15 21:34:04+00:00
+Message: Bump com.bucket4j:bucket4j_jdk17-core from 8.12.1 to 8.13.1 (#1683)
+
+Bumps [com.bucket4j:bucket4j_jdk17-core](https://github.com/bucket4j/bucket4j) from 8.12.1 to 8.13.1.
+- [Release notes](https://github.com/bucket4j/bucket4j/releases)
+- [Commits](https://github.com/bucket4j/bucket4j/commits)
+
+---
+updated-dependencies:
+- dependency-name: com.bucket4j:bucket4j_jdk17-core
+  dependency-type: direct:production
+  update-type: version-update:semver-minor
+...
+
+Signed-off-by: dependabot[bot] <support@github.com>
+Co-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>
+----------------------------------------
+
+Commit: 5c84ae1b53be82ae184ca95e49b0bab1b37ad180
+Author: dependabot[bot]
+Date: 2024-08-15 21:36:26+00:00
+Message: Bump org.springframework:spring-webmvc from 6.1.9 to 6.1.12 (#1680)
+
+Bumps [org.springframework:spring-webmvc](https://github.com/spring-projects/spring-framework) from 6.1.9 to 6.1.12.
+- [Release notes](https://github.com/spring-projects/spring-framework/releases)
+- [Commits](https://github.com/spring-projects/spring-framework/compare/v6.1.9...v6.1.12)
+
+---
+updated-dependencies:
+- dependency-name: org.springframework:spring-webmvc
+  dependency-type: direct:production
+  update-type: version-update:semver-patch
+...
+
+Signed-off-by: dependabot[bot] <support@github.com>
+Co-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>
+----------------------------------------
+
+Commit: 4ea323b879ed4aa9bb673ef31ff9ad379b442448
+Author: dependabot[bot]
+Date: 2024-08-15 21:41:03+00:00
+Message: Bump edu.sc.seis.launch4j from 3.0.5 to 3.0.6 (#1686)
+
+Bumps edu.sc.seis.launch4j from 3.0.5 to 3.0.6.
+
+---
+updated-dependencies:
+- dependency-name: edu.sc.seis.launch4j
+  dependency-type: direct:production
+  update-type: version-update:semver-patch
+...
+
+Signed-off-by: dependabot[bot] <support@github.com>
+Co-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>
+----------------------------------------
+
+Commit: d5ac5604529da33053dff16cbbbd4dc8d134b4e6
+Author: dependabot[bot]
+Date: 2024-08-15 21:57:45+00:00
+Message: Bump org.apache.pdfbox:pdfbox from 3.0.2 to 3.0.3 (#1691)
+
+Bumps org.apache.pdfbox:pdfbox from 3.0.2 to 3.0.3.
+
+---
+updated-dependencies:
+- dependency-name: org.apache.pdfbox:pdfbox
+  dependency-type: direct:production
+  update-type: version-update:semver-patch
+...
+
+Signed-off-by: dependabot[bot] <support@github.com>
+Co-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>
+----------------------------------------
+
+Commit: 851b43fadfdf0b3b4834a0fa53b48777b45b6e65
+Author: dependabot[bot]
+Date: 2024-08-15 22:04:43+00:00
+Message: Bump com.github.jk1.dependency-license-report from 2.8 to 2.9 (#1690)
+
+Bumps com.github.jk1.dependency-license-report from 2.8 to 2.9.
+
+---
+updated-dependencies:
+- dependency-name: com.github.jk1.dependency-license-report
+  dependency-type: direct:production
+  update-type: version-update:semver-minor
+...
+
+Signed-off-by: dependabot[bot] <support@github.com>
+Co-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>
+----------------------------------------
+
+Commit: 00d65596d1e629867bafb299ab19bdff079610bb
+Author: github-actions[bot]
+Date: 2024-08-16 07:48:42+00:00
+Message: Update 3rd Party Licenses (#1687)
+
+Signed-off-by: GitHub Action <action@github.com>
+Co-authored-by: GitHub Action <action@github.com>
+----------------------------------------
+
+Commit: 09c93cebe3c0d1bb0f731b6a45ada0d7003ce796
+Author: Anthony Stirling
+Date: 2024-08-16 10:00:10+00:00
+Message: PR changes (#1693)
+
+* Update licenses-update.yml
+
+* Update build.yml
+
+* Update test.yml
+
+* Delete .github/workflows/test.yml
+
+* Update build.yml
+
+* Update build.yml
+
+* Update auto-labeler.yml
+
+* Update build.yml
+
+* Update auto-labeler.yml
+
+* Update labeler-config.yml
+----------------------------------------
+
+Commit: 8997855922af45ff8b6a6d15373e893d7e441a10
+Author: Anthony Stirling
+Date: 2024-08-16 10:02:38+00:00
+Message: Update auto-labeler.yml
+----------------------------------------
+
+Commit: e89ac84928c48ba4a337ced96c6886fefb69df81
+Author: Anthony Stirling
+Date: 2024-08-16 10:09:17+00:00
+Message: Update build.yml
+----------------------------------------
+
+Commit: f5258c593b937c9cdde1367302f08abf2cb9d9c8
+Author: Anthony Stirling
+Date: 2024-08-16 10:15:37+00:00
+Message: Update auto-labeler.yml
+----------------------------------------
+
+Commit: 8602f38fbff87205fc09a79fb0a0407e43e1e13d
+Author: Anthony Stirling
+Date: 2024-08-16 10:44:49+00:00
+Message: Update build.yml
+----------------------------------------
+
+Commit: 29f43c010ef7978cffe8f174254e3d804db54383
+Author: dependabot[bot]
+Date: 2024-08-16 10:51:40+00:00
+Message: Bump io.micrometer:micrometer-core from 1.13.0 to 1.13.3 (#1689)
+
+Bumps [io.micrometer:micrometer-core](https://github.com/micrometer-metrics/micrometer) from 1.13.0 to 1.13.3.
+- [Release notes](https://github.com/micrometer-metrics/micrometer/releases)
+- [Commits](https://github.com/micrometer-metrics/micrometer/compare/v1.13.0...v1.13.3)
+
+---
+updated-dependencies:
+- dependency-name: io.micrometer:micrometer-core
+  dependency-type: direct:production
+  update-type: version-update:semver-patch
+...
+
+Signed-off-by: dependabot[bot] <support@github.com>
+Co-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>
+Co-authored-by: Anthony Stirling <77850077+Frooodle@users.noreply.github.com>
+----------------------------------------
+
+Commit: 2cbe34ea247c2714feec278f0cbafcc825afe6cb
+Author: github-actions[bot]
+Date: 2024-08-16 10:52:51+00:00
+Message: Update 3rd Party Licenses (#1695)
+
+Signed-off-by: GitHub Action <action@github.com>
+Co-authored-by: GitHub Action <action@github.com>
+----------------------------------------
+
+Commit: 29fcbf30d771fdf7bd6f25f35e146cc465132745
+Author: Ludy
+Date: 2024-08-16 10:57:37+00:00
+Message: Admin panel - Enhanced User Management & Fix: #1630 (#1658)
+
+* Prevents SSO login due to faulty verification
+
+* add translation & fix show error message
+
+* Update settings.yml.template
+
+---------
+
+Co-authored-by: Anthony Stirling <77850077+Frooodle@users.noreply.github.com>
+----------------------------------------
+
+Commit: 05efcedea862bd6694c5c975d01b3b6c82abeae7
+Author: dependabot[bot]
+Date: 2024-08-16 11:03:59+00:00
+Message: Bump ch.qos.logback:logback-classic from 1.5.6 to 1.5.7 (#1685)
+
+* Bump ch.qos.logback:logback-classic from 1.5.6 to 1.5.7
+
+Bumps [ch.qos.logback:logback-classic](https://github.com/qos-ch/logback) from 1.5.6 to 1.5.7.
+- [Commits](https://github.com/qos-ch/logback/compare/v_1.5.6...v_1.5.7)
+
+---
+updated-dependencies:
+- dependency-name: ch.qos.logback:logback-classic
+  dependency-type: direct:production
+  update-type: version-update:semver-patch
+...
+
+Signed-off-by: dependabot[bot] <support@github.com>
+
+* Update build.gradle
+
+---------
+
+Signed-off-by: dependabot[bot] <support@github.com>
+Co-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>
+Co-authored-by: Anthony Stirling <77850077+Frooodle@users.noreply.github.com>
+----------------------------------------
+
+Commit: ea2d7558081b9ce62acf994ad60fc5c6a9b2e17d
+Author: Anthony Stirling
+Date: 2024-08-16 11:15:07+00:00
+Message: Update licenses-update.yml
+----------------------------------------
+
+Commit: 6dab3980fc7bd8025058b3116922997fb6ac369d
+Author: github-actions[bot]
+Date: 2024-08-16 11:15:55+00:00
+Message: Update 3rd Party Licenses (#1696)
+
+Signed-off-by: GitHub Action <action@github.com>
+Co-authored-by: GitHub Action <action@github.com>
+----------------------------------------
+
+Commit: 3cd6f462a8f0d054283c396a628ca298b85e6571
+Author: Anthony Stirling
+Date: 2024-08-16 11:44:25+00:00
+Message: Update build.gradle to use commmon versions (#1697)
+
+* Update build.gradle
+
+* Update build.gradle
+----------------------------------------
+
+Commit: 1927801894361e7b34fc01950b6516beb162facd
+Author: github-actions[bot]
+Date: 2024-08-16 11:47:46+00:00
+Message: Update 3rd Party Licenses (#1698)
+
+Signed-off-by: GitHub Action <action@github.com>
+Co-authored-by: GitHub Action <action@github.com>
+----------------------------------------
+
+Commit: 97731386121a99adba450f98ea93d1b1bdfbb213
+Author: Anthony Stirling
+Date: 2024-08-16 11:51:59+00:00
+Message: Update build.gradle
+----------------------------------------
+
+Commit: 48bae227f672113da45edd55dea17306ad0d4889
+Author: github-actions[bot]
+Date: 2024-08-16 11:52:25+00:00
+Message: :floppy_disk: Update Version (#1699)
+
+:floppy_disk: Sync Versions
+> Made via sync_files.yml
+
+Co-authored-by: GitHub Action action@github.com <GitHub Action action@github.com>
+----------------------------------------
+
+
+PULL REQUESTS
+--------------------------------------------------------------------------------
+
+PR #1693: PR changes
+Author: Frooodle
+Merged at: 2024-08-16 10:00:10+00:00
+URL: https://github.com/Stirling-Tools/Stirling-PDF/pull/1693
+Description:
+# Description
+
+Please provide a summary of the changes, including relevant motivation and context.
+
+Closes #(issue_number)
+
+## Checklist:
+
+- [ ] I have read the [Contribution Guidelines](https://github.com/Stirling-Tools/Stirling-PDF/blob/main/CONTRIBUTING.md)
+- [ ] I have performed a self-review of my own code
+- [ ] I have commented my code, particularly in hard-to-understand areas
+- [ ] My changes generate no new warnings
+
+## Contributor License Agreement
+
+By submitting this pull request, I acknowledge and agree that my contributions will be included in Stirling-PDF and that they can be relicensed in the future under the MPL 2.0 (Mozilla Public License Version 2.0) license.
+
+(This does not change the general open-source nature of Stirling-PDF, simply moving from one license to another license)
+
+----------------------------------------
+
+PR #1665: Fix: Conditional Attribute Binding for the multiple Attribute in the File Selector Fragment
+Author: Ludy87
+Merged at: 2024-08-12 16:22:32+00:00
+URL: https://github.com/Stirling-Tools/Stirling-PDF/pull/1665
+Description:
+# Description
+
+**Previous State:**
+The `multiple` attribute in the `<input>` element of the file selector fragment was statically defined, meaning it was either always present or always absent, regardless of the actual requirement. There was no way to dynamically set this attribute based on the `multiple` variable managed in the JavaScript code.
+
+**Fix:**
+This fix introduces conditional binding for the` multiple` attribute using Thymeleaf, based on the value of the `multiple` variable in the JavaScript. As a result, the attribute is only added if `multiple` is set to `true`, making the file selector's behavior dynamic and more flexible.
+
+## Checklist:
+
+- [x] I have read the [Contribution Guidelines](https://github.com/Stirling-Tools/Stirling-PDF/blob/main/CONTRIBUTING.md)
+- [x] I have performed a self-review of my own code
+- [x] I have commented my code, particularly in hard-to-understand areas
+- [x] My changes generate no new warnings
+
+## Contributor License Agreement
+
+By submitting this pull request, I acknowledge and agree that my contributions will be included in Stirling-PDF and that they can be relicensed in the future under the MPL 2.0 (Mozilla Public License Version 2.0) license.
+
+(This does not change the general open-source nature of Stirling-PDF, simply moving from one license to another license)
+
+----------------------------------------
+
+PR #1658: Admin panel - Enhanced User Management & Fix: #1630
+Author: Ludy87
+Merged at: 2024-08-16 10:57:37+00:00
+URL: https://github.com/Stirling-Tools/Stirling-PDF/pull/1658
+Description:
+# Description
+
+- Blocking automatic user registration: By adding the `blockRegistration` key to the settings, admins can prevent users from logging in via SSO (Single Sign-On) without being pre-approved by the admin. Example: `blockRegistration: true`.
+- Addition of active session display in the admin panel: Admins can now view currently active user sessions in the admin panel, including session ID and username information.
+- Added ability to disable users: Admins now have the option to disable user accounts, effectively locking them out of the system.
+- Display of the last request timestamp: The time of the last user request is now displayed in the admin panel, making it easier to manage and monitor user activity.
+- Bugfix for setting `loginMethod: normal`: Fixed an issue that occurred when setting `loginMethod: normal`, ensuring the correct authentication method is applied.
+- Removal of unused code: Unnecessary and outdated code has been removed from the codebase, improving maintainability.
+- Optimization of session management functionality: Enhanced session management, including the ability to terminate sessions and display the last request information.
+
+![console](https://github.com/user-attachments/assets/0ebabfb9-ae40-4b1d-bd38-984c1422130b)
+
+![add_new_user](https://github.com/user-attachments/assets/7adb9bf7-cfc7-488d-9fb5-c3e7587dcfcd)
+
+
+Closes #1630
+
+## Checklist:
+
+- [x] I have read the [Contribution Guidelines](https://github.com/Stirling-Tools/Stirling-PDF/blob/main/CONTRIBUTING.md)
+- [x] I have performed a self-review of my own code
+- [x] I have commented my code, particularly in hard-to-understand areas
+- [x] My changes generate no new warnings
+
+## Contributor License Agreement
+
+By submitting this pull request, I acknowledge and agree that my contributions will be included in Stirling-PDF and that they can be relicensed in the future under the MPL 2.0 (Mozilla Public License Version 2.0) license.
+
+(This does not change the general open-source nature of Stirling-PDF, simply moving from one license to another license)
+
+----------------------------------------
+
+PR #1677:  tessdata available to local Windows users
+Author: Ludy87
+Merged at: 2024-08-15 09:43:56+00:00
+URL: https://github.com/Stirling-Tools/Stirling-PDF/pull/1677
+Description:
+# Description
+
+Closes #1676
+
+## Checklist:
+
+- [x] I have read the [Contribution Guidelines](https://github.com/Stirling-Tools/Stirling-PDF/blob/main/CONTRIBUTING.md)
+- [x] I have performed a self-review of my own code
+- [x] I have commented my code, particularly in hard-to-understand areas
+- [x] My changes generate no new warnings
+
+## Contributor License Agreement
+
+By submitting this pull request, I acknowledge and agree that my contributions will be included in Stirling-PDF and that they can be relicensed in the future under the MPL 2.0 (Mozilla Public License Version 2.0) license.
+
+(This does not change the general open-source nature of Stirling-PDF, simply moving from one license to another license)
+
+----------------------------------------
+
+PR #1699: :floppy_disk: Update Version
+Author: github-actions[bot]
+Merged at: 2024-08-16 11:52:25+00:00
+URL: https://github.com/Stirling-Tools/Stirling-PDF/pull/1699
+Description:
+Auto-generated by [create-pull-request][1]
+
+[1]: https://github.com/peter-evans/create-pull-request
+----------------------------------------
+
+PR #1698: Update 3rd Party Licenses
+Author: github-actions[bot]
+Merged at: 2024-08-16 11:47:47+00:00
+URL: https://github.com/Stirling-Tools/Stirling-PDF/pull/1698
+Description:
+Auto-generated by [create-pull-request][1]
+[1]: https://github.com/peter-evans/create-pull-request
+----------------------------------------
+
+PR #1697: Update build.gradle to use commmon versions
+Author: Frooodle
+Merged at: 2024-08-16 11:44:25+00:00
+URL: https://github.com/Stirling-Tools/Stirling-PDF/pull/1697
+Description:
+# Description
+
+Please provide a summary of the changes, including relevant motivation and context.
+
+Closes #(issue_number)
+
+## Checklist:
+
+- [ ] I have read the [Contribution Guidelines](https://github.com/Stirling-Tools/Stirling-PDF/blob/main/CONTRIBUTING.md)
+- [ ] I have performed a self-review of my own code
+- [ ] I have commented my code, particularly in hard-to-understand areas
+- [ ] My changes generate no new warnings
+
+## Contributor License Agreement
+
+By submitting this pull request, I acknowledge and agree that my contributions will be included in Stirling-PDF and that they can be relicensed in the future under the MPL 2.0 (Mozilla Public License Version 2.0) license.
+
+(This does not change the general open-source nature of Stirling-PDF, simply moving from one license to another license)
+
+----------------------------------------
+
+PR #1696: Update 3rd Party Licenses
+Author: github-actions[bot]
+Merged at: 2024-08-16 11:15:55+00:00
+URL: https://github.com/Stirling-Tools/Stirling-PDF/pull/1696
+Description:
+Auto-generated by [create-pull-request][1]
+[1]: https://github.com/peter-evans/create-pull-request
+----------------------------------------
+
+PR #1685: Bump ch.qos.logback:logback-classic from 1.5.6 to 1.5.7
+Author: dependabot[bot]
+Merged at: 2024-08-16 11:03:59+00:00
+URL: https://github.com/Stirling-Tools/Stirling-PDF/pull/1685
+Description:
+Bumps [ch.qos.logback:logback-classic](https://github.com/qos-ch/logback) from 1.5.6 to 1.5.7.
+<details>
+<summary>Commits</summary>
+<ul>
+<li><a href="https://github.com/qos-ch/logback/commit/5e9f47fc6413386785c09c827814cfeb7095d8da"><code>5e9f47f</code></a> prepare release 1.5.7</li>
+<li><a href="https://github.com/qos-ch/logback/commit/3f572479817c85dbbe016f0eb01088702680852a"><code>3f57247</code></a> only one shutdown hooks allowed, locks during LoggerContext.stop operation, f...</li>
+<li><a href="https://github.com/qos-ch/logback/commit/1b7fe9498d491e367da698bc921323bb11dd4120"><code>1b7fe94</code></a> add STRICT shortcut for ISO8601 date pattern, fixes LOGBACK-262</li>
+<li><a href="https://github.com/qos-ch/logback/commit/94b67db13e099f9198574cfba265429ad8d38810"><code>94b67db</code></a> Made <code>AsyncAppenderBase.isQueueBelowDiscardingThreshold</code> public to facilitate...</li>
+<li><a href="https://github.com/qos-ch/logback/commit/85bed93afaa89e067bb807e83781bffcdadeafc0"><code>85bed93</code></a> fix race condition reported in LOGBACK-1362</li>
+<li><a href="https://github.com/qos-ch/logback/commit/c8c46e35e3ab9917eba0a3faae419799d84b0fe3"><code>c8c46e3</code></a> move levelChangePropagator related tests to logback-classic-blackbox</li>
+<li><a href="https://github.com/qos-ch/logback/commit/f7d5cf8257216589024455377595219f7c828d15"><code>f7d5cf8</code></a> extract constants for property keys</li>
+<li><a href="https://github.com/qos-ch/logback/commit/c1f21e9e750b82a1e0bb24d3ca01b3659e2c6ea4"><code>c1f21e9</code></a> add test in relation to variable subsitions for levels, report substitions, L...</li>
+<li><a href="https://github.com/qos-ch/logback/commit/7c29474416f4e2273f5049699155374fd2c4eaef"><code>7c29474</code></a> add support for finding the console's charset, LOGBACK-1642</li>
+<li><a href="https://github.com/qos-ch/logback/commit/44fbe63014132d2ceeef9595a49380cfa89f8d56"><code>44fbe63</code></a> MaskedKeyValuePairConverter test issues/828,  NPE in AppeanderAttachableImpl ...</li>
+<li>Additional commits viewable in <a href="https://github.com/qos-ch/logback/compare/v_1.5.6...v_1.5.7">compare view</a></li>
+</ul>
+</details>
+<br />
+
+
+[![Dependabot compatibility score](https://dependabot-badges.githubapp.com/badges/compatibility_score?dependency-name=ch.qos.logback:logback-classic&package-manager=gradle&previous-version=1.5.6&new-version=1.5.7)](https://docs.github.com/en/github/managing-security-vulnerabilities/about-dependabot-security-updates#about-compatibility-scores)
+
+Dependabot will resolve any conflicts with this PR as long as you don't alter it yourself. You can also trigger a rebase manually by commenting `@dependabot rebase`.
+
+[//]: # (dependabot-automerge-start)
+[//]: # (dependabot-automerge-end)
+
+---
+
+<details>
+<summary>Dependabot commands and options</summary>
+<br />
+
+You can trigger Dependabot actions by commenting on this PR:
+- `@dependabot rebase` will rebase this PR
+- `@dependabot recreate` will recreate this PR, overwriting any edits that have been made to it
+- `@dependabot merge` will merge this PR after your CI passes on it
+- `@dependabot squash and merge` will squash and merge this PR after your CI passes on it
+- `@dependabot cancel merge` will cancel a previously requested merge and block automerging
+- `@dependabot reopen` will reopen this PR if it is closed
+- `@dependabot close` will close this PR and stop Dependabot recreating it. You can achieve the same result by closing it manually
+- `@dependabot show <dependency name> ignore conditions` will show all of the ignore conditions of the specified dependency
+- `@dependabot ignore this major version` will close this PR and stop Dependabot creating any more for this major version (unless you reopen the PR or upgrade to it yourself)
+- `@dependabot ignore this minor version` will close this PR and stop Dependabot creating any more for this minor version (unless you reopen the PR or upgrade to it yourself)
+- `@dependabot ignore this dependency` will close this PR and stop Dependabot creating any more for this dependency (unless you reopen the PR or upgrade to it yourself)
+
+
+</details>
+----------------------------------------
+
+PR #1695: Update 3rd Party Licenses
+Author: github-actions[bot]
+Merged at: 2024-08-16 10:52:51+00:00
+URL: https://github.com/Stirling-Tools/Stirling-PDF/pull/1695
+Description:
+Auto-generated by [create-pull-request][1]
+[1]: https://github.com/peter-evans/create-pull-request
+----------------------------------------
+
+PR #1689: Bump io.micrometer:micrometer-core from 1.13.0 to 1.13.3
+Author: dependabot[bot]
+Merged at: 2024-08-16 10:51:41+00:00
+URL: https://github.com/Stirling-Tools/Stirling-PDF/pull/1689
+Description:
+Bumps [io.micrometer:micrometer-core](https://github.com/micrometer-metrics/micrometer) from 1.13.0 to 1.13.3.
+<details>
+<summary>Release notes</summary>
+<p><em>Sourced from <a href="https://github.com/micrometer-metrics/micrometer/releases">io.micrometer:micrometer-core's releases</a>.</em></p>
+<blockquote>
+<h2>1.13.3</h2>
+<h2>:lady_beetle: Bug Fixes</h2>
+<ul>
+<li>Add default factoryType tag in CommonsObjectPool2Metrics <a href="https://redirect.github.com/micrometer-metrics/micrometer/pull/5316">#5316</a></li>
+<li>Buffered statsd lines are not published on close <a href="https://redirect.github.com/micrometer-metrics/micrometer/issues/2141">#2141</a></li>
+<li>Disable kotlinSourcesJar since it conflicts with sourcesJar <a href="https://redirect.github.com/micrometer-metrics/micrometer/issues/5151">#5151</a></li>
+</ul>
+<h2>:notebook_with_decorative_cover: Documentation</h2>
+<ul>
+<li>Make more explicit that recording a metric is safe to call <a href="https://redirect.github.com/micrometer-metrics/micrometer/pull/5365">#5365</a></li>
+</ul>
+<h2>:hammer: Dependency Upgrades</h2>
+<ul>
+<li>Bump com.fasterxml.jackson.core:jackson-databind from 2.17.1 to 2.17.2 <a href="https://redirect.github.com/micrometer-metrics/micrometer/pull/5364">#5364</a></li>
+<li>Bump com.gradle.develocity from 3.17.5 to 3.17.6 <a href="https://redirect.github.com/micrometer-metrics/micrometer/pull/5357">#5357</a></li>
+<li>Bump com.netflix.spectator:spectator-reg-atlas from 1.7.14 to 1.7.17 <a href="https://redirect.github.com/micrometer-metrics/micrometer/pull/5356">#5356</a></li>
+<li>Bump com.signalfx.public:signalfx-java from 1.0.43 to 1.0.44 <a href="https://redirect.github.com/micrometer-metrics/micrometer/pull/5362">#5362</a></li>
+<li>Bump io.netty:netty-bom from 4.1.111.Final to 4.1.112.Final <a href="https://redirect.github.com/micrometer-metrics/micrometer/pull/5360">#5360</a></li>
+<li>Bump io.projectreactor:reactor-bom from 2022.0.20 to 2022.0.21 <a href="https://redirect.github.com/micrometer-metrics/micrometer/pull/5358">#5358</a></li>
+<li>Bump jersey3 from 3.0.11 to 3.0.12 <a href="https://redirect.github.com/micrometer-metrics/micrometer/issues/5378">#5378</a></li>
+<li>Bump jetty9 from 9.4.54.v20240208 to 9.4.55.v20240627 <a href="https://redirect.github.com/micrometer-metrics/micrometer/pull/5361">#5361</a></li>
+<li>Bump org.jetbrains.kotlin.jvm from 1.9.23 to 1.9.24 <a href="https://redirect.github.com/micrometer-metrics/micrometer/issues/5294">#5294</a></li>
+</ul>
+<h2>:memo: Tasks</h2>
+<ul>
+<li>Make PrometheusMeterRegistryTest less flaky <a href="https://redirect.github.com/micrometer-metrics/micrometer/issues/5302">#5302</a></li>
+<li>Migrate to io.spring.develocity.conventions:0.0.19 <a href="https://redirect.github.com/micrometer-metrics/micrometer/issues/5312">#5312</a></li>
+<li>Apply test-retry settings to all tests <a href="https://redirect.github.com/micrometer-metrics/micrometer/issues/5303">#5303</a></li>
+</ul>
+<h2>:heart: Contributors</h2>
+<p>Thank you to all the contributors who worked on this release:</p>
+<p><a href="https://github.com/izeye"><code>@​izeye</code></a>, <a href="https://github.com/HYEONSEOK1"><code>@​HYEONSEOK1</code></a>, <a href="https://github.com/BJMg"><code>@​BJMg</code></a>, and <a href="https://github.com/cbrachem"><code>@​cbrachem</code></a></p>
+<h2>1.13.2</h2>
+<h2>:lady_beetle: Bug Fixes</h2>
+<ul>
+<li>Avoid calling naming convention on scrape <a href="https://redirect.github.com/micrometer-metrics/micrometer/pull/5288">#5288</a></li>
+<li>Fix histogram consistency in PrometheusMeterRegistry <a href="https://redirect.github.com/micrometer-metrics/micrometer/issues/5193">#5193</a></li>
+<li>Fix log to include stack trace in OtlpMeterRegistry.publish() <a href="https://redirect.github.com/micrometer-metrics/micrometer/pull/5141">#5141</a></li>
+</ul>
+<h2>:hammer: Dependency Upgrades</h2>
+<ul>
+<li>Bump software.amazon.awssdk:cloudwatch from 2.25.69 to 2.25.70 <a href="https://redirect.github.com/micrometer-metrics/micrometer/pull/5277">#5277</a></li>
+<li>Bump com.netflix.spectator:spectator-reg-atlas from 1.7.13 to 1.7.14 <a href="https://redirect.github.com/micrometer-metrics/micrometer/pull/5276">#5276</a></li>
+<li>Bump com.signalfx.public:signalfx-java from 1.0.42 to 1.0.43 <a href="https://redirect.github.com/micrometer-metrics/micrometer/pull/5272">#5272</a></li>
+</ul>
+<h2>:heart: Contributors</h2>
+<!-- raw HTML omitted -->
+</blockquote>
+<p>... (truncated)</p>
+</details>
+<details>
+<summary>Commits</summary>
+<ul>
+<li><a href="https://github.com/micrometer-metrics/micrometer/commit/98c104261a6fdba3411e2897d8dff3ab628ab6a8"><code>98c1042</code></a> Bump com.fasterxml.jackson.core:jackson-databind from 2.17.1 to 2.17.2 (<a href="https://redirect.github.com/micrometer-metrics/micrometer/issues/5364">#5364</a>)</li>
+<li><a href="https://github.com/micrometer-metrics/micrometer/commit/85b2df5a11a9deac677d2a8ea89af0813b7efe31"><code>85b2df5</code></a> Merge branch '1.12.x' into 1.13.x</li>
+<li><a href="https://github.com/micrometer-metrics/micrometer/commit/a0127117dfaa0e580d494d80016eca1b57343e06"><code>a012711</code></a> Merge branch '1.9.x' into 1.12.x</li>
+<li><a href="https://github.com/micrometer-metrics/micrometer/commit/34f06a38ac016b5c66e04c81437229054cfc7195"><code>34f06a3</code></a> Bump jersey3 from 3.0.4 to 3.0.12</li>
+<li><a href="https://github.com/micrometer-metrics/micrometer/commit/39783aacd9d291797812149dbee85238a1efd6b5"><code>39783aa</code></a> Merge branch '1.12.x' into 1.13.x</li>
+<li><a href="https://github.com/micrometer-metrics/micrometer/commit/1781a321222eb17cf98749a08831d95aee921a4d"><code>1781a32</code></a> Bump io.projectreactor:reactor-bom from 2022.0.20 to 2022.0.21 (<a href="https://redirect.github.com/micrometer-metrics/micrometer/issues/5340">#5340</a>)</li>
+<li><a href="https://github.com/micrometer-metrics/micrometer/commit/0f86200c85c984d2fd8d9c36afb5c256c32520ab"><code>0f86200</code></a> Bump org.awaitility:awaitility from 4.2.1 to 4.2.2 (<a href="https://redirect.github.com/micrometer-metrics/micrometer/issues/5372">#5372</a>)</li>
+<li><a href="https://github.com/micrometer-metrics/micrometer/commit/6032f65c10201fd24f7ab846801a40c48585da7b"><code>6032f65</code></a> Bump com.netflix.spectator:spectator-reg-atlas from 1.7.14 to 1.7.18 (<a href="https://redirect.github.com/micrometer-metrics/micrometer/issues/5373">#5373</a>)</li>
+<li><a href="https://github.com/micrometer-metrics/micrometer/commit/f1f513ee9f1fcf199c5814decc5c067f51a11af1"><code>f1f513e</code></a> Bump org.mongodb:mongodb-driver-sync from 4.11.2 to 4.11.3 (<a href="https://redirect.github.com/micrometer-metrics/micrometer/issues/5375">#5375</a>)</li>
+<li><a href="https://github.com/micrometer-metrics/micrometer/commit/214a682db167a27834f21dfe26c22e60aa29aed6"><code>214a682</code></a> Bump maven-resolver from 1.9.20 to 1.9.22 (<a href="https://redirect.github.com/micrometer-metrics/micrometer/issues/5374">#5374</a>)</li>
+<li>Additional commits viewable in <a href="https://github.com/micrometer-metrics/micrometer/compare/v1.13.0...v1.13.3">compare view</a></li>
+</ul>
+</details>
+<br />
+
+
+[![Dependabot compatibility score](https://dependabot-badges.githubapp.com/badges/compatibility_score?dependency-name=io.micrometer:micrometer-core&package-manager=gradle&previous-version=1.13.0&new-version=1.13.3)](https://docs.github.com/en/github/managing-security-vulnerabilities/about-dependabot-security-updates#about-compatibility-scores)
+
+Dependabot will resolve any conflicts with this PR as long as you don't alter it yourself. You can also trigger a rebase manually by commenting `@dependabot rebase`.
+
+[//]: # (dependabot-automerge-start)
+[//]: # (dependabot-automerge-end)
+
+---
+
+<details>
+<summary>Dependabot commands and options</summary>
+<br />
+
+You can trigger Dependabot actions by commenting on this PR:
+- `@dependabot rebase` will rebase this PR
+- `@dependabot recreate` will recreate this PR, overwriting any edits that have been made to it
+- `@dependabot merge` will merge this PR after your CI passes on it
+- `@dependabot squash and merge` will squash and merge this PR after your CI passes on it
+- `@dependabot cancel merge` will cancel a previously requested merge and block automerging
+- `@dependabot reopen` will reopen this PR if it is closed
+- `@dependabot close` will close this PR and stop Dependabot recreating it. You can achieve the same result by closing it manually
+- `@dependabot show <dependency name> ignore conditions` will show all of the ignore conditions of the specified dependency
+- `@dependabot ignore this major version` will close this PR and stop Dependabot creating any more for this major version (unless you reopen the PR or upgrade to it yourself)
+- `@dependabot ignore this minor version` will close this PR and stop Dependabot creating any more for this minor version (unless you reopen the PR or upgrade to it yourself)
+- `@dependabot ignore this dependency` will close this PR and stop Dependabot creating any more for this dependency (unless you reopen the PR or upgrade to it yourself)
+
+
+</details>
+----------------------------------------
+
+PR #1687: Update 3rd Party Licenses
+Author: github-actions[bot]
+Merged at: 2024-08-16 07:48:42+00:00
+URL: https://github.com/Stirling-Tools/Stirling-PDF/pull/1687
+Description:
+Auto-generated by [create-pull-request][1]
+[1]: https://github.com/peter-evans/create-pull-request
+----------------------------------------
+
+PR #1690: Bump com.github.jk1.dependency-license-report from 2.8 to 2.9
+Author: dependabot[bot]
+Merged at: 2024-08-15 22:04:43+00:00
+URL: https://github.com/Stirling-Tools/Stirling-PDF/pull/1690
+Description:
+Bumps com.github.jk1.dependency-license-report from 2.8 to 2.9.
+
+
+[![Dependabot compatibility score](https://dependabot-badges.githubapp.com/badges/compatibility_score?dependency-name=com.github.jk1.dependency-license-report&package-manager=gradle&previous-version=2.8&new-version=2.9)](https://docs.github.com/en/github/managing-security-vulnerabilities/about-dependabot-security-updates#about-compatibility-scores)
+
+Dependabot will resolve any conflicts with this PR as long as you don't alter it yourself. You can also trigger a rebase manually by commenting `@dependabot rebase`.
+
+[//]: # (dependabot-automerge-start)
+[//]: # (dependabot-automerge-end)
+
+---
+
+<details>
+<summary>Dependabot commands and options</summary>
+<br />
+
+You can trigger Dependabot actions by commenting on this PR:
+- `@dependabot rebase` will rebase this PR
+- `@dependabot recreate` will recreate this PR, overwriting any edits that have been made to it
+- `@dependabot merge` will merge this PR after your CI passes on it
+- `@dependabot squash and merge` will squash and merge this PR after your CI passes on it
+- `@dependabot cancel merge` will cancel a previously requested merge and block automerging
+- `@dependabot reopen` will reopen this PR if it is closed
+- `@dependabot close` will close this PR and stop Dependabot recreating it. You can achieve the same result by closing it manually
+- `@dependabot show <dependency name> ignore conditions` will show all of the ignore conditions of the specified dependency
+- `@dependabot ignore this major version` will close this PR and stop Dependabot creating any more for this major version (unless you reopen the PR or upgrade to it yourself)
+- `@dependabot ignore this minor version` will close this PR and stop Dependabot creating any more for this minor version (unless you reopen the PR or upgrade to it yourself)
+- `@dependabot ignore this dependency` will close this PR and stop Dependabot creating any more for this dependency (unless you reopen the PR or upgrade to it yourself)
+
+
+</details>
+----------------------------------------
+
+PR #1691: Bump org.apache.pdfbox:pdfbox from 3.0.2 to 3.0.3
+Author: dependabot[bot]
+Merged at: 2024-08-15 21:57:45+00:00
+URL: https://github.com/Stirling-Tools/Stirling-PDF/pull/1691
+Description:
+Bumps org.apache.pdfbox:pdfbox from 3.0.2 to 3.0.3.
+
+
+[![Dependabot compatibility score](https://dependabot-badges.githubapp.com/badges/compatibility_score?dependency-name=org.apache.pdfbox:pdfbox&package-manager=gradle&previous-version=3.0.2&new-version=3.0.3)](https://docs.github.com/en/github/managing-security-vulnerabilities/about-dependabot-security-updates#about-compatibility-scores)
+
+Dependabot will resolve any conflicts with this PR as long as you don't alter it yourself. You can also trigger a rebase manually by commenting `@dependabot rebase`.
+
+[//]: # (dependabot-automerge-start)
+[//]: # (dependabot-automerge-end)
+
+---
+
+<details>
+<summary>Dependabot commands and options</summary>
+<br />
+
+You can trigger Dependabot actions by commenting on this PR:
+- `@dependabot rebase` will rebase this PR
+- `@dependabot recreate` will recreate this PR, overwriting any edits that have been made to it
+- `@dependabot merge` will merge this PR after your CI passes on it
+- `@dependabot squash and merge` will squash and merge this PR after your CI passes on it
+- `@dependabot cancel merge` will cancel a previously requested merge and block automerging
+- `@dependabot reopen` will reopen this PR if it is closed
+- `@dependabot close` will close this PR and stop Dependabot recreating it. You can achieve the same result by closing it manually
+- `@dependabot show <dependency name> ignore conditions` will show all of the ignore conditions of the specified dependency
+- `@dependabot ignore this major version` will close this PR and stop Dependabot creating any more for this major version (unless you reopen the PR or upgrade to it yourself)
+- `@dependabot ignore this minor version` will close this PR and stop Dependabot creating any more for this minor version (unless you reopen the PR or upgrade to it yourself)
+- `@dependabot ignore this dependency` will close this PR and stop Dependabot creating any more for this dependency (unless you reopen the PR or upgrade to it yourself)
+
+
+</details>
+----------------------------------------
+
+PR #1686: Bump edu.sc.seis.launch4j from 3.0.5 to 3.0.6
+Author: dependabot[bot]
+Merged at: 2024-08-15 21:41:03+00:00
+URL: https://github.com/Stirling-Tools/Stirling-PDF/pull/1686
+Description:
+Bumps edu.sc.seis.launch4j from 3.0.5 to 3.0.6.
+
+
+[![Dependabot compatibility score](https://dependabot-badges.githubapp.com/badges/compatibility_score?dependency-name=edu.sc.seis.launch4j&package-manager=gradle&previous-version=3.0.5&new-version=3.0.6)](https://docs.github.com/en/github/managing-security-vulnerabilities/about-dependabot-security-updates#about-compatibility-scores)
+
+Dependabot will resolve any conflicts with this PR as long as you don't alter it yourself. You can also trigger a rebase manually by commenting `@dependabot rebase`.
+
+[//]: # (dependabot-automerge-start)
+[//]: # (dependabot-automerge-end)
+
+---
+
+<details>
+<summary>Dependabot commands and options</summary>
+<br />
+
+You can trigger Dependabot actions by commenting on this PR:
+- `@dependabot rebase` will rebase this PR
+- `@dependabot recreate` will recreate this PR, overwriting any edits that have been made to it
+- `@dependabot merge` will merge this PR after your CI passes on it
+- `@dependabot squash and merge` will squash and merge this PR after your CI passes on it
+- `@dependabot cancel merge` will cancel a previously requested merge and block automerging
+- `@dependabot reopen` will reopen this PR if it is closed
+- `@dependabot close` will close this PR and stop Dependabot recreating it. You can achieve the same result by closing it manually
+- `@dependabot show <dependency name> ignore conditions` will show all of the ignore conditions of the specified dependency
+- `@dependabot ignore this major version` will close this PR and stop Dependabot creating any more for this major version (unless you reopen the PR or upgrade to it yourself)
+- `@dependabot ignore this minor version` will close this PR and stop Dependabot creating any more for this minor version (unless you reopen the PR or upgrade to it yourself)
+- `@dependabot ignore this dependency` will close this PR and stop Dependabot creating any more for this dependency (unless you reopen the PR or upgrade to it yourself)
+
+
+</details>
+----------------------------------------
+
+PR #1680: Bump org.springframework:spring-webmvc from 6.1.9 to 6.1.12
+Author: dependabot[bot]
+Merged at: 2024-08-15 21:36:26+00:00
+URL: https://github.com/Stirling-Tools/Stirling-PDF/pull/1680
+Description:
+Bumps [org.springframework:spring-webmvc](https://github.com/spring-projects/spring-framework) from 6.1.9 to 6.1.12.
+<details>
+<summary>Release notes</summary>
+<p><em>Sourced from <a href="https://github.com/spring-projects/spring-framework/releases">org.springframework:spring-webmvc's releases</a>.</em></p>
+<blockquote>
+<h2>v6.1.12</h2>
+<h2>:star: New Features</h2>
+<ul>
+<li>Efficient handling of conditional HTTP requests <a href="https://redirect.github.com/spring-projects/spring-framework/issues/33372">#33372</a></li>
+<li>LocaleEditor cannot parse language tag with script like zh-Hans <a href="https://redirect.github.com/spring-projects/spring-framework/issues/33348">#33348</a></li>
+<li>Reinstate qualifier support for legacy JSR-330 <code>@javax.inject.Named</code> annotation <a href="https://redirect.github.com/spring-projects/spring-framework/issues/33345">#33345</a></li>
+<li>SimpleAsyncTaskScheduler stops accepting new tasks when isShutdown <a href="https://redirect.github.com/spring-projects/spring-framework/pull/33336">#33336</a></li>
+</ul>
+<h2>:lady_beetle: Bug Fixes</h2>
+<ul>
+<li>Fix incorrect weak ETag validation <a href="https://redirect.github.com/spring-projects/spring-framework/pull/33374">#33374</a></li>
+<li>Avoid CacheAspectSupport#findInCaches falling through to the reactiveCachingHandler <a href="https://redirect.github.com/spring-projects/spring-framework/issues/33371">#33371</a></li>
+<li>ScheduledAnnotationReactiveSupport starts the observation before it is opened <a href="https://redirect.github.com/spring-projects/spring-framework/issues/33349">#33349</a></li>
+<li>RestClient observation flags error for UnknownContentTypeException twice <a href="https://redirect.github.com/spring-projects/spring-framework/issues/33347">#33347</a></li>
+<li>RestClient instrumentation unnecessarily calls stop on a closed observation <a href="https://redirect.github.com/spring-projects/spring-framework/issues/33346">#33346</a></li>
+<li><code>SimpleEvaluationContext</code> does not enforce read-only semantics <a href="https://redirect.github.com/spring-projects/spring-framework/issues/33319">#33319</a></li>
+<li>SpEL wraps primitive array in <code>Object[]</code> when invoking varargs method <a href="https://redirect.github.com/spring-projects/spring-framework/issues/33317">#33317</a></li>
+<li>SpEL no longer supports lists for varargs invocations <a href="https://redirect.github.com/spring-projects/spring-framework/issues/33315">#33315</a></li>
+<li>SpEL <code>Indexer</code> silently ignores failure to set property as index <a href="https://redirect.github.com/spring-projects/spring-framework/issues/33310">#33310</a></li>
+<li>AOT-generated code produces deprecation warnings when using a deprecated class for autowiring <a href="https://redirect.github.com/spring-projects/spring-framework/issues/33295">#33295</a></li>
+<li><code>@Scheduled</code> method in test class not supported anymore <a href="https://redirect.github.com/spring-projects/spring-framework/issues/33286">#33286</a></li>
+<li>AOT-generated code produces deprecation warnings when referencing a nested class of a deprecated class <a href="https://redirect.github.com/spring-projects/spring-framework/issues/33273">#33273</a></li>
+<li>Jaxb2XmlEncoder does not support JAXBElement subtypes <a href="https://redirect.github.com/spring-projects/spring-framework/pull/33258">#33258</a></li>
+<li>ShallowEtagHeaderFilter throws a NumberFormatException for responses bigger than 2Gb <a href="https://redirect.github.com/spring-projects/spring-framework/issues/33256">#33256</a></li>
+<li>RequestPredicates fail with UnsupportedOperationException with a custom servlet path <a href="https://redirect.github.com/spring-projects/spring-framework/issues/33251">#33251</a></li>
+<li>Missing observation for <code>@JmsListener</code> response messages <a href="https://redirect.github.com/spring-projects/spring-framework/issues/33221">#33221</a></li>
+<li><code>ConversionService</code> cannot convert primitive array to <code>Object[]</code> <a href="https://redirect.github.com/spring-projects/spring-framework/issues/33212">#33212</a></li>
+<li>Spring coroutines AOP is not compatible with <code>@Cacheable</code> <a href="https://redirect.github.com/spring-projects/spring-framework/issues/33210">#33210</a></li>
+<li>PathMatchingResourcePatternResolver#convertClassLoaderURL drops URLStreamHandler in version 6.1.x <a href="https://redirect.github.com/spring-projects/spring-framework/issues/33199">#33199</a></li>
+<li>SpEL cannot invoke varargs <code>MethodHandle</code> function with a primitive array <a href="https://redirect.github.com/spring-projects/spring-framework/issues/33198">#33198</a></li>
+<li>Trim last allowed origin when parsing comma-delimited string <a href="https://redirect.github.com/spring-projects/spring-framework/pull/33181">#33181</a></li>
+<li>Multipart files not deleted after upload is finished with async request <a href="https://redirect.github.com/spring-projects/spring-framework/issues/33161">#33161</a></li>
+<li>JaxbContextContainer does not define the ClassLoader to use to retrieve the JAXBContext to use <a href="https://redirect.github.com/spring-projects/spring-framework/issues/33158">#33158</a></li>
+<li>Memory Leak in WebFlux application handling HTTP Multipart <a href="https://redirect.github.com/spring-projects/spring-framework/issues/33094">#33094</a></li>
+<li>Support invoking bridged suspending functions in <code>AopUtils</code> <a href="https://redirect.github.com/spring-projects/spring-framework/issues/33045">#33045</a></li>
+</ul>
+<h2>:notebook_with_decorative_cover: Documentation</h2>
+<ul>
+<li>Fix typo in the bean validation section of the reference manual <a href="https://redirect.github.com/spring-projects/spring-framework/pull/33354">#33354</a></li>
+<li>Fix syntax error in <code>RestClient</code> documentation <a href="https://redirect.github.com/spring-projects/spring-framework/pull/33350">#33350</a></li>
+<li>Add Kotlin example for expectAll() <a href="https://redirect.github.com/spring-projects/spring-framework/pull/33341">#33341</a></li>
+<li>Javadoc of ReactorResourceFactory#setConnectionProviderSupplier wrongly states it can be ignored <a href="https://redirect.github.com/spring-projects/spring-framework/issues/33338">#33338</a></li>
+<li>Improve EnableCaching &amp; CachingConfigurer Javadoc <a href="https://redirect.github.com/spring-projects/spring-framework/issues/33288">#33288</a></li>
+<li>Code sample has wrong reference to configurePathMatching <a href="https://redirect.github.com/spring-projects/spring-framework/pull/33277">#33277</a></li>
+<li>Document that NoOpResponseErrorHandler is to be used with the RestTemplate <a href="https://redirect.github.com/spring-projects/spring-framework/issues/33276">#33276</a></li>
+<li>Stop referring to Oracle STRUCT and ARRAY as they are deprecated <a href="https://redirect.github.com/spring-projects/spring-framework/pull/33248">#33248</a></li>
+<li>Update links in reference manual <a href="https://redirect.github.com/spring-projects/spring-framework/pull/33245">#33245</a></li>
+</ul>
+<h2>:hammer: Dependency Upgrades</h2>
+<!-- raw HTML omitted -->
+</blockquote>
+<p>... (truncated)</p>
+</details>
+<details>
+<summary>Commits</summary>
+<ul>
+<li><a href="https://github.com/spring-projects/spring-framework/commit/34764252dcd1a74db7c965059835d3655b70e528"><code>3476425</code></a> Release v6.1.12</li>
+<li><a href="https://github.com/spring-projects/spring-framework/commit/bb17ad8314b81850a939fd265fb53b3361705e85"><code>bb17ad8</code></a> Efficient ETag parsing</li>
+<li><a href="https://github.com/spring-projects/spring-framework/commit/63486bf19cfb4d61004b565b08789fd12baaf0b4"><code>63486bf</code></a> Upgrade to Tomcat 10.1.28, Jetty 12.0.12, Netty 4.1.112, Undertow 2.3.15</li>
+<li><a href="https://github.com/spring-projects/spring-framework/commit/d0bff584d7a2b276cb76669662189a5938be055a"><code>d0bff58</code></a> Polishing</li>
+<li><a href="https://github.com/spring-projects/spring-framework/commit/8be5010f5d1d57667e7612f835d3ff591817ac0a"><code>8be5010</code></a> LocaleEditor supports BCP 47 language tags as well</li>
+<li><a href="https://github.com/spring-projects/spring-framework/commit/86761cd2337db656aae7218a24f16fb8ad2da72c"><code>86761cd</code></a> Upgrade to Reactor 2023.0.9</li>
+<li><a href="https://github.com/spring-projects/spring-framework/commit/07cdef410ed828546f741dacf8ae03b62193213b"><code>07cdef4</code></a> Upgrade to Micrometer 1.12.9</li>
+<li><a href="https://github.com/spring-projects/spring-framework/commit/e74406afd09fefb3bac59c8e0feef3a9aceead1d"><code>e74406a</code></a> Introduce withAssignmentDisabled() option for SimpleEvaluationContext</li>
+<li><a href="https://github.com/spring-projects/spring-framework/commit/fe4fd004291a1f2704281eb839609cf9e2fb5bea"><code>fe4fd00</code></a> Polishing contribution</li>
+<li><a href="https://github.com/spring-projects/spring-framework/commit/1703b71563ed6b159965c8962b71015c9f74c583"><code>1703b71</code></a> Fix incorrect weak ETag assertion</li>
+<li>Additional commits viewable in <a href="https://github.com/spring-projects/spring-framework/compare/v6.1.9...v6.1.12">compare view</a></li>
+</ul>
+</details>
+<br />
+
+
+[![Dependabot compatibility score](https://dependabot-badges.githubapp.com/badges/compatibility_score?dependency-name=org.springframework:spring-webmvc&package-manager=gradle&previous-version=6.1.9&new-version=6.1.12)](https://docs.github.com/en/github/managing-security-vulnerabilities/about-dependabot-security-updates#about-compatibility-scores)
+
+Dependabot will resolve any conflicts with this PR as long as you don't alter it yourself. You can also trigger a rebase manually by commenting `@dependabot rebase`.
+
+[//]: # (dependabot-automerge-start)
+[//]: # (dependabot-automerge-end)
+
+---
+
+<details>
+<summary>Dependabot commands and options</summary>
+<br />
+
+You can trigger Dependabot actions by commenting on this PR:
+- `@dependabot rebase` will rebase this PR
+- `@dependabot recreate` will recreate this PR, overwriting any edits that have been made to it
+- `@dependabot merge` will merge this PR after your CI passes on it
+- `@dependabot squash and merge` will squash and merge this PR after your CI passes on it
+- `@dependabot cancel merge` will cancel a previously requested merge and block automerging
+- `@dependabot reopen` will reopen this PR if it is closed
+- `@dependabot close` will close this PR and stop Dependabot recreating it. You can achieve the same result by closing it manually
+- `@dependabot show <dependency name> ignore conditions` will show all of the ignore conditions of the specified dependency
+- `@dependabot ignore this major version` will close this PR and stop Dependabot creating any more for this major version (unless you reopen the PR or upgrade to it yourself)
+- `@dependabot ignore this minor version` will close this PR and stop Dependabot creating any more for this minor version (unless you reopen the PR or upgrade to it yourself)
+- `@dependabot ignore this dependency` will close this PR and stop Dependabot creating any more for this dependency (unless you reopen the PR or upgrade to it yourself)
+
+
+</details>
+----------------------------------------
+
+PR #1683: Bump com.bucket4j:bucket4j_jdk17-core from 8.12.1 to 8.13.1
+Author: dependabot[bot]
+Merged at: 2024-08-15 21:34:05+00:00
+URL: https://github.com/Stirling-Tools/Stirling-PDF/pull/1683
+Description:
+Bumps [com.bucket4j:bucket4j_jdk17-core](https://github.com/bucket4j/bucket4j) from 8.12.1 to 8.13.1.
+<details>
+<summary>Release notes</summary>
+<p><em>Sourced from <a href="https://github.com/bucket4j/bucket4j/releases">com.bucket4j:bucket4j_jdk17-core's releases</a>.</em></p>
+<blockquote>
+<h2>8.13.0</h2>
+<h2>Bucket4j 8.13.0 release notes</h2>
+<h3>The bugfixes in release scope are following:</h3>
+<ul>
+<li><a href="https://redirect.github.com/bucket4j/bucket4j/issues/494">#494 Remove unnecessary logback configuration from maven artifacts</a></li>
+</ul>
+<h3>The features/enhancements in release scope are following:</h3>
+<ul>
+<li><a href="https://redirect.github.com/bucket4j/bucket4j/issues/495">#495 support for Infinispan Hotrod Client</a></li>
+</ul>
+<p><strong>Full Changelog</strong>: <a href="https://github.com/bucket4j/bucket4j/compare/8.12.0...8.13.0">https://github.com/bucket4j/bucket4j/compare/8.12.0...8.13.0</a></p>
+</blockquote>
+</details>
+<details>
+<summary>Commits</summary>
+<ul>
+<li>See full diff in <a href="https://github.com/bucket4j/bucket4j/commits">compare view</a></li>
+</ul>
+</details>
+<br />
+
+
+[![Dependabot compatibility score](https://dependabot-badges.githubapp.com/badges/compatibility_score?dependency-name=com.bucket4j:bucket4j_jdk17-core&package-manager=gradle&previous-version=8.12.1&new-version=8.13.1)](https://docs.github.com/en/github/managing-security-vulnerabilities/about-dependabot-security-updates#about-compatibility-scores)
+
+Dependabot will resolve any conflicts with this PR as long as you don't alter it yourself. You can also trigger a rebase manually by commenting `@dependabot rebase`.
+
+[//]: # (dependabot-automerge-start)
+[//]: # (dependabot-automerge-end)
+
+---
+
+<details>
+<summary>Dependabot commands and options</summary>
+<br />
+
+You can trigger Dependabot actions by commenting on this PR:
+- `@dependabot rebase` will rebase this PR
+- `@dependabot recreate` will recreate this PR, overwriting any edits that have been made to it
+- `@dependabot merge` will merge this PR after your CI passes on it
+- `@dependabot squash and merge` will squash and merge this PR after your CI passes on it
+- `@dependabot cancel merge` will cancel a previously requested merge and block automerging
+- `@dependabot reopen` will reopen this PR if it is closed
+- `@dependabot close` will close this PR and stop Dependabot recreating it. You can achieve the same result by closing it manually
+- `@dependabot show <dependency name> ignore conditions` will show all of the ignore conditions of the specified dependency
+- `@dependabot ignore this major version` will close this PR and stop Dependabot creating any more for this major version (unless you reopen the PR or upgrade to it yourself)
+- `@dependabot ignore this minor version` will close this PR and stop Dependabot creating any more for this minor version (unless you reopen the PR or upgrade to it yourself)
+- `@dependabot ignore this dependency` will close this PR and stop Dependabot creating any more for this dependency (unless you reopen the PR or upgrade to it yourself)
+
+
+</details>
+----------------------------------------
+
+PR #1684: Bump org.projectlombok:lombok from 1.18.32 to 1.18.34
+Author: dependabot[bot]
+Merged at: 2024-08-15 21:31:57+00:00
+URL: https://github.com/Stirling-Tools/Stirling-PDF/pull/1684
+Description:
+Bumps [org.projectlombok:lombok](https://github.com/projectlombok/lombok) from 1.18.32 to 1.18.34.
+<details>
+<summary>Changelog</summary>
+<p><em>Sourced from <a href="https://github.com/projectlombok/lombok/blob/master/doc/changelog.markdown">org.projectlombok:lombok's changelog</a>.</em></p>
+<blockquote>
+<h3>v1.18.34 (June 28th, 2024)</h3>
+<ul>
+<li>PLATFORM: Added support for Eclipse 2024-06; you'd get some <code>NoSuchMethodError</code> traces in your logs if using <code>@Builder</code> or <code>@Singular</code> prior to this fix. [Issue <a href="https://redirect.github.com/projectlombok/lombok/issues/3638">#3638</a>](<a href="https://redirect.github.com/projectlombok/lombok/issues/3638">projectlombok/lombok#3638</a>).</li>
+<li>IMPROBABLE BREAKING CHANGE: Lombok now adds <code>@lombok.Generated</code> by default to methods and types it generates. This may result in accidentally increasing your test coverage percentage. [Issue <a href="https://redirect.github.com/projectlombok/lombok/issues/3667">#3667</a>](<a href="https://redirect.github.com/projectlombok/lombok/issues/3667">projectlombok/lombok#3667</a>).</li>
+<li>IMPROBABLE BREAKING CHANGE: When <code>lombok.config</code> contains <code>lombok.onX.flagUsage = WARNING</code>, from now on warnings will actually be generated if onX is used.[Issue <a href="https://redirect.github.com/projectlombok/lombok/issues/2848">#2848</a>](<a href="https://redirect.github.com/projectlombok/lombok/issues/2848">projectlombok/lombok#2848</a>)</li>
+<li>BUGFIX: When <code>@SuperBuilder</code> was used on a type with an generic array type, it would error <code>wrong number of type arguments</code>.  [Issue <a href="https://redirect.github.com/projectlombok/lombok/issues/3694">#3694</a>](<a href="https://redirect.github.com/projectlombok/lombok/issues/3694">projectlombok/lombok#3694</a>).</li>
+<li>FEATURE: Lombok generates javadoc for you for most of the methods it adds; with this release, javadoc is also added to generated constructors. [Issue <a href="https://redirect.github.com/projectlombok/lombok/issues/933">#933</a>](<a href="https://redirect.github.com/projectlombok/lombok/issues/933">projectlombok/lombok#933</a>).</li>
+</ul>
+</blockquote>
+</details>
+<details>
+<summary>Commits</summary>
+<ul>
+<li><a href="https://github.com/projectlombok/lombok/commit/fbbe7f07c817df5e8b7079b64a023749dcff2127"><code>fbbe7f0</code></a> [release] pre-release version bump</li>
+<li><a href="https://github.com/projectlombok/lombok/commit/3cd41e8fa00adafac52a401f50ef6628f4153258"><code>3cd41e8</code></a> [trivial] some test cases were failing (due to the constructor-javadoc update...</li>
+<li><a href="https://github.com/projectlombok/lombok/commit/1384244b1331c3e078af2ab8ea3bbc71bcb5de1d"><code>1384244</code></a> Merge pull request <a href="https://redirect.github.com/projectlombok/lombok/issues/3698">#3698</a> from stevebosman/fix-sneaky-throws-doc</li>
+<li><a href="https://github.com/projectlombok/lombok/commit/d90ec73e571ceb958c28e9925d0e9d8057fa5ba9"><code>d90ec73</code></a> [trivial] [style]</li>
+<li><a href="https://github.com/projectlombok/lombok/commit/3b68e39d1003125d9b152542df0b4d87abba51dc"><code>3b68e39</code></a> Merge pull request <a href="https://redirect.github.com/projectlombok/lombok/issues/3697">#3697</a> from janrieke/superbuilder-fix-array-type-param</li>
+<li><a href="https://github.com/projectlombok/lombok/commit/fdafa9a0a69009d508578287e53d9cb57edc5deb"><code>fdafa9a</code></a> Merge pull request <a href="https://redirect.github.com/projectlombok/lombok/issues/3690">#3690</a> from Rawi01/eclipse_2024_06</li>
+<li><a href="https://github.com/projectlombok/lombok/commit/78c1f471763d9434a8e25b58bccfaf390e59a195"><code>78c1f47</code></a> Merge pull request <a href="https://redirect.github.com/projectlombok/lombok/issues/3689">#3689</a> from Rawi01/nested-javadoc</li>
+<li><a href="https://github.com/projectlombok/lombok/commit/da815a66d1d18f50a318dda3c7db0e283313e436"><code>da815a6</code></a> Merge pull request <a href="https://redirect.github.com/projectlombok/lombok/issues/3674">#3674</a> from Rawi01/standardexception-fields</li>
+<li><a href="https://github.com/projectlombok/lombok/commit/c61a404b410bd482fcd6a48d303fb483932214d0"><code>c61a404</code></a> [trivial]</li>
+<li><a href="https://github.com/projectlombok/lombok/commit/6cf6caf468710fbcbb11165ad0bc2548aa8f84e3"><code>6cf6caf</code></a> Merge pull request <a href="https://redirect.github.com/projectlombok/lombok/issues/3673">#3673</a> from Rawi01/eclipse_field_generated</li>
+<li>Additional commits viewable in <a href="https://github.com/projectlombok/lombok/compare/v1.18.32...v1.18.34">compare view</a></li>
+</ul>
+</details>
+<br />
+
+
+[![Dependabot compatibility score](https://dependabot-badges.githubapp.com/badges/compatibility_score?dependency-name=org.projectlombok:lombok&package-manager=gradle&previous-version=1.18.32&new-version=1.18.34)](https://docs.github.com/en/github/managing-security-vulnerabilities/about-dependabot-security-updates#about-compatibility-scores)
+
+Dependabot will resolve any conflicts with this PR as long as you don't alter it yourself. You can also trigger a rebase manually by commenting `@dependabot rebase`.
+
+[//]: # (dependabot-automerge-start)
+[//]: # (dependabot-automerge-end)
+
+---
+
+<details>
+<summary>Dependabot commands and options</summary>
+<br />
+
+You can trigger Dependabot actions by commenting on this PR:
+- `@dependabot rebase` will rebase this PR
+- `@dependabot recreate` will recreate this PR, overwriting any edits that have been made to it
+- `@dependabot merge` will merge this PR after your CI passes on it
+- `@dependabot squash and merge` will squash and merge this PR after your CI passes on it
+- `@dependabot cancel merge` will cancel a previously requested merge and block automerging
+- `@dependabot reopen` will reopen this PR if it is closed
+- `@dependabot close` will close this PR and stop Dependabot recreating it. You can achieve the same result by closing it manually
+- `@dependabot show <dependency name> ignore conditions` will show all of the ignore conditions of the specified dependency
+- `@dependabot ignore this major version` will close this PR and stop Dependabot creating any more for this major version (unless you reopen the PR or upgrade to it yourself)
+- `@dependabot ignore this minor version` will close this PR and stop Dependabot creating any more for this minor version (unless you reopen the PR or upgrade to it yourself)
+- `@dependabot ignore this dependency` will close this PR and stop Dependabot creating any more for this dependency (unless you reopen the PR or upgrade to it yourself)
+
+
+</details>
+----------------------------------------
+
+PR #1667: Bump io.github.pixee:java-security-toolkit from 1.1.3 to 1.2.0
+Author: dependabot[bot]
+Merged at: 2024-08-15 21:01:41+00:00
+URL: https://github.com/Stirling-Tools/Stirling-PDF/pull/1667
+Description:
+[//]: # (dependabot-start)
+⚠️  **Dependabot is rebasing this PR** ⚠️ 
+
+Rebasing might not happen immediately, so don't worry if this takes some time.
+
+Note: if you make any changes to this PR yourself, they will take precedence over the rebase.
+
+---
+
+[//]: # (dependabot-end)
+
+Bumps [io.github.pixee:java-security-toolkit](https://github.com/pixee/java-security-toolkit) from 1.1.3 to 1.2.0.
+<details>
+<summary>Release notes</summary>
+<p><em>Sourced from <a href="https://github.com/pixee/java-security-toolkit/releases">io.github.pixee:java-security-toolkit's releases</a>.</em></p>
+<blockquote>
+<h2>v1.2.0</h2>
+<h2>Commits</h2>
+<ul>
+<li>e1187e9: :sparkles: add support for checking commands invoked with ProcessBuilder (Ryan Dens) <a href="https://redirect.github.com/pixee/java-security-toolkit/pull/24">#24</a></li>
+<li>6d6b294: Autogenerated JaCoCo coverage badge (Jacoco Coverage Update Action) <a href="https://redirect.github.com/pixee/java-security-toolkit/pull/24">#24</a></li>
+<li>29d0727: add jndi helper tools (Arshan Dabirsiaghi) <a href="https://redirect.github.com/pixee/java-security-toolkit/pull/32">#32</a></li>
+<li>5d72fe7: add module import (Arshan Dabirsiaghi) <a href="https://redirect.github.com/pixee/java-security-toolkit/pull/32">#32</a></li>
+<li>8aea291: Autogenerated JaCoCo coverage badge (Jacoco Coverage Update Action) <a href="https://redirect.github.com/pixee/java-security-toolkit/pull/32">#32</a></li>
+<li>1eb98ad: still support simple named resources when protocol restrictions are present (Arshan Dabirsiaghi) <a href="https://redirect.github.com/pixee/java-security-toolkit/pull/32">#32</a></li>
+<li>f9a37d7: Autogenerated JaCoCo coverage badge (Jacoco Coverage Update Action) <a href="https://redirect.github.com/pixee/java-security-toolkit/pull/32">#32</a></li>
+<li>f523a09: bump version (Arshan Dabirsiaghi) <a href="https://redirect.github.com/pixee/java-security-toolkit/pull/32">#32</a></li>
+</ul>
+</blockquote>
+</details>
+<details>
+<summary>Commits</summary>
+<ul>
+<li><a href="https://github.com/pixee/java-security-toolkit/commit/bf8ff4ba526dde2541ea1ac5bd9fbcf41a00525f"><code>bf8ff4b</code></a> Merge pull request <a href="https://redirect.github.com/pixee/java-security-toolkit/issues/32">#32</a> from pixee/add_jndi_api</li>
+<li><a href="https://github.com/pixee/java-security-toolkit/commit/f523a091bc11f30df046d200354300428ab2c2a0"><code>f523a09</code></a> bump version</li>
+<li><a href="https://github.com/pixee/java-security-toolkit/commit/f9a37d7b56e68e2c9238a93c5fec0ead3c62f46d"><code>f9a37d7</code></a> Autogenerated JaCoCo coverage badge</li>
+<li><a href="https://github.com/pixee/java-security-toolkit/commit/1eb98ad894b7c5a65a420702044d6170f3054c23"><code>1eb98ad</code></a> still support simple named resources when protocol restrictions are present</li>
+<li><a href="https://github.com/pixee/java-security-toolkit/commit/8aea291f9400556ca5db3f6e36648a1512a980fb"><code>8aea291</code></a> Autogenerated JaCoCo coverage badge</li>
+<li><a href="https://github.com/pixee/java-security-toolkit/commit/5d72fe7350b86d986ae3e3b03c2ad9387a5c366f"><code>5d72fe7</code></a> add module import</li>
+<li><a href="https://github.com/pixee/java-security-toolkit/commit/29d0727624f4f111ec3c15a23b12384b558a68ce"><code>29d0727</code></a> add jndi helper tools</li>
+<li><a href="https://github.com/pixee/java-security-toolkit/commit/6d6b2946888591cc03ff948817af4925091483f1"><code>6d6b294</code></a> Autogenerated JaCoCo coverage badge</li>
+<li><a href="https://github.com/pixee/java-security-toolkit/commit/e1187e91989e63c521b59ccd8e5c24c9773bd1ea"><code>e1187e9</code></a> :sparkles: add support for checking commands invoked with ProcessBuilder</li>
+<li>See full diff in <a href="https://github.com/pixee/java-security-toolkit/compare/v1.1.3...v1.2.0">compare view</a></li>
+</ul>
+</details>
+<br />
+
+
+[![Dependabot compatibility score](https://dependabot-badges.githubapp.com/badges/compatibility_score?dependency-name=io.github.pixee:java-security-toolkit&package-manager=gradle&previous-version=1.1.3&new-version=1.2.0)](https://docs.github.com/en/github/managing-security-vulnerabilities/about-dependabot-security-updates#about-compatibility-scores)
+
+Dependabot will resolve any conflicts with this PR as long as you don't alter it yourself. You can also trigger a rebase manually by commenting `@dependabot rebase`.
+
+[//]: # (dependabot-automerge-start)
+[//]: # (dependabot-automerge-end)
+
+---
+
+<details>
+<summary>Dependabot commands and options</summary>
+<br />
+
+You can trigger Dependabot actions by commenting on this PR:
+- `@dependabot rebase` will rebase this PR
+- `@dependabot recreate` will recreate this PR, overwriting any edits that have been made to it
+- `@dependabot merge` will merge this PR after your CI passes on it
+- `@dependabot squash and merge` will squash and merge this PR after your CI passes on it
+- `@dependabot cancel merge` will cancel a previously requested merge and block automerging
+- `@dependabot reopen` will reopen this PR if it is closed
+- `@dependabot close` will close this PR and stop Dependabot recreating it. You can achieve the same result by closing it manually
+- `@dependabot show <dependency name> ignore conditions` will show all of the ignore conditions of the specified dependency
+- `@dependabot ignore this major version` will close this PR and stop Dependabot creating any more for this major version (unless you reopen the PR or upgrade to it yourself)
+- `@dependabot ignore this minor version` will close this PR and stop Dependabot creating any more for this minor version (unless you reopen the PR or upgrade to it yourself)
+- `@dependabot ignore this dependency` will close this PR and stop Dependabot creating any more for this dependency (unless you reopen the PR or upgrade to it yourself)
+
+
+</details>
+----------------------------------------
+
+PR #1670: Bump org.apache.pdfbox:xmpbox from 3.0.2 to 3.0.3
+Author: dependabot[bot]
+Merged at: 2024-08-15 21:01:03+00:00
+URL: https://github.com/Stirling-Tools/Stirling-PDF/pull/1670
+Description:
+Bumps org.apache.pdfbox:xmpbox from 3.0.2 to 3.0.3.
+
+
+[![Dependabot compatibility score](https://dependabot-badges.githubapp.com/badges/compatibility_score?dependency-name=org.apache.pdfbox:xmpbox&package-manager=gradle&previous-version=3.0.2&new-version=3.0.3)](https://docs.github.com/en/github/managing-security-vulnerabilities/about-dependabot-security-updates#about-compatibility-scores)
+
+Dependabot will resolve any conflicts with this PR as long as you don't alter it yourself. You can also trigger a rebase manually by commenting `@dependabot rebase`.
+
+[//]: # (dependabot-automerge-start)
+[//]: # (dependabot-automerge-end)
+
+---
+
+<details>
+<summary>Dependabot commands and options</summary>
+<br />
+
+You can trigger Dependabot actions by commenting on this PR:
+- `@dependabot rebase` will rebase this PR
+- `@dependabot recreate` will recreate this PR, overwriting any edits that have been made to it
+- `@dependabot merge` will merge this PR after your CI passes on it
+- `@dependabot squash and merge` will squash and merge this PR after your CI passes on it
+- `@dependabot cancel merge` will cancel a previously requested merge and block automerging
+- `@dependabot reopen` will reopen this PR if it is closed
+- `@dependabot close` will close this PR and stop Dependabot recreating it. You can achieve the same result by closing it manually
+- `@dependabot show <dependency name> ignore conditions` will show all of the ignore conditions of the specified dependency
+- `@dependabot ignore this major version` will close this PR and stop Dependabot creating any more for this major version (unless you reopen the PR or upgrade to it yourself)
+- `@dependabot ignore this minor version` will close this PR and stop Dependabot creating any more for this minor version (unless you reopen the PR or upgrade to it yourself)
+- `@dependabot ignore this dependency` will close this PR and stop Dependabot creating any more for this dependency (unless you reopen the PR or upgrade to it yourself)
+
+
+</details>
+----------------------------------------
+
+PR #1661: Update messages_it_IT.properties - remove image in home
+Author: kmau
+Merged at: 2024-08-15 09:46:54+00:00
+URL: https://github.com/Stirling-Tools/Stirling-PDF/pull/1661
+Description:
+# Description
+
+Little fix for remove image translations in home.
+
+Closes #(issue_number)
+
+## Checklist:
+
+- [x] I have read the [Contribution Guidelines](https://github.com/Stirling-Tools/Stirling-PDF/blob/main/CONTRIBUTING.md)
+- [X] I have performed a self-review of my own code
+- [X] I have commented my code, particularly in hard-to-understand areas
+- [X] My changes generate no new warnings
+
+## Contributor License Agreement
+
+By submitting this pull request, I acknowledge and agree that my contributions will be included in Stirling-PDF and that they can be relicensed in the future under the MPL 2.0 (Mozilla Public License Version 2.0) license.
+
+(This does not change the general open-source nature of Stirling-PDF, simply moving from one license to another license)
+
+----------------------------------------
+
+PR #1675: :memo: Update README: Translation Progress Table
+Author: github-actions[bot]
+Merged at: 2024-08-15 09:45:20+00:00
+URL: https://github.com/Stirling-Tools/Stirling-PDF/pull/1675
+Description:
+Auto-generated by [create-pull-request][1]
+
+[1]: https://github.com/peter-evans/create-pull-request
+----------------------------------------
+
+PR #1673: Updated brazilian portuguese translation
+Author: rafaelchagas9
+Merged at: 2024-08-14 10:59:07+00:00
+URL: https://github.com/Stirling-Tools/Stirling-PDF/pull/1673
+Description:
+# Description
+
+Added some translations and updated some to be more accurate.
+
+## Checklist:
+
+- [x] I have read the [Contribution Guidelines](https://github.com/Stirling-Tools/Stirling-PDF/blob/main/CONTRIBUTING.md)
+- [x] I have performed a self-review of my own code
+- [x] I have commented my code, particularly in hard-to-understand areas
+- [x] My changes generate no new warnings
+
+## Contributor License Agreement
+
+By submitting this pull request, I acknowledge and agree that my contributions will be included in Stirling-PDF and that they can be relicensed in the future under the MPL 2.0 (Mozilla Public License Version 2.0) license.
+
+(This does not change the general open-source nature of Stirling-PDF, simply moving from one license to another license)
+
+----------------------------------------
+
+PR #1674: redesign footer
+Author: Ludy87
+Merged at: 2024-08-13 21:54:34+00:00
+URL: https://github.com/Stirling-Tools/Stirling-PDF/pull/1674
+Description:
+# Description
+
+## Old version:
+![old](https://github.com/user-attachments/assets/83791996-d55a-4dc9-a246-f01c8676cad0)
+
+## New version:
+![new](https://github.com/user-attachments/assets/3779d6f9-6eee-46fa-8c04-67c572a1034d)
+
+
+## Checklist:
+
+- [x] I have read the [Contribution Guidelines](https://github.com/Stirling-Tools/Stirling-PDF/blob/main/CONTRIBUTING.md)
+- [x] I have performed a self-review of my own code
+- [x] I have commented my code, particularly in hard-to-understand areas
+- [x] My changes generate no new warnings
+
+## Contributor License Agreement
+
+By submitting this pull request, I acknowledge and agree that my contributions will be included in Stirling-PDF and that they can be relicensed in the future under the MPL 2.0 (Mozilla Public License Version 2.0) license.
+
+(This does not change the general open-source nature of Stirling-PDF, simply moving from one license to another license)
+
+----------------------------------------
+
+PR #1655: :memo: Update README: Translation Progress Table
+Author: github-actions[bot]
+Merged at: 2024-08-09 07:58:31+00:00
+URL: https://github.com/Stirling-Tools/Stirling-PDF/pull/1655
+Description:
+Auto-generated by [create-pull-request][1]
+
+[1]: https://github.com/peter-evans/create-pull-request
+----------------------------------------
+
+PR #1654: Updated Japanese translation
+Author: tkymmm
+Merged at: 2024-08-09 06:39:36+00:00
+URL: https://github.com/Stirling-Tools/Stirling-PDF/pull/1654
+Description:
+# Description
+
+Please provide a summary of the changes, including relevant motivation and context.
+
+Closes #(issue_number)
+
+## Checklist:
+
+- [ ] I have read the [Contribution Guidelines](https://github.com/Stirling-Tools/Stirling-PDF/blob/main/CONTRIBUTING.md)
+- [ ] I have performed a self-review of my own code
+- [ ] I have commented my code, particularly in hard-to-understand areas
+- [ ] My changes generate no new warnings
+
+## Contributor License Agreement
+
+By submitting this pull request, I acknowledge and agree that my contributions will be included in Stirling-PDF and that they can be relicensed in the future under the MPL 2.0 (Mozilla Public License Version 2.0) license.
+
+(This does not change the general open-source nature of Stirling-PDF, simply moving from one license to another license)
+
+----------------------------------------
+
+PR #1651: :memo: Update README: Translation Progress Table
+Author: github-actions[bot]
+Merged at: 2024-08-08 21:29:02+00:00
+URL: https://github.com/Stirling-Tools/Stirling-PDF/pull/1651
+Description:
+Auto-generated by [create-pull-request][1]
+
+[1]: https://github.com/peter-evans/create-pull-request
+----------------------------------------
+
+PR #1649: Update messages_it_IT.properties
+Author: albanobattistella
+Merged at: 2024-08-08 21:06:14+00:00
+URL: https://github.com/Stirling-Tools/Stirling-PDF/pull/1649
+Description:
+# Description
+
+Please provide a summary of the changes, including relevant motivation and context.
+
+Closes #(issue_number)
+
+## Checklist:
+
+- [ ] I have read the [Contribution Guidelines](https://github.com/Stirling-Tools/Stirling-PDF/blob/main/CONTRIBUTING.md)
+- [ ] I have performed a self-review of my own code
+- [ ] I have commented my code, particularly in hard-to-understand areas
+- [ ] My changes generate no new warnings
+
+## Contributor License Agreement
+
+By submitting this pull request, I acknowledge and agree that my contributions will be included in Stirling-PDF and that they can be relicensed in the future under the MPL 2.0 (Mozilla Public License Version 2.0) license.
+
+(This does not change the general open-source nature of Stirling-PDF, simply moving from one license to another license)
+
+----------------------------------------
+
+
+FILE CHANGES
+--------------------------------------------------------------------------------
+
+File: .github/dependabot.yml
+Status: modified
+Changes: +2 -0
+Diff:
+@@ -9,6 +9,8 @@ updates:
+     directory: "/" # Location of package manifests
+     schedule:
+       interval: "weekly"
++    open-pull-requests-limit: 10
++    rebase-strategy: "auto"
+   - package-ecosystem: "docker"
+     directory: "/" # Location of Dockerfile
+     schedule:
+
+----------------------------------------
+
+File: .github/labeler-config.yml
+Status: modified
+Changes: +4 -0
+Diff:
+@@ -47,3 +47,7 @@ Test:
+   - changed-files:
+     - any-glob-to-any-file: 'cucumber/**/*'
+     - any-glob-to-any-file: 'src/test**/*'
++
++Github:
++  - changed-files:
++    - any-glob-to-any-file: '.github/**/*'
+
+----------------------------------------
+
+File: .github/workflows/auto-labeler.yml
+Status: modified
+Changes: +3 -1
+Diff:
+@@ -11,7 +11,9 @@ jobs:
+     runs-on: ubuntu-latest
+     steps:
+       - uses: actions/checkout@v4
+-      - uses: actions/labeler@v5
++      
++      - name: Apply Labels
++        uses: actions/labeler@v5
+         with:
+           repo-token: ${{ secrets.GITHUB_TOKEN }}
+
+----------------------------------------
+
+File: .github/workflows/build.yml
+Status: modified
+Changes: +56 -4
+Diff:
+@@ -1,4 +1,4 @@
+-name: "Build repo"
++name: Build repo
+ 
+ on:
+   push:
+@@ -17,20 +17,72 @@ jobs:
+ 
+     strategy:
+       fail-fast: false
++      matrix:
++        jdk-version: [17, 21]
+ 
+     steps:
+       - name: Checkout repository
+         uses: actions/checkout@v4
+ 
+-      - name: Set up JDK 17
++      - name: Set up JDK ${{ matrix.jdk-version }}
+         uses: actions/setup-java@v4
+         with:
+-          java-version: "17"
++          java-version: ${{ matrix.jdk-version }}
+           distribution: "temurin"
+ 
+-      - uses: gradle/actions/setup-gradle@v3
++      - name: Set up Gradle
+
+----------------------------------------
+
+File: .github/workflows/licenses-update.yml
+Status: modified
+Changes: +16 -0
+Diff:
+@@ -45,6 +45,7 @@ jobs:
+           git diff --staged --quiet || echo "CHANGES_DETECTED=true" >> $GITHUB_ENV
+ 
+       - name: Create Pull Request
++        id: cpr
+         if: env.CHANGES_DETECTED == 'true'
+         uses: peter-evans/create-pull-request@v6
+         with:
+@@ -58,5 +59,20 @@ jobs:
+           body: |
+
+----------------------------------------
+
+File: .github/workflows/test.yml
+Status: removed
+Changes: +0 -47
+Diff:
+@@ -1,47 +0,0 @@
+-name: Docker Compose Tests
+-
+-on:
+-  pull_request:
+-    paths:
+-      - "src/**"
+-      - "**.gradle"
+-      - "!src/main/java/resources/messages*"
+-      - "exampleYmlFiles/**"
+-      - "Dockerfile"
+-      - "Dockerfile**"
+-
+-jobs:
+-  test:
+-    runs-on: ubuntu-latest
+
+----------------------------------------
+
+File: README.md
+Status: modified
+Changes: +4 -3
+Diff:
+@@ -186,13 +186,13 @@ Stirling PDF currently supports 38!
+ | Hungarian (Magyar) (hu_HU)                  | ![75%](https://geps.dev/progress/75)   |
+ | Indonesia (Bahasa Indonesia) (id_ID)        | ![76%](https://geps.dev/progress/76)   |
+ | Irish (Gaeilge) (ga_IE)                     | ![98%](https://geps.dev/progress/98)   |
+-| Italian (Italiano) (it_IT)                  | ![98%](https://geps.dev/progress/98)   |
+-| Japanese (日本語) (ja_JP)                   | ![89%](https://geps.dev/progress/89)   |
++| Italian (Italiano) (it_IT)                  | ![99%](https://geps.dev/progress/99)   |
++| Japanese (日本語) (ja_JP)                   | ![92%](https://geps.dev/progress/92)   |
+ | Korean (한국어) (ko_KR)                     | ![84%](https://geps.dev/progress/84)   |
+ | Norwegian (Norsk) (no_NB)                   | ![97%](https://geps.dev/progress/97)   |
+
+----------------------------------------
+
+File: build.gradle
+Status: modified
+Changes: +42 -33
+Diff:
+@@ -4,19 +4,24 @@ plugins {
+     id "io.spring.dependency-management" version "1.1.6"
+     id "org.springdoc.openapi-gradle-plugin" version "1.8.0"
+     id "io.swagger.swaggerhub" version "1.3.2"
+-    id "edu.sc.seis.launch4j" version "3.0.5"
++    id "edu.sc.seis.launch4j" version "3.0.6"
+     id "com.diffplug.spotless" version "6.25.0"
+-    id "com.github.jk1.dependency-license-report" version "2.8"
++    id "com.github.jk1.dependency-license-report" version "2.9"
+ }
+ 
+ import com.github.jk1.license.render.*
+ 
+ ext {
+     springBootVersion = "3.3.2"
++    pdfboxVersion = "3.0.3"
++    logbackVersion = "1.5.7"
++    imageioVersion = "3.11.0"
++    lombokVersion = "1.18.34"
++    bouncycastleVersion = "1.78.1"	
+ }
+ 
+ group = "stirling.software"
+-version = "0.27.0"
++version = "0.28.0"
+ 
+ java {
+     // 17 is lowest but we support and recommend 21
+@@ -45,6 +50,7 @@ sourceSets {
+                 exclude "stirling/software/SPDF/model/AttemptCounter.java"
+                 exclude "stirling/software/SPDF/model/Authority.java"
+                 exclude "stirling/software/SPDF/model/PersistentLogin.java"
++                exclude "stirling/software/SPDF/model/SessionEntity.java"
+                 exclude "stirling/software/SPDF/model/User.java"
+                 exclude "stirling/software/SPDF/repository/**"
+             }
+@@ -100,11 +106,11 @@ tasks.wrapper {
+ 
+ dependencies {
+     //security updates
+-    implementation "ch.qos.logback:logback-classic:1.5.6"
+-    implementation "ch.qos.logback:logback-core:1.5.6"
+-    implementation "org.springframework:spring-webmvc:6.1.9"
++    implementation "ch.qos.logback:logback-classic:$logbackVersion"
++    implementation "ch.qos.logback:logback-core:$logbackVersion"
+
+----------------------------------------
+
+File: chart/stirling-pdf/Chart.yaml
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -1,5 +1,5 @@
+ apiVersion: v2
+-appVersion: 0.27.0
++appVersion: 0.28.0
+ description: locally hosted web application that allows you to perform various operations
+   on PDF files
+ home: https://github.com/Stirling-Tools/Stirling-PDF
+
+----------------------------------------
+
+File: src/main/java/stirling/software/SPDF/config/security/CustomAuthenticationFailureHandler.java
+Status: modified
+Changes: +25 -19
+Diff:
+@@ -3,9 +3,8 @@
+ import java.io.IOException;
+ import java.util.Optional;
+ 
+-import org.slf4j.Logger;
+-import org.slf4j.LoggerFactory;
+ import org.springframework.security.authentication.BadCredentialsException;
++import org.springframework.security.authentication.DisabledException;
+ import org.springframework.security.authentication.InternalAuthenticationServiceException;
+ import org.springframework.security.authentication.LockedException;
+ import org.springframework.security.core.AuthenticationException;
+@@ -15,17 +14,16 @@
+ import jakarta.servlet.ServletException;
+ import jakarta.servlet.http.HttpServletRequest;
+ import jakarta.servlet.http.HttpServletResponse;
++import lombok.extern.slf4j.Slf4j;
+ import stirling.software.SPDF.model.User;
+ 
++@Slf4j
+ public class CustomAuthenticationFailureHandler extends SimpleUrlAuthenticationFailureHandler {
+ 
+     private LoginAttemptService loginAttemptService;
+ 
+     private UserService userService;
+ 
+-    private static final Logger logger =
+-            LoggerFactory.getLogger(CustomAuthenticationFailureHandler.class);
+-
+     public CustomAuthenticationFailureHandler(
+
+----------------------------------------
+
+File: src/main/java/stirling/software/SPDF/config/security/CustomAuthenticationSuccessHandler.java
+Status: modified
+Changes: +10 -1
+Diff:
+@@ -10,15 +10,20 @@
+ import jakarta.servlet.http.HttpServletRequest;
+ import jakarta.servlet.http.HttpServletResponse;
+ import jakarta.servlet.http.HttpSession;
++import lombok.extern.slf4j.Slf4j;
+ import stirling.software.SPDF.utils.RequestUriUtils;
+ 
++@Slf4j
+ public class CustomAuthenticationSuccessHandler
+         extends SavedRequestAwareAuthenticationSuccessHandler {
+ 
+
+----------------------------------------
+
+File: src/main/java/stirling/software/SPDF/config/security/CustomLogoutSuccessHandler.java
+Status: modified
+Changes: +6 -12
+Diff:
+@@ -2,32 +2,26 @@
+ 
+ import java.io.IOException;
+ 
+-import org.springframework.beans.factory.annotation.Autowired;
+ import org.springframework.security.core.Authentication;
+-import org.springframework.security.core.session.SessionRegistry;
+ import org.springframework.security.web.authentication.logout.SimpleUrlLogoutSuccessHandler;
+ 
+ import jakarta.servlet.ServletException;
+ import jakarta.servlet.http.HttpServletRequest;
+ import jakarta.servlet.http.HttpServletResponse;
+-import jakarta.servlet.http.HttpSession;
+
+----------------------------------------
+
+File: src/main/java/stirling/software/SPDF/config/security/LoginAttemptService.java
+Status: modified
+Changes: +0 -4
+Diff:
+@@ -3,8 +3,6 @@
+ import java.util.concurrent.ConcurrentHashMap;
+ import java.util.concurrent.TimeUnit;
+ 
+-import org.slf4j.Logger;
+-import org.slf4j.LoggerFactory;
+ import org.springframework.beans.factory.annotation.Autowired;
+ import org.springframework.stereotype.Service;
+ 
+@@ -17,8 +15,6 @@ public class LoginAttemptService {
+
+----------------------------------------
+
+File: src/main/java/stirling/software/SPDF/config/security/SecurityConfiguration.java
+Status: modified
+Changes: +12 -15
+Diff:
+@@ -18,8 +18,6 @@
+ import org.springframework.security.core.GrantedAuthority;
+ import org.springframework.security.core.authority.SimpleGrantedAuthority;
+ import org.springframework.security.core.authority.mapping.GrantedAuthoritiesMapper;
+-import org.springframework.security.core.session.SessionRegistry;
+-import org.springframework.security.core.session.SessionRegistryImpl;
+ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+ import org.springframework.security.crypto.password.PasswordEncoder;
+ import org.springframework.security.oauth2.client.registration.ClientRegistration;
+@@ -37,6 +35,7 @@
+ import stirling.software.SPDF.config.security.oauth2.CustomOAuth2AuthenticationSuccessHandler;
+ import stirling.software.SPDF.config.security.oauth2.CustomOAuth2LogoutSuccessHandler;
+ import stirling.software.SPDF.config.security.oauth2.CustomOAuth2UserService;
++import stirling.software.SPDF.config.security.session.SessionPersistentRegistry;
+ import stirling.software.SPDF.model.ApplicationProperties;
+ import stirling.software.SPDF.model.ApplicationProperties.Security.OAUTH2;
+ import stirling.software.SPDF.model.ApplicationProperties.Security.OAUTH2.Client;
+@@ -47,7 +46,7 @@
+ import stirling.software.SPDF.repository.JPATokenRepositoryImpl;
+ 
+ @Configuration
+-@EnableWebSecurity()
++@EnableWebSecurity
+ @EnableMethodSecurity
+ public class SecurityConfiguration {
+ 
+@@ -73,11 +72,7 @@ public PasswordEncoder passwordEncoder() {
+
+----------------------------------------
+
+File: src/main/java/stirling/software/SPDF/config/security/UserAuthenticationFilter.java
+Status: modified
+Changes: +43 -3
+Diff:
+@@ -1,6 +1,7 @@
+ package stirling.software.SPDF.config.security;
+ 
+ import java.io.IOException;
++import java.util.List;
+ 
+ import org.springframework.beans.factory.annotation.Autowired;
+ import org.springframework.beans.factory.annotation.Qualifier;
+@@ -9,24 +10,26 @@
+ import org.springframework.security.core.Authentication;
+ import org.springframework.security.core.AuthenticationException;
+ import org.springframework.security.core.context.SecurityContextHolder;
++import org.springframework.security.core.session.SessionInformation;
+ import org.springframework.security.core.userdetails.UserDetails;
+-import org.springframework.security.core.userdetails.UserDetailsService;
++import org.springframework.security.oauth2.core.user.OAuth2User;
+ import org.springframework.stereotype.Component;
+ import org.springframework.web.filter.OncePerRequestFilter;
+ 
+ import jakarta.servlet.FilterChain;
+ import jakarta.servlet.ServletException;
+ import jakarta.servlet.http.HttpServletRequest;
+ import jakarta.servlet.http.HttpServletResponse;
++import stirling.software.SPDF.config.security.session.SessionPersistentRegistry;
+ import stirling.software.SPDF.model.ApiKeyAuthenticationToken;
+ 
+ @Component
+
+----------------------------------------
+
+File: src/main/java/stirling/software/SPDF/config/security/UserService.java
+Status: modified
+Changes: +57 -17
+Diff:
+@@ -15,12 +15,15 @@
+ import org.springframework.security.core.Authentication;
+ import org.springframework.security.core.GrantedAuthority;
+ import org.springframework.security.core.authority.SimpleGrantedAuthority;
++import org.springframework.security.core.session.SessionInformation;
+ import org.springframework.security.core.userdetails.UserDetails;
+ import org.springframework.security.core.userdetails.UsernameNotFoundException;
+ import org.springframework.security.crypto.password.PasswordEncoder;
++import org.springframework.security.oauth2.core.user.OAuth2User;
+ import org.springframework.stereotype.Service;
+ 
+ import stirling.software.SPDF.config.DatabaseBackupInterface;
++import stirling.software.SPDF.config.security.session.SessionPersistentRegistry;
+ import stirling.software.SPDF.controller.api.pipeline.UserServiceInterface;
+ import stirling.software.SPDF.model.AuthenticationType;
+ import stirling.software.SPDF.model.Authority;
+@@ -40,6 +43,8 @@ public class UserService implements UserServiceInterface {
+ 
+     @Autowired private MessageSource messageSource;
+ 
++    @Autowired private SessionPersistentRegistry sessionRegistry;
++
+     @Autowired DatabaseBackupInterface databaseBackupHelper;
+ 
+     // Handle OAUTH2 login and user auto creation.
+@@ -48,7 +53,7 @@ public boolean processOAuth2PostLogin(String username, boolean autoCreateUser)
+         if (!isUsernameValid(username)) {
+             return false;
+         }
+-        Optional<User> existingUser = userRepository.findByUsernameIgnoreCase(username);
++        Optional<User> existingUser = findByUsernameIgnoreCase(username);
+         if (existingUser.isPresent()) {
+             return true;
+         }
+@@ -90,8 +95,7 @@ private String generateApiKey() {
+ 
+     public User addApiKeyToUser(String username) {
+         User user =
+-                userRepository
+-                        .findByUsernameIgnoreCase(username)
++                findByUsernameIgnoreCase(username)
+                         .orElseThrow(() -> new UsernameNotFoundException("User not found"));
+ 
+         user.setApiKey(generateApiKey());
+@@ -104,8 +108,7 @@ public User refreshApiKeyForUser(String username) {
+ 
+     public String getApiKeyForUser(String username) {
+         User user =
+-                userRepository
+-                        .findByUsernameIgnoreCase(username)
++                findByUsernameIgnoreCase(username)
+                         .orElseThrow(() -> new UsernameNotFoundException("User not found"));
+         return user.getApiKey();
+     }
+@@ -131,20 +134,25 @@ public UserDetails loadUserByApiKey(String apiKey) {
+     }
+ 
+     public boolean validateApiKeyForUser(String username, String apiKey) {
+-        Optional<User> userOpt = userRepository.findByUsernameIgnoreCase(username);
++        Optional<User> userOpt = findByUsernameIgnoreCase(username);
+         return userOpt.isPresent() && apiKey.equals(userOpt.get().getApiKey());
+     }
+
+----------------------------------------
+
+File: src/main/java/stirling/software/SPDF/config/security/oauth2/CustomOAuth2AuthenticationFailureHandler.java
+Status: modified
+Changes: +24 -13
+Diff:
+@@ -2,8 +2,8 @@
+ 
+ import java.io.IOException;
+ 
+-import org.slf4j.Logger;
+-import org.slf4j.LoggerFactory;
++import org.springframework.security.authentication.BadCredentialsException;
++import org.springframework.security.authentication.DisabledException;
+ import org.springframework.security.authentication.LockedException;
+ import org.springframework.security.core.AuthenticationException;
+ import org.springframework.security.oauth2.core.OAuth2AuthenticationException;
+@@ -13,19 +13,34 @@
+ import jakarta.servlet.ServletException;
+ import jakarta.servlet.http.HttpServletRequest;
+ import jakarta.servlet.http.HttpServletResponse;
++import lombok.extern.slf4j.Slf4j;
+ 
++@Slf4j
+ public class CustomOAuth2AuthenticationFailureHandler
+         extends SimpleUrlAuthenticationFailureHandler {
+ 
+-    private static final Logger logger =
+-            LoggerFactory.getLogger(CustomOAuth2AuthenticationFailureHandler.class);
+
+----------------------------------------
+
+File: src/main/java/stirling/software/SPDF/config/security/oauth2/CustomOAuth2AuthenticationSuccessHandler.java
+Status: modified
+Changes: +25 -15
+Diff:
+@@ -2,10 +2,9 @@
+ 
+ import java.io.IOException;
+ 
+-import org.slf4j.Logger;
+-import org.slf4j.LoggerFactory;
+ import org.springframework.security.authentication.LockedException;
+ import org.springframework.security.core.Authentication;
++import org.springframework.security.core.userdetails.UserDetails;
+ import org.springframework.security.oauth2.core.user.OAuth2User;
+ import org.springframework.security.web.authentication.SavedRequestAwareAuthenticationSuccessHandler;
+ import org.springframework.security.web.savedrequest.SavedRequest;
+@@ -26,9 +25,6 @@ public class CustomOAuth2AuthenticationSuccessHandler
+ 
+     private LoginAttemptService loginAttemptService;
+ 
+-    private static final Logger logger =
+-            LoggerFactory.getLogger(CustomOAuth2AuthenticationSuccessHandler.class);
+-
+     private ApplicationProperties applicationProperties;
+     private UserService userService;
+ 
+@@ -46,6 +42,17 @@ public void onAuthenticationSuccess(
+             HttpServletRequest request, HttpServletResponse response, Authentication authentication)
+             throws ServletException, IOException {
+ 
++        Object principal = authentication.getPrincipal();
+
+----------------------------------------
+
+File: src/main/java/stirling/software/SPDF/config/security/oauth2/CustomOAuth2LogoutSuccessHandler.java
+Status: modified
+Changes: +26 -27
+Diff:
+@@ -2,34 +2,26 @@
+ 
+ import java.io.IOException;
+ 
+-import org.slf4j.Logger;
+-import org.slf4j.LoggerFactory;
+ import org.springframework.security.core.Authentication;
+-import org.springframework.security.core.session.SessionRegistry;
+ import org.springframework.security.oauth2.client.authentication.OAuth2AuthenticationToken;
+ import org.springframework.security.web.authentication.logout.SimpleUrlLogoutSuccessHandler;
+ 
+ import jakarta.servlet.ServletException;
+ import jakarta.servlet.http.HttpServletRequest;
+ import jakarta.servlet.http.HttpServletResponse;
+-import jakarta.servlet.http.HttpSession;
++import lombok.extern.slf4j.Slf4j;
+ import stirling.software.SPDF.model.ApplicationProperties;
+ import stirling.software.SPDF.model.ApplicationProperties.Security.OAUTH2;
+ import stirling.software.SPDF.model.Provider;
+ import stirling.software.SPDF.model.provider.UnsupportedProviderException;
+ import stirling.software.SPDF.utils.UrlUtils;
+ 
++@Slf4j
+ public class CustomOAuth2LogoutSuccessHandler extends SimpleUrlLogoutSuccessHandler {
+ 
+-    private static final Logger logger =
+-            LoggerFactory.getLogger(CustomOAuth2LogoutSuccessHandler.class);
+-
+-    private final SessionRegistry sessionRegistry;
+     private final ApplicationProperties applicationProperties;
+ 
+-    public CustomOAuth2LogoutSuccessHandler(
+-            ApplicationProperties applicationProperties, SessionRegistry sessionRegistry) {
+-        this.sessionRegistry = sessionRegistry;
++    public CustomOAuth2LogoutSuccessHandler(ApplicationProperties applicationProperties) {
+         this.applicationProperties = applicationProperties;
+     }
+ 
+@@ -42,6 +34,15 @@ public void onLogoutSuccess(
+         String issuer = null;
+         String clientId = null;
+
+----------------------------------------
+
+File: src/main/java/stirling/software/SPDF/config/security/session/CustomHttpSessionListener.java
+Status: added
+Changes: +26 -0
+Diff:
+@@ -0,0 +1,26 @@
++package stirling.software.SPDF.config.security.session;
++
++import org.springframework.beans.factory.annotation.Autowired;
++import org.springframework.stereotype.Component;
++
++import jakarta.servlet.http.HttpSessionEvent;
++import jakarta.servlet.http.HttpSessionListener;
++import lombok.extern.slf4j.Slf4j;
++
+
+----------------------------------------
+
+File: src/main/java/stirling/software/SPDF/config/security/session/SessionPersistentRegistry.java
+Status: added
+Changes: +183 -0
+Diff:
+@@ -0,0 +1,183 @@
++package stirling.software.SPDF.config.security.session;
++
++import java.time.Duration;
++import java.util.ArrayList;
++import java.util.Collections;
++import java.util.Comparator;
++import java.util.Date;
++import java.util.List;
++import java.util.Optional;
++
++import org.springframework.beans.factory.annotation.Value;
++import org.springframework.security.core.session.SessionInformation;
++import org.springframework.security.core.session.SessionRegistry;
++import org.springframework.security.core.userdetails.UserDetails;
++import org.springframework.security.oauth2.core.user.OAuth2User;
++import org.springframework.stereotype.Component;
++
++import jakarta.transaction.Transactional;
++import stirling.software.SPDF.model.SessionEntity;
++
++@Component
++public class SessionPersistentRegistry implements SessionRegistry {
++
++    private final SessionRepository sessionRepository;
++
++    @Value("${server.servlet.session.timeout:30m}")
++    private Duration defaultMaxInactiveInterval;
++
++    public SessionPersistentRegistry(SessionRepository sessionRepository) {
++        this.sessionRepository = sessionRepository;
++    }
++
++    @Override
++    public List<Object> getAllPrincipals() {
++        List<SessionEntity> sessions = sessionRepository.findAll();
++        List<Object> principals = new ArrayList<>();
++        for (SessionEntity session : sessions) {
++            principals.add(session.getPrincipalName());
++        }
++        return principals;
++    }
++
++    @Override
++    public List<SessionInformation> getAllSessions(
++            Object principal, boolean includeExpiredSessions) {
++        List<SessionInformation> sessionInformations = new ArrayList<>();
++        String principalName = null;
++
++        if (principal instanceof UserDetails) {
++            principalName = ((UserDetails) principal).getUsername();
++        } else if (principal instanceof OAuth2User) {
++            principalName = ((OAuth2User) principal).getName();
++        } else if (principal instanceof String) {
++            principalName = (String) principal;
++        }
++
++        if (principalName != null) {
++            List<SessionEntity> sessionEntities =
++                    sessionRepository.findByPrincipalName(principalName);
++            for (SessionEntity sessionEntity : sessionEntities) {
+
+----------------------------------------
+
+File: src/main/java/stirling/software/SPDF/config/security/session/SessionRegistryConfig.java
+Status: added
+Changes: +20 -0
+Diff:
+@@ -0,0 +1,20 @@
++package stirling.software.SPDF.config.security.session;
++
++import org.springframework.context.annotation.Bean;
++import org.springframework.context.annotation.Configuration;
++import org.springframework.security.core.session.SessionRegistryImpl;
++
++@Configuration
++public class SessionRegistryConfig {
++
+
+----------------------------------------
+
+File: src/main/java/stirling/software/SPDF/config/security/session/SessionRepository.java
+Status: added
+Changes: +31 -0
+Diff:
+@@ -0,0 +1,31 @@
++package stirling.software.SPDF.config.security.session;
++
++import java.util.Date;
++import java.util.List;
++
++import org.springframework.data.jpa.repository.JpaRepository;
++import org.springframework.data.jpa.repository.Modifying;
++import org.springframework.data.jpa.repository.Query;
++import org.springframework.data.repository.query.Param;
+
+----------------------------------------
+
+File: src/main/java/stirling/software/SPDF/config/security/session/SessionScheduled.java
+Status: added
+Changes: +35 -0
+Diff:
+@@ -0,0 +1,35 @@
++package stirling.software.SPDF.config.security.session;
++
++import java.time.Instant;
++import java.time.temporal.ChronoUnit;
++import java.util.Date;
++import java.util.List;
++
++import org.springframework.beans.factory.annotation.Autowired;
++import org.springframework.scheduling.annotation.Scheduled;
++import org.springframework.security.core.session.SessionInformation;
++import org.springframework.stereotype.Component;
+
+----------------------------------------
+
+File: src/main/java/stirling/software/SPDF/controller/api/UserController.java
+Status: modified
+Changes: +83 -23
+Diff:
+@@ -3,6 +3,7 @@
+ import java.io.IOException;
+ import java.security.Principal;
+ import java.util.HashMap;
++import java.util.List;
+ import java.util.Map;
+ import java.util.Optional;
+ 
+@@ -12,8 +13,8 @@
+ import org.springframework.security.access.prepost.PreAuthorize;
+ import org.springframework.security.core.Authentication;
+ import org.springframework.security.core.session.SessionInformation;
+-import org.springframework.security.core.session.SessionRegistry;
+ import org.springframework.security.core.userdetails.UserDetails;
++import org.springframework.security.oauth2.core.user.OAuth2User;
+ import org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler;
+ import org.springframework.stereotype.Controller;
+ import org.springframework.ui.Model;
+@@ -30,6 +31,8 @@
+ import jakarta.servlet.http.HttpServletRequest;
+ import jakarta.servlet.http.HttpServletResponse;
+ import stirling.software.SPDF.config.security.UserService;
++import stirling.software.SPDF.config.security.session.SessionPersistentRegistry;
++import stirling.software.SPDF.model.AuthenticationType;
+ import stirling.software.SPDF.model.Role;
+ import stirling.software.SPDF.model.User;
+ import stirling.software.SPDF.model.api.user.UsernameAndPass;
+@@ -41,6 +44,8 @@ public class UserController {
+ 
+     @Autowired private UserService userService;
+ 
++    @Autowired SessionPersistentRegistry sessionRegistry;
++
+     @PreAuthorize("!hasAuthority('ROLE_DEMO_USER')")
+     @PostMapping("/register")
+     public String register(@ModelAttribute UsernameAndPass requestModel, Model model)
+@@ -203,9 +208,10 @@ public String updateUserSettings(HttpServletRequest request, Principal principal
+     @PreAuthorize("hasRole('ROLE_ADMIN')")
+     @PostMapping("/admin/saveUser")
+     public RedirectView saveUser(
+-            @RequestParam(name = "username") String username,
+-            @RequestParam(name = "password") String password,
++            @RequestParam String username,
++            @RequestParam(name = "password", required = false) String password,
+             @RequestParam(name = "role") String role,
++            @RequestParam(name = "authType") String authType,
+             @RequestParam(name = "forceChange", required = false, defaultValue = "false")
+                     boolean forceChange)
+             throws IllegalArgumentException, IOException {
+@@ -237,7 +243,15 @@ public RedirectView saveUser(
+             return new RedirectView("/addUsers?messageType=invalidRole", true);
+         }
+ 
+-        userService.saveUser(username, password, role, forceChange);
++        if (authType.equalsIgnoreCase(AuthenticationType.OAUTH2.toString())) {
++            userService.saveUser(username, AuthenticationType.OAUTH2, role);
++        } else {
++            if (password.isBlank()) {
++                return new RedirectView("/addUsers?messageType=invalidPassword", true);
++            }
+
+----------------------------------------
+
+File: src/main/java/stirling/software/SPDF/controller/api/misc/OCRController.java
+Status: modified
+Changes: +4 -4
+Diff:
+@@ -13,8 +13,7 @@
+ import java.util.zip.ZipEntry;
+ import java.util.zip.ZipOutputStream;
+ 
+-import org.slf4j.Logger;
+-import org.slf4j.LoggerFactory;
++import org.springframework.beans.factory.annotation.Autowired;
+ import org.springframework.http.MediaType;
+ import org.springframework.http.ResponseEntity;
+ import org.springframework.web.bind.annotation.ModelAttribute;
+
+----------------------------------------
+
+File: src/main/java/stirling/software/SPDF/controller/web/AccountWebController.java
+Status: modified
+Changes: +105 -9
+Diff:
+@@ -1,13 +1,15 @@
+ package stirling.software.SPDF.controller.web;
+ 
++import java.time.Instant;
++import java.time.temporal.ChronoUnit;
++import java.util.Date;
+ import java.util.HashMap;
+ import java.util.Iterator;
+ import java.util.List;
+ import java.util.Map;
+ import java.util.Optional;
++import java.util.stream.Collectors;
+ 
+-import org.slf4j.Logger;
+-import org.slf4j.LoggerFactory;
+ import org.springframework.beans.factory.annotation.Autowired;
+ import org.springframework.security.access.prepost.PreAuthorize;
+ import org.springframework.security.core.Authentication;
+@@ -23,27 +25,35 @@
+ import io.swagger.v3.oas.annotations.tags.Tag;
+ 
+ import jakarta.servlet.http.HttpServletRequest;
++import lombok.extern.slf4j.Slf4j;
++import stirling.software.SPDF.config.security.session.SessionPersistentRegistry;
+ import stirling.software.SPDF.model.ApplicationProperties;
+ import stirling.software.SPDF.model.ApplicationProperties.Security.OAUTH2;
+ import stirling.software.SPDF.model.ApplicationProperties.Security.OAUTH2.Client;
+ import stirling.software.SPDF.model.Authority;
+ import stirling.software.SPDF.model.Role;
++import stirling.software.SPDF.model.SessionEntity;
+ import stirling.software.SPDF.model.User;
+ import stirling.software.SPDF.model.provider.GithubProvider;
+ import stirling.software.SPDF.model.provider.GoogleProvider;
+ import stirling.software.SPDF.model.provider.KeycloakProvider;
+ import stirling.software.SPDF.repository.UserRepository;
+ 
+ @Controller
++@Slf4j
+ @Tag(name = "Account Security", description = "Account Security APIs")
+ public class AccountWebController {
+ 
+     @Autowired ApplicationProperties applicationProperties;
+-    private static final Logger logger = LoggerFactory.getLogger(AccountWebController.class);
++    @Autowired SessionPersistentRegistry sessionPersistentRegistry;
++
++    @Autowired
++    private UserRepository userRepository; // Assuming you have a repository for user operations
+ 
+     @GetMapping("/login")
+     public String login(HttpServletRequest request, Model model, Authentication authentication) {
+ 
++        // If the user is already authenticated, redirect them to the home page.
+         if (authentication != null && authentication.isAuthenticated()) {
+             return "redirect:/";
+         }
+@@ -137,6 +147,13 @@ public String login(HttpServletRequest request, Model model, Authentication auth
+                     break;
+                 case "invalid_id_token":
+                     erroroauth = "login.oauth2InvalidIdToken";
++                    break;
++                case "oauth2_admin_blocked_user":
++                    erroroauth = "login.oauth2AdminBlockedUser";
++                    break;
++                case "userIsDisabled":
++                    erroroauth = "login.userIsDisabled";
++                    break;
+                 default:
+                     break;
+             }
+@@ -155,9 +172,6 @@ public String login(HttpServletRequest request, Model model, Authentication auth
+         return "login";
+
+----------------------------------------
+
+File: src/main/java/stirling/software/SPDF/controller/web/OtherWebController.java
+Status: modified
+Changes: +6 -1
+Diff:
+@@ -6,6 +6,7 @@
+ import java.util.List;
+ import java.util.stream.Collectors;
+ 
++import org.springframework.beans.factory.annotation.Autowired;
+ import org.springframework.stereotype.Controller;
+ import org.springframework.ui.Model;
+ import org.springframework.web.bind.annotation.GetMapping;
+@@ -14,10 +15,14 @@
+ import io.swagger.v3.oas.annotations.Hidden;
+
+----------------------------------------
+
+File: src/main/java/stirling/software/SPDF/model/ApplicationProperties.java
+Status: modified
+Changes: +20 -0
+Diff:
+@@ -241,6 +241,7 @@ public static class OAUTH2 {
+             private String clientId;
+             private String clientSecret;
+             private Boolean autoCreateUser = false;
++            private Boolean blockRegistration = false;
+             private String useAsUsername;
+             private Collection<String> scopes = new ArrayList<>();
+             private String provider;
+@@ -286,6 +287,14 @@ public void setAutoCreateUser(Boolean autoCreateUser) {
+                 this.autoCreateUser = autoCreateUser;
+             }
+ 
++            public Boolean getBlockRegistration() {
++                return blockRegistration;
++            }
++
+
+----------------------------------------
+
+File: src/main/java/stirling/software/SPDF/model/SessionEntity.java
+Status: added
+Changes: +23 -0
+Diff:
+@@ -0,0 +1,23 @@
++package stirling.software.SPDF.model;
++
++import java.io.Serializable;
++import java.util.Date;
++
++import jakarta.persistence.Entity;
++import jakarta.persistence.Id;
++import jakarta.persistence.Lob;
++import jakarta.persistence.Table;
+
+----------------------------------------
+
+File: src/main/java/stirling/software/SPDF/model/provider/GoogleProvider.java
+Status: modified
+Changes: +8 -0
+Diff:
+@@ -31,6 +31,14 @@ public String getUserinfouri() {
+     private Collection<String> scopes = new ArrayList<>();
+     private String useAsUsername = "email";
+ 
++    @Override
++    public String getIssuer() {
++        return new String();
++    }
++
++    @Override
+
+----------------------------------------
+
+File: src/main/resources/messages_ar_AR.properties
+Status: modified
+Changes: +12 -0
+Diff:
+@@ -55,10 +55,12 @@ userNotFoundMessage=User not found.
+ incorrectPasswordMessage=Current password is incorrect.
+ usernameExistsMessage=New Username already exists.
+ invalidUsernameMessage=Invalid username, username can only contain letters, numbers and the following special characters @._+- or must be a valid email address.
++invalidPasswordMessage=The password must not be empty and must not have spaces at the beginning or end.
+ confirmPasswordErrorMessage=New Password and Confirm New Password must match.
+ deleteCurrentUserMessage=Cannot delete currently logged in user.
+ deleteUsernameExistsMessage=The username does not exist and cannot be deleted.
+ downgradeCurrentUserMessage=لا يمكن خفض دور المستخدم الحالي
++disabledCurrentUserMessage=The current user cannot be disabled
+ downgradeCurrentUserLongMessage=لا يمكن تخفيض دور المستخدم الحالي. وبالتالي، لن يظهر المستخدم الحالي.
+ userAlreadyExistsOAuthMessage=The user already exists as an OAuth2 user.
+ userAlreadyExistsWebMessage=The user already exists as an web user.
+@@ -177,6 +179,7 @@ adminUserSettings.user=User
+ adminUserSettings.addUser=Add New User
+ adminUserSettings.deleteUser=Delete User
+
+----------------------------------------
+
+File: src/main/resources/messages_bg_BG.properties
+Status: modified
+Changes: +12 -0
+Diff:
+@@ -55,10 +55,12 @@ userNotFoundMessage=Потребителят не е намерен
+ incorrectPasswordMessage=Текущата парола е неправилна.
+ usernameExistsMessage=Новият потребител вече съществува.
+ invalidUsernameMessage=Невалидно потребителско име, потребителското име може да съдържа само букви, цифри и следните специални знаци @._+- или трябва да е валиден имейл адрес.
++invalidPasswordMessage=The password must not be empty and must not have spaces at the beginning or end.
+ confirmPasswordErrorMessage=New Password and Confirm New Password must match.
+ deleteCurrentUserMessage=Не може да се изтрие вписания в момента потребител.
+ deleteUsernameExistsMessage=Потребителското име не съществува и не може да бъде изтрито.
+ downgradeCurrentUserMessage=Не може да се понижи ролята на текущия потребител
++disabledCurrentUserMessage=The current user cannot be disabled
+ downgradeCurrentUserLongMessage=Не може да се понижи ролята на текущия потребител. Следователно текущият потребител няма да бъде показан.
+ userAlreadyExistsOAuthMessage=Потребителят вече съществува като OAuth2 потребител.
+ userAlreadyExistsWebMessage=Потребителят вече съществува като уеб-потребител.
+@@ -177,6 +179,7 @@ adminUserSettings.user=Потребител
+ adminUserSettings.addUser=Добавяне на нов потребител
+ adminUserSettings.deleteUser=Delete User
+
+----------------------------------------
+
+File: src/main/resources/messages_ca_CA.properties
+Status: modified
+Changes: +12 -0
+Diff:
+@@ -55,10 +55,12 @@ userNotFoundMessage=User not found.
+ incorrectPasswordMessage=Current password is incorrect.
+ usernameExistsMessage=New Username already exists.
+ invalidUsernameMessage=Invalid username, username can only contain letters, numbers and the following special characters @._+- or must be a valid email address.
++invalidPasswordMessage=The password must not be empty and must not have spaces at the beginning or end.
+ confirmPasswordErrorMessage=New Password and Confirm New Password must match.
+ deleteCurrentUserMessage=Cannot delete currently logged in user.
+ deleteUsernameExistsMessage=The username does not exist and cannot be deleted.
+ downgradeCurrentUserMessage=No es pot reduir la funció de l'usuari actual
++disabledCurrentUserMessage=The current user cannot be disabled
+ downgradeCurrentUserLongMessage=No es pot baixar la funció de l'usuari actual. Per tant, no es mostrarà l'usuari actual.
+ userAlreadyExistsOAuthMessage=The user already exists as an OAuth2 user.
+ userAlreadyExistsWebMessage=The user already exists as an web user.
+@@ -177,6 +179,7 @@ adminUserSettings.user=Usuari
+ adminUserSettings.addUser=Afegir Usuari
+ adminUserSettings.deleteUser=Delete User
+
+----------------------------------------
+
+File: src/main/resources/messages_cs_CZ.properties
+Status: modified
+Changes: +12 -0
+Diff:
+@@ -55,10 +55,12 @@ userNotFoundMessage=Uživatel nenalezen.
+ incorrectPasswordMessage=Současné heslo není správné.
+ usernameExistsMessage=Nové uživatelské jméno již existuje.
+ invalidUsernameMessage=Nesprávné uživatelské jméno, smí obsahovat pouze písmena, číslice a následující speciální znaky @._+- nebo musí být validní emailová adresa.
++invalidPasswordMessage=The password must not be empty and must not have spaces at the beginning or end.
+ confirmPasswordErrorMessage=New Password and Confirm New Password must match.
+ deleteCurrentUserMessage=Nelze smazat aktuální přihlášeného uživatele.
+ deleteUsernameExistsMessage=Uživatelské jméno neexistuje a nelze ho smazat.
+ downgradeCurrentUserMessage=Nelze snížit roli aktuálního uživatele.
++disabledCurrentUserMessage=The current user cannot be disabled
+ downgradeCurrentUserLongMessage=Nelze snížit roli aktuálního uživatele. Proto nebude aktuální uživatel zobrazen.
+ userAlreadyExistsOAuthMessage=Uživatel již existuje jako OAuth2 uživatel.
+ userAlreadyExistsWebMessage=Uživatel již existuje jako webový uživatel.
+@@ -177,6 +179,7 @@ adminUserSettings.user=Uživatel
+ adminUserSettings.addUser=Přidat Nového Uživatele
+ adminUserSettings.deleteUser=Delete User
+
+----------------------------------------
+
+File: src/main/resources/messages_da_DK.properties
+Status: modified
+Changes: +13 -1
+Diff:
+@@ -1,7 +1,7 @@
+ ###########
+ # Generic #
+ ###########
+-# the direction that the language is written (ltr=left to right, rtl = right to left)
++# the direction that the language is written (ltr = left to right, rtl = right to left)
+ language.direction=ltr
+ 
+ pdfPrompt=Vælg PDF-fil(er)
+@@ -55,10 +55,12 @@ userNotFoundMessage=Bruger ikke fundet.
+ incorrectPasswordMessage=Nuværende adgangskode er forkert.
+ usernameExistsMessage=Nyt brugernavn findes allerede.
+ invalidUsernameMessage=Invalid username, username can only contain letters, numbers and the following special characters @._+- or must be a valid email address.
++invalidPasswordMessage=The password must not be empty and must not have spaces at the beginning or end.
+ confirmPasswordErrorMessage=New Password and Confirm New Password must match.
+ deleteCurrentUserMessage=Cannot delete currently logged in user.
+ deleteUsernameExistsMessage=The username does not exist and cannot be deleted.
+ downgradeCurrentUserMessage=Cannot downgrade current user's role
++disabledCurrentUserMessage=The current user cannot be disabled
+
+----------------------------------------
+
+File: src/main/resources/messages_de_DE.properties
+Status: modified
+Changes: +13 -1
+Diff:
+@@ -55,10 +55,12 @@ userNotFoundMessage=Benutzer nicht gefunden.
+ incorrectPasswordMessage=Das Passwort ist falsch.
+ usernameExistsMessage=Neuer Benutzername existiert bereits.
+ invalidUsernameMessage=Ungültiger Benutzername. Der Benutzername darf nur Buchstaben, Zahlen und die folgenden Sonderzeichen @._+- enthalten oder muss eine gültige E-Mail-Adresse sein.
++invalidPasswordMessage=Das Passwort darf nicht leer sein und kein Leerzeichen am Anfang und Ende haben.
+ confirmPasswordErrorMessage=„Neues Passwort“ und „Neues Passwort bestätigen“ müssen übereinstimmen.
+ deleteCurrentUserMessage=Der aktuell angemeldete Benutzer kann nicht gelöscht werden.
+ deleteUsernameExistsMessage=Der Benutzername existiert nicht und kann nicht gelöscht werden.
+ downgradeCurrentUserMessage=Die Rolle des aktuellen Benutzers kann nicht herabgestuft werden
++disabledCurrentUserMessage=Der aktuelle Benutzer kann nicht deaktiviert werden
+ downgradeCurrentUserLongMessage=Die Rolle des aktuellen Benutzers kann nicht herabgestuft werden. Daher wird der aktuelle Benutzer nicht angezeigt.
+ userAlreadyExistsOAuthMessage=Der Benutzer ist bereits als OAuth2-Benutzer vorhanden.
+ userAlreadyExistsWebMessage=Der Benutzer ist bereits als Webbenutzer vorhanden.
+@@ -177,10 +179,11 @@ adminUserSettings.user=Benutzer
+ adminUserSettings.addUser=Neuen Benutzer hinzufügen
+ adminUserSettings.deleteUser=Benutzer löschen
+ adminUserSettings.confirmDeleteUser=Soll der Benutzer gelöscht werden?
++adminUserSettings.confirmChangeUserStatus=Should the user be disabled/enabled?
+
+----------------------------------------
+
+File: src/main/resources/messages_el_GR.properties
+Status: modified
+Changes: +12 -0
+Diff:
+@@ -55,10 +55,12 @@ userNotFoundMessage=Ο χρήστης δεν βρέθηκε.
+ incorrectPasswordMessage=Ο τρέχων κωδικός πρόσβασης είναι λανθασμένος.
+ usernameExistsMessage=Το νέο όνομα χρήστη υπάρχει ήδη.
+ invalidUsernameMessage=Μη έγκυρο όνομα χρήστη, όνομα χρήστη μπορεί να περιέχει μόνο γράμματα, αριθμούς και τους ακόλουθους ειδικούς χαρακτήρες @._+- ή πρέπει να είναι έγκυρη διεύθυνση email.
++invalidPasswordMessage=The password must not be empty and must not have spaces at the beginning or end.
+ confirmPasswordErrorMessage=New Password and Confirm New Password must match.
+ deleteCurrentUserMessage=Δεν είναι δυνατή η διαγραφή του τρέχοντος συνδεδεμένου χρήστη.
+ deleteUsernameExistsMessage=Το όνομα χρήστη δεν υπάρχει και δεν μπορεί να διαγραφεί.
+ downgradeCurrentUserMessage=Δεν είναι δυνατή η υποβάθμιση του ρόλου του τρέχοντος χρήστη
++disabledCurrentUserMessage=The current user cannot be disabled
+ downgradeCurrentUserLongMessage=Δεν είναι δυνατή η υποβάθμιση του ρόλου του τρέχοντος χρήστη. Ως εκ τούτου, ο τρέχων χρήστης δεν θα εμφανίζεται.
+ userAlreadyExistsOAuthMessage=The user already exists as an OAuth2 user.
+ userAlreadyExistsWebMessage=The user already exists as an web user.
+@@ -177,6 +179,7 @@ adminUserSettings.user=Χρήστης
+ adminUserSettings.addUser=Προσθήκη νέου Χρήστη
+ adminUserSettings.deleteUser=Delete User
+
+----------------------------------------
+
+File: src/main/resources/messages_en_GB.properties
+Status: modified
+Changes: +12 -0
+Diff:
+@@ -55,10 +55,12 @@ userNotFoundMessage=User not found.
+ incorrectPasswordMessage=Current password is incorrect.
+ usernameExistsMessage=New Username already exists.
+ invalidUsernameMessage=Invalid username, username can only contain letters, numbers and the following special characters @._+- or must be a valid email address.
++invalidPasswordMessage=The password must not be empty and must not have spaces at the beginning or end.
+ confirmPasswordErrorMessage=New Password and Confirm New Password must match.
+ deleteCurrentUserMessage=Cannot delete currently logged in user.
+ deleteUsernameExistsMessage=The username does not exist and cannot be deleted.
+ downgradeCurrentUserMessage=Cannot downgrade current user's role
++disabledCurrentUserMessage=The current user cannot be disabled
+ downgradeCurrentUserLongMessage=Cannot downgrade current user's role. Hence, current user will not be shown.
+ userAlreadyExistsOAuthMessage=The user already exists as an OAuth2 user.
+ userAlreadyExistsWebMessage=The user already exists as an web user.
+@@ -177,6 +179,7 @@ adminUserSettings.user=User
+ adminUserSettings.addUser=Add New User
+ adminUserSettings.deleteUser=Delete User
+
+----------------------------------------
+
+File: src/main/resources/messages_en_US.properties
+Status: modified
+Changes: +12 -0
+Diff:
+@@ -55,10 +55,12 @@ userNotFoundMessage=User not found.
+ incorrectPasswordMessage=Current password is incorrect.
+ usernameExistsMessage=New Username already exists.
+ invalidUsernameMessage=Invalid username, username can only contain letters, numbers and the following special characters @._+- or must be a valid email address.
++invalidPasswordMessage=The password must not be empty and must not have spaces at the beginning or end.
+ confirmPasswordErrorMessage=New Password and Confirm New Password must match.
+ deleteCurrentUserMessage=Cannot delete currently logged in user.
+ deleteUsernameExistsMessage=The username does not exist and cannot be deleted.
+ downgradeCurrentUserMessage=Cannot downgrade current user's role
++disabledCurrentUserMessage=The current user cannot be disabled
+ downgradeCurrentUserLongMessage=Cannot downgrade current user's role. Hence, current user will not be shown.
+ userAlreadyExistsOAuthMessage=The user already exists as an OAuth2 user.
+ userAlreadyExistsWebMessage=The user already exists as an web user.
+@@ -177,6 +179,7 @@ adminUserSettings.user=User
+ adminUserSettings.addUser=Add New User
+ adminUserSettings.deleteUser=Delete User
+
+----------------------------------------
+
+File: src/main/resources/messages_es_ES.properties
+Status: modified
+Changes: +12 -0
+Diff:
+@@ -55,10 +55,12 @@ userNotFoundMessage=Usuario no encontrado.
+ incorrectPasswordMessage=La contraseña actual no es correcta.
+ usernameExistsMessage=El nuevo nombre de usuario está en uso.
+ invalidUsernameMessage=Nombre de usuario no válido, el nombre de usuario solo puede contener letras, números y los siguientes caracteres especiales @._+- o debe ser una dirección de correo electrónico válida.
++invalidPasswordMessage=The password must not be empty and must not have spaces at the beginning or end.
+ confirmPasswordErrorMessage=New Password and Confirm New Password must match.
+ deleteCurrentUserMessage=No puede eliminar el usuario que tiene la sesión actualmente en uso.
+ deleteUsernameExistsMessage=El usuario no existe y no puede eliminarse.
+ downgradeCurrentUserMessage=No se puede degradar el rol del usuario actual
++disabledCurrentUserMessage=The current user cannot be disabled
+ downgradeCurrentUserLongMessage=No se puede degradar el rol del usuario actual. Por lo tanto, el usuario actual no se mostrará.
+ userAlreadyExistsOAuthMessage=La usuario ya existe como usuario de OAuth2.
+ userAlreadyExistsWebMessage=El usuario ya existe como usuario web.
+@@ -177,6 +179,7 @@ adminUserSettings.user=Usuario
+ adminUserSettings.addUser=Añadir Nuevo Usuario
+ adminUserSettings.deleteUser=Eliminar Usuario
+
+----------------------------------------
+
+File: src/main/resources/messages_eu_ES.properties
+Status: modified
+Changes: +12 -0
+Diff:
+@@ -55,10 +55,12 @@ userNotFoundMessage=User not found.
+ incorrectPasswordMessage=Current password is incorrect.
+ usernameExistsMessage=New Username already exists.
+ invalidUsernameMessage=Invalid username, username can only contain letters, numbers and the following special characters @._+- or must be a valid email address.
++invalidPasswordMessage=The password must not be empty and must not have spaces at the beginning or end.
+ confirmPasswordErrorMessage=New Password and Confirm New Password must match.
+ deleteCurrentUserMessage=Cannot delete currently logged in user.
+ deleteUsernameExistsMessage=The username does not exist and cannot be deleted.
+ downgradeCurrentUserMessage=Ezin da uneko erabiltzailearen rola jaitsi
++disabledCurrentUserMessage=The current user cannot be disabled
+ downgradeCurrentUserLongMessage=Ezin da uneko erabiltzailearen rola jaitsi. Beraz, oraingo erabiltzailea ez da erakutsiko.
+ userAlreadyExistsOAuthMessage=The user already exists as an OAuth2 user.
+ userAlreadyExistsWebMessage=The user already exists as an web user.
+@@ -177,6 +179,7 @@ adminUserSettings.user=Erabiltzaile
+ adminUserSettings.addUser=Erabiltzaile berria
+ adminUserSettings.deleteUser=Delete User
+
+----------------------------------------
+
+File: src/main/resources/messages_fr_FR.properties
+Status: modified
+Changes: +12 -0
+Diff:
+@@ -55,10 +55,12 @@ userNotFoundMessage=Utilisateur non trouvé.
+ incorrectPasswordMessage=Le mot de passe actuel est incorrect.
+ usernameExistsMessage=Le nouveau nom d’utilisateur existe déjà.
+ invalidUsernameMessage=Nom d’utilisateur invalide, le nom d’utilisateur ne peut contenir que des lettres, des chiffres et les caractères spéciaux suivants @._+- ou doit être une adresse e-mail valide.
++invalidPasswordMessage=The password must not be empty and must not have spaces at the beginning or end.
+ confirmPasswordErrorMessage=New Password and Confirm New Password must match.
+ deleteCurrentUserMessage=Impossible de supprimer l’utilisateur actuellement connecté.
+ deleteUsernameExistsMessage=Le nom d’utilisateur n’existe pas et ne peut pas être supprimé.
+ downgradeCurrentUserMessage=Impossible de rétrograder le rôle de l'utilisateur actuel.
++disabledCurrentUserMessage=The current user cannot be disabled
+ downgradeCurrentUserLongMessage=Impossible de rétrograder le rôle de l'utilisateur actuel. Par conséquent, l'utilisateur actuel ne sera pas affiché.
+ userAlreadyExistsOAuthMessage=L'utilisateur existe déjà en tant qu'utilisateur OAuth2.
+ userAlreadyExistsWebMessage=L'utilisateur existe déjà en tant qu'utilisateur Web.
+@@ -177,6 +179,7 @@ adminUserSettings.user=Utilisateur
+ adminUserSettings.addUser=Ajouter un utilisateur
+ adminUserSettings.deleteUser=Delete User
+
+----------------------------------------
+
+File: src/main/resources/messages_ga_IE.properties
+Status: modified
+Changes: +13 -1
+Diff:
+@@ -1,7 +1,7 @@
+ ###########
+ # Generic #
+ ###########
+-# the direction that the language is written (ltr=left to right, rtl = right to left)
++# the direction that the language is written (ltr = left to right, rtl = right to left)
+ language.direction=ltr
+ 
+ pdfPrompt=Roghnaigh PDF(s)
+@@ -55,10 +55,12 @@ userNotFoundMessage=Úsáideoir gan aimsiú.
+ incorrectPasswordMessage=Tá an pasfhocal reatha mícheart.
+ usernameExistsMessage=Tá Ainm Úsáideora Nua ann cheana féin.
+ invalidUsernameMessage=Ainm úsáideora neamhbhailí, ní féidir ach litreacha, uimhreacha agus na carachtair speisialta seo a leanas @._+- a bheith san ainm úsáideora nó ní mór gur seoladh ríomhphoist bailí é.
++invalidPasswordMessage=The password must not be empty and must not have spaces at the beginning or end.
+ confirmPasswordErrorMessage=Ní mór Pasfhocal Nua agus Deimhnigh Pasfhocal Nua a bheith ag teacht leis.
+ deleteCurrentUserMessage=Ní féidir an t-úsáideoir atá logáilte isteach faoi láthair a scriosadh.
+ deleteUsernameExistsMessage=Níl an t-ainm úsáideora ann agus ní féidir é a scriosadh.
+ downgradeCurrentUserMessage=Ní féidir ról an úsáideora reatha a íosghrádú
++disabledCurrentUserMessage=The current user cannot be disabled
+
+----------------------------------------
+
+File: src/main/resources/messages_hi_IN.properties
+Status: modified
+Changes: +12 -0
+Diff:
+@@ -55,10 +55,12 @@ userNotFoundMessage=उपयोगकर्ता नहीं मिला।
+ incorrectPasswordMessage=वर्तमान पासवर्ड गलत है।
+ usernameExistsMessage=नया उपयोगकर्ता नाम पहले से मौजूद है।
+ invalidUsernameMessage=Invalid username, username can only contain letters, numbers and the following special characters @._+- or must be a valid email address.
++invalidPasswordMessage=The password must not be empty and must not have spaces at the beginning or end.
+ confirmPasswordErrorMessage=New Password and Confirm New Password must match.
+ deleteCurrentUserMessage=Cannot delete currently logged in user.
+ deleteUsernameExistsMessage=The username does not exist and cannot be deleted.
+ downgradeCurrentUserMessage=मौजूदा यूज़र की भूमिका को डाउनग्रेड नहीं किया जा सकता
++disabledCurrentUserMessage=The current user cannot be disabled
+ downgradeCurrentUserLongMessage=मौजूदा यूज़र की भूमिका को डाउनग्रेड नहीं किया जा सकता। इसलिए, वर्तमान उपयोगकर्ता को नहीं दिखाया जाएगा।
+ userAlreadyExistsOAuthMessage=The user already exists as an OAuth2 user.
+ userAlreadyExistsWebMessage=The user already exists as an web user.
+@@ -177,6 +179,7 @@ adminUserSettings.user=उपयोगकर्ता
+ adminUserSettings.addUser=नया उपयोगकर्ता जोड़ें
+ adminUserSettings.deleteUser=Delete User
+
+----------------------------------------
+
+File: src/main/resources/messages_hr_HR.properties
+Status: modified
+Changes: +12 -0
+Diff:
+@@ -55,10 +55,12 @@ userNotFoundMessage=Korisnik nije pronađen.
+ incorrectPasswordMessage=Kriva zaporka.
+ usernameExistsMessage=Korisničko ime već postoji
+ invalidUsernameMessage=Nevažeće korisničko ime, korisničko ime može sadržavati samo slova, brojke i sljedeće posebne znakove @._+- ili mora biti važeća adresa e-pošte.
++invalidPasswordMessage=The password must not be empty and must not have spaces at the beginning or end.
+ confirmPasswordErrorMessage=New Password and Confirm New Password must match.
+ deleteCurrentUserMessage=Nije moguće izbrisati trenutno prijavljenog korisnika.
+ deleteUsernameExistsMessage=Korisničko ime ne postoji i ne može se izbrisati.
+ downgradeCurrentUserMessage=Nije moguće vratiti unazad ulogu trenutnog korisnika
++disabledCurrentUserMessage=The current user cannot be disabled
+ downgradeCurrentUserLongMessage=Nije moguće vratiti unazad ulogu trenutnog korisnika. Dakle, trenutni korisnik neće biti prikazan.
+ userAlreadyExistsOAuthMessage=Korisnik već postoji kao OAuth2 korisnik.
+ userAlreadyExistsWebMessage=Korisnik već postoji kao web korisnik.
+@@ -177,6 +179,7 @@ adminUserSettings.user=Korisnik
+ adminUserSettings.addUser=Dodaj novog korisnika
+ adminUserSettings.deleteUser=Delete User
+
+----------------------------------------
+
+File: src/main/resources/messages_hu_HU.properties
+Status: modified
+Changes: +12 -0
+Diff:
+@@ -55,10 +55,12 @@ userNotFoundMessage=A felhasználó nem található.
+ incorrectPasswordMessage=A jelenlegi jelszó helytelen.
+ usernameExistsMessage=Az új felhasználónév már létezik.
+ invalidUsernameMessage=Invalid username, username can only contain letters, numbers and the following special characters @._+- or must be a valid email address.
++invalidPasswordMessage=The password must not be empty and must not have spaces at the beginning or end.
+ confirmPasswordErrorMessage=New Password and Confirm New Password must match.
+ deleteCurrentUserMessage=Cannot delete currently logged in user.
+ deleteUsernameExistsMessage=The username does not exist and cannot be deleted.
+ downgradeCurrentUserMessage=A jelenlegi felhasználó szerepkörét nem lehet visszaminősíteni
++disabledCurrentUserMessage=The current user cannot be disabled
+ downgradeCurrentUserLongMessage=Az aktuális felhasználó szerepkörét nem lehet visszaminősíteni. Ezért az aktuális felhasználó nem jelenik meg.
+ userAlreadyExistsOAuthMessage=The user already exists as an OAuth2 user.
+ userAlreadyExistsWebMessage=The user already exists as an web user.
+@@ -177,6 +179,7 @@ adminUserSettings.user=Felhasználó
+ adminUserSettings.addUser=Új felhasználó hozzáadása
+ adminUserSettings.deleteUser=Delete User
+
+----------------------------------------
+
+File: src/main/resources/messages_id_ID.properties
+Status: modified
+Changes: +12 -0
+Diff:
+@@ -55,10 +55,12 @@ userNotFoundMessage=Pengguna tidak ditemukan.
+ incorrectPasswordMessage=Kata sandi saat ini salah.
+ usernameExistsMessage=Nama pengguna baru sudah ada.
+ invalidUsernameMessage=Invalid username, username can only contain letters, numbers and the following special characters @._+- or must be a valid email address.
++invalidPasswordMessage=The password must not be empty and must not have spaces at the beginning or end.
+ confirmPasswordErrorMessage=New Password and Confirm New Password must match.
+ deleteCurrentUserMessage=Cannot delete currently logged in user.
+ deleteUsernameExistsMessage=The username does not exist and cannot be deleted.
+ downgradeCurrentUserMessage=Tidak dapat menurunkan peran pengguna saat ini
++disabledCurrentUserMessage=The current user cannot be disabled
+ downgradeCurrentUserLongMessage=Tidak dapat menurunkan peran pengguna saat ini. Oleh karena itu, pengguna saat ini tidak akan ditampilkan.
+ userAlreadyExistsOAuthMessage=The user already exists as an OAuth2 user.
+ userAlreadyExistsWebMessage=The user already exists as an web user.
+@@ -177,6 +179,7 @@ adminUserSettings.user=Pengguna
+ adminUserSettings.addUser=Tambahkan Pengguna Baru
+ adminUserSettings.deleteUser=Delete User
+
+----------------------------------------
+
+File: src/main/resources/messages_it_IT.properties
+Status: modified
+Changes: +15 -3
+Diff:
+@@ -55,10 +55,12 @@ userNotFoundMessage=Utente non trovato.
+ incorrectPasswordMessage=La password attuale non è corretta.
+ usernameExistsMessage=Il nuovo nome utente esiste già.
+ invalidUsernameMessage=Nome utente non valido, il nome utente può contenere solo lettere, numeri e i seguenti caratteri speciali @._+- o deve essere un indirizzo email valido.
++invalidPasswordMessage=The password must not be empty and must not have spaces at the beginning or end.
+ confirmPasswordErrorMessage=La nuova password e la conferma della nuova password devono corrispondere.
+ deleteCurrentUserMessage=Impossibile eliminare l'utente attualmente connesso.
+ deleteUsernameExistsMessage=Il nome utente non esiste e non può essere eliminato.
+ downgradeCurrentUserMessage=Impossibile declassare il ruolo dell'utente corrente
++disabledCurrentUserMessage=The current user cannot be disabled
+ downgradeCurrentUserLongMessage=Impossibile declassare il ruolo dell'utente corrente. Pertanto, l'utente corrente non verrà visualizzato.
+ userAlreadyExistsOAuthMessage=L'utente esiste già come utente OAuth2.
+ userAlreadyExistsWebMessage=L'utente esiste già come utente web.
+@@ -177,6 +179,7 @@ adminUserSettings.user=Utente
+ adminUserSettings.addUser=Aggiungi un nuovo Utente
+ adminUserSettings.deleteUser=Elimina utente
+ adminUserSettings.confirmDeleteUser=L'utente deve essere eliminato?
++adminUserSettings.confirmChangeUserStatus=Should the user be disabled/enabled?
+ adminUserSettings.usernameInfo=Il nome utente può contenere solo lettere, numeri e i seguenti caratteri speciali @._+- oppure deve essere un indirizzo email valido.
+ adminUserSettings.roles=Ruoli
+ adminUserSettings.role=Ruolo
+
+----------------------------------------
+
+File: src/main/resources/messages_ja_JP.properties
+Status: modified
+Changes: +36 -24
+Diff:
+@@ -55,10 +55,12 @@ userNotFoundMessage=ユーザーが見つかりません。
+ incorrectPasswordMessage=現在のパスワードが正しくありません。
+ usernameExistsMessage=新しいユーザー名はすでに存在します。
+ invalidUsernameMessage=ユーザー名が無効です。ユーザー名には文字、数字、およびそれに続く特殊文字 @._+- のみを含めることができます。または、有効な電子メール アドレスである必要があります。
++invalidPasswordMessage=The password must not be empty and must not have spaces at the beginning or end.
+ confirmPasswordErrorMessage=新しいパスワードと新しいパスワードの確認は一致する必要があります。
+ deleteCurrentUserMessage=現在ログインしているユーザーは削除できません。
+ deleteUsernameExistsMessage=そのユーザー名は存在しないため削除できません。
+ downgradeCurrentUserMessage=現在のユーザーの役割をダウングレードできません
++disabledCurrentUserMessage=The current user cannot be disabled
+ downgradeCurrentUserLongMessage=現在のユーザーの役割をダウングレードできません。したがって、現在のユーザーは表示されません。
+ userAlreadyExistsOAuthMessage=ユーザーは既にOAuth2ユーザーとして存在します。
+ userAlreadyExistsWebMessage=ユーザーは既にWebユーザーとして存在します。
+@@ -107,7 +109,7 @@ pipelineOptions.validateButton=検証
+ #############
+ #  NAVBAR   #
+ #############
+-navbar.favorite=Favorites
++navbar.favorite=お気に入り
+ navbar.darkmode=ダークモード
+ navbar.language=言語
+ navbar.settings=設定
+@@ -177,6 +179,7 @@ adminUserSettings.user=ユーザー
+ adminUserSettings.addUser=新しいユーザを追加
+ adminUserSettings.deleteUser=ユーザの削除
+ adminUserSettings.confirmDeleteUser=ユーザを本当に削除しますか？
++adminUserSettings.confirmChangeUserStatus=Should the user be disabled/enabled?
+ adminUserSettings.usernameInfo=ユーザー名には、文字、数字、および次の特殊文字 @._+- のみを含めることができます。または、有効な電子メール アドレスである必要があります。
+ adminUserSettings.roles=役割
+ adminUserSettings.role=役割
+@@ -190,23 +193,30 @@ adminUserSettings.forceChange=ログイン時にユーザー名/パスワード
+ adminUserSettings.submit=ユーザーの保存
+ adminUserSettings.changeUserRole=ユーザーの役割を変更する
+ adminUserSettings.authenticated=認証済
+-
+-
+-database.title=Database Import/Export
+-database.header=Database Import/Export
+
+----------------------------------------
+
+File: src/main/resources/messages_ko_KR.properties
+Status: modified
+Changes: +12 -0
+Diff:
+@@ -55,10 +55,12 @@ userNotFoundMessage=사용자를 찾을 수 없습니다.
+ incorrectPasswordMessage=현재 비밀번호가 틀립니다.
+ usernameExistsMessage=새 사용자명이 이미 존재합니다.
+ invalidUsernameMessage=잘못된 사용자 이름입니다. 사용자 이름에는 문자, 숫자 및 다음 특수 문자(@._+-)만 포함할 수 있거나 유효한 이메일 주소여야 합니다.
++invalidPasswordMessage=The password must not be empty and must not have spaces at the beginning or end.
+ confirmPasswordErrorMessage=New Password and Confirm New Password must match.
+ deleteCurrentUserMessage=현재 로그인한 사용자를 삭제할 수 없습니다.
+ deleteUsernameExistsMessage=사용자 이름이 존재하지 않으며 삭제할 수 없습니다.
+ downgradeCurrentUserMessage=현재 사용자의 역할을 다운그레이드할 수 없습니다
++disabledCurrentUserMessage=The current user cannot be disabled
+ downgradeCurrentUserLongMessage=현재 사용자의 역할을 다운그레이드할 수 없습니다. 따라서 현재 사용자는 표시되지 않습니다.
+ userAlreadyExistsOAuthMessage=The user already exists as an OAuth2 user.
+ userAlreadyExistsWebMessage=The user already exists as an web user.
+@@ -177,6 +179,7 @@ adminUserSettings.user=사용자
+ adminUserSettings.addUser=새 사용자 추가
+ adminUserSettings.deleteUser=Delete User
+
+----------------------------------------
+
+File: src/main/resources/messages_nl_NL.properties
+Status: modified
+Changes: +12 -0
+Diff:
+@@ -55,10 +55,12 @@ userNotFoundMessage=Gebruiker niet gevonden.
+ incorrectPasswordMessage=Huidige wachtwoord is onjuist.
+ usernameExistsMessage=Nieuwe gebruikersnaam bestaat al.
+ invalidUsernameMessage=Ongeldige gebruikersnaam, gebruikersnaam kan alleen letters, nummers en de volgende speciale tekens @._+- bevatten of moet een geldig emailadres zijn.
++invalidPasswordMessage=The password must not be empty and must not have spaces at the beginning or end.
+ confirmPasswordErrorMessage=Nieuw wachtwoord en bevestig wachtwoord moeten overeenkomen.
+ deleteCurrentUserMessage=Kan niet een momenteel ingelogde gebruiker verwijderen.
+ deleteUsernameExistsMessage=De gebruikersnaam bestaat niet en kan niet verwijderd worden.
+ downgradeCurrentUserMessage=Kan de rol van de huidige gebruiker niet downgraden
++disabledCurrentUserMessage=The current user cannot be disabled
+ downgradeCurrentUserLongMessage=Kan de rol van de huidige gebruiker niet downgraden. Huidige gebruiker wordt dus niet weergegeven.
+ userAlreadyExistsOAuthMessage=De gebruiker bestaat al als een OAuth2 gebruiker.
+ userAlreadyExistsWebMessage=De gebruiker bestaat al als een web gebruiker.
+@@ -177,6 +179,7 @@ adminUserSettings.user=Gebruiker
+ adminUserSettings.addUser=Voeg nieuwe gebruiker toe
+ adminUserSettings.deleteUser=Verwijder gebruiker
+
+----------------------------------------
+
+File: src/main/resources/messages_no_NB.properties
+Status: modified
+Changes: +12 -0
+Diff:
+@@ -55,10 +55,12 @@ userNotFoundMessage=Bruker ikke funnet.
+ incorrectPasswordMessage=Nåværende passord er feil.
+ usernameExistsMessage=Det nye brukernavnet eksisterer allerede.
+ invalidUsernameMessage=Ugyldig brukernavn, brukernavnet kan bare inneholde bokstaver, tall og følgende spesialtegn @._+- eller må være en gyldig e-postadresse.
++invalidPasswordMessage=The password must not be empty and must not have spaces at the beginning or end.
+ confirmPasswordErrorMessage=Nytt passord og Bekreft nytt passord må være like.
+ deleteCurrentUserMessage=Kan ikke slette den innloggede brukeren.
+ deleteUsernameExistsMessage=Brukernavnet eksisterer ikke og kan ikke slettes.
+ downgradeCurrentUserMessage=Kan ikke nedgradere den innloggede brukerens rolle.
++disabledCurrentUserMessage=The current user cannot be disabled
+ downgradeCurrentUserLongMessage=Kan ikke nedgradere den innloggede brukerens rolle. Derfor vil ikke den innloggede brukeren bli vist.
+ userAlreadyExistsOAuthMessage=Brukeren eksisterer allerede som en OAuth2-bruker.
+ userAlreadyExistsWebMessage=Brukeren eksisterer allerede som en web-bruker.
+@@ -177,6 +179,7 @@ adminUserSettings.user=Bruker
+ adminUserSettings.addUser=Legg til Ny Bruker
+ adminUserSettings.deleteUser=Slett Bruker
+
+----------------------------------------
+
+File: src/main/resources/messages_pl_PL.properties
+Status: modified
+Changes: +12 -0
+Diff:
+@@ -55,10 +55,12 @@ userNotFoundMessage=Brak użytkownika.
+ incorrectPasswordMessage=Nieprawidłowe hasło.
+ usernameExistsMessage=Taki uzytkownik już istnieje.
+ invalidUsernameMessage=Niewłaściwa nazwa użytkownika - musi zawierać litery, cyfry i @._+- LUB być adresem email.
++invalidPasswordMessage=The password must not be empty and must not have spaces at the beginning or end.
+ confirmPasswordErrorMessage=Wpisz poprawnie hasło w OBA pola.
+ deleteCurrentUserMessage=Nie można usunąć zalogowanego użytkownika
+ deleteUsernameExistsMessage=Nie można usunąć zalogowanego użytkownika
+ downgradeCurrentUserMessage=Nie można obniżyć roli bieżącego użytkownika
++disabledCurrentUserMessage=The current user cannot be disabled
+ downgradeCurrentUserLongMessage=Nie można obniżyć roli bieżącego użytkownika. W związku z tym bieżący użytkownik nie zostanie wyświetlony.
+ userAlreadyExistsOAuthMessage=Takie konto użytkownika istnieje - stworzone za pomocą OAuth2.
+ userAlreadyExistsWebMessage=Takie konto użytkownika istnieje - stworzone za pomocą przeglądarki.
+@@ -177,6 +179,7 @@ adminUserSettings.user=Użytkownik
+ adminUserSettings.addUser=Dodaj nowego użytkownika
+ adminUserSettings.deleteUser=Usuń użytkownika
+
+----------------------------------------
+
+File: src/main/resources/messages_pt_BR.properties
+Status: modified
+Changes: +245 -232
+Diff:
+@@ -11,17 +11,17 @@ imgPrompt=Selecione a(s) imagem(ns)
+ genericSubmit=Enviar
+ processTimeWarning=Aviso: esse processo pode levar até um minuto, dependendo do tamanho do arquivo
+ pageOrderPrompt=Ordem das páginas (digite uma lista separada por vírgulas de números de página):
+-pageSelectionPrompt=Custom Page Selection (Enter a comma-separated list of page numbers 1,5,6 or Functions like 2n+1) :
++pageSelectionPrompt=Seleção de página personalizada (Insira uma lista separada por vírgulas de números de página 1,5,6 ou funções como 2n+1) :
+ goToPage=Ir
+ true=Verdadeiro
+ false=Falso
+ unknown=Desconhecido
+ save=Salvar
+-saveToBrowser=Save to Browser
++saveToBrowser=Salvar no navegador
+ close=Fechar
+ filesSelected=arquivos selecionados
+ noFavourites=Nenhum favorito adicionado
+-downloadComplete=Download Complete
++downloadComplete=Download finalizado
+ bored=Entediado esperando?
+ alphabet=Alfabeto
+ downloadPdf=baixar PDF
+@@ -34,43 +34,45 @@ sizes.medium=Médio
+ sizes.large=Grande
+ sizes.x-large=Muito grande
+ error.pdfPassword=O documento PDF está protegido por senha e a senha não foi fornecida ou está incorreta
+-delete=Delete
+-username=Username
+-password=Password
+-welcome=Welcome
+-property=Property
+-black=Black
+-white=White
+-red=Red
+-green=Green
+-blue=Blue
+-custom=Custom...
+-WorkInProgess=Work in progress, May not work or be buggy, Please report any problems!
+-poweredBy=Powered by
+-yes=Yes
+-no=No
+-changedCredsMessage=Credentials changed!
+-notAuthenticatedMessage=User not authenticated.
+-userNotFoundMessage=User not found.
+-incorrectPasswordMessage=Current password is incorrect.
+-usernameExistsMessage=New Username already exists.
+-invalidUsernameMessage=Invalid username, username can only contain letters, numbers and the following special characters @._+- or must be a valid email address.
+-confirmPasswordErrorMessage=New Password and Confirm New Password must match.
+-deleteCurrentUserMessage=Cannot delete currently logged in user.
+-deleteUsernameExistsMessage=The username does not exist and cannot be deleted.
++delete=apagar
++username=Usuário
++password=Senha
++welcome=Bem vindo
++property=Propriedade
++black=Preto
++white=Branco
++red=Vermelho
++green=Verde
++blue=Azul
++custom=Personalizado...
++WorkInProgess=Em progesso, Talvez não funcione ou apresente erros, Por favor, reporte qualquer problema!
++poweredBy=Distribuído por
++yes=Sim
++no=Não
++changedCredsMessage=Credenciais alteradas!
++notAuthenticatedMessage=Usuário não autenticado.
++userNotFoundMessage=Usuário não encontrado.
++incorrectPasswordMessage=A senha atual está incorreta.
++usernameExistsMessage=Novo Usuário já existe.
++invalidUsernameMessage=Usuário inválido, nome de usuário só pode incluir letras, números e os seguintes caracteres especiais @._+- ou deve ser um email válido.
++invalidPasswordMessage=The password must not be empty and must not have spaces at the beginning or end.
++confirmPasswordErrorMessage=Nova Senha e Confirmar Nova Senha devem ser iguais.
++deleteCurrentUserMessage=Não é possível apagar o usuário da sessão atual.
++deleteUsernameExistsMessage=O usuário não existe e não pode ser apagado.
+ downgradeCurrentUserMessage=Não é possível fazer downgrade da função do usuário atual
++disabledCurrentUserMessage=The current user cannot be disabled
+ downgradeCurrentUserLongMessage=Não é possível fazer downgrade da função do usuário atual. Portanto, o usuário atual não será mostrado.
+-userAlreadyExistsOAuthMessage=The user already exists as an OAuth2 user.
+-userAlreadyExistsWebMessage=The user already exists as an web user.
+-error=Error
++userAlreadyExistsOAuthMessage=O usuário já existe como um usuário OAuth2.
++userAlreadyExistsWebMessage=O usuário já existe como um usuário web.
++error=Erro
+ oops=Oops!
+-help=Help
+-goHomepage=Go to Homepage
+-joinDiscord=Join our Discord server
+-seeDockerHub=See Docker Hub
+-visitGithub=Visit Github Repository
+-donate=Donate
+-color=Color
++help=Ajuda
++goHomepage=Ir para página inicial
++joinDiscord=Entre em nosso servidor do Discord
++seeDockerHub=Veja nosso Docker Hub
++visitGithub=Visite o repositório no Github
++donate=Doar
++color=Cor
+ sponsor=Sponsor
+ info=Info
+ 
+@@ -79,145 +81,153 @@ info=Info
+ ###############
+ #   Pipeline  #
+ ###############
+-pipeline.header=Pipeline Menu (Beta)
+-pipeline.uploadButton=Upload Custom
+-pipeline.configureButton=Configure
+-pipeline.defaultOption=Custom
+-pipeline.submitButton=Submit
+-pipeline.help=Pipeline Help
+-pipeline.scanHelp=Folder Scanning Help
+-pipeline.deletePrompt=Are you sure you want to delete pipeline
++pipeline.header=Menu de Pipeline (Beta)
++pipeline.uploadButton=Enviar personalizado
++pipeline.configureButton=Configurar
++pipeline.defaultOption=Personalizado
++pipeline.submitButton=Enviar
++pipeline.help=Ajuda de Pipeline
++pipeline.scanHelp=Ajuda de verificação de pasta
++pipeline.deletePrompt=Tem certeza que deseja deletar a pipeline
+ 
+ ######################
+ #  Pipeline Options  #
+ ######################
+-pipelineOptions.header=Pipeline Configuration
+-pipelineOptions.pipelineNameLabel=Pipeline Name
+-pipelineOptions.saveSettings=Save Operation Settings
+-pipelineOptions.pipelineNamePrompt=Enter pipeline name here
+-pipelineOptions.selectOperation=Select Operation
+-pipelineOptions.addOperationButton=Add operation
++pipelineOptions.header=Configurações de Pipeline
++pipelineOptions.pipelineNameLabel=Nome da Pipeline
++pipelineOptions.saveSettings=Salvar configurações de operação
++pipelineOptions.pipelineNamePrompt=Insira o nome da pipeline aqui
++pipelineOptions.selectOperation=Selecionar operação
++pipelineOptions.addOperationButton=Adicionar operação
+ pipelineOptions.pipelineHeader=Pipeline:
+ pipelineOptions.saveButton=Download
+-pipelineOptions.validateButton=Validate
++pipelineOptions.validateButton=Validar
+ 
+ 
+ 
+ 
+ #############
+ #  NAVBAR   #
+ #############
+-navbar.favorite=Favorites
++navbar.favorite=Favoritos
+ navbar.darkmode=Modo Escuro
+-navbar.language=Languages
++navbar.language=Idiomas
+ navbar.settings=Configurações
+-navbar.allTools=Tools
+-navbar.multiTool=Multi Tools
+-navbar.sections.organize=Organize
+-navbar.sections.convertTo=Convert to PDF
+-navbar.sections.convertFrom=Convert from PDF
+-navbar.sections.security=Sign & Security
+-navbar.sections.advance=Advanced
+-navbar.sections.edit=View & Edit
++navbar.allTools=Ferramentas
++navbar.multiTool=Multiferramentas
++navbar.sections.organize=Organizar
++navbar.sections.convertTo=Converter para PDF
++navbar.sections.convertFrom=Converter de PDF
++navbar.sections.security=Assinatura & Segurança
++navbar.sections.advance=Avançado
++navbar.sections.edit=Visualizar & Editar
+ 
+ #############
+ #  SETTINGS #
+ #############
+ settings.title=Configurações
+ settings.update=Atualização disponível
+-settings.updateAvailable={0} is the current installed version. A new version ({1}) is available.
++settings.updateAvailable={0} é a versão instalada. Uma nova versão ({1}) está disponível.
+ settings.appVersion=Versão do aplicativo:
+ settings.downloadOption.title=Escolha a opção de download (para downloads não compactados de arquivo único):
+ settings.downloadOption.1=Abrir na mesma janela
+ settings.downloadOption.2=Abrir em nova janela
+ settings.downloadOption.3=⇬ Fazer download do arquivo
+ settings.zipThreshold=Compactar arquivos quando o número de arquivos baixados exceder
+-settings.signOut=Sign Out
+-settings.accountSettings=Account Settings
+-settings.bored.help=Enables easter egg game
+-settings.cacheInputs.name=Save form inputs
+-settings.cacheInputs.help=Enable to store previously used inputs for future runs
+-
+-changeCreds.title=Change Credentials
+-changeCreds.header=Update Your Account Details
+-changeCreds.changePassword=You are using default login credentials. Please enter a new password
+-changeCreds.newUsername=New Username
+-changeCreds.oldPassword=Current Password
+-changeCreds.newPassword=New Password
+-changeCreds.confirmNewPassword=Confirm New Password
+-changeCreds.submit=Submit Changes
+-
+-
+-
+-account.title=Account Settings
+-account.accountSettings=Account Settings
+-account.adminSettings=Admin Settings - View and Add Users
+-account.userControlSettings=User Control Settings
+-account.changeUsername=Change Username
+-account.newUsername=New Username
++settings.signOut=Encerrar sessão
++settings.accountSettings=Configurações de conta
++settings.bored.help=Habilitar nomes de easter egg
+
+----------------------------------------
+
+File: src/main/resources/messages_pt_PT.properties
+Status: modified
+Changes: +12 -0
+Diff:
+@@ -55,10 +55,12 @@ userNotFoundMessage=Utilizador inexistente.
+ incorrectPasswordMessage=Senha incorreta.
+ usernameExistsMessage=Esse utilizador já existe.
+ invalidUsernameMessage=Invalid username, username can only contain letters, numbers and the following special characters @._+- or must be a valid email address.
++invalidPasswordMessage=The password must not be empty and must not have spaces at the beginning or end.
+ confirmPasswordErrorMessage=New Password and Confirm New Password must match.
+ deleteCurrentUserMessage=Cannot delete currently logged in user.
+ deleteUsernameExistsMessage=The username does not exist and cannot be deleted.
+ downgradeCurrentUserMessage=Não é possível fazer downgrade da função do utilizador atual
++disabledCurrentUserMessage=The current user cannot be disabled
+ downgradeCurrentUserLongMessage=Não é possível fazer downgrade da função do utilizador atual. Portanto, o utilizador atual não será mostrado.
+ userAlreadyExistsOAuthMessage=The user already exists as an OAuth2 user.
+ userAlreadyExistsWebMessage=The user already exists as an web user.
+@@ -177,6 +179,7 @@ adminUserSettings.user=User
+ adminUserSettings.addUser=Add New User
+ adminUserSettings.deleteUser=Delete User
+
+----------------------------------------
+
+File: src/main/resources/messages_ro_RO.properties
+Status: modified
+Changes: +12 -0
+Diff:
+@@ -55,10 +55,12 @@ userNotFoundMessage=User not found.
+ incorrectPasswordMessage=Current password is incorrect.
+ usernameExistsMessage=New Username already exists.
+ invalidUsernameMessage=Invalid username, username can only contain letters, numbers and the following special characters @._+- or must be a valid email address.
++invalidPasswordMessage=The password must not be empty and must not have spaces at the beginning or end.
+ confirmPasswordErrorMessage=New Password and Confirm New Password must match.
+ deleteCurrentUserMessage=Cannot delete currently logged in user.
+ deleteUsernameExistsMessage=The username does not exist and cannot be deleted.
+ downgradeCurrentUserMessage=Rolul utilizatorului curent nu poate fi retrogradat
++disabledCurrentUserMessage=The current user cannot be disabled
+ downgradeCurrentUserLongMessage=Rolul utilizatorului curent nu poate fi retrogradat. Prin urmare, utilizatorul curent nu va fi afișat.
+ userAlreadyExistsOAuthMessage=The user already exists as an OAuth2 user.
+ userAlreadyExistsWebMessage=The user already exists as an web user.
+@@ -177,6 +179,7 @@ adminUserSettings.user=User
+ adminUserSettings.addUser=Add New User
+ adminUserSettings.deleteUser=Delete User
+
+----------------------------------------
+
+File: src/main/resources/messages_ru_RU.properties
+Status: modified
+Changes: +12 -0
+Diff:
+@@ -55,10 +55,12 @@ userNotFoundMessage=Пользователь не найден.
+ incorrectPasswordMessage=Текущий пароль неверен.
+ usernameExistsMessage=Новое имя пользователя уже существует.
+ invalidUsernameMessage=Неверное имя пользователя. Имя пользователя может содержать только буквы, цифры и следующие специальные символы @._+- или должно быть действительным адресом электронной почты.
++invalidPasswordMessage=The password must not be empty and must not have spaces at the beginning or end.
+ confirmPasswordErrorMessage=New Password and Confirm New Password must match.
+ deleteCurrentUserMessage=Невозможно удалить пользователя, вошедшего в систему.
+ deleteUsernameExistsMessage=Имя пользователя не существует и не может быть удалено.
+ downgradeCurrentUserMessage=Невозможно понизить роль текущего пользователя
++disabledCurrentUserMessage=The current user cannot be disabled
+ downgradeCurrentUserLongMessage=Невозможно понизить роль текущего пользователя. Следовательно, текущий пользователь не будет отображаться.
+ userAlreadyExistsOAuthMessage=The user already exists as an OAuth2 user.
+ userAlreadyExistsWebMessage=The user already exists as an web user.
+@@ -177,6 +179,7 @@ adminUserSettings.user=Пользователь
+ adminUserSettings.addUser=Добавить нового пользователя
+ adminUserSettings.deleteUser=Delete User
+
+----------------------------------------
+
+File: src/main/resources/messages_sk_SK.properties
+Status: modified
+Changes: +12 -0
+Diff:
+@@ -55,10 +55,12 @@ userNotFoundMessage=Používateľ nebol nájdený.
+ incorrectPasswordMessage=Aktuálne heslo je nesprávne.
+ usernameExistsMessage=Nové používateľské meno už existuje.
+ invalidUsernameMessage=Neplatné používateľské meno, používateľské meno musí obsahovať len abecedné znaky a čísla.
++invalidPasswordMessage=The password must not be empty and must not have spaces at the beginning or end.
+ confirmPasswordErrorMessage=New Password and Confirm New Password must match.
+ deleteCurrentUserMessage=Nie je možné zmazať aktuálne prihláseného používateľa.
+ deleteUsernameExistsMessage=Používateľské meno neexistuje a nemôže byť zmazané.
+ downgradeCurrentUserMessage=Nie je možné znížiť rolu aktuálneho používateľa
++disabledCurrentUserMessage=The current user cannot be disabled
+ downgradeCurrentUserLongMessage=Nie je možné znížiť rolu aktuálneho používateľa. Preto, aktuálny používateľ nebude zobrazený.
+ userAlreadyExistsOAuthMessage=The user already exists as an OAuth2 user.
+ userAlreadyExistsWebMessage=The user already exists as an web user.
+@@ -177,6 +179,7 @@ adminUserSettings.user=Používateľ
+ adminUserSettings.addUser=Pridať nového používateľa
+ adminUserSettings.deleteUser=Delete User
+
+----------------------------------------
+
+File: src/main/resources/messages_sr_LATN_RS.properties
+Status: modified
+Changes: +12 -0
+Diff:
+@@ -55,10 +55,12 @@ userNotFoundMessage=Korisnik nije pronađen.
+ incorrectPasswordMessage=Trenutna šifra je netačna.
+ usernameExistsMessage=Novi korisnik već postoji
+ invalidUsernameMessage=Invalid username, username can only contain letters, numbers and the following special characters @._+- or must be a valid email address.
++invalidPasswordMessage=The password must not be empty and must not have spaces at the beginning or end.
+ confirmPasswordErrorMessage=New Password and Confirm New Password must match.
+ deleteCurrentUserMessage=Cannot delete currently logged in user.
+ deleteUsernameExistsMessage=The username does not exist and cannot be deleted.
+ downgradeCurrentUserMessage=Nije moguće degradirati ulogu trenutnog korisnika
++disabledCurrentUserMessage=The current user cannot be disabled
+ downgradeCurrentUserLongMessage=Nije moguće unazaditi ulogu trenutnog korisnika. Dakle, trenutni korisnik neće biti prikazan.
+ userAlreadyExistsOAuthMessage=The user already exists as an OAuth2 user.
+ userAlreadyExistsWebMessage=The user already exists as an web user.
+@@ -177,6 +179,7 @@ adminUserSettings.user=Korisnik
+ adminUserSettings.addUser=Dodaj novog korisnika
+ adminUserSettings.deleteUser=Delete User
+
+----------------------------------------
+
+File: src/main/resources/messages_sv_SE.properties
+Status: modified
+Changes: +12 -0
+Diff:
+@@ -55,10 +55,12 @@ userNotFoundMessage=User not found.
+ incorrectPasswordMessage=Current password is incorrect.
+ usernameExistsMessage=New Username already exists.
+ invalidUsernameMessage=Invalid username, username can only contain letters, numbers and the following special characters @._+- or must be a valid email address.
++invalidPasswordMessage=The password must not be empty and must not have spaces at the beginning or end.
+ confirmPasswordErrorMessage=New Password and Confirm New Password must match.
+ deleteCurrentUserMessage=Cannot delete currently logged in user.
+ deleteUsernameExistsMessage=The username does not exist and cannot be deleted.
+ downgradeCurrentUserMessage=Kan inte nedgradera nuvarande användares roll
++disabledCurrentUserMessage=The current user cannot be disabled
+ downgradeCurrentUserLongMessage=Kan inte nedgradera nuvarande användares roll. Därför kommer den aktuella användaren inte att visas.
+ userAlreadyExistsOAuthMessage=The user already exists as an OAuth2 user.
+ userAlreadyExistsWebMessage=The user already exists as an web user.
+@@ -177,6 +179,7 @@ adminUserSettings.user=User
+ adminUserSettings.addUser=Add New User
+ adminUserSettings.deleteUser=Delete User
+
+----------------------------------------
+
+File: src/main/resources/messages_th_TH.properties
+Status: modified
+Changes: +12 -0
+Diff:
+@@ -55,10 +55,12 @@ userNotFoundMessage=ไม่พบผู้ใช้
+ incorrectPasswordMessage=รหัสผ่านปัจจุบันไม่ถูกต้อง
+ usernameExistsMessage=ชื่อผู้ใช้ใหม่มีอยู่แล้ว
+ invalidUsernameMessage=ชื่อผู้ใช้ไม่ถูกต้อง ชื่อผู้ใช้สามารถประกอบด้วยตัวอักษร ตัวเลข และอักขระพิเศษต่อไปนี้ @._+- หรือจะต้องเป็นที่อยู่อีเมลที่ถูกต้อง
++invalidPasswordMessage=The password must not be empty and must not have spaces at the beginning or end.
+ confirmPasswordErrorMessage=รหัสผ่านใหม่และยืนยันรหัสผ่านใหม่ต้องตรงกัน
+ deleteCurrentUserMessage=ไม่สามารถลบผู้ใช้ที่เข้าสู่ระบบในปัจจุบันได้
+ deleteUsernameExistsMessage=ชื่อผู้ใช้ไม่ปรากฏและไม่สามารถลบได้
+ downgradeCurrentUserMessage=ไม่สามารถลดระดับบทบาทของผู้ใช้ปัจจุบันได้
++disabledCurrentUserMessage=The current user cannot be disabled
+ downgradeCurrentUserLongMessage=ไม่สามารถลดระดับบทบาทของผู้ใช้ปัจจุบันได้ ดังนั้นผู้ใช้ปัจจุบันจะไม่ปรากฏ
+ userAlreadyExistsOAuthMessage=ผู้ใช้มีอยู่แล้วในฐานะผู้ใช้ OAuth2
+ userAlreadyExistsWebMessage=ผู้ใช้มีอยู่แล้วในฐานะผู้ใช้เว็บ
+@@ -177,6 +179,7 @@ adminUserSettings.user=ผู้ใช้
+ adminUserSettings.addUser=เพิ่มผู้ใช้ใหม่
+ adminUserSettings.deleteUser=ลบผู้ใช้
+
+----------------------------------------
+
+File: src/main/resources/messages_tr_TR.properties
+Status: modified
+Changes: +12 -0
+Diff:
+@@ -55,10 +55,12 @@ userNotFoundMessage=Kullanıcı bulunamadı.
+ incorrectPasswordMessage=Mevcut şifre yanlış.
+ usernameExistsMessage=Yeni Kullanıcı Adı zaten var.
+ invalidUsernameMessage=Geçersiz kullanıcı adı, kullanıcı adı yalnızca harf, rakam ve aşağıdaki özel karakterleri @._+- içerebilir veya geçerli bir e-posta adresi olmalıdır.
++invalidPasswordMessage=The password must not be empty and must not have spaces at the beginning or end.
+ confirmPasswordErrorMessage=Yeni Şifre ve Yeni Şifreyi Onayla eşleşmelidir.
+ deleteCurrentUserMessage=Şu anda oturum açmış olan kullanıcı silinemiyor.
+ deleteUsernameExistsMessage=Kullanıcı adı mevcut değil ve silinemez.
+ downgradeCurrentUserMessage=Mevcut kullanıcının rolü düşürülemiyor
++disabledCurrentUserMessage=The current user cannot be disabled
+ downgradeCurrentUserLongMessage=Mevcut kullanıcının rolü düşürülemiyor. Bu nedenle, mevcut kullanıcı gösterilmeyecektir.
+ userAlreadyExistsOAuthMessage=Kullanıcı zaten bir OAuth2 kullanıcısı olarak mevcut.
+ userAlreadyExistsWebMessage=Kullanıcı zaten bir web kullanıcısı olarak mevcut.
+@@ -177,6 +179,7 @@ adminUserSettings.user=Kullanıcı
+ adminUserSettings.addUser=Yeni Kullanıcı Ekle
+ adminUserSettings.deleteUser=Kullanıcı Sil
+
+----------------------------------------
+
+File: src/main/resources/messages_uk_UA.properties
+Status: modified
+Changes: +12 -0
+Diff:
+@@ -55,10 +55,12 @@ userNotFoundMessage=Користувача не знайдено.
+ incorrectPasswordMessage=Поточний пароль невірний.
+ usernameExistsMessage=Нове ім'я користувача вже існує.
+ invalidUsernameMessage=Недійсне ім’я користувача, ім’я користувача може містити лише літери, цифри та наступні спеціальні символи @._+- або має бути дійсною електронною адресою.
++invalidPasswordMessage=The password must not be empty and must not have spaces at the beginning or end.
+ confirmPasswordErrorMessage=New Password and Confirm New Password must match.
+ deleteCurrentUserMessage=Неможливо видалити користувача, який увійшов в систему.
+ deleteUsernameExistsMessage=Ім'я користувача не існує і не може бути видалено.
+ downgradeCurrentUserMessage=Неможливо понизити роль поточного користувача
++disabledCurrentUserMessage=The current user cannot be disabled
+ downgradeCurrentUserLongMessage=Неможливо понизити роль поточного користувача. Отже, поточний користувач не відображатиметься.
+ userAlreadyExistsOAuthMessage=The user already exists as an OAuth2 user.
+ userAlreadyExistsWebMessage=The user already exists as an web user.
+@@ -177,6 +179,7 @@ adminUserSettings.user=Користувач
+ adminUserSettings.addUser=Додати нового користувача
+ adminUserSettings.deleteUser=Видалити користувача
+
+----------------------------------------
+
+File: src/main/resources/messages_vi_VN.properties
+Status: modified
+Changes: +13 -1
+Diff:
+@@ -1,7 +1,7 @@
+ ###########
+ # Generic #
+ ###########
+-# the direction that the language is written (ltr=left to right, rtl = right to left)
++# the direction that the language is written (ltr = left to right, rtl = right to left)
+ language.direction=ltr
+ 
+ pdfPrompt=Chọn (các) tệp PDF
+@@ -55,10 +55,12 @@ userNotFoundMessage=Không tìm thấy người dùng.
+ incorrectPasswordMessage=Mật khẩu hiện tại không chính xác.
+ usernameExistsMessage=Tên người dùng mới đã tồn tại.
+ invalidUsernameMessage=Tên người dùng không hợp lệ, tên người dùng chỉ có thể chứa chữ cái, số và các ký tự đặc biệt sau @._+- hoặc phải là một địa chỉ email hợp lệ.
++invalidPasswordMessage=The password must not be empty and must not have spaces at the beginning or end.
+ confirmPasswordErrorMessage=Mật khẩu mới và Xác nhận mật khẩu mới phải khớp nhau.
+ deleteCurrentUserMessage=Không thể xóa người dùng đang đăng nhập.
+ deleteUsernameExistsMessage=Tên người dùng không tồn tại và không thể bị xóa.
+ downgradeCurrentUserMessage=Không thể hạ cấp vai trò của người dùng hiện tại
++disabledCurrentUserMessage=The current user cannot be disabled
+
+----------------------------------------
+
+File: src/main/resources/messages_zh_CN.properties
+Status: modified
+Changes: +12 -0
+Diff:
+@@ -55,10 +55,12 @@ userNotFoundMessage=未找到用户。
+ incorrectPasswordMessage=当前密码不正确。
+ usernameExistsMessage=新用户名已存在。
+ invalidUsernameMessage=用户名无效，用户名只能包含字母、数字和以下特殊字符@._+- 或必须是有效的电子邮件地址。
++invalidPasswordMessage=The password must not be empty and must not have spaces at the beginning or end.
+ confirmPasswordErrorMessage=两次密码不一致。
+ deleteCurrentUserMessage=无法删除当前登录的用户。
+ deleteUsernameExistsMessage=用户名不存在，无法删除。
+ downgradeCurrentUserMessage=无法降级当前用户的角色
++disabledCurrentUserMessage=The current user cannot be disabled
+ downgradeCurrentUserLongMessage=无法降级当前用户的角色。因此，当前用户将不会显示。
+ userAlreadyExistsOAuthMessage=该用户已作为OAuth2用户存在。
+ userAlreadyExistsWebMessage=该用户已作为Web用户存在。
+@@ -177,6 +179,7 @@ adminUserSettings.user=用户
+ adminUserSettings.addUser=添加新用户
+ adminUserSettings.deleteUser=删除用户
+
+----------------------------------------
+
+File: src/main/resources/messages_zh_TW.properties
+Status: modified
+Changes: +12 -0
+Diff:
+@@ -55,10 +55,12 @@ userNotFoundMessage=找不到使用者。
+ incorrectPasswordMessage=目前密碼不正確。
+ usernameExistsMessage=新使用者名稱已存在。
+ invalidUsernameMessage=使用者名稱無效，使用者名稱只能包含字母、數字和以下特殊字元 @._+- 或必須是有效的電子郵件地址。
++invalidPasswordMessage=The password must not be empty and must not have spaces at the beginning or end.
+ confirmPasswordErrorMessage=輸入的密碼必需和確認密碼相同。
+ deleteCurrentUserMessage=無法刪除目前登錄的使用者。
+ deleteUsernameExistsMessage=使用者名不存在，無法刪除。
+ downgradeCurrentUserMessage=無法降級目前使用者的角色
++disabledCurrentUserMessage=The current user cannot be disabled
+ downgradeCurrentUserLongMessage=無法降級目前使用者的角色。因此，不會顯示目前的使用者。
+ userAlreadyExistsOAuthMessage=該使用者已於 OAuth2 註冊。
+ userAlreadyExistsWebMessage=該使用者已於網頁註冊。
+@@ -177,6 +179,7 @@ adminUserSettings.user=使用者
+ adminUserSettings.addUser=新增使用者
+ adminUserSettings.deleteUser=刪除使用者
+
+----------------------------------------
+
+File: src/main/resources/settings.yml.template
+Status: modified
+Changes: +3 -1
+Diff:
+@@ -43,6 +43,7 @@ security:
+     clientId: '' # Client ID from your provider
+     clientSecret: '' # Client Secret from your provider
+     autoCreateUser: false # set to 'true' to allow auto-creation of non-existing users
++    blockRegistration: false # set to 'true' to deny login with SSO without prior registration by an admin
+     useAsUsername: email # Default is 'email'; custom fields can be used as the username
+     scopes: openid, profile, email # Specify the scopes for which the application will request permissions
+     provider: google # Set this to your OAuth provider's name, e.g., 'google' or 'keycloak'
+@@ -54,6 +55,7 @@ system:
+   showUpdate: false # see when a new update is available
+
+----------------------------------------
+
+File: src/main/resources/static/3rdPartyLicenses.json
+Status: modified
+Changes: +17 -11
+Diff:
+@@ -3,21 +3,21 @@
+         {
+             "moduleName": "ch.qos.logback:logback-classic",
+             "moduleUrl": "http://www.qos.ch",
+-            "moduleVersion": "1.5.6",
++            "moduleVersion": "1.5.7",
+             "moduleLicense": "GNU Lesser General Public License",
+             "moduleLicenseUrl": "http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html"
+         },
+         {
+             "moduleName": "ch.qos.logback:logback-core",
+             "moduleUrl": "http://www.qos.ch",
+-            "moduleVersion": "1.5.6",
++            "moduleVersion": "1.5.7",
+             "moduleLicense": "GNU Lesser General Public License",
+             "moduleLicenseUrl": "http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html"
+         },
+         {
+             "moduleName": "com.bucket4j:bucket4j_jdk17-core",
+             "moduleUrl": "http://github.com/bucket4j/bucket4j/bucket4j_jdk17-core",
+-            "moduleVersion": "8.12.1",
++            "moduleVersion": "8.13.1",
+             "moduleLicense": "The Apache Software License, Version 2.0",
+             "moduleLicenseUrl": "http://www.apache.org/licenses/LICENSE-2.0"
+         },
+@@ -272,7 +272,7 @@
+         {
+             "moduleName": "io.github.pixee:java-security-toolkit",
+             "moduleUrl": "https://github.com/pixee/java-security-toolkit",
+-            "moduleVersion": "1.1.3",
++            "moduleVersion": "1.2.0",
+             "moduleLicense": "MIT License",
+             "moduleLicenseUrl": "http://www.opensource.org/licenses/mit-license.php"
+
+----------------------------------------
+
+File: src/main/resources/static/css/footer.css
+Status: modified
+Changes: +5 -1
+Diff:
+@@ -21,4 +21,8 @@
+ 
+ .footer-icon {
+   font-size: 2rem;
+-}
+\ No newline at end of file
++}
++
++.footer-link {
++  text-decoration: none;
+
+----------------------------------------
+
+File: src/main/resources/templates/addUsers.html
+Status: modified
+Changes: +117 -51
+Diff:
+@@ -2,6 +2,19 @@
+ <html th:lang="${#locale.language}" th:dir="#{language.direction}" th:data-language="${#locale.toString()}" xmlns:th="https://www.thymeleaf.org">
+   <head>
+   <th:block th:insert="~{fragments/common :: head(title=#{adminUserSettings.title}, header=#{adminUserSettings.header})}"></th:block>
++    <style>
++      .active-user {
++        color: green;
++        text-shadow: 0 0 5px green;
++      }
++
++      .text-overflow {
++        max-width: 100px;
++        white-space: nowrap;
++        overflow: hidden;
++        text-overflow:ellipsis;
++      }
++    </style>
+   </head>
+ 
+   <body>
+@@ -20,49 +33,82 @@
+ 
+               <!-- User Settings Title -->
+               <div style="background: var(--md-sys-color-outline-variant);padding: .8rem; margin: 10px 0; border-radius: 2rem; text-align: center;">
+-                <a href="#" data-bs-toggle="modal" data-bs-target="#addUserModal" class="btn btn-outline-info" th:title="#{adminUserSettings.addUser}">
++                <a href="#" data-bs-toggle="modal" data-bs-target="#addUserModal" class="btn btn-outline-success" th:title="#{adminUserSettings.addUser}">
+                   <span class="material-symbols-rounded">person_add</span>
+                   <span th:text="#{adminUserSettings.addUser}">Add New User</span>
+                 </a>
+-                <a href="#" data-bs-toggle="modal" data-bs-target="#changeUserRoleModal" class="btn btn-outline-info" th:title="#{adminUserSettings.changeUserRole}">
++                <a href="#" data-bs-toggle="modal" data-bs-target="#changeUserRoleModal" class="btn btn-outline-success" th:title="#{adminUserSettings.changeUserRole}">
+                   <span class="material-symbols-rounded">edit</span>
+                   <span th:text="#{adminUserSettings.changeUserRole}">Change User's Role</span>
+                 </a>
++                <div class="my-4">
++                  <strong th:text="#{adminUserSettings.totalUsers}">Total Users:</strong> <span th:text="${totalUsers}"></span>
++                  <strong style="margin-left: 20px;" th:text="#{adminUserSettings.activeUsers}">Active Users:</strong> <span th:text="${activeUsers}"></span>
++                  <strong style="margin-left: 20px;" th:text="#{adminUserSettings.disabledUsers}">Disabled Users:</strong> <span th:text="${disabledUsers}"></span>
++                </div>
++              </div>
++              <div th:if="${addMessage}" class="p-3" style="background: var(--md-sys-color-outline-variant);border-radius: 2rem; text-align: center;">
++                <div class="alert alert-danger mb-auto">
++                  <span th:text="#{${addMessage}}">Default message if not found</span>
++                </div>
++              </div>
++              <div th:if="${changeMessage}" class="p-3" style="background: var(--md-sys-color-outline-variant);border-radius: 2rem; text-align: center;">
++                <div class="alert alert-danger mb-auto">
++                  <span th:text="#{${changeMessage}}">Default message if not found</span>
++                </div>
+               </div>
+               <div th:if="${deleteMessage}" class="alert alert-danger">
+-                <span th:text="#{${deleteMessage}}">Message</span>
++                <span th:text="#{${deleteMessage}}">Default message if not found</span>
+               </div>
+               <div class="bg-card mt-3 mb-3">
+                 <table class="table table-striped table-hover">
+                   <thead>
+                     <tr>
+-                      <th scope="col">UID</th>
+-                      <th scope="col" th:text="#{username}">Username</th>
+-                      <th scope="col" th:text="#{adminUserSettings.roles}">Roles</th>
+-                      <th scope="col" th:text="#{adminUserSettings.actions}">Actions</th>
+-                      <th scope="col" th:text="#{adminUserSettings.authenticated}">Authenticated</th>
++                      <th scope="col">#</th>
++                      <th scope="col" th:title="#{username}" th:text="#{username}">Username</th>
++                      <th scope="col" th:title="#{adminUserSettings.roles}" th:text="#{adminUserSettings.roles}">Roles</th>
++                      <th scope="col" th:title="#{adminUserSettings.authenticated}" class="text-overflow" th:text="#{adminUserSettings.authenticated}">Authenticated</th>
++                      <th scope="col" th:title="#{adminUserSettings.lastRequest}" class="text-overflow" th:text="#{adminUserSettings.lastRequest}">Last Request</th>
++                      <th scope="col" th:title="#{adminUserSettings.actions}" th:text="#{adminUserSettings.actions}" colspan="2">Actions</th>
++                      <!-- <th scope="col"></th> -->
+                     </tr>
+                   </thead>
+                   <tbody>
+                     <tr th:each="user : ${users}">
+                       <th scope="row" style="align-content: center;" th:text="${user.id}"></th>
+-                      <td style="align-content: center;" th:text="${user.username}"></td>
++                      <td style="align-content: center;" th:text="${user.username}" th:classappend="${userSessions[user.username] ? 'active-user' : ''}"></td>
+                       <td style="align-content: center;" th:text="#{${user.roleName}}"></td>
++                      <td style="align-content: center;" th:text="${user.authenticationType}"></td>
++                      <td style="align-content: center;" th:text="${userLastRequest[user.username] != null ? #dates.format(userLastRequest[user.username], 'yyyy-MM-dd HH:mm:ss') : 'N/A'}"></td>
+                       <td style="align-content: center;">
+-                        <form th:if="${user.username != currentUsername}" th:action="@{'/api/v1/user/admin/deleteUser/' + ${user.username}}" method="post" onsubmit="return confirmDelete()">
+-                          <button type="submit" th:title="#{adminUserSettings.deleteUser}" class="btn btn-info"><span class="material-symbols-rounded">person_remove</span></button>
++                        <form th:if="${user.username != currentUsername}" th:action="@{'/api/v1/user/admin/deleteUser/' + ${user.username}}" method="post" onsubmit="return confirmDeleteUser()">
++                          <button type="submit" th:title="#{adminUserSettings.deleteUser}" class="btn btn-info btn-sm"><span class="material-symbols-rounded">person_remove</span></button>
++                        </form>
++                        <a th:if="${user.username == currentUsername}" th:title="#{adminUserSettings.editOwnProfil}" th:href="@{'/account'}" class="btn btn-outline-success btn-sm"><span class="material-symbols-rounded">edit</span></a>
++                      </td>
++                      <td style="align-content: center;">
+
+----------------------------------------
+
+File: src/main/resources/templates/fragments/common.html
+Status: modified
+Changes: +7 -7
+Diff:
+@@ -81,19 +81,19 @@
+ 
+            // Find the file input within the form
+           var fileInput = $('input[type="file"]');
+-          
++
+           // Find the closest enclosing form of the file input
+           var form = fileInput.closest('form');
+-          
++
+           // Find the submit button within the form
+           var submitButton = form.find('button[type="submit"], input[type="submit"]');
+-          
++
+
+----------------------------------------
+
+File: src/main/resources/templates/fragments/footer.html
+Status: modified
+Changes: +12 -6
+Diff:
+@@ -1,10 +1,16 @@
+-<footer th:fragment="footer" id="footer" class="text-center py-5">
+-  <div class="footer-center">
++<footer th:fragment="footer" id="footer" class="text-center pt-5">
++  <div class="footer-center pb-4">
++    <!-- Links section -->
++    <div class="d-flex justify-content-center">
++      <ul class="list-unstyled d-flex">
++        <li><a class="footer-link px-2" id="licenses" target="_blank" th:href="@{'/licenses'}" th:text="#{licenses.nav}">Licenses</a></li>
++        <li><a class="footer-link px-2" id="survey" target="_blank" href="https://stirlingpdf.info/s/clwzgtfw7000gltkmwz1n212m" th:text="#{survey.nav}">Survey</a></li>
+
+----------------------------------------
+
+File: src/main/resources/templates/login.html
+Status: modified
+Changes: +5 -5
+Diff:
+@@ -111,18 +111,18 @@
+           }
+         </script>
+         <div class="text-center">
+-          <img class="mb-4" th:src="@{'/favicon.svg'}" alt="favicon" width="144" height="144">
++          <img class="my-4" th:src="@{'/favicon.svg'}" alt="favicon" width="144" height="144">
+ 
+           <h1 class="h1 mb-3 fw-normal" th:text="${@appName}">Stirling-PDF</h1>
+           <div th:if="${oAuth2Enabled} and (${loginMethod} == 'all' or ${loginMethod} == 'oauth2')">
+             <a href="#" class="w-100 btn btn-lg btn-primary" data-bs-toggle="modal" data-bs-target="#loginsModal" th:text="#{login.ssoSignIn}">Login Via SSO</a>
+
+----------------------------------------
+
+File: src/main/resources/templates/remove-pages.html
+Status: modified
+Changes: +2 -2
+Diff:
+@@ -21,7 +21,7 @@
+                 <div th:replace="~{fragments/common :: fileSelector(name='fileInput', multiple=false, accept='application/pdf')}"></div>
+                 <div class="mb-3">
+                   <label for="fileInput" th:text="#{pageRemover.pagesToDelete}"></label>
+-                  <div th:replace="~{fragments/common :: fileSelector(name='fileInput', multiple=false, accept='application/pdf')}"></div>
++                  <input type="text" class="form-control" id="fileInput" name="pageNumbers" th:placeholder="#{pageRemover.placeholder}" required>
+                 </div>
+                 <button type="submit" id="submitBtn" class="btn btn-primary" th:text="#{pageRemover.submit}"></button>
+               </form>
+@@ -37,4 +37,4 @@
+
+----------------------------------------
+

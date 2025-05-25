@@ -1,0 +1,2046 @@
+Changes between v0.5.1 and v0.5.2
+================================================================================
+
+COMMITS
+--------------------------------------------------------------------------------
+
+Commit: 05570ea300edd9717886358c1e555b9cb07743ef
+Author: Faisal Amir
+Date: 2024-06-17 14:53:45+00:00
+Message: chore: upgrade marked-katex-extension (#3049)
+----------------------------------------
+
+Commit: 8077eb5cf662f84c854f44c4a58e8cebbb1cf4a4
+Author: Faisal Amir
+Date: 2024-06-17 14:54:11+00:00
+Message: fix: handle long word without space to avoid right panel disappears (#3048)
+----------------------------------------
+
+Commit: 08c60a70c2e53d6c37af6936f4814a5898d6c7ec
+Author: Nathan
+Date: 2024-06-20 09:34:50+00:00
+Message: add time weighted retrieval (#2908)
+
+* add time weighted retrieval
+
+* add missing configuration for timeWeightedVectorStore
+
+* resolving conflict
+
+* add missing configuration for timeWeightedVectorStore
+
+* resolving conflict
+
+* fix linting issues
+
+* fix build failed due to requirement for useTimeWeightedRetriever in AssistantTool
+
+* update web packages complying the new structure
+
+---------
+
+Co-authored-by: thu <thu@treehouse.finance>
+----------------------------------------
+
+Commit: 20859ccb9d21549d6ff62715ed2a7e1ea423be72
+Author: Faisal Amir
+Date: 2024-06-20 09:42:25+00:00
+Message: fix: model dropdown search by configured model (#3047)
+----------------------------------------
+
+Commit: 241d98f99c36b5595b791eb59880b15b5d4659a0
+Author: jan-service-account
+Date: 2024-06-21 12:21:59+00:00
+Message: Update cortex cpp nightly to version 0.4.18 (#3072)
+
+* Update cortex cpp nightly to version 0.4.17
+
+* update linux downloadnitro
+
+* c‌ortex 0.4.18
+
+---------
+
+Co-authored-by: github-actions[bot] <github-actions[bot]@users.noreply.github.com>
+Co-authored-by: Van Pham <64197333+Van-QA@users.noreply.github.com>
+----------------------------------------
+
+Commit: e8ac8d8c019403964b46947758d41e2dd055ff21
+Author: Ikko Eltociear Ashimine
+Date: 2024-06-26 06:43:45+00:00
+Message: chore: update download.ts (#3088)
+
+infomation -> information
+----------------------------------------
+
+Commit: 31dedb57742318a9b139b6d51c452347cd77e020
+Author: NamH
+Date: 2024-06-26 06:45:57+00:00
+Message: chore: cortex version update (#3098)
+----------------------------------------
+
+Commit: e77f651273edaa0706d60013a632299662387c10
+Author: Faisal Amir
+Date: 2024-06-26 06:47:24+00:00
+Message: fix: handle words without space (#3101)
+----------------------------------------
+
+Commit: a2a203b40ddb4cd304514061d3101fc7cc2a00ea
+Author: Faisal Amir
+Date: 2024-06-27 02:45:08+00:00
+Message: fix: handle long thread title without space (#3107)
+
+* fix: handle long thread title without space, and make searchbar autofocus inside model dropdown
+
+* feat: enable right click to show setting on thread items (#3108)
+----------------------------------------
+
+Commit: c93f7457c21b09e83d1065eeb498d71def91fcbd
+Author: Van Pham
+Date: 2024-06-27 09:28:55+00:00
+Message: chore: Bump-cortex-0.4.17 (#3111)
+----------------------------------------
+
+Commit: 2f917dfcf3518e641b654a7ce1b1e25eaa33b3db
+Author: jan-service-account
+Date: 2024-07-01 08:16:37+00:00
+Message: Update cortex cpp nightly to version 0.4.18 (#3114)
+
+* Update cortex cpp nightly to version 0.4.18
+
+* cortex 0.4.19
+
+---------
+
+Co-authored-by: github-actions[bot] <github-actions[bot]@users.noreply.github.com>
+Co-authored-by: Van Pham <64197333+Van-QA@users.noreply.github.com>
+----------------------------------------
+
+Commit: 9fb95642df882c47902230f7e7b02a9e7cc7d8f4
+Author: Hoang Ha
+Date: 2024-07-01 11:36:08+00:00
+Message: Chore: Add stop token for Gemma 2b (#3125)
+
+* add stop token
+
+* Bump version
+----------------------------------------
+
+Commit: 26afa8acd4457bb91660dd118c9aa08c03469fab
+Author: NamH
+Date: 2024-07-02 12:01:35+00:00
+Message: fix: set specific version for terminate (#3126)
+
+Signed-off-by: James <namnh0122@gmail.com>
+----------------------------------------
+
+Commit: 68ed29625833ad3896a10325c64834a4330d349f
+Author: NamH
+Date: 2024-07-03 11:10:44+00:00
+Message: feat: add claude 3.5 sonnet (#3129)
+
+Signed-off-by: James <namnh0122@gmail.com>
+----------------------------------------
+
+Commit: 15bfcff4403d6645c3b8948d142d7dcff7973034
+Author: Faisal Amir
+Date: 2024-07-03 14:08:24+00:00
+Message: feat: add options config spell check for chat input (#3131)
+----------------------------------------
+
+Commit: bb171a89a4a13e2665981983c75e921851d98613
+Author: Saurabh
+Date: 2024-07-04 06:18:18+00:00
+Message: fixed grammar nits (#3132)
+----------------------------------------
+
+Commit: 28608099c563cb04b7250385a86c848c29c3180d
+Author: github-actions[bot]
+Date: 2024-07-04 19:31:32+00:00
+Message: Update cortex cpp nightly to version 0.4.20
+----------------------------------------
+
+Commit: d175dea05a9dce32e9f3cf0f55eca5fe88dde390
+Author: Faisal Amir
+Date: 2024-07-08 13:02:36+00:00
+Message: fix: toggle button for expand log section on modal troubleshoot (#3130)
+----------------------------------------
+
+Commit: 40dd0caaac98952f7a1d92e760c5960478ee7966
+Author: Faisal Amir
+Date: 2024-07-08 13:03:43+00:00
+Message: fix: add tooltip messages toolbar (#3138)
+----------------------------------------
+
+Commit: eac415aeca2a8033abc1dae6af82dc71bd48e5ea
+Author: Faisal Amir
+Date: 2024-07-09 14:18:25+00:00
+Message: fix: handle error message when apikey is not setup (#3149)
+----------------------------------------
+
+Commit: b28a9766b91f24658412c5a1a7484bc43605ce48
+Author: Faisal Amir
+Date: 2024-07-09 14:18:55+00:00
+Message: fix: title thread not updated on input edit title (#3148)
+----------------------------------------
+
+Commit: dddf3500ec604f851536b0e460db334133f10064
+Author: marknguyen1302
+Date: 2024-07-11 17:15:44+00:00
+Message: fix: validate path in fs (#3152)
+
+* fix: validate path in fs
+
+* fix other fs issue
+
+* fix test
+
+* fix test
+
+* fix test
+
+* fix: do not check file exist on model status validation
+
+* chore: bump version
+
+* remove copyFileSync method
+
+---------
+
+Co-authored-by: Louis <louis@jan.ai>
+----------------------------------------
+
+Commit: c54642a00f13a86a9bd502854de85c12a22819ec
+Author: Faisal Amir
+Date: 2024-07-11 17:52:34+00:00
+Message: fix: missing keyboard sand shortcuts screen (#3156)
+----------------------------------------
+
+Commit: e12549b9b8617bc46b5788ee73320d6b353f3763
+Author: Faisal Amir
+Date: 2024-07-12 02:06:01+00:00
+Message: fix: model dropdown search result always show downloaded models first (#3147)
+----------------------------------------
+
+Commit: 34ad977c261e9254438a9ea4b0fa2e4029912613
+Author: Faisal Amir
+Date: 2024-07-12 02:06:53+00:00
+Message: feat: add shortcut app logs on system monitor (#3150)
+----------------------------------------
+
+Commit: 17ecc7c9c833221ab1bf1c1257b52ed85b00aff6
+Author: NamH
+Date: 2024-07-12 07:07:56+00:00
+Message: bump version (#3082) (#3159)
+
+Co-authored-by: Hoang Ha <64120343+hahuyhoang411@users.noreply.github.com>
+----------------------------------------
+
+Commit: a36b3fee2482de1ac01c035a42c1218ae7d5371f
+Author: marknguyen1302
+Date: 2024-07-15 06:36:52+00:00
+Message: fix: move Jan folder (#3160)
+
+* chore: upgrade marked-katex-extension (#3049)
+
+* fix: handle long word without space to avoid right panel disappears (#3048)
+
+* add time weighted retrieval (#2908)
+
+* add time weighted retrieval
+
+* add missing configuration for timeWeightedVectorStore
+
+* resolving conflict
+
+* add missing configuration for timeWeightedVectorStore
+
+* resolving conflict
+
+* fix linting issues
+
+* fix build failed due to requirement for useTimeWeightedRetriever in AssistantTool
+
+* update web packages complying the new structure
+
+---------
+
+Co-authored-by: thu <thu@treehouse.finance>
+
+* fix: model dropdown search by configured model (#3047)
+
+* bump version (#3082) (#3083)
+
+Co-authored-by: Hoang Ha <64120343+hahuyhoang411@users.noreply.github.com>
+
+* Update cortex cpp nightly to version 0.4.18 (#3072)
+
+* Update cortex cpp nightly to version 0.4.17
+
+* update linux downloadnitro
+
+* c‌ortex 0.4.18
+
+---------
+
+Co-authored-by: github-actions[bot] <github-actions[bot]@users.noreply.github.com>
+Co-authored-by: Van Pham <64197333+Van-QA@users.noreply.github.com>
+
+* chore: update download.ts (#3088)
+
+infomation -> information
+
+* chore: cortex version update (#3098)
+
+* fix: handle words without space (#3101)
+
+* fix: handle long thread title without space (#3107)
+
+* fix: handle long thread title without space, and make searchbar autofocus inside model dropdown
+
+* feat: enable right click to show setting on thread items (#3108)
+
+* chore: Bump-cortex-0.4.17 (#3111)
+
+* Update cortex cpp nightly to version 0.4.18 (#3114)
+
+* Update cortex cpp nightly to version 0.4.18
+
+* cortex 0.4.19
+
+---------
+
+Co-authored-by: github-actions[bot] <github-actions[bot]@users.noreply.github.com>
+Co-authored-by: Van Pham <64197333+Van-QA@users.noreply.github.com>
+
+* Chore: Add stop token for Gemma 2b (#3125)
+
+* add stop token
+
+* Bump version
+
+* fix: set specific version for terminate (#3126)
+
+Signed-off-by: James <namnh0122@gmail.com>
+
+* feat: add claude 3.5 sonnet (#3129)
+
+Signed-off-by: James <namnh0122@gmail.com>
+
+* feat: add options config spell check for chat input (#3131)
+
+* fixed grammar nits (#3132)
+
+* Update cortex cpp nightly to version 0.4.20
+
+* fix: toggle button for expand log section on modal troubleshoot (#3130)
+
+* fix: add tooltip messages toolbar (#3138)
+
+* fix: handle error message when apikey is not setup (#3149)
+
+* fix: title thread not updated on input edit title (#3148)
+
+* merge dev
+
+* fix move jan folder
+
+* Update electron/preload.ts
+
+* refactor
+
+* Update electron/preload.ts
+
+* fix wrong param
+
+* use correct method
+
+* chore: fix lint
+
+---------
+
+Signed-off-by: James <namnh0122@gmail.com>
+Co-authored-by: Faisal Amir <urmauur@gmail.com>
+Co-authored-by: Nathan <thu.nhuanh99@gmail.com>
+Co-authored-by: thu <thu@treehouse.finance>
+Co-authored-by: Van Pham <64197333+Van-QA@users.noreply.github.com>
+Co-authored-by: Hoang Ha <64120343+hahuyhoang411@users.noreply.github.com>
+Co-authored-by: jan-service-account <136811300+jan-service-account@users.noreply.github.com>
+Co-authored-by: github-actions[bot] <github-actions[bot]@users.noreply.github.com>
+Co-authored-by: Ikko Eltociear Ashimine <eltociear@gmail.com>
+Co-authored-by: NamH <NamNh0122@gmail.com>
+Co-authored-by: Saurabh <saurabhrai1717@gmail.com>
+Co-authored-by: Louis <louis@jan.ai>
+----------------------------------------
+
+Commit: 506cbb88341e42c29c2c24fba8a2bf90cc9add7e
+Author: Van Pham
+Date: 2024-07-15 06:50:36+00:00
+Message: Merge pull request #3158 from janhq/dev
+
+chore: release 0.5.2 to main
+----------------------------------------
+
+
+PULL REQUESTS
+--------------------------------------------------------------------------------
+
+PR #3158: chore: release 0.5.2 to main
+Author: Van-QA
+Merged at: 2024-07-15 06:50:36+00:00
+URL: https://github.com/janhq/jan/pull/3158
+Description:
+## Describe Your Changes
+
+-
+
+## Fixes Issues
+
+- Closes #
+- Closes #
+
+## Self Checklist
+
+- [ ] Added relevant comments, esp in complex areas
+- [ ] Updated docs (for bug fixes / features)
+- [ ] Created issues for follow-up changes or refactoring needed
+
+----------------------------------------
+
+PR #3160: fix: move Jan folder
+Author: marknguyen1302
+Merged at: 2024-07-15 06:36:52+00:00
+URL: https://github.com/janhq/jan/pull/3160
+Description:
+## Describe Your Changes
+
+- fix move Jan folder feature broken after FS fix
+
+## Fixes Issues
+
+- Closes #
+- Closes #
+
+## Self Checklist
+
+- [ ] Added relevant comments, esp in complex areas
+- [ ] Updated docs (for bug fixes / features)
+- [ ] Created issues for follow-up changes or refactoring needed
+
+----------------------------------------
+
+PR #3159: Fix/resolve conflict main
+Author: namchuai
+Merged at: 2024-07-12 07:07:56+00:00
+URL: https://github.com/janhq/jan/pull/3159
+Description:
+## Describe Your Changes
+
+-
+
+## Fixes Issues
+
+- Closes #
+- Closes #
+
+## Self Checklist
+
+- [ ] Added relevant comments, esp in complex areas
+- [ ] Updated docs (for bug fixes / features)
+- [ ] Created issues for follow-up changes or refactoring needed
+
+----------------------------------------
+
+PR #3153: feat: modal migration UI 
+Author: urmauur
+Merged at: 2024-07-12 02:59:09+00:00
+URL: https://github.com/janhq/jan/pull/3153
+Description:
+## Describe Your Changes
+
+![image](https://github.com/janhq/jan/assets/10354610/dbdf3058-d3c8-4997-a31a-725d2b179602)
+![image](https://github.com/janhq/jan/assets/10354610/1d4f08a7-166f-486c-8cd3-fa1107eedd65)
+
+
+## Fixes Issues
+
+- Closes #3117 
+- Closes #
+
+## Self Checklist
+
+- [ ] Added relevant comments, esp in complex areas
+- [ ] Updated docs (for bug fixes / features)
+- [ ] Created issues for follow-up changes or refactoring needed
+
+----------------------------------------
+
+PR #3150: feat: add shortcut app logs on system monitor
+Author: urmauur
+Merged at: 2024-07-12 02:06:53+00:00
+URL: https://github.com/janhq/jan/pull/3150
+Description:
+## Describe Your Changes
+
+<img width="1331" alt="Screenshot 2024-07-10 at 12 20 15" src="https://github.com/janhq/jan/assets/10354610/3f33afa1-3210-4b8e-9dc2-c2defada74f9">
+
+## Fixes Issues
+
+- #2796 
+- Closes #
+
+## Self Checklist
+
+- [ ] Added relevant comments, esp in complex areas
+- [ ] Updated docs (for bug fixes / features)
+- [ ] Created issues for follow-up changes or refactoring needed
+
+----------------------------------------
+
+PR #3147: fix: model dropdown search result always show downloaded models first
+Author: urmauur
+Merged at: 2024-07-12 02:06:01+00:00
+URL: https://github.com/janhq/jan/pull/3147
+Description:
+## Describe Your Changes
+
+- Search result always showing model downloaded first 
+
+<img width="1360" alt="Screenshot 2024-07-08 at 19 46 35" src="https://github.com/janhq/jan/assets/10354610/f385f54a-3623-4a47-9526-4f19f9466375">
+
+## Fixes Issues
+
+- #3043 
+- Closes #
+
+## Self Checklist
+
+- [ ] Added relevant comments, esp in complex areas
+- [ ] Updated docs (for bug fixes / features)
+- [ ] Created issues for follow-up changes or refactoring needed
+
+----------------------------------------
+
+PR #3156: fix: missing keyboard sand shortcuts screen
+Author: urmauur
+Merged at: 2024-07-11 17:52:34+00:00
+URL: https://github.com/janhq/jan/pull/3156
+Description:
+## Describe Your Changes
+
+-
+
+## Fixes Issues
+
+- Closes #
+- Closes #
+
+## Self Checklist
+
+- [ ] Added relevant comments, esp in complex areas
+- [ ] Updated docs (for bug fixes / features)
+- [ ] Created issues for follow-up changes or refactoring needed
+
+----------------------------------------
+
+PR #3152: fix: validate path in fs
+Author: marknguyen1302
+Merged at: 2024-07-11 17:15:44+00:00
+URL: https://github.com/janhq/jan/pull/3152
+Description:
+## Describe Your Changes
+
+-  validate path in fs, only allow access to the file in the Jan folder
+
+before the fix
+   - invalid path:
+![image](https://github.com/janhq/jan/assets/170505949/4ee2f8e3-2c16-4297-a2e5-d35435427f58)
+
+after the fix:
+   - valid path:
+![image](https://github.com/janhq/jan/assets/170505949/e5cccd70-37f5-4efb-a289-3ee8d8741184)
+![image](https://github.com/janhq/jan/assets/170505949/e05f1675-4a49-459d-a33d-3ac34bebba11)
+![image](https://github.com/janhq/jan/assets/170505949/93c309b9-e9c8-451a-8848-da1c2b44bf15)
+
+   - invalid path:
+![image](https://github.com/janhq/jan/assets/170505949/af9785ec-d2f6-404b-ae28-1549c02c4dde)
+![image](https://github.com/janhq/jan/assets/170505949/87d31735-3340-4051-bd82-be70bc95375b)
+![image](https://github.com/janhq/jan/assets/170505949/f3670bf2-edad-4e31-9033-ebe6daec8045)
+
+
+
+
+
+
+## Fixes Issues
+
+- Closes #
+- Closes #
+
+## Self Checklist
+
+- [ ] Added relevant comments, esp in complex areas
+- [ ] Updated docs (for bug fixes / features)
+- [ ] Created issues for follow-up changes or refactoring needed
+
+----------------------------------------
+
+PR #3151: refactor: remove core node module - fs - extensions and so on
+Author: louis-jan
+Merged at: 2024-07-10 06:27:07+00:00
+URL: https://github.com/janhq/jan/pull/3151
+Description:
+## Describe Your Changes
+
+- Deprecate all core modules - just keep types
+
+## Fixes Issues
+
+- Closes #
+- Closes #
+
+## Self Checklist
+
+- [ ] Added relevant comments, esp in complex areas
+- [ ] Updated docs (for bug fixes / features)
+- [ ] Created issues for follow-up changes or refactoring needed
+
+----------------------------------------
+
+PR #3148: fix: title thread not updated on input edit title
+Author: urmauur
+Merged at: 2024-07-09 14:18:55+00:00
+URL: https://github.com/janhq/jan/pull/3148
+Description:
+## Describe Your Changes
+
+Testing
+- U‌‌pda‌te thread name
+- Clean threa‌d
+- E‌dit the thread name again 
+
+## Fixes Issues
+
+- #3116
+- Closes #
+
+## Self Checklist
+
+- [ ] Added relevant comments, esp in complex areas
+- [ ] Updated docs (for bug fixes / features)
+- [ ] Created issues for follow-up changes or refactoring needed
+
+----------------------------------------
+
+PR #3149: fix: handle error message when apikey is not setup
+Author: urmauur
+Merged at: 2024-07-09 14:18:25+00:00
+URL: https://github.com/janhq/jan/pull/3149
+Description:
+## Describe Your Changes
+
+Before
+![image](https://github.com/janhq/jan/assets/10354610/4712db4e-760e-46bb-bf63-be979cb64096)
+
+After
+<img width="1296" alt="Screenshot 2024-07-09 at 20 43 11" src="https://github.com/janhq/jan/assets/10354610/84a7ae30-cdcc-4bf3-a747-94f57d7207d0">
+
+
+## Fixes Issues
+
+- Closes #
+- Closes #
+
+## Self Checklist
+
+- [ ] Added relevant comments, esp in complex areas
+- [ ] Updated docs (for bug fixes / features)
+- [ ] Created issues for follow-up changes or refactoring needed
+
+----------------------------------------
+
+PR #3138: fix: add tooltip messages toolbar
+Author: urmauur
+Merged at: 2024-07-08 13:03:43+00:00
+URL: https://github.com/janhq/jan/pull/3138
+Description:
+## Describe Your Changes
+
+<img width="1307" alt="Screenshot 2024-07-04 at 15 07 52" src="https://github.com/janhq/jan/assets/10354610/5a457804-a7a6-4488-982d-d9299b873e06">
+
+<img width="1301" alt="Screenshot 2024-07-04 at 15 07 56" src="https://github.com/janhq/jan/assets/10354610/0e29f03f-748f-4441-9c4b-78f5dddd236d">
+
+
+<img width="1325" alt="Screenshot 2024-07-04 at 15 08 01" src="https://github.com/janhq/jan/assets/10354610/e7a7cf31-819b-49f5-b31a-69368ac5de42">
+
+
+<img width="1315" alt="Screenshot 2024-07-04 at 15 08 06" src="https://github.com/janhq/jan/assets/10354610/09887836-2375-4774-a74d-133ee48eddbe">
+
+
+## Fixes Issues
+
+- #3127 
+- Closes #
+
+## Self Checklist
+
+- [ ] Added relevant comments, esp in complex areas
+- [ ] Updated docs (for bug fixes / features)
+- [ ] Created issues for follow-up changes or refactoring needed
+
+----------------------------------------
+
+PR #3130: fix: toggle button for expand log section on modal troubleshoot
+Author: urmauur
+Merged at: 2024-07-08 13:02:36+00:00
+URL: https://github.com/janhq/jan/pull/3130
+Description:
+## Describe Your Changes
+
+<img width="1329" alt="Screenshot 2024-07-02 at 19 20 04" src="https://github.com/janhq/jan/assets/10354610/c3c579bf-93f5-468e-bb2f-29647bab2019">
+
+<img width="1375" alt="Screenshot 2024-07-02 at 19 20 10" src="https://github.com/janhq/jan/assets/10354610/b9000e95-8791-4f0b-9c3b-6ec7f6cacf68">
+
+## Fixes Issues
+
+- #2499 
+- Closes #
+
+## Self Checklist
+
+- [ ] Added relevant comments, esp in complex areas
+- [ ] Updated docs (for bug fixes / features)
+- [ ] Created issues for follow-up changes or refactoring needed
+
+----------------------------------------
+
+PR #3082: Chore: Model bump version
+Author: hahuyhoang411
+Merged at: 2024-06-21 09:21:20+00:00
+URL: https://github.com/janhq/jan/pull/3082
+Description:
+## Describe Your Changes
+
+- Model version bump
+
+## Fixes Issues
+
+- Closes #
+
+## Self Checklist
+
+- [x] Model version bump
+- [x] Package version bump
+
+----------------------------------------
+
+PR #3141: Update cortex cpp nightly to version 0.4.20
+Author: jan-service-account
+Merged at: 2024-07-04 19:51:07+00:00
+URL: https://github.com/janhq/jan/pull/3141
+Description:
+This PR updates the Update cortex cpp nightly to version 0.4.20
+----------------------------------------
+
+PR #3132: fixed grammar nits
+Author: 0saurabh0
+Merged at: 2024-07-04 06:18:18+00:00
+URL: https://github.com/janhq/jan/pull/3132
+Description:
+## Describe Your Changes
+
+- Fixed the minute grammar mistakes
+
+## Fixes Issues
+
+- Closes #3109 
+
+
+## SS
+
+![Screenshot from 2024-07-02 20-28-05](https://github.com/janhq/jan/assets/97830220/97e42e9b-3188-4af4-937b-bed9acb5b48d)
+![Screenshot from 2024-07-02 20-26-03](https://github.com/janhq/jan/assets/97830220/e5e56de0-4273-4e50-ba09-7a414bad4196)
+
+
+
+----------------------------------------
+
+PR #3131: feat: add options config spell check for chat input
+Author: urmauur
+Merged at: 2024-07-03 14:08:24+00:00
+URL: https://github.com/janhq/jan/pull/3131
+Description:
+## Describe Your Changes
+
+<img width="1311" alt="Screenshot 2024-07-02 at 19 24 13" src="https://github.com/janhq/jan/assets/10354610/8b749e9a-4894-4479-bdd8-a39985b1ec8e">
+
+<img width="1321" alt="Screenshot 2024-07-02 at 19 25 31" src="https://github.com/janhq/jan/assets/10354610/4f17e6c2-e3ba-493e-a5b8-59b8d545e843">
+
+<img width="1296" alt="Screenshot 2024-07-02 at 19 24 32" src="https://github.com/janhq/jan/assets/10354610/a79b7dc5-393b-41f1-83d2-d43c4f034945">
+
+## Fixes Issues
+
+- #2991 
+- Closes #
+
+## Self Checklist
+
+- [ ] Added relevant comments, esp in complex areas
+- [ ] Updated docs (for bug fixes / features)
+- [ ] Created issues for follow-up changes or refactoring needed
+
+----------------------------------------
+
+PR #3129: feat: add claude 3.5 sonnet
+Author: namchuai
+Merged at: 2024-07-03 11:10:44+00:00
+URL: https://github.com/janhq/jan/pull/3129
+Description:
+## Describe Your Changes
+
+- add claude 3.5 sonnet
+
+## Screenshots
+<img width="1500" alt="Screenshot 2024-07-02 at 13 23 36" src="https://github.com/janhq/jan/assets/10397206/db0b8fdf-e206-461d-a7fa-d9b7f6165200">
+
+## Self Checklist
+
+- [ ] Added relevant comments, esp in complex areas
+- [ ] Updated docs (for bug fixes / features)
+- [ ] Created issues for follow-up changes or refactoring needed
+
+----------------------------------------
+
+PR #3126: fix: set specific version for terminate
+Author: namchuai
+Merged at: 2024-07-02 12:01:35+00:00
+URL: https://github.com/janhq/jan/pull/3126
+Description:
+## Describe Your Changes
+
+-
+
+## Fixes Issues
+
+- Closes #
+- Closes #
+
+## Self Checklist
+
+- [ ] Added relevant comments, esp in complex areas
+- [ ] Updated docs (for bug fixes / features)
+- [ ] Created issues for follow-up changes or refactoring needed
+
+----------------------------------------
+
+PR #3125: Chore: Add stop token for Gemma 2b
+Author: hahuyhoang411
+Merged at: 2024-07-01 11:36:08+00:00
+URL: https://github.com/janhq/jan/pull/3125
+Description:
+## Describe Your Changes
+
+- Add stop token for Gemma 2b
+
+## Fixes Issues
+
+- Closes #https://github.com/janhq/jan/issues/3105
+
+## Self Checklist
+
+- [x] add stop token
+- [x] bump version model
+- [x] bump package version
+
+----------------------------------------
+
+PR #3114: Update cortex cpp nightly to version 0.4.19
+Author: jan-service-account
+Merged at: 2024-07-01 08:16:37+00:00
+URL: https://github.com/janhq/jan/pull/3114
+Description:
+This PR updates the Update cortex cpp nightly to version 0.4.19
+----------------------------------------
+
+PR #3111: chore: Bump-cortex-0.4.17
+Author: Van-QA
+Merged at: 2024-06-27 09:28:55+00:00
+URL: https://github.com/janhq/jan/pull/3111
+Description:
+## Describe Your Changes
+
+-
+
+## Fixes Issues
+
+- Closes #
+- Closes #
+
+## Self Checklist
+
+- [ ] Added relevant comments, esp in complex areas
+- [ ] Updated docs (for bug fixes / features)
+- [ ] Created issues for follow-up changes or refactoring needed
+
+----------------------------------------
+
+PR #3107: fix: handle long thread title without space
+Author: urmauur
+Merged at: 2024-06-27 02:45:08+00:00
+URL: https://github.com/janhq/jan/pull/3107
+Description:
+
+## Describe Your Changes
+
+1. Handle long thread titles without space
+Testing -> Try changing edit title with this `aaaaabbbbccccddddeeeeffffgggg` make sure `...` ellipsis does not disappear and the setting menu is still  accessible
+
+<img width="1306" alt="Screenshot 2024-06-26 at 22 24 34" src="https://github.com/janhq/jan/assets/10354610/2965909f-1c55-4280-8170-0e8d3837345a">
+
+2. Added auto focus on the search bar inside the model dropdown
+
+<img width="1299" alt="Screenshot 2024-06-26 at 22 31 56" src="https://github.com/janhq/jan/assets/10354610/fc937314-47f8-4288-95d6-9b69ff81fc10">
+
+
+## Fixes Issues
+
+- #3104 
+
+## Self Checklist
+
+- [ ] Added relevant comments, esp in complex areas
+- [ ] Updated docs (for bug fixes / features)
+- [ ] Created issues for follow-up changes or refactoring needed
+
+----------------------------------------
+
+PR #3108: feat: enable right click to show setting on thread items
+Author: urmauur
+Merged at: 2024-06-26 18:06:59+00:00
+URL: https://github.com/janhq/jan/pull/3108
+Description:
+## Describe Your Changes
+
+<img width="1306" alt="Screenshot 2024-06-26 at 23 17 42" src="https://github.com/janhq/jan/assets/10354610/d011424b-18d9-4e1a-a564-093cbc8eb3c8">
+
+## Fixes Issues
+
+- #3103
+
+## Self Checklist
+
+- [ ] Added relevant comments, esp in complex areas
+- [ ] Updated docs (for bug fixes / features)
+- [ ] Created issues for follow-up changes or refactoring needed
+
+----------------------------------------
+
+PR #3101: fix: handle words without space
+Author: urmauur
+Merged at: 2024-06-26 06:47:24+00:00
+URL: https://github.com/janhq/jan/pull/3101
+Description:
+## Describe Your Changes
+
+![Screenshot 2024-06-24 at 19 46 29](https://github.com/janhq/jan/assets/10354610/a8ce4b45-cf00-43ad-bc9a-b54bfe046fc7)
+
+add class `break-all` only for text without space
+
+## Fixes Issues
+
+- Closes #
+- Closes #
+
+## Self Checklist
+
+- [ ] Added relevant comments, esp in complex areas
+- [ ] Updated docs (for bug fixes / features)
+- [ ] Created issues for follow-up changes or refactoring needed
+
+----------------------------------------
+
+PR #3098: chore: cortex version update
+Author: namchuai
+Merged at: 2024-06-26 06:45:58+00:00
+URL: https://github.com/janhq/jan/pull/3098
+Description:
+## Describe Your Changes
+
+- Update cortex to fix build failed.
+
+## Self Checklist
+
+- [ ] Added relevant comments, esp in complex areas
+- [ ] Updated docs (for bug fixes / features)
+- [ ] Created issues for follow-up changes or refactoring needed
+
+----------------------------------------
+
+PR #3088: chore: update download.ts
+Author: eltociear
+Merged at: 2024-06-26 06:43:46+00:00
+URL: https://github.com/janhq/jan/pull/3088
+Description:
+
+## Describe Your Changes
+
+- infomation -> information
+
+
+
+## Self Checklist
+
+- [ ] Added relevant comments, esp in complex areas
+- [ ] Updated docs (for bug fixes / features)
+- [ ] Created issues for follow-up changes or refactoring needed
+
+----------------------------------------
+
+PR #3072: Update cortex cpp nightly to version 0.4.18
+Author: jan-service-account
+Merged at: 2024-06-21 12:21:59+00:00
+URL: https://github.com/janhq/jan/pull/3072
+Description:
+This PR updates the Update cortex cpp nightly to version 0.4.17
+----------------------------------------
+
+PR #3083: chore: bump version (#3082)
+Author: Van-QA
+Merged at: 2024-06-21 10:06:42+00:00
+URL: https://github.com/janhq/jan/pull/3083
+Description:
+## Describe Your Changes
+
+-
+
+## Fixes Issues
+
+- Closes #
+- Closes #
+
+## Self Checklist
+
+- [ ] Added relevant comments, esp in complex areas
+- [ ] Updated docs (for bug fixes / features)
+- [ ] Created issues for follow-up changes or refactoring needed
+
+----------------------------------------
+
+
+FILE CHANGES
+--------------------------------------------------------------------------------
+
+File: core/src/browser/fs.ts
+Status: modified
+Changes: +0 -16
+Diff:
+@@ -55,20 +55,6 @@ const unlinkSync = (...args: any[]) => globalThis.core.api?.unlinkSync(...args)
+  */
+ const appendFileSync = (...args: any[]) => globalThis.core.api?.appendFileSync(...args)
+ 
+-/**
+- * Synchronizes a file from a source path to a destination path.
+- * @param {string} src - The source path of the file to be synchronized.
+- * @param {string} dest - The destination path where the file will be synchronized to.
+- * @returns {Promise<any>} - A promise that resolves when the file has been successfully synchronized.
+- */
+
+----------------------------------------
+
+File: core/src/node/api/processors/download.ts
+Status: modified
+Changes: +2 -1
+Diff:
+@@ -1,6 +1,6 @@
+ import { resolve, sep } from 'path'
+ import { DownloadEvent } from '../../../types/api'
+-import { normalizeFilePath } from '../../helper/path'
++import { normalizeFilePath, validatePath } from '../../helper/path'
+ import { getJanDataFolderPath } from '../../helper'
+ import { DownloadManager } from '../../helper/download'
+ import { createWriteStream, renameSync } from 'fs'
+@@ -37,6 +37,7 @@ export class Downloader implements Processor {
+     const modelId = array.pop() ?? ''
+
+----------------------------------------
+
+File: core/src/node/api/processors/fs.ts
+Status: modified
+Changes: +29 -10
+Diff:
+@@ -1,5 +1,5 @@
+-import { join } from 'path'
+-import { normalizeFilePath } from '../../helper/path'
++import { join, resolve } from 'path'
++import { normalizeFilePath, validatePath } from '../../helper/path'
+ import { getJanDataFolderPath } from '../../helper'
+ import { Processor } from './Processor'
+ import fs from 'fs'
+@@ -15,17 +15,29 @@ export class FileSystem implements Processor {
+   process(route: string, ...args: any): any {
+     const instance = this as any
+     const func = instance[route]
+-
+     if (func) {
+       return func(...args)
+     } else {
+       return import(FileSystem.moduleName).then((mdl) =>
+         mdl[route](
+-          ...args.map((arg: any) => {
+-            return typeof arg === 'string' &&
+-              (arg.startsWith(`file:/`) || arg.startsWith(`file:\\`))
+-              ? join(getJanDataFolderPath(), normalizeFilePath(arg))
+-              : arg
++          ...args.map((arg: any, index: number) => {
++            if(index !== 0) {
+
+----------------------------------------
+
+File: core/src/node/api/processors/fsExt.ts
+Status: modified
+Changes: +6 -15
+Diff:
+@@ -1,6 +1,6 @@
+ import { join } from 'path'
+ import fs from 'fs'
+-import { appResourcePath, normalizeFilePath } from '../../helper/path'
++import { appResourcePath, normalizeFilePath, validatePath } from '../../helper/path'
+ import { getJanDataFolderPath, getJanDataFolderPath as getPath } from '../../helper'
+ import { Processor } from './Processor'
+ import { FileStat } from '../../../types'
+@@ -18,19 +18,6 @@ export class FSExt implements Processor {
+     return func(...args)
+   }
+ 
+-  // Handles the 'syncFile' IPC event. This event is triggered to synchronize a file from a source path to a destination path.
+-  syncFile(src: string, dest: string) {
+-    const reflect = require('@alumna/reflect')
+-    return reflect({
+
+----------------------------------------
+
+File: core/src/node/helper/config.ts
+Status: modified
+Changes: +2 -1
+Diff:
+@@ -7,7 +7,8 @@ import childProcess from 'child_process'
+ const configurationFileName = 'settings.json'
+ 
+ // TODO: do no specify app name in framework module
+-const defaultJanDataFolder = join(os.homedir(), 'jan')
++// TODO: do not default the os.homedir
++const defaultJanDataFolder = join(os?.homedir() || '', 'jan')
+ const defaultAppConfig: AppConfiguration = {
+   data_folder: defaultJanDataFolder,
+   quick_ask: false,
+
+----------------------------------------
+
+File: core/src/node/helper/download.ts
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -11,7 +11,7 @@ export class DownloadManager {
+   // store the download information with key is model id
+   public downloadProgressMap: Record<string, DownloadState> = {}
+ 
+-  // store the download infomation with key is normalized file path
++  // store the download information with key is normalized file path
+   public downloadInfo: Record<string, DownloadState> = {}
+ 
+   constructor() {
+
+----------------------------------------
+
+File: core/src/node/helper/path.ts
+Status: modified
+Changes: +10 -1
+Diff:
+@@ -1,4 +1,5 @@
+-import { join } from 'path'
++import { join, resolve } from 'path'
++import { getJanDataFolderPath } from './config'
+ 
+ /**
+  * Normalize file path
+@@ -33,3 +34,11 @@ export async function appResourcePath(): Promise<string> {
+   // server
+   return join(global.core.appPath(), '../../..')
+
+----------------------------------------
+
+File: core/src/types/api/index.ts
+Status: modified
+Changes: +0 -2
+Diff:
+@@ -90,7 +90,6 @@ export enum ExtensionRoute {
+ }
+ export enum FileSystemRoute {
+   appendFileSync = 'appendFileSync',
+-  copyFileSync = 'copyFileSync',
+   unlinkSync = 'unlinkSync',
+   existsSync = 'existsSync',
+   readdirSync = 'readdirSync',
+@@ -100,7 +99,6 @@ export enum FileSystemRoute {
+   writeFileSync = 'writeFileSync',
+
+----------------------------------------
+
+File: core/src/types/assistant/assistantEntity.ts
+Status: modified
+Changes: +1 -0
+Diff:
+@@ -6,6 +6,7 @@
+ export type AssistantTool = {
+   type: string
+   enabled: boolean
++  useTimeWeightedRetriever?: boolean
+   settings: any
+ }
+ 
+
+----------------------------------------
+
+File: core/src/types/message/messageEntity.ts
+Status: modified
+Changes: +2 -0
+Diff:
+@@ -83,6 +83,8 @@ export enum MessageStatus {
+ export enum ErrorCode {
+   InvalidApiKey = 'invalid_api_key',
+ 
++  AuthenticationError = 'authentication_error',
++
+   InsufficientQuota = 'insufficient_quota',
+ 
+   InvalidRequestError = 'invalid_request_error',
+
+----------------------------------------
+
+File: electron/preload.ts
+Status: modified
+Changes: +31 -1
+Diff:
+@@ -3,16 +3,19 @@
+  * @module preload
+  */
+ 
+-import { APIEvents, APIRoutes } from '@janhq/core/node'
++import { APIEvents, APIRoutes, AppConfiguration, getAppConfigurations, updateAppConfiguration } from '@janhq/core/node'
+ import { contextBridge, ipcRenderer } from 'electron'
++import { readdirSync } from 'fs'
+ 
+ const interfaces: { [key: string]: (...args: any[]) => any } = {}
+ 
+ // Loop over each route in APIRoutes
+ APIRoutes.forEach((method) => {
+   // For each method, create a function on the interfaces object
+   // This function invokes the method on the ipcRenderer with any provided arguments
++  
+   interfaces[method] = (...args: any[]) => ipcRenderer.invoke(method, ...args)
++  
+
+----------------------------------------
+
+File: extensions/assistant-extension/src/index.ts
+Status: modified
+Changes: +1 -0
+Diff:
+@@ -126,6 +126,7 @@ export default class JanAssistantExtension extends AssistantExtension {
+         {
+           type: 'retrieval',
+           enabled: false,
++          useTimeWeightedRetriever: false,
+           settings: {
+             top_k: 2,
+             chunk_size: 1024,
+
+----------------------------------------
+
+File: extensions/assistant-extension/src/node/index.ts
+Status: modified
+Changes: +8 -4
+Diff:
+@@ -11,13 +11,14 @@ export function toolRetrievalUpdateTextSplitter(
+ export async function toolRetrievalIngestNewDocument(
+   file: string,
+   model: string,
+-  engine: string
++  engine: string,
++  useTimeWeighted: boolean
+ ) {
+   const filePath = path.join(getJanDataFolderPath(), normalizeFilePath(file))
+   const threadPath = path.dirname(filePath.replace('files', ''))
+
+----------------------------------------
+
+File: extensions/assistant-extension/src/node/retrieval.ts
+Status: modified
+Changes: +50 -2
+Diff:
+@@ -2,11 +2,16 @@ import { RecursiveCharacterTextSplitter } from 'langchain/text_splitter'
+ import { formatDocumentsAsString } from 'langchain/util/document'
+ import { PDFLoader } from 'langchain/document_loaders/fs/pdf'
+ 
++import { TimeWeightedVectorStoreRetriever } from 'langchain/retrievers/time_weighted'
++import { MemoryVectorStore } from 'langchain/vectorstores/memory'
++
+ import { HNSWLib } from 'langchain/vectorstores/hnswlib'
+ 
+ import { OpenAIEmbeddings } from 'langchain/embeddings/openai'
+ import { readEmbeddingEngine } from './engine'
+ 
++import path from 'path'
++
+ export class Retrieval {
+   public chunkSize: number = 100
+   public chunkOverlap?: number = 0
+@@ -15,8 +20,25 @@ export class Retrieval {
+   private embeddingModel?: OpenAIEmbeddings = undefined
+   private textSplitter?: RecursiveCharacterTextSplitter
+ 
++  // to support time-weighted retrieval
++  private timeWeightedVectorStore: MemoryVectorStore
++  private timeWeightedretriever: any | TimeWeightedVectorStoreRetriever
++
+   constructor(chunkSize: number = 4000, chunkOverlap: number = 200) {
+     this.updateTextSplitter(chunkSize, chunkOverlap)
++
++    // declare time-weighted retriever and storage
++    this.timeWeightedVectorStore = new MemoryVectorStore(
++      new OpenAIEmbeddings(
++        { openAIApiKey: 'nitro-embedding' },
++        { basePath: 'http://127.0.0.1:3928/v1' }
+
+----------------------------------------
+
+File: extensions/assistant-extension/src/tools/retrieval.ts
+Status: modified
+Changes: +4 -2
+Diff:
+@@ -37,7 +37,8 @@ export class RetrievalTool extends InferenceTool {
+           'toolRetrievalIngestNewDocument',
+           docFile,
+           data.model?.id,
+-          data.model?.engine
++          data.model?.engine,
++          tool?.useTimeWeightedRetriever ?? false
+         )
+       } else {
+         return Promise.resolve(data)
+
+----------------------------------------
+
+File: extensions/inference-anthropic-extension/package.json
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -1,7 +1,7 @@
+ {
+   "name": "@janhq/inference-anthropic-extension",
+   "productName": "Anthropic Inference Engine",
+-  "version": "1.0.1",
++  "version": "1.0.2",
+   "description": "This extension enables Anthropic chat completion API calls",
+   "main": "dist/index.js",
+   "module": "dist/module.js",
+
+----------------------------------------
+
+File: extensions/inference-anthropic-extension/resources/models.json
+Status: modified
+Changes: +28 -13
+Diff:
+@@ -19,10 +19,7 @@
+     },
+     "metadata": {
+       "author": "Anthropic",
+-      "tags": [
+-        "General",
+-        "Big Context Length"
+-      ]
++      "tags": ["General", "Big Context Length"]
+     },
+     "engine": "anthropic"
+   },
+@@ -46,10 +43,7 @@
+     },
+     "metadata": {
+       "author": "Anthropic",
+-      "tags": [
+-        "General",
+-        "Big Context Length"
+-      ]
++      "tags": ["General", "Big Context Length"]
+
+----------------------------------------
+
+File: extensions/inference-nitro-extension/bin/version.txt
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -1 +1 @@
+-0.4.13
++0.4.20
+
+----------------------------------------
+
+File: extensions/inference-nitro-extension/package.json
+Status: modified
+Changes: +3 -3
+Diff:
+@@ -1,7 +1,7 @@
+ {
+   "name": "@janhq/inference-cortex-extension",
+   "productName": "Cortex Inference Engine",
+-  "version": "1.0.13",
++  "version": "1.0.14",
+   "description": "This extension embeds cortex.cpp, a lightweight inference engine written in C++. See https://nitro.jan.ai.\nAdditional dependencies could be installed to run without Cuda Toolkit installation.",
+   "main": "dist/index.js",
+   "node": "dist/node/index.cjs.js",
+@@ -10,7 +10,7 @@
+
+----------------------------------------
+
+File: extensions/inference-nitro-extension/resources/models/gemma-2b/model.json
+Status: modified
+Changes: +2 -2
+Diff:
+@@ -8,7 +8,7 @@
+   "id": "gemma-2b",
+   "object": "model",
+   "name": "Gemma 2B Q4",
+-  "version": "1.2",
++  "version": "1.3",
+   "description": "Gemma is built from the same technology with Google's Gemini.",
+   "format": "gguf",
+   "settings": {
+@@ -22,7 +22,7 @@
+
+----------------------------------------
+
+File: extensions/model-extension/package.json
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -1,7 +1,7 @@
+ {
+   "name": "@janhq/model-extension",
+   "productName": "Model Management",
+-  "version": "1.0.32",
++  "version": "1.0.33",
+   "description": "Model Management Extension provides model exploration and seamless downloads",
+   "main": "dist/index.js",
+   "node": "dist/node/index.cjs.js",
+
+----------------------------------------
+
+File: extensions/model-extension/src/index.ts
+Status: modified
+Changes: +6 -1
+Diff:
+@@ -383,7 +383,12 @@ export default class JanModelExtension extends ModelExtension {
+ 
+         // model binaries (sources) are absolute path & exist
+         const existFiles = await Promise.all(
+-          model.sources.map((source) => fs.existsSync(source.url))
++          model.sources.map(
++            (source) =>
++              // Supposed to be a local file url
++              !source.url.startsWith(`http://`) &&
++              !source.url.startsWith(`https://`)
+
+----------------------------------------
+
+File: web/containers/ErrorMessage/index.tsx
+Status: modified
+Changes: +3 -2
+Diff:
+@@ -41,12 +41,13 @@ const ErrorMessage = ({ message }: { message: ThreadMessage }) => {
+       case ErrorCode.Unknown:
+         return 'Apologies, something’s amiss!'
+       case ErrorCode.InvalidApiKey:
++      case ErrorCode.AuthenticationError:
+       case ErrorCode.InvalidRequestError:
+         return (
+           <span data-testid="invalid-API-key-error">
+             Invalid API key. Please check your API key from{' '}
+             <button
+
+----------------------------------------
+
+File: web/containers/Layout/BottomPanel/SystemMonitor/index.tsx
+Status: modified
+Changes: +17 -2
+Diff:
+@@ -3,12 +3,20 @@ import { Fragment, useEffect, useState } from 'react'
+ import { Progress } from '@janhq/joi'
+ import { useClickOutside } from '@janhq/joi'
+ import { useAtom, useAtomValue } from 'jotai'
+-import { MonitorIcon, XIcon, ChevronDown, ChevronUp } from 'lucide-react'
++import {
++  MonitorIcon,
++  XIcon,
++  ChevronDown,
++  ChevronUp,
++  FolderOpenIcon,
++} from 'lucide-react'
+ 
+ import { twMerge } from 'tailwind-merge'
+ 
+ import useGetSystemResources from '@/hooks/useGetSystemResources'
+ 
+
+----------------------------------------
+
+File: web/containers/ModalTroubleShoot/index.tsx
+Status: modified
+Changes: +78 -46
+Diff:
+@@ -1,7 +1,8 @@
+ import { useState } from 'react'
+ 
+-import { Modal } from '@janhq/joi'
++import { Button, Modal } from '@janhq/joi'
+ import { atom, useAtom } from 'jotai'
++import { Maximize2 } from 'lucide-react'
+ import { twMerge } from 'tailwind-merge'
+ 
+ import ServerLogs from '@/containers/ServerLogs'
+@@ -17,6 +18,7 @@ const ModalTroubleShooting = () => {
+     modalTroubleShootingAtom
+   )
+   const [isTabActive, setIsTabActivbe] = useState(0)
++  const [showLogFullSize, setshowLogFullSize] = useState(false)
+ 
+   return (
+     <Modal
+@@ -26,59 +28,76 @@ const ModalTroubleShooting = () => {
+       title="Troubleshooting Assistance"
+       content={
+         <div className="flex h-full w-full flex-col overflow-hidden text-sm">
+-          <div className="flex-shrink-0">
++          <div className="mb-3 flex-shrink-0">
+             <p className="text-[hsla(var(--text-secondary)] mt-2 pr-3 leading-relaxed">
+               {`We're here to help! Your report is crucial for debugging and shaping
+           the next version. Here’s how you can report & get further support:`}
+             </p>
+           </div>
+ 
+-          <div className="my-3 rounded-lg border border-[hsla(var(--app-border))] p-4 shadow">
+-            <h2 className="font-semibold">Step 1</h2>
+-            <p className="text-[hsla(var(--text-secondary)] mt-1">
+-              Follow our&nbsp;
+-              <a
+-                href="https://jan.ai/guides/troubleshooting"
+-                target="_blank"
+-                className="text-[hsla(var(--app-link))] hover:underline"
+-              >
+-                troubleshooting guide
+-              </a>
+-              &nbsp;for step-by-step solutions.
+-            </p>
+-          </div>
+-
+-          <div className="rounded-lg border border-[hsla(var(--app-border))]  pb-2 pt-4 shadow">
+-            <div className="px-4">
+-              <h2 className="font-semibold">Step 2</h2>
++          {!showLogFullSize && (
++            <div className="mb-3 rounded-lg border border-[hsla(var(--app-border))] p-4 shadow">
++              <h2 className="font-semibold">Step 1</h2>
+               <p className="text-[hsla(var(--text-secondary)] mt-1">
+-                {`If you can't find what you need in our troubleshooting guide, feel
+
+----------------------------------------
+
+File: web/containers/ModelDropdown/index.tsx
+Status: modified
+Changes: +119 -110
+Diff:
+@@ -1,4 +1,4 @@
+-import { useState, useMemo, useEffect, useCallback } from 'react'
++import { useState, useMemo, useEffect, useCallback, useRef } from 'react'
+ 
+ import { InferenceEngine } from '@janhq/core'
+ import { Badge, Input, ScrollArea, Select, useClickOutside } from '@janhq/joi'
+@@ -70,7 +70,7 @@ const ModelDropdown = ({
+   const downloadStates = useAtomValue(modelDownloadStateAtom)
+   const setThreadModelParams = useSetAtom(setThreadModelParamsAtom)
+   const { updateModelParameter } = useUpdateModelParameters()
+-
++  const searchInputRef = useRef<HTMLInputElement>(null)
+   const configuredModels = useAtomValue(configuredModelsAtom)
+   const featuredModel = configuredModels.filter((x) =>
+     x.metadata.tags.includes('Featured')
+@@ -83,7 +83,7 @@ const ModelDropdown = ({
+ 
+   const filteredDownloadedModels = useMemo(
+     () =>
+-      downloadedModels
++      configuredModels
+         .filter((e) =>
+           e.name.toLowerCase().includes(searchText.toLowerCase().trim())
+         )
+@@ -104,10 +104,31 @@ const ModelDropdown = ({
+             )
+           }
+         })
+-        .sort((a, b) => a.name.localeCompare(b.name)),
+-    [downloadedModels, searchText, searchFilter]
++        .sort((a, b) => a.name.localeCompare(b.name))
++        .sort((a, b) => {
++          const aInDownloadedModels = downloadedModels.some(
++            (item) => item.id === a.id
++          )
++          const bInDownloadedModels = downloadedModels.some(
++            (item) => item.id === b.id
++          )
++          if (aInDownloadedModels && !bInDownloadedModels) {
++            return -1
++          } else if (!aInDownloadedModels && bInDownloadedModels) {
++            return 1
++          } else {
++            return 0
++          }
++        }),
++    [configuredModels, searchText, searchFilter, downloadedModels]
+   )
+ 
++  useEffect(() => {
++    if (open && searchInputRef.current) {
++      searchInputRef.current.focus()
++    }
++  }, [open])
++
+   useEffect(() => {
+     if (!activeThread) return
+     let model = downloadedModels.find(
+@@ -258,6 +279,7 @@ const ModelDropdown = ({
+             <Input
+               placeholder="Search"
+               value={searchText}
++              ref={searchInputRef}
+               className="rounded-none border-x-0 border-t-0 focus-within:ring-0 hover:border-b-[hsla(var(--app-border))]"
+               onChange={(e) => setSearchText(e.target.value)}
+               suffixIcon={
+@@ -290,58 +312,58 @@ const ModelDropdown = ({
+             </div>
+           </div>
+           <ScrollArea className="h-[calc(100%-36px)] w-full">
+-            {filteredDownloadedModels.filter(
+-              (x) => x.engine === InferenceEngine.nitro
+-            ).length !== 0 ? (
++            {searchFilter !== 'remote' && (
+               <div className="relative w-full">
+                 <div className="mt-2">
+                   <h6 className="mb-1 mt-3 px-3 font-medium text-[hsla(var(--text-secondary))]">
+                     Cortex
+                   </h6>
++                </div>
++                {filteredDownloadedModels
++                  .filter((x) => {
++                    if (searchText.length === 0) {
++                      return downloadedModels.find((c) => c.id === x.id)
++                    } else {
++                      return x
++                    }
++                  })
++                  .filter((x) => x.engine === InferenceEngine.nitro).length !==
++                0 ? (
+                   <ul className="pb-2">
+                     {filteredDownloadedModels
+                       ? filteredDownloadedModels
+                           .filter((x) => x.engine === InferenceEngine.nitro)
+-                          .map((model) => {
+-                            return (
+-                              <li
+-                                key={model.id}
+-                                className="flex cursor-pointer items-center gap-2 px-3 py-2 hover:bg-[hsla(var(--dropdown-menu-hover-bg))]"
+-                                onClick={() => onClickModelItem(model.id)}
+-                              >
+
+----------------------------------------
+
+File: web/helpers/atoms/Setting.atom.ts
+Status: modified
+Changes: +2 -0
+Diff:
+@@ -10,6 +10,7 @@ export const janSettingScreenAtom = atom<SettingScreen[]>([])
+ 
+ export const THEME = 'themeAppearance'
+ export const REDUCE_TRANSPARENT = 'reduceTransparent'
++export const SPELL_CHECKING = 'spellChecking'
+ export const themesOptionsAtom = atom<{ name: string; value: string }[]>([])
+ export const janThemesPathAtom = atom<string | undefined>(undefined)
+ export const selectedThemeIdAtom = atomWithStorage<string>(THEME, '')
+@@ -18,3 +19,4 @@ export const reduceTransparentAtom = atomWithStorage<boolean>(
+   REDUCE_TRANSPARENT,
+
+----------------------------------------
+
+File: web/package.json
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -28,7 +28,7 @@
+     "lucide-react": "^0.291.0",
+     "marked": "^9.1.2",
+     "marked-highlight": "^2.0.6",
+-    "marked-katex-extension": "^5.0.1",
++    "marked-katex-extension": "^5.0.2",
+     "next": "14.2.3",
+     "next-themes": "^0.2.1",
+     "postcss": "8.4.31",
+
+----------------------------------------
+
+File: web/screens/Settings/Advanced/DataFolder/index.tsx
+Status: modified
+Changes: +5 -15
+Diff:
+@@ -1,6 +1,6 @@
+ import { Fragment, useCallback, useState } from 'react'
+ 
+-import { fs, AppConfiguration, isSubdirectory } from '@janhq/core'
++import { AppConfiguration, isSubdirectory } from '@janhq/core'
+ import { Button, Input } from '@janhq/joi'
+ import { useAtomValue, useSetAtom } from 'jotai'
+ import { PencilIcon, FolderOpenIcon } from 'lucide-react'
+@@ -51,11 +51,10 @@ const DataFolder = () => {
+       return
+     }
+ 
+-    const newDestChildren: string[] = await fs.readdirSync(destFolder)
+
+----------------------------------------
+
+File: web/screens/Settings/Appearance/index.tsx
+Status: modified
+Changes: +23 -10
+Diff:
+@@ -3,13 +3,14 @@ import { useCallback } from 'react'
+ import { useTheme } from 'next-themes'
+ 
+ import { fs, joinPath } from '@janhq/core'
+-import { Button, Select } from '@janhq/joi'
++import { Button, Select, Switch } from '@janhq/joi'
+ import { useAtom, useAtomValue } from 'jotai'
+ 
+ import {
+   janThemesPathAtom,
+   reduceTransparentAtom,
+   selectedThemeIdAtom,
++  spellCheckAtom,
+   themeDataAtom,
+   themesOptionsAtom,
+ } from '@/helpers/atoms/Setting.atom'
+@@ -23,6 +24,7 @@ export default function AppearanceOptions() {
+   const [reduceTransparent, setReduceTransparent] = useAtom(
+     reduceTransparentAtom
+   )
++  const [spellCheck, setSpellCheck] = useAtom(spellCheckAtom)
+ 
+   const handleClickTheme = useCallback(
+     async (e: string) => {
+@@ -55,7 +57,7 @@ export default function AppearanceOptions() {
+             <h6 className="font-semibold capitalize">Appearance</h6>
+
+----------------------------------------
+
+File: web/screens/Settings/CoreExtensions/ExtensionItem.tsx
+Status: modified
+Changes: +2 -2
+Diff:
+@@ -32,8 +32,8 @@ const ExtensionItem: React.FC<Props> = ({ item }) => {
+   )
+ 
+   const progress = isInstalling
+-    ? installingExtensions.find((e) => e.extensionId === item.name)
+-        ?.percentage ?? -1
++    ? (installingExtensions.find((e) => e.extensionId === item.name)
++        ?.percentage ?? -1)
+     : -1
+ 
+
+----------------------------------------
+
+File: web/screens/Settings/CoreExtensions/index.tsx
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -158,7 +158,7 @@ const ExtensionCatalog = () => {
+           {engineActiveExtensions.length !== 0 && (
+             <div className="mb-3 mt-4 border-b border-[hsla(var(--app-border))] pb-4">
+               <h6 className="text-base font-semibold text-[hsla(var(--text-primary))]">
+-                Model Provider
++                Model Providers
+               </h6>
+             </div>
+           )}
+
+----------------------------------------
+
+File: web/screens/Settings/SettingDetail/index.tsx
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -19,7 +19,7 @@ const SettingDetail = () => {
+     case 'Appearance':
+       return <AppearanceOptions />
+ 
+-    case 'Hotkey & Shortcut':
++    case 'Keyboard Shortcuts':
+       return <Hotkeys />
+ 
+     case 'Advanced Settings':
+
+----------------------------------------
+
+File: web/screens/Settings/SettingLeftPanel/index.tsx
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -89,7 +89,7 @@ const SettingLeftPanel = () => {
+         ).length > 0 && (
+           <div className="mb-1 mt-4 px-2">
+             <label className="text-xs font-medium text-[hsla(var(--text-secondary))]">
+-              Model Provider
++              Model Providers
+             </label>
+           </div>
+         )}
+
+----------------------------------------
+
+File: web/screens/Settings/index.tsx
+Status: modified
+Changes: +2 -1
+Diff:
+@@ -14,7 +14,7 @@ import { selectedSettingAtom } from '@/helpers/atoms/Setting.atom'
+ export const SettingScreenList = [
+   'My Models',
+   'Appearance',
+-  'Hotkey & Shortcut',
++  'Keyboard Shortcuts',
+   'Advanced Settings',
+   'Extensions',
+ ] as const
+@@ -24,6 +24,7 @@ export type SettingScreen = SettingScreenTuple[number]
+
+----------------------------------------
+
+File: web/screens/Thread/ThreadCenterPanel/ChatInput/index.tsx
+Status: modified
+Changes: +3 -0
+Diff:
+@@ -38,6 +38,7 @@ import ImageUploadPreview from '../ImageUploadPreview'
+ import { showRightPanelAtom } from '@/helpers/atoms/App.atom'
+ import { experimentalFeatureEnabledAtom } from '@/helpers/atoms/AppConfig.atom'
+ import { getCurrentChatMessagesAtom } from '@/helpers/atoms/ChatMessage.atom'
++import { spellCheckAtom } from '@/helpers/atoms/Setting.atom'
+ import {
+   activeThreadAtom,
+   getActiveThreadIdAtom,
+@@ -52,6 +53,7 @@ const ChatInput = () => {
+   const { stateModel } = useActiveModel()
+
+----------------------------------------
+
+File: web/screens/Thread/ThreadCenterPanel/EditChatInput/index.tsx
+Status: modified
+Changes: +3 -1
+Diff:
+@@ -26,6 +26,7 @@ import {
+   getCurrentChatMessagesAtom,
+   setConvoMessagesAtom,
+ } from '@/helpers/atoms/ChatMessage.atom'
++import { spellCheckAtom } from '@/helpers/atoms/Setting.atom'
+ import {
+   activeThreadAtom,
+   getActiveThreadIdAtom,
+@@ -45,7 +46,7 @@ const EditChatInput: React.FC<Props> = ({ message }) => {
+   const { sendChatMessage } = useSendChatMessage()
+
+----------------------------------------
+
+File: web/screens/Thread/ThreadCenterPanel/MessageToolbar/index.tsx
+Status: modified
+Changes: +33 -12
+Diff:
+@@ -9,6 +9,7 @@ import {
+   ContentType,
+   Thread,
+ } from '@janhq/core'
++import { Tooltip } from '@janhq/joi'
+ import { useAtomValue, useSetAtom } from 'jotai'
+ import {
+   RefreshCcw,
+@@ -103,9 +104,14 @@ const MessageToolbar = ({ message }: { message: ThreadMessage }) => {
+               className="cursor-pointer rounded-lg border border-[hsla(var(--app-border))] p-2"
+               onClick={onEditClick}
+             >
+-              <PencilIcon
+-                size={14}
+-                className="text-[hsla(var(--text-secondary))]"
++              <Tooltip
++                trigger={
++                  <PencilIcon
++                    size={14}
++                    className="text-[hsla(var(--text-secondary))]"
++                  />
++                }
++                content="Edit"
+               />
+             </div>
+           )}
+
+----------------------------------------
+
+File: web/screens/Thread/ThreadCenterPanel/SimpleTextMessage/index.tsx
+Status: modified
+Changes: +7 -2
+Diff:
+@@ -178,7 +178,7 @@ const SimpleTextMessage: React.FC<ThreadMessage> = (props) => {
+         >
+           {isUser
+             ? props.role
+-            : activeThread?.assistants[0].assistant_name ?? props.role}
++            : (activeThread?.assistants[0].assistant_name ?? props.role)}
+         </div>
+         <p className="text-xs font-medium text-gray-400">
+           {displayDate(props.created)}
+@@ -201,7 +201,12 @@ const SimpleTextMessage: React.FC<ThreadMessage> = (props) => {
+
+----------------------------------------
+
+File: web/screens/Thread/ThreadLeftPanel/ModalCleanThread/index.tsx
+Status: modified
+Changes: +7 -1
+Diff:
+@@ -7,9 +7,10 @@ import useDeleteThread from '@/hooks/useDeleteThread'
+ 
+ type Props = {
+   threadId: string
++  closeContextMenu?: () => void
+ }
+ 
+-const ModalCleanThread = ({ threadId }: Props) => {
++const ModalCleanThread = ({ threadId, closeContextMenu }: Props) => {
+   const { cleanThread } = useDeleteThread()
+
+----------------------------------------
+
+File: web/screens/Thread/ThreadLeftPanel/ModalDeleteThread/index.tsx
+Status: modified
+Changes: +8 -1
+Diff:
+@@ -7,10 +7,12 @@ import useDeleteThread from '@/hooks/useDeleteThread'
+ 
+ type Props = {
+   threadId: string
++  closeContextMenu?: () => void
+ }
+ 
+-const ModalDeleteThread = ({ threadId }: Props) => {
++const ModalDeleteThread = ({ threadId, closeContextMenu }: Props) => {
+   const { deleteThread } = useDeleteThread()
+
+----------------------------------------
+
+File: web/screens/Thread/ThreadLeftPanel/ModalEditTitleThread/index.tsx
+Status: modified
+Changes: +14 -3
+Diff:
+@@ -1,4 +1,4 @@
+-import { useCallback, memo, useState } from 'react'
++import { useCallback, useLayoutEffect, memo, useState } from 'react'
+ 
+ import { Thread } from '@janhq/core'
+ import { Modal, ModalClose, Button, Input } from '@janhq/joi'
+@@ -8,13 +8,19 @@ import { useCreateNewThread } from '@/hooks/useCreateNewThread'
+ 
+ type Props = {
+   thread: Thread
++  closeContextMenu?: () => void
+ }
+ 
+
+----------------------------------------
+
+File: web/screens/Thread/ThreadLeftPanel/index.tsx
+Status: modified
+Changes: +47 -6
+Diff:
+@@ -1,4 +1,4 @@
+-import { useCallback, useEffect } from 'react'
++import { useCallback, useEffect, useState } from 'react'
+ 
+ import { Thread } from '@janhq/core'
+ 
+@@ -43,6 +43,14 @@ const ThreadLeftPanel = () => {
+   const setEditMessage = useSetAtom(editMessageAtom)
+   const { recommendedModel, downloadedModels } = useRecommendedModel()
+ 
++  const [contextMenu, setContextMenu] = useState<{
++    visible: boolean
++    thread?: Thread
++  }>({
++    visible: false,
++    thread: undefined,
++  })
++
+   const onThreadClick = useCallback(
+     (thread: Thread) => {
+       setActiveThread(thread)
+@@ -91,6 +99,21 @@ const ThreadLeftPanel = () => {
+     }
+   }
+ 
++  const onContextMenu = (event: React.MouseEvent, thread: Thread) => {
++    event.preventDefault()
++    setContextMenu({
+
+----------------------------------------
+
+File: web/screens/Thread/ThreadRightPanel/Tools/index.tsx
+Status: modified
+Changes: +72 -10
+Diff:
+@@ -66,6 +66,32 @@ const Tools = () => {
+     [activeThread, updateThreadMetadata]
+   )
+ 
++  const onTimeWeightedRetrieverSwitchUpdate = useCallback(
++    (enabled: boolean) => {
++      if (!activeThread) return
++      updateThreadMetadata({
++        ...activeThread,
++        assistants: [
++          {
++            ...activeThread.assistants[0],
++            tools: [
++              {
++                type: 'retrieval',
++                enabled: true,
++                useTimeWeightedRetriever: enabled,
++                settings:
++                  (activeThread.assistants[0].tools &&
++                    activeThread.assistants[0].tools[0]?.settings) ??
++                  {},
++              },
++            ],
++          },
++        ],
++      })
++    },
++    [activeThread, updateThreadMetadata]
++  )
++
+   if (!experimentalFeature) return null
+ 
+   return (
+@@ -140,9 +166,49 @@ const Tools = () => {
+                   <div className="mb-2 flex items-center">
+
+----------------------------------------
+

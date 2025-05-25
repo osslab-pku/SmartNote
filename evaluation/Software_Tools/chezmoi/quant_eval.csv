@@ -1,0 +1,12 @@
+repo_name,rn_name,commit_coverage,info_entropy,tokens_count,automated_readability_index,dale_chall_readability,entity_percent,project_domain
+twpayne/chezmoi,4_zero_shot_promp_rn,1.0,2.411602217974672,582,12.4,10.29,2.936096718480138,Software_Tools
+twpayne/chezmoi,3_conventional_changelog,0.0,0.9182958340544896,217,56.0,19.02,0.7352941176470588,Software_Tools
+twpayne/chezmoi,1_smartdraft_random_ctx,1.0,1.9182958340544896,336,31.4,15.83,1.1204481792717087,Software_Tools
+twpayne/chezmoi,1_smartdraft_rn_expository,1.0,1.9182958340544893,397,49.0,16.09,1.0498687664041995,Software_Tools
+twpayne/chezmoi,1_smartdraft_rn_automatic,1.0,1.9182958340544896,451,32.8,14.29,0.4576659038901602,Software_Tools
+twpayne/chezmoi,1_smartdraft_no_rn_composer,1.0,1.9182958340544893,415,37.5,15.72,1.5113350125944585,Software_Tools
+twpayne/chezmoi,0_original_rn,0.5,1.5,157,31.3,15.2,1.06951871657754,Software_Tools
+twpayne/chezmoi,1_smartdraft_rn_automatic_no_llm,1.0,1.9182958340544893,397,49.0,16.09,1.0498687664041995,Software_Tools
+twpayne/chezmoi,1_smartdraft_rn_descriptive,1.0,1.9182958340544896,451,32.8,14.29,0.6864988558352403,Software_Tools
+twpayne/chezmoi,1_smartdraft_rn_persuasive,1.0,1.9182958340544896,452,33.6,14.14,0.4576659038901602,Software_Tools
+twpayne/chezmoi,2_deeprelease_rn,0.625,0.9182958340544896,53,10.9,15.48,1.8867924528301887,Software_Tools

@@ -1,0 +1,8 @@
+SmartDraft Command:
+pixi run ipython --pdb -m smartdraft.generator -- sisong/HDiffPatch --previous-release v4.7.0 --current-release v4.8.0 --project-domain Library --min-significance 0.1 --writing-style "Automatic" --structure-type "Change Type" --group-commits --show-significance
+
+DeepRelease Command:
+docker run -it -v $(pwd):/outputs --env GITHUB_TOKEN=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 --network host --rm fgksgf/deeprelease run sisong/HDiffPatch --since 202407130000 --until 202407262359 --save_dir=/outputs/hdiffpatch
+
+ConventionalChangelog Command:
+cd ../.cache/repo/sisong_HDiffPatch && git checkout v4.8.0 && conventional-changelog -p angular -r 2 && git checkout -

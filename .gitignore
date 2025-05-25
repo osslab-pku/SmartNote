@@ -1,0 +1,42 @@
+# datasets and plots
+datasets/
+plots/
+models
+replication/
+*.zip
+
+# secrets
+.secrets.*
+
+# js
+node_modules/
+
+# python
+venv/
+.pixi/
+
+*.pyc
+__pycache__/
+
+instance/
+
+.pytest_cache/
+.coverage
+htmlcov/
+
+dist/
+build/
+*.egg-info/
+
+.DS_STORE
+
+.vscode
+.env
+.cache/
+results/
+test/
+deprecated/
+config.yaml
+# pixi environments
+.pixi
+*.egg-info

@@ -1,0 +1,12 @@
+repo_name,rn_name,commit_coverage,info_entropy,tokens_count,automated_readability_index,dale_chall_readability,entity_percent,project_domain
+beekeeper-studio/beekeeper-studio,4_zero_shot_promp_rn,0.627906976744186,2.197159723424149,577,19.1,11.62,2.2071307300509337,System_Software
+beekeeper-studio/beekeeper-studio,3_conventional_changelog,0.09302325581395354,1.0,290,54.0,16.22,1.5015015015015014,System_Software
+beekeeper-studio/beekeeper-studio,1_smartdraft_random_ctx,0.0,0.0,98,42.4,19.95,3.4482758620689653,System_Software
+beekeeper-studio/beekeeper-studio,1_smartdraft_rn_expository,0.39534883720930236,0.9182958340544896,203,42.4,17.25,0.5319148936170213,System_Software
+beekeeper-studio/beekeeper-studio,1_smartdraft_rn_automatic,0.4418604651162791,2.0,536,23.6,12.52,0.8976660682226212,System_Software
+beekeeper-studio/beekeeper-studio,1_smartdraft_no_rn_composer,0.18604651162790697,0.9182958340544896,288,26.1,13.98,2.8469750889679712,System_Software
+beekeeper-studio/beekeeper-studio,0_original_rn,0.0,0.0,11,2.0,13.9,7.6923076923076925,System_Software
+beekeeper-studio/beekeeper-studio,1_smartdraft_rn_automatic_no_llm,0.39534883720930236,0.9182958340544896,203,42.4,17.25,0.5319148936170213,System_Software
+beekeeper-studio/beekeeper-studio,1_smartdraft_rn_descriptive,0.39534883720930236,0.9182958340544896,394,20.3,12.91,1.488833746898263,System_Software
+beekeeper-studio/beekeeper-studio,1_smartdraft_rn_persuasive,0.4418604651162791,2.0,536,23.6,12.52,0.718132854578097,System_Software
+beekeeper-studio/beekeeper-studio,2_deeprelease_rn,0.627906976744186,1.4353713907745331,149,46.5,17.21,1.948051948051948,System_Software

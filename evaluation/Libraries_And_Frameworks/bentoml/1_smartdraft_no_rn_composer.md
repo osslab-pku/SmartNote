@@ -1,0 +1,25 @@
+# v1.3.2
+## 🐛 fix
+- The user prompt in the login function of the cloud module now asks users to enter 'Y' or 'N' to open a URL in their browser, enhancing clarity. [#4898](https://github.com/bentoml/bentoml/pull/4898) <span style='color:grey;'>(significance=0.03)</span>
+- The update fixes the resource type configuration, enhancing flexibility in specifying CPU and memory requirements. [#4904](https://github.com/bentoml/bentoml/pull/4904) <span style='color:grey;'>(significance=0.01)</span>
+- Addresses an issue where a response is returned if the tracer ID is null, improving error handling. [#4899](https://github.com/bentoml/bentoml/pull/4899) <span style='color:grey;'>(significance=0.03)</span>
+- Fixed metrics duration configuration to correctly apply min, max, and factor parameters. Logic now checks for these parameters to calculate exponential buckets or raises an exception if they are missing, ensuring either these parameters or predefined buckets are set. [#4903](https://github.com/bentoml/bentoml/pull/4903) <span style='color:grey;'>(significance=0.01)</span>
+- The build process now preserves index URL options in the requirements file. [#4914](https://github.com/bentoml/bentoml/pull/4914) <span style='color:grey;'>(significance=0.01)</span>
+- Addresses timeout test case issues with a more robust process termination approach. [#4917](https://github.com/bentoml/bentoml/pull/4917) <span style='color:grey;'>(significance=0.01)</span>
+## 👷 ci
+- Updated a check to use `isinstance`. [#4897](https://github.com/bentoml/bentoml/pull/4897) <span style='color:grey;'>(significance=0.01)</span>
+## 📚 docs
+- Documentation images have been updated, with some modified and others removed. [#4901](https://github.com/bentoml/bentoml/pull/4901) <span style='color:grey;'>(significance=0.01)</span>
+- Instructions for setting up Azure BYOC have been updated. Share the `bcAdminSP.json` file with the BentoML team through a secure channel instead of the `account_info.json` file. [#4905](https://github.com/bentoml/bentoml/pull/4905) <span style='color:grey;'>(significance=0.01)</span>
+- The update improves documentation and code structure for clarity and functionality. Modifications to the README better describe BentoML's capabilities, and service code updates optimize model inference. The project description and keywords are refined to align with AI applications. An outdated image is removed, and configuration files are adjusted to reflect current development practices. [#4906](https://github.com/bentoml/bentoml/pull/4906) <span style='color:grey;'>(significance=0.00)</span>
+- Updated documentation describes BentoML as a Python library for building online serving systems optimized for AI applications and model inference. [#4910](https://github.com/bentoml/bentoml/pull/4910) <span style='color:grey;'>(significance=0.01)</span>
+- Removed a redundant section in the documentation about deploying custom models with BentoML. [#4913](https://github.com/bentoml/bentoml/pull/4913) <span style='color:grey;'>(significance=0.01)</span>
+- The documentation for testing HTTP behavior in BentoML services now recommends using the `starlette.testclient` module instead of the `httpx` library. This change simplifies sending HTTP requests to a BentoML service. Example code and test instructions have been updated accordingly. [#4915](https://github.com/bentoml/bentoml/pull/4915) <span style='color:grey;'>(significance=0.01)</span>
+- The update includes comprehensive documentation on metrics, covering default metric configuration, custom metric creation, and integration with Prometheus and Grafana for visualization. It provides detailed insights into service performance and usage for improved monitoring and analysis. [#4912](https://github.com/bentoml/bentoml/pull/4912) <span style='color:grey;'>(significance=0.01)</span>
+- Updated the CI status badge in the documentation. [#4918](https://github.com/bentoml/bentoml/pull/4918) <span style='color:grey;'>(significance=0.02)</span>
+## ♻️ refactor
+- The refactor stores cloud context within the container, eliminating the need to pass it in function calls, enhancing code maintainability and readability. Type annotations are updated for clarity and consistency. Unused imports and redundant code are removed, streamlining the code structure for more efficient development and debugging. [#4907](https://github.com/bentoml/bentoml/pull/4907) <span style='color:grey;'>(significance=0.03)</span>
+## ✨ feat
+- The command-line interface now includes a reload option for the start-http-server command, enabling the server to reload upon code changes for a more dynamic development workflow. [#4916](https://github.com/bentoml/bentoml/pull/4916) <span style='color:grey;'>(significance=0.04)</span>
+## 🔧 chore
+- Updated project configuration and testing setup. Modified the testing framework for improved compatibility and functionality in handling test cases. Adjusted project dependencies for better performance and compatibility across environments. [#4911](https://github.com/bentoml/bentoml/pull/4911) <span style='color:grey;'>(significance=0.01)</span>

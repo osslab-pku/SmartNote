@@ -1,0 +1,1895 @@
+Changes between v1.35.3 and v1.35.4
+================================================================================
+
+COMMITS
+--------------------------------------------------------------------------------
+
+Commit: ad235fad25ddb1e355c4843f732b9df0799db345
+Author: WerWolv
+Date: 2024-06-29 21:17:59+00:00
+Message: impr: Further try to improve window resize flickering on Windows
+----------------------------------------
+
+Commit: c922d9ceecb143b4793e3b84da448a8dd24a590d
+Author: WerWolv
+Date: 2024-06-30 05:59:25+00:00
+Message: fix: Updater executable not being launched correctly when path had spaces in it
+
+Fixes #1780
+----------------------------------------
+
+Commit: cbcf7b78e9460a3211bd4b1b477eb75098aefd3c
+Author: WerWolv
+Date: 2024-06-30 19:55:29+00:00
+Message: build: Properly look for boost and libimhex library in sdk again
+----------------------------------------
+
+Commit: b305adb2866b3d6291ff4c5db0b2ae5186934263
+Author: WerWolv
+Date: 2024-07-01 18:09:16+00:00
+Message: impr: Prevent canvas flickering in web build
+----------------------------------------
+
+Commit: 67930cf65de72db95d913a25895a9c938f86d9a7
+Author: WerWolv
+Date: 2024-07-01 18:36:55+00:00
+Message: web: Fix ImHex logo and progress bar default fill
+----------------------------------------
+
+Commit: 5fced6bb63b8858611383639d0de0c873557fcba
+Author: WerWolv
+Date: 2024-07-01 18:50:10+00:00
+Message: impr: Completely eradicate Window resize flickering on Windows
+----------------------------------------
+
+Commit: 3a99d53ba5c93e39690776037e9341f4e09b05ae
+Author: WerWolv
+Date: 2024-07-01 20:00:08+00:00
+Message: build: Updated ImGui, libfmt and libyara
+----------------------------------------
+
+Commit: c6fc26e2e75ecc0a4a9f5c331bfcf80843957721
+Author: WerWolv
+Date: 2024-07-01 20:01:28+00:00
+Message: impr: Added Boost.Regex to about page
+----------------------------------------
+
+Commit: c2f661f02146d782120e9e89835be391aa04f1ee
+Author: WerWolv
+Date: 2024-07-01 20:14:51+00:00
+Message: patterns: Updated pattern language
+----------------------------------------
+
+Commit: dd8e7025d037b424caedb702571cb36f7a919528
+Author: WerWolv
+Date: 2024-07-01 21:36:17+00:00
+Message: fix: Potential race condition with sorting in the pattern drawer
+----------------------------------------
+
+Commit: 6784678ff0aca040491fa8a374ab46b36768a9d2
+Author: WerWolv
+Date: 2024-07-01 21:53:14+00:00
+Message: impr: Disable tab overlines
+----------------------------------------
+
+Commit: c7c4ecad6dfce1f1e6629d8b1e8b96960c7573e4
+Author: WerWolv
+Date: 2024-07-02 15:38:39+00:00
+Message: impr: Improved size display in pattern data view
+----------------------------------------
+
+Commit: 3b799388c25db45855688deb55f4648fb62ee7a3
+Author: WerWolv
+Date: 2024-07-02 21:16:19+00:00
+Message: web: Improved canvas webgl creation logic
+----------------------------------------
+
+Commit: dd0204f31df334f3424faaa27d2ed648f30bc965
+Author: WerWolv
+Date: 2024-07-02 21:15:54+00:00
+Message: impr: Added nicer console warning when .NET runtime isn't installed
+----------------------------------------
+
+Commit: d5a69d9201878bd5b436c4631bba688c353543b6
+Author: WerWolv
+Date: 2024-07-02 21:17:12+00:00
+Message: fix: Remove interactive help debug code
+----------------------------------------
+
+Commit: 5a053aa146acd8e2dd06174faa5b7002f29d32dc
+Author: Bernard Teo
+Date: 2024-07-03 05:53:55+00:00
+Message: build: Update nativefiledialog and keep dialogs on top (#1771)
+
+This PR updates the nativefiledialog submodule and uses its new feature
+to set the ImHex main window as the parent of the dialog window. This
+ensures that the dialog stays on top of the main window. This is
+currently supported by NFDe on Windows, macOS, and Linux/X11.
+Linux/Wayland behaves as it did previously due to limitations in NFDe.
+
+Note that macOS file dialogs have already been parented properly as NFDe
+previously used the key window (the window currently receiving keyboard
+events) on macOS. However, it's probably better to do the correct thing
+and pass the main window to NFDe even on macOS.
+
+### Problem description
+The file dialog go behind the main window if the main window is clicked
+while the file dialog is open.
+
+### Implementation description
+Update nativefiledialog and pass the `GLFWwindow*` of the main window to
+the library function.
+
+### Screenshots
+Before:
+
+
+https://github.com/WerWolv/ImHex/assets/6948096/589c3401-702a-4b0a-99ed-02d3e4d9080e
+
+After:
+
+
+https://github.com/WerWolv/ImHex/assets/6948096/8fef4900-eedc-48d5-8a4e-7bd81e37e3c0
+
+### Additional things
+I have tested this on Windows and Linux/X11, but did not test this on
+macOS. It would be ideal if someone can help with this. (But as far as
+NFDe is concerned, macOS `NSWindow*` handles have been tested (with
+SDL2) and works.)
+
+Co-authored-by: Nik <werwolv98@gmail.com>
+----------------------------------------
+
+Commit: a45d30edcaa282c5be5635df9d2b7ccb6dc58a51
+Author: WerWolv
+Date: 2024-07-03 14:58:25+00:00
+Message: impr: Added tooltips to toolbar buttons
+----------------------------------------
+
+Commit: cfbc6e085a4dda0145321bd7e197b7b7f945be6c
+Author: WerWolv
+Date: 2024-07-03 14:58:56+00:00
+Message: fix: Wrong start/end offset and size for static array entries in pattern data view
+----------------------------------------
+
+Commit: 1d99f8534ddfe89998673881e7eb330091529e2f
+Author: WerWolv
+Date: 2024-07-03 20:32:33+00:00
+Message: web: Fix touch input
+----------------------------------------
+
+Commit: a0ca0e859694c41b1dcd562b4281adb7374cde8f
+Author: WerWolv
+Date: 2024-07-03 20:32:48+00:00
+Message: fix: Make sure welcome screen always stays in the background
+----------------------------------------
+
+Commit: 84999d5c068467ea97a7bb120dc22bd383bd9d26
+Author: WerWolv
+Date: 2024-07-03 20:35:43+00:00
+Message: web: Improve logo size on mobile
+----------------------------------------
+
+Commit: 0785270dfadb8d112c8c30d966b900fbe4fa1cc4
+Author: WerWolv
+Date: 2024-07-04 19:18:46+00:00
+Message: fix: Remove unnecessary touch padding
+----------------------------------------
+
+Commit: c79321b550f8d0f6dccaaee8ab3cabec65abc773
+Author: WerWolv
+Date: 2024-07-04 19:37:51+00:00
+Message: web: Fix canvas to the top left of the screen
+----------------------------------------
+
+Commit: 5d534176830fda39aee0b912fe4f5997ceb083cf
+Author: WerWolv
+Date: 2024-07-04 21:15:33+00:00
+Message: web: Trigger right click when long touching area
+----------------------------------------
+
+Commit: 1c2bb0c04959549890d5d97d26c05b469f0fbcf5
+Author: WerWolv
+Date: 2024-07-05 17:26:08+00:00
+Message: fix: Hex editor popups getting transparent when hovering over combo box popup
+----------------------------------------
+
+Commit: 22dc3c65893f34a11787b8dc80b30e8b07e28400
+Author: WerWolv
+Date: 2024-07-05 18:59:20+00:00
+Message: fix: Crash on macOS when dirtying or undirtying a provider from a thread
+
+Fixes #1799
+----------------------------------------
+
+Commit: 4d1e29d7479178ac5baab9b8a0e8b2dac7170f79
+Author: WerWolv
+Date: 2024-07-05 19:03:24+00:00
+Message: fix: Build issue due to uncaptured this pointer
+----------------------------------------
+
+Commit: 32e2ccbca004d5b6ba62cb47a53f103c2b5d45a9
+Author: WerWolv
+Date: 2024-07-07 14:17:03+00:00
+Message: git: Update Mesa3D link for Windows NoGPU version
+----------------------------------------
+
+Commit: f8f47012c4c1e4b299cb48e46ef3b783b2422df2
+Author: WerWolv
+Date: 2024-07-09 05:21:25+00:00
+Message: build: Streamline definition on plugin features
+----------------------------------------
+
+Commit: 8a4599feeadc7432462fd946d8009df3c5430557
+Author: WerWolv
+Date: 2024-07-08 17:49:31+00:00
+Message: impr: Disable pattern debug mode after evaluation has finished
+----------------------------------------
+
+Commit: 2757075a10cb9c6ac95ec83259859473765c4732
+Author: WerWolv
+Date: 2024-07-08 19:34:27+00:00
+Message: impr: Make highlight hovering more efficient
+----------------------------------------
+
+Commit: edb1a8876b5eb8cf6ba3840df3611203b91bfeac
+Author: WerWolv
+Date: 2024-07-08 19:34:47+00:00
+Message: fix: Multiple definitions errors with plugin features
+----------------------------------------
+
+Commit: cb406ea35728498e1d42b6b5d936d40900d9ce51
+Author: WerWolv
+Date: 2024-07-09 05:29:06+00:00
+Message: build: Fix lzma support and simplify zstd building
+----------------------------------------
+
+Commit: 811214ddb79b66dba5ca56021212f81f9d89d608
+Author: Nik
+Date: 2024-07-09 06:09:55+00:00
+Message: build: Bump version to v1.35.4
+----------------------------------------
+
+
+PULL REQUESTS
+--------------------------------------------------------------------------------
+
+PR #1787: build: fix Gentoo ebuild
+Author: sebszymanski
+Merged at: 2024-07-07 08:25:10+00:00
+URL: https://github.com/WerWolv/ImHex/pull/1787
+Description:
+### Problem description
+Ebuild is invalid, i.e:
+```
+# ebuild ImHex-9999.ebuild manifest
+Error(s) in metadata for 'app-editors/ImHex-9999':
+  RDEPEND: Invalid atom (dbus), token 5
+```
+
+### Implementation description
+* mbedtls is in net-libs category
+* RDEPEND must contain atoms (category/packagename)
+
+----------------------------------------
+
+PR #1771: Update nativefiledialog and keep dialogs on top
+Author: btzy
+Merged at: 2024-07-03 05:53:55+00:00
+URL: https://github.com/WerWolv/ImHex/pull/1771
+Description:
+This PR updates the nativefiledialog submodule and uses its new feature to set the ImHex main window as the parent of the dialog window.  This ensures that the dialog stays on top of the main window.  This is currently supported by NFDe on Windows, macOS, and Linux/X11.  Linux/Wayland behaves as it did previously due to limitations in NFDe.
+
+Note that macOS file dialogs have already been parented properly as NFDe previously used the key window (the window currently receiving keyboard events) on macOS.  However, it's probably better to do the correct thing and pass the main window to NFDe even on macOS.
+
+### Problem description
+The file dialog go behind the main window if the main window is clicked while the file dialog is open.
+
+### Implementation description
+Update nativefiledialog and pass the `GLFWwindow*` of the main window to the library function.
+
+### Screenshots
+Before:
+
+https://github.com/WerWolv/ImHex/assets/6948096/589c3401-702a-4b0a-99ed-02d3e4d9080e
+
+After:
+
+https://github.com/WerWolv/ImHex/assets/6948096/8fef4900-eedc-48d5-8a4e-7bd81e37e3c0
+
+### Additional things
+I have tested this on Windows and Linux/X11, but did not test this on macOS.  It would be ideal if someone can help with this.  (But as far as NFDe is concerned, macOS `NSWindow*` handles have been tested (with SDL2) and works.)
+
+----------------------------------------
+
+PR #1783: build: update CMakeLists.txt
+Author: eltociear
+Merged at: 2024-07-01 06:24:59+00:00
+URL: https://github.com/WerWolv/ImHex/pull/1783
+Description:
+
+
+<!--
+Please provide as much information as possible about what your PR aims to do.
+PRs with no description will most likely be closed until more information is provided.
+If you're planing on changing fundamental behaviour or add big new features, please open a GitHub Issue first before starting to work on it.
+If it's not something big and you still want to contact us about it, feel free to do so !
+-->
+
+### Problem description
+<!-- Describe the bug that you fixed/feature request that you implemented, or link to an existing issue describing it -->
+Accomodate -> Accommodate
+### Implementation description
+<!-- Explain what you did to correct the problem -->
+
+### Screenshots
+<!-- If your change is visual, take a screenshot showing it. Ideally, make before/after sceenshots -->
+
+### Additional things
+<!-- Anything else you would like to say -->
+
+----------------------------------------
+
+
+FILE CHANGES
+--------------------------------------------------------------------------------
+
+File: .github/workflows/build.yml
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -107,7 +107,7 @@ jobs:
+       run: |
+         set -x
+         echo "NoGPU version Powered by Mesa 3D : https://fdossena.com/?p=mesa%2Findex.frag" > build/install/MESA.md
+-        curl https://werwolv.net/downloads/mesa/MesaForWindows-x64-latest.7z -L -o mesa.7z
++        curl https://downloads.fdossena.com/geth.php?r=mesa64-latest -L -o mesa.7z
+         7z e mesa.7z
+         mv opengl32.dll build/install
+ 
+
+----------------------------------------
+
+File: VERSION
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -1 +1 @@
+-1.35.3
+\ No newline at end of file
++1.35.4
+
+----------------------------------------
+
+File: cmake/build_helpers.cmake
+Status: modified
+Changes: +5 -0
+Diff:
+@@ -703,8 +703,10 @@ macro(addBundledLibraries)
+ 
+     if (USE_SYSTEM_BOOST)
+         find_package(boost REQUIRED)
++        set(BOOST_LIBRARIES boost::regex)
+     else()
+         add_subdirectory(${THIRD_PARTY_LIBS_FOLDER}/boost ${CMAKE_CURRENT_BINARY_DIR}/boost EXCLUDE_FROM_ALL)
++        set(BOOST_LIBRARIES boost::regex)
+     endif()
+ 
+
+----------------------------------------
+
+File: cmake/modules/FindCoreClrEmbed.cmake
+Status: modified
+Changes: +1 -0
+Diff:
+@@ -89,4 +89,5 @@ if (CoreClrEmbed_INCLUDE_DIR AND CoreClrEmbed_LIBRARY)
+     set(CoreClrEmbed_LIBRARIES "${CoreClrEmbed_LIBRARY}" CACHE STRING "CoreClrEmbed libraries" FORCE)
+     set(CoreClrEmbed_SHARED_LIBRARIES "${CoreClrEmbed_SHARED_LIBRARY}" CACHE STRING "CoreClrEmbed shared libraries" FORCE)
+     set(CoreClrEmbed_INCLUDE_DIRS "${CoreClrEmbed_INCLUDE_DIR}" CACHE STRING "CoreClrEmbed include directories" FORCE)
++    set(CoreClrEmbed_VERSION "${CORECLR_RUNTIME_VERSION_FULL}" CACHE STRING "CoreClrEmbed version" FORCE)
+ endif()
+\ No newline at end of file
+
+----------------------------------------
+
+File: cmake/modules/FindZSTD.cmake
+Status: modified
+Changes: +5 -1
+Diff:
+@@ -38,4 +38,8 @@ if (ZSTD_FOUND)
+     message(STATUS "Found Zstd: ${ZSTD_LIBRARY}")
+ endif()
+ 
+-mark_as_advanced(ZSTD_INCLUDE_DIR ZSTD_LIBRARY)
+\ No newline at end of file
++mark_as_advanced(ZSTD_INCLUDE_DIR ZSTD_LIBRARY)
++
++add_library(ZSTD::zstd INTERFACE IMPORTED)
++set_property(TARGET ZSTD::zstd PROPERTY INTERFACE_INCLUDE_DIRECTORIES ${ZSTD_INCLUDE_DIR})
+
+----------------------------------------
+
+File: cmake/modules/ImHexPlugin.cmake
+Status: modified
+Changes: +17 -4
+Diff:
+@@ -72,10 +72,23 @@ macro(add_imhex_plugin)
+     add_subdirectory(${IMHEX_BASE_FOLDER}/lib/external/libromfs ${CMAKE_CURRENT_BINARY_DIR}/libromfs)
+     target_link_libraries(${IMHEX_PLUGIN_NAME} PRIVATE ${LIBROMFS_LIBRARY})
+ 
+-    foreach(feature ${IMHEX_PLUGIN_FEATURES})
+-        string(TOUPPER ${feature} feature)
+-        add_definitions(-DIMHEX_PLUGIN_${IMHEX_PLUGIN_NAME}_FEATURE_${feature}=0)
+-    endforeach()
++    set(FEATURE_DEFINE_CONTENT)
++
+
+----------------------------------------
+
+File: cmake/sdk/CMakeLists.txt
+Status: modified
+Changes: +5 -1
+Diff:
+@@ -29,6 +29,10 @@ add_subdirectory_if_exists(lib/third_party/nlohmann_json)
+ set(NLOHMANN_JSON_LIBRARIES nlohmann_json PARENT_SCOPE)
+ set(NLOHMANN_JSON_LIBRARIES nlohmann_json)
+ 
++add_subdirectory_if_exists(lib/third_party/boost)
++set(BOOST_LIBRARIES boost::regex PARENT_SCOPE)
++set(BOOST_LIBRARIES boost::regex)
++
+ add_subdirectory(lib/external/libwolv EXCLUDE_FROM_ALL)
+ 
+
+----------------------------------------
+
+File: dist/web/source/index.html
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -62,7 +62,7 @@
+ </head>
+ <body>
+ <div id="loading" class="centered">
+-    <img src="https://raw.githubusercontent.com/WerWolv/ImHex/master/plugins/builtin/romfs/assets/dark/banner.png" id="logo" alt="ImHex Logo">
++    <img src="https://raw.githubusercontent.com/WerWolv/ImHex/master/plugins/builtin/romfs/assets/dark/banner.svg" id="logo" alt="ImHex Logo">
+     <h1>A Hex Editor for Reverse Engineers, Programmers and people who value their retinas when working at 3 AM.</h1>
+     <h2>Available both natively and on the web</h2>
+     <h5>ImHex runs directly in your web browser with the help of Emscripten and WebAssembly.</h5>
+
+----------------------------------------
+
+File: dist/web/source/style.css
+Status: modified
+Changes: +12 -1
+Diff:
+@@ -137,7 +137,7 @@ a:hover {
+ 
+ 
+ :root {
+-    --progress: 25%;
++    --progress: 0%;
+ }
+ 
+ .progress-bar-container {
+@@ -174,4 +174,15 @@ a:hover {
+
+----------------------------------------
+
+File: dist/web/source/wasm-config.js
+Status: modified
+Changes: +122 -15
+Diff:
+@@ -100,7 +100,77 @@ var notWorkingTimer = setTimeout(() => {
+ 
+ var Module = {
+     preRun:  [],
+-    postRun: [],
++    postRun: function() {
++        // Patch the emscripten GLFW module to send mouse and touch events in the right order
++        // For ImGui interactions to correctly work with touch input, MousePos events need
++        // to be processed first and then MouseButton events in the next frame. By default,
++        // GLFW does the exact opposite, which causes buttons to require two taps to register
++        // and windows get "stuck" to the cursor when dragged or resized
++        GLFW.onMousemove = event => {
++            if (event.type === "touchmove") {
++                event.preventDefault();
++                let primaryChanged = false;
++                for (let i of event.changedTouches) {
++                    if (GLFW.primaryTouchId === i.identifier) {
++                        Browser.setMouseCoords(i.pageX, i.pageY);
++                        primaryChanged = true;
++                        break;
++                    }
++                }
++                if (!primaryChanged) {
++                    return;
++                }
++            } else {
++                Browser.calculateMouseEvent(event);
++            }
++        };
++
++        GLFW.onMouseButtonChanged = (event, status) => {
++            if (!GLFW.active) return;
++            if (event.target != Module["canvas"]) return;
++            const isTouchType = event.type === "touchstart" || event.type === "touchend" || event.type === "touchcancel";
++            let eventButton = 0;
++            if (isTouchType) {
++                event.preventDefault();
++                let primaryChanged = false;
++                if (GLFW.primaryTouchId === null && event.type === "touchstart" && event.targetTouches.length > 0) {
++                    const chosenTouch = event.targetTouches[0];
++                    GLFW.primaryTouchId = chosenTouch.identifier;
++                    Browser.setMouseCoords(chosenTouch.pageX, chosenTouch.pageY);
++                    primaryChanged = true;
++                } else if (event.type === "touchend" || event.type === "touchcancel") {
++                    for (let i of event.changedTouches) {
++                        if (GLFW.primaryTouchId === i.identifier) {
++                            GLFW.primaryTouchId = null;
++                            primaryChanged = true;
++                            break;
++                        }
++                    }
++                }
++                if (!primaryChanged) {
+
+----------------------------------------
+
+File: lib/external/pattern_language
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -1 +1 @@
+-Subproject commit c09d987099c6a9228184733ebf94f414cc464daf
++Subproject commit c7bca89b1aaf4bb942c53bc3561af687eca44667
+
+----------------------------------------
+
+File: lib/libimhex/CMakeLists.txt
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -144,7 +144,7 @@ if (NOT IMHEX_EXTERNAL_PLUGIN_BUILD)
+     precompileHeaders(libimhex "${CMAKE_CURRENT_SOURCE_DIR}/include")
+ endif()
+ 
+-target_link_libraries(libimhex ${LIBIMHEX_LIBRARY_TYPE} ${NLOHMANN_JSON_LIBRARIES} imgui_all_includes ${MBEDTLS_LIBRARIES} ${FMT_LIBRARIES} ${LUNASVG_LIBRARIES} boost::regex)
++target_link_libraries(libimhex ${LIBIMHEX_LIBRARY_TYPE} ${NLOHMANN_JSON_LIBRARIES} imgui_all_includes ${MBEDTLS_LIBRARIES} ${FMT_LIBRARIES} ${LUNASVG_LIBRARIES} ${BOOST_LIBRARIES})
+ 
+ set_property(TARGET libimhex PROPERTY INTERPROCEDURAL_OPTIMIZATION FALSE)
+ 
+
+----------------------------------------
+
+File: lib/libimhex/include/hex/api/imhex_api.hpp
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -75,7 +75,7 @@ namespace hex {
+             namespace impl {
+ 
+                 using HighlightingFunction = std::function<std::optional<color_t>(u64, const u8*, size_t, bool)>;
+-                using HoveringFunction = std::function<bool(const prv::Provider *, u64, const u8*, size_t)>;
++                using HoveringFunction = std::function<std::set<Region>(const prv::Provider *, u64, size_t)>;
+ 
+                 const std::map<u32, Highlighting>& getBackgroundHighlights();
+                 const std::map<u32, HighlightingFunction>& getBackgroundHighlightingFunctions();
+
+----------------------------------------
+
+File: lib/libimhex/include/hex/api/localization_manager.hpp
+Status: modified
+Changes: +5 -8
+Diff:
+@@ -102,12 +102,9 @@ namespace hex {
+         std::string m_unlocalizedString;
+     };
+ 
+-}
+-
+-template<>
+-struct fmt::formatter<hex::Lang> : fmt::formatter<std::string_view> {
+-    template<typename FormatContext>
+-    auto format(const hex::Lang &entry, FormatContext &ctx) {
+
+----------------------------------------
+
+File: lib/libimhex/include/hex/helpers/fmt.hpp
+Status: modified
+Changes: +1 -0
+Diff:
+@@ -2,6 +2,7 @@
+ 
+ #include <string_view>
+ #include <fmt/format.h>
++#include <fmt/ranges.h>
+ 
+ namespace hex {
+ 
+
+----------------------------------------
+
+File: lib/libimhex/include/hex/helpers/types.hpp
+Status: modified
+Changes: +4 -0
+Diff:
+@@ -61,6 +61,10 @@ namespace hex {
+         constexpr static Region Invalid() {
+             return { 0, 0 };
+         }
++
++        constexpr bool operator<(const Region &other) const {
++            return this->address < other.address;
++        }
+     };
+ 
+
+----------------------------------------
+
+File: lib/libimhex/include/hex/plugin.hpp
+Status: modified
+Changes: +21 -16
+Diff:
+@@ -37,15 +37,34 @@ void* PluginSubCommandsFunctionHelper<T>::getSubCommands() {
+     return nullptr;
+ }
+ 
++[[maybe_unused]] static auto& getFeaturesImpl() {
++    static std::vector<hex::Feature> features;
++    return features;
++}
++
+ #if defined (IMHEX_STATIC_LINK_PLUGINS)
+     #define IMHEX_PLUGIN_VISIBILITY_PREFIX static
+ #else
+     #define IMHEX_PLUGIN_VISIBILITY_PREFIX extern "C" [[gnu::visibility("default")]]
+ #endif
+ 
++#define IMHEX_FEATURE_ENABLED(feature) WOLV_TOKEN_CONCAT(WOLV_TOKEN_CONCAT(WOLV_TOKEN_CONCAT(IMHEX_PLUGIN_, IMHEX_PLUGIN_NAME), _FEATURE_), feature)
++#define IMHEX_DEFINE_PLUGIN_FEATURES() IMHEX_DEFINE_PLUGIN_FEATURES_IMPL()
++#define IMHEX_DEFINE_PLUGIN_FEATURES_IMPL()                                                 \
++    template<>                                                                              \
++    struct PluginFeatureFunctionHelper<PluginFunctionHelperInstantiation> {                 \
++        static void* getFeatures();                                                         \
+
+----------------------------------------
+
+File: lib/libimhex/source/api/imhex_api.cpp
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -862,7 +862,7 @@ namespace hex {
+ 
+             EventImHexClosing::subscribe([executablePath, updateTypeString] {
+                 hex::executeCommand(
+-                        hex::format("{} {}",
++                        hex::format("\"{}\" \"{}\"",
+                                     wolv::util::toUTF8String(executablePath),
+                                     updateTypeString
+                                     )
+
+----------------------------------------
+
+File: lib/libimhex/source/helpers/fs.cpp
+Status: modified
+Changes: +37 -4
+Diff:
+@@ -24,6 +24,37 @@
+     #include <emscripten.h>
+ #else
+     #include <nfd.hpp>
++    #if defined(OS_WINDOWS)
++        #define GLFW_EXPOSE_NATIVE_WIN32
++    #endif
++    #if defined(OS_MACOS)
++        // macOS platform headers can't be compiled with gcc
++        #define GLFW_NATIVE_INCLUDE_NONE
++        typedef uint32_t CGDirectDisplayID;
++        typedef void *id;
++        typedef void NSWindow;
++        #define GLFW_EXPOSE_NATIVE_COCOA
++    #endif
++    #if defined(OS_LINUX)
++        #define GLFW_EXPOSE_NATIVE_X11
++    #endif
++    #if defined(OS_LINUX) && defined(GLFW_WAYLAND_APP_ID)
++        #define GLFW_EXPOSE_NATIVE_WAYLAND
++    #endif
+
+----------------------------------------
+
+File: lib/third_party/fmt
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -1 +1 @@
+-Subproject commit 67c0c0c09cf74d407d71a29c194761981614df3e
++Subproject commit 0041a40c1350ba702d475b9c4ad62da77caea164
+
+----------------------------------------
+
+File: lib/third_party/imgui/cimgui/include/cimgui.h
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -3303,7 +3303,7 @@ typedef union SDL_Event SDL_Event;
+ #endif // CIMGUI_DEFINE_ENUMS_AND_STRUCTS
+ 
+ #ifndef CIMGUI_DEFINE_ENUMS_AND_STRUCTS
+-typedef struct ImGuiStorage::ImGuiStoragePair ImGuiStoragePair;
++typedef struct ImGuiStoragePair ImGuiStoragePair;
+ typedef struct ImGuiTextFilter::ImGuiTextRange ImGuiTextRange;
+ typedef ImStb::STB_TexteditState STB_TexteditState;
+ typedef ImStb::StbTexteditRow StbTexteditRow;
+
+----------------------------------------
+
+File: lib/third_party/imgui/imgui/include/imgui.h
+Status: modified
+Changes: +60 -35
+Diff:
+@@ -1,4 +1,4 @@
+-// dear imgui, v1.90.8
++// dear imgui, v1.90.9
+ // (headers)
+ 
+ // Help:
+@@ -27,8 +27,8 @@
+ 
+ // Library Version
+ // (Integer encoded as XYYZZ for use in #if preprocessor conditionals, e.g. '#if IMGUI_VERSION_NUM >= 12345')
+-#define IMGUI_VERSION       "1.90.8"
+-#define IMGUI_VERSION_NUM   19080
++#define IMGUI_VERSION       "1.90.9"
++#define IMGUI_VERSION_NUM   19090
+ #define IMGUI_HAS_TABLE
+ #define IMGUI_HAS_VIEWPORT          // Viewport WIP branch
+ #define IMGUI_HAS_DOCK              // Docking WIP branch
+@@ -182,7 +182,8 @@ struct ImGuiPlatformIO;             // Multi-viewport support: interface for Pla
+ struct ImGuiPlatformMonitor;        // Multi-viewport support: user-provided bounds for each connected monitor/display. Used when positioning popups and tooltips to avoid them straddling monitors
+ struct ImGuiPlatformImeData;        // Platform IME data for io.SetPlatformImeDataFn() function.
+ struct ImGuiSizeCallbackData;       // Callback data when using SetNextWindowSizeConstraints() (rare/advanced use)
+-struct ImGuiStorage;                // Helper for key->value storage
++struct ImGuiStorage;                // Helper for key->value storage (container sorted by key)
++struct ImGuiStoragePair;            // Helper for key->value storage (pair)
+ struct ImGuiStyle;                  // Runtime data for styling/colors
+ struct ImGuiTableSortSpecs;         // Sorting specifications for a table (often handling sort specs for a single column, occasionally more)
+ struct ImGuiTableColumnSortSpecs;   // Sorting specification for one column of a table
+@@ -787,7 +788,7 @@ namespace ImGui
+     //        -                   TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK: TableNextColumn() automatically gets to next row!
+     //        - TableNextRow()                           -> Text("Hello 0")                                               // Not OK! Missing TableSetColumnIndex() or TableNextColumn()! Text will not appear!
+     // - 5. Call EndTable()
+-    IMGUI_API bool          BeginTable(const char* str_id, int column, ImGuiTableFlags flags = 0, const ImVec2& outer_size = ImVec2(0.0f, 0.0f), float inner_width = 0.0f);
++    IMGUI_API bool          BeginTable(const char* str_id, int columns, ImGuiTableFlags flags = 0, const ImVec2& outer_size = ImVec2(0.0f, 0.0f), float inner_width = 0.0f);
+     IMGUI_API void          EndTable();                                         // only call EndTable() if BeginTable() returns true!
+     IMGUI_API void          TableNextRow(ImGuiTableRowFlags row_flags = 0, float min_row_height = 0.0f); // append into the first cell of a new row.
+     IMGUI_API bool          TableNextColumn();                                  // append into the next column (or first column of next row if currently in last column). Return true when column is visible.
+@@ -820,6 +821,7 @@ namespace ImGui
+     IMGUI_API const char*           TableGetColumnName(int column_n = -1);      // return "" if column didn't have a name declared by TableSetupColumn(). Pass -1 to use current column.
+     IMGUI_API ImGuiTableColumnFlags TableGetColumnFlags(int column_n = -1);     // return column flags so you can query their Enabled/Visible/Sorted/Hovered status flags. Pass -1 to use current column.
+     IMGUI_API void                  TableSetColumnEnabled(int column_n, bool v);// change user accessible enabled/disabled state of a column. Set to false to hide the column. User can use the context menu to change this themselves (right-click in headers, or right-click in columns body with ImGuiTableFlags_ContextMenuInBody)
++    IMGUI_API int                   TableGetHoveredColumn();                    // return hovered column. return -1 when table is not hovered. return columns_count if the unused space at the right of visible columns is hovered. Can also use (TableGetColumnFlags() & ImGuiTableColumnFlags_IsHovered) instead.
+     IMGUI_API void                  TableSetBgColor(ImGuiTableBgTarget target, ImU32 color, int column_n = -1);  // change the color of a cell, row, or column. See ImGuiTableBgTarget_ flags for details.
+ 
+     // Legacy Columns API (prefer using Tables!)
+@@ -888,6 +890,7 @@ namespace ImGui
+     // Disabling [BETA API]
+     // - Disable all user interactions and dim items visuals (applying style.DisabledAlpha over current colors)
+     // - Those can be nested but it cannot be used to enable an already disabled section (a single BeginDisabled(true) in the stack is enough to keep everything disabled)
++    // - Tooltips windows by exception are opted out of disabling.
+     // - BeginDisabled(false) essentially does nothing useful but is provided to facilitate use of boolean expressions. If you can avoid calling BeginDisabled(False)/EndDisabled() best to avoid it.
+     IMGUI_API void          BeginDisabled(bool disabled = true);
+     IMGUI_API void          EndDisabled();
+@@ -933,10 +936,8 @@ namespace ImGui
+     IMGUI_API ImGuiViewport* GetMainViewport();                                                 // return primary/default viewport. This can never be NULL.
+ 
+     // Background/Foreground Draw Lists
+-    IMGUI_API ImDrawList*   GetBackgroundDrawList();                                            // get background draw list for the viewport associated to the current window. this draw list will be the first rendering one. Useful to quickly draw shapes/text behind dear imgui contents.
+-    IMGUI_API ImDrawList*   GetForegroundDrawList();                                            // get foreground draw list for the viewport associated to the current window. this draw list will be the last rendered one. Useful to quickly draw shapes/text over dear imgui contents.
+-    IMGUI_API ImDrawList*   GetBackgroundDrawList(ImGuiViewport* viewport);                     // get background draw list for the given viewport. this draw list will be the first rendering one. Useful to quickly draw shapes/text behind dear imgui contents.
+-    IMGUI_API ImDrawList*   GetForegroundDrawList(ImGuiViewport* viewport);                     // get foreground draw list for the given viewport. this draw list will be the last rendered one. Useful to quickly draw shapes/text over dear imgui contents.
++    IMGUI_API ImDrawList*   GetBackgroundDrawList(ImGuiViewport* viewport = NULL);              // get background draw list for the given viewport or viewport associated to the current window. this draw list will be the first rendering one. Useful to quickly draw shapes/text behind dear imgui contents.
++    IMGUI_API ImDrawList*   GetForegroundDrawList(ImGuiViewport* viewport = NULL);              // get foreground draw list for the given viewport or viewport associated to the current window. this draw list will be the top-most rendered one. Useful to quickly draw shapes/text over dear imgui contents.
+ 
+     // Miscellaneous Utilities
+     IMGUI_API bool          IsRectVisible(const ImVec2& size);                                  // test if rectangle (of given size, starting from cursor position) is visible / not clipped.
+@@ -1085,7 +1086,6 @@ enum ImGuiWindowFlags_
+     ImGuiWindowFlags_NoInputs               = ImGuiWindowFlags_NoMouseInputs | ImGuiWindowFlags_NoNavInputs | ImGuiWindowFlags_NoNavFocus,
+ 
+     // [Internal]
+-    ImGuiWindowFlags_NavFlattened           = 1 << 23,  // [BETA] On child window: share focus scope, allow gamepad/keyboard navigation to cross over parent border to this child or between sibling child windows.
+     ImGuiWindowFlags_ChildWindow            = 1 << 24,  // Don't use! For internal use by BeginChild()
+     ImGuiWindowFlags_Tooltip                = 1 << 25,  // Don't use! For internal use by BeginTooltip()
+     ImGuiWindowFlags_Popup                  = 1 << 26,  // Don't use! For internal use by BeginPopup()
+@@ -1096,6 +1096,7 @@ enum ImGuiWindowFlags_
+     // Obsolete names
+ #ifndef IMGUI_DISABLE_OBSOLETE_FUNCTIONS
+     ImGuiWindowFlags_AlwaysUseWindowPadding = 1 << 30,  // Obsoleted in 1.90: Use ImGuiChildFlags_AlwaysUseWindowPadding in BeginChild() call.
++    ImGuiWindowFlags_NavFlattened           = 1 << 31,  // Obsoleted in 1.90.9: Use ImGuiChildFlags_NavFlattened in BeginChild() call.
+ #endif
+ };
+ 
+@@ -1119,6 +1120,7 @@ enum ImGuiChildFlags_
+     ImGuiChildFlags_AutoResizeY             = 1 << 5,   // Enable auto-resizing height. Read "IMPORTANT: Size measurement" details above.
+     ImGuiChildFlags_AlwaysAutoResize        = 1 << 6,   // Combined with AutoResizeX/AutoResizeY. Always measure size even when child is hidden, always return true, always disable clipping optimization! NOT RECOMMENDED.
+
+----------------------------------------
+
+File: lib/third_party/imgui/imgui/include/imgui_internal.h
+Status: modified
+Changes: +43 -21
+Diff:
+@@ -1,4 +1,4 @@
+-// dear imgui, v1.90.8
++// dear imgui, v1.90.9
+ // (internal structures/api)
+ 
+ // You may use this file to debug, understand or extend Dear ImGui features but we don't provide any guarantee of forward compatibility.
+@@ -361,6 +361,7 @@ namespace ImStb
+ // - Helper: ImPool<>
+ // - Helper: ImChunkStream<>
+ // - Helper: ImGuiTextIndex
++// - Helper: ImGuiStorage
+ //-----------------------------------------------------------------------------
+ 
+ // Helpers: Hashing
+@@ -736,7 +737,7 @@ struct ImChunkStream
+     void    swap(ImChunkStream<T>& rhs) { rhs.Buf.swap(Buf); }
+ };
+ 
+-// Helper: ImGuiTextIndex<>
++// Helper: ImGuiTextIndex
+ // Maintain a line index for a text buffer. This is a strong candidate to be moved into the public API.
+ struct ImGuiTextIndex
+ {
+@@ -750,6 +751,8 @@ struct ImGuiTextIndex
+     void            append(const char* base, int old_size, int new_size);
+ };
+ 
++// Helper: ImGuiStorage
++IMGUI_API ImGuiStoragePair* ImLowerBound(ImGuiStoragePair* in_begin, ImGuiStoragePair* in_end, ImGuiID key);
+ //-----------------------------------------------------------------------------
+ // [SECTION] ImDrawList support
+ //-----------------------------------------------------------------------------
+@@ -1624,7 +1627,7 @@ struct ImGuiNavItemData
+     float               DistBox;        //      Move    // Best candidate box distance to current NavId
+     float               DistCenter;     //      Move    // Best candidate center distance to current NavId
+     float               DistAxial;      //      Move    // Best candidate axial distance to current NavId
+-    ImGuiSelectionUserData SelectionUserData;//I+Mov    // Best candidate SetNextItemSelectionData() value.
++    ImGuiSelectionUserData SelectionUserData;//I+Mov    // Best candidate SetNextItemSelectionUserData() value. Valid if (InFlags & ImGuiItemFlags_HasSelectionUserData)
+ 
+     ImGuiNavItemData()  { Clear(); }
+     void Clear()        { Window = NULL; ID = FocusScopeId = 0; InFlags = 0; SelectionUserData = -1; DistBox = DistCenter = DistAxial = FLT_MAX; }
+@@ -1866,11 +1869,13 @@ struct IMGUI_API ImGuiDockNode
+ enum ImGuiWindowDockStyleCol
+ {
+     ImGuiWindowDockStyleCol_Text,
+-    ImGuiWindowDockStyleCol_Tab,
+     ImGuiWindowDockStyleCol_TabHovered,
+-    ImGuiWindowDockStyleCol_TabActive,
+-    ImGuiWindowDockStyleCol_TabUnfocused,
+-    ImGuiWindowDockStyleCol_TabUnfocusedActive,
++    ImGuiWindowDockStyleCol_TabFocused,
++    ImGuiWindowDockStyleCol_TabSelected,
++    ImGuiWindowDockStyleCol_TabSelectedOverline,
++    ImGuiWindowDockStyleCol_TabDimmed,
++    ImGuiWindowDockStyleCol_TabDimmedSelected,
++    ImGuiWindowDockStyleCol_TabDimmedSelectedOverline,
+     ImGuiWindowDockStyleCol_COUNT
+ };
+ 
+@@ -2135,6 +2140,7 @@ struct ImGuiContext
+     bool                    GcCompactAll;                       // Request full GC
+     bool                    TestEngineHookItems;                // Will call test engine hooks: ImGuiTestEngineHook_ItemAdd(), ImGuiTestEngineHook_ItemInfo(), ImGuiTestEngineHook_Log()
+     void*                   TestEngine;                         // Test engine user data
++    char                    ContextName[16];                    // Storage for a context name (to facilitate debugging multi-context setups)
+ 
+     // Inputs
+     ImVector<ImGuiInputEvent> InputEventsQueue;                 // Input events which will be trickled/written into IO structure.
+@@ -2154,6 +2160,7 @@ struct ImGuiContext
+     ImGuiWindow*            CurrentWindow;                      // Window being drawn into
+     ImGuiWindow*            HoveredWindow;                      // Window the mouse is hovering. Will typically catch mouse inputs.
+     ImGuiWindow*            HoveredWindowUnderMovingWindow;     // Hovered window ignoring MovingWindow. Only set if MovingWindow is set.
++    ImGuiWindow*            HoveredWindowBeforeClear;           // Window the mouse is hovering. Filled even with _NoMouse. This is currently useful for multi-context compositors.
+     ImGuiWindow*            MovingWindow;                       // Track the window we clicked on (in order to preserve focus). The actual window that is moved is generally MovingWindow->RootWindowDockTree.
+
+----------------------------------------
+
+File: lib/third_party/imgui/imgui/source/imgui.cpp
+Status: modified
+Changes: +163 -98
+Diff:
+@@ -1,4 +1,4 @@
+-// dear imgui, v1.90.8
++// dear imgui, v1.90.9
+ // (main code and documentation)
+ 
+ // Help:
+@@ -438,6 +438,13 @@ CODE
+                           - likewise io.MousePos and GetMousePos() will use OS coordinates.
+                             If you query mouse positions to interact with non-imgui coordinates you will need to offset them, e.g. subtract GetWindowViewport()->Pos.
+ 
++ - 2024/06/21 (1.90.9) - BeginChild: added ImGuiChildFlags_NavFlattened as a replacement for the window flag ImGuiWindowFlags_NavFlattened: the feature only ever made sense for BeginChild() anyhow.
++                            - old: BeginChild("Name", size, 0, ImGuiWindowFlags_NavFlattened);
++                            - new: BeginChild("Name", size, ImGuiChildFlags_NavFlattened, 0);
++ - 2024/06/21 (1.90.9) - io: ClearInputKeys() (first exposed in 1.89.8) doesn't clear mouse data, newly added ClearInputMouse() does.
++ - 2024/06/20 (1.90.9) - renamed ImGuiDragDropFlags_SourceAutoExpirePayload to ImGuiDragDropFlags_PayloadAutoExpire.
++ - 2024/06/18 (1.90.9) - style: renamed ImGuiCol_TabActive -> ImGuiCol_TabSelected, ImGuiCol_TabUnfocused -> ImGuiCol_TabDimmed, ImGuiCol_TabUnfocusedActive -> ImGuiCol_TabDimmedSelected.
++ - 2024/06/10 (1.90.9) - removed old nested structure: renaming ImGuiStorage::ImGuiStoragePair type to ImGuiStoragePair (simpler for many languages).
+  - 2024/06/06 (1.90.8) - reordered ImGuiInputTextFlags values. This should not be breaking unless you are using generated headers that have values not matching the main library.
+  - 2024/06/06 (1.90.8) - removed 'ImGuiButtonFlags_MouseButtonDefault_ = ImGuiButtonFlags_MouseButtonLeft', was mostly unused and misleading.
+  - 2024/05/27 (1.90.7) - commented out obsolete symbols marked obsolete in 1.88 (May 2022):
+@@ -1494,28 +1501,41 @@ void ImGuiIO::ClearEventsQueue()
+     g.InputEventsQueue.clear();
+ }
+ 
+-// Clear current keyboard/mouse/gamepad state + current frame text input buffer. Equivalent to releasing all keys/buttons.
++// Clear current keyboard/gamepad state + current frame text input buffer. Equivalent to releasing all keys/buttons.
+ void ImGuiIO::ClearInputKeys()
+ {
+ #ifndef IMGUI_DISABLE_OBSOLETE_KEYIO
+     memset(KeysDown, 0, sizeof(KeysDown));
+ #endif
+     for (int n = 0; n < IM_ARRAYSIZE(KeysData); n++)
+     {
++        if (ImGui::IsMouseKey((ImGuiKey)(n + ImGuiKey_KeysData_OFFSET)))
++            continue;
+         KeysData[n].Down             = false;
+         KeysData[n].DownDuration     = -1.0f;
+         KeysData[n].DownDurationPrev = -1.0f;
+     }
+     KeyCtrl = KeyShift = KeyAlt = KeySuper = false;
+     KeyMods = ImGuiMod_None;
++    InputQueueCharacters.resize(0); // Behavior of old ClearInputCharacters().
++}
++
++void ImGuiIO::ClearInputMouse()
++{
++    for (ImGuiKey key = ImGuiKey_Mouse_BEGIN; key < ImGuiKey_Mouse_END; key = (ImGuiKey)(key + 1))
++    {
++        ImGuiKeyData* key_data = &KeysData[key - ImGuiKey_KeysData_OFFSET];
++        key_data->Down = false;
++        key_data->DownDuration = -1.0f;
++        key_data->DownDurationPrev = -1.0f;
++    }
+     MousePos = ImVec2(-FLT_MAX, -FLT_MAX);
+     for (int n = 0; n < IM_ARRAYSIZE(MouseDown); n++)
+     {
+         MouseDown[n] = false;
+         MouseDownDuration[n] = MouseDownDurationPrev[n] = -1.0f;
+     }
+     MouseWheel = MouseWheelH = 0.0f;
+-    InputQueueCharacters.resize(0); // Behavior of old ClearInputCharacters().
+ }
+ 
+ // Removed this as it is ambiguous/misleading and generally incorrect to use with the existence of a higher-level input queue.
+@@ -2567,47 +2587,43 @@ void ImGui::ColorConvertHSVtoRGB(float h, float s, float v, float& out_r, float&
+ //-----------------------------------------------------------------------------
+ 
+ // std::lower_bound but without the bullshit
+-static ImGuiStorage::ImGuiStoragePair* LowerBound(ImVector<ImGuiStorage::ImGuiStoragePair>& data, ImGuiID key)
++ImGuiStoragePair* ImLowerBound(ImGuiStoragePair* in_begin, ImGuiStoragePair* in_end, ImGuiID key)
+ {
+-    ImGuiStorage::ImGuiStoragePair* first = data.Data;
+-    ImGuiStorage::ImGuiStoragePair* last = data.Data + data.Size;
+-    size_t count = (size_t)(last - first);
+-    while (count > 0)
++    ImGuiStoragePair* in_p = in_begin;
++    for (size_t count = (size_t)(in_end - in_p); count > 0; )
+     {
+         size_t count2 = count >> 1;
+-        ImGuiStorage::ImGuiStoragePair* mid = first + count2;
++        ImGuiStoragePair* mid = in_p + count2;
+         if (mid->key < key)
+         {
+-            first = ++mid;
++            in_p = ++mid;
+             count -= count2 + 1;
+         }
+         else
+         {
+             count = count2;
+         }
+     }
+-    return first;
++    return in_p;
++}
++
++static int IMGUI_CDECL PairComparerByID(const void* lhs, const void* rhs)
++{
++    // We can't just do a subtraction because qsort uses signed integers and subtracting our ID doesn't play well with that.
++    ImGuiID lhs_v = ((const ImGuiStoragePair*)lhs)->key;
++    ImGuiID rhs_v = ((const ImGuiStoragePair*)rhs)->key;
++    return (lhs_v > rhs_v ? +1 : lhs_v < rhs_v ? -1 : 0);
+ }
+ 
+ // For quicker full rebuild of a storage (instead of an incremental one), you may add all your contents and then sort once.
+ void ImGuiStorage::BuildSortByKey()
+ {
+-    struct StaticFunc
+-    {
+-        static int IMGUI_CDECL PairComparerByID(const void* lhs, const void* rhs)
+-        {
+-            // We can't just do a subtraction because qsort uses signed integers and subtracting our ID doesn't play well with that.
+-            if (((const ImGuiStoragePair*)lhs)->key > ((const ImGuiStoragePair*)rhs)->key) return +1;
+-            if (((const ImGuiStoragePair*)lhs)->key < ((const ImGuiStoragePair*)rhs)->key) return -1;
+-            return 0;
+-        }
+-    };
+-    ImQsort(Data.Data, (size_t)Data.Size, sizeof(ImGuiStoragePair), StaticFunc::PairComparerByID);
++    ImQsort(Data.Data, (size_t)Data.Size, sizeof(ImGuiStoragePair), PairComparerByID);
+ }
+ 
+ int ImGuiStorage::GetInt(ImGuiID key, int default_val) const
+ {
+-    ImGuiStoragePair* it = LowerBound(const_cast<ImVector<ImGuiStoragePair>&>(Data), key);
++    ImGuiStoragePair* it = ImLowerBound(const_cast<ImGuiStoragePair*>(Data.Data), const_cast<ImGuiStoragePair*>(Data.Data + Data.Size), key);
+     if (it == Data.end() || it->key != key)
+         return default_val;
+     return it->val_i;
+@@ -2620,15 +2636,15 @@ bool ImGuiStorage::GetBool(ImGuiID key, bool default_val) const
+ 
+ float ImGuiStorage::GetFloat(ImGuiID key, float default_val) const
+ {
+-    ImGuiStoragePair* it = LowerBound(const_cast<ImVector<ImGuiStoragePair>&>(Data), key);
++    ImGuiStoragePair* it = ImLowerBound(const_cast<ImGuiStoragePair*>(Data.Data), const_cast<ImGuiStoragePair*>(Data.Data + Data.Size), key);
+     if (it == Data.end() || it->key != key)
+         return default_val;
+     return it->val_f;
+ }
+ 
+ void* ImGuiStorage::GetVoidPtr(ImGuiID key) const
+ {
+-    ImGuiStoragePair* it = LowerBound(const_cast<ImVector<ImGuiStoragePair>&>(Data), key);
++    ImGuiStoragePair* it = ImLowerBound(const_cast<ImGuiStoragePair*>(Data.Data), const_cast<ImGuiStoragePair*>(Data.Data + Data.Size), key);
+     if (it == Data.end() || it->key != key)
+         return NULL;
+     return it->val_p;
+@@ -2637,7 +2653,7 @@ void* ImGuiStorage::GetVoidPtr(ImGuiID key) const
+ // References are only valid until a new value is added to the storage. Calling a Set***() function or a Get***Ref() function invalidates the pointer.
+ int* ImGuiStorage::GetIntRef(ImGuiID key, int default_val)
+ {
+-    ImGuiStoragePair* it = LowerBound(Data, key);
++    ImGuiStoragePair* it = ImLowerBound(Data.Data, Data.Data + Data.Size, key);
+     if (it == Data.end() || it->key != key)
+         it = Data.insert(it, ImGuiStoragePair(key, default_val));
+     return &it->val_i;
+@@ -2650,15 +2666,15 @@ bool* ImGuiStorage::GetBoolRef(ImGuiID key, bool default_val)
+ 
+ float* ImGuiStorage::GetFloatRef(ImGuiID key, float default_val)
+ {
+-    ImGuiStoragePair* it = LowerBound(Data, key);
++    ImGuiStoragePair* it = ImLowerBound(Data.Data, Data.Data + Data.Size, key);
+     if (it == Data.end() || it->key != key)
+         it = Data.insert(it, ImGuiStoragePair(key, default_val));
+     return &it->val_f;
+ }
+ 
+ void** ImGuiStorage::GetVoidPtrRef(ImGuiID key, void* default_val)
+ {
+-    ImGuiStoragePair* it = LowerBound(Data, key);
++    ImGuiStoragePair* it = ImLowerBound(Data.Data, Data.Data + Data.Size, key);
+     if (it == Data.end() || it->key != key)
+         it = Data.insert(it, ImGuiStoragePair(key, default_val));
+     return &it->val_p;
+@@ -2667,7 +2683,7 @@ void** ImGuiStorage::GetVoidPtrRef(ImGuiID key, void* default_val)
+ // FIXME-OPT: Need a way to reuse the result of lower_bound when doing GetInt()/SetInt() - not too bad because it only happens on explicit interaction (maximum one a frame)
+ void ImGuiStorage::SetInt(ImGuiID key, int val)
+ {
+-    ImGuiStoragePair* it = LowerBound(Data, key);
++    ImGuiStoragePair* it = ImLowerBound(Data.Data, Data.Data + Data.Size, key);
+     if (it == Data.end() || it->key != key)
+         Data.insert(it, ImGuiStoragePair(key, val));
+     else
+@@ -2681,7 +2697,7 @@ void ImGuiStorage::SetBool(ImGuiID key, bool val)
+ 
+ void ImGuiStorage::SetFloat(ImGuiID key, float val)
+ {
+-    ImGuiStoragePair* it = LowerBound(Data, key);
++    ImGuiStoragePair* it = ImLowerBound(Data.Data, Data.Data + Data.Size, key);
+     if (it == Data.end() || it->key != key)
+         Data.insert(it, ImGuiStoragePair(key, val));
+     else
+@@ -2690,7 +2706,7 @@ void ImGuiStorage::SetFloat(ImGuiID key, float val)
+ 
+ void ImGuiStorage::SetVoidPtr(ImGuiID key, void* val)
+ {
+-    ImGuiStoragePair* it = LowerBound(Data, key);
++    ImGuiStoragePair* it = ImLowerBound(Data.Data, Data.Data + Data.Size, key);
+     if (it == Data.end() || it->key != key)
+         Data.insert(it, ImGuiStoragePair(key, val));
+     else
+@@ -3256,7 +3272,7 @@ void ImGui::PopStyleColor(int count)
+ 
+ static const ImGuiCol GWindowDockStyleColors[ImGuiWindowDockStyleCol_COUNT] =
+ {
+-    ImGuiCol_Text, ImGuiCol_Tab, ImGuiCol_TabHovered, ImGuiCol_TabActive, ImGuiCol_TabUnfocused, ImGuiCol_TabUnfocusedActive
++    ImGuiCol_Text, ImGuiCol_TabHovered, ImGuiCol_Tab, ImGuiCol_TabSelected, ImGuiCol_TabSelectedOverline, ImGuiCol_TabDimmed, ImGuiCol_TabDimmedSelected, ImGuiCol_TabDimmedSelectedOverline,
+ };
+ 
+ static const ImGuiDataVarInfo GStyleVarInfo[] =
+@@ -3390,11 +3406,13 @@ const char* ImGui::GetStyleColorName(ImGuiCol idx)
+     case ImGuiCol_ResizeGrip: return "ResizeGrip";
+     case ImGuiCol_ResizeGripHovered: return "ResizeGripHovered";
+     case ImGuiCol_ResizeGripActive: return "ResizeGripActive";
+-    case ImGuiCol_Tab: return "Tab";
+     case ImGuiCol_TabHovered: return "TabHovered";
+-    case ImGuiCol_TabActive: return "TabActive";
+-    case ImGuiCol_TabUnfocused: return "TabUnfocused";
+-    case ImGuiCol_TabUnfocusedActive: return "TabUnfocusedActive";
++    case ImGuiCol_Tab: return "Tab";
++    case ImGuiCol_TabSelected: return "TabSelected";
++    case ImGuiCol_TabSelectedOverline: return "TabSelectedOverline";
++    case ImGuiCol_TabDimmed: return "TabDimmed";
++    case ImGuiCol_TabDimmedSelected: return "TabDimmedSelected";
++    case ImGuiCol_TabDimmedSelectedOverline: return "TabDimmedSelectedOverline";
+     case ImGuiCol_DockingPreview: return "DockingPreview";
+     case ImGuiCol_DockingEmptyBg: return "DockingEmptyBg";
+     case ImGuiCol_PlotLines: return "PlotLines";
+@@ -4276,7 +4294,7 @@ bool ImGui::ItemHoverable(const ImRect& bb, ImGuiID id, ImGuiItemFlags item_flag
+     // Done with rectangle culling so we can perform heavier checks now.
+     if (!(item_flags & ImGuiItemFlags_NoWindowHoverableCheck) && !IsWindowContentHoverable(window, ImGuiHoveredFlags_None))
+     {
+-        g.HoveredIdDisabled = true;
++        g.HoveredIdIsDisabled = true;
+         return false;
+     }
+ 
+@@ -4300,6 +4318,7 @@ bool ImGui::ItemHoverable(const ImRect& bb, ImGuiID id, ImGuiItemFlags item_flag
+         }
+ 
+         // Display shortcut (only works with mouse)
++        // (ImGuiItemStatusFlags_HasShortcut in LastItemData denotes we want a tooltip)
+         if (id == g.LastItemData.ID && (g.LastItemData.StatusFlags & ImGuiItemStatusFlags_HasShortcut))
+             if (IsItemHovered(ImGuiHoveredFlags_ForTooltip | ImGuiHoveredFlags_DelayNormal))
+                 SetTooltip("%s", GetKeyChordName(g.LastItemData.Shortcut));
+@@ -4311,7 +4330,7 @@ bool ImGui::ItemHoverable(const ImRect& bb, ImGuiID id, ImGuiItemFlags item_flag
+         // Release active id if turning disabled
+         if (g.ActiveId == id && id != 0)
+             ClearActiveID();
+-        g.HoveredIdDisabled = true;
++        g.HoveredIdIsDisabled = true;
+         return false;
+     }
+ 
+@@ -4457,7 +4476,7 @@ ImGuiIO& ImGui::GetIO()
+
+----------------------------------------
+
+File: lib/third_party/imgui/imgui/source/imgui_demo.cpp
+Status: modified
+Changes: +29 -15
+Diff:
+@@ -1,4 +1,4 @@
+-// dear imgui, v1.90.8
++// dear imgui, v1.90.9
+ // (demo code)
+ 
+ // Help:
+@@ -479,19 +479,25 @@ void ImGui::ShowDemoWindow(bool* p_open)
+             ImGui::CheckboxFlags("io.ConfigFlags: NavEnableSetMousePos", &io.ConfigFlags, ImGuiConfigFlags_NavEnableSetMousePos);
+             ImGui::SameLine(); HelpMarker("Instruct navigation to move the mouse cursor. See comment for ImGuiConfigFlags_NavEnableSetMousePos.");
+             ImGui::CheckboxFlags("io.ConfigFlags: NoMouse",              &io.ConfigFlags, ImGuiConfigFlags_NoMouse);
++            ImGui::SameLine(); HelpMarker("Instruct dear imgui to disable mouse inputs and interactions.");
++
++            // The "NoMouse" option can get us stuck with a disabled mouse! Let's provide an alternative way to fix it:
+             if (io.ConfigFlags & ImGuiConfigFlags_NoMouse)
+             {
+-                // The "NoMouse" option can get us stuck with a disabled mouse! Let's provide an alternative way to fix it:
+                 if (fmodf((float)ImGui::GetTime(), 0.40f) < 0.20f)
+                 {
+                     ImGui::SameLine();
+                     ImGui::Text("<<PRESS SPACE TO DISABLE>>");
+                 }
+-                if (ImGui::IsKeyPressed(ImGuiKey_Space))
++                // Prevent both being checked
++                if (ImGui::IsKeyPressed(ImGuiKey_Space) || (io.ConfigFlags & ImGuiConfigFlags_NoKeyboard))
+                     io.ConfigFlags &= ~ImGuiConfigFlags_NoMouse;
+             }
+-            ImGui::CheckboxFlags("io.ConfigFlags: NoMouseCursorChange", &io.ConfigFlags, ImGuiConfigFlags_NoMouseCursorChange);
++
++            ImGui::CheckboxFlags("io.ConfigFlags: NoMouseCursorChange",  &io.ConfigFlags, ImGuiConfigFlags_NoMouseCursorChange);
+             ImGui::SameLine(); HelpMarker("Instruct backend to not alter mouse cursor shape and visibility.");
++            ImGui::CheckboxFlags("io.ConfigFlags: NoKeyboard", &io.ConfigFlags, ImGuiConfigFlags_NoKeyboard);
++            ImGui::SameLine(); HelpMarker("Instruct dear imgui to disable keyboard inputs and interactions.");
+ 
+             ImGui::Checkbox("io.ConfigInputTrickleEventQueue", &io.ConfigInputTrickleEventQueue);
+             ImGui::SameLine(); HelpMarker("Enable input queue trickling: some types of events submitted during the same frame (e.g. button down + up) will be spread over multiple frames, improving interactions with low framerates.");
+@@ -774,18 +780,19 @@ static void ShowDemoWindowWidgets()
+ 
+         {
+             IMGUI_DEMO_MARKER("Widgets/Basic/DragInt, DragFloat");
+-            static int i1 = 50, i2 = 42;
++            static int i1 = 50, i2 = 42, i3 = 128;
+             ImGui::DragInt("drag int", &i1, 1);
+             ImGui::SameLine(); HelpMarker(
+                 "Click and drag to edit value.\n"
+                 "Hold SHIFT/ALT for faster/slower edit.\n"
+                 "Double-click or CTRL+click to input value.");
+-
+             ImGui::DragInt("drag int 0..100", &i2, 1, 0, 100, "%d%%", ImGuiSliderFlags_AlwaysClamp);
++            ImGui::DragInt("drag int wrap 100..200", &i3, 1, 100, 200, "%d", ImGuiSliderFlags_WrapAround);
+ 
+             static float f1 = 1.00f, f2 = 0.0067f;
+             ImGui::DragFloat("drag float", &f1, 0.005f);
+             ImGui::DragFloat("drag small float", &f2, 0.0001f, 0.0f, 0.0f, "%.06f ns");
++            //ImGui::DragFloat("drag wrap -1..1", &f3, 0.005f, -1.0f, 1.0f, NULL, ImGuiSliderFlags_WrapAround);
+
+----------------------------------------
+
+File: lib/third_party/imgui/imgui/source/imgui_draw.cpp
+Status: modified
+Changes: +19 -13
+Diff:
+@@ -1,4 +1,4 @@
+-// dear imgui, v1.90.8
++// dear imgui, v1.90.9
+ // (drawing and font code)
+ 
+ /*
+@@ -213,11 +213,13 @@ void ImGui::StyleColorsDark(ImGuiStyle* dst)
+     colors[ImGuiCol_ResizeGrip]             = ImVec4(0.26f, 0.59f, 0.98f, 0.20f);
+     colors[ImGuiCol_ResizeGripHovered]      = ImVec4(0.26f, 0.59f, 0.98f, 0.67f);
+     colors[ImGuiCol_ResizeGripActive]       = ImVec4(0.26f, 0.59f, 0.98f, 0.95f);
+-    colors[ImGuiCol_Tab]                    = ImLerp(colors[ImGuiCol_Header],       colors[ImGuiCol_TitleBgActive], 0.80f);
+     colors[ImGuiCol_TabHovered]             = colors[ImGuiCol_HeaderHovered];
+-    colors[ImGuiCol_TabActive]              = ImLerp(colors[ImGuiCol_HeaderActive], colors[ImGuiCol_TitleBgActive], 0.60f);
+-    colors[ImGuiCol_TabUnfocused]           = ImLerp(colors[ImGuiCol_Tab],          colors[ImGuiCol_TitleBg], 0.80f);
+-    colors[ImGuiCol_TabUnfocusedActive]     = ImLerp(colors[ImGuiCol_TabActive],    colors[ImGuiCol_TitleBg], 0.40f);
++    colors[ImGuiCol_Tab]                    = ImLerp(colors[ImGuiCol_Header],       colors[ImGuiCol_TitleBgActive], 0.80f);
++    colors[ImGuiCol_TabSelected]            = ImLerp(colors[ImGuiCol_HeaderActive], colors[ImGuiCol_TitleBgActive], 0.60f);
++    colors[ImGuiCol_TabSelectedOverline]    = colors[ImGuiCol_HeaderActive];
++    colors[ImGuiCol_TabDimmed]              = ImLerp(colors[ImGuiCol_Tab],          colors[ImGuiCol_TitleBg], 0.80f);
++    colors[ImGuiCol_TabDimmedSelected]      = ImLerp(colors[ImGuiCol_TabSelected],  colors[ImGuiCol_TitleBg], 0.40f);
+
+----------------------------------------
+
+File: lib/third_party/imgui/imgui/source/imgui_tables.cpp
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -1,4 +1,4 @@
+-// dear imgui, v1.90.8
++// dear imgui, v1.90.9
+ // (tables and columns code)
+ 
+ /*
+
+----------------------------------------
+
+File: lib/third_party/imgui/imgui/source/imgui_widgets.cpp
+Status: modified
+Changes: +61 -36
+Diff:
+@@ -1,4 +1,4 @@
+-// dear imgui, v1.90.8
++// dear imgui, v1.90.9
+ // (widgets code)
+ 
+ /*
+@@ -1138,7 +1138,8 @@ bool ImGui::Checkbox(const char* label, bool* v)
+     const ImVec2 pos = window->DC.CursorPos;
+     const ImRect total_bb(pos, pos + ImVec2(square_sz + (label_size.x > 0.0f ? style.ItemInnerSpacing.x + label_size.x : 0.0f), label_size.y + style.FramePadding.y * 2.0f));
+     ItemSize(total_bb, style.FramePadding.y);
+-    if (!ItemAdd(total_bb, id))
++    const bool is_visible = ItemAdd(total_bb, id);
++    if (!is_visible)
+     {
+         IMGUI_TEST_ENGINE_ITEM_INFO(id, label, g.LastItemData.StatusFlags | ImGuiItemStatusFlags_Checkable | (*v ? ImGuiItemStatusFlags_Checked : 0));
+         return false;
+@@ -1153,27 +1154,29 @@ bool ImGui::Checkbox(const char* label, bool* v)
+     }
+ 
+     const ImRect check_bb(pos, pos + ImVec2(square_sz, square_sz));
+-    RenderNavHighlight(total_bb, id);
+-    RenderFrame(check_bb.Min, check_bb.Max, GetColorU32((held && hovered) ? ImGuiCol_FrameBgActive : hovered ? ImGuiCol_FrameBgHovered : ImGuiCol_FrameBg), true, style.FrameRounding);
+-    ImU32 check_col = GetColorU32(ImGuiCol_CheckMark);
+-    bool mixed_value = (g.LastItemData.InFlags & ImGuiItemFlags_MixedValue) != 0;
+-    if (mixed_value)
+-    {
+-        // Undocumented tristate/mixed/indeterminate checkbox (#2644)
+-        // This may seem awkwardly designed because the aim is to make ImGuiItemFlags_MixedValue supported by all widgets (not just checkbox)
+-        ImVec2 pad(ImMax(1.0f, IM_TRUNC(square_sz / 3.6f)), ImMax(1.0f, IM_TRUNC(square_sz / 3.6f)));
+-        window->DrawList->AddRectFilled(check_bb.Min + pad, check_bb.Max - pad, check_col, style.FrameRounding);
+-    }
+-    else if (*v)
++    const bool mixed_value = (g.LastItemData.InFlags & ImGuiItemFlags_MixedValue) != 0;
++    if (is_visible)
+     {
+-        const float pad = ImMax(1.0f, IM_TRUNC(square_sz / 6.0f));
+-        RenderCheckMark(window->DrawList, check_bb.Min + ImVec2(pad, pad), check_col, square_sz - pad * 2.0f);
++        RenderNavHighlight(total_bb, id);
++        RenderFrame(check_bb.Min, check_bb.Max, GetColorU32((held && hovered) ? ImGuiCol_FrameBgActive : hovered ? ImGuiCol_FrameBgHovered : ImGuiCol_FrameBg), true, style.FrameRounding);
++        ImU32 check_col = GetColorU32(ImGuiCol_CheckMark);
++        if (mixed_value)
++        {
++            // Undocumented tristate/mixed/indeterminate checkbox (#2644)
++            // This may seem awkwardly designed because the aim is to make ImGuiItemFlags_MixedValue supported by all widgets (not just checkbox)
++            ImVec2 pad(ImMax(1.0f, IM_TRUNC(square_sz / 3.6f)), ImMax(1.0f, IM_TRUNC(square_sz / 3.6f)));
++            window->DrawList->AddRectFilled(check_bb.Min + pad, check_bb.Max - pad, check_col, style.FrameRounding);
++        }
++        else if (*v)
++        {
++            const float pad = ImMax(1.0f, IM_TRUNC(square_sz / 6.0f));
++            RenderCheckMark(window->DrawList, check_bb.Min + ImVec2(pad, pad), check_col, square_sz - pad * 2.0f);
++        }
+     }
+-
+-    ImVec2 label_pos = ImVec2(check_bb.Max.x + style.ItemInnerSpacing.x, check_bb.Min.y + style.FramePadding.y);
++    const ImVec2 label_pos = ImVec2(check_bb.Max.x + style.ItemInnerSpacing.x, check_bb.Min.y + style.FramePadding.y);
+     if (g.LogEnabled)
+         LogRenderedText(&label_pos, mixed_value ? "[~]" : *v ? "[x]" : "[ ]");
+-    if (label_size.x > 0.0f)
++    if (is_visible && label_size.x > 0.0f)
+         RenderText(label_pos, label);
+ 
+     IMGUI_TEST_ENGINE_ITEM_INFO(id, label, g.LastItemData.StatusFlags | ImGuiItemStatusFlags_Checkable | (*v ? ImGuiItemStatusFlags_Checked : 0));
+
+----------------------------------------
+
+File: lib/third_party/imgui/imgui/source/misc/freetype/imgui_freetype.cpp
+Status: modified
+Changes: +3 -3
+Diff:
+@@ -357,7 +357,7 @@ namespace
+         case FT_PIXEL_MODE_BGRA:
+             {
+                 // FIXME: Converting pre-multiplied alpha to straight. Doesn't smell good.
+-                #define DE_MULTIPLY(color, alpha) (ImU32)(255.0f * (float)color / (float)alpha + 0.5f)
++                #define DE_MULTIPLY(color, alpha) ImMin((ImU32)(255.0f * (float)color / (float)(alpha + FLT_MIN) + 0.5f), 255u)
+                 if (multiply_table == nullptr)
+                 {
+                     for (uint32_t y = 0; y < h; y++, src += src_pitch, dst += dst_pitch)
+@@ -671,8 +671,8 @@ bool ImFontAtlasBuildWithFreeTypeEx(FT_Library ft_library, ImFontAtlas* atlas, u
+
+----------------------------------------
+
+File: lib/third_party/nativefiledialog
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -1 +1 @@
+-Subproject commit 5786fabceeaee4d892f3c7a16b243796244cdddc
++Subproject commit c099aaee9a24a35ad93e06513b41aeb503d848d0
+
+----------------------------------------
+
+File: lib/third_party/yara/yara
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -1 +1 @@
+-Subproject commit 8fa55cde4c0cde8a1ba4ced1c131827eb4005f0d
++Subproject commit 0e5b6bb9660cba500eb58dbccb027757c82cc4cf
+
+----------------------------------------
+
+File: main/gui/CMakeLists.txt
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -60,7 +60,7 @@ target_compile_definitions(main PRIVATE IMHEX_PROJECT_NAME="${PROJECT_NAME}")
+ 
+ target_link_libraries(main PRIVATE libromfs-imhex libimhex libwolv ${LIBBACKTRACE_LIBRARIES} LLVMDemangle)
+ if (WIN32)
+-    target_link_libraries(main PRIVATE usp10 wsock32 ws2_32 Dwmapi.lib)
++    target_link_libraries(main PRIVATE usp10 wsock32 ws2_32 Dwmapi.lib Winmm.lib)
+ else ()
+     target_link_libraries(main PRIVATE pthread)
+ endif ()
+
+----------------------------------------
+
+File: main/gui/source/window/macos_window.cpp
+Status: modified
+Changes: +8 -2
+Diff:
+@@ -5,6 +5,7 @@
+     #include <hex/api/project_file_manager.hpp>
+     #include <hex/api/imhex_api.hpp>
+     #include <hex/api/event_manager.hpp>
++    #include <hex/api/task_manager.hpp>
+ 
+     #include <hex/helpers/utils_macos.hpp>
+     #include <hex/helpers/logger.hpp>
+@@ -65,7 +66,9 @@ namespace hex {
+         });
+
+----------------------------------------
+
+File: main/gui/source/window/web_window.cpp
+Status: modified
+Changes: +34 -0
+Diff:
+@@ -7,6 +7,9 @@
+ 
+ #include <hex/api/event_manager.hpp>
+ 
++#include <imgui.h>
++#include <imgui_internal.h>
++
+ // Function used by c++ to get the size of the html canvas
+ EM_JS(int, canvas_get_width, (), {
+     return Module.canvas.width;
+@@ -22,6 +25,10 @@ EM_JS(void, resizeCanvas, (), {
+     js_resizeCanvas();
+ });
+ 
++EM_JS(void, fixCanvasInPlace, (), {
++    document.getElementById('canvas').classList.add('canvas-fixed');
++});
++
+ EM_JS(void, setupThemeListener, (), {
+     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+         Module._handleThemeChange();
+@@ -37,6 +44,27 @@ extern "C" void handleThemeChange() {
+     hex::EventOSThemeChanged::post();
+ }
+ 
+
+----------------------------------------
+
+File: main/gui/source/window/win_window.cpp
+Status: modified
+Changes: +59 -2
+Diff:
+@@ -5,7 +5,7 @@
+ 
+     #include "messaging.hpp"
+ 
+-#include <hex/helpers/utils.hpp>
++    #include <hex/helpers/utils.hpp>
+     #include <hex/helpers/logger.hpp>
+     #include <hex/helpers/default_paths.hpp>
+ 
+@@ -24,6 +24,7 @@
+     #include <wrl/client.h>
+     #include <fcntl.h>
+     #include <shellapi.h>
++    #include <timeapi.h>
+ 
+     #include <cstdio>
+ 
+@@ -160,7 +161,50 @@ namespace hex {
+                     rect = client;
+                 }
+ 
+-                return 0;
++                // This code tries to avoid DWM flickering when resizing the window
++                // It's not perfect, but it's really the best we can do.
++
++                LARGE_INTEGER performanceFrequency = {};
++                QueryPerformanceFrequency(&performanceFrequency);
++                TIMECAPS tc = {};
++                timeGetDevCaps(&tc, sizeof(tc));
++
++                const auto granularity = tc.wPeriodMin;
++                timeBeginPeriod(tc.wPeriodMin);
+
+----------------------------------------
+
+File: main/gui/source/window/window.cpp
+Status: modified
+Changes: +15 -2
+Diff:
+@@ -194,6 +194,16 @@ namespace hex {
+         while (!glfwWindowShouldClose(m_window)) {
+             m_lastStartFrameTime = glfwGetTime();
+ 
++            {
++                int x = 0, y = 0;
++                int width = 0, height = 0;
++                glfwGetWindowPos(m_window, &x, &y);
++                glfwGetWindowSize(m_window, &width, &height);
++
++                ImHexApi::System::impl::setMainWindowPosition(x, y);
++                ImHexApi::System::impl::setMainWindowSize(width, height);
++            }
++
+             // Determine if the application should be in long sleep mode
+
+----------------------------------------
+
+File: plugins/builtin/include/content/views/view_hex_editor.hpp
+Status: modified
+Changes: +1 -0
+Diff:
+@@ -91,6 +91,7 @@ namespace hex::plugin::builtin {
+         PerProvider<std::optional<u64>> m_selectionStart, m_selectionEnd;
+ 
+         PerProvider<std::map<u64, color_t>> m_foregroundHighlights, m_backgroundHighlights;
++        PerProvider<std::set<Region>> m_hoverHighlights;
+     };
+ 
+ }
+\ No newline at end of file
+
+----------------------------------------
+
+File: plugins/builtin/source/content/main_menu_items.cpp
+Status: modified
+Changes: +0 -6
+Diff:
+@@ -644,12 +644,6 @@ namespace hex::plugin::builtin {
+ 
+     static void createHelpMenu() {
+         ContentRegistry::Interface::registerMainMenuItem("hex.builtin.menu.help", 6000);
+-
+-        ContentRegistry::Interface::addMenuItem({ "hex.builtin.menu.help", "Interactive Help"}, 10000, Shortcut::None, []{
+-            TutorialManager::startHelpHover();
+-        });
+-
+-        TutorialManager::addInteractiveHelpLink({ View::toWindowName("hex.builtin.view.pattern_data.name") }, "https://google.com");
+
+----------------------------------------
+
+File: plugins/builtin/source/content/themes.cpp
+Status: modified
+Changes: +3 -3
+Diff:
+@@ -54,9 +54,9 @@ namespace hex::plugin::builtin {
+                     { "resize-grip-active",             ImGuiCol_ResizeGripActive       },
+                     { "tab",                            ImGuiCol_Tab                    },
+                     { "tab-hovered",                    ImGuiCol_TabHovered             },
+-                    { "tab-active",                     ImGuiCol_TabActive              },
+-                    { "tab-unfocused",                  ImGuiCol_TabUnfocused           },
+-                    { "tab-unfocused-active",           ImGuiCol_TabUnfocusedActive     },
++                    { "tab-active",                     ImGuiCol_TabSelected            },
++                    { "tab-unfocused",                  ImGuiCol_TabDimmed              },
++                    { "tab-unfocused-active",           ImGuiCol_TabDimmedSelected      },
+
+----------------------------------------
+
+File: plugins/builtin/source/content/ui_items.cpp
+Status: modified
+Changes: +7 -4
+Diff:
+@@ -412,7 +412,8 @@ namespace hex::plugin::builtin {
+         ContentRegistry::Interface::addToolbarItem([] {
+ 
+             for (const auto &menuItem : ContentRegistry::Interface::impl::getToolbarMenuItems()) {
+-                if (menuItem->unlocalizedNames.back().get() == ContentRegistry::Interface::impl::SeparatorValue) {
++                const auto &unlocalizedItemName = menuItem->unlocalizedNames.back();
++                if (unlocalizedItemName.get() == ContentRegistry::Interface::impl::SeparatorValue) {
+                     ImGui::SeparatorEx(ImGuiSeparatorFlags_Vertical);
+                     continue;
+                 }
+@@ -421,6 +422,8 @@ namespace hex::plugin::builtin {
+                 if (ImGuiExt::ToolBarButton(menuItem->icon.glyph.c_str(), ImGuiExt::GetCustomColorVec4(ImGuiCustomCol(menuItem->icon.color)))) {
+                     menuItem->callback();
+
+----------------------------------------
+
+File: plugins/builtin/source/content/views/view_about.cpp
+Status: modified
+Changes: +1 -0
+Diff:
+@@ -343,6 +343,7 @@ namespace hex::plugin::builtin {
+             Library { "file", "file", "https://github.com/file/file" },
+             Library { "glfw", "glfw", "https://github.com/glfw/glfw" },
+             Library { "llvm", "llvm-project", "https://github.com/llvm/llvm-project" },
++            Library { "Boost.Regex", "John Maddock", "https://github.com/boostorg/regex" },
+         };
+ 
+         constexpr static auto drawTable = [](const char *category, const auto &libraries) {
+
+----------------------------------------
+
+File: plugins/builtin/source/content/views/view_command_palette.cpp
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -103,7 +103,7 @@ namespace hex::plugin::builtin {
+             ImGui::Separator();
+ 
+             // Draw the results
+-            if (ImGui::BeginChild("##results", ImGui::GetContentRegionAvail(), false, ImGuiWindowFlags_AlwaysVerticalScrollbar | ImGuiWindowFlags_NavFlattened)) {
++            if (ImGui::BeginChild("##results", ImGui::GetContentRegionAvail(), ImGuiChildFlags_NavFlattened, ImGuiWindowFlags_AlwaysVerticalScrollbar)) {
+                 for (const auto &[displayResult, matchedCommand, callback] : m_lastResults) {
+                     ImGui::PushTabStop(true);
+                     ON_SCOPE_EXIT { ImGui::PopTabStop(); };
+
+----------------------------------------
+
+File: plugins/builtin/source/content/views/view_data_processor.cpp
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -597,7 +597,7 @@ namespace hex::plugin::builtin {
+ 
+     void ViewDataProcessor::drawContextMenus(ViewDataProcessor::Workspace &workspace) {
+         // Handle the right click context menus
+-        if (ImGui::IsMouseDown(ImGuiMouseButton_Right) && ImGui::IsWindowHovered(ImGuiHoveredFlags_ChildWindows)) {
++        if (ImGui::IsMouseDown(ImGuiMouseButton_Right) && ImGui::IsWindowHovered(ImGuiHoveredFlags_ChildWindows) && !ImGui::IsMouseDragging(ImGuiMouseButton_Right)) {
+             // Clear selections
+             ImNodes::ClearNodeSelection();
+             ImNodes::ClearLinkSelection();
+
+----------------------------------------
+
+File: plugins/builtin/source/content/views/view_hex_editor.cpp
+Status: modified
+Changes: +11 -11
+Diff:
+@@ -493,16 +493,8 @@ namespace hex::plugin::builtin {
+         });
+ 
+         m_hexEditor.setBackgroundHighlightCallback([this](u64 address, const u8 *data, size_t size) -> std::optional<color_t> {
+-            bool hovered = false;
+-            for (const auto &[id, hoverFunction] : ImHexApi::HexEditor::impl::getHoveringFunctions()) {
+-                if (hoverFunction(m_hexEditor.getProvider(), address, data, size)) {
+-                    hovered = true;
+-                    break;
+-                }
+-            }
+-
+             if (auto highlight = m_backgroundHighlights->find(address); highlight != m_backgroundHighlights->end()) {
+-                if (hovered)
++                if (std::ranges::any_of(*m_hoverHighlights, [region = Region(address, size)](const Region &highlight) { return highlight.overlaps(region); }))
+                     return ImAlphaBlendColors(highlight->second, 0xA0FFFFFF);
+                 else
+
+----------------------------------------
+
+File: plugins/builtin/source/content/views/view_pattern_data.cpp
+Status: modified
+Changes: +2 -2
+Diff:
+@@ -37,8 +37,8 @@ namespace hex::plugin::builtin {
+            (*m_patternDrawer)->jumpToPattern(pattern);
+         });
+ 
+-        ImHexApi::HexEditor::addHoverHighlightProvider([this](const prv::Provider *, u64 address, const u8 *, size_t size) {
+-            return m_hoveredPatternRegion.overlaps(Region { address, size });
++        ImHexApi::HexEditor::addHoverHighlightProvider([this](const prv::Provider *, u64, size_t) -> std::set<Region> {
++            return { m_hoveredPatternRegion };
+         });
+ 
+
+----------------------------------------
+
+File: plugins/builtin/source/content/views/view_pattern_editor.cpp
+Status: modified
+Changes: +13 -13
+Diff:
+@@ -231,7 +231,7 @@ namespace hex::plugin::builtin {
+ 
+             m_textEditor.Render("hex.builtin.view.pattern_editor.name"_lang, textEditorSize, true);
+             TextEditor::FindReplaceHandler *findReplaceHandler = m_textEditor.GetFindReplaceHandler();
+-            if (ImGui::IsItemClicked(ImGuiMouseButton_Right)) {
++            if (ImGui::IsMouseDown(ImGuiMouseButton_Right) && ImGui::IsWindowHovered(ImGuiHoveredFlags_ChildWindows) && !ImGui::IsMouseDragging(ImGuiMouseButton_Right)) {
+                 ImGui::OpenPopup("##pattern_editor_context_menu");
+             }
+ 
+@@ -1689,6 +1689,7 @@ namespace hex::plugin::builtin {
+             });
+ 
+             ON_SCOPE_EXIT {
++                runtime.getInternals().evaluator->setDebugMode(false);
+                 *m_lastEvaluationOutVars = runtime.getOutVariables();
+                 *m_sections              = runtime.getSections();
+ 
+
+----------------------------------------
+
+File: plugins/builtin/source/content/welcome_screen.cpp
+Status: modified
+Changes: +4 -4
+Diff:
+@@ -372,7 +372,7 @@ namespace hex::plugin::builtin {
+         void drawWelcomeScreen() {
+             ImGui::PushStyleVar(ImGuiStyleVar_FrameBorderSize, 0);
+             ImGui::PushStyleColor(ImGuiCol_WindowShadow, 0x00);
+-            if (ImGui::Begin("ImHexDockSpace")) {
++            if (ImGui::Begin("ImHexDockSpace", nullptr, ImGuiWindowFlags_NoBringToFrontOnFocus)) {
+                 if (!ImHexApi::Provider::isValid()) {
+                     static auto title = []{
+                         std::array<char, 256> title = {};
+@@ -388,7 +388,7 @@ namespace hex::plugin::builtin {
+                         ImGui::SetNextWindowSize(ImGui::GetContentRegionAvail() + scaled({ 0, 10 }));
+                         ImGui::SetNextWindowPos(ImGui::GetCursorScreenPos() - ImVec2(0, ImGui::GetStyle().FramePadding.y + 2_scaled));
+
+----------------------------------------
+
+File: plugins/builtin/source/content/window_decoration.cpp
+Status: modified
+Changes: +1 -3
+Diff:
+@@ -146,7 +146,7 @@ namespace hex::plugin::builtin {
+             ImGui::PushStyleColor(ImGuiCol_ButtonActive, ImGui::GetColorU32(ImGuiCol_ScrollbarGrabActive));
+             ImGui::PushStyleColor(ImGuiCol_ButtonHovered, ImGui::GetColorU32(ImGuiCol_ScrollbarGrabHovered));
+ 
+-            const auto windowSize = ImHexApi::System::getMainWindowSize();
++            const auto windowSize = ImGui::GetWindowSize();
+             auto searchBoxSize = ImVec2(s_showSearchBar ? windowSize.x / 2.5 : ImGui::CalcTextSize(s_windowTitle.c_str()).x, titleBarHeight);
+             auto searchBoxPos = ImVec2((windowSize / 2 - searchBoxSize / 2).x, 0);
+             auto titleBarButtonPosY = 0.0F;
+@@ -284,12 +284,10 @@ namespace hex::plugin::builtin {
+
+----------------------------------------
+
+File: plugins/decompress/CMakeLists.txt
+Status: modified
+Changes: +8 -10
+Diff:
+@@ -26,20 +26,18 @@ add_imhex_plugin(
+         ui
+         fonts
+     FEATURES
+-        ZLIB
+-        BZIP2
+-        LIBLZMA
+-        ZSTD
++        ZLIB "ZLib support"
++        BZIP2 "Bzip2 support"
+
+----------------------------------------
+
+File: plugins/decompress/source/plugin_decompress.cpp
+Status: modified
+Changes: +0 -7
+Diff:
+@@ -14,13 +14,6 @@ namespace hex::plugin::decompress {
+ using namespace hex;
+ using namespace hex::plugin::decompress;
+ 
+-IMHEX_DEFINE_PLUGIN_FEATURES() {
+-    { "bzip2 Support",      IMHEX_FEATURE_ENABLED(BZIP2)      },
+-    { "zlib Support",       IMHEX_FEATURE_ENABLED(ZLIB)       },
+-    { "LZMA Support",       IMHEX_FEATURE_ENABLED(LIBLZMA)    },
+-    { "zstd Support",       IMHEX_FEATURE_ENABLED(ZSTD)       },
+-};
+
+----------------------------------------
+
+File: plugins/script_loader/CMakeLists.txt
+Status: modified
+Changes: +17 -17
+Diff:
+@@ -3,9 +3,12 @@ cmake_minimum_required(VERSION 3.16)
+ include(ImHexPlugin)
+ 
+ find_package(CoreClrEmbed)
++add_library(dotnet INTERFACE)
+ if (CoreClrEmbed_FOUND)
+     set(IMHEX_DOTNET_SCRIPT_SUPPORT ON)
+ 
++    target_compile_definitions(dotnet INTERFACE IMHEX_DOTNET_RUNTIME_VERSION="${CoreClrEmbed_VERSION}")
++
+     add_library(nethost SHARED IMPORTED)
+     target_include_directories(nethost INTERFACE "${CoreClrEmbed_INCLUDE_DIRS}")
+     get_filename_component(CoreClrEmbed_FOLDER ${CoreClrEmbed_SHARED_LIBRARIES} DIRECTORY)
+@@ -21,6 +24,18 @@ if (CoreClrEmbed_FOUND)
+     if (IMHEX_BUNDLE_DOTNET)
+         install(FILES ${CoreClrEmbed_SHARED_LIBRARIES} DESTINATION ${CMAKE_INSTALL_LIBDIR})
+     endif()
++
++    message(STATUS "Enabling .NET Scripting support!")
+
+----------------------------------------
+
+File: plugins/script_loader/source/loaders/dotnet/dotnet_loader.cpp
+Status: modified
+Changes: +16 -8
+Diff:
+@@ -13,6 +13,7 @@
+ #include <nethost.h>
+ #include <coreclr_delegates.h>
+ #include <hostfxr.h>
++
+ #include <imgui.h>
+ #include <hex/api/plugin_manager.hpp>
+ 
+@@ -110,13 +111,7 @@ namespace hex::script::loader {
+                         = getExport<hostfxr_set_error_writer_fn>(hostfxrLibrary, "hostfxr_set_error_writer");
+             }
+ 
+-            hostfxr_set_error_writer([] HOSTFXR_CALLTYPE (const char_t *message) {
+-                #if defined(OS_WINDOWS)
+-                    log::error("{}", utf16ToUtf8(message));
+-                #else
+-                    log::error("{}", message);
+
+----------------------------------------
+
+File: plugins/script_loader/source/plugin_script_loader.cpp
+Status: modified
+Changes: +0 -2
+Diff:
+@@ -21,8 +21,6 @@ using ScriptLoaders = std::tuple<
+     #endif
+ >;
+ 
+-IMHEX_DEFINE_PLUGIN_FEATURES(){ };
+-
+ namespace {
+ 
+     ScriptLoaders s_loaders;
+
+----------------------------------------
+
+File: plugins/ui/include/ui/hex_editor.hpp
+Status: modified
+Changes: +5 -0
+Diff:
+@@ -270,6 +270,10 @@ namespace hex::ui {
+             m_backgroundColorCallback = callback;
+         }
+ 
++        void setHoverChangedCallback(const std::function<void(u64, size_t)> &callback) {
++            m_hoverChangedCallback = callback;
++        }
++
+         void setTooltipCallback(const std::function<void(u64, const u8 *, size_t)> &callback) {
+             m_tooltipCallback = callback;
+
+----------------------------------------
+
+File: plugins/ui/source/ui/hex_editor.cpp
+Status: modified
+Changes: +15 -3
+Diff:
+@@ -666,7 +666,11 @@ namespace hex::ui {
+                                     ImGuiExt::TextFormatted("{:?>{}}", "", maxCharsPerCell);
+ 
+                                 if (cellHovered) {
+-                                    hoveredCell = { byteAddress, bytesPerCell };
++                                    Region newHoveredCell = { byteAddress, bytesPerCell };
++                                    if (hoveredCell != newHoveredCell) {
++                                        hoveredCell = newHoveredCell;
++                                        m_hoverChangedCallback(hoveredCell.address, hoveredCell.size);
++                                    }
+                                 }
+ 
+                                 ImGui::PopItemWidth();
+
+----------------------------------------
+
+File: plugins/ui/source/ui/pattern_drawer.cpp
+Status: modified
+Changes: +65 -18
+Diff:
+@@ -141,13 +141,42 @@ namespace hex::ui {
+ 
+         void drawSizeColumnForBitfieldMember(const pl::ptrn::PatternBitfieldMember &pattern) {
+             ImGui::TableNextColumn();
+-            if (pattern.getBitSize() == 1)
+-                ImGuiExt::TextFormatted("1 bit");
+-            else
+-                ImGuiExt::TextFormatted("{0} bits", pattern.getBitSize());
++
++            auto bits = pattern.getBitSize();
++            auto bytes = bits / 8;
++            bits = bits % 8;
++
++            std::string text;
++            if (bytes != 0) {
++                if (bytes == 1)
++                    text += hex::format("{0} byte", bytes);
++                else
++                    text += hex::format("{0} bytes", bytes);
++
++                if (bits != 0)
++                    text += ", ";
++            }
++
++            if (bits != 0) {
++                if (bits == 1)
++                    text += hex::format("{0} bit", bits);
++                else
++                    text += hex::format("{0} bits", bits);
++            }
++
++            if (bytes == 0 && bits == 0) {
++                text = "0 bytes";
++            }
++
++            ImGui::TextUnformatted(text.c_str());
+         }
+ 
+         void drawSizeColumn(const pl::ptrn::Pattern& pattern) {
++            if (pattern.isPatternLocal()) {
+
+----------------------------------------
+

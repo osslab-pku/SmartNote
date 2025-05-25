@@ -1,0 +1,8 @@
+SmartDraft Command:
+pixi run ipython --pdb -m smartdraft.generator -- GyulyVGC/sniffnet --previous-release v1.3.0 --current-release v1.3.1 --project-domain Application --min-significance 0.1 --writing-style "Automatic" --structure-type "Change Type" --group-commits --show-significance
+
+DeepRelease Command:
+docker run -it -v $(pwd):/outputs --env GITHUB_TOKEN=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 --network host --rm fgksgf/deeprelease run GyulyVGC/sniffnet --since 202404090000 --until 202405022359 --save_dir=/outputs/sniffnet
+
+ConventionalChangelog Command:
+cd ../.cache/repo/GyulyVGC_sniffnet && git checkout v1.3.1 && conventional-changelog -p angular -r 2 && git checkout -

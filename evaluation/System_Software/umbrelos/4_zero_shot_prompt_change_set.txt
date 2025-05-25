@@ -1,0 +1,2520 @@
+Changes between 1.2.0-beta.2 and 1.2.0
+================================================================================
+
+COMMITS
+--------------------------------------------------------------------------------
+
+Commit: ed1fe8fe2c8a9e4183502b52f6a8f95b3c466bd4
+Author: Mayank Chhabra
+Date: 2024-06-16 11:59:24+00:00
+Message: Refetch latest update on channel change
+----------------------------------------
+
+Commit: 7d3f6ac8aeb231f4a43a5882aca1ff7dae482b30
+Author: Mayank Chhabra
+Date: 2024-06-16 14:17:20+00:00
+Message: Remove console logs, and run prettier on UI
+----------------------------------------
+
+Commit: 209baa957688c1ba55de827f6507b9c94d1ce5a0
+Author: Mayank Chhabra
+Date: 2024-06-16 21:31:10+00:00
+Message: Sort translations alphabetically in locale files
+----------------------------------------
+
+Commit: 0fc55ab8a0bb3534a8489c109e1a34e251ade24e
+Author: Mayank Chhabra
+Date: 2024-06-16 22:09:02+00:00
+Message: Add missing terminal pt translation
+----------------------------------------
+
+Commit: d48c780b9493daf04ab16e87caa7f077868f5f33
+Author: Mayank Chhabra
+Date: 2024-06-17 07:56:25+00:00
+Message: Remove unused translations
+----------------------------------------
+
+Commit: d61acb9e25e266922cf37570d0f8918f44db34ce
+Author: Mayank Chhabra
+Date: 2024-06-17 11:11:48+00:00
+Message: Automatically generate, remove and sort translations
+
+Adds a GitHub action that:
+- Goes over all UI files to remove any unused keys from all locale files
+- Checks for missing variables like {{name}} in non-english locales
+- Removes any keys in non-english locales that don't exist in english locale
+- Generates missing translations for non-english locales
+- Sorts all locales
+----------------------------------------
+
+Commit: 1be5e28b329238899d49e77d5f175a7dcd118e55
+Author: Mayank Chhabra
+Date: 2024-06-18 10:36:25+00:00
+Message: Display IP addresses in Settings
+----------------------------------------
+
+Commit: fc330d5ec62bc4a844695234e4802f32c3761a86
+Author: Luke Childs
+Date: 2024-06-18 10:50:37+00:00
+Message: umbrelOS 1.2
+----------------------------------------
+
+
+PULL REQUESTS
+--------------------------------------------------------------------------------
+
+
+FILE CHANGES
+--------------------------------------------------------------------------------
+
+File: .github/workflows/update-translations-in-pr.yml
+Status: added
+Changes: +51 -0
+Diff:
+@@ -0,0 +1,51 @@
++name: Update Translations in PR
++
++on:
++  pull_request:
++    types: [opened, synchronize, reopened]
++
++concurrency:
++  group: ${{ github.workflow }}-${{ github.ref }}
++  cancel-in-progress: true
++
++jobs:
++  update-translations:
++    timeout-minutes: 3
++    permissions:
++      contents: write
++    runs-on: ubuntu-22.04
+
+----------------------------------------
+
+File: packages/ui/app-auth/src/login-with-umbrel.tsx
+Status: modified
+Changes: +0 -2
+Diff:
+@@ -138,7 +138,6 @@ function useLogin() {
+ 				form.submit()
+ 			}
+ 
+-			console.log(data)
+ 			return data
+ 		})
+ 	}
+@@ -160,7 +159,6 @@ function useApp(appId: string) {
+ 	useEffect(() => {
+
+----------------------------------------
+
+File: packages/ui/package.json
+Status: modified
+Changes: +2 -0
+Diff:
+@@ -110,6 +110,8 @@
+ 		"eslint-plugin-react": "^7.33.2",
+ 		"eslint-plugin-react-hooks": "^4.6.0",
+ 		"eslint-plugin-react-refresh": "^0.4.3",
++		"fast-glob": "^3.3.2",
++		"openai": "^4.51.0",
+ 		"postcss": "8.4.31",
+ 		"prettier": "3.0.3",
+ 		"prettier-plugin-css-order": "2.0.1",
+
+----------------------------------------
+
+File: packages/ui/pnpm-lock.yaml
+Status: modified
+Changes: +104 -11
+Diff:
+@@ -256,6 +256,12 @@ devDependencies:
+   eslint-plugin-react-refresh:
+     specifier: ^0.4.3
+     version: 0.4.3(eslint@8.52.0)
++  fast-glob:
++    specifier: ^3.3.2
++    version: 3.3.2
++  openai:
++    specifier: ^4.51.0
++    version: 4.51.0
+   postcss:
+     specifier: 8.4.31
+     version: 8.4.31
+@@ -2418,6 +2424,19 @@ packages:
+     resolution: {integrity: sha512-nG96G3Wp6acyAgJqGasjODb+acrI7KltPiRxzHPXnP3NgI28bpQDRv53olbqGXbfcgF5aiiHmO3xpwEpS5Ld9g==}
+     dev: false
+ 
++  /@types/node-fetch@2.6.11:
++    resolution: {integrity: sha512-24xFj9R5+rfQJLRyM56qh+wnVSYhyXC2tkoBndtY0U+vubqNsYXGjufB2nn8Q6gt0LrARwL6UBtMCSVCwl4B1g==}
++    dependencies:
++      '@types/node': 20.8.7
++      form-data: 4.0.0
++    dev: true
++
++  /@types/node@18.19.34:
++    resolution: {integrity: sha512-eXF4pfBNV5DAMKGbI02NnDtWrQ40hAN558/2vvS4gMpMIxaf6JmD7YjnZbq0Q9TDSSkKBamime8ewRoomHdt4g==}
++    dependencies:
++      undici-types: 5.26.5
++    dev: true
++
+   /@types/node@20.8.7:
+     resolution: {integrity: sha512-21TKHHh3eUHIi2MloeptJWALuCu5H7HQTdTrWIFReA8ad+aggoX+lRes3ex7/FtpC+sVUpFMQ+QTfYr74mruiQ==}
+     dependencies:
+@@ -2697,6 +2716,13 @@ packages:
+     resolution: {integrity: sha512-g5QiLIfbg3pLuYUJPlisNKY+epQJTcMDsOnVNkscrDP1oi7vmJnzOANYJI/1pZcVJ6umUkBv3aFtlg1UvUHGzA==}
+     dev: true
+ 
++  /abort-controller@3.0.0:
++    resolution: {integrity: sha512-h8lQ8tacZYnR3vNQTgibj+tODHI5/+l06Au2Pcriv/Gmet0eaj4TwWH41sO9wnHDiQsEj19q0drzdWdeAHtweg==}
++    engines: {node: '>=6.5'}
++    dependencies:
++      event-target-shim: 5.0.1
++    dev: true
++
+   /accepts@1.3.8:
+     resolution: {integrity: sha512-PYAthTa2m2VKxuvSD3DPC/Gy+U+sOA1LAuT8mkmRuvw+NACSaeXEQ+NHcVF7rONl6qcaxV3Uuemwawk+7+SJLw==}
+     engines: {node: '>= 0.6'}
+@@ -2719,6 +2745,13 @@ packages:
+     hasBin: true
+     dev: true
+ 
++  /agentkeepalive@4.5.0:
++    resolution: {integrity: sha512-5GG/5IbQQpC9FpkRGsSvZI5QYeSCzlJHdpBQntCsuTOxhKD8lqKhrleg2Yi7yvMIf82Ycmmqln9U8V9qwEiJew==}
++    engines: {node: '>= 8.0.0'}
++    dependencies:
++      humanize-ms: 1.2.1
++    dev: true
++
+   /ajv@6.12.6:
+     resolution: {integrity: sha512-j3fVLgvTo527anyYyJOGTYJbG+vnnQYvE0m5mmkc1TK+nxAppkCLMIL0aZ4dblVCNoGShhm+kzE4ZUykBoMg4g==}
+     dependencies:
+@@ -2887,7 +2920,6 @@ packages:
+ 
+   /asynckit@0.4.0:
+     resolution: {integrity: sha512-Oei9OH4tRh0YqU3GxhX79dM/mwVgvbZJaSNaRk+bshkj0S5cfHcgYakreBjrHwatXKbz+IoIdYLxrKim2MjW0Q==}
+-    dev: false
+ 
+   /autoprefixer@10.4.16(postcss@8.4.31):
+     resolution: {integrity: sha512-7vd3UC6xKp0HLfua5IjZlcXvGAGy7cBAXTg2lyQ/8WpNhd6SiZ8Be+xm3FyBSYJx5GKcpRCzBh7RH4/0dnY+uQ==}
+@@ -3187,7 +3219,6 @@ packages:
+     engines: {node: '>= 0.8'}
+     dependencies:
+       delayed-stream: 1.0.0
+-    dev: false
+ 
+   /comma-separated-tokens@2.0.3:
+     resolution: {integrity: sha512-Fu4hJdvzeylCfQPp9SGWidpzrMs7tTrlu6Vb8XGaRGck8QSNZJJp538Wrb60Lax4fPwR64ViY468OIUTbRlGZg==}
+@@ -3466,7 +3497,6 @@ packages:
+   /delayed-stream@1.0.0:
+     resolution: {integrity: sha512-ZySD7Nf91aLB0RxL4KGrKHBXl7Eds1DAmEdcoVawXnLD7SDhpNgtuII2aAkg7a7QS41jxPSZ17p4VdGnMHk3MQ==}
+     engines: {node: '>=0.4.0'}
+-    dev: false
+ 
+   /dequal@2.0.3:
+     resolution: {integrity: sha512-0je+qPKHEMohvfRTCEo3CrPG6cAzAYgmzKyxRiYSSDkS6eGJdyVJm7WaYA5ECaAD9wLB2T4EEeymA5aFVcYXCA==}
+@@ -3838,6 +3868,11 @@ packages:
+     engines: {node: '>=0.10.0'}
+
+----------------------------------------
+
+File: packages/ui/public/locales/README.md
+Status: removed
+Changes: +0 -1
+Diff:
+@@ -1 +0,0 @@
+-JSON file contents are machine generated using the `lokalise.i18n-ally` VSCode extension.
+
+----------------------------------------
+
+File: packages/ui/public/locales/de.json
+Status: modified
+Changes: +309 -359
+Diff:
+@@ -1,411 +1,361 @@
+ {
+-  "hello": "Hallo",
+-  "desktop.greeting.morning": "Guten Morgen, {{name}}",
+-  "desktop.greeting.afternoon": "Guten Tag, {{name}}",
+-  "desktop.greeting.evening": "Guten Abend, {{name}}",
+-  "search": "Suche",
+-  "settings": "Einstellungen",
+-  "app-store.title": "App Store",
+-  "unknown": "Unbekannt",
+-  "app_one": "App",
+-  "app_other": "Apps",
+-  "raspberry-pi": "Raspberry Pi",
+-  "umbrel-home": "Umbrel Home",
+-  "linux": "Linux",
+-  "install-your-first-app": "Installiere deine erste App",
+-  "logout": "Abmelden",
+-  "restart": "Neustarten",
+-  "shut-down": "Herunterfahren",
+-  "umbrel": "Umbrel",
+-  "device": "Gerät",
+-  "umbrelos": "umbrelOS",
+-  "open-live-usage": "Live-Nutzung öffnen",
++  "2fa": "2FA",
++  "2fa-description": "Eine zweite Sicherheitsebene für dein Umbrel-Login und Apps",
++  "2fa.disable.success": "Zwei-Faktor-Authentifizierung deaktiviert",
++  "2fa.disable.title": "Zwei-Faktor-Authentifizierung deaktivieren",
++  "2fa.enable.or-paste": "Oder füge den folgenden Code in deine Authenticator-App ein",
++  "2fa.enable.scan-this": "Scanne diesen QR-Code mit einer Authenticator-App wie Google Authenticator oder Authy",
++  "2fa.enable.success": "Zwei-Faktor-Authentifizierung aktiviert",
++  "2fa.enable.title": "Zwei-Faktor-Authentifizierung aktivieren",
++  "2fa.enter-code": "Gib den Code ein, der in deiner Authenticator-App angezeigt wird",
+   "account": "Konto",
+-  "wallpaper": "Hintergrundbild",
+-  "name": "Name",
+-  "password": "Passwort",
+   "account-description": "Dein Name und Passwort",
+-  "wallpaper-description": "Dein Umbrel Hintergrundbild und Thema",
+-  "2fa-description": "Eine zweite Sicherheitsebene für dein Umbrel-Login und Apps",
+-  "tor-description": "Greife von überall auf dein Umbrel zu mit einem Tor-Browser",
+-  "migration-assistant": "Migrationsassistent",
+-  "migration-assistant-description": "Übertrage alle deine Apps und Daten von einem Raspberry Pi zu Umbrel Home",
+-  "migration-assistant-unsupported-device-description": "Der Migration Assistant unterstützt derzeit die Übertragung aller Daten und Apps von einem Raspberry Pi, auf dem umbrelOS läuft, zum Umbrel Home. Öffnen Sie den Migration Assistant auf Ihrem Umbrel Home, um zu beginnen.",
+-  "language": "Sprache",
+-  "language-description": "Deine bevorzugte umbrelOS Sprache",
++  "advanced-settings": "Erweiterte Einstellungen",
++  "advanced-settings-description": "Öffne das Terminal oder melde dich beim umbrelOS Beta Programm an",
++  "app-not-found": "App nicht gefunden: {{app}}",
++  "app-only-over-tor": "{{app}} kann nur über Tor verwendet werden. Bitte greife über einen Tor-Browser auf dein Umbrel zu deiner Remote-Zugriffs-URL (Einstellungen > Remote Tor-Zugang) zu, um diese App zu öffnen.",
++  "app-page.section.about": "Über",
++  "app-page.section.credentials.title": "Standardanmeldeinformationen",
++  "app-page.section.info.compatibility": "Kompatibilität",
++  "app-page.section.info.compatibility-compatible": "Kompatibel",
++  "app-page.section.info.developer": "Entwickler",
++  "app-page.section.info.source-code": "Quellcode",
++  "app-page.section.info.source-code.public": "Öffentlich",
++  "app-page.section.info.submitted-by": "Eingereicht von",
++  "app-page.section.info.title": "Info",
++  "app-page.section.info.version": "Version",
++  "app-page.section.recommendations.title": "Das könnte dir auch gefallen",
++  "app-page.section.release-notes.title": "Neuigkeiten",
++  "app-page.section.release-notes.version": "Version {{version}}",
++  "app-page.section.requires": "Benötigt",
++  "app-page.section.requires.support": "Support erhalten",
++  "app-picker.search": "Suchen...",
++  "app-picker.select-app": "App auswählen...",
++  "app-store.browse-category-apps": "{{category}} Apps durchsuchen",
++  "app-store.category.ai": "KI",
++  "app-store.category.all": "Alle Apps",
++  "app-store.category.automation": "Zuhause & Automatisierung",
++  "app-store.category.bitcoin": "Bitcoin",
++  "app-store.category.developer": "Entwicklerwerkzeuge",
++  "app-store.category.discover": "Entdecken",
++  "app-store.category.files": "Dateien & Produktivität",
++  "app-store.category.finance": "Finanzen",
++  "app-store.category.media": "Medien",
++  "app-store.category.networking": "Netzwerk",
++  "app-store.category.social": "Sozial",
+   "app-store.description": "Deine App-Aktualisierungseinstellungen",
+-  "migrate": "Migrieren",
++  "app-store.menu.community-app-stores": "Community App Stores",
++  "app-store.search-apps": "Apps suchen",
++  "app-store.search.no-results": "Keine Ergebnisse",
++  "app-store.search.results-for": "Ergebnisse für",
++  "app-store.title": "App Store",
++  "app-updates.less": "weniger",
++  "app-updates.more": "mehr",
++  "app-updates.no-updates": "Alle Apps sind auf dem neuesten Stand!",
++  "app-updates.update": "Aktualisieren",
++  "app-updates.update-all": "Alle aktualisieren",
++  "app-updates.updating": "Aktualisiert...",
++  "app.install": "Installieren",
++  "app.installing": "Installiert",
++  "app.offline": "Nicht in Betrieb",
++  "app.open": "Öffnen",
++  "app.optimized-for-umbrel-home": "Optimiert für Umbrel Home",
++  "app.restarting": "Wird neu gestartet",
++  "app.starting": "Wird gestartet",
++  "app.stopped": "Gestoppt",
++  "app.stopping": "Wird gestoppt",
++  "app.uninstall.confirm.description": "Alle mit {{app}} verbundenen Daten werden dauerhaft gelöscht. Diese Aktion kann nicht rückgängig gemacht werden.",
++  "app.uninstall.confirm.submit": "Deinstallieren",
++  "app.uninstall.confirm.title": "{{app}} deinstallieren?",
++  "app.uninstall.deps.used-by.title": "{{app}} wird verwendet von",
++  "app.uninstalling": "Deinstallieren",
++  "app.updating": "Aktualisieren",
++  "app.view": "Ansehen",
++  "apps.uninstall.failed-to-get-required-apps": "Fehler beim Abrufen erforderlicher Apps",
++  "apps.uninstalled-all.success": "Alle Apps deinstalliert",
++  "auth.checking-backend-for-user": "Lädt...",
++  "auth.failed-checking-if-user-logged-in": "Fehler: Auth-Login-Überprüfung fehlgeschlagen",
++  "auth.failed-to-check-if-user-exists": "Fehler: Auth-Existenzprüfung fehlgeschlagen",
++  "beta-program": "umbrelOS Beta Programm",
++  "beta-program-description": "Melde dich an, um Beta-Updates von umbrelOS zu erhalten, erhalte frühen Zugang zu neuen Funktionen und hilf uns, diese zu verbessern, indem du dein Feedback gibst. Beta-Updates können instabil sein und die Fehlerbehebung kann Kenntnisse des Terminals erfordern.",
++  "cancel": "Abbrechen",
++  "change": "Ändern",
+   "change-name": "Name ändern",
++  "change-name.failed.name-required": "Name ist erforderlich",
++  "change-name.input-placeholder": "Dein Name",
+   "change-password": "Passwort ändern",
+-  "uptime": "Betriebszeit",
+-  "preferences": "Einstellungen",
+-  "troubleshoot": "Fehlerbehebung",
+-  "troubleshoot-description": "Fehlerbehebung für umbrelOS oder eine App",
+-  "device-info-description": "Informationen über dein Gerät",
+-  "device-info.view-info": "Informationen anzeigen",
+-  "factory-reset": "Werkseinstellungen",
+-  "factory-reset.reset": "Zurücksetzen",
+-  "factory-reset.desc": "Lösche alle deine umbrelOS Daten und Apps",
+-  "software-update.title": "Softwareaktualisierung",
+-  "device-info": "Geräteinformation",
+-  "software-update.on-latest": "Du verwendest die neueste Version von umbrelOS",
++  "change-password.callout": "Wenn du dein Passwort verlierst, kannst du dich nicht bei deinem Umbrel anmelden. Stelle sicher, dass du es sicher aufbewahrst.",
++  "change-password.current-password": "Aktuelles Passwort",
++  "change-password.failed.current-required": "Aktuelles Passwort ist erforderlich",
++  "change-password.failed.min-length": "Passwort muss mindestens {{characters}} Zeichen lang sein",
++  "change-password.failed.must-be-unique": "Neues Passwort muss sich vom aktuellen Passwort unterscheiden",
++  "change-password.failed.new-required": "Neues Passwort ist erforderlich",
++  "change-password.failed.no-match": "Passwörter stimmen nicht überein",
++  "change-password.failed.repeat-required": "Passwortwiederholung ist erforderlich",
++  "change-password.new-password": "Neues Passwort",
++  "change-password.repeat-password": "Passwort wiederholen",
+   "check-for-latest-version": "Nach der neuesten umbrelOS Aktualisierung suchen",
+-  "2fa": "2FA",
+-  "remote-tor-access": "Remote Tor-Zugang",
+-  "software-update.checking": "Suche nach Aktualisierungen...",
+-  "software-update.check": "Nach Aktualisierungen suchen",
+-  "software-update.new-version": "Neue {{name}} ist verfügbar zur Installation",
+-  "software-update.updating-to": "Aktualisiere auf {{name}}",
+-  "software-update.callout": "Bitte aktualisiere diese Seite nicht und schalte dein Umbrel nicht aus, während es aktualisiert wird.",
+-  "software-update.failed.title": "Softwareaktualisierung fehlgeschlagen",
+-  "software-update.failed.description": "Es gab einen Fehler bei der Softwareaktualisierung",
+-  "software-update.failed.please-try-again": "Bitte versuche es erneut",
+-  "software-update.failed.retry": "Erneut versuchen",
+-  "update": "Aktualisieren",
+-  "software-update.update-now": "Jetzt aktualisieren",
+-  "software-update.view": "Anzeigen",
+-  "storage": "Speicherplatz",
+-  "storage.low": "Wenig Speicherplatz",
+-  "storage.full": "Speicherplatz voll",
+-  "something-left": "{{left}} verbleibend",
+-  "unexpected-error": "Unerwarteter Fehler",
+-  "unexpected-error.heading": "⚠ Fehler",
+   "clipboard.copied": "Kopiert",
+   "close": "Schließen",
+-  "something-went-wrong": "⚠ Es ist ein Fehler aufgetreten",
+-  "loading": "Lädt",
++  "cmdk.change-wallpaper": "Hintergrundbild ändern",
++  "cmdk.frequent-apps": "Häufig verwendet",
+   "cmdk.input-placeholder": "Suche nach Apps, Einstellungen oder Aktionen",
+-  "no-results-found": "Keine Ergebnisse gefunden",
++  "cmdk.install-from-app-store": "aus dem App Store",
++  "cmdk.live-usage": "Live-Nutzung",
+   "cmdk.restart-umbrel": "Umbrel neu starten",
++  "cmdk.shutdown-umbrel": "Umbrel herunterfahren",
+   "cmdk.update-all-apps": "Alle Apps aktualisieren",
+-  "cmdk.change-wallpaper": "Hintergrundbild ändern",
+-  "cmdk.live-usage": "Live-Nutzung",
+   "cmdk.widgets": "Widgets",
+-  "cmdk.frequent-apps": "Häufig verwendet",
+-  "app.offline": "Nicht in Betrieb",
+-  "app.uninstalling": "Deinstallieren",
+-  "app.install": "Installieren",
+-  "app.installing": "Installiert",
+-  "app.updating": "Aktualisieren",
+-  "app.open": "Öffnen",
+-  "app.view": "Ansehen",
+-  "retry": "Erneut versuchen",
+-  "download-logs": "Protokolle herunterladen",
+-  "page-title-umbrel": "{{title}} – umbrelOS",
+-  "desktop.title": "Desktop",
+-  "notifications": "Benachrichtigungen",
++  "community-app-store": "Community App Store",
++  "community-app-store.back-to-umbrel-app-store": "Zurück zum Umbrel App Store",
++  "community-app-store.open-button": "Öffnen",
++  "community-app-store.remove-button": "Entfernen",
++  "community-app-stores.add-button": "Hinzufügen",
++  "community-app-stores.description": "Community App Stores ermöglichen es dir, Apps auf deinem Umbrel zu installieren, die möglicherweise nicht im offiziellen Umbrel App Store verfügbar sind. Sie erleichtern auch das Testen von Beta-Versionen von Umbrel-Apps, bevor Entwickler sie im offiziellen Umbrel App Store veröffentlichen.",
++  "community-app-stores.learn-more": "Mehr erfahren",
++  "community-app-stores.warning": "Community App Stores können von jedem erstellt werden. Die darin veröffentlichten Apps sind nicht vom offiziellen Umbrel App Store-Team verifiziert oder geprüft und können potenziell unsicher oder bösartig sein. Sei vorsichtig und füge nur App-Stores von Entwicklern hinzu, denen du vertraust.",
++  "confirm": "Bestätigen",
++  "connecting": "Verbindet...",
++  "continue": "Fortsetzen",
++  "continue-to-log-in": "Weiter zur Anmeldung",
++  "cpu": "CPU",
++  "cpu-core-count": "{{cores}} Threads",
++  "create-user": "Benutzer erstellen",
++  "default-credentials..dont-show-again": "Nicht mehr anzeigen",
++  "default-credentials.close": "Verstanden",
++  "default-credentials.description": "Hier sind die Anmeldeinformationen, die du benötigst, um dich bei der App anzumelden.",
++  "default-credentials.open": "{{app}} öffnen",
++  "default-credentials.password": "Standardpasswort",
++  "default-credentials.title": "Anmeldeinformationen für {{app}}",
++  "default-credentials.username": "Standardbenutzername",
++  "desktop.app.context.go-to-store-page": "Im App Store anzeigen",
++  "desktop.app.context.show-default-credentials": "Standardanmeldeinformationen anzeigen",
++  "desktop.app.context.uninstall": "Deinstallieren",
++  "desktop.context-menu.change-wallpaper": "Hintergrundbild ändern",
++  "desktop.context-menu.edit-widgets": "Widgets bearbeiten",
++  "desktop.context-menu.logout": "Abmelden",
++  "desktop.greeting.afternoon": "Guten Tag, {{name}}",
++  "desktop.greeting.evening": "Guten Abend, {{name}}",
++  "desktop.greeting.morning": "Guten Morgen, {{name}}",
++  "desktop.install-first.for-the-bitcoiner": "Für Bitcoiner",
++  "desktop.install-first.for-the-self-hoster": "Für Selbsthoster",
++  "desktop.install-first.for-the-streamer": "Für Streamer",
++  "desktop.install-first.link-to-app-store": "Entdecke mehr im App Store",
++  "desktop.not-enough-room": "Verwende einen größeren Bildschirm, um deine Apps anzuzeigen.",
++  "device": "Gerät",
++  "device-info": "Geräteinformation",
++  "device-info-description": "Informationen über dein Gerät",
+   "device-info.device": "Gerät",
+   "device-info.model-number": "Modellnummer",
+   "device-info.serial-number": "Seriennummer",
++  "device-info.view-info": "Informationen anzeigen",
++  "disable": "Deaktivieren",
++  "download-logs": "Protokolle herunterladen",
++  "factory-reset": "Werkseinstellungen",
++  "factory-reset.confirm.body": "Bestätige Umbrel-Passwort zum Zurücksetzen",
++  "factory-reset.confirm.password-label": "Passwort eingeben",
+
+----------------------------------------
+
+File: packages/ui/public/locales/en.json
+Status: modified
+Changes: +309 -360
+Diff:
+@@ -1,412 +1,361 @@
+ {
+-  "hello": "Hello",
+-  "desktop.greeting.morning": "Good morning, {{name}}",
+-  "desktop.greeting.afternoon": "Good afternoon, {{name}}",
+-  "desktop.greeting.evening": "Good evening, {{name}}",
+-  "search": "Search",
+-  "settings": "Settings",
+-  "app-store.title": "App Store",
+-  "unknown": "Unknown",
+-  "app_one": "app",
+-  "app_other": "apps",
+-  "raspberry-pi": "Raspberry Pi",
+-  "umbrel-home": "Umbrel Home",
+-  "linux": "Linux",
+-  "install-your-first-app": "Install your first app",
+-  "logout": "Log out",
+-  "restart": "Restart",
+-  "shut-down": "Shut down",
+-  "umbrel": "Umbrel",
+-  "device": "Device",
+-  "umbrelos": "umbrelOS",
+-  "open-live-usage": "Open Live Usage",
++  "2fa": "2FA",
++  "2fa-description": "A second layer of security for your Umbrel login and apps",
++  "2fa.disable.success": "Two-factor authentication disabled",
++  "2fa.disable.title": "Disable two-factor authentication",
++  "2fa.enable.or-paste": "Or paste the following code in your authenticator app",
++  "2fa.enable.scan-this": "Scan this QR code using an authenticator app like Google Authenticator or Authy",
++  "2fa.enable.success": "Two-factor authentication enabled",
++  "2fa.enable.title": "Enable two-factor authentication",
++  "2fa.enter-code": "Enter the code displayed in your authenticator app",
+   "account": "Account",
+-  "wallpaper": "Wallpaper",
+-  "name": "Name",
+-  "password": "Password",
+   "account-description": "Your name and password",
+-  "wallpaper-description": "Your Umbrel wallpaper and theme",
+-  "2fa-description": "A second layer of security for your Umbrel login and apps",
+-  "tor-description": "Access your Umbrel from anywhere using a Tor browser",
+-  "migration-assistant": "Migration Assistant",
+-  "migration-assistant-description": "Transfer all your apps and data from a Raspberry Pi to Umbrel Home",
+-  "migration-assistant-unsupported-device-description": "Migration Assistant currently supports transferring all data and apps from a Raspberry Pi with umbrelOS to the Umbrel Home. Open Migration Assistant on your Umbrel Home to get started.",
+-  "language": "Language",
+-  "language-description": "Your preferred umbrelOS language",
++  "advanced-settings": "Advanced settings",
++  "advanced-settings-description": "Open terminal or enroll into umbrelOS Beta Program",
++  "app-not-found": "App not found: {{app}}",
++  "app-only-over-tor": "{{app}} can only be used over Tor. Please access your Umbrel in a Tor browser on your remote access URL (Settings > Remote Tor access) to open this app.",
++  "app-page.section.about": "About",
++  "app-page.section.credentials.title": "Default credentials",
++  "app-page.section.info.compatibility": "Compatibility",
++  "app-page.section.info.compatibility-compatible": "Compatible",
++  "app-page.section.info.developer": "Developer",
++  "app-page.section.info.source-code": "Source Code",
++  "app-page.section.info.source-code.public": "Public",
++  "app-page.section.info.submitted-by": "Submitted by",
++  "app-page.section.info.title": "Info",
++  "app-page.section.info.version": "Version",
++  "app-page.section.recommendations.title": "You might also like",
++  "app-page.section.release-notes.title": "What's new",
++  "app-page.section.release-notes.version": "Version {{version}}",
++  "app-page.section.requires": "Requires",
++  "app-page.section.requires.support": "Get support",
++  "app-picker.search": "Search...",
++  "app-picker.select-app": "Select app...",
++  "app-store.browse-category-apps": "Browse {{category}} apps",
++  "app-store.category.ai": "AI",
++  "app-store.category.all": "All apps",
++  "app-store.category.automation": "Home & Automation",
++  "app-store.category.bitcoin": "Bitcoin",
++  "app-store.category.developer": "Developer Tools",
++  "app-store.category.discover": "Discover",
++  "app-store.category.files": "Files & Productivity",
++  "app-store.category.finance": "Finance",
++  "app-store.category.media": "Media",
++  "app-store.category.networking": "Networking",
++  "app-store.category.social": "Social",
+   "app-store.description": "Your app update settings",
+-  "migrate": "Migrate",
++  "app-store.menu.community-app-stores": "Community App Stores",
++  "app-store.search-apps": "Search apps",
++  "app-store.search.no-results": "No results",
++  "app-store.search.results-for": "Results for",
++  "app-store.title": "App Store",
++  "app-updates.less": "less",
++  "app-updates.more": "more",
++  "app-updates.no-updates": "All apps are up-to-date!",
++  "app-updates.update": "Update",
++  "app-updates.update-all": "Update all",
++  "app-updates.updating": "Updating...",
++  "app.install": "Install",
++  "app.installing": "Installing",
++  "app.offline": "Not running",
++  "app.open": "Open",
++  "app.optimized-for-umbrel-home": "Optimized for Umbrel Home",
++  "app.restarting": "Restarting",
++  "app.starting": "Starting",
++  "app.stopped": "Stopped",
++  "app.stopping": "Stopping",
++  "app.uninstall.confirm.description": "All data associated with {{app}} will be permanently deleted. This action cannot be undone.",
++  "app.uninstall.confirm.submit": "Uninstall",
++  "app.uninstall.confirm.title": "Uninstall {{app}}?",
++  "app.uninstall.deps.used-by.title": "{{app}} is used by",
++  "app.uninstalling": "Uninstalling",
++  "app.updating": "Updating",
++  "app.view": "View",
++  "apps.uninstall.failed-to-get-required-apps": "Failed to get required apps",
++  "apps.uninstalled-all.success": "Uninstalled all apps",
++  "auth.checking-backend-for-user": "Loading...",
++  "auth.failed-checking-if-user-logged-in": "Error: Auth login check failed",
++  "auth.failed-to-check-if-user-exists": "Error: Auth existence check failes",
++  "beta-program": "umbrelOS Beta Program",
++  "beta-program-description": "Opt in to receiving umbrelOS beta updates, gain early access to new features, and help us refine them by providing your feedback. Beta updates might be unstable, and troubleshooting may require familiarity with terminal.",
++  "cancel": "Cancel",
++  "change": "Change",
+   "change-name": "Change name",
++  "change-name.failed.name-required": "Name is required",
++  "change-name.input-placeholder": "Your name",
+   "change-password": "Change password",
+-  "uptime": "Uptime",
+-  "preferences": "Preferences",
+-  "troubleshoot": "Troubleshoot",
+-  "troubleshoot-description": "Troubleshoot umbrelOS or an app",
+-  "device-info-description": "Information about your device",
+-  "device-info.view-info": "View info",
+-  "factory-reset": "Factory Reset",
+-  "factory-reset.reset": "Reset",
+-  "factory-reset.desc": "Delete all of your umbrelOS data and apps",
+-  "software-update.title": "Software update",
+-  "device-info": "Device info",
+-  "software-update.on-latest": "You are on the latest umbrelOS",
++  "change-password.callout": "If you lose your password, you won't be able to log into your Umbrel. Make sure to safely secure it.",
++  "change-password.current-password": "Current password",
++  "change-password.failed.current-required": "Current password is required",
++  "change-password.failed.min-length": "Password must be at least {{characters}} characters",
++  "change-password.failed.must-be-unique": "New password must be different from the current password",
++  "change-password.failed.new-required": "New password is required",
++  "change-password.failed.no-match": "Passwords do not match",
++  "change-password.failed.repeat-required": "Repeat password is required",
++  "change-password.new-password": "New password",
++  "change-password.repeat-password": "Repeat password",
+   "check-for-latest-version": "Check for the latest umbrelOS update",
+-  "2fa": "2FA",
+-  "remote-tor-access": "Remote Tor access",
+-  "software-update.checking": "Checking for update...",
+-  "software-update.check": "Check for update",
+-  "software-update.new-version": "New {{name}} is available to install",
+-  "software-update.updating-to": "Updating to {{name}}",
+-  "software-update.callout": "Please do not refresh this page or turn off your Umbrel while it is updating.",
+-  "software-update.failed.title": "Software update failed",
+-  "software-update.failed.description": "There was an error during the software update",
+-  "software-update.failed.please-try-again": "Please try again",
+-  "software-update.failed.retry": "Retry",
+-  "update": "update",
+-  "software-update.update-now": "Update now",
+-  "software-update.view": "View",
+-  "storage": "Storage",
+-  "storage.low": "Low storage",
+-  "storage.full": "Storage full",
+-  "something-left": "{{left}} left",
+-  "unexpected-error": "Unexpected error",
+-  "unexpected-error.heading": "⚠ Error",
+   "clipboard.copied": "Copied",
+   "close": "Close",
+-  "something-went-wrong": "⚠ Something went wrong",
+-  "loading": "Loading",
++  "cmdk.change-wallpaper": "Change wallpaper",
++  "cmdk.frequent-apps": "Frequently used",
+   "cmdk.input-placeholder": "Search for apps, settings, or actions",
+-  "no-results-found": "No results found",
++  "cmdk.install-from-app-store": "from App Store",
++  "cmdk.live-usage": "Live Usage",
+   "cmdk.restart-umbrel": "Restart Umbrel",
++  "cmdk.shutdown-umbrel": "Shut down Umbrel",
+   "cmdk.update-all-apps": "Update all apps",
+-  "cmdk.change-wallpaper": "Change wallpaper",
+-  "cmdk.live-usage": "Live Usage",
+   "cmdk.widgets": "Widgets",
+-  "cmdk.frequent-apps": "Frequently used",
+-  "app.offline": "Not running",
+-  "app.uninstalling": "Uninstalling",
+-  "app.install": "Install",
+-  "app.installing": "Installing",
+-  "app.updating": "Updating",
+-  "app.open": "Open",
+-  "app.view": "View",
+-  "retry": "Retry",
+-  "download-logs": "Download logs",
+-  "page-title-umbrel": "{{title}} – umbrelOS",
+-  "desktop.title": "Desktop",
+-  "notifications": "Notifications",
++  "community-app-store": "Community App Store",
++  "community-app-store.back-to-umbrel-app-store": "Back to Umbrel App Store",
++  "community-app-store.open-button": "Open",
++  "community-app-store.remove-button": "Remove",
++  "community-app-stores.add-button": "Add",
++  "community-app-stores.description": "Community App Stores allow you to install apps on your Umbrel that may not be available in the official Umbrel App Store. They also make it easy to test beta versions of Umbrel apps before developers release them on the official Umbrel App Store.",
++  "community-app-stores.learn-more": "Learn more",
++  "community-app-stores.warning": "Community App Stores can be created by anyone. The apps published in them are not verified or vetted by the official Umbrel App Store team, and can potentially be insecure or malicious. Use caution and only add app stores from developers you trust.",
++  "confirm": "Confirm",
++  "connecting": "Connecting...",
++  "continue": "Continue",
++  "continue-to-log-in": "Continue to log in",
++  "cpu": "CPU",
++  "cpu-core-count": "{{cores}} threads",
++  "create-user": "Create user",
++  "default-credentials..dont-show-again": "Don't show this again",
++  "default-credentials.close": "Got it",
++  "default-credentials.description": "Here are credentials you'll need to log into the app.",
++  "default-credentials.open": "Open {{app}}",
++  "default-credentials.password": "Default password",
++  "default-credentials.title": "Credentials for {{app}}",
++  "default-credentials.username": "Default username",
++  "desktop.app.context.go-to-store-page": "View in App Store",
++  "desktop.app.context.show-default-credentials": "Show default credentials",
++  "desktop.app.context.uninstall": "Uninstall",
++  "desktop.context-menu.change-wallpaper": "Change wallpaper",
++  "desktop.context-menu.edit-widgets": "Edit widgets",
++  "desktop.context-menu.logout": "Log out",
++  "desktop.greeting.afternoon": "Good afternoon, {{name}}",
++  "desktop.greeting.evening": "Good evening, {{name}}",
++  "desktop.greeting.morning": "Good morning, {{name}}",
++  "desktop.install-first.for-the-bitcoiner": "For the Bitcoiner",
++  "desktop.install-first.for-the-self-hoster": "For the self-hoster",
++  "desktop.install-first.for-the-streamer": "For the streamer",
++  "desktop.install-first.link-to-app-store": "Explore more in App Store",
++  "desktop.not-enough-room": "Use a larger screen to view your apps.",
++  "device": "Device",
++  "device-info": "Device info",
++  "device-info-description": "Information about your device",
+   "device-info.device": "Device",
+   "device-info.model-number": "Model number",
+   "device-info.serial-number": "Serial number",
++  "device-info.view-info": "View info",
++  "disable": "Disable",
++  "download-logs": "Download logs",
++  "factory-reset": "Factory Reset",
++  "factory-reset.confirm.body": "Confirm Umbrel password to reset",
++  "factory-reset.confirm.password-label": "Enter password",
++  "factory-reset.confirm.submit": "Erase everything and reset",
+
+----------------------------------------
+
+File: packages/ui/public/locales/es.json
+Status: modified
+Changes: +309 -359
+Diff:
+@@ -1,411 +1,361 @@
+ {
+-  "hello": "Hola",
+-  "desktop.greeting.morning": "Buenos días, {{name}}",
+-  "desktop.greeting.afternoon": "Buenas tardes, {{name}}",
+-  "desktop.greeting.evening": "Buenas noches, {{name}}",
+-  "search": "Buscar",
+-  "settings": "Configuración",
+-  "app-store.title": "App Store",
+-  "unknown": "Desconocido",
+-  "app_one": "aplicación",
+-  "app_other": "aplicaciones",
+-  "raspberry-pi": "Raspberry Pi",
+-  "umbrel-home": "Umbrel Home",
+-  "linux": "Linux",
+-  "install-your-first-app": "Instala tu primera aplicación",
+-  "logout": "Cerrar sesión",
+-  "restart": "Reiniciar",
+-  "shut-down": "Apagar",
+-  "umbrel": "Umbrel",
+-  "device": "Dispositivo",
+-  "umbrelos": "umbrelOS",
+-  "open-live-usage": "Abrir uso en vivo",
++  "2fa": "2FA",
++  "2fa-description": "Una segunda capa de seguridad para tu inicio de sesión en Umbrel y aplicaciones",
++  "2fa.disable.success": "Autenticación de dos factores desactivada",
++  "2fa.disable.title": "Desactivar autenticación de dos factores",
++  "2fa.enable.or-paste": "O pega el siguiente código en tu aplicación de autenticación",
++  "2fa.enable.scan-this": "Escanea este código QR usando una aplicación de autenticación como Google Authenticator o Authy",
++  "2fa.enable.success": "Autenticación de dos factores activada",
++  "2fa.enable.title": "Activar autenticación de dos factores",
++  "2fa.enter-code": "Introduce el código mostrado en tu aplicación de autenticación",
+   "account": "Cuenta",
+-  "wallpaper": "Fondo de pantalla",
+-  "name": "Nombre",
+-  "password": "Contraseña",
+   "account-description": "Tu nombre y contraseña",
+-  "wallpaper-description": "Tu fondo de pantalla y tema de Umbrel",
+-  "2fa-description": "Una segunda capa de seguridad para tu inicio de sesión en Umbrel y aplicaciones",
+-  "tor-description": "Accede a tu Umbrel desde cualquier lugar usando un navegador Tor",
+-  "migration-assistant": "Asistente de migración",
+-  "migration-assistant-description": "Transfiere todas tus aplicaciones y datos de un Raspberry Pi a Umbrel Home",
+-  "migration-assistant-unsupported-device-description": "El Asistente de Migración actualmente admite la transferencia de todos los datos y aplicaciones desde un Raspberry Pi con umbrelOS al Umbrel Home. Abre el Asistente de Migración en tu Umbrel Home para comenzar.",
+-  "language": "Idioma",
+-  "language-description": "Tu idioma preferido para umbrelOS",
++  "advanced-settings": "Configuración avanzada",
++  "advanced-settings-description": "Abre el terminal o inscríbete en el Programa Beta de umbrelOS",
++  "app-not-found": "Aplicación no encontrada: {{app}}",
++  "app-only-over-tor": "{{app}} solo se puede usar sobre Tor. Por favor, accede a tu Umbrel en un navegador Tor en tu URL de acceso remoto (Configuración > Acceso remoto Tor) para abrir esta aplicación.",
++  "app-page.section.about": "Acerca de",
++  "app-page.section.credentials.title": "Credenciales predeterminadas",
++  "app-page.section.info.compatibility": "Compatibilidad",
++  "app-page.section.info.compatibility-compatible": "Compatible",
++  "app-page.section.info.developer": "Desarrollador",
++  "app-page.section.info.source-code": "Código fuente",
++  "app-page.section.info.source-code.public": "Público",
++  "app-page.section.info.submitted-by": "Enviado por",
++  "app-page.section.info.title": "Información",
++  "app-page.section.info.version": "Versión",
++  "app-page.section.recommendations.title": "También te podría gustar",
++  "app-page.section.release-notes.title": "Novedades",
++  "app-page.section.release-notes.version": "Versión {{version}}",
++  "app-page.section.requires": "Requiere",
++  "app-page.section.requires.support": "Obtener soporte",
++  "app-picker.search": "Buscar...",
++  "app-picker.select-app": "Seleccionar aplicación...",
++  "app-store.browse-category-apps": "Explorar aplicaciones de {{category}}",
++  "app-store.category.ai": "IA",
++  "app-store.category.all": "Todas las aplicaciones",
++  "app-store.category.automation": "Hogar y Automatización",
++  "app-store.category.bitcoin": "Bitcoin",
++  "app-store.category.developer": "Herramientas para Desarrolladores",
++  "app-store.category.discover": "Descubrir",
++  "app-store.category.files": "Archivos y Productividad",
++  "app-store.category.finance": "Finanzas",
++  "app-store.category.media": "Medios",
++  "app-store.category.networking": "Redes",
++  "app-store.category.social": "Social",
+   "app-store.description": "Tus configuraciones de actualización de aplicaciones",
+-  "migrate": "Migrar",
++  "app-store.menu.community-app-stores": "Tiendas de Aplicaciones Comunitarias",
++  "app-store.search-apps": "Buscar aplicaciones",
++  "app-store.search.no-results": "Sin resultados",
++  "app-store.search.results-for": "Resultados para",
++  "app-store.title": "App Store",
++  "app-updates.less": "menos",
++  "app-updates.more": "más",
++  "app-updates.no-updates": "¡Todas las aplicaciones están actualizadas!",
++  "app-updates.update": "Actualizar",
++  "app-updates.update-all": "Actualizar todo",
++  "app-updates.updating": "Actualizando...",
++  "app.install": "Instalar",
++  "app.installing": "Instalando",
++  "app.offline": "No en ejecución",
++  "app.open": "Abrir",
++  "app.optimized-for-umbrel-home": "Optimizado para Umbrel Home",
++  "app.restarting": "Reiniciando",
++  "app.starting": "Iniciando",
++  "app.stopped": "Detenido",
++  "app.stopping": "Deteniendo",
++  "app.uninstall.confirm.description": "Todos los datos asociados con {{app}} serán eliminados permanentemente. Esta acción no se puede deshacer.",
++  "app.uninstall.confirm.submit": "Desinstalar",
++  "app.uninstall.confirm.title": "¿Desinstalar {{app}}?",
++  "app.uninstall.deps.used-by.title": "{{app}} es utilizado por",
++  "app.uninstalling": "Desinstalando",
++  "app.updating": "Actualizando",
++  "app.view": "Ver",
++  "apps.uninstall.failed-to-get-required-apps": "Error al obtener aplicaciones requeridas",
++  "apps.uninstalled-all.success": "Todas las aplicaciones desinstaladas",
++  "auth.checking-backend-for-user": "Cargando...",
++  "auth.failed-checking-if-user-logged-in": "Error: Falló la verificación de inicio de sesión",
++  "auth.failed-to-check-if-user-exists": "Error: Falló la verificación de existencia",
++  "beta-program": "Programa Beta de umbrelOS",
++  "beta-program-description": "Opta por recibir actualizaciones beta de umbrelOS, accede antes a nuevas características y ayúdanos a refinarlas proporcionando tu feedback. Las actualizaciones beta pueden ser inestables y la solución de problemas puede requerir familiaridad con el terminal.",
++  "cancel": "Cancelar",
++  "change": "Cambiar",
+   "change-name": "Cambiar nombre",
++  "change-name.failed.name-required": "Se requiere nombre",
++  "change-name.input-placeholder": "Tu nombre",
+   "change-password": "Cambiar contraseña",
+-  "uptime": "Tiempo de actividad",
+-  "preferences": "Preferencias",
+-  "troubleshoot": "Solucionar problemas",
+-  "troubleshoot-description": "Solucionar problemas de umbrelOS o una aplicación",
+-  "device-info-description": "Información sobre tu dispositivo",
+-  "device-info.view-info": "Ver información",
+-  "factory-reset": "Restablecimiento de fábrica",
+-  "factory-reset.reset": "Restablecer",
+-  "factory-reset.desc": "Eliminar todos tus datos y aplicaciones de umbrelOS",
+-  "software-update.title": "Actualización de software",
+-  "device-info": "Información del dispositivo",
+-  "software-update.on-latest": "Estás en la última versión de umbrelOS",
++  "change-password.callout": "Si pierdes tu contraseña, no podrás iniciar sesión en tu Umbrel. Asegúrate de guardarla de forma segura.",
++  "change-password.current-password": "Contraseña actual",
++  "change-password.failed.current-required": "Se requiere contraseña actual",
++  "change-password.failed.min-length": "La contraseña debe tener al menos {{characters}} caracteres",
++  "change-password.failed.must-be-unique": "La nueva contraseña debe ser diferente de la contraseña actual",
++  "change-password.failed.new-required": "Se requiere nueva contraseña",
++  "change-password.failed.no-match": "Las contraseñas no coinciden",
++  "change-password.failed.repeat-required": "Se requiere repetir la contraseña",
++  "change-password.new-password": "Nueva contraseña",
++  "change-password.repeat-password": "Repetir contraseña",
+   "check-for-latest-version": "Buscar la última actualización de umbrelOS",
+-  "2fa": "2FA",
+-  "remote-tor-access": "Acceso remoto Tor",
+-  "software-update.checking": "Buscando actualización...",
+-  "software-update.check": "Buscar actualización",
+-  "software-update.new-version": "Nueva versión {{name}} disponible para instalar",
+-  "software-update.updating-to": "Actualizando a {{name}}",
+-  "software-update.callout": "Por favor, no refresques esta página ni apagues tu Umbrel mientras se actualiza.",
+-  "software-update.failed.title": "La actualización de software ha fallado",
+-  "software-update.failed.description": "Hubo un error durante la actualización del software",
+-  "software-update.failed.please-try-again": "Por favor, inténtalo de nuevo",
+-  "software-update.failed.retry": "Reintentar",
+-  "update": "actualización",
+-  "software-update.update-now": "Actualizar ahora",
+-  "software-update.view": "Ver",
+-  "storage": "Almacenamiento",
+-  "storage.low": "Almacenamiento bajo",
+-  "storage.full": "Almacenamiento lleno",
+-  "something-left": "{{left}} restantes",
+-  "unexpected-error": "Error inesperado",
+-  "unexpected-error.heading": "⚠ Error",
+   "clipboard.copied": "Copiado",
+   "close": "Cerrar",
+-  "something-went-wrong": "⚠ Algo salió mal",
+-  "loading": "Cargando",
++  "cmdk.change-wallpaper": "Cambiar fondo de pantalla",
++  "cmdk.frequent-apps": "Usadas frecuentemente",
+   "cmdk.input-placeholder": "Buscar aplicaciones, configuraciones o acciones",
+-  "no-results-found": "No se encontraron resultados",
++  "cmdk.install-from-app-store": "de la Tienda de Aplicaciones",
++  "cmdk.live-usage": "Uso en vivo",
+   "cmdk.restart-umbrel": "Reiniciar Umbrel",
++  "cmdk.shutdown-umbrel": "Apagar Umbrel",
+   "cmdk.update-all-apps": "Actualizar todas las aplicaciones",
+-  "cmdk.change-wallpaper": "Cambiar fondo de pantalla",
+-  "cmdk.live-usage": "Uso en vivo",
+   "cmdk.widgets": "Widgets",
+-  "cmdk.frequent-apps": "Usadas frecuentemente",
+-  "app.offline": "No en ejecución",
+-  "app.uninstalling": "Desinstalando",
+-  "app.install": "Instalar",
+-  "app.installing": "Instalando",
+-  "app.updating": "Actualizando",
+-  "app.open": "Abrir",
+-  "app.view": "Ver",
+-  "retry": "Reintentar",
+-  "download-logs": "Descargar registros",
+-  "page-title-umbrel": "{{title}} – umbrelOS",
+-  "desktop.title": "Escritorio",
+-  "notifications": "Notificaciones",
++  "community-app-store": "Tienda de Aplicaciones Comunitaria",
++  "community-app-store.back-to-umbrel-app-store": "Volver a la Tienda de Aplicaciones de Umbrel",
++  "community-app-store.open-button": "Abrir",
++  "community-app-store.remove-button": "Eliminar",
++  "community-app-stores.add-button": "Añadir",
++  "community-app-stores.description": "Las Tiendas de Aplicaciones Comunitarias te permiten instalar aplicaciones en tu Umbrel que pueden no estar disponibles en la Tienda de Aplicaciones oficial de Umbrel. También facilitan probar versiones beta de aplicaciones de Umbrel antes de que los desarrolladores las lancen en la Tienda de Aplicaciones oficial de Umbrel.",
++  "community-app-stores.learn-more": "Aprender más",
++  "community-app-stores.warning": "Cualquiera puede crear Tiendas de Aplicaciones Comunitarias. Las aplicaciones publicadas en ellas no están verificadas ni revisadas por el equipo de la Tienda de Aplicaciones oficial de Umbrel, y pueden ser potencialmente inseguras o maliciosas. Usa precaución y solo añade tiendas de aplicaciones de desarrolladores en los que confíes.",
++  "confirm": "Confirmar",
++  "connecting": "Conectando...",
++  "continue": "Continuar",
++  "continue-to-log-in": "Continuar para iniciar sesión",
++  "cpu": "CPU",
++  "cpu-core-count": "{{cores}} hilos",
++  "create-user": "Crear usuario",
++  "default-credentials..dont-show-again": "No mostrar esto de nuevo",
++  "default-credentials.close": "Entendido",
++  "default-credentials.description": "Aquí tienes las credenciales que necesitarás para iniciar sesión en la aplicación.",
++  "default-credentials.open": "Abrir {{app}}",
++  "default-credentials.password": "Contraseña por defecto",
++  "default-credentials.title": "Credenciales para {{app}}",
++  "default-credentials.username": "Nombre de usuario por defecto",
++  "desktop.app.context.go-to-store-page": "Ver en la Tienda de Aplicaciones",
++  "desktop.app.context.show-default-credentials": "Mostrar credenciales predeterminadas",
++  "desktop.app.context.uninstall": "Desinstalar",
++  "desktop.context-menu.change-wallpaper": "Cambiar fondo de pantalla",
++  "desktop.context-menu.edit-widgets": "Editar widgets",
++  "desktop.context-menu.logout": "Cerrar sesión",
++  "desktop.greeting.afternoon": "Buenas tardes, {{name}}",
++  "desktop.greeting.evening": "Buenas noches, {{name}}",
++  "desktop.greeting.morning": "Buenos días, {{name}}",
++  "desktop.install-first.for-the-bitcoiner": "Para el bitcoinero",
++  "desktop.install-first.for-the-self-hoster": "Para el autoalojador",
++  "desktop.install-first.for-the-streamer": "Para el streamer",
++  "desktop.install-first.link-to-app-store": "Explorar más en la Tienda de Aplicaciones",
++  "desktop.not-enough-room": "Usa una pantalla más grande para ver tus aplicaciones.",
++  "device": "Dispositivo",
++  "device-info": "Información del dispositivo",
++  "device-info-description": "Información sobre tu dispositivo",
+   "device-info.device": "Dispositivo",
+   "device-info.model-number": "Número de modelo",
+   "device-info.serial-number": "Número de serie",
++  "device-info.view-info": "Ver información",
++  "disable": "Desactivar",
++  "download-logs": "Descargar registros",
++  "factory-reset": "Restablecimiento de fábrica",
++  "factory-reset.confirm.body": "Confirma la contraseña de Umbrel para restablecer",
++  "factory-reset.confirm.password-label": "Ingresar contraseña",
+
+----------------------------------------
+
+File: packages/ui/public/locales/fr.json
+Status: modified
+Changes: +309 -359
+Diff:
+@@ -1,411 +1,361 @@
+ {
+-  "hello": "Bonjour",
+-  "desktop.greeting.morning": "Bonjour, {{name}}",
+-  "desktop.greeting.afternoon": "Bon après-midi, {{name}}",
+-  "desktop.greeting.evening": "Bonsoir, {{name}}",
+-  "search": "Recherche",
+-  "settings": "Paramètres",
+-  "app-store.title": "App Store",
+-  "unknown": "Inconnu",
+-  "app_one": "application",
+-  "app_other": "applications",
+-  "raspberry-pi": "Raspberry Pi",
+-  "umbrel-home": "Umbrel Home",
+-  "linux": "Linux",
+-  "install-your-first-app": "Installez votre première application",
+-  "logout": "Se déconnecter",
+-  "restart": "Redémarrer",
+-  "shut-down": "Éteindre",
+-  "umbrel": "Umbrel",
+-  "device": "Appareil",
+-  "umbrelos": "umbrelOS",
+-  "open-live-usage": "Ouvrir l'utilisation en direct",
++  "2fa": "2FA",
++  "2fa-description": "Une seconde couche de sécurité pour votre connexion Umbrel et applications",
++  "2fa.disable.success": "Authentification à deux facteurs désactivée",
++  "2fa.disable.title": "Désactiver l'authentification à deux facteurs",
++  "2fa.enable.or-paste": "Ou collez le code suivant dans votre application d'authentification",
++  "2fa.enable.scan-this": "Scannez ce code QR avec une application d'authentification comme Google Authenticator ou Authy",
++  "2fa.enable.success": "Authentification à deux facteurs activée",
++  "2fa.enable.title": "Activer l'authentification à deux facteurs",
++  "2fa.enter-code": "Entrez le code affiché dans votre application d'authentification",
+   "account": "Compte",
+-  "wallpaper": "Fond d'écran",
+-  "name": "Nom",
+-  "password": "Mot de passe",
+   "account-description": "Votre nom et mot de passe",
+-  "wallpaper-description": "Votre fond d'écran et thème Umbrel",
+-  "2fa-description": "Une seconde couche de sécurité pour votre connexion Umbrel et applications",
+-  "tor-description": "Accédez à votre Umbrel de n'importe où en utilisant un navigateur Tor",
+-  "migration-assistant": "Assistant de migration",
+-  "migration-assistant-description": "Transférer toutes vos applications et données d'un Raspberry Pi à Umbrel Home",
+-  "migration-assistant-unsupported-device-description": "L'Assistant de migration prend actuellement en charge le transfert de toutes les données et applications d'un Raspberry Pi exécutant umbrelOS vers l'Umbrel Home. Ouvrez l'Assistant de migration sur votre Umbrel Home pour commencer.",
+-  "language": "Langue",
+-  "language-description": "Votre langue préférée pour umbrelOS",
++  "advanced-settings": "Paramètres avancés",
++  "advanced-settings-description": "Ouvrez le terminal ou inscrivez-vous au programme bêta d'umbrelOS",
++  "app-not-found": "Application non trouvée : {{app}}",
++  "app-only-over-tor": "{{app}} ne peut être utilisée que via Tor. Veuillez accéder à votre Umbrel dans un navigateur Tor sur votre URL d'accès à distance (Paramètres > Accès Tor à distance) pour ouvrir cette application.",
++  "app-page.section.about": "À propos",
++  "app-page.section.credentials.title": "Identifiants par défaut",
++  "app-page.section.info.compatibility": "Compatibilité",
++  "app-page.section.info.compatibility-compatible": "Compatible",
++  "app-page.section.info.developer": "Développeur",
++  "app-page.section.info.source-code": "Code source",
++  "app-page.section.info.source-code.public": "Public",
++  "app-page.section.info.submitted-by": "Soumis par",
++  "app-page.section.info.title": "Infos",
++  "app-page.section.info.version": "Version",
++  "app-page.section.recommendations.title": "Vous pourriez aussi aimer",
++  "app-page.section.release-notes.title": "Nouveautés",
++  "app-page.section.release-notes.version": "Version {{version}}",
++  "app-page.section.requires": "Nécessite",
++  "app-page.section.requires.support": "Obtenir de l'aide",
++  "app-picker.search": "Rechercher...",
++  "app-picker.select-app": "Sélectionner une application...",
++  "app-store.browse-category-apps": "Parcourir les applications {{category}}",
++  "app-store.category.ai": "IA",
++  "app-store.category.all": "Toutes les applications",
++  "app-store.category.automation": "Maison & Automatisation",
++  "app-store.category.bitcoin": "Bitcoin",
++  "app-store.category.developer": "Outils Développeur",
++  "app-store.category.discover": "Découvrir",
++  "app-store.category.files": "Fichiers & Productivité",
++  "app-store.category.finance": "Finance",
++  "app-store.category.media": "Médias",
++  "app-store.category.networking": "Réseautage",
++  "app-store.category.social": "Social",
+   "app-store.description": "Vos paramètres de mise à jour des applications",
+-  "migrate": "Migrer",
++  "app-store.menu.community-app-stores": "App Stores Communautaires",
++  "app-store.search-apps": "Rechercher des applications",
++  "app-store.search.no-results": "Aucun résultat",
++  "app-store.search.results-for": "Résultats pour",
++  "app-store.title": "App Store",
++  "app-updates.less": "moins",
++  "app-updates.more": "plus",
++  "app-updates.no-updates": "Toutes les applications sont à jour !",
++  "app-updates.update": "Mettre à jour",
++  "app-updates.update-all": "Mettre à jour tout",
++  "app-updates.updating": "Mise à jour...",
++  "app.install": "Installer",
++  "app.installing": "Installation",
++  "app.offline": "Non en cours d'exécution",
++  "app.open": "Ouvrir",
++  "app.optimized-for-umbrel-home": "Optimisé pour Umbrel Home",
++  "app.restarting": "Redémarrage",
++  "app.starting": "Démarrage",
++  "app.stopped": "Arrêté",
++  "app.stopping": "Arrêt",
++  "app.uninstall.confirm.description": "Toutes les données associées à {{app}} seront définitivement supprimées. Cette action est irréversible.",
++  "app.uninstall.confirm.submit": "Désinstaller",
++  "app.uninstall.confirm.title": "Désinstaller {{app}} ?",
++  "app.uninstall.deps.used-by.title": "{{app}} est utilisé par",
++  "app.uninstalling": "Désinstallation",
++  "app.updating": "Mise à jour",
++  "app.view": "Voir",
++  "apps.uninstall.failed-to-get-required-apps": "Échec de la récupération des applications requises",
++  "apps.uninstalled-all.success": "Toutes les applications désinstallées",
++  "auth.checking-backend-for-user": "Chargement...",
++  "auth.failed-checking-if-user-logged-in": "Erreur : Vérification de la connexion échouée",
++  "auth.failed-to-check-if-user-exists": "Erreur : Vérification de l'existence échouée",
++  "beta-program": "Programme bêta d'umbrelOS",
++  "beta-program-description": "Optez pour recevoir des mises à jour bêta d'umbrelOS, accédez en avant-première à de nouvelles fonctionnalités et aidez-nous à les peaufiner en fournissant vos retours. Les mises à jour bêta peuvent être instables, et le dépannage peut nécessiter une familiarité avec le terminal.",
++  "cancel": "Annuler",
++  "change": "Changer",
+   "change-name": "Changer de nom",
++  "change-name.failed.name-required": "Le nom est requis",
++  "change-name.input-placeholder": "Votre nom",
+   "change-password": "Changer le mot de passe",
+-  "uptime": "Temps de fonctionnement",
+-  "preferences": "Préférences",
+-  "troubleshoot": "Dépannage",
+-  "troubleshoot-description": "Dépanner umbrelOS ou une application",
+-  "device-info-description": "Informations sur votre appareil",
+-  "device-info.view-info": "Voir les informations",
+-  "factory-reset": "Réinitialisation d'usine",
+-  "factory-reset.reset": "Réinitialiser",
+-  "factory-reset.desc": "Supprimer toutes vos données et applications umbrelOS",
+-  "software-update.title": "Mise à jour logicielle",
+-  "device-info": "Infos sur l'appareil",
+-  "software-update.on-latest": "Vous utilisez la dernière version d'umbrelOS",
++  "change-password.callout": "Si vous perdez votre mot de passe, vous ne pourrez pas vous connecter à votre Umbrel. Assurez-vous de le sécuriser soigneusement.",
++  "change-password.current-password": "Mot de passe actuel",
++  "change-password.failed.current-required": "Le mot de passe actuel est requis",
++  "change-password.failed.min-length": "Le mot de passe doit comporter au moins {{characters}} caractères",
++  "change-password.failed.must-be-unique": "Le nouveau mot de passe doit être différent du mot de passe actuel",
++  "change-password.failed.new-required": "Un nouveau mot de passe est requis",
++  "change-password.failed.no-match": "Les mots de passe ne correspondent pas",
++  "change-password.failed.repeat-required": "Répétition du mot de passe requise",
++  "change-password.new-password": "Nouveau mot de passe",
++  "change-password.repeat-password": "Répéter le mot de passe",
+   "check-for-latest-version": "Vérifier la dernière mise à jour d'umbrelOS",
+-  "2fa": "2FA",
+-  "remote-tor-access": "Accès Tor à distance",
+-  "software-update.checking": "Recherche de mise à jour...",
+-  "software-update.check": "Vérifier la mise à jour",
+-  "software-update.new-version": "Nouvelle version d'{{name}} disponible à l'installation",
+-  "software-update.updating-to": "Mise à jour vers {{name}}",
+-  "software-update.callout": "Veuillez ne pas actualiser cette page ou éteindre votre Umbrel pendant la mise à jour.",
+-  "software-update.failed.title": "Échec de la mise à jour logicielle",
+-  "software-update.failed.description": "Une erreur est survenue lors de la mise à jour logicielle",
+-  "software-update.failed.please-try-again": "Veuillez réessayer",
+-  "software-update.failed.retry": "Réessayer",
+-  "update": "mise à jour",
+-  "software-update.update-now": "Mettre à jour maintenant",
+-  "software-update.view": "Voir",
+-  "storage": "Stockage",
+-  "storage.low": "Stockage faible",
+-  "storage.full": "Stockage plein",
+-  "something-left": "{{left}} restant",
+-  "unexpected-error": "Erreur inattendue",
+-  "unexpected-error.heading": "⚠ Erreur",
+   "clipboard.copied": "Copié",
+   "close": "Fermer",
+-  "something-went-wrong": "⚠ Un problème est survenu",
+-  "loading": "Chargement",
++  "cmdk.change-wallpaper": "Changer de fond d'écran",
++  "cmdk.frequent-apps": "Fréquemment utilisé",
+   "cmdk.input-placeholder": "Rechercher des applications, paramètres ou actions",
+-  "no-results-found": "Aucun résultat trouvé",
++  "cmdk.install-from-app-store": "depuis l'App Store",
++  "cmdk.live-usage": "Utilisation en direct",
+   "cmdk.restart-umbrel": "Redémarrer Umbrel",
++  "cmdk.shutdown-umbrel": "Éteindre Umbrel",
+   "cmdk.update-all-apps": "Mettre à jour toutes les applications",
+-  "cmdk.change-wallpaper": "Changer de fond d'écran",
+-  "cmdk.live-usage": "Utilisation en direct",
+   "cmdk.widgets": "Widgets",
+-  "cmdk.frequent-apps": "Fréquemment utilisé",
+-  "app.offline": "Non en cours d'exécution",
+-  "app.uninstalling": "Désinstallation",
+-  "app.install": "Installer",
+-  "app.installing": "Installation",
+-  "app.updating": "Mise à jour",
+-  "app.open": "Ouvrir",
+-  "app.view": "Voir",
+-  "retry": "Réessayer",
+-  "download-logs": "Télécharger les journaux",
+-  "page-title-umbrel": "{{title}} – umbrelOS",
+-  "desktop.title": "Bureau",
+-  "notifications": "Notifications",
++  "community-app-store": "App Store Communautaire",
++  "community-app-store.back-to-umbrel-app-store": "Retour à l'App Store Umbrel",
++  "community-app-store.open-button": "Ouvrir",
++  "community-app-store.remove-button": "Retirer",
++  "community-app-stores.add-button": "Ajouter",
++  "community-app-stores.description": "Les App Stores Communautaires vous permettent d'installer des applications sur votre Umbrel qui peuvent ne pas être disponibles dans l'App Store officiel d'Umbrel. Ils facilitent également le test des versions bêta des applications Umbrel avant que les développeurs les publient sur l'App Store officiel d'Umbrel.",
++  "community-app-stores.learn-more": "En savoir plus",
++  "community-app-stores.warning": "Les App Stores Communautaires peuvent être créés par n'importe qui. Les applications publiées ne sont pas vérifiées ni approuvées par l'équipe de l'App Store officiel d'Umbrel et peuvent potentiellement être non sécurisées ou malveillantes. Soyez prudent et ajoutez uniquement des app stores de développeurs en qui vous avez confiance.",
++  "confirm": "Confirmer",
++  "connecting": "Connexion...",
++  "continue": "Continuer",
++  "continue-to-log-in": "Continuer pour se connecter",
++  "cpu": "CPU",
++  "cpu-core-count": "{{cores}} threads",
++  "create-user": "Créer un utilisateur",
++  "default-credentials..dont-show-again": "Ne plus afficher",
++  "default-credentials.close": "Compris",
++  "default-credentials.description": "Voici les identifiants dont vous aurez besoin pour vous connecter à l'application.",
++  "default-credentials.open": "Ouvrir {{app}}",
++  "default-credentials.password": "Mot de passe par défaut",
++  "default-credentials.title": "Identifiants pour {{app}}",
++  "default-credentials.username": "Nom d'utilisateur par défaut",
++  "desktop.app.context.go-to-store-page": "Voir dans l'App Store",
++  "desktop.app.context.show-default-credentials": "Afficher les identifiants par défaut",
++  "desktop.app.context.uninstall": "Désinstaller",
++  "desktop.context-menu.change-wallpaper": "Changer de fond d'écran",
++  "desktop.context-menu.edit-widgets": "Modifier les widgets",
++  "desktop.context-menu.logout": "Se déconnecter",
++  "desktop.greeting.afternoon": "Bon après-midi, {{name}}",
++  "desktop.greeting.evening": "Bonsoir, {{name}}",
++  "desktop.greeting.morning": "Bonjour, {{name}}",
++  "desktop.install-first.for-the-bitcoiner": "Pour le Bitcoiner",
++  "desktop.install-first.for-the-self-hoster": "Pour l'auto-hébergement",
++  "desktop.install-first.for-the-streamer": "Pour le streamer",
++  "desktop.install-first.link-to-app-store": "Explorer plus dans l'App Store",
++  "desktop.not-enough-room": "Utilisez un écran plus grand pour voir vos applications.",
++  "device": "Appareil",
++  "device-info": "Infos sur l'appareil",
++  "device-info-description": "Informations sur votre appareil",
+   "device-info.device": "Appareil",
+   "device-info.model-number": "Numéro de modèle",
+   "device-info.serial-number": "Numéro de série",
++  "device-info.view-info": "Voir les informations",
++  "disable": "Désactiver",
++  "download-logs": "Télécharger les journaux",
++  "factory-reset": "Réinitialisation d'usine",
++  "factory-reset.confirm.body": "Confirmez le mot de passe Umbrel pour réinitialiser",
++  "factory-reset.confirm.password-label": "Entrer le mot de passe",
+
+----------------------------------------
+
+File: packages/ui/public/locales/it.json
+Status: modified
+Changes: +309 -359
+Diff:
+@@ -1,411 +1,361 @@
+ {
+-  "hello": "Ciao",
+-  "desktop.greeting.morning": "Buongiorno, {{name}}",
+-  "desktop.greeting.afternoon": "Buon pomeriggio, {{name}}",
+-  "desktop.greeting.evening": "Buona sera, {{name}}",
+-  "search": "Cerca",
+-  "settings": "Impostazioni",
+-  "app-store.title": "App Store",
+-  "unknown": "Sconosciuto",
+-  "app_one": "app",
+-  "app_other": "app",
+-  "raspberry-pi": "Raspberry Pi",
+-  "umbrel-home": "Umbrel Home",
+-  "linux": "Linux",
+-  "install-your-first-app": "Installa la tua prima app",
+-  "logout": "Esci",
+-  "restart": "Riavvia",
+-  "shut-down": "Spegni",
+-  "umbrel": "Umbrel",
+-  "device": "Dispositivo",
+-  "umbrelos": "umbrelOS",
+-  "open-live-usage": "Apri Utilizzo in Tempo Reale",
++  "2fa": "2FA",
++  "2fa-description": "Un secondo livello di sicurezza per il tuo login e app Umbrel",
++  "2fa.disable.success": "Autenticazione a due fattori disabilitata",
++  "2fa.disable.title": "Disabilita l'autenticazione a due fattori",
++  "2fa.enable.or-paste": "Oppure incolla il seguente codice nella tua app di autenticazione",
++  "2fa.enable.scan-this": "Scansiona questo codice QR utilizzando un'app di autenticazione come Google Authenticator o Authy",
++  "2fa.enable.success": "Autenticazione a due fattori abilitata",
++  "2fa.enable.title": "Abilita l'autenticazione a due fattori",
++  "2fa.enter-code": "Inserisci il codice visualizzato nella tua app di autenticazione",
+   "account": "Account",
+-  "wallpaper": "Sfondo",
+-  "name": "Nome",
+-  "password": "Password",
+   "account-description": "Il tuo nome e password",
+-  "wallpaper-description": "Il tuo sfondo e tema Umbrel",
+-  "2fa-description": "Un secondo livello di sicurezza per il tuo login e app Umbrel",
+-  "tor-description": "Accedi al tuo Umbrel da ovunque usando un browser Tor",
+-  "migration-assistant": "Assistente di Migrazione",
+-  "migration-assistant-description": "Trasferisci tutte le tue app e dati da un Raspberry Pi a Umbrel Home",
+-  "migration-assistant-unsupported-device-description": "L'assistente di migrazione supporta attualmente il trasferimento di tutti i dati e le app da un Raspberry Pi che esegue umbrelOS a Umbrel Home. Apri l'Assistente di migrazione su Umbrel Home per iniziare.",
+-  "language": "Lingua",
+-  "language-description": "La tua lingua preferita per umbrelOS",
++  "advanced-settings": "Impostazioni avanzate",
++  "advanced-settings-description": "Apri il terminal o iscriviti al Programma Beta di umbrelOS",
++  "app-not-found": "App non trovata: {{app}}",
++  "app-only-over-tor": "{{app}} può essere utilizzata solo tramite Tor. Accedi al tuo Umbrel in un browser Tor all'URL di accesso remoto (Impostazioni > Accesso remoto Tor) per aprire questa app.",
++  "app-page.section.about": "Informazioni",
++  "app-page.section.credentials.title": "Credenziali predefinite",
++  "app-page.section.info.compatibility": "Compatibilità",
++  "app-page.section.info.compatibility-compatible": "Compatibile",
++  "app-page.section.info.developer": "Sviluppatore",
++  "app-page.section.info.source-code": "Codice Sorgente",
++  "app-page.section.info.source-code.public": "Pubblico",
++  "app-page.section.info.submitted-by": "Inviato da",
++  "app-page.section.info.title": "Info",
++  "app-page.section.info.version": "Versione",
++  "app-page.section.recommendations.title": "Potrebbero interessarti anche",
++  "app-page.section.release-notes.title": "Novità",
++  "app-page.section.release-notes.version": "Versione {{version}}",
++  "app-page.section.requires": "Richiede",
++  "app-page.section.requires.support": "Ottieni supporto",
++  "app-picker.search": "Cerca...",
++  "app-picker.select-app": "Seleziona app...",
++  "app-store.browse-category-apps": "Esplora le app {{category}}",
++  "app-store.category.ai": "AI",
++  "app-store.category.all": "Tutte le app",
++  "app-store.category.automation": "Casa & Automazione",
++  "app-store.category.bitcoin": "Bitcoin",
++  "app-store.category.developer": "Strumenti per Sviluppatori",
++  "app-store.category.discover": "Scopri",
++  "app-store.category.files": "File & Produttività",
++  "app-store.category.finance": "Finanza",
++  "app-store.category.media": "Media",
++  "app-store.category.networking": "Networking",
++  "app-store.category.social": "Social",
+   "app-store.description": "Le tue impostazioni di aggiornamento app",
+-  "migrate": "Migra",
++  "app-store.menu.community-app-stores": "Community App Store",
++  "app-store.search-apps": "Cerca app",
++  "app-store.search.no-results": "Nessun risultato",
++  "app-store.search.results-for": "Risultati per",
++  "app-store.title": "App Store",
++  "app-updates.less": "meno",
++  "app-updates.more": "più",
++  "app-updates.no-updates": "Tutte le app sono aggiornate!",
++  "app-updates.update": "Aggiorna",
++  "app-updates.update-all": "Aggiorna tutto",
++  "app-updates.updating": "Aggiornamento in corso...",
++  "app.install": "Installa",
++  "app.installing": "Installazione",
++  "app.offline": "Non in esecuzione",
++  "app.open": "Apri",
++  "app.optimized-for-umbrel-home": "Ottimizzato per Umbrel Home",
++  "app.restarting": "Riavvio in corso",
++  "app.starting": "Avvio in corso",
++  "app.stopped": "Fermato",
++  "app.stopping": "Fermata in corso",
++  "app.uninstall.confirm.description": "Tutti i dati associati a {{app}} verranno eliminati permanentemente. Questa azione non può essere annullata.",
++  "app.uninstall.confirm.submit": "Disinstalla",
++  "app.uninstall.confirm.title": "Disinstallare {{app}}?",
++  "app.uninstall.deps.used-by.title": "{{app}} è utilizzata da",
++  "app.uninstalling": "Disinstallazione",
++  "app.updating": "Aggiornamento",
++  "app.view": "Visualizza",
++  "apps.uninstall.failed-to-get-required-apps": "Impossibile ottenere le app richieste",
++  "apps.uninstalled-all.success": "Tutte le app disinstallate",
++  "auth.checking-backend-for-user": "Caricamento...",
++  "auth.failed-checking-if-user-logged-in": "Errore: Controllo di accesso fallito",
++  "auth.failed-to-check-if-user-exists": "Errore: Controllo di esistenza fallito",
++  "beta-program": "Programma Beta di umbrelOS",
++  "beta-program-description": "Opta per ricevere aggiornamenti beta di umbrelOS, accedi in anteprima a nuove funzionalità e aiutaci a perfezionarle fornendo il tuo feedback. Gli aggiornamenti beta possono essere instabili e la risoluzione dei problemi può richiedere familiarità con il terminal.",
++  "cancel": "Annulla",
++  "change": "Modifica",
+   "change-name": "Cambia nome",
++  "change-name.failed.name-required": "Nome richiesto",
++  "change-name.input-placeholder": "Il tuo nome",
+   "change-password": "Cambia password",
+-  "uptime": "Tempo di attività",
+-  "preferences": "Preferenze",
+-  "troubleshoot": "Risoluzione problemi",
+-  "troubleshoot-description": "Risolvi problemi di umbrelOS o di un'app",
+-  "device-info-description": "Informazioni sul tuo dispositivo",
+-  "device-info.view-info": "Visualizza info",
+-  "factory-reset": "Ripristino Impostazioni di Fabbrica",
+-  "factory-reset.reset": "Ripristina",
+-  "factory-reset.desc": "Elimina tutti i tuoi dati e app di umbrelOS",
+-  "software-update.title": "Aggiornamento software",
+-  "device-info": "Info dispositivo",
+-  "software-update.on-latest": "Hai l'ultima versione di umbrelOS",
++  "change-password.callout": "Se perdi la tua password, non sarai in grado di accedere al tuo Umbrel. Assicurati di conservarla in modo sicuro.",
++  "change-password.current-password": "Password attuale",
++  "change-password.failed.current-required": "Password attuale richiesta",
++  "change-password.failed.min-length": "La password deve essere di almeno {{characters}} caratteri",
++  "change-password.failed.must-be-unique": "La nuova password deve essere diversa dalla password attuale",
++  "change-password.failed.new-required": "Nuova password richiesta",
++  "change-password.failed.no-match": "Le password non corrispondono",
++  "change-password.failed.repeat-required": "Ripeti la password richiesta",
++  "change-password.new-password": "Nuova password",
++  "change-password.repeat-password": "Ripeti password",
+   "check-for-latest-version": "Controlla gli aggiornamenti di umbrelOS",
+-  "2fa": "2FA",
+-  "remote-tor-access": "Accesso remoto Tor",
+-  "software-update.checking": "Verifica degli aggiornamenti in corso...",
+-  "software-update.check": "Verifica aggiornamenti",
+-  "software-update.new-version": "Nuova versione {{name}} disponibile per l'installazione",
+-  "software-update.updating-to": "Aggiornamento a {{name}}",
+-  "software-update.callout": "Non aggiornare questa pagina o spegnere il tuo Umbrel durante l'aggiornamento.",
+-  "software-update.failed.title": "Aggiornamento software fallito",
+-  "software-update.failed.description": "Si è verificato un errore durante l'aggiornamento del software",
+-  "software-update.failed.please-try-again": "Per favore, riprova",
+-  "software-update.failed.retry": "Riprova",
+-  "update": "aggiornamento",
+-  "software-update.update-now": "Aggiorna ora",
+-  "software-update.view": "Visualizza",
+-  "storage": "Archiviazione",
+-  "storage.low": "Spazio di archiviazione basso",
+-  "storage.full": "Archiviazione piena",
+-  "something-left": "{{left}} rimanenti",
+-  "unexpected-error": "Errore imprevisto",
+-  "unexpected-error.heading": "⚠ Errore",
+   "clipboard.copied": "Copiato",
+   "close": "Chiudi",
+-  "something-went-wrong": "⚠ Qualcosa è andato storto",
+-  "loading": "Caricamento",
++  "cmdk.change-wallpaper": "Cambia sfondo",
++  "cmdk.frequent-apps": "Usati frequentemente",
+   "cmdk.input-placeholder": "Cerca app, impostazioni o azioni",
+-  "no-results-found": "Nessun risultato trovato",
++  "cmdk.install-from-app-store": "da App Store",
++  "cmdk.live-usage": "Utilizzo in Tempo Reale",
+   "cmdk.restart-umbrel": "Riavvia Umbrel",
++  "cmdk.shutdown-umbrel": "Spegni Umbrel",
+   "cmdk.update-all-apps": "Aggiorna tutte le app",
+-  "cmdk.change-wallpaper": "Cambia sfondo",
+-  "cmdk.live-usage": "Utilizzo in Tempo Reale",
+   "cmdk.widgets": "Widget",
+-  "cmdk.frequent-apps": "Usati frequentemente",
+-  "app.offline": "Non in esecuzione",
+-  "app.uninstalling": "Disinstallazione",
+-  "app.install": "Installa",
+-  "app.installing": "Installazione",
+-  "app.updating": "Aggiornamento",
+-  "app.open": "Apri",
+-  "app.view": "Visualizza",
+-  "retry": "Riprova",
+-  "download-logs": "Scarica log",
+-  "page-title-umbrel": "{{title}} – umbrelOS",
+-  "desktop.title": "Desktop",
+-  "notifications": "Notifiche",
++  "community-app-store": "Community App Store",
++  "community-app-store.back-to-umbrel-app-store": "Torna a Umbrel App Store",
++  "community-app-store.open-button": "Apri",
++  "community-app-store.remove-button": "Rimuovi",
++  "community-app-stores.add-button": "Aggiungi",
++  "community-app-stores.description": "I Community App Store ti permettono di installare app sul tuo Umbrel che potrebbero non essere disponibili nell'Umbrel App Store ufficiale. Ti permettono anche di testare le versioni beta delle app Umbrel prima che gli sviluppatori le rilascino sull'Umbrel App Store ufficiale.",
++  "community-app-stores.learn-more": "Scopri di più",
++  "community-app-stores.warning": "I Community App Store possono essere creati da chiunque. Le app pubblicate non sono verificate o esaminate dal team dell'Umbrel App Store ufficiale e possono potenzialmente essere insicure o dannose. Usa cautela e aggiungi solo app store di sviluppatori di cui ti fidi.",
++  "confirm": "Conferma",
++  "connecting": "Connessione in corso...",
++  "continue": "Continua",
++  "continue-to-log-in": "Continua per accedere",
++  "cpu": "CPU",
++  "cpu-core-count": "{{cores}} thread",
++  "create-user": "Crea utente",
++  "default-credentials..dont-show-again": "Non mostrare più",
++  "default-credentials.close": "Capito",
++  "default-credentials.description": "Ecco le credenziali che ti serviranno per accedere all'app.",
++  "default-credentials.open": "Apri {{app}}",
++  "default-credentials.password": "Password predefinita",
++  "default-credentials.title": "Credenziali per {{app}}",
++  "default-credentials.username": "Nome utente predefinito",
++  "desktop.app.context.go-to-store-page": "Visualizza in App Store",
++  "desktop.app.context.show-default-credentials": "Mostra credenziali predefinite",
++  "desktop.app.context.uninstall": "Disinstalla",
++  "desktop.context-menu.change-wallpaper": "Cambia sfondo",
++  "desktop.context-menu.edit-widgets": "Modifica widget",
++  "desktop.context-menu.logout": "Esci",
++  "desktop.greeting.afternoon": "Buon pomeriggio, {{name}}",
++  "desktop.greeting.evening": "Buona sera, {{name}}",
++  "desktop.greeting.morning": "Buongiorno, {{name}}",
++  "desktop.install-first.for-the-bitcoiner": "Per il bitcoiner",
++  "desktop.install-first.for-the-self-hoster": "Per l'auto-ospitante",
++  "desktop.install-first.for-the-streamer": "Per lo streamer",
++  "desktop.install-first.link-to-app-store": "Esplora di più in App Store",
++  "desktop.not-enough-room": "Usa uno schermo più grande per visualizzare le tue app.",
++  "device": "Dispositivo",
++  "device-info": "Info dispositivo",
++  "device-info-description": "Informazioni sul tuo dispositivo",
+   "device-info.device": "Dispositivo",
+   "device-info.model-number": "Numero modello",
+   "device-info.serial-number": "Numero di serie",
++  "device-info.view-info": "Visualizza info",
++  "disable": "Disabilita",
++  "download-logs": "Scarica log",
++  "factory-reset": "Ripristino Impostazioni di Fabbrica",
++  "factory-reset.confirm.body": "Conferma la password di Umbrel per resettare",
++  "factory-reset.confirm.password-label": "Inserisci password",
+
+----------------------------------------
+
+File: packages/ui/public/locales/ja.json
+Status: modified
+Changes: +308 -358
+Diff:
+@@ -1,411 +1,361 @@
+ {
+-  "hello": "こんにちは",
+-  "desktop.greeting.morning": "おはようございます、{{name}}",
+-  "desktop.greeting.afternoon": "こんにちは、{{name}}",
+-  "desktop.greeting.evening": "こんばんは、{{name}}",
+-  "search": "検索",
+-  "settings": "設定",
+-  "app-store.title": "App Store",
+-  "unknown": "不明",
+-  "app_one": "アプリ",
+-  "app_other": "アプリ",
+-  "raspberry-pi": "Raspberry Pi",
+-  "umbrel-home": "Umbrel Home",
+-  "linux": "Linux",
+-  "install-your-first-app": "最初のアプリをインストール",
+-  "logout": "ログアウト",
+-  "restart": "再起動",
+-  "shut-down": "シャットダウン",
+-  "umbrel": "Umbrel",
+-  "device": "デバイス",
+-  "umbrelos": "umbrelOS",
+-  "open-live-usage": "ライブ使用状況を開く",
++  "2fa": "2FA",
++  "2fa-description": "Umbrelのログインとアプリのための二段階認証",
++  "2fa.disable.success": "二段階認証が無効にされました",
++  "2fa.disable.title": "二段階認証を無効にする",
++  "2fa.enable.or-paste": "または、以下のコードを認証アプリに貼り付けてください",
++  "2fa.enable.scan-this": "Google AuthenticatorやAuthyのような認証アプリでこのQRコードをスキャンしてください",
++  "2fa.enable.success": "二段階認証が有効にされました",
++  "2fa.enable.title": "二段階認証を有効にする",
++  "2fa.enter-code": "認証アプリに表示されるコードを入力してください",
+   "account": "アカウント",
+-  "wallpaper": "壁紙",
+-  "name": "名前",
+-  "password": "パスワード",
+   "account-description": "あなたの名前とパスワード",
+-  "wallpaper-description": "あなたのUmbrelの壁紙とテーマ",
+-  "2fa-description": "Umbrelのログインとアプリのための二段階認証",
+-  "tor-description": "Torブラウザを使用してどこからでもあなたのUmbrelにアクセス",
+-  "migration-assistant": "移行アシスタント",
+-  "migration-assistant-description": "あなたのアプリとデータをRaspberry PiからUmbrel Homeに転送",
+-  "language": "言語",
+-  "language-description": "あなたが好むumbrelOSの言語",
++  "advanced-settings": "詳細設定",
++  "advanced-settings-description": "Terminalを開くか、umbrelOSベータプログラムに登録する",
++  "app-not-found": "アプリが見つかりません: {{app}}",
++  "app-only-over-tor": "{{app}}はTor経由でのみ使用できます。このアプリを開くには、TorブラウザでリモートアクセスURL（設定 > リモートTorアクセス）にアクセスしてください。",
++  "app-page.section.about": "約",
++  "app-page.section.credentials.title": "デフォルト資格情報",
++  "app-page.section.info.compatibility": "互換性",
++  "app-page.section.info.compatibility-compatible": "互換あり",
++  "app-page.section.info.developer": "開発者",
++  "app-page.section.info.source-code": "ソースコード",
++  "app-page.section.info.source-code.public": "公開",
++  "app-page.section.info.submitted-by": "提出者",
++  "app-page.section.info.title": "情報",
++  "app-page.section.info.version": "バージョン",
++  "app-page.section.recommendations.title": "おすすめ",
++  "app-page.section.release-notes.title": "新機能",
++  "app-page.section.release-notes.version": "バージョン {{version}}",
++  "app-page.section.requires": "必要条件",
++  "app-page.section.requires.support": "サポートを受ける",
++  "app-picker.search": "検索...",
++  "app-picker.select-app": "アプリを選択...",
++  "app-store.browse-category-apps": "{{category}}アプリを閲覧",
++  "app-store.category.ai": "AI",
++  "app-store.category.all": "すべてのアプリ",
++  "app-store.category.automation": "家庭＆自動化",
++  "app-store.category.bitcoin": "ビットコイン",
++  "app-store.category.developer": "開発者ツール",
++  "app-store.category.discover": "発見",
++  "app-store.category.files": "ファイル＆生産性",
++  "app-store.category.finance": "金融",
++  "app-store.category.media": "メディア",
++  "app-store.category.networking": "ネットワーキング",
++  "app-store.category.social": "ソーシャル",
+   "app-store.description": "あなたのアプリ更新設定",
+-  "migrate": "移行",
++  "app-store.menu.community-app-stores": "コミュニティApp Stores",
++  "app-store.search-apps": "アプリを検索",
++  "app-store.search.no-results": "結果なし",
++  "app-store.search.results-for": "の結果",
++  "app-store.title": "App Store",
++  "app-updates.less": "少なく",
++  "app-updates.more": "もっと",
++  "app-updates.no-updates": "すべてのアプリが最新です！",
++  "app-updates.update": "更新",
++  "app-updates.update-all": "すべて更新",
++  "app-updates.updating": "更新中...",
++  "app.install": "インストール",
++  "app.installing": "インストール中",
++  "app.offline": "実行されていません",
++  "app.open": "開く",
++  "app.optimized-for-umbrel-home": "Umbrel Homeに最適化",
++  "app.restarting": "再起動中",
++  "app.starting": "起動中",
++  "app.stopped": "停止済み",
++  "app.stopping": "停止中",
++  "app.uninstall.confirm.description": "{{app}}に関連するすべてのデータが永久に削除されます。この操作は元に戻せません。",
++  "app.uninstall.confirm.submit": "アンインストール",
++  "app.uninstall.confirm.title": "{{app}}をアンインストールしますか？",
++  "app.uninstall.deps.used-by.title": "{{app}}は以下のアプリで使用されています",
++  "app.uninstalling": "アンインストール中",
++  "app.updating": "更新中",
++  "app.view": "表示",
++  "apps.uninstall.failed-to-get-required-apps": "必要なアプリの取得に失敗しました",
++  "apps.uninstalled-all.success": "すべてのアプリがアンインストールされました",
++  "auth.checking-backend-for-user": "読み込み中...",
++  "auth.failed-checking-if-user-logged-in": "エラー: Authログインチェックに失敗しました",
++  "auth.failed-to-check-if-user-exists": "エラー: Auth存在チェックに失敗しました",
++  "beta-program": "umbrelOSベータプログラム",
++  "beta-program-description": "umbrelOSのベータアップデートを受け取ることに同意し、新機能への早期アクセスを得て、フィードバックを提供することでそれらの改善に協力してください。ベータアップデートは不安定な場合があり、トラブルシューティングにはTerminalの知識が必要になることがあります。",
++  "cancel": "キャンセル",
++  "change": "変更",
+   "change-name": "名前を変更",
++  "change-name.failed.name-required": "名前が必要です",
++  "change-name.input-placeholder": "あなたの名前",
+   "change-password": "パスワードを変更",
+-  "uptime": "稼働時間",
+-  "preferences": "環境設定",
+-  "troubleshoot": "トラブルシューティング",
+-  "troubleshoot-description": "umbrelOSまたはアプリのトラブルシューティング",
+-  "device-info-description": "あなたのデバイスに関する情報",
+-  "device-info.view-info": "情報を見る",
+-  "factory-reset": "工場出荷時リセット",
+-  "factory-reset.reset": "リセット",
+-  "factory-reset.desc": "あなたのumbrelOSのデータとアプリをすべて削除",
+-  "software-update.title": "ソフトウェアアップデート",
+-  "device-info": "デバイス情報",
+-  "software-update.on-latest": "最新のumbrelOSを使用中",
++  "change-password.callout": "パスワードを失った場合、Umbrelにログインできなくなります。安全に保管してください。",
++  "change-password.current-password": "現在のパスワード",
++  "change-password.failed.current-required": "現在のパスワードが必要です",
++  "change-password.failed.min-length": "パスワードは少なくとも{{characters}}文字である必要があります",
++  "change-password.failed.must-be-unique": "新しいパスワードは現在のパスワードと異なる必要があります",
++  "change-password.failed.new-required": "新しいパスワードが必要です",
++  "change-password.failed.no-match": "パスワードが一致しません",
++  "change-password.failed.repeat-required": "パスワードの再入力が必要です",
++  "change-password.new-password": "新しいパスワード",
++  "change-password.repeat-password": "パスワードを再入力",
+   "check-for-latest-version": "最新のumbrelOSアップデートを確認",
+-  "2fa": "2FA",
+-  "remote-tor-access": "リモートTorアクセス",
+-  "software-update.checking": "アップデートを確認中...",
+-  "software-update.check": "アップデートを確認",
+-  "software-update.new-version": "新しい{{name}}がインストール可能です",
+-  "software-update.updating-to": "{{name}}に更新中",
+-  "software-update.callout": "このページを更新したり、アップデート中にUmbrelをオフにしないでください。",
+-  "software-update.failed.title": "ソフトウェアアップデート失敗",
+-  "software-update.failed.description": "ソフトウェアアップデート中にエラーが発生しました",
+-  "software-update.failed.please-try-again": "もう一度試してください",
+-  "software-update.failed.retry": "再試行",
+-  "update": "アップデート",
+-  "software-update.update-now": "今すぐアップデート",
+-  "software-update.view": "表示",
+-  "storage": "ストレージ",
+-  "storage.low": "ストレージ不足",
+-  "storage.full": "ストレージがいっぱいです",
+-  "something-left": "{{left}}残っています",
+-  "unexpected-error": "予期せぬエラー",
+-  "unexpected-error.heading": "⚠ エラー",
+   "clipboard.copied": "コピーしました",
+   "close": "閉じる",
+-  "something-went-wrong": "⚠ 何か問題が発生しました",
+-  "loading": "読み込み中",
++  "cmdk.change-wallpaper": "壁紙を変更",
++  "cmdk.frequent-apps": "よく使用されるアプリ",
+   "cmdk.input-placeholder": "アプリ、設定、またはアクションを検索",
+-  "no-results-found": "結果が見つかりませんでした",
++  "cmdk.install-from-app-store": "App Storeからインストール",
++  "cmdk.live-usage": "ライブ使用状況",
+   "cmdk.restart-umbrel": "Umbrelを再起動",
++  "cmdk.shutdown-umbrel": "Umbrelをシャットダウン",
+   "cmdk.update-all-apps": "すべてのアプリをアップデート",
+-  "cmdk.change-wallpaper": "壁紙を変更",
+-  "cmdk.live-usage": "ライブ使用状況",
+   "cmdk.widgets": "ウィジェット",
+-  "cmdk.frequent-apps": "よく使用されるアプリ",
+-  "app.offline": "実行されていません",
+-  "app.uninstalling": "アンインストール中",
+-  "app.install": "インストール",
+-  "app.installing": "インストール中",
+-  "app.updating": "更新中",
+-  "app.open": "開く",
+-  "app.view": "表示",
+-  "retry": "再試行",
+-  "download-logs": "ログをダウンロード",
+-  "page-title-umbrel": "{{title}} – umbrelOS",
+-  "desktop.title": "デスクトップ",
+-  "notifications": "通知",
++  "community-app-store": "コミュニティApp Store",
++  "community-app-store.back-to-umbrel-app-store": "Umbrel App Storeに戻る",
++  "community-app-store.open-button": "開く",
++  "community-app-store.remove-button": "削除",
++  "community-app-stores.add-button": "追加",
++  "community-app-stores.description": "コミュニティApp Storesを使用すると、公式Umbrel App Storeでは入手できないアプリをUmbrelにインストールできます。これにより、開発者が公式Umbrel App Storeでリリースする前にUmbrelアプリのベータ版をテストするのも簡単になります。",
++  "community-app-stores.learn-more": "もっと学ぶ",
++  "community-app-stores.warning": "コミュニティApp Storesは誰でも作成できます。そこに公開されているアプリは、公式Umbrel App Storeチームによって検証されたり、審査されたりすることはありません。不安定または悪意のある可能性があります。注意して使用し、信頼できる開発者からのアプリストアのみを追加してください。",
++  "confirm": "確認",
++  "connecting": "接続中...",
++  "continue": "続行",
++  "continue-to-log-in": "ログインを続ける",
++  "cpu": "CPU",
++  "cpu-core-count": "{{cores}}スレッド",
++  "create-user": "ユーザーを作成",
++  "default-credentials..dont-show-again": "再び表示しない",
++  "default-credentials.close": "了解",
++  "default-credentials.description": "アプリにログインするために必要な資格情報です。",
++  "default-credentials.open": "{{app}}を開く",
++  "default-credentials.password": "デフォルトパスワード",
++  "default-credentials.title": "{{app}}の資格情報",
++  "default-credentials.username": "デフォルトユーザー名",
++  "desktop.app.context.go-to-store-page": "App Storeで表示",
++  "desktop.app.context.show-default-credentials": "デフォルトの資格情報を表示",
++  "desktop.app.context.uninstall": "アンインストール",
++  "desktop.context-menu.change-wallpaper": "壁紙を変更",
++  "desktop.context-menu.edit-widgets": "ウィジェットを編集",
++  "desktop.context-menu.logout": "ログアウト",
++  "desktop.greeting.afternoon": "こんにちは、{{name}}",
++  "desktop.greeting.evening": "こんばんは、{{name}}",
++  "desktop.greeting.morning": "おはようございます、{{name}}",
++  "desktop.install-first.for-the-bitcoiner": "ビットコイナー用",
++  "desktop.install-first.for-the-self-hoster": "セルフホスティング用",
++  "desktop.install-first.for-the-streamer": "ストリーマー用",
++  "desktop.install-first.link-to-app-store": "App Storeでさらに探索",
++  "desktop.not-enough-room": "アプリを表示するにはもっと大きな画面を使用してください。",
++  "device": "デバイス",
++  "device-info": "デバイス情報",
++  "device-info-description": "あなたのデバイスに関する情報",
+   "device-info.device": "デバイス",
+   "device-info.model-number": "モデル番号",
+   "device-info.serial-number": "シリアル番号",
++  "device-info.view-info": "情報を見る",
++  "disable": "無効にする",
++  "download-logs": "ログをダウンロード",
++  "factory-reset": "工場出荷時リセット",
++  "factory-reset.confirm.body": "リセットするためにUmbrelパスワードを確認してください",
++  "factory-reset.confirm.password-label": "パスワードを入力",
++  "factory-reset.confirm.submit": "すべてを消去してリセット",
+
+----------------------------------------
+
+File: packages/ui/public/locales/nl.json
+Status: modified
+Changes: +309 -359
+Diff:
+@@ -1,411 +1,361 @@
+ {
+-  "hello": "Hallo",
+-  "desktop.greeting.morning": "Goedemorgen, {{name}}",
+-  "desktop.greeting.afternoon": "Goedemiddag, {{name}}",
+-  "desktop.greeting.evening": "Goedenavond, {{name}}",
+-  "search": "Zoeken",
+-  "settings": "Instellingen",
+-  "app-store.title": "App Store",
+-  "unknown": "Onbekend",
+-  "app_one": "app",
+-  "app_other": "apps",
+-  "raspberry-pi": "Raspberry Pi",
+-  "umbrel-home": "Umbrel Home",
+-  "linux": "Linux",
+-  "install-your-first-app": "Installeer je eerste app",
+-  "logout": "Uitloggen",
+-  "restart": "Herstarten",
+-  "shut-down": "Afsluiten",
+-  "umbrel": "Umbrel",
+-  "device": "Apparaat",
+-  "umbrelos": "umbrelOS",
+-  "open-live-usage": "Open Live Usage",
++  "2fa": "2FA",
++  "2fa-description": "Een tweede beveiligingslaag voor je Umbrel login en apps",
++  "2fa.disable.success": "Twee-factor authenticatie uitgeschakeld",
++  "2fa.disable.title": "Twee-factor authenticatie uitschakelen",
++  "2fa.enable.or-paste": "Of plak de volgende code in je authenticator-app",
++  "2fa.enable.scan-this": "Scan deze QR-code met een authenticator-app zoals Google Authenticator of Authy",
++  "2fa.enable.success": "Twee-factor authenticatie ingeschakeld",
++  "2fa.enable.title": "Twee-factor authenticatie inschakelen",
++  "2fa.enter-code": "Voer de code in die wordt weergegeven in je authenticator-app",
+   "account": "Account",
+-  "wallpaper": "Achtergrond",
+-  "name": "Naam",
+-  "password": "Wachtwoord",
+   "account-description": "Je naam en wachtwoord",
+-  "wallpaper-description": "Je Umbrel achtergrond en thema",
+-  "2fa-description": "Een tweede beveiligingslaag voor je Umbrel login en apps",
+-  "tor-description": "Toegang tot je Umbrel van overal met een Tor browser",
+-  "migration-assistant": "Migratieassistent",
+-  "migration-assistant-description": "Zet al je apps en gegevens over van een Raspberry Pi naar Umbrel Home",
+-  "migration-assistant-unsupported-device-description": "Migratie-assistent ondersteunt momenteel het overzetten van alle gegevens en apps van een Raspberry Pi met umbrelOS naar de Umbrel Home. Open de Migratie-assistent op uw Umbrel Home om te beginnen.",
+-  "language": "Taal",
+-  "language-description": "Je voorkeurstaal voor umbrelOS",
++  "advanced-settings": "Geavanceerde instellingen",
++  "advanced-settings-description": "Open de terminal of meld je aan voor het umbrelOS Beta Programma",
++  "app-not-found": "App niet gevonden: {{app}}",
++  "app-only-over-tor": "{{app}} kan alleen worden gebruikt over Tor. Gebruik een Tor-browser op je externe toegangs-URL (Instellingen > Toegang op afstand via Tor) om deze app te openen.",
++  "app-page.section.about": "Over",
++  "app-page.section.credentials.title": "Standaard inloggegevens",
++  "app-page.section.info.compatibility": "Compatibiliteit",
++  "app-page.section.info.compatibility-compatible": "Compatibel",
++  "app-page.section.info.developer": "Ontwikkelaar",
++  "app-page.section.info.source-code": "Broncode",
++  "app-page.section.info.source-code.public": "Publiek",
++  "app-page.section.info.submitted-by": "Ingediend door",
++  "app-page.section.info.title": "Info",
++  "app-page.section.info.version": "Versie",
++  "app-page.section.recommendations.title": "Dit vind je misschien ook leuk",
++  "app-page.section.release-notes.title": "Wat is nieuw",
++  "app-page.section.release-notes.version": "Versie {{version}}",
++  "app-page.section.requires": "Vereist",
++  "app-page.section.requires.support": "Ondersteuning krijgen",
++  "app-picker.search": "Zoeken...",
++  "app-picker.select-app": "Selecteer app...",
++  "app-store.browse-category-apps": "Blader door {{category}} apps",
++  "app-store.category.ai": "AI",
++  "app-store.category.all": "Alle apps",
++  "app-store.category.automation": "Huis & Automatisering",
++  "app-store.category.bitcoin": "Bitcoin",
++  "app-store.category.developer": "Ontwikkelaarshulpmiddelen",
++  "app-store.category.discover": "Ontdekken",
++  "app-store.category.files": "Bestanden & Productiviteit",
++  "app-store.category.finance": "Financiën",
++  "app-store.category.media": "Media",
++  "app-store.category.networking": "Netwerken",
++  "app-store.category.social": "Sociaal",
+   "app-store.description": "Je app-update instellingen",
+-  "migrate": "Migreren",
++  "app-store.menu.community-app-stores": "Community App Stores",
++  "app-store.search-apps": "Apps zoeken",
++  "app-store.search.no-results": "Geen resultaten",
++  "app-store.search.results-for": "Resultaten voor",
++  "app-store.title": "App Store",
++  "app-updates.less": "minder",
++  "app-updates.more": "meer",
++  "app-updates.no-updates": "Alle apps zijn up-to-date!",
++  "app-updates.update": "Update",
++  "app-updates.update-all": "Alles updaten",
++  "app-updates.updating": "Updaten...",
++  "app.install": "Installeren",
++  "app.installing": "Installeren",
++  "app.offline": "Niet actief",
++  "app.open": "Open",
++  "app.optimized-for-umbrel-home": "Geoptimaliseerd voor Umbrel Home",
++  "app.restarting": "Herstarten",
++  "app.starting": "Starten",
++  "app.stopped": "Gestopt",
++  "app.stopping": "Stoppen",
++  "app.uninstall.confirm.description": "Alle gegevens geassocieerd met {{app}} worden permanent verwijderd. Deze actie kan niet ongedaan worden gemaakt.",
++  "app.uninstall.confirm.submit": "Deïnstalleren",
++  "app.uninstall.confirm.title": "{{app}} deïnstalleren?",
++  "app.uninstall.deps.used-by.title": "{{app}} wordt gebruikt door",
++  "app.uninstalling": "Verwijderen",
++  "app.updating": "Updaten",
++  "app.view": "Bekijk",
++  "apps.uninstall.failed-to-get-required-apps": "Kon vereiste apps niet ophalen",
++  "apps.uninstalled-all.success": "Alle apps gedeïnstalleerd",
++  "auth.checking-backend-for-user": "Laden...",
++  "auth.failed-checking-if-user-logged-in": "Fout: Controle op inloggen mislukt",
++  "auth.failed-to-check-if-user-exists": "Fout: Controle op bestaan mislukt",
++  "beta-program": "umbrelOS Beta Programma",
++  "beta-program-description": "Meld je aan om beta-updates van umbrelOS te ontvangen, krijg vroegtijdig toegang tot nieuwe functies en help ons deze te verfijnen door jouw feedback te geven. Beta-updates kunnen onstabiel zijn en het oplossen van problemen kan bekendheid met de terminal vereisen.",
++  "cancel": "Annuleren",
++  "change": "Veranderen",
+   "change-name": "Naam wijzigen",
++  "change-name.failed.name-required": "Naam is vereist",
++  "change-name.input-placeholder": "Jouw naam",
+   "change-password": "Wachtwoord wijzigen",
+-  "uptime": "Uptime",
+-  "preferences": "Voorkeuren",
+-  "troubleshoot": "Probleemoplossing",
+-  "troubleshoot-description": "Los problemen op met umbrelOS of een app",
+-  "device-info-description": "Informatie over je apparaat",
+-  "device-info.view-info": "Bekijk info",
+-  "factory-reset": "Fabrieksinstellingen",
+-  "factory-reset.reset": "Reset",
+-  "factory-reset.desc": "Verwijder al je umbrelOS-gegevens en apps",
+-  "software-update.title": "Software-update",
+-  "device-info": "Apparaatinformatie",
+-  "software-update.on-latest": "Je gebruikt de nieuwste versie van umbrelOS",
++  "change-password.callout": "Als je je wachtwoord verliest, kun je niet inloggen op je Umbrel. Zorg ervoor dat je het veilig bewaart.",
++  "change-password.current-password": "Huidig wachtwoord",
++  "change-password.failed.current-required": "Huidig wachtwoord is vereist",
++  "change-password.failed.min-length": "Wachtwoord moet minstens {{characters}} tekens lang zijn",
++  "change-password.failed.must-be-unique": "Nieuw wachtwoord moet anders zijn dan het huidige wachtwoord",
++  "change-password.failed.new-required": "Nieuw wachtwoord is vereist",
++  "change-password.failed.no-match": "Wachtwoorden komen niet overeen",
++  "change-password.failed.repeat-required": "Herhaal wachtwoord is vereist",
++  "change-password.new-password": "Nieuw wachtwoord",
++  "change-password.repeat-password": "Herhaal wachtwoord",
+   "check-for-latest-version": "Controleer op de nieuwste update van umbrelOS",
+-  "2fa": "2FA",
+-  "remote-tor-access": "Toegang op afstand via Tor",
+-  "software-update.checking": "Controleren op updates...",
+-  "software-update.check": "Controleer op update",
+-  "software-update.new-version": "Nieuwe versie {{name}} is beschikbaar om te installeren",
+-  "software-update.updating-to": "Update naar {{name}}",
+-  "software-update.callout": "Vernieuw deze pagina niet of zet je Umbrel niet uit terwijl het aan het updaten is.",
+-  "software-update.failed.title": "Software-update mislukt",
+-  "software-update.failed.description": "Er was een fout tijdens de software-update",
+-  "software-update.failed.please-try-again": "Probeer het opnieuw",
+-  "software-update.failed.retry": "Opnieuw proberen",
+-  "update": "update",
+-  "software-update.update-now": "Nu updaten",
+-  "software-update.view": "Bekijken",
+-  "storage": "Opslag",
+-  "storage.low": "Weinig opslag",
+-  "storage.full": "Opslag vol",
+-  "something-left": "{{left}} over",
+-  "unexpected-error": "Onverwachte fout",
+-  "unexpected-error.heading": "⚠ Fout",
+   "clipboard.copied": "Gekopieerd",
+   "close": "Sluiten",
+-  "something-went-wrong": "⚠ Er ging iets mis",
+-  "loading": "Laden",
++  "cmdk.change-wallpaper": "Wijzig achtergrond",
++  "cmdk.frequent-apps": "Veel gebruikt",
+   "cmdk.input-placeholder": "Zoek naar apps, instellingen of acties",
+-  "no-results-found": "Geen resultaten gevonden",
++  "cmdk.install-from-app-store": "uit App Store",
++  "cmdk.live-usage": "Live Usage",
+   "cmdk.restart-umbrel": "Herstart Umbrel",
++  "cmdk.shutdown-umbrel": "Umbrel afsluiten",
+   "cmdk.update-all-apps": "Update alle apps",
+-  "cmdk.change-wallpaper": "Wijzig achtergrond",
+-  "cmdk.live-usage": "Live Usage",
+   "cmdk.widgets": "Widgets",
+-  "cmdk.frequent-apps": "Veel gebruikt",
+-  "app.offline": "Niet actief",
+-  "app.uninstalling": "Verwijderen",
+-  "app.install": "Installeren",
+-  "app.installing": "Installeren",
+-  "app.updating": "Updaten",
+-  "app.open": "Open",
+-  "app.view": "Bekijk",
+-  "retry": "Opnieuw proberen",
+-  "download-logs": "Logbestanden downloaden",
+-  "page-title-umbrel": "{{title}} – umbrelOS",
+-  "desktop.title": "Bureaublad",
+-  "notifications": "Meldingen",
++  "community-app-store": "Community App Store",
++  "community-app-store.back-to-umbrel-app-store": "Terug naar Umbrel App Store",
++  "community-app-store.open-button": "Open",
++  "community-app-store.remove-button": "Verwijderen",
++  "community-app-stores.add-button": "Toevoegen",
++  "community-app-stores.description": "Community App Stores stellen je in staat om apps op je Umbrel te installeren die mogelijk niet beschikbaar zijn in de officiële Umbrel App Store. Ze maken het ook makkelijk om bètaversies van Umbrel-apps te testen voordat ontwikkelaars deze uitbrengen in de officiële Umbrel App Store.",
++  "community-app-stores.learn-more": "Meer informatie",
++  "community-app-stores.warning": "Community App Stores kunnen door iedereen worden gemaakt. De apps die erin worden gepubliceerd zijn niet geverifieerd of gecontroleerd door het officiële Umbrel App Store-team en kunnen mogelijk onveilig of kwaadaardig zijn. Wees voorzichtig en voeg alleen app-winkels toe van ontwikkelaars die je vertrouwt.",
++  "confirm": "Bevestigen",
++  "connecting": "Verbinden...",
++  "continue": "Doorgaan",
++  "continue-to-log-in": "Ga verder om in te loggen",
++  "cpu": "CPU",
++  "cpu-core-count": "{{cores}} threads",
++  "create-user": "Gebruiker aanmaken",
++  "default-credentials..dont-show-again": "Dit niet meer tonen",
++  "default-credentials.close": "Begrepen",
++  "default-credentials.description": "Hier zijn de inloggegevens die je nodig hebt om in te loggen op de app.",
++  "default-credentials.open": "Open {{app}}",
++  "default-credentials.password": "Standaard wachtwoord",
++  "default-credentials.title": "Inloggegevens voor {{app}}",
++  "default-credentials.username": "Standaard gebruikersnaam",
++  "desktop.app.context.go-to-store-page": "Bekijk in App Store",
++  "desktop.app.context.show-default-credentials": "Standaard inloggegevens tonen",
++  "desktop.app.context.uninstall": "Deïnstalleren",
++  "desktop.context-menu.change-wallpaper": "Achtergrond wijzigen",
++  "desktop.context-menu.edit-widgets": "Widgets bewerken",
++  "desktop.context-menu.logout": "Uitloggen",
++  "desktop.greeting.afternoon": "Goedemiddag, {{name}}",
++  "desktop.greeting.evening": "Goedenavond, {{name}}",
++  "desktop.greeting.morning": "Goedemorgen, {{name}}",
++  "desktop.install-first.for-the-bitcoiner": "Voor de Bitcoiner",
++  "desktop.install-first.for-the-self-hoster": "Voor de zelf-hostende",
++  "desktop.install-first.for-the-streamer": "Voor de streamer",
++  "desktop.install-first.link-to-app-store": "Ontdek meer in App Store",
++  "desktop.not-enough-room": "Gebruik een groter scherm om je apps te bekijken.",
++  "device": "Apparaat",
++  "device-info": "Apparaatinformatie",
++  "device-info-description": "Informatie over je apparaat",
+   "device-info.device": "Apparaat",
+   "device-info.model-number": "Modelnummer",
+   "device-info.serial-number": "Serienummer",
++  "device-info.view-info": "Bekijk info",
++  "disable": "Uitschakelen",
++  "download-logs": "Logbestanden downloaden",
++  "factory-reset": "Fabrieksinstellingen",
++  "factory-reset.confirm.body": "Bevestig Umbrel wachtwoord om te resetten",
++  "factory-reset.confirm.password-label": "Voer wachtwoord in",
+
+----------------------------------------
+
+File: packages/ui/public/locales/pt.json
+Status: modified
+Changes: +310 -359
+Diff:
+@@ -1,410 +1,361 @@
+ {
+-  "hello": "Olá",
+-  "desktop.greeting.morning": "Bom dia, {{name}}",
+-  "desktop.greeting.afternoon": "Boa tarde, {{name}}",
+-  "desktop.greeting.evening": "Boa noite, {{name}}",
+-  "search": "Pesquisar",
+-  "settings": "Configurações",
+-  "app-store.title": "App Store",
+-  "unknown": "Desconhecido",
+-  "app_one": "aplicativo",
+-  "app_other": "aplicativos",
+-  "raspberry-pi": "Raspberry Pi",
+-  "umbrel-home": "Umbrel Home",
+-  "linux": "Linux",
+-  "install-your-first-app": "Instale seu primeiro aplicativo",
+-  "logout": "Sair",
+-  "restart": "Reiniciar",
+-  "shut-down": "Desligar",
+-  "umbrel": "Umbrel",
+-  "device": "Dispositivo",
+-  "umbrelos": "umbrelOS",
+-  "open-live-usage": "Abrir Uso ao Vivo",
++  "2fa": "2FA",
++  "2fa-description": "Uma segunda camada de segurança para o seu login no Umbrel e aplicativos",
++  "2fa.disable.success": "Autenticação de dois fatores desativada",
++  "2fa.disable.title": "Desativar autenticação de dois fatores",
++  "2fa.enable.or-paste": "Ou cole o seguinte código no seu aplicativo autenticador",
++  "2fa.enable.scan-this": "Escanee este código QR usando um aplicativo autenticador como Google Authenticator ou Authy",
++  "2fa.enable.success": "Autenticação de dois fatores ativada",
++  "2fa.enable.title": "Ativar autenticação de dois fatores",
++  "2fa.enter-code": "Digite o código exibido no seu aplicativo autenticador",
+   "account": "Conta",
+-  "wallpaper": "Papel de parede",
+-  "name": "Nome",
+-  "password": "Senha",
+   "account-description": "Seu nome e senha",
+-  "wallpaper-description": "Seu papel de parede e tema do Umbrel",
+-  "2fa-description": "Uma segunda camada de segurança para o seu login no Umbrel e aplicativos",
+-  "tor-description": "Acesse seu Umbrel de qualquer lugar usando um navegador Tor",
+-  "migration-assistant": "Assistente de Migração",
+-  "migration-assistant-description": "Transfira todos os seus aplicativos e dados de um Raspberry Pi para o Umbrel Home",
+-  "migration-assistant-unsupported-device-description": "O Assistente de Migração atualmente suporta a transferência de todos os dados e aplicativos de um Raspberry Pi rodando umbrelOS para o Umbrel Home. Abra o Assistente de Migração no seu Umbrel Home para começar.",
+-  "language": "Idioma",
+-  "language-description": "Seu idioma preferido do umbrelOS",
++  "advanced-settings": "Configurações avançadas",
++  "advanced-settings-description": "Abra o terminal ou inscreva-se no Programa Beta do umbrelOS",
++  "app-not-found": "Aplicativo não encontrado: {{app}}",
++  "app-only-over-tor": "{{app}} só pode ser usado através do Tor. Por favor, acesse seu Umbrel em um navegador Tor no seu URL de acesso remoto (Configurações > Acesso remoto Tor) para abrir este aplicativo.",
++  "app-page.section.about": "Sobre",
++  "app-page.section.credentials.title": "Credenciais padrão",
++  "app-page.section.info.compatibility": "Compatibilidade",
++  "app-page.section.info.compatibility-compatible": "Compatível",
++  "app-page.section.info.developer": "Desenvolvedor",
++  "app-page.section.info.source-code": "Código-fonte",
++  "app-page.section.info.source-code.public": "Público",
++  "app-page.section.info.submitted-by": "Enviado por",
++  "app-page.section.info.title": "Informações",
++  "app-page.section.info.version": "Versão",
++  "app-page.section.recommendations.title": "Você também pode gostar",
++  "app-page.section.release-notes.title": "O que há de novo",
++  "app-page.section.release-notes.version": "Versão {{version}}",
++  "app-page.section.requires": "Requer",
++  "app-page.section.requires.support": "Obter suporte",
++  "app-picker.search": "Pesquisar...",
++  "app-picker.select-app": "Selecionar aplicativo...",
++  "app-store.browse-category-apps": "Navegar por aplicativos {{category}}",
++  "app-store.category.ai": "IA",
++  "app-store.category.all": "Todos os aplicativos",
++  "app-store.category.automation": "Casa & Automação",
++  "app-store.category.bitcoin": "Bitcoin",
++  "app-store.category.developer": "Ferramentas de Desenvolvedor",
++  "app-store.category.discover": "Descobrir",
++  "app-store.category.files": "Arquivos & Produtividade",
++  "app-store.category.finance": "Finanças",
++  "app-store.category.media": "Mídia",
++  "app-store.category.networking": "Redes",
++  "app-store.category.social": "Social",
+   "app-store.description": "Suas configurações de atualização de aplicativos",
+-  "migrate": "Migrar",
++  "app-store.menu.community-app-stores": "Lojas de Aplicativos da Comunidade",
++  "app-store.search-apps": "Pesquisar aplicativos",
++  "app-store.search.no-results": "Nenhum resultado",
++  "app-store.search.results-for": "Resultados para",
++  "app-store.title": "App Store",
++  "app-updates.less": "menos",
++  "app-updates.more": "mais",
++  "app-updates.no-updates": "Todos os aplicativos estão atualizados!",
++  "app-updates.update": "Atualizar",
++  "app-updates.update-all": "Atualizar todos",
++  "app-updates.updating": "Atualizando...",
++  "app.install": "Instalar",
++  "app.installing": "Instalando",
++  "app.offline": "Não está em execução",
++  "app.open": "Abrir",
++  "app.optimized-for-umbrel-home": "Otimizado para Umbrel Home",
++  "app.restarting": "Reiniciando",
++  "app.starting": "Iniciando",
++  "app.stopped": "Parado",
++  "app.stopping": "Parando",
++  "app.uninstall.confirm.description": "Todos os dados associados a {{app}} serão permanentemente excluídos. Esta ação não pode ser desfeita.",
++  "app.uninstall.confirm.submit": "Desinstalar",
++  "app.uninstall.confirm.title": "Desinstalar {{app}}?",
++  "app.uninstall.deps.used-by.title": "{{app}} é usado por",
++  "app.uninstalling": "Desinstalando",
++  "app.updating": "Atualizando",
++  "app.view": "Visualizar",
++  "apps.uninstall.failed-to-get-required-apps": "Falha ao obter aplicativos necessários",
++  "apps.uninstalled-all.success": "Todos os aplicativos foram desinstalados",
++  "auth.checking-backend-for-user": "Carregando...",
++  "auth.failed-checking-if-user-logged-in": "Erro: A verificação de login falhou",
++  "auth.failed-to-check-if-user-exists": "Erro: A verificação de existência falhou",
++  "beta-program": "Programa Beta do umbrelOS",
++  "beta-program-description": "Opte por receber atualizações beta do umbrelOS, obtenha acesso antecipado a novas funcionalidades e ajude-nos a refiná-las fornecendo seu feedback. Atualizações beta podem ser instáveis e a solução de problemas pode requerer familiaridade com o terminal.",
++  "cancel": "Cancelar",
++  "change": "Mudar",
+   "change-name": "Mudar nome",
++  "change-name.failed.name-required": "O nome é necessário",
++  "change-name.input-placeholder": "Seu nome",
+   "change-password": "Mudar senha",
+-  "uptime": "Tempo de funcionamento",
+-  "preferences": "Preferências",
+-  "troubleshoot": "Solucionar problemas",
+-  "troubleshoot-description": "Solucione problemas do umbrelOS ou de um aplicativo",
+-  "device-info-description": "Informações sobre o seu dispositivo",
+-  "device-info.view-info": "Ver informações",
+-  "factory-reset": "Restauração de Fábrica",
+-  "factory-reset.reset": "Restaurar",
+-  "factory-reset.desc": "Apagar todos os seus dados e aplicativos do umbrelOS",
+-  "software-update.title": "Atualização de software",
+-  "device-info": "Informações do dispositivo",
+-  "software-update.on-latest": "Você está na última versão do umbrelOS",
++  "change-password.callout": "Se você perder sua senha, não será possível fazer login no seu Umbrel. Certifique-se de guardá-la em segurança.",
++  "change-password.current-password": "Senha atual",
++  "change-password.failed.current-required": "A senha atual é necessária",
++  "change-password.failed.min-length": "A senha deve ter pelo menos {{characters}} caracteres",
++  "change-password.failed.must-be-unique": "A nova senha deve ser diferente da senha atual",
++  "change-password.failed.new-required": "A nova senha é necessária",
++  "change-password.failed.no-match": "As senhas não coincidem",
++  "change-password.failed.repeat-required": "É necessário repetir a senha",
++  "change-password.new-password": "Nova senha",
++  "change-password.repeat-password": "Repetir senha",
+   "check-for-latest-version": "Verificar a última atualização do umbrelOS",
+-  "2fa": "2FA",
+-  "remote-tor-access": "Acesso remoto Tor",
+-  "software-update.checking": "Verificando atualização...",
+-  "software-update.check": "Verificar atualização",
+-  "software-update.new-version": "Nova versão do {{name}} disponível para instalação",
+-  "software-update.updating-to": "Atualizando para {{name}}",
+-  "software-update.callout": "Por favor, não atualize esta página ou desligue seu Umbrel enquanto estiver atualizando.",
+-  "software-update.failed.title": "Falha na atualização de software",
+-  "software-update.failed.description": "Houve um erro durante a atualização de software",
+-  "software-update.failed.please-try-again": "Por favor, tente novamente",
+-  "software-update.failed.retry": "Tentar novamente",
+-  "update": "atualizar",
+-  "software-update.update-now": "Atualizar agora",
+-  "software-update.view": "Visualizar",
+-  "storage": "Armazenamento",
+-  "storage.low": "Armazenamento baixo",
+-  "storage.full": "Armazenamento cheio",
+-  "something-left": "{{left}} restantes",
+-  "unexpected-error": "Erro inesperado",
+-  "unexpected-error.heading": "⚠ Erro",
+   "clipboard.copied": "Copiado",
+   "close": "Fechar",
+-  "something-went-wrong": "⚠ Algo deu errado",
+-  "loading": "Carregando",
++  "cmdk.change-wallpaper": "Mudar papel de parede",
++  "cmdk.frequent-apps": "Usados frequentemente",
+   "cmdk.input-placeholder": "Pesquise por aplicativos, configurações ou ações",
+-  "no-results-found": "Nenhum resultado encontrado",
++  "cmdk.install-from-app-store": "da App Store",
++  "cmdk.live-usage": "Uso ao Vivo",
+   "cmdk.restart-umbrel": "Reiniciar Umbrel",
++  "cmdk.shutdown-umbrel": "Desligar Umbrel",
+   "cmdk.update-all-apps": "Atualizar todos os aplicativos",
+-  "cmdk.change-wallpaper": "Mudar papel de parede",
+-  "cmdk.live-usage": "Uso ao Vivo",
+   "cmdk.widgets": "Widgets",
+-  "cmdk.frequent-apps": "Usados frequentemente",
+-  "app.offline": "Não está em execução",
+-  "app.uninstalling": "Desinstalando",
+-  "app.install": "Instalar",
+-  "app.installing": "Instalando",
+-  "app.updating": "Atualizando",
+-  "app.open": "Abrir",
+-  "app.view": "Visualizar",
+-  "retry": "Tentar novamente",
+-  "download-logs": "Baixar registros",
+-  "page-title-umbrel": "{{title}} – umbrelOS",
+-  "desktop.title": "Área de trabalho",
+-  "notifications": "Notificações",
++  "community-app-store": "Loja de Aplicativos da Comunidade",
++  "community-app-store.back-to-umbrel-app-store": "Voltar para a App Store do Umbrel",
++  "community-app-store.open-button": "Abrir",
++  "community-app-store.remove-button": "Remover",
++  "community-app-stores.add-button": "Adicionar",
++  "community-app-stores.description": "As Lojas de Aplicativos da Comunidade permitem instalar aplicativos no seu Umbrel que podem não estar disponíveis na App Store oficial do Umbrel. Eles também facilitam o teste de versões beta de aplicativos Umbrel antes que os desenvolvedores os lancem na App Store oficial do Umbrel.",
++  "community-app-stores.learn-more": "Saiba mais",
++  "community-app-stores.warning": "As Lojas de Aplicativos da Comunidade podem ser criadas por qualquer pessoa. Os aplicativos publicados nelas não são verificados ou avaliados pela equipe da App Store oficial do Umbrel e podem ser potencialmente inseguros ou maliciosos. Use cautela e adicione apenas lojas de aplicativos de desenvolvedores em quem você confia.",
++  "confirm": "Confirmar",
++  "connecting": "Conectando...",
++  "continue": "Continuar",
++  "continue-to-log-in": "Continuar para o login",
++  "cpu": "CPU",
++  "cpu-core-count": "{{cores}} núcleos",
++  "create-user": "Criar usuário",
++  "default-credentials..dont-show-again": "Não mostrar novamente",
++  "default-credentials.close": "Entendi",
++  "default-credentials.description": "Aqui estão as credenciais que você precisará para fazer login no aplicativo.",
++  "default-credentials.open": "Abrir {{app}}",
++  "default-credentials.password": "Senha padrão",
++  "default-credentials.title": "Credenciais para {{app}}",
++  "default-credentials.username": "Nome de usuário padrão",
++  "desktop.app.context.go-to-store-page": "Ver na App Store",
++  "desktop.app.context.show-default-credentials": "Mostrar credenciais padrão",
++  "desktop.app.context.uninstall": "Desinstalar",
++  "desktop.context-menu.change-wallpaper": "Mudar papel de parede",
++  "desktop.context-menu.edit-widgets": "Editar widgets",
++  "desktop.context-menu.logout": "Sair",
++  "desktop.greeting.afternoon": "Boa tarde, {{name}}",
++  "desktop.greeting.evening": "Boa noite, {{name}}",
++  "desktop.greeting.morning": "Bom dia, {{name}}",
++  "desktop.install-first.for-the-bitcoiner": "Para o bitcoiner",
++  "desktop.install-first.for-the-self-hoster": "Para o auto-hospedeiro",
++  "desktop.install-first.for-the-streamer": "Para o streamer",
++  "desktop.install-first.link-to-app-store": "Explorar mais na App Store",
++  "desktop.not-enough-room": "Use uma tela maior para ver seus aplicativos.",
++  "device": "Dispositivo",
++  "device-info": "Informações do dispositivo",
++  "device-info-description": "Informações sobre o seu dispositivo",
+   "device-info.device": "Dispositivo",
+   "device-info.model-number": "Número do modelo",
+   "device-info.serial-number": "Número de série",
++  "device-info.view-info": "Ver informações",
++  "disable": "Desativar",
++  "download-logs": "Baixar registros",
++  "factory-reset": "Restauração de Fábrica",
++  "factory-reset.confirm.body": "Confirme a senha do Umbrel para resetar",
++  "factory-reset.confirm.password-label": "Digite a senha",
+
+----------------------------------------
+
+File: packages/ui/src/hooks/use-auto-height-animation.tsx
+Status: modified
+Changes: +0 -2
+Diff:
+@@ -13,9 +13,7 @@ export function useAutoHeightAnimation(deps: any[]): [AnimationControls, React.R
+ 
+ 		//console.log( newHeight )
+ 		if (height.current !== null) {
+-			console.log(height.current)
+ 			controls.set({height: height.current})
+-			console.log({height: newHeight, opacity: 1})
+ 			controls.start({height: newHeight, opacity: 1})
+ 		}
+ 
+
+----------------------------------------
+
+File: packages/ui/src/hooks/use-color-thief.ts
+Status: modified
+Changes: +0 -3
+Diff:
+@@ -17,13 +17,10 @@ export function useColorThief(ref: React.RefObject<HTMLImageElement>) {
+ 	useEffect(() => {
+ 		if (!ref.current) return
+ 		if (!intersection) return
+-		console.log('ratio', intersection.intersectionRatio)
+ 		if (intersection.intersectionRatio === 0) return
+ 
+ 		const img = ref.current
+ 
+-		console.log('img.complete')
+
+----------------------------------------
+
+File: packages/ui/src/hooks/use-launch-app.ts
+Status: modified
+Changes: +0 -1
+Diff:
+@@ -63,7 +63,6 @@ export function useLaunchApp() {
+ function openApp(app: UserApp, path?: string) {
+ 	trackAppOpen(app.id)
+ 	// Don't prefix by default because this is called from widgets
+-	// https://discord.com/channels/936693236339183716/940192361743540245/1212269980066779197
+ 	// We don't wanna be prefixing every time
+ 	const url = path ? urlJoin(appToUrl(app), path) : appToUrlWithAppPath(app)
+ 	window.open(url, '_blank')?.focus()
+
+----------------------------------------
+
+File: packages/ui/src/hooks/use-settings-notification-count.ts
+Status: modified
+Changes: +0 -1
+Diff:
+@@ -44,7 +44,6 @@ export function useSettingsNotificationCount() {
+ 		const toastIds: (string | number)[] = []
+ 
+ 		res.then((allData) => {
+-			console.log('allData', allData)
+ 			const [checkUpdateResult, cpuTempResult, memoryResult, diskResult] = allData ?? []
+ 
+ 			let currCount = 0
+
+----------------------------------------
+
+File: packages/ui/src/hooks/use-widgets.ts
+Status: modified
+Changes: +0 -1
+Diff:
+@@ -62,7 +62,6 @@ export function useWidgets() {
+ 		} else {
+ 			enable(widgetId)
+ 		}
+-		console.log(widgetId)
+ 	}
+ 
+ 	const appFromWidgetId = (id: string) => {
+
+----------------------------------------
+
+File: packages/ui/src/modules/desktop/app-grid/paginator.tsx
+Status: modified
+Changes: +0 -2
+Diff:
+@@ -39,12 +39,10 @@ export function usePaginator(pageCount: number) {
+ 				setScrollingWithCode(false)
+ 			}, 200)
+ 
+-			console.log('scroll')
+ 			if (scrollingWithCode) return
+ 			if (!el) return
+ 			const index = Math.round(el.scrollLeft / el.clientWidth)
+ 			setPage(index)
+-			console.log(el.scrollLeft, el.clientWidth)
+
+----------------------------------------
+
+File: packages/ui/src/modules/desktop/desktop-context-menu.tsx
+Status: modified
+Changes: +0 -1
+Diff:
+@@ -26,7 +26,6 @@ export function DesktopContextMenu({children}: {children: React.ReactNode}) {
+ 					</ContextMenuItem>
+ 					<ContextMenuItem
+ 						onSelect={() => {
+-							console.log(contentRef.current)
+ 							// get bounding box
+ 							const {top, left} = contentRef.current!.getBoundingClientRect()
+ 							anchorRef.current!.style.top = `${top}px`
+
+----------------------------------------
+
+File: packages/ui/src/modules/wifi/icon.tsx
+Status: modified
+Changes: +2 -2
+Diff:
+@@ -25,8 +25,8 @@ export function WifiIcon({bars = 4, className}: {bars: number; className?: strin
+ }
+ 
+ export function WifiIcon2({bars = 4, ...props}: {bars: number} & SVGProps<SVGSVGElement>) {
+-	const uniqueId = useId();
+-	
++	const uniqueId = useId()
++
+ 	return (
+ 		<svg xmlns='http://www.w3.org/2000/svg' width={24} height={24} viewBox='0 0 24 24' fill='currentColor' {...props}>
+
+----------------------------------------
+
+File: packages/ui/src/providers/global-system-state/index.tsx
+Status: modified
+Changes: +0 -4
+Diff:
+@@ -42,7 +42,6 @@ export function GlobalSystemStateProvider({children}: {children: ReactNode}) {
+ 	const ctx = trpcReact.useContext()
+ 
+ 	const onSuccess = (didWork: boolean) => {
+-		console.log('global-system-state: onSuccess')
+ 		// Cancel last query in case it returns as still running
+ 		ctx.system.status.cancel()
+ 		// alert('shouldLogoutOnRunning: true')
+@@ -68,7 +67,6 @@ export function GlobalSystemStateProvider({children}: {children: ReactNode}) {
+ 
+
+----------------------------------------
+
+File: packages/ui/src/routes/settings/_components/settings-summary.tsx
+Status: modified
+Changes: +16 -0
+Diff:
+@@ -1,3 +1,5 @@
++import {Link} from 'react-router-dom'
++
+ import {LOADING_DASH, UNKNOWN} from '@/constants'
+ import {useDeviceInfo} from '@/hooks/use-device-info'
+ import {useLanguage} from '@/hooks/use-language'
+@@ -10,6 +12,7 @@ export function SettingsSummary() {
+ 	const deviceInfo = useDeviceInfo()
+ 	const osVersionQ = trpcReact.system.version.useQuery()
+ 	const uptimeQ = trpcReact.system.uptime.useQuery()
++	const ipAddresses = trpcReact.system.getIpAddresses.useQuery()
+
+----------------------------------------
+
+File: packages/ui/src/routes/settings/advanced.tsx
+Status: modified
+Changes: +3 -0
+Diff:
+@@ -2,6 +2,7 @@ import {TbTerminal2} from 'react-icons/tb'
+ 
+ import {IconButtonLink} from '@/components/ui/icon-button-link'
+ import {useIsMobile} from '@/hooks/use-is-mobile'
++import {useSoftwareUpdate} from '@/hooks/use-software-update'
+ import {useSettingsDialogProps} from '@/routes/settings/_components/shared'
+ import {Dialog, DialogHeader, DialogScrollableContent, DialogTitle} from '@/shadcn-components/ui/dialog'
+ import {Drawer, DrawerContent, DrawerHeader, DrawerTitle} from '@/shadcn-components/ui/drawer'
+@@ -80,10 +81,12 @@ export default function AdvancedSettingsDrawerOrDialog() {
+ function useIsBetaChannel() {
+
+----------------------------------------
+
+File: packages/ui/update-translations.js
+Status: added
+Changes: +177 -0
+Diff:
+@@ -0,0 +1,177 @@
++import fs from 'fs'
++import path from 'path'
++import process from 'process'
++import fg from 'fast-glob'
++import OpenAI from 'openai'
++
++const exampleTranslationKeys = [
++	'account-description',
++	'wallpaper-description',
++	'2fa-description',
++	'tor-description',
++	'migration-assistant',
++	'migration-assistant-description',
++	'language',
++	'language-description',
++	'app-store.description',
++	'migrate',
++	'change-name',
++	'change-password',
++	'onboarding.account-created.youre-all-set-name',
++]
++
++const localesDirectory = path.join(process.cwd(), 'public', 'locales')
++const englishReferenceFilePath = path.join(localesDirectory, 'en.json')
++
++const languageMapping = {
++	en: 'English',
++	de: 'German',
++	es: 'Spanish',
++	fr: 'French',
++	it: 'Italian',
++	ja: 'Japanese',
++	nl: 'Dutch',
++	pt: 'Portuguese',
++}
++
++// Generates translations
++async function generateTranslation(englishReferenceContent, textToTranslate, targetLanguage, existingLanguageContent) {
++	const openai = new OpenAI({apiKey: process.env.TRANSLATIONS_OPENAI_API_KEY})
++	const model = process.env.TRANSLATIONS_OPENAI_MODEL
++	const systemPromptTemplate = process.env.TRANSLATIONS_SYSTEM_PROMPT
++	const userPromptTemplate = process.env.TRANSLATIONS_USER_PROMPT
++
++	const inputExample = exampleTranslationKeys.map((key) => `'${key}': '${englishReferenceContent[key]}'`).join(', ')
++	const outputExample = exampleTranslationKeys.map((key) => `'${key}': '${existingLanguageContent[key]}'`).join(', ')
++	const systemPrompt = systemPromptTemplate
++		.replace('replace_input_example', inputExample)
++		.replace('replace_output_example', outputExample)
++		.replace('replace_target_language', languageMapping[targetLanguage])
++	const userPrompt = userPromptTemplate
++		.replace('replace_target_language', languageMapping[targetLanguage])
++		.replace('replace_target_language', languageMapping[targetLanguage])
++		.replace('replace_text_to_translate', JSON.stringify(textToTranslate))
++
++	const completion = await openai.chat.completions.create({
++		messages: [
++			{role: 'system', content: systemPrompt},
++			{role: 'user', content: userPrompt},
+
+----------------------------------------
+
+File: packages/umbreld/package.json
+Status: modified
+Changes: +2 -2
+Diff:
+@@ -1,8 +1,8 @@
+ {
+ 	"name": "umbreld",
+ 	"type": "module",
+-	"version": "1.2.0-beta.2",
+-	"versionName": "umbrelOS 1.2 Beta 2",
++	"version": "1.2.0",
++	"versionName": "umbrelOS 1.2",
+ 	"files": [
+ 		"source",
+
+----------------------------------------
+
+File: packages/umbreld/source/modules/server/trpc/routes/system.ts
+Status: modified
+Changes: +2 -0
+Diff:
+@@ -21,6 +21,7 @@ import {
+ 	detectDevice,
+ 	isUmbrelOS,
+ 	getSystemMemoryUsage,
++	getIpAddresses,
+ } from '../../../system.js'
+ 
+ import {privateProcedure, publicProcedure, router} from '../trpc.js'
+@@ -217,6 +218,7 @@ export default router({
+ 	systemMemoryUsage: privateProcedure.query(({ctx}) => getSystemMemoryUsage()),
+
+----------------------------------------
+
+File: packages/umbreld/source/modules/system.ts
+Status: modified
+Changes: +21 -0
+Diff:
+@@ -438,3 +438,24 @@ export async function connectToWiFiNetwork({ssid, password}: {ssid: string; pass
+ 		throw new Error('Connection failed')
+ 	}
+ }
++
++// Get IP addresses of the device
++export async function getIpAddresses(): Promise<string[]> {
++	const interfaces =
++		(await systemInformation.networkInterfaces()) as systemInformation.Systeminformation.NetworkInterfacesData[]
++
+
+----------------------------------------
+
+File: scripts/update-script
+Status: modified
+Changes: +2 -2
+Diff:
+@@ -11,12 +11,12 @@ fi
+ 
+ if cat /var/lib/mender/device_type | grep --quiet 'device_type=raspberrypi'
+ then
+-	update_url="https://download.umbrel.com/release/1.2.0-beta.2/umbrelos-pi.update"
++	update_url="https://download.umbrel.com/release/1.2.0/umbrelos-pi.update"
+ fi
+ 
+ if cat /var/lib/mender/device_type | grep --silent 'device_type=amd64'
+ then
+
+----------------------------------------
+

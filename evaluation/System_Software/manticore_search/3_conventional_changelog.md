@@ -1,0 +1,1 @@
+## [6.3.4](https://github.com/manticoresoftware/manticoresearch/compare/6.3.2...6.3.4) (2024-07-31)

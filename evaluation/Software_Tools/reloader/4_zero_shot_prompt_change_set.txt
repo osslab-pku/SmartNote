@@ -1,0 +1,176 @@
+Changes between v1.0.120 and v1.0.121
+================================================================================
+
+COMMITS
+--------------------------------------------------------------------------------
+
+Commit: 32d5ce8990b1398bc71b07d904dca3ad244a66a9
+Author: Robert Gordon
+Date: 2024-08-07 09:46:24+00:00
+Message: chore: fix for POD_NAME and POD_NAMESPACE envs when enableHA is true
+----------------------------------------
+
+Commit: ef0ea91ec5c91ccbab0aa9b398bec3318971fd5a
+Author: bnallapeta
+Date: 2024-08-07 13:59:03+00:00
+Message: fix default values for memory and cpu
+----------------------------------------
+
+Commit: 04a987411f9042cb543c55d9bc7daa53f82f6718
+Author: Bharath Nallapeta
+Date: 2024-08-07 14:14:17+00:00
+Message: Merge pull request #723 from robgordon89/fix/pod-name-env-ha-fix
+
+chore: fix for POD_NAME and POD_NAMESPACE envs when enableHA is true
+----------------------------------------
+
+Commit: 70ab56606df1f9fd4877b0f615b0b929f8269511
+Author: stakater-user
+Date: 2024-08-07 14:27:13+00:00
+Message: [skip-ci] Update artifacts
+----------------------------------------
+
+
+PULL REQUESTS
+--------------------------------------------------------------------------------
+
+PR #723: chore: fix for POD_NAME and POD_NAMESPACE envs when enableHA is true
+Author: robgordon89
+Merged at: 2024-08-07 14:14:17+00:00
+URL: https://github.com/stakater/Reloader/pull/723
+Description:
+fix for POD_NAME and POD_NAMESPACE envs when enableHA is true
+
+Also added a test case to cover it 👍 
+
+Fixes: 
+
+```
+Error: POD_NAME not set, cannot run in HA mode without POD_NAME set
+```
+
+Likely introduced here https://github.com/stakater/Reloader/pull/699
+----------------------------------------
+
+
+FILE CHANGES
+--------------------------------------------------------------------------------
+
+File: deployments/kubernetes/chart/reloader/Chart.yaml
+Status: modified
+Changes: +2 -2
+Diff:
+@@ -3,8 +3,8 @@
+ apiVersion: v1
+ name: reloader
+ description: Reloader chart that runs on kubernetes
+-version: 1.0.120
+-appVersion: v1.0.120
++version: 1.0.121
++appVersion: v1.0.121
+ keywords:
+   - Reloader
+
+----------------------------------------
+
+File: deployments/kubernetes/chart/reloader/templates/deployment.yaml
+Status: modified
+Changes: +3 -3
+Diff:
+@@ -83,15 +83,15 @@ spec:
+         {{- else }}
+           valueFrom:
+             resourceFieldRef:
+-              resource: limits.memory
++              resource: limits.cpu
+         {{- end }}
+         - name: GOMEMLIMIT
+         {{- if .Values.reloader.deployment.gomemlimitOverride }}
+           value: {{ .Values.reloader.deployment.gomemlimitOverride | quote }}
+         {{- else }}
+
+----------------------------------------
+
+File: deployments/kubernetes/chart/reloader/tests/deployment_test.yaml
+Status: modified
+Changes: +13 -0
+Diff:
+@@ -48,3 +48,16 @@ tests:
+     asserts:
+       - isEmpty:
+           path: spec.template.spec.containers[0].securityContext
++
++  - it: template still sets POD_NAME and POD_NAMESPACE environment variables when enableHA is true
++    set:
++      reloader:
++        enableHA: true
++    asserts:
+
+----------------------------------------
+
+File: deployments/kubernetes/chart/reloader/values.yaml
+Status: modified
+Changes: +2 -2
+Diff:
+@@ -92,10 +92,10 @@ reloader:
+     labels:
+       provider: stakater
+       group: com.stakater.platform
+-      version: v1.0.120
++      version: v1.0.121
+     image:
+       name: ghcr.io/stakater/reloader
+-      tag: v1.0.120
++      tag: v1.0.121
+
+----------------------------------------
+
+File: deployments/kubernetes/manifests/deployment.yaml
+Status: modified
+Changes: +3 -3
+Diff:
+@@ -17,18 +17,18 @@ spec:
+         app: reloader-reloader
+     spec:
+       containers:
+-        - image: "ghcr.io/stakater/reloader:v1.0.120"
++        - image: "ghcr.io/stakater/reloader:v1.0.121"
+           imagePullPolicy: IfNotPresent
+           name: reloader-reloader
+           env:
+             - name: GOMAXPROCS
+
+----------------------------------------
+
+File: deployments/kubernetes/reloader.yaml
+Status: modified
+Changes: +10 -10
+Diff:
+@@ -8,7 +8,7 @@ metadata:
+     meta.helm.sh/release-name: "reloader"
+   labels:
+     app: reloader-reloader
+-    chart: "reloader-1.0.120"
++    chart: "reloader-1.0.121"
+     release: "reloader"
+     heritage: "Helm"
+     app.kubernetes.io/managed-by: "Helm"
+@@ -25,7 +25,7 @@ metadata:
+     meta.helm.sh/release-name: "reloader"
+   labels:
+     app: reloader-reloader
+-    chart: "reloader-1.0.120"
++    chart: "reloader-1.0.121"
+     release: "reloader"
+     heritage: "Helm"
+     app.kubernetes.io/managed-by: "Helm"
+@@ -92,7 +92,7 @@ metadata:
+     meta.helm.sh/release-name: "reloader"
+   labels:
+     app: reloader-reloader
+-    chart: "reloader-1.0.120"
++    chart: "reloader-1.0.121"
+     release: "reloader"
+
+----------------------------------------
+

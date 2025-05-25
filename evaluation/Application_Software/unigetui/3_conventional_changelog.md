@@ -1,0 +1,1 @@
+## [3.1.1](https://github.com/marticliment/UniGetUI/compare/3.1.1-beta3...3.1.1) (2024-07-28)

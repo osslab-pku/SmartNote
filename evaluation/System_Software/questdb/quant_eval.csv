@@ -1,0 +1,12 @@
+repo_name,rn_name,commit_coverage,info_entropy,tokens_count,automated_readability_index,dale_chall_readability,entity_percent,project_domain
+questdb/questdb,4_zero_shot_promp_rn,0.625,2.367492461184755,550,15.0,12.21,2.9644268774703555,System_Software
+questdb/questdb,3_conventional_changelog,0.5,1.4905371010452606,18792,60.8,12.97,0.05851638458768455,System_Software
+questdb/questdb,1_smartdraft_random_ctx,0.41666666666666663,2.1219280948873624,494,23.2,13.75,1.5384615384615385,System_Software
+questdb/questdb,1_smartdraft_rn_expository,0.33333333333333337,1.9056390622295665,468,33.5,13.15,0.0,System_Software
+questdb/questdb,1_smartdraft_rn_automatic,0.45833333333333337,2.3685225277282065,859,21.8,12.01,0.5995203836930456,System_Software
+questdb/questdb,1_smartdraft_no_rn_composer,0.04166666666666663,0.0,88,22.4,16.51,4.761904761904762,System_Software
+questdb/questdb,0_original_rn,0.5416666666666667,2.1310921348912526,852,18.8,10.02,1.2471655328798186,System_Software
+questdb/questdb,1_smartdraft_rn_automatic_no_llm,0.04166666666666663,0.0,68,24.6,17.99,3.076923076923077,System_Software
+questdb/questdb,1_smartdraft_rn_descriptive,0.33333333333333337,1.9056390622295665,617,20.7,12.2,2.030456852791878,System_Software
+questdb/questdb,1_smartdraft_rn_persuasive,0.45833333333333337,2.3685225277282065,859,21.8,12.01,0.5995203836930456,System_Software
+questdb/questdb,2_deeprelease_rn,0.0,1.4353713907745331,149,46.5,17.21,1.948051948051948,System_Software

@@ -1,0 +1,41 @@
+# v0.28.0
+## 📚 docs
+- Updated translation progress for Italian. [#1651](https://github.com/Stirling-Tools/Stirling-PDF/pull/1651) <span style='color:grey;'>(significance=0.31)</span>
+- Modified the HTML structure to replace a file selector with a text input field for entering page numbers, enhancing the user interface for specifying pages to delete. [f165439](https://github.com/Stirling-Tools/Stirling-PDF/commit/f165439d2614f321e897e64829c1e6073e09e28e) <span style='color:grey;'>(significance=0.62)</span>
+- Updated translation progress for Japanese. [#1655](https://github.com/Stirling-Tools/Stirling-PDF/pull/1655) <span style='color:grey;'>(significance=0.33)</span>
+- Portuguese Brazilian translation is now 85% complete. [#1675](https://github.com/Stirling-Tools/Stirling-PDF/pull/1675) <span style='color:grey;'>(significance=0.15)</span>
+## 🐛 fix
+- Japanese translation updated for better localization. [#1654](https://github.com/Stirling-Tools/Stirling-PDF/pull/1654) <span style='color:grey;'>(significance=0.58)</span>
+- Fixes conditional attribute binding for the "multiple" attribute in the file selector fragment. [#1665](https://github.com/Stirling-Tools/Stirling-PDF/pull/1665) <span style='color:grey;'>(significance=0.60)</span>
+- The footer layout and functionality have been improved. [#1674](https://github.com/Stirling-Tools/Stirling-PDF/pull/1674) <span style='color:grey;'>(significance=0.74)</span>
+## 🔧 chore
+- The Brazilian Portuguese translation has been updated for improved clarity and accuracy. Changes to user interface elements like prompts, messages, and labels make them more intuitive and user-friendly for Portuguese-speaking users, enhancing the overall user experience. [#1673](https://github.com/Stirling-Tools/Stirling-PDF/pull/1673) <span style='color:grey;'>(significance=0.42)</span>
+- Updated the Italian localization file to modify the title, description, and tags for removing images from PDFs. [#1661](https://github.com/Stirling-Tools/Stirling-PDF/pull/1661) <span style='color:grey;'>(significance=0.76)</span>
+- The automated dependency updates configuration now limits the number of open pull requests. [909054a](https://github.com/Stirling-Tools/Stirling-PDF/commit/909054a49d8b3befa25d81682e9ab7528cbea257) <span style='color:grey;'>(significance=0.77)</span>
+- Modified the dependabot configuration to include a rebase strategy. [6fa7c2e](https://github.com/Stirling-Tools/Stirling-PDF/commit/6fa7c2e5e128b23658ea6203444f46b2bae89b95) <span style='color:grey;'>(significance=0.77)</span>
+- Minor change to the project's dependencies. [#1670](https://github.com/Stirling-Tools/Stirling-PDF/pull/1670) <span style='color:grey;'>(significance=0.77)</span>
+- Updated the implementation of a security toolkit. [#1667](https://github.com/Stirling-Tools/Stirling-PDF/pull/1667) <span style='color:grey;'>(significance=0.71)</span>
+- Updated project dependencies. [#1684](https://github.com/Stirling-Tools/Stirling-PDF/pull/1684) <span style='color:grey;'>(significance=0.52)</span>
+- Minor update to a dependency. [#1683](https://github.com/Stirling-Tools/Stirling-PDF/pull/1683) <span style='color:grey;'>(significance=0.30)</span>
+- Updated the org.springframework:spring-webmvc dependency version. [#1680](https://github.com/Stirling-Tools/Stirling-PDF/pull/1680) <span style='color:grey;'>(significance=0.58)</span>
+- Minor update to project configuration. [#1686](https://github.com/Stirling-Tools/Stirling-PDF/pull/1686) <span style='color:grey;'>(significance=0.50)</span>
+- Minor update to project dependencies. [#1691](https://github.com/Stirling-Tools/Stirling-PDF/pull/1691) <span style='color:grey;'>(significance=0.49)</span>
+- Updated the dependency-license-report plugin. [#1690](https://github.com/Stirling-Tools/Stirling-PDF/pull/1690) <span style='color:grey;'>(significance=0.75)</span>
+- Updated third-party licenses. [#1687](https://github.com/Stirling-Tools/Stirling-PDF/pull/1687) <span style='color:grey;'>(significance=0.29)</span>
+- Enhanced GitHub workflows with updated build and auto-labeler configurations. Removed test workflow file and improved licenses update process. [#1693](https://github.com/Stirling-Tools/Stirling-PDF/pull/1693) <span style='color:grey;'>(significance=0.54)</span>
+- Modified the auto-labeler.yml file by removing the 'workflows: write' permission from the jobs section. [8997855](https://github.com/Stirling-Tools/Stirling-PDF/commit/8997855922af45ff8b6a6d15373e893d7e441a10) <span style='color:grey;'>(significance=0.57)</span>
+- The build process now triggers on pushes to the main branch and after the "Pull Request Labeler" workflow. The build and docker-compose-tests jobs now exclude pull requests with the 'licenses' label. Permissions for actions, contents, and security-events are set, and a strategy matrix for JDK versions 17 and 21 is introduced. [e89ac84](https://github.com/Stirling-Tools/Stirling-PDF/commit/e89ac84928c48ba4a337ced96c6886fefb69df81) <span style='color:grey;'>(significance=0.51)</span>
+- Modified the GitHub Actions workflow configuration by removing the step that triggered a build workflow via a POST request to the GitHub API. [f5258c5](https://github.com/Stirling-Tools/Stirling-PDF/commit/f5258c593b937c9cdde1367302f08abf2cb9d9c8) <span style='color:grey;'>(significance=0.56)</span>
+- Streamlined the build process by removing complex conditional logic for workflow runs and pull request labels. [8602f38](https://github.com/Stirling-Tools/Stirling-PDF/commit/8602f38fbff87205fc09a79fb0a0407e43e1e13d) <span style='color:grey;'>(significance=0.53)</span>
+- Minor improvements and bug fixes. [#1689](https://github.com/Stirling-Tools/Stirling-PDF/pull/1689) <span style='color:grey;'>(significance=0.76)</span>
+- Updated third-party licenses. [#1695](https://github.com/Stirling-Tools/Stirling-PDF/pull/1695) <span style='color:grey;'>(significance=0.25)</span>
+- Enhancements made to the project. [#1685](https://github.com/Stirling-Tools/Stirling-PDF/pull/1685) <span style='color:grey;'>(significance=0.56)</span>
+- Enhancements to the GitHub Actions workflow for license updates include a new step to automatically approve pull requests if changes are detected. The auto-merge functionality now uses a newer version of the action for smoother integration and management of pull requests. [ea2d755](https://github.com/Stirling-Tools/Stirling-PDF/commit/ea2d7558081b9ce62acf994ad60fc5c6a9b2e17d) <span style='color:grey;'>(significance=0.65)</span>
+- Updated third-party licenses. [#1696](https://github.com/Stirling-Tools/Stirling-PDF/pull/1696) <span style='color:grey;'>(significance=0.28)</span>
+- The update enhances build configuration by standardizing version management across dependencies, streamlining the process and ensuring consistency. [#1697](https://github.com/Stirling-Tools/Stirling-PDF/pull/1697) <span style='color:grey;'>(significance=0.52)</span>
+- Updated third-party licenses. [#1698](https://github.com/Stirling-Tools/Stirling-PDF/pull/1698) <span style='color:grey;'>(significance=0.31)</span>
+- Incremented the version number in the build configuration. [9773138](https://github.com/Stirling-Tools/Stirling-PDF/commit/97731386121a99adba450f98ea93d1b1bdfbb213) <span style='color:grey;'>(significance=0.27)</span>
+- Updated the application version in the project configuration. [#1699](https://github.com/Stirling-Tools/Stirling-PDF/pull/1699) <span style='color:grey;'>(significance=0.14)</span>
+## ✨ feat
+- The update makes tessdata accessible to local Windows users by adding a configurable directory path for tessdata files in the application properties. [#1677](https://github.com/Stirling-Tools/Stirling-PDF/pull/1677) <span style='color:grey;'>(significance=0.69)</span>
+- The update enhances user management in the admin panel by fixing SSO login verification issues and improving error message displays. It introduces new functionalities for managing user sessions and authentication. Improvements include better handling of user roles and statuses, and translations for messages to support multiple languages. [#1658](https://github.com/Stirling-Tools/Stirling-PDF/pull/1658) <span style='color:grey;'>(significance=0.63)</span>

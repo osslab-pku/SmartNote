@@ -1,0 +1,1048 @@
+Changes between v4.6.0 and v4.6.2
+================================================================================
+
+COMMITS
+--------------------------------------------------------------------------------
+
+Commit: 3e6f401be518f0c63d4d8d5ee23b62772187f0f7
+Author: therealrinku
+Date: 2024-02-20 03:40:22+00:00
+Message: feat: shortcut added for reopening last closed tab
+----------------------------------------
+
+Commit: 84da0a4a40c46f31af6d08ba860ea988e8a454d2
+Author: therealrinku
+Date: 2024-03-08 05:46:50+00:00
+Message: feat: added stack for last closed tabs
+----------------------------------------
+
+Commit: 3bfe924a2d2ace332656499f44271b58363edf1e
+Author: therealrinku
+Date: 2024-03-08 06:50:31+00:00
+Message: refactor: move last closed tabs logic to tabmodule
+----------------------------------------
+
+Commit: e3e313e3806029fec2f5d23f63bc14757fef3697
+Author: therealrinku
+Date: 2024-03-08 17:25:26+00:00
+Message: refactor: add last closed tabs from remove mutation
+----------------------------------------
+
+Commit: 71aac70c2936badab7fae8e1a2d4f27c6a4f1b96
+Author: azmy60
+Date: 2024-05-08 12:14:55+00:00
+Message: Merge branch 'master' into feat/open-last-closed-tab
+----------------------------------------
+
+Commit: 2fb587ab4828077d384c4c4807b7a8c6108b3d43
+Author: azmy60
+Date: 2024-05-08 12:59:41+00:00
+Message: duplicate closed tab so we can save it with a new id
+----------------------------------------
+
+Commit: 642a1d62efeea93c8f16b187cb5481f143106439
+Author: azmy60
+Date: 2024-05-08 17:21:37+00:00
+Message: fix multiple tabs per table
+----------------------------------------
+
+Commit: 282984214c6521fbc5db6e9e179c339494e3aa41
+Author: azmy60
+Date: 2024-05-09 12:00:26+00:00
+Message: refactors, check for workspaceId
+----------------------------------------
+
+Commit: 8a41ef953be41189ffa408efd50328a764d8fd18
+Author: azmy60
+Date: 2024-05-09 16:22:05+00:00
+Message: Put tabs in correct position, and assign positions automatically
+
+It's hard to restore closed tabs in the right position, when all
+positions of tabs were always `99`.
+----------------------------------------
+
+Commit: 07770682c78a2e47f5400300591a32522848826e
+Author: Matthew Rathbone
+Date: 2024-06-07 20:45:34+00:00
+Message: Added a special table for supported databases, one page per supported DB
+----------------------------------------
+
+Commit: eba759045feace0860b9c0d714e8db23b3ac58bb
+Author: dependabot[bot]
+Date: 2024-06-18 16:34:06+00:00
+Message: Bump ws from 6.2.2 to 6.2.3
+
+Bumps [ws](https://github.com/websockets/ws) from 6.2.2 to 6.2.3.
+- [Release notes](https://github.com/websockets/ws/releases)
+- [Commits](https://github.com/websockets/ws/compare/6.2.2...6.2.3)
+
+---
+updated-dependencies:
+- dependency-name: ws
+  dependency-type: indirect
+...
+
+Signed-off-by: dependabot[bot] <support@github.com>
+----------------------------------------
+
+Commit: accd0b91d9a8cc49395d0e1c1060d028b75f579a
+Author: Matthew Rathbone
+Date: 2024-06-18 16:34:50+00:00
+Message: Merge pull request #2263 from beekeeper-studio/dependabot/npm_and_yarn/ws-6.2.3
+
+Bump ws from 6.2.2 to 6.2.3
+----------------------------------------
+
+Commit: 79747d86514970c71a499047c73bb4d6139e1998
+Author: Mohammad Azmi
+Date: 2024-06-18 16:40:13+00:00
+Message: Merge branch 'master' into feat/open-last-closed-tab
+----------------------------------------
+
+Commit: 6d9a652df3fc2a63ca9fb40bf50b5c5f8ea2b467
+Author: Matthew Rathbone
+Date: 2024-06-18 19:21:11+00:00
+Message: updated support docs & db support table
+----------------------------------------
+
+Commit: 6ead6bffb4501eea6042937bf859409ae536f3e1
+Author: Matthew Rathbone
+Date: 2024-06-18 20:23:56+00:00
+Message: iterating on db support table and db docs
+----------------------------------------
+
+Commit: daa4fdacbcc81853cbfab57df69b7eacdf542460
+Author: Matthew Rathbone
+Date: 2024-06-19 20:16:47+00:00
+Message: database documentation updated
+----------------------------------------
+
+Commit: 5b19fba38e8b7ddc00bdacffd1504ae342126de0
+Author: Matthew Rathbone
+Date: 2024-06-19 20:17:47+00:00
+Message: Merge pull request #2262 from beekeeper-studio/database-specific-docs
+
+Added a special table for supported databases, one page per supported DB
+----------------------------------------
+
+Commit: 7d3cf82b87ee499d946711048ecaed8c5a795126
+Author: Matthew Rathbone
+Date: 2024-06-19 20:23:08+00:00
+Message: testing readme workflow
+----------------------------------------
+
+Commit: f13d948e1009464f30c45357519f996950050788
+Author: Matthew Rathbone
+Date: 2024-06-19 20:29:38+00:00
+Message: test again
+----------------------------------------
+
+Commit: 58e4afbb97ae1c5701a4f100ac2e1aee3b8cb8f9
+Author: Matthew Rathbone
+Date: 2024-06-19 20:30:40+00:00
+Message: bump
+----------------------------------------
+
+Commit: 54746fae63c438974be374c4bce6568dfe2db257
+Author: Matthew Rathbone
+Date: 2024-06-19 20:33:26+00:00
+Message: bump workflow again
+----------------------------------------
+
+Commit: 9af69d18a39a5d91572f53ea86ee6218bbf8fb60
+Author: Matthew Rathbone
+Date: 2024-06-19 20:34:55+00:00
+Message: workflow try again
+----------------------------------------
+
+Commit: b60693cde3e6fcaead508460f957d3e9ce37da1d
+Author: Matthew Rathbone
+Date: 2024-06-19 20:45:36+00:00
+Message: workflow bug fixes
+----------------------------------------
+
+Commit: 74e04666535c9ede354fab7a9e7d65a9c04a1d6c
+Author: Matthew Rathbone
+Date: 2024-06-19 20:48:35+00:00
+Message: hopefully final workflow change
+----------------------------------------
+
+Commit: 22b8865e659901294e74799e9fa6f1e288bf0ac9
+Author: Matthew Rathbone
+Date: 2024-06-19 20:58:40+00:00
+Message: update
+----------------------------------------
+
+Commit: 21967544c4a1d98319ec2a8c4318845ca05e930c
+Author: Matthew Rathbone
+Date: 2024-06-19 22:30:15+00:00
+Message: last try
+----------------------------------------
+
+Commit: 457674e720640277b589091c5d86982caf48b023
+Author: Matthew Rathbone
+Date: 2024-06-19 22:33:06+00:00
+Message: typo
+----------------------------------------
+
+Commit: 744864a077da92b7b20a3a4a95c82275af17f171
+Author: Matthew Rathbone
+Date: 2024-06-19 22:38:05+00:00
+Message: try using github actions for git stuff
+----------------------------------------
+
+Commit: 15067accd5576be1a3361e4493cacd4bb6093ca6
+Author: Matthew Rathbone
+Date: 2024-06-19 22:39:03+00:00
+Message: supported database final test for today
+----------------------------------------
+
+Commit: 4b62575b77058f7863918ba99fd5043bc9c20172
+Author: Matthew Rathbone
+Date: 2024-06-19 22:41:48+00:00
+Message: db support in es also
+----------------------------------------
+
+Commit: 97be4052e3080fb5ab8103bdcc03ba7c4091f221
+Author: rathboma
+Date: 2024-06-19 22:42:26+00:00
+Message: Update supported databases in README files
+----------------------------------------
+
+Commit: f63722f054947bcd19a6aed5c515c2fa52ad0eb6
+Author: Matthew Rathbone
+Date: 2024-06-19 22:42:45+00:00
+Message: Merge pull request #2272 from beekeeper-studio/updated-readmes-1718836946
+
+Update supported databases in README files
+----------------------------------------
+
+Commit: 3b445e93346bacb2031334c076d8b5b6dc05f395
+Author: Matthew Rathbone
+Date: 2024-06-20 02:19:00+00:00
+Message: Update README.md
+----------------------------------------
+
+Commit: 5bf038d91ba2f19e393980771c44825c87fe5abe
+Author: therealrinku
+Date: 2024-06-20 09:43:16+00:00
+Message: fix: ctrl + c on result table copying wrong values
+----------------------------------------
+
+Commit: 869b56bb3eb66c1d92031951c2d6c90a75933b56
+Author: Matthew Rathbone
+Date: 2024-06-20 15:06:11+00:00
+Message: Merge pull request #2273 from therealrinku/fix/copy
+
+fix: ctrl + c on result table copying wrong values
+----------------------------------------
+
+Commit: ed204b546a4d76a5ed563de78ddccd70d9a5d75d
+Author: Matthew Rathbone
+Date: 2024-06-20 15:06:40+00:00
+Message: Merge pull request #1963 from therealrinku/feat/open-last-closed-tab
+
+feat: shortcut added for reopening last closed tab
+----------------------------------------
+
+Commit: 46537264b68dee80eec1491cbc8d01ffba02b22a
+Author: Will Montgomery
+Date: 2024-06-23 17:15:08+00:00
+Message: fix: add columns and total count the queryStream in order to get headers on csvs and whatnot
+----------------------------------------
+
+Commit: 89c59c3303107029d28a6888676dabd6608952c3
+Author: Matthew Rathbone
+Date: 2024-06-25 00:53:30+00:00
+Message: Launcher script now defaults to --no-sandbox
+
+- This has become an issue as distros have started disabling clone for non-root users
+- This is the only viable option for now
+----------------------------------------
+
+Commit: 8799ecbd8f183b38720bcbe5f0631ae03a884f04
+Author: Will Montgomery
+Date: 2024-06-25 02:27:19+00:00
+Message: Merge branch 'master' into bugfix/2280_HeadersNotInExport
+----------------------------------------
+
+Commit: b4dd269e9f7adfc4bdefe287b3a8a9717220fa18
+Author: azmy60
+Date: 2024-06-26 00:47:10+00:00
+Message: fix zero input converts to null
+----------------------------------------
+
+Commit: 06635e4888db9e0648c67124e52930e4abc01abd
+Author: Matthew Rathbone
+Date: 2024-06-26 14:36:10+00:00
+Message: Merge pull request #2286 from beekeeper-studio/fix/zero-to-null
+
+fix zero input converts to null
+----------------------------------------
+
+Commit: 8a8f4360f5ae5b6074516303e2d54fec2d69e646
+Author: Matthew Rathbone
+Date: 2024-06-26 14:38:45+00:00
+Message: Merge pull request #2281 from beekeeper-studio/bugfix/2280_HeadersNotInExport
+
+fix: add columns and total count the queryStream in order to get head…
+----------------------------------------
+
+Commit: c9824f2853d9488ae9f59ced9deaf1682b76ae22
+Author: Matthew Rathbone
+Date: 2024-06-26 17:42:55+00:00
+Message: patch release bump
+----------------------------------------
+
+
+PULL REQUESTS
+--------------------------------------------------------------------------------
+
+PR #1963: feat: shortcut added for reopening last closed tab
+Author: therealrinku
+Merged at: 2024-06-20 15:06:40+00:00
+URL: https://github.com/beekeeper-studio/beekeeper-studio/pull/1963
+Description:
+addressing: #1768 
+
+added Ctrl+Shift+T shortcut to re-open recently closed tab
+----------------------------------------
+
+PR #2281: fix: add columns and total count the queryStream in order to get head…
+Author: wmontgomery
+Merged at: 2024-06-26 14:38:45+00:00
+URL: https://github.com/beekeeper-studio/beekeeper-studio/pull/2281
+Description:
+…ers on csvs and whatnot
+
+resolves #2280 
+
+![image](https://github.com/beekeeper-studio/beekeeper-studio/assets/314613/20adfe8d-5e27-4048-b5bb-c46eef5de414)
+
+----------------------------------------
+
+PR #2286: fix zero input converts to null
+Author: azmy60
+Merged at: 2024-06-26 14:36:10+00:00
+URL: https://github.com/beekeeper-studio/beekeeper-studio/pull/2286
+Description:
+fix #2279
+----------------------------------------
+
+PR #2273: fix: ctrl + c on result table copying wrong values
+Author: therealrinku
+Merged at: 2024-06-20 15:06:11+00:00
+URL: https://github.com/beekeeper-studio/beekeeper-studio/pull/2273
+Description:
+fixes: #2267 
+
+problem is when doing ctrl + c, copySelection functions runs for each opened query's ResultTable not just the currently active query's ResultTable which overrides the last copied value, not sure if that's expected behaviour or it's a bug itself
+
+for now, I have just added a check to know if it's a active query tab before copying the value on ctrl + c
+----------------------------------------
+
+PR #2272: Update supported databases in README files
+Author: github-actions[bot]
+Merged at: 2024-06-19 22:42:46+00:00
+URL: https://github.com/beekeeper-studio/beekeeper-studio/pull/2272
+Description:
+This PR updates the supported databases section in the README files.
+----------------------------------------
+
+PR #2262: Added a special table for supported databases, one page per supported DB
+Author: rathboma
+Merged at: 2024-06-19 20:17:47+00:00
+URL: https://github.com/beekeeper-studio/beekeeper-studio/pull/2262
+Description:
+None
+----------------------------------------
+
+PR #2263: Bump ws from 6.2.2 to 6.2.3
+Author: dependabot[bot]
+Merged at: 2024-06-18 16:34:50+00:00
+URL: https://github.com/beekeeper-studio/beekeeper-studio/pull/2263
+Description:
+Bumps [ws](https://github.com/websockets/ws) from 6.2.2 to 6.2.3.
+<details>
+<summary>Release notes</summary>
+<p><em>Sourced from <a href="https://github.com/websockets/ws/releases">ws's releases</a>.</em></p>
+<blockquote>
+<h2>6.2.3</h2>
+<h1>Bug fixes</h1>
+<ul>
+<li>Backported e55e5106 to the 6.x release line (eeb76d31).</li>
+</ul>
+</blockquote>
+</details>
+<details>
+<summary>Commits</summary>
+<ul>
+<li><a href="https://github.com/websockets/ws/commit/d87f3b6d3a00513af9bbb74f45ba9183af4e5f43"><code>d87f3b6</code></a> [dist] 6.2.3</li>
+<li><a href="https://github.com/websockets/ws/commit/eeb76d313e2a00dd5247ca3597bba7877d064a63"><code>eeb76d3</code></a> [security] Fix crash when the Upgrade header cannot be read (<a href="https://redirect.github.com/websockets/ws/issues/2231">#2231</a>)</li>
+<li>See full diff in <a href="https://github.com/websockets/ws/compare/6.2.2...6.2.3">compare view</a></li>
+</ul>
+</details>
+<br />
+
+
+[![Dependabot compatibility score](https://dependabot-badges.githubapp.com/badges/compatibility_score?dependency-name=ws&package-manager=npm_and_yarn&previous-version=6.2.2&new-version=6.2.3)](https://docs.github.com/en/github/managing-security-vulnerabilities/about-dependabot-security-updates#about-compatibility-scores)
+
+Dependabot will resolve any conflicts with this PR as long as you don't alter it yourself. You can also trigger a rebase manually by commenting `@dependabot rebase`.
+
+[//]: # (dependabot-automerge-start)
+[//]: # (dependabot-automerge-end)
+
+---
+
+<details>
+<summary>Dependabot commands and options</summary>
+<br />
+
+You can trigger Dependabot actions by commenting on this PR:
+- `@dependabot rebase` will rebase this PR
+- `@dependabot recreate` will recreate this PR, overwriting any edits that have been made to it
+- `@dependabot merge` will merge this PR after your CI passes on it
+- `@dependabot squash and merge` will squash and merge this PR after your CI passes on it
+- `@dependabot cancel merge` will cancel a previously requested merge and block automerging
+- `@dependabot reopen` will reopen this PR if it is closed
+- `@dependabot close` will close this PR and stop Dependabot recreating it. You can achieve the same result by closing it manually
+- `@dependabot show <dependency name> ignore conditions` will show all of the ignore conditions of the specified dependency
+- `@dependabot ignore this major version` will close this PR and stop Dependabot creating any more for this major version (unless you reopen the PR or upgrade to it yourself)
+- `@dependabot ignore this minor version` will close this PR and stop Dependabot creating any more for this minor version (unless you reopen the PR or upgrade to it yourself)
+- `@dependabot ignore this dependency` will close this PR and stop Dependabot creating any more for this dependency (unless you reopen the PR or upgrade to it yourself)
+You can disable automated security fix PRs for this repo from the [Security Alerts page](https://github.com/beekeeper-studio/beekeeper-studio/network/alerts).
+
+</details>
+----------------------------------------
+
+
+FILE CHANGES
+--------------------------------------------------------------------------------
+
+File: .github/workflows/update-readmes.yml
+Status: added
+Changes: +79 -0
+Diff:
+@@ -0,0 +1,79 @@
++name: Update README with Supported Databases
++
++on:
++  push:
++    branches:
++      - master
++  workflow_dispatch:
++
++jobs:
++  update-readme:
++    runs-on: ubuntu-latest
++
++    steps:
++      - name: Checkout repository
++        uses: actions/checkout@v4
++        with:
++          fetch-depth: 10
++
++      - name: Set up Node.js
++        uses: actions/setup-node@v3
++        with:
++          node-version: '16'
++
++      - name: Check if supported_databases.md changed
++        id: check_changes
+
+----------------------------------------
+
+File: .gitignore
+Status: modified
+Changes: +1 -0
+Diff:
+@@ -21,3 +21,4 @@ yarn-error.log
+ .instant/
+ cli.zip
+ apps/studio/test-results
++*.db
+\ No newline at end of file
+
+----------------------------------------
+
+File: README-es.md
+Status: modified
+Changes: +31 -9
+Diff:
+@@ -36,14 +36,36 @@ Una de nuestras frustraciones con otros editores de SQL y software de gestión d
+ 
+ Beekeeper Studio se puede conectar con las siguientes bases de datos:
+ 
+-- SQLite
+-- MySQL
+-- MariaDB
+-- TiDB
+-- Postgres
+-- CockroachDB
+-- SQL Server
+-- Amazon Redshift
++<!-- SUPPORT_BEGIN -->
++
++| Database                                                 | Support                      | Community | Ultimate |                             Beekeeper Links |
++| :------------------------------------------------------- | :--------------------------- | :-------: | :------: | -----------------------------------------: |
++| [PostgreSQL](https://postgresql.org)                     | ⭐ Full Support              |    ✅     |    ✅    |  [Features](https://beekeeperstudio.io/db/postgres-client) |
++| [MySQL](https://www.mysql.com/)                          | ⭐ Full Support              |    ✅     |    ✅    |  [Features](https://beekeeperstudio.io/db/mysql-client)|
+
+----------------------------------------
+
+File: README.md
+Status: modified
+Changes: +34 -19
+Diff:
+@@ -11,11 +11,42 @@ We publish binaries for MacOS, Windows, and Linux.
+ 
+ 👉 [Join the community Slack](https://launchpass.com/beekeeperstud-lvg5276)
+ 
+-👉 Love Beekeeper Studio? [Leave us a testimonial!](https://testimonial.to/beekeeper-studio)
++
++## Supported Databases
++
++<!-- SUPPORT_BEGIN -->
++
++| Database                                                 | Support                      | Community | Ultimate |                             Beekeeper Links |
++| :------------------------------------------------------- | :--------------------------- | :-------: | :------: | -----------------------------------------: |
++| [PostgreSQL](https://postgresql.org)                     | ⭐ Full Support              |    ✅     |    ✅    |  [Features](https://beekeeperstudio.io/db/postgres-client) |
++| [MySQL](https://www.mysql.com/)                          | ⭐ Full Support              |    ✅     |    ✅    |  [Features](https://beekeeperstudio.io/db/mysql-client)|
++| [SQLite](https://sqlite.org)                             | ⭐ Full Support              |    ✅     |    ✅    |   [Features](https://beekeeperstudio.io/db/sqlite-client), [Docs](https://docs.beekeeperstudio.io/user_guide/connecting/sqlite) |
++| [SQL Server](https://www.microsoft.com/en-us/sql-server) | ⭐ Full Support              |    ✅     |    ✅    |   [Features](https://beekeeperstudio.io/db/sql-server-client)  |
++| [Amazon Redshift](https://aws.amazon.com/redshift/)      | ⭐ Full Support              |    ✅     |    ✅    |    [Features](https://beekeeperstudio.io/db/redshift-client) |
++| [CockroachDB](https://www.cockroachlabs.com/)            | ⭐ Full Support              |    ✅     |    ✅    | [Features](https://beekeeperstudio.io/db/cockroachdb-client)|
++| [MariaDB](https://mariadb.org/)                          | ⭐ Full Support              |    ✅     |    ✅    |     [Features](https://beekeeperstudio.io/db/mariadb-client) |
++| [TiDB](https://pingcap.com/products/tidb/)               | ⭐ Full Support              |    ✅     |    ✅    |        [Features](https://beekeeperstudio.io/db/tidb-client) |
++| [Google BigQuery](https://cloud.google.com/bigquery)     | ⭐ Full Support             |    ✅     |    ✅    |    [Features](https://beekeeperstudio.io/db/google-big-query-client), [Docs](https://docs.beekeeperstudio.io/user_guide/connecting/bigquery) |
++| [Oracle Database](https://www.oracle.com/database/)      | ⭐ Full Support              |           |    ✅    |      [Features](https://beekeeperstudio.io/db/oracle-client), [Docs](https://docs.beekeeperstudio.io/user_guide/connecting/oracle) |
++| [Cassandra](http://cassandra.apache.org/)                | ⭐ Full Support              |           |    ✅    |   [Features](https://beekeeperstudio.io/db/cassandra-client) |
++| [Firebird](https://firebirdsql.org/)                     | 🅱 Beta Support              |           |    ✅    |    [Features](https://beekeeperstudio.io/db/firebird-client) |
++| [LibSQL](https://libsql.org/)                            | 🅱 Beta Support               |           |    ✅    |      [Features](https://beekeeperstudio.io/db/libsql-client) |
+
+----------------------------------------
+
+File: README.pt-br.md
+Status: modified
+Changes: +36 -4
+Diff:
+@@ -2,16 +2,50 @@
+ 
+ - A funcionalidade de atualização automática estava quebrada nas versões anteriores a 1.7.5. Por favor, faça atualização de forma manual a partir da seção de [release](https://github.com/beekeeper-studio/beekeeper-studio/releases).
+ 
+-# Beekeeper Studio
++
++![image](https://user-images.githubusercontent.com/279769/203650152-4a34af1f-8a38-47cf-a273-d34d1c84feeb.png)
+ 
+ Beekeeper Studio é um editor e gerenciador SQL de banco de dados multiplataforma, disponível para Linux, MacOS e Windows.
+ 
+-Beekeeper Studio usa a licença MIT, portanto é livre e grátis.
++Beekeeper Studio usa a licença GPLv3, portanto é livre e grátis.
+ 
+ Baixe agora [do nosso site](https://beekeeperstudio.io).
+ 
+ Curtiu o Beekeeper Studio e quer contribuir, mas não com código? [Temos algumas ideias pra você!](https://github.com/beekeeper-studio/beekeeper-studio/issues/287)
+ 
++## Suporte a Bancos de Dados
++
++<!-- SUPPORT_BEGIN -->
+
+----------------------------------------
+
+File: apps/studio/build/launcher-script.sh
+Status: modified
+Changes: +2 -17
+Diff:
+@@ -2,8 +2,6 @@
+ # set this for debugging
+ # set -euxo pipefail
+ 
+-CLONE=/proc/sys/kernel/unprivileged_userns_clone
+-
+ SOURCE="${BASH_SOURCE[0]}"
+ while [ -h "$SOURCE" ]; do # resolve $SOURCE until the file is no longer a symlink
+   SCRIPT_DIR="$( cd -P "$( dirname "$SOURCE" )" >/dev/null 2>&1 && pwd )"
+@@ -23,18 +21,5 @@ if [[ -f $XDG_CONFIG_HOME/bks-flags.conf ]]; then
+
+----------------------------------------
+
+File: apps/studio/package.json
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -1,6 +1,6 @@
+ {
+   "name": "beekeeper-studio",
+-  "version": "4.6.0",
++  "version": "4.6.2",
+   "private": true,
+   "description": "An easy-to use SQL query editor and database UI for Mac, Windows, and Linux",
+   "author": {
+
+----------------------------------------
+
+File: apps/studio/src/common/appdb/models/OpenTab.ts
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -7,7 +7,7 @@ import _ from 'lodash'
+ 
+ type TabType = 'query' | 'table' | 'table-properties' | 'settings' | 'table-builder' | 'backup' | 'import-export-database' | 'restore' | 'import-table'
+ 
+-const pickable = ['title', 'tabType', 'unsavedChanges', 'unsavedQueryText', 'tableName', 'schemaName']
++const pickable = ['title', 'tabType', 'unsavedChanges', 'unsavedQueryText', 'tableName', 'schemaName', 'entityType', 'titleScope', 'connectionId', 'workspaceId', 'position']
+ 
+ 
+ @Entity({ name: 'tabs'})
+
+----------------------------------------
+
+File: apps/studio/src/components/CoreTabHeader.vue
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -171,7 +171,7 @@ import TabIcon from './tab/TabIcon.vue'
+       },
+       tableTabTitle() {
+         if (!this.tab.type === 'table') return null;
+-        let result = this.tab.table.name
++        let result = this.tab.tableName
+         return result
+       },
+       queryTabTitle() {
+
+----------------------------------------
+
+File: apps/studio/src/components/CoreTabs.vue
+Status: modified
+Changes: +5 -1
+Diff:
+@@ -363,6 +363,7 @@ export default Vue.extend({
+     },
+     keymap() {
+       const result = {
++        'ctrl+shift+T': this.reopenLastClosedTab,
+         'ctrl+tab': this.nextTab,
+         'ctrl+shift+tab': this.previousTab,
+         'alt+1': this.handleAltNumberKeyPress,
+@@ -524,9 +525,12 @@ export default Vue.extend({
+     },
+
+----------------------------------------
+
+File: apps/studio/src/components/editor/ResultTable.vue
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -172,7 +172,7 @@
+         });
+       },
+       copySelection() {
+-        if (!document.activeElement.classList.contains('tabulator-tableholder')) return
++        if (!this.active || !document.activeElement.classList.contains('tabulator-tableholder')) return
+         copyRange({ range: _.last(this.tabulator.getRanges()), type: 'plain' })
+       },
+       dataToJson(rawData, firstObjectOnly) {
+
+----------------------------------------
+
+File: apps/studio/src/components/tableview/TableTable.vue
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -1014,7 +1014,7 @@ export default Vue.extend({
+         const result = {}
+         columnNames.forEach((c) => {
+           const d = rowData[c]
+-          if (this.isPrimaryKey(c) && !d) {
++          if (this.isPrimaryKey(c) && (!d && d != 0)) {
+             // do nothing
+           } else {
+             result[c] = d
+
+----------------------------------------
+
+File: apps/studio/src/lib/db/clients/BasicDatabaseClient.ts
+Status: modified
+Changes: +19 -0
+Diff:
+@@ -26,6 +26,11 @@ export interface QueryLogOptions {
+     error?: string
+ }
+ 
++interface ColumnsAndTotalRows {
++  columns: TableColumn[]
++  totalRows: number
++}
++
+ // this provides the ability to get the current tab information, plus provides
+ // a way to log the data to a table in the app sqlite.
+
+----------------------------------------
+
+File: apps/studio/src/lib/db/clients/bigquery.ts
+Status: modified
+Changes: +3 -2
+Diff:
+@@ -431,11 +431,12 @@ export class BigQueryClient extends BasicDatabaseClient<BigQueryResult> {
+ 
+   async queryStream(query: string, chunkSize: number): Promise<StreamResults> {
+     const theCursor = new BigQueryCursor(this.client, query, [], chunkSize);
++    const { columns, totalRows } = await this.getColumnsAndTotalRows(query)
+     log.debug('results', theCursor);
+ 
+     return {
+-      totalRows: undefined, // rowCount,
+-      columns: undefined, // theCursor.result.columns,
+
+----------------------------------------
+
+File: apps/studio/src/lib/db/clients/mysql.ts
+Status: modified
+Changes: +4 -2
+Diff:
+@@ -1266,9 +1266,11 @@ export class MysqlClient extends BasicDatabaseClient<ResultType> {
+     const theCursor = new MysqlCursor(this.conn, query, [], chunkSize);
+     log.debug("results", theCursor);
+ 
++    const { columns, totalRows } = await this.getColumnsAndTotalRows(query)
++
+     return {
+-      totalRows: undefined, // rowCount,
+-      columns: undefined, // theCursor.result.columns,
++      totalRows,
+
+----------------------------------------
+
+File: apps/studio/src/lib/db/clients/oracle.ts
+Status: modified
+Changes: +3 -2
+Diff:
+@@ -708,9 +708,10 @@ export class OracleClient extends BasicDatabaseClient<DriverResult> {
+   }
+ 
+   async queryStream(query: string, chunkSize: number): Promise<StreamResults> {
++    const { columns, totalRows } = await this.getColumnsAndTotalRows(query)
+     return {
+-      totalRows: undefined,
+-      columns: undefined,
++      totalRows,
++      columns,
+
+----------------------------------------
+
+File: apps/studio/src/lib/db/clients/postgresql.ts
+Status: modified
+Changes: +4 -2
+Diff:
+@@ -913,9 +913,11 @@ export class PostgresClient extends BasicDatabaseClient<QueryResult> {
+       chunkSize
+     }
+ 
++    const { columns, totalRows } = await this.getColumnsAndTotalRows(query)
++
+     return {
+-      totalRows: undefined, // totalRecords,
+-      columns: undefined, // columns,
++      totalRows,
+
+----------------------------------------
+
+File: apps/studio/src/lib/db/clients/sqlite.ts
+Status: modified
+Changes: +4 -2
+Diff:
+@@ -458,9 +458,11 @@ export class SqliteClient extends BasicDatabaseClient<SqliteResult> {
+   }
+ 
+   async queryStream(query: string, chunkSize: number): Promise<StreamResults> {
++    const { columns, totalRows } = await this.getColumnsAndTotalRows(query)
++
+     return {
+-      totalRows: undefined,
+-      columns: undefined,
++      totalRows,
+
+----------------------------------------
+
+File: apps/studio/src/lib/db/clients/sqlserver.ts
+Status: modified
+Changes: +3 -2
+Diff:
+@@ -705,9 +705,10 @@ export class SQLServerClient extends BasicDatabaseClient<SQLServerResult> {
+   }
+ 
+   async queryStream(query: string, chunkSize: number): Promise<StreamResults> {
++    const { columns, totalRows } = await this.getColumnsAndTotalRows(query)
+     return {
+-      totalRows: undefined,
+-      columns: undefined,
++      totalRows,
++      columns,
+
+----------------------------------------
+
+File: apps/studio/src/store/modules/TabModule.ts
+Status: modified
+Changes: +35 -9
+Diff:
+@@ -8,15 +8,17 @@ const log = rawLog.scope('TabModule')
+ 
+ interface State {
+   tabs: OpenTab[],
+-  active?: OpenTab
++  active?: OpenTab,
++  lastClosedTabs: OpenTab[]
+ }
+ 
+ 
+ export const TabModule: Module<State, RootState> = {
+   namespaced: true,
+   state: () => ({
+     tabs: [],
+-    active: undefined
++    active: undefined,
++    lastClosedTabs: [],
+   }),
+   getters: {
+     sortedTabs(state) {
+@@ -47,13 +49,21 @@ export const TabModule: Module<State, RootState> = {
+     },
+     add(state, nu: OpenTab) {
+       state.tabs.push(nu)
++
++      // Prevent multiple tabs per table
++      const existingTabInClosedTabs = state.lastClosedTabs.find((tab) => tab.matches(nu))
++      if (existingTabInClosedTabs) {
++        state.lastClosedTabs = _.without(state.lastClosedTabs, existingTabInClosedTabs)
++      }
+     },
+
+----------------------------------------
+
+File: docs/_redirects
+Status: modified
+Changes: +1 -0
+Diff:
+@@ -22,3 +22,4 @@ https://docs.beekeeperstudio.io/docs/importing-data-csv-json-etc /user_guide/imp
+ https://docs.beekeeperstudio.io/docs/editing-data /user_guide/modify-tables/ 301!
+ https://docs.beekeeperstudio.io/docs/query-magics /user_guide/query-magics/ 301!
+ https://docs.beekeeperstudio.io/docs/using-the-sql-editor /user_guide/using-the-sql-editor/ 301!
++/user_guide/connecting/first-page/ /user_guide/connecting/supported-databases/
+
+----------------------------------------
+
+File: docs/assets/images/instant-client-download.png
+Status: added
+Changes: +0 -0
+
+----------------------------------------
+
+File: docs/includes/supported_databases.md
+Status: added
+Changes: +26 -0
+Diff:
+@@ -0,0 +1,26 @@
++
++| Database                                                 | Support                      | Community | Ultimate |                             Beekeeper Links |
++| :------------------------------------------------------- | :--------------------------- | :-------: | :------: | -----------------------------------------: |
++| [PostgreSQL](https://postgresql.org)                     | ⭐ Full Support              |    ✅     |    ✅    |  [Features](https://beekeeperstudio.io/db/postgres-client) |
++| [MySQL](https://www.mysql.com/)                          | ⭐ Full Support              |    ✅     |    ✅    |  [Features](https://beekeeperstudio.io/db/mysql-client)|
++| [SQLite](https://sqlite.org)                             | ⭐ Full Support              |    ✅     |    ✅    |   [Features](https://beekeeperstudio.io/db/sqlite-client), [Docs](https://docs.beekeeperstudio.io/user_guide/connecting/sqlite) |
++| [SQL Server](https://www.microsoft.com/en-us/sql-server) | ⭐ Full Support              |    ✅     |    ✅    |   [Features](https://beekeeperstudio.io/db/sql-server-client)  |
++| [Amazon Redshift](https://aws.amazon.com/redshift/)      | ⭐ Full Support              |    ✅     |    ✅    |    [Features](https://beekeeperstudio.io/db/redshift-client) |
++| [CockroachDB](https://www.cockroachlabs.com/)            | ⭐ Full Support              |    ✅     |    ✅    | [Features](https://beekeeperstudio.io/db/cockroachdb-client)|
+
+----------------------------------------
+
+File: docs/javascript/extra.js
+Status: added
+Changes: +45 -0
+Diff:
+@@ -0,0 +1,45 @@
++// Description: Open external links in a new tab and PDF links in a new tab
++// Source: https://jekyllcodex.org/without-plugin/new-window-fix/
++
++//open external links in a new window
++function external_new_window() {
++    for (let c = document.getElementsByTagName("a"), a = 0; a < c.length; a++) {
++        let b = c[a];
++        if (b.getAttribute("href") && b.hostname !== location.hostname) {
++            b.target = "_blank";
++            b.rel = "noopener";
++        }
++    }
++}
++//open PDF links in a new window
+
+----------------------------------------
+
+File: docs/stylesheets/extra.css
+Status: modified
+Changes: +12 -0
+Diff:
+@@ -32,6 +32,18 @@
+ 
+ }
+ 
++article {
++    a:hover {
++        text-decoration: underline;
++    }
++}
++
+
+----------------------------------------
+
+File: docs/user_guide/connecting/connecting.md
+Status: renamed
+Changes: +24 -24
+Diff:
+@@ -1,27 +1,27 @@
+ ---
+-title: Overview
++title: Connecting To A Database
+ summary: "How to start using Beekeeper Studio with your database of choice."
+ old_url: "https://docs.beekeeperstudio.io/docs/first-page"
+ ---
+ 
+-The connection screen allows you to enter connection information for your database.
++Connecting to your database from Beekeeper Studio is easy. You can connect to a database in a few different ways:
+ 
+-## Supported Database Types
++1. For SQLite databases, you can simply double click the file in your file browser
++2. For other databases, you can specify host & port, or the unix socket path.
++3. Some cloud vendors support connecting with custom authentication methods, Beekeeper Studio supports many of these too (eg: SSO for Azure SQL).
+ 
+-Beekeeper Studio currently supports the following database types:
+ 
+-- PostgreSQL
+-- MySQL
+-- SQLite
+-- SQL Server (2005 onwards works)
+
+----------------------------------------
+
+File: docs/user_guide/connecting/oracle-database.md
+Status: modified
+Changes: +29 -12
+Diff:
+@@ -4,14 +4,22 @@ summary: "Specific instructions for making connections with Oracle Database"
+ old_url: "https://docs.beekeeperstudio.io/docs/oracle-database"
+ ---
+ 
+-There are a number of ways you can connect to an Oracle database using Beekeeper Studio.
++## Requirements
+ 
+-1. PSA connection string
+-1. SID or Service Name connection string
+-2. TSA alias
+-3. Host and port
++1. On all operating systems you must have the Oracle Instant Client installed.
++2. On Linux you must have `libaio` installed.
++3. On MacOS you must be using the `Intel` version of Beekeeper Studio. This is because Oracle does not publish an `Apple Silicon` version of the Instant Client.
++
++Below are specific instructions for each of the above requirements
++
++### Download Oracle Instant Client
++
++Download the Instant Client [from the Oracle website](https://www.oracle.com/cis/database/technologies/instant-client/downloads.html).
++
++Choose the download for your operating system.
++
+
+----------------------------------------
+
+File: docs/user_guide/connecting/sqlite.md
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -6,7 +6,7 @@ old_url: "https://docs.beekeeperstudio.io/docs/sqlite"
+ 
+ Connecting to a SQLite database from the app is pretty easy, simply select `SQLite` from the dropdown, choose your SQLite file, then click `connect`.
+ 
+-## File associations
++## Double click .db and .sqlite3 files
+ 
+ When you install Beekeeper Studio it will create an association for files with the following extensions: `.db`, `.sqlite3`, and `.sqlite`.
+ 
+
+----------------------------------------
+
+File: docs/user_guide/connecting/supported-databases.md
+Status: added
+Changes: +15 -0
+Diff:
+@@ -0,0 +1,15 @@
++---
++title: Supported Databases
++summary: "Beekeeper Studio supports a wide range of databases, with more being added all the time. Check out the list below to see if your database is supported."
++old_url: "https://docs.beekeeperstudio.io/docs/first-page"
++---
++
++Beekeeper Studio has **full feature parity** across all supported operating systems, so the databases below work the same on Windows, MacOS, and Linux.
++
++For documentation on connecting to your first database see the [database connection guide](./connecting.md)
+
+----------------------------------------
+
+File: mkdocs.yml
+Status: modified
+Changes: +21 -12
+Diff:
+@@ -30,12 +30,12 @@ theme:
+     - navigation.sections
+     - navigation.footer
+     - navigation.top
+-    - navigation.expand
+     - search.suggest
+     - search.highlight
+     - content.action.edit
+     - content.action.view
+     - content.code.copy
++    - content.tooltips
+ 
+   palette:
+     scheme: slate
+@@ -44,15 +44,17 @@ theme:
+ 
+ extra_css:
+   - stylesheets/extra.css
++extra_javascript:
++  - javascript/extra.js
+ plugins:
+   - search
++  - include-markdown
+ #  - social:
+ #      cards_layout_options:
+
+----------------------------------------
+
+File: requirements.txt
+Status: modified
+Changes: +1 -0
+Diff:
+@@ -1,2 +1,3 @@
+ mkdocs-material
+ mkdocs-material[imaging]
++mkdocs-include-markdown-plugin
+
+----------------------------------------
+
+File: yarn.lock
+Status: modified
+Changes: +9 -9
+Diff:
+@@ -17265,21 +17265,21 @@ write@1.0.3:
+     mkdirp "^0.5.1"
+ 
+ ws@^6.0.0, ws@^6.2.1:
+-  version "6.2.2"
+-  resolved "https://registry.yarnpkg.com/ws/-/ws-6.2.2.tgz#dd5cdbd57a9979916097652d78f1cc5faea0c32e"
+-  integrity sha512-zmhltoSR8u1cnDsD43TX59mzoMZsLKqUweyYBAIvTngR3shc0W6aOZylZmq/7hqyVxPdi+5Ud2QInblgyE72fw==
++  version "6.2.3"
++  resolved "https://registry.yarnpkg.com/ws/-/ws-6.2.3.tgz#ccc96e4add5fd6fedbc491903075c85c5a11d9ee"
++  integrity sha512-jmTjYU0j60B+vHey6TfR3Z7RD61z/hmxBS3VMSGIrroOWXQEneK1zNuotOUrGyBHQj0yrpsLHPWtigEFd13ndA==
+
+----------------------------------------
+

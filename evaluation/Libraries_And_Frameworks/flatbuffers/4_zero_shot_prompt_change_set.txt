@@ -1,0 +1,3268 @@
+Changes between v24.3.7 and v24.3.25
+================================================================================
+
+COMMITS
+--------------------------------------------------------------------------------
+
+Commit: 960cd4d635b98fc5daeeafee8b0a5601d45c70ad
+Author: Wouter van Oortmerssen
+Date: 2024-03-09 05:31:55+00:00
+Message: Lobster: Support required fields
+----------------------------------------
+
+Commit: b1f617fcb2821f67453dc037cd0a6ebd8eb44de0
+Author: Thomas Hartwig
+Date: 2024-03-11 23:45:30+00:00
+Message: Fix License (#8253)
+
+The previous license value was not suitable for most software license scanners. Listing the actual license string in the package.json fixes this
+----------------------------------------
+
+Commit: 67eb95de9281087ccbba9aafd6e8ab1958d12045
+Author: Derek Bailey
+Date: 2024-03-12 00:16:04+00:00
+Message: `presubmit.yml`: Use xcode 14.2
+
+It appears the upgrade to xcode 14.3 broke the macos build on builkite.
+The last good build was using xcode 14.2, so go back to this version
+until the issue is resolved.
+----------------------------------------
+
+Commit: 0cfb7eb80b05c058e19e50fb575263908e601469
+Author: mpawlowski-eyeo
+Date: 2024-03-25 17:39:51+00:00
+Message: Fix handling non null-terminated string_views in LookupByKey (#8203)
+
+* Reproduce the error in a unit test
+
+Reproduces #8200
+
+* Overload KeyCompareWithValue to work for string-like objects
+
+This fixes #8200.
+
+* Extra tests
+
+---------
+
+Co-authored-by: Derek Bailey <derekbailey@google.com>
+----------------------------------------
+
+Commit: 595bf0007ab1929570c7671f091313c8fc20644e
+Author: Derek Bailey
+Date: 2024-03-26 05:05:28+00:00
+Message: FlatBuffers Version v24.3.25
+----------------------------------------
+
+
+PULL REQUESTS
+--------------------------------------------------------------------------------
+
+PR #8203: Fix handling non null-terminated string_views in LookupByKey
+Author: mpawlowski-eyeo
+Merged at: 2024-03-25 17:39:51+00:00
+URL: https://github.com/google/flatbuffers/pull/8203
+Description:
+This addresses #8200.
+
+The overall idea:
+- string-type keys are stored in flatbuffers as `char*` null-terminated arrays.
+- `LookupByKey` only works correctly with `const char*` null-terminated arguments because it ends up calling `std::bsearch` that compares `T::key_member()` with the argument via `strcmp`
+- Non-null terminated strings, like a string_view that is size()-terminated, could also be used by `LookupByKey`
+- I introduce an overload of `KeyCompareWithValue` that should work for any string-like type that can compare itself to a `const char*` via `operator<`
+
+
+Here's an example when this could be useful:
+
+```
+// schema
+table FilesystemPermissions {
+  path: string (key);
+  access_granted: bool;
+}
+```
+
+```
+// C++
+
+bool HasPermission(const std::string& path) {
+  std::string_view sub_path = path;
+  while (!sub_path.empty()) {
+    auto* perm = filesystem_permissions()->LookupByKey(sub_path);
+    if (perm && perm->access_granted)
+      return true;
+    // maybe there's a permission for the parent folder?
+    sub_path.remove_suffix(sub_path.size() - sub_path.rfind('/'));
+  }
+  return false;
+}
+```
+if `path` is "/usr/local/bin/calculator"
+and `filesystem_permissions()` contains:
+` "/usr" -> access_granted: true`
+ I expect the `LookupByKey(sub_path)` to search for:
+"/usr/local/bin/calculator"
+"/usr/local/bin"
+"/usr/local"
+"/usr" -> Found!
+
+Instead, `LookupByKey(sub_path.c_str())` searches for "/usr/local/bin/calculator" 5 times,
+because `sub_path.remove_suffix()` does not modify path, does not insert
+a null terminator, only reduces the `size()` of `sub_path`.
+
+----------------------------------------
+
+PR #8253: Fix License
+Author: p0fi
+Merged at: 2024-03-11 23:45:30+00:00
+URL: https://github.com/google/flatbuffers/pull/8253
+Description:
+## 📖 Description
+The previous license value was not suitable for most software license scanners. Listing the actual license string in the package.json fixes this
+
+----------------------------------------
+
+
+FILE CHANGES
+--------------------------------------------------------------------------------
+
+File: .bazelci/presubmit.yml
+Status: modified
+Changes: +1 -0
+Diff:
+@@ -31,6 +31,7 @@ platforms:
+     test_targets:
+     - "//..."
+   macos:
++    xcode_version: "14.2"
+     build_targets:
+     - "//..."
+     test_targets:
+
+----------------------------------------
+
+File: CHANGELOG.md
+Status: modified
+Changes: +5 -0
+Diff:
+@@ -4,6 +4,11 @@ All major or breaking changes will be documented in this file, as well as any
+ new features that should be highlighted. Minor fixes or improvements are not
+ necessarily listed.
+ 
++## [24.3.25] (March 25 2024)(https://github.com/google/flatbuffers/releases/tag/v24.3.25)
++
++* Fixed license metadata parsing (#8253)
++* [C++] Allow string_view in `LookUpByKey` in addition to null-terminated c-style strings (#8203)
++
+ ## [24.3.7] (March 7 2024)(https://github.com/google/flatbuffers/releases/tag/v24.3.7)
+
+----------------------------------------
+
+File: CMake/Version.cmake
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -1,6 +1,6 @@
+ set(VERSION_MAJOR 24)
+ set(VERSION_MINOR 3)
+-set(VERSION_PATCH 7)
++set(VERSION_PATCH 25)
+ set(VERSION_COMMIT 0)
+ 
+ if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/.git")
+
+----------------------------------------
+
+File: FlatBuffers.podspec
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -1,6 +1,6 @@
+ Pod::Spec.new do |s|
+   s.name             = 'FlatBuffers'
+-  s.version          = '24.3.7'
++  s.version          = '24.3.25'
+   s.summary          = 'FlatBuffers: Memory Efficient Serialization Library'
+ 
+   s.description      = "FlatBuffers is a cross platform serialization library architected for
+
+----------------------------------------
+
+File: android/app/src/main/java/generated/com/fbs/app/Animal.kt
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -57,7 +57,7 @@ class Animal : Table() {
+             return if(o != 0) bb.getShort(o + bb_pos).toUShort() else 0u
+         }
+     companion object {
+-        fun validateVersion() = Constants.FLATBUFFERS_24_3_7()
++        fun validateVersion() = Constants.FLATBUFFERS_24_3_25()
+         fun getRootAsAnimal(_bb: ByteBuffer): Animal = getRootAsAnimal(_bb, Animal())
+         fun getRootAsAnimal(_bb: ByteBuffer, obj: Animal): Animal {
+             _bb.order(ByteOrder.LITTLE_ENDIAN)
+
+----------------------------------------
+
+File: dart/pubspec.yaml
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -1,5 +1,5 @@
+ name: flat_buffers
+-version: 24.3.7
++version: 24.3.25
+ description: FlatBuffers reading and writing library for Dart. Based on original work by Konstantin Scheglov and Paul Berry of the Dart SDK team.
+ homepage: https://github.com/google/flatbuffers
+ documentation: https://google.github.io/flatbuffers/index.html
+
+----------------------------------------
+
+File: goldens/cpp/basic_generated.h
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -10,7 +10,7 @@
+ // generated, otherwise it may not be compatible.
+ static_assert(FLATBUFFERS_VERSION_MAJOR == 24 &&
+               FLATBUFFERS_VERSION_MINOR == 3 &&
+-              FLATBUFFERS_VERSION_REVISION == 7,
++              FLATBUFFERS_VERSION_REVISION == 25,
+              "Non-compatible flatbuffers version included");
+ 
+ namespace flatbuffers {
+
+----------------------------------------
+
+File: goldens/csharp/flatbuffers/goldens/Galaxy.cs
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -13,7 +13,7 @@ public struct Galaxy : IFlatbufferObject
+ {
+   private Table __p;
+   public ByteBuffer ByteBuffer { get { return __p.bb; } }
+-  public static void ValidateVersion() { FlatBufferConstants.FLATBUFFERS_24_3_7(); }
++  public static void ValidateVersion() { FlatBufferConstants.FLATBUFFERS_24_3_25(); }
+   public static Galaxy GetRootAsGalaxy(ByteBuffer _bb) { return GetRootAsGalaxy(_bb, new Galaxy()); }
+   public static Galaxy GetRootAsGalaxy(ByteBuffer _bb, Galaxy obj) { return (obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb)); }
+   public void __init(int _i, ByteBuffer _bb) { __p = new Table(_i, _bb); }
+
+----------------------------------------
+
+File: goldens/csharp/flatbuffers/goldens/Universe.cs
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -13,7 +13,7 @@ public struct Universe : IFlatbufferObject
+ {
+   private Table __p;
+   public ByteBuffer ByteBuffer { get { return __p.bb; } }
+-  public static void ValidateVersion() { FlatBufferConstants.FLATBUFFERS_24_3_7(); }
++  public static void ValidateVersion() { FlatBufferConstants.FLATBUFFERS_24_3_25(); }
+   public static Universe GetRootAsUniverse(ByteBuffer _bb) { return GetRootAsUniverse(_bb, new Universe()); }
+   public static Universe GetRootAsUniverse(ByteBuffer _bb, Universe obj) { return (obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb)); }
+   public static bool VerifyUniverse(ByteBuffer _bb) {Google.FlatBuffers.Verifier verifier = new Google.FlatBuffers.Verifier(_bb); return verifier.VerifyBuffer("", false, UniverseVerify.Verify); }
+
+----------------------------------------
+
+File: goldens/java/flatbuffers/goldens/Galaxy.java
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -21,7 +21,7 @@
+ 
+ @SuppressWarnings("unused")
+ public final class Galaxy extends Table {
+-  public static void ValidateVersion() { Constants.FLATBUFFERS_24_3_7(); }
++  public static void ValidateVersion() { Constants.FLATBUFFERS_24_3_25(); }
+   public static Galaxy getRootAsGalaxy(ByteBuffer _bb) { return getRootAsGalaxy(_bb, new Galaxy()); }
+   public static Galaxy getRootAsGalaxy(ByteBuffer _bb, Galaxy obj) { _bb.order(ByteOrder.LITTLE_ENDIAN); return (obj.__assign(_bb.getInt(_bb.position()) + _bb.position(), _bb)); }
+   public void __init(int _i, ByteBuffer _bb) { __reset(_i, _bb); }
+
+----------------------------------------
+
+File: goldens/java/flatbuffers/goldens/Universe.java
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -21,7 +21,7 @@
+ 
+ @SuppressWarnings("unused")
+ public final class Universe extends Table {
+-  public static void ValidateVersion() { Constants.FLATBUFFERS_24_3_7(); }
++  public static void ValidateVersion() { Constants.FLATBUFFERS_24_3_25(); }
+   public static Universe getRootAsUniverse(ByteBuffer _bb) { return getRootAsUniverse(_bb, new Universe()); }
+   public static Universe getRootAsUniverse(ByteBuffer _bb, Universe obj) { _bb.order(ByteOrder.LITTLE_ENDIAN); return (obj.__assign(_bb.getInt(_bb.position()) + _bb.position(), _bb)); }
+   public void __init(int _i, ByteBuffer _bb) { __reset(_i, _bb); }
+
+----------------------------------------
+
+File: goldens/kotlin/flatbuffers/goldens/Galaxy.kt
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -34,7 +34,7 @@ class Galaxy : Table() {
+             return if(o != 0) bb.getLong(o + bb_pos) else 0L
+         }
+     companion object {
+-        fun validateVersion() = Constants.FLATBUFFERS_24_3_7()
++        fun validateVersion() = Constants.FLATBUFFERS_24_3_25()
+         fun getRootAsGalaxy(_bb: ByteBuffer): Galaxy = getRootAsGalaxy(_bb, Galaxy())
+         fun getRootAsGalaxy(_bb: ByteBuffer, obj: Galaxy): Galaxy {
+             _bb.order(ByteOrder.LITTLE_ENDIAN)
+
+----------------------------------------
+
+File: goldens/kotlin/flatbuffers/goldens/Universe.kt
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -47,7 +47,7 @@ class Universe : Table() {
+             val o = __offset(6); return if (o != 0) __vector_len(o) else 0
+         }
+     companion object {
+-        fun validateVersion() = Constants.FLATBUFFERS_24_3_7()
++        fun validateVersion() = Constants.FLATBUFFERS_24_3_25()
+         fun getRootAsUniverse(_bb: ByteBuffer): Universe = getRootAsUniverse(_bb, Universe())
+         fun getRootAsUniverse(_bb: ByteBuffer, obj: Universe): Universe {
+             _bb.order(ByteOrder.LITTLE_ENDIAN)
+
+----------------------------------------
+
+File: goldens/swift/__init__.py
+Status: added
+Changes: +0 -0
+
+----------------------------------------
+
+File: goldens/swift/basic_generated.swift
+Status: modified
+Changes: +2 -2
+Diff:
+@@ -6,7 +6,7 @@ import FlatBuffers
+ 
+ public struct flatbuffers_goldens_Galaxy: FlatBufferObject, Verifiable {
+ 
+-  static func validateVersion() { FlatBuffersVersion_24_3_7() }
++  static func validateVersion() { FlatBuffersVersion_24_3_25() }
+   public var __buffer: ByteBuffer! { return _accessor.bb }
+   private var _accessor: Table
+ 
+@@ -41,7 +41,7 @@ public struct flatbuffers_goldens_Galaxy: FlatBufferObject, Verifiable {
+
+----------------------------------------
+
+File: grpc/examples/swift/Greeter/Sources/Model/greeter_generated.swift
+Status: modified
+Changes: +2 -2
+Diff:
+@@ -6,7 +6,7 @@ import FlatBuffers
+ 
+ public struct models_HelloReply: FlatBufferObject, Verifiable {
+ 
+-  static func validateVersion() { FlatBuffersVersion_24_3_7() }
++  static func validateVersion() { FlatBuffersVersion_24_3_25() }
+   public var __buffer: ByteBuffer! { return _accessor.bb }
+   private var _accessor: Table
+ 
+@@ -53,7 +53,7 @@ extension models_HelloReply: Encodable {
+
+----------------------------------------
+
+File: include/flatbuffers/base.h
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -141,7 +141,7 @@
+ 
+ #define FLATBUFFERS_VERSION_MAJOR 24
+ #define FLATBUFFERS_VERSION_MINOR 3
+-#define FLATBUFFERS_VERSION_REVISION 7
++#define FLATBUFFERS_VERSION_REVISION 25
+ #define FLATBUFFERS_STRING_EXPAND(X) #X
+ #define FLATBUFFERS_STRING(X) FLATBUFFERS_STRING_EXPAND(X)
+ namespace flatbuffers {
+
+----------------------------------------
+
+File: include/flatbuffers/reflection_generated.h
+Status: modified
+Changes: +43 -1
+Diff:
+@@ -10,7 +10,7 @@
+ // generated, otherwise it may not be compatible.
+ static_assert(FLATBUFFERS_VERSION_MAJOR == 24 &&
+               FLATBUFFERS_VERSION_MINOR == 3 &&
+-              FLATBUFFERS_VERSION_REVISION == 7,
++              FLATBUFFERS_VERSION_REVISION == 25,
+              "Non-compatible flatbuffers version included");
+ 
+ namespace reflection {
+@@ -274,6 +274,12 @@ struct KeyValue FLATBUFFERS_FINAL_CLASS : private ::flatbuffers::Table {
+   int KeyCompareWithValue(const char *_key) const {
+     return strcmp(key()->c_str(), _key);
+   }
++  template<typename StringType>
++  int KeyCompareWithValue(const StringType& _key) const {
++    if (key()->c_str() < _key) return -1;
++    if (_key < key()->c_str()) return 1;
++    return 0;
++  }
+   const ::flatbuffers::String *value() const {
+     return GetPointer<const ::flatbuffers::String *>(VT_VALUE);
+   }
+@@ -464,6 +470,12 @@ struct Enum FLATBUFFERS_FINAL_CLASS : private ::flatbuffers::Table {
+   int KeyCompareWithValue(const char *_name) const {
+     return strcmp(name()->c_str(), _name);
+   }
++  template<typename StringType>
++  int KeyCompareWithValue(const StringType& _name) const {
++    if (name()->c_str() < _name) return -1;
++    if (_name < name()->c_str()) return 1;
++    return 0;
++  }
+   const ::flatbuffers::Vector<::flatbuffers::Offset<reflection::EnumVal>> *values() const {
+
+----------------------------------------
+
+File: java/pom.xml
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -3,7 +3,7 @@
+   <modelVersion>4.0.0</modelVersion>
+   <groupId>com.google.flatbuffers</groupId>
+   <artifactId>flatbuffers-java</artifactId>
+-  <version>24.3.7</version>
++  <version>24.3.25</version>
+   <packaging>bundle</packaging>
+   <name>FlatBuffers Java API</name>
+   <description>
+
+----------------------------------------
+
+File: java/src/main/java/com/google/flatbuffers/Constants.java
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -46,7 +46,7 @@ public class Constants {
+     Changes to the Java implementation need to be sure to change
+     the version here and in the code generator on every possible
+     incompatible change */
+-    public static void FLATBUFFERS_24_3_7() {}
++    public static void FLATBUFFERS_24_3_25() {}
+ }
+ 
+ /// @endcond
+
+----------------------------------------
+
+File: java/src/main/java/com/google/flatbuffers/reflection/Enum.java
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -21,7 +21,7 @@
+ 
+ @SuppressWarnings("unused")
+ public final class Enum extends Table {
+-  public static void ValidateVersion() { Constants.FLATBUFFERS_24_3_7(); }
++  public static void ValidateVersion() { Constants.FLATBUFFERS_24_3_25(); }
+   public static Enum getRootAsEnum(ByteBuffer _bb) { return getRootAsEnum(_bb, new Enum()); }
+   public static Enum getRootAsEnum(ByteBuffer _bb, Enum obj) { _bb.order(ByteOrder.LITTLE_ENDIAN); return (obj.__assign(_bb.getInt(_bb.position()) + _bb.position(), _bb)); }
+   public void __init(int _i, ByteBuffer _bb) { __reset(_i, _bb); }
+
+----------------------------------------
+
+File: java/src/main/java/com/google/flatbuffers/reflection/EnumVal.java
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -21,7 +21,7 @@
+ 
+ @SuppressWarnings("unused")
+ public final class EnumVal extends Table {
+-  public static void ValidateVersion() { Constants.FLATBUFFERS_24_3_7(); }
++  public static void ValidateVersion() { Constants.FLATBUFFERS_24_3_25(); }
+   public static EnumVal getRootAsEnumVal(ByteBuffer _bb) { return getRootAsEnumVal(_bb, new EnumVal()); }
+   public static EnumVal getRootAsEnumVal(ByteBuffer _bb, EnumVal obj) { _bb.order(ByteOrder.LITTLE_ENDIAN); return (obj.__assign(_bb.getInt(_bb.position()) + _bb.position(), _bb)); }
+   public void __init(int _i, ByteBuffer _bb) { __reset(_i, _bb); }
+
+----------------------------------------
+
+File: java/src/main/java/com/google/flatbuffers/reflection/Field.java
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -21,7 +21,7 @@
+ 
+ @SuppressWarnings("unused")
+ public final class Field extends Table {
+-  public static void ValidateVersion() { Constants.FLATBUFFERS_24_3_7(); }
++  public static void ValidateVersion() { Constants.FLATBUFFERS_24_3_25(); }
+   public static Field getRootAsField(ByteBuffer _bb) { return getRootAsField(_bb, new Field()); }
+   public static Field getRootAsField(ByteBuffer _bb, Field obj) { _bb.order(ByteOrder.LITTLE_ENDIAN); return (obj.__assign(_bb.getInt(_bb.position()) + _bb.position(), _bb)); }
+   public void __init(int _i, ByteBuffer _bb) { __reset(_i, _bb); }
+
+----------------------------------------
+
+File: java/src/main/java/com/google/flatbuffers/reflection/KeyValue.java
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -21,7 +21,7 @@
+ 
+ @SuppressWarnings("unused")
+ public final class KeyValue extends Table {
+-  public static void ValidateVersion() { Constants.FLATBUFFERS_24_3_7(); }
++  public static void ValidateVersion() { Constants.FLATBUFFERS_24_3_25(); }
+   public static KeyValue getRootAsKeyValue(ByteBuffer _bb) { return getRootAsKeyValue(_bb, new KeyValue()); }
+   public static KeyValue getRootAsKeyValue(ByteBuffer _bb, KeyValue obj) { _bb.order(ByteOrder.LITTLE_ENDIAN); return (obj.__assign(_bb.getInt(_bb.position()) + _bb.position(), _bb)); }
+   public void __init(int _i, ByteBuffer _bb) { __reset(_i, _bb); }
+
+----------------------------------------
+
+File: java/src/main/java/com/google/flatbuffers/reflection/Object.java
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -21,7 +21,7 @@
+ 
+ @SuppressWarnings("unused")
+ public final class Object extends Table {
+-  public static void ValidateVersion() { Constants.FLATBUFFERS_24_3_7(); }
++  public static void ValidateVersion() { Constants.FLATBUFFERS_24_3_25(); }
+   public static Object getRootAsObject(ByteBuffer _bb) { return getRootAsObject(_bb, new Object()); }
+   public static Object getRootAsObject(ByteBuffer _bb, Object obj) { _bb.order(ByteOrder.LITTLE_ENDIAN); return (obj.__assign(_bb.getInt(_bb.position()) + _bb.position(), _bb)); }
+   public void __init(int _i, ByteBuffer _bb) { __reset(_i, _bb); }
+
+----------------------------------------
+
+File: java/src/main/java/com/google/flatbuffers/reflection/RPCCall.java
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -21,7 +21,7 @@
+ 
+ @SuppressWarnings("unused")
+ public final class RPCCall extends Table {
+-  public static void ValidateVersion() { Constants.FLATBUFFERS_24_3_7(); }
++  public static void ValidateVersion() { Constants.FLATBUFFERS_24_3_25(); }
+   public static RPCCall getRootAsRPCCall(ByteBuffer _bb) { return getRootAsRPCCall(_bb, new RPCCall()); }
+   public static RPCCall getRootAsRPCCall(ByteBuffer _bb, RPCCall obj) { _bb.order(ByteOrder.LITTLE_ENDIAN); return (obj.__assign(_bb.getInt(_bb.position()) + _bb.position(), _bb)); }
+   public void __init(int _i, ByteBuffer _bb) { __reset(_i, _bb); }
+
+----------------------------------------
+
+File: java/src/main/java/com/google/flatbuffers/reflection/Schema.java
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -21,7 +21,7 @@
+ 
+ @SuppressWarnings("unused")
+ public final class Schema extends Table {
+-  public static void ValidateVersion() { Constants.FLATBUFFERS_24_3_7(); }
++  public static void ValidateVersion() { Constants.FLATBUFFERS_24_3_25(); }
+   public static Schema getRootAsSchema(ByteBuffer _bb) { return getRootAsSchema(_bb, new Schema()); }
+   public static Schema getRootAsSchema(ByteBuffer _bb, Schema obj) { _bb.order(ByteOrder.LITTLE_ENDIAN); return (obj.__assign(_bb.getInt(_bb.position()) + _bb.position(), _bb)); }
+   public static boolean SchemaBufferHasIdentifier(ByteBuffer _bb) { return __has_identifier(_bb, "BFBS"); }
+
+----------------------------------------
+
+File: java/src/main/java/com/google/flatbuffers/reflection/SchemaFile.java
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -26,7 +26,7 @@
+  */
+ @SuppressWarnings("unused")
+ public final class SchemaFile extends Table {
+-  public static void ValidateVersion() { Constants.FLATBUFFERS_24_3_7(); }
++  public static void ValidateVersion() { Constants.FLATBUFFERS_24_3_25(); }
+   public static SchemaFile getRootAsSchemaFile(ByteBuffer _bb) { return getRootAsSchemaFile(_bb, new SchemaFile()); }
+   public static SchemaFile getRootAsSchemaFile(ByteBuffer _bb, SchemaFile obj) { _bb.order(ByteOrder.LITTLE_ENDIAN); return (obj.__assign(_bb.getInt(_bb.position()) + _bb.position(), _bb)); }
+   public void __init(int _i, ByteBuffer _bb) { __reset(_i, _bb); }
+
+----------------------------------------
+
+File: java/src/main/java/com/google/flatbuffers/reflection/Service.java
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -21,7 +21,7 @@
+ 
+ @SuppressWarnings("unused")
+ public final class Service extends Table {
+-  public static void ValidateVersion() { Constants.FLATBUFFERS_24_3_7(); }
++  public static void ValidateVersion() { Constants.FLATBUFFERS_24_3_25(); }
+   public static Service getRootAsService(ByteBuffer _bb) { return getRootAsService(_bb, new Service()); }
+   public static Service getRootAsService(ByteBuffer _bb, Service obj) { _bb.order(ByteOrder.LITTLE_ENDIAN); return (obj.__assign(_bb.getInt(_bb.position()) + _bb.position(), _bb)); }
+   public void __init(int _i, ByteBuffer _bb) { __reset(_i, _bb); }
+
+----------------------------------------
+
+File: java/src/main/java/com/google/flatbuffers/reflection/Type.java
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -21,7 +21,7 @@
+ 
+ @SuppressWarnings("unused")
+ public final class Type extends Table {
+-  public static void ValidateVersion() { Constants.FLATBUFFERS_24_3_7(); }
++  public static void ValidateVersion() { Constants.FLATBUFFERS_24_3_25(); }
+   public static Type getRootAsType(ByteBuffer _bb) { return getRootAsType(_bb, new Type()); }
+   public static Type getRootAsType(ByteBuffer _bb, Type obj) { _bb.order(ByteOrder.LITTLE_ENDIAN); return (obj.__assign(_bb.getInt(_bb.position()) + _bb.position(), _bb)); }
+   public void __init(int _i, ByteBuffer _bb) { __reset(_i, _bb); }
+
+----------------------------------------
+
+File: net/FlatBuffers/FlatBufferConstants.cs
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -32,6 +32,6 @@ the runtime and generated code are modified in sync.
+         Changes to the C# implementation need to be sure to change
+         the version here and in the code generator on every possible
+         incompatible change */
+-        public static void FLATBUFFERS_24_3_7() {}
++        public static void FLATBUFFERS_24_3_25() {}
+     }
+ }
+
+----------------------------------------
+
+File: net/FlatBuffers/Google.FlatBuffers.csproj
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -3,7 +3,7 @@
+   <PropertyGroup>
+     <TargetFrameworks>netstandard2.1;net6.0;net8.0</TargetFrameworks>
+     <Description>A cross-platform memory efficient serialization library</Description>
+-    <PackageVersion>24.3.7</PackageVersion>
++    <PackageVersion>24.3.25</PackageVersion>
+     <Authors>Google LLC</Authors>
+     <PackageProjectUrl>https://github.com/google/flatbuffers</PackageProjectUrl>
+     <RepositoryUrl>https://github.com/google/flatbuffers</RepositoryUrl>
+
+----------------------------------------
+
+File: package.json
+Status: modified
+Changes: +2 -2
+Diff:
+@@ -1,6 +1,6 @@
+ {
+   "name": "flatbuffers",
+-  "version": "24.3.7",
++  "version": "24.3.25",
+   "description": "Memory Efficient Serialization Library",
+   "files": [
+     "js/**/*.js",
+@@ -29,7 +29,7 @@
+     "flatbuffers"
+
+----------------------------------------
+
+File: python/flatbuffers/_version.py
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -14,4 +14,4 @@
+ 
+ # Placeholder, to be updated during the release process
+ # by the setup.py
+-__version__ = u"24.3.7"
++__version__ = u"24.3.25"
+
+----------------------------------------
+
+File: python/setup.py
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -16,7 +16,7 @@
+ 
+ setup(
+     name='flatbuffers',
+-    version='24.3.7',
++    version='24.3.25',
+     license='Apache 2.0',
+     license_files='../LICENSE',
+     author='Derek Bailey',
+
+----------------------------------------
+
+File: rust/flatbuffers/Cargo.toml
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -1,6 +1,6 @@
+ [package]
+ name = "flatbuffers"
+-version = "24.3.7"
++version = "24.3.25"
+ edition = "2018"
+ authors = ["Robert Winslow <hello@rwinslow.com>", "FlatBuffers Maintainers"]
+ license = "Apache-2.0"
+
+----------------------------------------
+
+File: samples/monster_generated.h
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -10,7 +10,7 @@
+ // generated, otherwise it may not be compatible.
+ static_assert(FLATBUFFERS_VERSION_MAJOR == 24 &&
+               FLATBUFFERS_VERSION_MINOR == 3 &&
+-              FLATBUFFERS_VERSION_REVISION == 7,
++              FLATBUFFERS_VERSION_REVISION == 25,
+              "Non-compatible flatbuffers version included");
+ 
+ namespace MyGame {
+
+----------------------------------------
+
+File: samples/monster_generated.swift
+Status: modified
+Changes: +4 -4
+Diff:
+@@ -36,7 +36,7 @@ public enum MyGame_Sample_Equipment: UInt8, UnionEnum {
+ 
+ public struct MyGame_Sample_Vec3: NativeStruct, Verifiable, FlatbuffersInitializable {
+ 
+-  static func validateVersion() { FlatBuffersVersion_24_3_7() }
++  static func validateVersion() { FlatBuffersVersion_24_3_25() }
+ 
+   private var _x: Float32
+   private var _y: Float32
+@@ -72,7 +72,7 @@ public struct MyGame_Sample_Vec3: NativeStruct, Verifiable, FlatbuffersInitializ
+ 
+ public struct MyGame_Sample_Vec3_Mutable: FlatBufferObject {
+
+----------------------------------------
+
+File: scripts/release.sh
+Status: modified
+Changes: +2 -3
+Diff:
+@@ -1,8 +1,7 @@
+ #!/usr/bin/bash
+ 
+-printf -v year '%(%y)T' -1
+-printf -v month '%(%-m)T' -1
+-printf -v day '%(%-d)T' -1
++# Read the date as in the Pacific TZ, with no leading padding
++read year month day <<<$(date --date="TZ=\"US/Pacific\"" +'%-y %-m %-d')
+ 
+ version="$year.$month.$day"
+
+----------------------------------------
+
+File: src/idl_gen_cpp.cpp
+Status: modified
+Changes: +12 -0
+Diff:
+@@ -2417,8 +2417,20 @@ class CppGenerator : public BaseGenerator {
+ 
+     // Generate KeyCompareWithValue function
+     if (is_string) {
++      // Compares key against a null-terminated char array.
+       code_ += "  int KeyCompareWithValue(const char *_{{FIELD_NAME}}) const {";
+       code_ += "    return strcmp({{FIELD_NAME}}()->c_str(), _{{FIELD_NAME}});";
++      code_ += "  }";
++      // Compares key against any string-like object (e.g. std::string_view or
++      // std::string) that implements operator< comparison with const char*.
+
+----------------------------------------
+
+File: src/idl_gen_csharp.cpp
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -850,7 +850,7 @@ class CSharpGenerator : public BaseGenerator {
+       // Force compile time error if not using the same version runtime.
+       code += "  public static void ValidateVersion() {";
+       code += " FlatBufferConstants.";
+-      code += "FLATBUFFERS_24_3_7(); ";
++      code += "FLATBUFFERS_24_3_25(); ";
+       code += "}\n";
+ 
+       // Generate a special accessor for the table that when used as the root
+
+----------------------------------------
+
+File: src/idl_gen_java.cpp
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -701,7 +701,7 @@ class JavaGenerator : public BaseGenerator {
+       // Force compile time error if not using the same version runtime.
+       code += "  public static void ValidateVersion() {";
+       code += " Constants.";
+-      code += "FLATBUFFERS_24_3_7(); ";
++      code += "FLATBUFFERS_24_3_25(); ";
+       code += "}\n";
+ 
+       // Generate a special accessor for the table that when used as the root
+
+----------------------------------------
+
+File: src/idl_gen_kotlin.cpp
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -524,7 +524,7 @@ class KotlinGenerator : public BaseGenerator {
+           // runtime.
+           GenerateFunOneLine(
+               writer, "validateVersion", "", "",
+-              [&]() { writer += "Constants.FLATBUFFERS_24_3_7()"; },
++              [&]() { writer += "Constants.FLATBUFFERS_24_3_25()"; },
+               options.gen_jvmstatic);
+ 
+           GenerateGetRootAsAccessors(namer_.Type(struct_def), writer, options);
+
+----------------------------------------
+
+File: src/idl_gen_lobster.cpp
+Status: modified
+Changes: +9 -3
+Diff:
+@@ -145,11 +145,17 @@ class LobsterGenerator : public BaseGenerator {
+           code += def + "() -> " + name + ":\n        ";
+           code += "return " + name + "{ buf_, pos_ + " + offsets + " }\n";
+         } else {
+-          code += def + "() -> " + name + "?:\n        ";
++          code += def + "() -> " + name;
++          if (!field.IsRequired()) code += "?";
++          code += ":\n        ";
+           code += std::string("let o = flatbuffers.field_") +
+                   (field.value.type.struct_def->fixed ? "struct" : "table") +
+
+----------------------------------------
+
+File: src/idl_gen_swift.cpp
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -1845,7 +1845,7 @@ class SwiftGenerator : public BaseGenerator {
+   }
+ 
+   std::string ValidateFunc() {
+-    return "static func validateVersion() { FlatBuffersVersion_24_3_7() }";
++    return "static func validateVersion() { FlatBuffersVersion_24_3_25() }";
+   }
+ 
+   std::string GenType(const Type &type,
+
+----------------------------------------
+
+File: swift/Sources/FlatBuffers/Constants.swift
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -119,4 +119,4 @@ extension UInt64: Scalar, Verifiable {
+   public typealias NumericValue = UInt64
+ }
+ 
+-public func FlatBuffersVersion_24_3_7() {}
++public func FlatBuffersVersion_24_3_25() {}
+
+----------------------------------------
+
+File: tests/64bit/evolution/v1_generated.h
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -10,7 +10,7 @@
+ // generated, otherwise it may not be compatible.
+ static_assert(FLATBUFFERS_VERSION_MAJOR == 24 &&
+               FLATBUFFERS_VERSION_MINOR == 3 &&
+-              FLATBUFFERS_VERSION_REVISION == 7,
++              FLATBUFFERS_VERSION_REVISION == 25,
+              "Non-compatible flatbuffers version included");
+ 
+ namespace v1 {
+
+----------------------------------------
+
+File: tests/64bit/evolution/v2_generated.h
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -10,7 +10,7 @@
+ // generated, otherwise it may not be compatible.
+ static_assert(FLATBUFFERS_VERSION_MAJOR == 24 &&
+               FLATBUFFERS_VERSION_MINOR == 3 &&
+-              FLATBUFFERS_VERSION_REVISION == 7,
++              FLATBUFFERS_VERSION_REVISION == 25,
+              "Non-compatible flatbuffers version included");
+ 
+ namespace v2 {
+
+----------------------------------------
+
+File: tests/64bit/test_64bit_generated.h
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -10,7 +10,7 @@
+ // generated, otherwise it may not be compatible.
+ static_assert(FLATBUFFERS_VERSION_MAJOR == 24 &&
+               FLATBUFFERS_VERSION_MINOR == 3 &&
+-              FLATBUFFERS_VERSION_REVISION == 7,
++              FLATBUFFERS_VERSION_REVISION == 25,
+              "Non-compatible flatbuffers version included");
+ 
+ // For access to the binary schema that produced this file.
+
+----------------------------------------
+
+File: tests/Abc.nim
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -2,7 +2,7 @@
+   Automatically generated by the FlatBuffers compiler, do not modify.
+   Or modify. I'm a message, not a cop.
+ 
+-  flatc version: 24.3.7
++  flatc version: 24.3.25
+ 
+   Declared by  : 
+ ]#
+
+----------------------------------------
+
+File: tests/DictionaryLookup/LongFloatEntry.java
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -21,7 +21,7 @@
+ 
+ @SuppressWarnings("unused")
+ public final class LongFloatEntry extends Table {
+-  public static void ValidateVersion() { Constants.FLATBUFFERS_24_3_7(); }
++  public static void ValidateVersion() { Constants.FLATBUFFERS_24_3_25(); }
+   public static LongFloatEntry getRootAsLongFloatEntry(ByteBuffer _bb) { return getRootAsLongFloatEntry(_bb, new LongFloatEntry()); }
+   public static LongFloatEntry getRootAsLongFloatEntry(ByteBuffer _bb, LongFloatEntry obj) { _bb.order(ByteOrder.LITTLE_ENDIAN); return (obj.__assign(_bb.getInt(_bb.position()) + _bb.position(), _bb)); }
+   public void __init(int _i, ByteBuffer _bb) { __reset(_i, _bb); }
+
+----------------------------------------
+
+File: tests/DictionaryLookup/LongFloatEntry.kt
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -44,7 +44,7 @@ class LongFloatEntry : Table() {
+         return (val_1 - val_2).sign
+     }
+     companion object {
+-        fun validateVersion() = Constants.FLATBUFFERS_24_3_7()
++        fun validateVersion() = Constants.FLATBUFFERS_24_3_25()
+         fun getRootAsLongFloatEntry(_bb: ByteBuffer): LongFloatEntry = getRootAsLongFloatEntry(_bb, LongFloatEntry())
+         fun getRootAsLongFloatEntry(_bb: ByteBuffer, obj: LongFloatEntry): LongFloatEntry {
+             _bb.order(ByteOrder.LITTLE_ENDIAN)
+
+----------------------------------------
+
+File: tests/DictionaryLookup/LongFloatMap.java
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -21,7 +21,7 @@
+ 
+ @SuppressWarnings("unused")
+ public final class LongFloatMap extends Table {
+-  public static void ValidateVersion() { Constants.FLATBUFFERS_24_3_7(); }
++  public static void ValidateVersion() { Constants.FLATBUFFERS_24_3_25(); }
+   public static LongFloatMap getRootAsLongFloatMap(ByteBuffer _bb) { return getRootAsLongFloatMap(_bb, new LongFloatMap()); }
+   public static LongFloatMap getRootAsLongFloatMap(ByteBuffer _bb, LongFloatMap obj) { _bb.order(ByteOrder.LITTLE_ENDIAN); return (obj.__assign(_bb.getInt(_bb.position()) + _bb.position(), _bb)); }
+   public void __init(int _i, ByteBuffer _bb) { __reset(_i, _bb); }
+
+----------------------------------------
+
+File: tests/DictionaryLookup/LongFloatMap.kt
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -58,7 +58,7 @@ class LongFloatMap : Table() {
+         }
+     }
+     companion object {
+-        fun validateVersion() = Constants.FLATBUFFERS_24_3_7()
++        fun validateVersion() = Constants.FLATBUFFERS_24_3_25()
+         fun getRootAsLongFloatMap(_bb: ByteBuffer): LongFloatMap = getRootAsLongFloatMap(_bb, LongFloatMap())
+         fun getRootAsLongFloatMap(_bb: ByteBuffer, obj: LongFloatMap): LongFloatMap {
+             _bb.order(ByteOrder.LITTLE_ENDIAN)
+
+----------------------------------------
+
+File: tests/KeywordTest/KeywordsInTable.cs
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -13,7 +13,7 @@ public struct KeywordsInTable : IFlatbufferObject
+ {
+   private Table __p;
+   public ByteBuffer ByteBuffer { get { return __p.bb; } }
+-  public static void ValidateVersion() { FlatBufferConstants.FLATBUFFERS_24_3_7(); }
++  public static void ValidateVersion() { FlatBufferConstants.FLATBUFFERS_24_3_25(); }
+   public static KeywordsInTable GetRootAsKeywordsInTable(ByteBuffer _bb) { return GetRootAsKeywordsInTable(_bb, new KeywordsInTable()); }
+   public static KeywordsInTable GetRootAsKeywordsInTable(ByteBuffer _bb, KeywordsInTable obj) { return (obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb)); }
+   public void __init(int _i, ByteBuffer _bb) { __p = new Table(_i, _bb); }
+
+----------------------------------------
+
+File: tests/KeywordTest/Table2.cs
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -13,7 +13,7 @@ public struct Table2 : IFlatbufferObject
+ {
+   private Table __p;
+   public ByteBuffer ByteBuffer { get { return __p.bb; } }
+-  public static void ValidateVersion() { FlatBufferConstants.FLATBUFFERS_24_3_7(); }
++  public static void ValidateVersion() { FlatBufferConstants.FLATBUFFERS_24_3_25(); }
+   public static Table2 GetRootAsTable2(ByteBuffer _bb) { return GetRootAsTable2(_bb, new Table2()); }
+   public static Table2 GetRootAsTable2(ByteBuffer _bb, Table2 obj) { return (obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb)); }
+   public void __init(int _i, ByteBuffer _bb) { __p = new Table(_i, _bb); }
+
+----------------------------------------
+
+File: tests/MoreDefaults.nim
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -2,7 +2,7 @@
+   Automatically generated by the FlatBuffers compiler, do not modify.
+   Or modify. I'm a message, not a cop.
+ 
+-  flatc version: 24.3.7
++  flatc version: 24.3.25
+ 
+   Declared by  : 
+ ]#
+
+----------------------------------------
+
+File: tests/MyGame/Example/Ability.lua
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -3,7 +3,7 @@
+   Automatically generated by the FlatBuffers compiler, do not modify.
+   Or modify. I'm a message, not a cop.
+ 
+-  flatc version: 24.3.7
++  flatc version: 24.3.25
+ 
+   Declared by  : //monster_test.fbs
+   Rooting type : MyGame.Example.Monster (//monster_test.fbs)
+
+----------------------------------------
+
+File: tests/MyGame/Example/Ability.nim
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -2,7 +2,7 @@
+   Automatically generated by the FlatBuffers compiler, do not modify.
+   Or modify. I'm a message, not a cop.
+ 
+-  flatc version: 24.3.7
++  flatc version: 24.3.25
+ 
+   Declared by  : 
+   Rooting type : MyGame.Example.Monster ()
+
+----------------------------------------
+
+File: tests/MyGame/Example/Any.lua
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -3,7 +3,7 @@
+   Automatically generated by the FlatBuffers compiler, do not modify.
+   Or modify. I'm a message, not a cop.
+ 
+-  flatc version: 24.3.7
++  flatc version: 24.3.25
+ 
+   Declared by  : //monster_test.fbs
+   Rooting type : MyGame.Example.Monster (//monster_test.fbs)
+
+----------------------------------------
+
+File: tests/MyGame/Example/Any.nim
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -2,7 +2,7 @@
+   Automatically generated by the FlatBuffers compiler, do not modify.
+   Or modify. I'm a message, not a cop.
+ 
+-  flatc version: 24.3.7
++  flatc version: 24.3.25
+ 
+   Declared by  : 
+   Rooting type : MyGame.Example.Monster ()
+
+----------------------------------------
+
+File: tests/MyGame/Example/AnyAmbiguousAliases.lua
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -3,7 +3,7 @@
+   Automatically generated by the FlatBuffers compiler, do not modify.
+   Or modify. I'm a message, not a cop.
+ 
+-  flatc version: 24.3.7
++  flatc version: 24.3.25
+ 
+   Declared by  : //monster_test.fbs
+   Rooting type : MyGame.Example.Monster (//monster_test.fbs)
+
+----------------------------------------
+
+File: tests/MyGame/Example/AnyAmbiguousAliases.nim
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -2,7 +2,7 @@
+   Automatically generated by the FlatBuffers compiler, do not modify.
+   Or modify. I'm a message, not a cop.
+ 
+-  flatc version: 24.3.7
++  flatc version: 24.3.25
+ 
+   Declared by  : 
+   Rooting type : MyGame.Example.Monster ()
+
+----------------------------------------
+
+File: tests/MyGame/Example/AnyUniqueAliases.lua
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -3,7 +3,7 @@
+   Automatically generated by the FlatBuffers compiler, do not modify.
+   Or modify. I'm a message, not a cop.
+ 
+-  flatc version: 24.3.7
++  flatc version: 24.3.25
+ 
+   Declared by  : //monster_test.fbs
+   Rooting type : MyGame.Example.Monster (//monster_test.fbs)
+
+----------------------------------------
+
+File: tests/MyGame/Example/AnyUniqueAliases.nim
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -2,7 +2,7 @@
+   Automatically generated by the FlatBuffers compiler, do not modify.
+   Or modify. I'm a message, not a cop.
+ 
+-  flatc version: 24.3.7
++  flatc version: 24.3.25
+ 
+   Declared by  : 
+   Rooting type : MyGame.Example.Monster ()
+
+----------------------------------------
+
+File: tests/MyGame/Example/ArrayTable.cs
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -13,7 +13,7 @@ public struct ArrayTable : IFlatbufferObject
+ {
+   private Table __p;
+   public ByteBuffer ByteBuffer { get { return __p.bb; } }
+-  public static void ValidateVersion() { FlatBufferConstants.FLATBUFFERS_24_3_7(); }
++  public static void ValidateVersion() { FlatBufferConstants.FLATBUFFERS_24_3_25(); }
+   public static ArrayTable GetRootAsArrayTable(ByteBuffer _bb) { return GetRootAsArrayTable(_bb, new ArrayTable()); }
+   public static ArrayTable GetRootAsArrayTable(ByteBuffer _bb, ArrayTable obj) { return (obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb)); }
+   public static bool ArrayTableBufferHasIdentifier(ByteBuffer _bb) { return Table.__has_identifier(_bb, "ARRT"); }
+
+----------------------------------------
+
+File: tests/MyGame/Example/ArrayTable.java
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -21,7 +21,7 @@
+ 
+ @SuppressWarnings("unused")
+ public final class ArrayTable extends Table {
+-  public static void ValidateVersion() { Constants.FLATBUFFERS_24_3_7(); }
++  public static void ValidateVersion() { Constants.FLATBUFFERS_24_3_25(); }
+   public static ArrayTable getRootAsArrayTable(ByteBuffer _bb) { return getRootAsArrayTable(_bb, new ArrayTable()); }
+   public static ArrayTable getRootAsArrayTable(ByteBuffer _bb, ArrayTable obj) { _bb.order(ByteOrder.LITTLE_ENDIAN); return (obj.__assign(_bb.getInt(_bb.position()) + _bb.position(), _bb)); }
+   public static boolean ArrayTableBufferHasIdentifier(ByteBuffer _bb) { return __has_identifier(_bb, "ARRT"); }
+
+----------------------------------------
+
+File: tests/MyGame/Example/Color.lua
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -3,7 +3,7 @@
+   Automatically generated by the FlatBuffers compiler, do not modify.
+   Or modify. I'm a message, not a cop.
+ 
+-  flatc version: 24.3.7
++  flatc version: 24.3.25
+ 
+   Declared by  : //monster_test.fbs
+   Rooting type : MyGame.Example.Monster (//monster_test.fbs)
+
+----------------------------------------
+
+File: tests/MyGame/Example/Color.nim
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -2,7 +2,7 @@
+   Automatically generated by the FlatBuffers compiler, do not modify.
+   Or modify. I'm a message, not a cop.
+ 
+-  flatc version: 24.3.7
++  flatc version: 24.3.25
+ 
+   Declared by  : 
+   Rooting type : MyGame.Example.Monster ()
+
+----------------------------------------
+
+File: tests/MyGame/Example/LongEnum.lua
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -3,7 +3,7 @@
+   Automatically generated by the FlatBuffers compiler, do not modify.
+   Or modify. I'm a message, not a cop.
+ 
+-  flatc version: 24.3.7
++  flatc version: 24.3.25
+ 
+   Declared by  : //monster_test.fbs
+   Rooting type : MyGame.Example.Monster (//monster_test.fbs)
+
+----------------------------------------
+
+File: tests/MyGame/Example/LongEnum.nim
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -2,7 +2,7 @@
+   Automatically generated by the FlatBuffers compiler, do not modify.
+   Or modify. I'm a message, not a cop.
+ 
+-  flatc version: 24.3.7
++  flatc version: 24.3.25
+ 
+   Declared by  : 
+   Rooting type : MyGame.Example.Monster ()
+
+----------------------------------------
+
+File: tests/MyGame/Example/Monster.cs
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -14,7 +14,7 @@ public struct Monster : IFlatbufferObject
+ {
+   private Table __p;
+   public ByteBuffer ByteBuffer { get { return __p.bb; } }
+-  public static void ValidateVersion() { FlatBufferConstants.FLATBUFFERS_24_3_7(); }
++  public static void ValidateVersion() { FlatBufferConstants.FLATBUFFERS_24_3_25(); }
+   public static Monster GetRootAsMonster(ByteBuffer _bb) { return GetRootAsMonster(_bb, new Monster()); }
+   public static Monster GetRootAsMonster(ByteBuffer _bb, Monster obj) { return (obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb)); }
+   public static bool MonsterBufferHasIdentifier(ByteBuffer _bb) { return Table.__has_identifier(_bb, "MONS"); }
+
+----------------------------------------
+
+File: tests/MyGame/Example/Monster.java
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -24,7 +24,7 @@
+  */
+ @SuppressWarnings("unused")
+ public final class Monster extends Table {
+-  public static void ValidateVersion() { Constants.FLATBUFFERS_24_3_7(); }
++  public static void ValidateVersion() { Constants.FLATBUFFERS_24_3_25(); }
+   public static Monster getRootAsMonster(ByteBuffer _bb) { return getRootAsMonster(_bb, new Monster()); }
+   public static Monster getRootAsMonster(ByteBuffer _bb, Monster obj) { _bb.order(ByteOrder.LITTLE_ENDIAN); return (obj.__assign(_bb.getInt(_bb.position()) + _bb.position(), _bb)); }
+   public static boolean MonsterBufferHasIdentifier(ByteBuffer _bb) { return __has_identifier(_bb, "MONS"); }
+
+----------------------------------------
+
+File: tests/MyGame/Example/Monster.kt
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -1002,7 +1002,7 @@ class Monster : Table() {
+          return compareStrings(__offset(10, o1, _bb), __offset(10, o2, _bb), _bb)
+     }
+     companion object {
+-        fun validateVersion() = Constants.FLATBUFFERS_24_3_7()
++        fun validateVersion() = Constants.FLATBUFFERS_24_3_25()
+         fun getRootAsMonster(_bb: ByteBuffer): Monster = getRootAsMonster(_bb, Monster())
+         fun getRootAsMonster(_bb: ByteBuffer, obj: Monster): Monster {
+             _bb.order(ByteOrder.LITTLE_ENDIAN)
+
+----------------------------------------
+
+File: tests/MyGame/Example/Monster.lua
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -3,7 +3,7 @@
+   Automatically generated by the FlatBuffers compiler, do not modify.
+   Or modify. I'm a message, not a cop.
+ 
+-  flatc version: 24.3.7
++  flatc version: 24.3.25
+ 
+   Declared by  : //monster_test.fbs
+   Rooting type : MyGame.Example.Monster (//monster_test.fbs)
+
+----------------------------------------
+
+File: tests/MyGame/Example/Monster.nim
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -2,7 +2,7 @@
+   Automatically generated by the FlatBuffers compiler, do not modify.
+   Or modify. I'm a message, not a cop.
+ 
+-  flatc version: 24.3.7
++  flatc version: 24.3.25
+ 
+   Declared by  : 
+   Rooting type : MyGame.Example.Monster ()
+
+----------------------------------------
+
+File: tests/MyGame/Example/Race.lua
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -3,7 +3,7 @@
+   Automatically generated by the FlatBuffers compiler, do not modify.
+   Or modify. I'm a message, not a cop.
+ 
+-  flatc version: 24.3.7
++  flatc version: 24.3.25
+ 
+   Declared by  : //monster_test.fbs
+   Rooting type : MyGame.Example.Monster (//monster_test.fbs)
+
+----------------------------------------
+
+File: tests/MyGame/Example/Race.nim
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -2,7 +2,7 @@
+   Automatically generated by the FlatBuffers compiler, do not modify.
+   Or modify. I'm a message, not a cop.
+ 
+-  flatc version: 24.3.7
++  flatc version: 24.3.25
+ 
+   Declared by  : 
+   Rooting type : MyGame.Example.Monster ()
+
+----------------------------------------
+
+File: tests/MyGame/Example/Referrable.cs
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -13,7 +13,7 @@ public struct Referrable : IFlatbufferObject
+ {
+   private Table __p;
+   public ByteBuffer ByteBuffer { get { return __p.bb; } }
+-  public static void ValidateVersion() { FlatBufferConstants.FLATBUFFERS_24_3_7(); }
++  public static void ValidateVersion() { FlatBufferConstants.FLATBUFFERS_24_3_25(); }
+   public static Referrable GetRootAsReferrable(ByteBuffer _bb) { return GetRootAsReferrable(_bb, new Referrable()); }
+   public static Referrable GetRootAsReferrable(ByteBuffer _bb, Referrable obj) { return (obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb)); }
+   public void __init(int _i, ByteBuffer _bb) { __p = new Table(_i, _bb); }
+
+----------------------------------------
+
+File: tests/MyGame/Example/Referrable.java
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -21,7 +21,7 @@
+ 
+ @SuppressWarnings("unused")
+ public final class Referrable extends Table {
+-  public static void ValidateVersion() { Constants.FLATBUFFERS_24_3_7(); }
++  public static void ValidateVersion() { Constants.FLATBUFFERS_24_3_25(); }
+   public static Referrable getRootAsReferrable(ByteBuffer _bb) { return getRootAsReferrable(_bb, new Referrable()); }
+   public static Referrable getRootAsReferrable(ByteBuffer _bb, Referrable obj) { _bb.order(ByteOrder.LITTLE_ENDIAN); return (obj.__assign(_bb.getInt(_bb.position()) + _bb.position(), _bb)); }
+   public void __init(int _i, ByteBuffer _bb) { __reset(_i, _bb); }
+
+----------------------------------------
+
+File: tests/MyGame/Example/Referrable.kt
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -48,7 +48,7 @@ class Referrable : Table() {
+         return (val_1 - val_2).sign
+     }
+     companion object {
+-        fun validateVersion() = Constants.FLATBUFFERS_24_3_7()
++        fun validateVersion() = Constants.FLATBUFFERS_24_3_25()
+         fun getRootAsReferrable(_bb: ByteBuffer): Referrable = getRootAsReferrable(_bb, Referrable())
+         fun getRootAsReferrable(_bb: ByteBuffer, obj: Referrable): Referrable {
+             _bb.order(ByteOrder.LITTLE_ENDIAN)
+
+----------------------------------------
+
+File: tests/MyGame/Example/Referrable.lua
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -3,7 +3,7 @@
+   Automatically generated by the FlatBuffers compiler, do not modify.
+   Or modify. I'm a message, not a cop.
+ 
+-  flatc version: 24.3.7
++  flatc version: 24.3.25
+ 
+   Declared by  : //monster_test.fbs
+   Rooting type : MyGame.Example.Monster (//monster_test.fbs)
+
+----------------------------------------
+
+File: tests/MyGame/Example/Referrable.nim
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -2,7 +2,7 @@
+   Automatically generated by the FlatBuffers compiler, do not modify.
+   Or modify. I'm a message, not a cop.
+ 
+-  flatc version: 24.3.7
++  flatc version: 24.3.25
+ 
+   Declared by  : 
+   Rooting type : MyGame.Example.Monster ()
+
+----------------------------------------
+
+File: tests/MyGame/Example/Stat.cs
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -13,7 +13,7 @@ public struct Stat : IFlatbufferObject
+ {
+   private Table __p;
+   public ByteBuffer ByteBuffer { get { return __p.bb; } }
+-  public static void ValidateVersion() { FlatBufferConstants.FLATBUFFERS_24_3_7(); }
++  public static void ValidateVersion() { FlatBufferConstants.FLATBUFFERS_24_3_25(); }
+   public static Stat GetRootAsStat(ByteBuffer _bb) { return GetRootAsStat(_bb, new Stat()); }
+   public static Stat GetRootAsStat(ByteBuffer _bb, Stat obj) { return (obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb)); }
+   public void __init(int _i, ByteBuffer _bb) { __p = new Table(_i, _bb); }
+
+----------------------------------------
+
+File: tests/MyGame/Example/Stat.java
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -21,7 +21,7 @@
+ 
+ @SuppressWarnings("unused")
+ public final class Stat extends Table {
+-  public static void ValidateVersion() { Constants.FLATBUFFERS_24_3_7(); }
++  public static void ValidateVersion() { Constants.FLATBUFFERS_24_3_25(); }
+   public static Stat getRootAsStat(ByteBuffer _bb) { return getRootAsStat(_bb, new Stat()); }
+   public static Stat getRootAsStat(ByteBuffer _bb, Stat obj) { _bb.order(ByteOrder.LITTLE_ENDIAN); return (obj.__assign(_bb.getInt(_bb.position()) + _bb.position(), _bb)); }
+   public void __init(int _i, ByteBuffer _bb) { __reset(_i, _bb); }
+
+----------------------------------------
+
+File: tests/MyGame/Example/Stat.kt
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -73,7 +73,7 @@ class Stat : Table() {
+         return (val_1 - val_2).sign
+     }
+     companion object {
+-        fun validateVersion() = Constants.FLATBUFFERS_24_3_7()
++        fun validateVersion() = Constants.FLATBUFFERS_24_3_25()
+         fun getRootAsStat(_bb: ByteBuffer): Stat = getRootAsStat(_bb, Stat())
+         fun getRootAsStat(_bb: ByteBuffer, obj: Stat): Stat {
+             _bb.order(ByteOrder.LITTLE_ENDIAN)
+
+----------------------------------------
+
+File: tests/MyGame/Example/Stat.lua
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -3,7 +3,7 @@
+   Automatically generated by the FlatBuffers compiler, do not modify.
+   Or modify. I'm a message, not a cop.
+ 
+-  flatc version: 24.3.7
++  flatc version: 24.3.25
+ 
+   Declared by  : //monster_test.fbs
+   Rooting type : MyGame.Example.Monster (//monster_test.fbs)
+
+----------------------------------------
+
+File: tests/MyGame/Example/Stat.nim
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -2,7 +2,7 @@
+   Automatically generated by the FlatBuffers compiler, do not modify.
+   Or modify. I'm a message, not a cop.
+ 
+-  flatc version: 24.3.7
++  flatc version: 24.3.25
+ 
+   Declared by  : 
+   Rooting type : MyGame.Example.Monster ()
+
+----------------------------------------
+
+File: tests/MyGame/Example/StructOfStructs.lua
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -3,7 +3,7 @@
+   Automatically generated by the FlatBuffers compiler, do not modify.
+   Or modify. I'm a message, not a cop.
+ 
+-  flatc version: 24.3.7
++  flatc version: 24.3.25
+ 
+   Declared by  : //monster_test.fbs
+   Rooting type : MyGame.Example.Monster (//monster_test.fbs)
+
+----------------------------------------
+
+File: tests/MyGame/Example/StructOfStructs.nim
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -2,7 +2,7 @@
+   Automatically generated by the FlatBuffers compiler, do not modify.
+   Or modify. I'm a message, not a cop.
+ 
+-  flatc version: 24.3.7
++  flatc version: 24.3.25
+ 
+   Declared by  : 
+   Rooting type : MyGame.Example.Monster ()
+
+----------------------------------------
+
+File: tests/MyGame/Example/StructOfStructsOfStructs.lua
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -3,7 +3,7 @@
+   Automatically generated by the FlatBuffers compiler, do not modify.
+   Or modify. I'm a message, not a cop.
+ 
+-  flatc version: 24.3.7
++  flatc version: 24.3.25
+ 
+   Declared by  : //monster_test.fbs
+   Rooting type : MyGame.Example.Monster (//monster_test.fbs)
+
+----------------------------------------
+
+File: tests/MyGame/Example/StructOfStructsOfStructs.nim
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -2,7 +2,7 @@
+   Automatically generated by the FlatBuffers compiler, do not modify.
+   Or modify. I'm a message, not a cop.
+ 
+-  flatc version: 24.3.7
++  flatc version: 24.3.25
+ 
+   Declared by  : 
+   Rooting type : MyGame.Example.Monster ()
+
+----------------------------------------
+
+File: tests/MyGame/Example/Test.lua
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -3,7 +3,7 @@
+   Automatically generated by the FlatBuffers compiler, do not modify.
+   Or modify. I'm a message, not a cop.
+ 
+-  flatc version: 24.3.7
++  flatc version: 24.3.25
+ 
+   Declared by  : //monster_test.fbs
+   Rooting type : MyGame.Example.Monster (//monster_test.fbs)
+
+----------------------------------------
+
+File: tests/MyGame/Example/Test.nim
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -2,7 +2,7 @@
+   Automatically generated by the FlatBuffers compiler, do not modify.
+   Or modify. I'm a message, not a cop.
+ 
+-  flatc version: 24.3.7
++  flatc version: 24.3.25
+ 
+   Declared by  : 
+   Rooting type : MyGame.Example.Monster ()
+
+----------------------------------------
+
+File: tests/MyGame/Example/TestSimpleTableWithEnum.cs
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -13,7 +13,7 @@ internal partial struct TestSimpleTableWithEnum : IFlatbufferObject
+ {
+   private Table __p;
+   public ByteBuffer ByteBuffer { get { return __p.bb; } }
+-  public static void ValidateVersion() { FlatBufferConstants.FLATBUFFERS_24_3_7(); }
++  public static void ValidateVersion() { FlatBufferConstants.FLATBUFFERS_24_3_25(); }
+   public static TestSimpleTableWithEnum GetRootAsTestSimpleTableWithEnum(ByteBuffer _bb) { return GetRootAsTestSimpleTableWithEnum(_bb, new TestSimpleTableWithEnum()); }
+   public static TestSimpleTableWithEnum GetRootAsTestSimpleTableWithEnum(ByteBuffer _bb, TestSimpleTableWithEnum obj) { return (obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb)); }
+   public void __init(int _i, ByteBuffer _bb) { __p = new Table(_i, _bb); }
+
+----------------------------------------
+
+File: tests/MyGame/Example/TestSimpleTableWithEnum.java
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -21,7 +21,7 @@
+ 
+ @SuppressWarnings("unused")
+ final class TestSimpleTableWithEnum extends Table {
+-  public static void ValidateVersion() { Constants.FLATBUFFERS_24_3_7(); }
++  public static void ValidateVersion() { Constants.FLATBUFFERS_24_3_25(); }
+   public static TestSimpleTableWithEnum getRootAsTestSimpleTableWithEnum(ByteBuffer _bb) { return getRootAsTestSimpleTableWithEnum(_bb, new TestSimpleTableWithEnum()); }
+   public static TestSimpleTableWithEnum getRootAsTestSimpleTableWithEnum(ByteBuffer _bb, TestSimpleTableWithEnum obj) { _bb.order(ByteOrder.LITTLE_ENDIAN); return (obj.__assign(_bb.getInt(_bb.position()) + _bb.position(), _bb)); }
+   public void __init(int _i, ByteBuffer _bb) { __reset(_i, _bb); }
+
+----------------------------------------
+
+File: tests/MyGame/Example/TestSimpleTableWithEnum.kt
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -43,7 +43,7 @@ class TestSimpleTableWithEnum : Table() {
+         }
+     }
+     companion object {
+-        fun validateVersion() = Constants.FLATBUFFERS_24_3_7()
++        fun validateVersion() = Constants.FLATBUFFERS_24_3_25()
+         fun getRootAsTestSimpleTableWithEnum(_bb: ByteBuffer): TestSimpleTableWithEnum = getRootAsTestSimpleTableWithEnum(_bb, TestSimpleTableWithEnum())
+         fun getRootAsTestSimpleTableWithEnum(_bb: ByteBuffer, obj: TestSimpleTableWithEnum): TestSimpleTableWithEnum {
+             _bb.order(ByteOrder.LITTLE_ENDIAN)
+
+----------------------------------------
+
+File: tests/MyGame/Example/TestSimpleTableWithEnum.lua
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -3,7 +3,7 @@
+   Automatically generated by the FlatBuffers compiler, do not modify.
+   Or modify. I'm a message, not a cop.
+ 
+-  flatc version: 24.3.7
++  flatc version: 24.3.25
+ 
+   Declared by  : //monster_test.fbs
+   Rooting type : MyGame.Example.Monster (//monster_test.fbs)
+
+----------------------------------------
+
+File: tests/MyGame/Example/TestSimpleTableWithEnum.nim
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -2,7 +2,7 @@
+   Automatically generated by the FlatBuffers compiler, do not modify.
+   Or modify. I'm a message, not a cop.
+ 
+-  flatc version: 24.3.7
++  flatc version: 24.3.25
+ 
+   Declared by  : 
+   Rooting type : MyGame.Example.Monster ()
+
+----------------------------------------
+
+File: tests/MyGame/Example/TypeAliases.cs
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -13,7 +13,7 @@ public struct TypeAliases : IFlatbufferObject
+ {
+   private Table __p;
+   public ByteBuffer ByteBuffer { get { return __p.bb; } }
+-  public static void ValidateVersion() { FlatBufferConstants.FLATBUFFERS_24_3_7(); }
++  public static void ValidateVersion() { FlatBufferConstants.FLATBUFFERS_24_3_25(); }
+   public static TypeAliases GetRootAsTypeAliases(ByteBuffer _bb) { return GetRootAsTypeAliases(_bb, new TypeAliases()); }
+   public static TypeAliases GetRootAsTypeAliases(ByteBuffer _bb, TypeAliases obj) { return (obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb)); }
+   public void __init(int _i, ByteBuffer _bb) { __p = new Table(_i, _bb); }
+
+----------------------------------------
+
+File: tests/MyGame/Example/TypeAliases.java
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -21,7 +21,7 @@
+ 
+ @SuppressWarnings("unused")
+ public final class TypeAliases extends Table {
+-  public static void ValidateVersion() { Constants.FLATBUFFERS_24_3_7(); }
++  public static void ValidateVersion() { Constants.FLATBUFFERS_24_3_25(); }
+   public static TypeAliases getRootAsTypeAliases(ByteBuffer _bb) { return getRootAsTypeAliases(_bb, new TypeAliases()); }
+   public static TypeAliases getRootAsTypeAliases(ByteBuffer _bb, TypeAliases obj) { _bb.order(ByteOrder.LITTLE_ENDIAN); return (obj.__assign(_bb.getInt(_bb.position()) + _bb.position(), _bb)); }
+   public void __init(int _i, ByteBuffer _bb) { __reset(_i, _bb); }
+
+----------------------------------------
+
+File: tests/MyGame/Example/TypeAliases.kt
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -215,7 +215,7 @@ class TypeAliases : Table() {
+         }
+     }
+     companion object {
+-        fun validateVersion() = Constants.FLATBUFFERS_24_3_7()
++        fun validateVersion() = Constants.FLATBUFFERS_24_3_25()
+         fun getRootAsTypeAliases(_bb: ByteBuffer): TypeAliases = getRootAsTypeAliases(_bb, TypeAliases())
+         fun getRootAsTypeAliases(_bb: ByteBuffer, obj: TypeAliases): TypeAliases {
+             _bb.order(ByteOrder.LITTLE_ENDIAN)
+
+----------------------------------------
+
+File: tests/MyGame/Example/TypeAliases.lua
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -3,7 +3,7 @@
+   Automatically generated by the FlatBuffers compiler, do not modify.
+   Or modify. I'm a message, not a cop.
+ 
+-  flatc version: 24.3.7
++  flatc version: 24.3.25
+ 
+   Declared by  : //monster_test.fbs
+   Rooting type : MyGame.Example.Monster (//monster_test.fbs)
+
+----------------------------------------
+
+File: tests/MyGame/Example/TypeAliases.nim
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -2,7 +2,7 @@
+   Automatically generated by the FlatBuffers compiler, do not modify.
+   Or modify. I'm a message, not a cop.
+ 
+-  flatc version: 24.3.7
++  flatc version: 24.3.25
+ 
+   Declared by  : 
+   Rooting type : MyGame.Example.Monster ()
+
+----------------------------------------
+
+File: tests/MyGame/Example/Vec3.lua
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -3,7 +3,7 @@
+   Automatically generated by the FlatBuffers compiler, do not modify.
+   Or modify. I'm a message, not a cop.
+ 
+-  flatc version: 24.3.7
++  flatc version: 24.3.25
+ 
+   Declared by  : //monster_test.fbs
+   Rooting type : MyGame.Example.Monster (//monster_test.fbs)
+
+----------------------------------------
+
+File: tests/MyGame/Example/Vec3.nim
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -2,7 +2,7 @@
+   Automatically generated by the FlatBuffers compiler, do not modify.
+   Or modify. I'm a message, not a cop.
+ 
+-  flatc version: 24.3.7
++  flatc version: 24.3.25
+ 
+   Declared by  : 
+   Rooting type : MyGame.Example.Monster ()
+
+----------------------------------------
+
+File: tests/MyGame/Example2/Monster.cs
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -13,7 +13,7 @@ public struct Monster : IFlatbufferObject
+ {
+   private Table __p;
+   public ByteBuffer ByteBuffer { get { return __p.bb; } }
+-  public static void ValidateVersion() { FlatBufferConstants.FLATBUFFERS_24_3_7(); }
++  public static void ValidateVersion() { FlatBufferConstants.FLATBUFFERS_24_3_25(); }
+   public static Monster GetRootAsMonster(ByteBuffer _bb) { return GetRootAsMonster(_bb, new Monster()); }
+   public static Monster GetRootAsMonster(ByteBuffer _bb, Monster obj) { return (obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb)); }
+   public void __init(int _i, ByteBuffer _bb) { __p = new Table(_i, _bb); }
+
+----------------------------------------
+
+File: tests/MyGame/Example2/Monster.java
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -21,7 +21,7 @@
+ 
+ @SuppressWarnings("unused")
+ public final class Monster extends Table {
+-  public static void ValidateVersion() { Constants.FLATBUFFERS_24_3_7(); }
++  public static void ValidateVersion() { Constants.FLATBUFFERS_24_3_25(); }
+   public static Monster getRootAsMonster(ByteBuffer _bb) { return getRootAsMonster(_bb, new Monster()); }
+   public static Monster getRootAsMonster(ByteBuffer _bb, Monster obj) { _bb.order(ByteOrder.LITTLE_ENDIAN); return (obj.__assign(_bb.getInt(_bb.position()) + _bb.position(), _bb)); }
+   public void __init(int _i, ByteBuffer _bb) { __reset(_i, _bb); }
+
+----------------------------------------
+
+File: tests/MyGame/Example2/Monster.kt
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -29,7 +29,7 @@ class Monster : Table() {
+         return this
+     }
+     companion object {
+-        fun validateVersion() = Constants.FLATBUFFERS_24_3_7()
++        fun validateVersion() = Constants.FLATBUFFERS_24_3_25()
+         fun getRootAsMonster(_bb: ByteBuffer): Monster = getRootAsMonster(_bb, Monster())
+         fun getRootAsMonster(_bb: ByteBuffer, obj: Monster): Monster {
+             _bb.order(ByteOrder.LITTLE_ENDIAN)
+
+----------------------------------------
+
+File: tests/MyGame/Example2/Monster.lua
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -3,7 +3,7 @@
+   Automatically generated by the FlatBuffers compiler, do not modify.
+   Or modify. I'm a message, not a cop.
+ 
+-  flatc version: 24.3.7
++  flatc version: 24.3.25
+ 
+   Declared by  : //monster_test.fbs
+   Rooting type : MyGame.Example.Monster (//monster_test.fbs)
+
+----------------------------------------
+
+File: tests/MyGame/Example2/Monster.nim
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -2,7 +2,7 @@
+   Automatically generated by the FlatBuffers compiler, do not modify.
+   Or modify. I'm a message, not a cop.
+ 
+-  flatc version: 24.3.7
++  flatc version: 24.3.25
+ 
+   Declared by  : 
+   Rooting type : MyGame.Example.Monster ()
+
+----------------------------------------
+
+File: tests/MyGame/InParentNamespace.cs
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -13,7 +13,7 @@ public struct InParentNamespace : IFlatbufferObject
+ {
+   private Table __p;
+   public ByteBuffer ByteBuffer { get { return __p.bb; } }
+-  public static void ValidateVersion() { FlatBufferConstants.FLATBUFFERS_24_3_7(); }
++  public static void ValidateVersion() { FlatBufferConstants.FLATBUFFERS_24_3_25(); }
+   public static InParentNamespace GetRootAsInParentNamespace(ByteBuffer _bb) { return GetRootAsInParentNamespace(_bb, new InParentNamespace()); }
+   public static InParentNamespace GetRootAsInParentNamespace(ByteBuffer _bb, InParentNamespace obj) { return (obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb)); }
+   public void __init(int _i, ByteBuffer _bb) { __p = new Table(_i, _bb); }
+
+----------------------------------------
+
+File: tests/MyGame/InParentNamespace.java
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -21,7 +21,7 @@
+ 
+ @SuppressWarnings("unused")
+ public final class InParentNamespace extends Table {
+-  public static void ValidateVersion() { Constants.FLATBUFFERS_24_3_7(); }
++  public static void ValidateVersion() { Constants.FLATBUFFERS_24_3_25(); }
+   public static InParentNamespace getRootAsInParentNamespace(ByteBuffer _bb) { return getRootAsInParentNamespace(_bb, new InParentNamespace()); }
+   public static InParentNamespace getRootAsInParentNamespace(ByteBuffer _bb, InParentNamespace obj) { _bb.order(ByteOrder.LITTLE_ENDIAN); return (obj.__assign(_bb.getInt(_bb.position()) + _bb.position(), _bb)); }
+   public void __init(int _i, ByteBuffer _bb) { __reset(_i, _bb); }
+
+----------------------------------------
+
+File: tests/MyGame/InParentNamespace.kt
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -29,7 +29,7 @@ class InParentNamespace : Table() {
+         return this
+     }
+     companion object {
+-        fun validateVersion() = Constants.FLATBUFFERS_24_3_7()
++        fun validateVersion() = Constants.FLATBUFFERS_24_3_25()
+         fun getRootAsInParentNamespace(_bb: ByteBuffer): InParentNamespace = getRootAsInParentNamespace(_bb, InParentNamespace())
+         fun getRootAsInParentNamespace(_bb: ByteBuffer, obj: InParentNamespace): InParentNamespace {
+             _bb.order(ByteOrder.LITTLE_ENDIAN)
+
+----------------------------------------
+
+File: tests/MyGame/InParentNamespace.lua
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -3,7 +3,7 @@
+   Automatically generated by the FlatBuffers compiler, do not modify.
+   Or modify. I'm a message, not a cop.
+ 
+-  flatc version: 24.3.7
++  flatc version: 24.3.25
+ 
+   Declared by  : //monster_test.fbs
+   Rooting type : MyGame.Example.Monster (//monster_test.fbs)
+
+----------------------------------------
+
+File: tests/MyGame/InParentNamespace.nim
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -2,7 +2,7 @@
+   Automatically generated by the FlatBuffers compiler, do not modify.
+   Or modify. I'm a message, not a cop.
+ 
+-  flatc version: 24.3.7
++  flatc version: 24.3.25
+ 
+   Declared by  : 
+   Rooting type : MyGame.Example.Monster ()
+
+----------------------------------------
+
+File: tests/MyGame/MonsterExtra.cs
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -13,7 +13,7 @@ public struct MonsterExtra : IFlatbufferObject
+ {
+   private Table __p;
+   public ByteBuffer ByteBuffer { get { return __p.bb; } }
+-  public static void ValidateVersion() { FlatBufferConstants.FLATBUFFERS_24_3_7(); }
++  public static void ValidateVersion() { FlatBufferConstants.FLATBUFFERS_24_3_25(); }
+   public static MonsterExtra GetRootAsMonsterExtra(ByteBuffer _bb) { return GetRootAsMonsterExtra(_bb, new MonsterExtra()); }
+   public static MonsterExtra GetRootAsMonsterExtra(ByteBuffer _bb, MonsterExtra obj) { return (obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb)); }
+   public static bool MonsterExtraBufferHasIdentifier(ByteBuffer _bb) { return Table.__has_identifier(_bb, "MONE"); }
+
+----------------------------------------
+
+File: tests/MyGame/MonsterExtra.java
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -21,7 +21,7 @@
+ 
+ @SuppressWarnings("unused")
+ public final class MonsterExtra extends Table {
+-  public static void ValidateVersion() { Constants.FLATBUFFERS_24_3_7(); }
++  public static void ValidateVersion() { Constants.FLATBUFFERS_24_3_25(); }
+   public static MonsterExtra getRootAsMonsterExtra(ByteBuffer _bb) { return getRootAsMonsterExtra(_bb, new MonsterExtra()); }
+   public static MonsterExtra getRootAsMonsterExtra(ByteBuffer _bb, MonsterExtra obj) { _bb.order(ByteOrder.LITTLE_ENDIAN); return (obj.__assign(_bb.getInt(_bb.position()) + _bb.position(), _bb)); }
+   public static boolean MonsterExtraBufferHasIdentifier(ByteBuffer _bb) { return __has_identifier(_bb, "MONE"); }
+
+----------------------------------------
+
+File: tests/MyGame/MonsterExtra.kt
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -187,7 +187,7 @@ class MonsterExtra : Table() {
+         }
+     }
+     companion object {
+-        fun validateVersion() = Constants.FLATBUFFERS_24_3_7()
++        fun validateVersion() = Constants.FLATBUFFERS_24_3_25()
+         fun getRootAsMonsterExtra(_bb: ByteBuffer): MonsterExtra = getRootAsMonsterExtra(_bb, MonsterExtra())
+         fun getRootAsMonsterExtra(_bb: ByteBuffer, obj: MonsterExtra): MonsterExtra {
+             _bb.order(ByteOrder.LITTLE_ENDIAN)
+
+----------------------------------------
+
+File: tests/MyGame/OtherNameSpace/FromInclude.lua
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -3,7 +3,7 @@
+   Automatically generated by the FlatBuffers compiler, do not modify.
+   Or modify. I'm a message, not a cop.
+ 
+-  flatc version: 24.3.7
++  flatc version: 24.3.25
+ 
+   Declared by  : //include_test/sub/include_test2.fbs
+   Rooting type : MyGame.Example.Monster (//monster_test.fbs)
+
+----------------------------------------
+
+File: tests/MyGame/OtherNameSpace/FromInclude.nim
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -2,7 +2,7 @@
+   Automatically generated by the FlatBuffers compiler, do not modify.
+   Or modify. I'm a message, not a cop.
+ 
+-  flatc version: 24.3.7
++  flatc version: 24.3.25
+ 
+   Declared by  : 
+   Rooting type : MyGame.Example.Monster ()
+
+----------------------------------------
+
+File: tests/MyGame/OtherNameSpace/TableB.lua
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -3,7 +3,7 @@
+   Automatically generated by the FlatBuffers compiler, do not modify.
+   Or modify. I'm a message, not a cop.
+ 
+-  flatc version: 24.3.7
++  flatc version: 24.3.25
+ 
+   Declared by  : //include_test/sub/include_test2.fbs
+   Rooting type : MyGame.Example.Monster (//monster_test.fbs)
+
+----------------------------------------
+
+File: tests/MyGame/OtherNameSpace/TableB.nim
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -2,7 +2,7 @@
+   Automatically generated by the FlatBuffers compiler, do not modify.
+   Or modify. I'm a message, not a cop.
+ 
+-  flatc version: 24.3.7
++  flatc version: 24.3.25
+ 
+   Declared by  : 
+   Rooting type : MyGame.Example.Monster ()
+
+----------------------------------------
+
+File: tests/MyGame/OtherNameSpace/Unused.lua
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -3,7 +3,7 @@
+   Automatically generated by the FlatBuffers compiler, do not modify.
+   Or modify. I'm a message, not a cop.
+ 
+-  flatc version: 24.3.7
++  flatc version: 24.3.25
+ 
+   Declared by  : //include_test/sub/include_test2.fbs
+   Rooting type : MyGame.Example.Monster (//monster_test.fbs)
+
+----------------------------------------
+
+File: tests/MyGame/OtherNameSpace/Unused.nim
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -2,7 +2,7 @@
+   Automatically generated by the FlatBuffers compiler, do not modify.
+   Or modify. I'm a message, not a cop.
+ 
+-  flatc version: 24.3.7
++  flatc version: 24.3.25
+ 
+   Declared by  : 
+   Rooting type : MyGame.Example.Monster ()
+
+----------------------------------------
+
+File: tests/Property.nim
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -2,7 +2,7 @@
+   Automatically generated by the FlatBuffers compiler, do not modify.
+   Or modify. I'm a message, not a cop.
+ 
+-  flatc version: 24.3.7
++  flatc version: 24.3.25
+ 
+   Declared by  : 
+ ]#
+
+----------------------------------------
+
+File: tests/TableA.lua
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -3,7 +3,7 @@
+   Automatically generated by the FlatBuffers compiler, do not modify.
+   Or modify. I'm a message, not a cop.
+ 
+-  flatc version: 24.3.7
++  flatc version: 24.3.25
+ 
+   Declared by  : //include_test/include_test1.fbs
+   Rooting type : MyGame.Example.Monster (//monster_test.fbs)
+
+----------------------------------------
+
+File: tests/TableA.nim
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -2,7 +2,7 @@
+   Automatically generated by the FlatBuffers compiler, do not modify.
+   Or modify. I'm a message, not a cop.
+ 
+-  flatc version: 24.3.7
++  flatc version: 24.3.25
+ 
+   Declared by  : 
+   Rooting type : MyGame.Example.Monster ()
+
+----------------------------------------
+
+File: tests/TestMutatingBool.nim
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -2,7 +2,7 @@
+   Automatically generated by the FlatBuffers compiler, do not modify.
+   Or modify. I'm a message, not a cop.
+ 
+-  flatc version: 24.3.7
++  flatc version: 24.3.25
+ 
+   Declared by  : 
+ ]#
+
+----------------------------------------
+
+File: tests/cpp17/generated_cpp17/monster_test_generated.h
+Status: modified
+Changes: +7 -1
+Diff:
+@@ -12,7 +12,7 @@
+ // generated, otherwise it may not be compatible.
+ static_assert(FLATBUFFERS_VERSION_MAJOR == 24 &&
+               FLATBUFFERS_VERSION_MINOR == 3 &&
+-              FLATBUFFERS_VERSION_REVISION == 7,
++              FLATBUFFERS_VERSION_REVISION == 25,
+              "Non-compatible flatbuffers version included");
+ 
+ namespace MyGame {
+@@ -1436,6 +1436,12 @@ struct Monster FLATBUFFERS_FINAL_CLASS : private ::flatbuffers::Table {
+
+----------------------------------------
+
+File: tests/cpp17/generated_cpp17/optional_scalars_generated.h
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -10,7 +10,7 @@
+ // generated, otherwise it may not be compatible.
+ static_assert(FLATBUFFERS_VERSION_MAJOR == 24 &&
+               FLATBUFFERS_VERSION_MINOR == 3 &&
+-              FLATBUFFERS_VERSION_REVISION == 7,
++              FLATBUFFERS_VERSION_REVISION == 25,
+              "Non-compatible flatbuffers version included");
+ 
+ namespace optional_scalars {
+
+----------------------------------------
+
+File: tests/cpp17/generated_cpp17/union_vector_generated.h
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -10,7 +10,7 @@
+ // generated, otherwise it may not be compatible.
+ static_assert(FLATBUFFERS_VERSION_MAJOR == 24 &&
+               FLATBUFFERS_VERSION_MINOR == 3 &&
+-              FLATBUFFERS_VERSION_REVISION == 7,
++              FLATBUFFERS_VERSION_REVISION == 25,
+              "Non-compatible flatbuffers version included");
+ 
+ struct Attacker;
+
+----------------------------------------
+
+File: tests/evolution_test/evolution_v1_generated.h
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -10,7 +10,7 @@
+ // generated, otherwise it may not be compatible.
+ static_assert(FLATBUFFERS_VERSION_MAJOR == 24 &&
+               FLATBUFFERS_VERSION_MINOR == 3 &&
+-              FLATBUFFERS_VERSION_REVISION == 7,
++              FLATBUFFERS_VERSION_REVISION == 25,
+              "Non-compatible flatbuffers version included");
+ 
+ namespace Evolution {
+
+----------------------------------------
+
+File: tests/evolution_test/evolution_v2_generated.h
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -10,7 +10,7 @@
+ // generated, otherwise it may not be compatible.
+ static_assert(FLATBUFFERS_VERSION_MAJOR == 24 &&
+               FLATBUFFERS_VERSION_MINOR == 3 &&
+-              FLATBUFFERS_VERSION_REVISION == 7,
++              FLATBUFFERS_VERSION_REVISION == 25,
+              "Non-compatible flatbuffers version included");
+ 
+ namespace Evolution {
+
+----------------------------------------
+
+File: tests/key_field/key_field_sample_generated.h
+Status: modified
+Changes: +7 -1
+Diff:
+@@ -10,7 +10,7 @@
+ // generated, otherwise it may not be compatible.
+ static_assert(FLATBUFFERS_VERSION_MAJOR == 24 &&
+               FLATBUFFERS_VERSION_MINOR == 3 &&
+-              FLATBUFFERS_VERSION_REVISION == 7,
++              FLATBUFFERS_VERSION_REVISION == 25,
+              "Non-compatible flatbuffers version included");
+ 
+ namespace keyfield {
+@@ -598,6 +598,12 @@ struct FooTable FLATBUFFERS_FINAL_CLASS : private ::flatbuffers::Table {
+
+----------------------------------------
+
+File: tests/monster_extra_generated.h
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -10,7 +10,7 @@
+ // generated, otherwise it may not be compatible.
+ static_assert(FLATBUFFERS_VERSION_MAJOR == 24 &&
+               FLATBUFFERS_VERSION_MINOR == 3 &&
+-              FLATBUFFERS_VERSION_REVISION == 7,
++              FLATBUFFERS_VERSION_REVISION == 25,
+              "Non-compatible flatbuffers version included");
+ 
+ namespace MyGame {
+
+----------------------------------------
+
+File: tests/monster_test.cpp
+Status: modified
+Changes: +27 -0
+Diff:
+@@ -313,6 +313,33 @@ void AccessFlatBufferTest(const uint8_t *flatbuf, size_t length, bool pooled) {
+   TEST_NOTNULL(vecoftables->LookupByKey("Fred"));
+   TEST_NOTNULL(vecoftables->LookupByKey("Wilma"));
+ 
++  // Verify the same objects are returned for char*-based and string-based
++  // lookups.
++  TEST_EQ(vecoftables->LookupByKey("Barney"),
++          vecoftables->LookupByKey(std::string("Barney")));
++  TEST_EQ(vecoftables->LookupByKey("Fred"),
++          vecoftables->LookupByKey(std::string("Fred")));
++  TEST_EQ(vecoftables->LookupByKey("Wilma"),
+
+----------------------------------------
+
+File: tests/monster_test_generated.h
+Status: modified
+Changes: +7 -1
+Diff:
+@@ -12,7 +12,7 @@
+ // generated, otherwise it may not be compatible.
+ static_assert(FLATBUFFERS_VERSION_MAJOR == 24 &&
+               FLATBUFFERS_VERSION_MINOR == 3 &&
+-              FLATBUFFERS_VERSION_REVISION == 7,
++              FLATBUFFERS_VERSION_REVISION == 25,
+              "Non-compatible flatbuffers version included");
+ 
+ // For access to the binary schema that produced this file.
+@@ -1432,6 +1432,12 @@ struct Monster FLATBUFFERS_FINAL_CLASS : private ::flatbuffers::Table {
+
+----------------------------------------
+
+File: tests/monster_test_suffix/ext_only/monster_test_generated.hpp
+Status: modified
+Changes: +7 -1
+Diff:
+@@ -12,7 +12,7 @@
+ // generated, otherwise it may not be compatible.
+ static_assert(FLATBUFFERS_VERSION_MAJOR == 24 &&
+               FLATBUFFERS_VERSION_MINOR == 3 &&
+-              FLATBUFFERS_VERSION_REVISION == 7,
++              FLATBUFFERS_VERSION_REVISION == 25,
+              "Non-compatible flatbuffers version included");
+ 
+ namespace MyGame {
+@@ -1423,6 +1423,12 @@ struct Monster FLATBUFFERS_FINAL_CLASS : private ::flatbuffers::Table {
+
+----------------------------------------
+
+File: tests/monster_test_suffix/filesuffix_only/monster_test_suffix.h
+Status: modified
+Changes: +7 -1
+Diff:
+@@ -12,7 +12,7 @@
+ // generated, otherwise it may not be compatible.
+ static_assert(FLATBUFFERS_VERSION_MAJOR == 24 &&
+               FLATBUFFERS_VERSION_MINOR == 3 &&
+-              FLATBUFFERS_VERSION_REVISION == 7,
++              FLATBUFFERS_VERSION_REVISION == 25,
+              "Non-compatible flatbuffers version included");
+ 
+ namespace MyGame {
+@@ -1423,6 +1423,12 @@ struct Monster FLATBUFFERS_FINAL_CLASS : private ::flatbuffers::Table {
+
+----------------------------------------
+
+File: tests/monster_test_suffix/monster_test_suffix.hpp
+Status: modified
+Changes: +7 -1
+Diff:
+@@ -12,7 +12,7 @@
+ // generated, otherwise it may not be compatible.
+ static_assert(FLATBUFFERS_VERSION_MAJOR == 24 &&
+               FLATBUFFERS_VERSION_MINOR == 3 &&
+-              FLATBUFFERS_VERSION_REVISION == 7,
++              FLATBUFFERS_VERSION_REVISION == 25,
+              "Non-compatible flatbuffers version included");
+ 
+ namespace MyGame {
+@@ -1423,6 +1423,12 @@ struct Monster FLATBUFFERS_FINAL_CLASS : private ::flatbuffers::Table {
+
+----------------------------------------
+
+File: tests/namespace_test/NamespaceA/NamespaceB/TableInNestedNS.cs
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -13,7 +13,7 @@ public struct TableInNestedNS : IFlatbufferObject
+ {
+   private Table __p;
+   public ByteBuffer ByteBuffer { get { return __p.bb; } }
+-  public static void ValidateVersion() { FlatBufferConstants.FLATBUFFERS_24_3_7(); }
++  public static void ValidateVersion() { FlatBufferConstants.FLATBUFFERS_24_3_25(); }
+   public static TableInNestedNS GetRootAsTableInNestedNS(ByteBuffer _bb) { return GetRootAsTableInNestedNS(_bb, new TableInNestedNS()); }
+   public static TableInNestedNS GetRootAsTableInNestedNS(ByteBuffer _bb, TableInNestedNS obj) { return (obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb)); }
+   public void __init(int _i, ByteBuffer _bb) { __p = new Table(_i, _bb); }
+
+----------------------------------------
+
+File: tests/namespace_test/NamespaceA/NamespaceB/TableInNestedNS.java
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -9,7 +9,7 @@
+ 
+ @SuppressWarnings("unused")
+ public final class TableInNestedNS extends Table {
+-  public static void ValidateVersion() { Constants.FLATBUFFERS_24_3_7(); }
++  public static void ValidateVersion() { Constants.FLATBUFFERS_24_3_25(); }
+   public static TableInNestedNS getRootAsTableInNestedNS(ByteBuffer _bb) { return getRootAsTableInNestedNS(_bb, new TableInNestedNS()); }
+   public static TableInNestedNS getRootAsTableInNestedNS(ByteBuffer _bb, TableInNestedNS obj) { _bb.order(ByteOrder.LITTLE_ENDIAN); return (obj.__assign(_bb.getInt(_bb.position()) + _bb.position(), _bb)); }
+   public void __init(int _i, ByteBuffer _bb) { __reset(_i, _bb); }
+
+----------------------------------------
+
+File: tests/namespace_test/NamespaceA/NamespaceB/TableInNestedNS.kt
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -44,7 +44,7 @@ class TableInNestedNS : Table() {
+         }
+     }
+     companion object {
+-        fun validateVersion() = Constants.FLATBUFFERS_24_3_7()
++        fun validateVersion() = Constants.FLATBUFFERS_24_3_25()
+         fun getRootAsTableInNestedNS(_bb: ByteBuffer): TableInNestedNS = getRootAsTableInNestedNS(_bb, TableInNestedNS())
+         fun getRootAsTableInNestedNS(_bb: ByteBuffer, obj: TableInNestedNS): TableInNestedNS {
+             _bb.order(ByteOrder.LITTLE_ENDIAN)
+
+----------------------------------------
+
+File: tests/namespace_test/NamespaceA/SecondTableInA.cs
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -13,7 +13,7 @@ public struct SecondTableInA : IFlatbufferObject
+ {
+   private Table __p;
+   public ByteBuffer ByteBuffer { get { return __p.bb; } }
+-  public static void ValidateVersion() { FlatBufferConstants.FLATBUFFERS_24_3_7(); }
++  public static void ValidateVersion() { FlatBufferConstants.FLATBUFFERS_24_3_25(); }
+   public static SecondTableInA GetRootAsSecondTableInA(ByteBuffer _bb) { return GetRootAsSecondTableInA(_bb, new SecondTableInA()); }
+   public static SecondTableInA GetRootAsSecondTableInA(ByteBuffer _bb, SecondTableInA obj) { return (obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb)); }
+   public void __init(int _i, ByteBuffer _bb) { __p = new Table(_i, _bb); }
+
+----------------------------------------
+
+File: tests/namespace_test/NamespaceA/SecondTableInA.java
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -9,7 +9,7 @@
+ 
+ @SuppressWarnings("unused")
+ public final class SecondTableInA extends Table {
+-  public static void ValidateVersion() { Constants.FLATBUFFERS_24_3_7(); }
++  public static void ValidateVersion() { Constants.FLATBUFFERS_24_3_25(); }
+   public static SecondTableInA getRootAsSecondTableInA(ByteBuffer _bb) { return getRootAsSecondTableInA(_bb, new SecondTableInA()); }
+   public static SecondTableInA getRootAsSecondTableInA(ByteBuffer _bb, SecondTableInA obj) { _bb.order(ByteOrder.LITTLE_ENDIAN); return (obj.__assign(_bb.getInt(_bb.position()) + _bb.position(), _bb)); }
+   public void __init(int _i, ByteBuffer _bb) { __reset(_i, _bb); }
+
+----------------------------------------
+
+File: tests/namespace_test/NamespaceA/SecondTableInA.kt
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -39,7 +39,7 @@ class SecondTableInA : Table() {
+         }
+     }
+     companion object {
+-        fun validateVersion() = Constants.FLATBUFFERS_24_3_7()
++        fun validateVersion() = Constants.FLATBUFFERS_24_3_25()
+         fun getRootAsSecondTableInA(_bb: ByteBuffer): SecondTableInA = getRootAsSecondTableInA(_bb, SecondTableInA())
+         fun getRootAsSecondTableInA(_bb: ByteBuffer, obj: SecondTableInA): SecondTableInA {
+             _bb.order(ByteOrder.LITTLE_ENDIAN)
+
+----------------------------------------
+
+File: tests/namespace_test/NamespaceA/TableInFirstNS.cs
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -13,7 +13,7 @@ public struct TableInFirstNS : IFlatbufferObject
+ {
+   private Table __p;
+   public ByteBuffer ByteBuffer { get { return __p.bb; } }
+-  public static void ValidateVersion() { FlatBufferConstants.FLATBUFFERS_24_3_7(); }
++  public static void ValidateVersion() { FlatBufferConstants.FLATBUFFERS_24_3_25(); }
+   public static TableInFirstNS GetRootAsTableInFirstNS(ByteBuffer _bb) { return GetRootAsTableInFirstNS(_bb, new TableInFirstNS()); }
+   public static TableInFirstNS GetRootAsTableInFirstNS(ByteBuffer _bb, TableInFirstNS obj) { return (obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb)); }
+   public void __init(int _i, ByteBuffer _bb) { __p = new Table(_i, _bb); }
+
+----------------------------------------
+
+File: tests/namespace_test/NamespaceA/TableInFirstNS.java
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -9,7 +9,7 @@
+ 
+ @SuppressWarnings("unused")
+ public final class TableInFirstNS extends Table {
+-  public static void ValidateVersion() { Constants.FLATBUFFERS_24_3_7(); }
++  public static void ValidateVersion() { Constants.FLATBUFFERS_24_3_25(); }
+   public static TableInFirstNS getRootAsTableInFirstNS(ByteBuffer _bb) { return getRootAsTableInFirstNS(_bb, new TableInFirstNS()); }
+   public static TableInFirstNS getRootAsTableInFirstNS(ByteBuffer _bb, TableInFirstNS obj) { _bb.order(ByteOrder.LITTLE_ENDIAN); return (obj.__assign(_bb.getInt(_bb.position()) + _bb.position(), _bb)); }
+   public void __init(int _i, ByteBuffer _bb) { __reset(_i, _bb); }
+
+----------------------------------------
+
+File: tests/namespace_test/NamespaceA/TableInFirstNS.kt
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -79,7 +79,7 @@ class TableInFirstNS : Table() {
+         }
+     }
+     companion object {
+-        fun validateVersion() = Constants.FLATBUFFERS_24_3_7()
++        fun validateVersion() = Constants.FLATBUFFERS_24_3_25()
+         fun getRootAsTableInFirstNS(_bb: ByteBuffer): TableInFirstNS = getRootAsTableInFirstNS(_bb, TableInFirstNS())
+         fun getRootAsTableInFirstNS(_bb: ByteBuffer, obj: TableInFirstNS): TableInFirstNS {
+             _bb.order(ByteOrder.LITTLE_ENDIAN)
+
+----------------------------------------
+
+File: tests/namespace_test/NamespaceC/TableInC.cs
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -13,7 +13,7 @@ public struct TableInC : IFlatbufferObject
+ {
+   private Table __p;
+   public ByteBuffer ByteBuffer { get { return __p.bb; } }
+-  public static void ValidateVersion() { FlatBufferConstants.FLATBUFFERS_24_3_7(); }
++  public static void ValidateVersion() { FlatBufferConstants.FLATBUFFERS_24_3_25(); }
+   public static TableInC GetRootAsTableInC(ByteBuffer _bb) { return GetRootAsTableInC(_bb, new TableInC()); }
+   public static TableInC GetRootAsTableInC(ByteBuffer _bb, TableInC obj) { return (obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb)); }
+   public void __init(int _i, ByteBuffer _bb) { __p = new Table(_i, _bb); }
+
+----------------------------------------
+
+File: tests/namespace_test/NamespaceC/TableInC.java
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -9,7 +9,7 @@
+ 
+ @SuppressWarnings("unused")
+ public final class TableInC extends Table {
+-  public static void ValidateVersion() { Constants.FLATBUFFERS_24_3_7(); }
++  public static void ValidateVersion() { Constants.FLATBUFFERS_24_3_25(); }
+   public static TableInC getRootAsTableInC(ByteBuffer _bb) { return getRootAsTableInC(_bb, new TableInC()); }
+   public static TableInC getRootAsTableInC(ByteBuffer _bb, TableInC obj) { _bb.order(ByteOrder.LITTLE_ENDIAN); return (obj.__assign(_bb.getInt(_bb.position()) + _bb.position(), _bb)); }
+   public void __init(int _i, ByteBuffer _bb) { __reset(_i, _bb); }
+
+----------------------------------------
+
+File: tests/namespace_test/NamespaceC/TableInC.kt
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -48,7 +48,7 @@ class TableInC : Table() {
+         }
+     }
+     companion object {
+-        fun validateVersion() = Constants.FLATBUFFERS_24_3_7()
++        fun validateVersion() = Constants.FLATBUFFERS_24_3_25()
+         fun getRootAsTableInC(_bb: ByteBuffer): TableInC = getRootAsTableInC(_bb, TableInC())
+         fun getRootAsTableInC(_bb: ByteBuffer, obj: TableInC): TableInC {
+             _bb.order(ByteOrder.LITTLE_ENDIAN)
+
+----------------------------------------
+
+File: tests/namespace_test/namespace_test1_generated.h
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -10,7 +10,7 @@
+ // generated, otherwise it may not be compatible.
+ static_assert(FLATBUFFERS_VERSION_MAJOR == 24 &&
+               FLATBUFFERS_VERSION_MINOR == 3 &&
+-              FLATBUFFERS_VERSION_REVISION == 7,
++              FLATBUFFERS_VERSION_REVISION == 25,
+              "Non-compatible flatbuffers version included");
+ 
+ namespace NamespaceA {
+
+----------------------------------------
+
+File: tests/namespace_test/namespace_test2_generated.h
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -10,7 +10,7 @@
+ // generated, otherwise it may not be compatible.
+ static_assert(FLATBUFFERS_VERSION_MAJOR == 24 &&
+               FLATBUFFERS_VERSION_MINOR == 3 &&
+-              FLATBUFFERS_VERSION_REVISION == 7,
++              FLATBUFFERS_VERSION_REVISION == 25,
+              "Non-compatible flatbuffers version included");
+ 
+ namespace NamespaceA {
+
+----------------------------------------
+
+File: tests/native_inline_table_test_generated.h
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -10,7 +10,7 @@
+ // generated, otherwise it may not be compatible.
+ static_assert(FLATBUFFERS_VERSION_MAJOR == 24 &&
+               FLATBUFFERS_VERSION_MINOR == 3 &&
+-              FLATBUFFERS_VERSION_REVISION == 7,
++              FLATBUFFERS_VERSION_REVISION == 25,
+              "Non-compatible flatbuffers version included");
+ 
+ struct NativeInlineTable;
+
+----------------------------------------
+
+File: tests/native_type_test_generated.h
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -10,7 +10,7 @@
+ // generated, otherwise it may not be compatible.
+ static_assert(FLATBUFFERS_VERSION_MAJOR == 24 &&
+               FLATBUFFERS_VERSION_MINOR == 3 &&
+-              FLATBUFFERS_VERSION_REVISION == 7,
++              FLATBUFFERS_VERSION_REVISION == 25,
+              "Non-compatible flatbuffers version included");
+ 
+ #include "native_type_test_impl.h"
+
+----------------------------------------
+
+File: tests/nested_namespace_test/nested_namespace_test3_generated.cs
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -13,7 +13,7 @@ public struct ColorTestTable : IFlatbufferObject
+ {
+   private Table __p;
+   public ByteBuffer ByteBuffer { get { return __p.bb; } }
+-  public static void ValidateVersion() { FlatBufferConstants.FLATBUFFERS_24_3_7(); }
++  public static void ValidateVersion() { FlatBufferConstants.FLATBUFFERS_24_3_25(); }
+   public static ColorTestTable GetRootAsColorTestTable(ByteBuffer _bb) { return GetRootAsColorTestTable(_bb, new ColorTestTable()); }
+   public static ColorTestTable GetRootAsColorTestTable(ByteBuffer _bb, ColorTestTable obj) { return (obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb)); }
+   public void __init(int _i, ByteBuffer _bb) { __p = new Table(_i, _bb); }
+
+----------------------------------------
+
+File: tests/optional_scalars/OptionalByte.nim
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -2,7 +2,7 @@
+   Automatically generated by the FlatBuffers compiler, do not modify.
+   Or modify. I'm a message, not a cop.
+ 
+-  flatc version: 24.3.7
++  flatc version: 24.3.25
+ 
+   Declared by  : 
+   Rooting type : optional_scalars.ScalarStuff ()
+
+----------------------------------------
+
+File: tests/optional_scalars/ScalarStuff.cs
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -13,7 +13,7 @@ public struct ScalarStuff : IFlatbufferObject
+ {
+   private Table __p;
+   public ByteBuffer ByteBuffer { get { return __p.bb; } }
+-  public static void ValidateVersion() { FlatBufferConstants.FLATBUFFERS_24_3_7(); }
++  public static void ValidateVersion() { FlatBufferConstants.FLATBUFFERS_24_3_25(); }
+   public static ScalarStuff GetRootAsScalarStuff(ByteBuffer _bb) { return GetRootAsScalarStuff(_bb, new ScalarStuff()); }
+   public static ScalarStuff GetRootAsScalarStuff(ByteBuffer _bb, ScalarStuff obj) { return (obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb)); }
+   public static bool ScalarStuffBufferHasIdentifier(ByteBuffer _bb) { return Table.__has_identifier(_bb, "NULL"); }
+
+----------------------------------------
+
+File: tests/optional_scalars/ScalarStuff.java
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -21,7 +21,7 @@
+ 
+ @SuppressWarnings("unused")
+ public final class ScalarStuff extends Table {
+-  public static void ValidateVersion() { Constants.FLATBUFFERS_24_3_7(); }
++  public static void ValidateVersion() { Constants.FLATBUFFERS_24_3_25(); }
+   public static ScalarStuff getRootAsScalarStuff(ByteBuffer _bb) { return getRootAsScalarStuff(_bb, new ScalarStuff()); }
+   public static ScalarStuff getRootAsScalarStuff(ByteBuffer _bb, ScalarStuff obj) { _bb.order(ByteOrder.LITTLE_ENDIAN); return (obj.__assign(_bb.getInt(_bb.position()) + _bb.position(), _bb)); }
+   public static boolean ScalarStuffBufferHasIdentifier(ByteBuffer _bb) { return __has_identifier(_bb, "NULL"); }
+
+----------------------------------------
+
+File: tests/optional_scalars/ScalarStuff.kt
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -209,7 +209,7 @@ class ScalarStuff : Table() {
+             return if(o != 0) bb.get(o + bb_pos) else 1
+         }
+     companion object {
+-        fun validateVersion() = Constants.FLATBUFFERS_24_3_7()
++        fun validateVersion() = Constants.FLATBUFFERS_24_3_25()
+         fun getRootAsScalarStuff(_bb: ByteBuffer): ScalarStuff = getRootAsScalarStuff(_bb, ScalarStuff())
+         fun getRootAsScalarStuff(_bb: ByteBuffer, obj: ScalarStuff): ScalarStuff {
+             _bb.order(ByteOrder.LITTLE_ENDIAN)
+
+----------------------------------------
+
+File: tests/optional_scalars/ScalarStuff.nim
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -2,7 +2,7 @@
+   Automatically generated by the FlatBuffers compiler, do not modify.
+   Or modify. I'm a message, not a cop.
+ 
+-  flatc version: 24.3.7
++  flatc version: 24.3.25
+ 
+   Declared by  : 
+   Rooting type : optional_scalars.ScalarStuff ()
+
+----------------------------------------
+
+File: tests/optional_scalars_generated.h
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -10,7 +10,7 @@
+ // generated, otherwise it may not be compatible.
+ static_assert(FLATBUFFERS_VERSION_MAJOR == 24 &&
+               FLATBUFFERS_VERSION_MINOR == 3 &&
+-              FLATBUFFERS_VERSION_REVISION == 7,
++              FLATBUFFERS_VERSION_REVISION == 25,
+              "Non-compatible flatbuffers version included");
+ 
+ namespace optional_scalars {
+
+----------------------------------------
+
+File: tests/swift/Wasm.tests/Tests/FlatBuffers.Test.Swift.WasmTests/monster_test_generated.swift
+Status: modified
+Changes: +17 -17
+Diff:
+@@ -237,7 +237,7 @@ public struct MyGame_Example_AnyAmbiguousAliasesUnion {
+ }
+ public struct MyGame_Example_Test: NativeStruct, Verifiable, FlatbuffersInitializable, NativeObject {
+ 
+-  static func validateVersion() { FlatBuffersVersion_24_3_7() }
++  static func validateVersion() { FlatBuffersVersion_24_3_25() }
+ 
+   private var _a: Int16
+   private var _b: Int8
+@@ -291,7 +291,7 @@ extension MyGame_Example_Test: Encodable {
+ 
+ public struct MyGame_Example_Test_Mutable: FlatBufferObject {
+ 
+-  static func validateVersion() { FlatBuffersVersion_24_3_7() }
++  static func validateVersion() { FlatBuffersVersion_24_3_25() }
+   public var __buffer: ByteBuffer! { return _accessor.bb }
+   private var _accessor: Struct
+ 
+@@ -318,7 +318,7 @@ public struct MyGame_Example_Test_Mutable: FlatBufferObject {
+ 
+ public struct MyGame_Example_Vec3: NativeStruct, Verifiable, FlatbuffersInitializable, NativeObject {
+ 
+-  static func validateVersion() { FlatBuffersVersion_24_3_7() }
++  static func validateVersion() { FlatBuffersVersion_24_3_25() }
+ 
+   private var _x: Float32
+   private var _y: Float32
+@@ -413,7 +413,7 @@ extension MyGame_Example_Vec3: Encodable {
+ 
+ public struct MyGame_Example_Vec3_Mutable: FlatBufferObject {
+ 
+-  static func validateVersion() { FlatBuffersVersion_24_3_7() }
++  static func validateVersion() { FlatBuffersVersion_24_3_25() }
+   public var __buffer: ByteBuffer! { return _accessor.bb }
+   private var _accessor: Struct
+ 
+@@ -447,7 +447,7 @@ public struct MyGame_Example_Vec3_Mutable: FlatBufferObject {
+ 
+ public struct MyGame_Example_Ability: NativeStruct, Verifiable, FlatbuffersInitializable, NativeObject {
+ 
+-  static func validateVersion() { FlatBuffersVersion_24_3_7() }
++  static func validateVersion() { FlatBuffersVersion_24_3_25() }
+ 
+   private var _id: UInt32
+   private var _distance: UInt32
+@@ -500,7 +500,7 @@ extension MyGame_Example_Ability: Encodable {
+ 
+ public struct MyGame_Example_Ability_Mutable: FlatBufferObject {
+ 
+-  static func validateVersion() { FlatBuffersVersion_24_3_7() }
++  static func validateVersion() { FlatBuffersVersion_24_3_25() }
+
+----------------------------------------
+
+File: tests/swift/tests/CodeGenerationTests/test_import_generated.swift
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -6,7 +6,7 @@
+ 
+ internal struct Message: FlatBufferObject, Verifiable, ObjectAPIPacker {
+ 
+-  static func validateVersion() { FlatBuffersVersion_24_3_7() }
++  static func validateVersion() { FlatBuffersVersion_24_3_25() }
+   internal var __buffer: ByteBuffer! { return _accessor.bb }
+   private var _accessor: Table
+ 
+
+----------------------------------------
+
+File: tests/swift/tests/CodeGenerationTests/test_no_include_generated.swift
+Status: modified
+Changes: +4 -4
+Diff:
+@@ -4,7 +4,7 @@
+ 
+ public struct BytesCount: NativeStruct, Verifiable, FlatbuffersInitializable, NativeObject {
+ 
+-  static func validateVersion() { FlatBuffersVersion_24_3_7() }
++  static func validateVersion() { FlatBuffersVersion_24_3_25() }
+ 
+   private var _x: Int64
+ 
+@@ -47,7 +47,7 @@ extension BytesCount: Encodable {
+ 
+ public struct BytesCount_Mutable: FlatBufferObject {
+
+----------------------------------------
+
+File: tests/swift/tests/Sources/SwiftFlatBuffers/fuzzer_generated.swift
+Status: modified
+Changes: +5 -5
+Diff:
+@@ -32,7 +32,7 @@ extension Color: Encodable {
+ 
+ public struct Test: NativeStruct, Verifiable, FlatbuffersInitializable {
+ 
+-  static func validateVersion() { FlatBuffersVersion_24_3_7() }
++  static func validateVersion() { FlatBuffersVersion_24_3_25() }
+ 
+   private var _a: Int16
+   private var _b: Int8
+@@ -81,7 +81,7 @@ extension Test: Encodable {
+ 
+ public struct Test_Mutable: FlatBufferObject {
+ 
+-  static func validateVersion() { FlatBuffersVersion_24_3_7() }
++  static func validateVersion() { FlatBuffersVersion_24_3_25() }
+
+----------------------------------------
+
+File: tests/swift/tests/Tests/FlatBuffers.Test.SwiftTests/MutatingBool_generated.swift
+Status: modified
+Changes: +3 -3
+Diff:
+@@ -6,7 +6,7 @@ import FlatBuffers
+ 
+ public struct Property: NativeStruct, Verifiable, FlatbuffersInitializable, NativeObject {
+ 
+-  static func validateVersion() { FlatBuffersVersion_24_3_7() }
++  static func validateVersion() { FlatBuffersVersion_24_3_25() }
+ 
+   private var _property: Bool
+ 
+@@ -49,7 +49,7 @@ extension Property: Encodable {
+
+----------------------------------------
+
+File: tests/swift/tests/Tests/FlatBuffers.Test.SwiftTests/monster_test_generated.swift
+Status: modified
+Changes: +17 -17
+Diff:
+@@ -237,7 +237,7 @@ public struct MyGame_Example_AnyAmbiguousAliasesUnion {
+ }
+ public struct MyGame_Example_Test: NativeStruct, Verifiable, FlatbuffersInitializable, NativeObject {
+ 
+-  static func validateVersion() { FlatBuffersVersion_24_3_7() }
++  static func validateVersion() { FlatBuffersVersion_24_3_25() }
+ 
+   private var _a: Int16
+   private var _b: Int8
+@@ -291,7 +291,7 @@ extension MyGame_Example_Test: Encodable {
+ 
+ public struct MyGame_Example_Test_Mutable: FlatBufferObject {
+ 
+-  static func validateVersion() { FlatBuffersVersion_24_3_7() }
++  static func validateVersion() { FlatBuffersVersion_24_3_25() }
+   public var __buffer: ByteBuffer! { return _accessor.bb }
+   private var _accessor: Struct
+ 
+@@ -318,7 +318,7 @@ public struct MyGame_Example_Test_Mutable: FlatBufferObject {
+ 
+ public struct MyGame_Example_Vec3: NativeStruct, Verifiable, FlatbuffersInitializable, NativeObject {
+ 
+-  static func validateVersion() { FlatBuffersVersion_24_3_7() }
++  static func validateVersion() { FlatBuffersVersion_24_3_25() }
+ 
+   private var _x: Float32
+   private var _y: Float32
+@@ -413,7 +413,7 @@ extension MyGame_Example_Vec3: Encodable {
+ 
+ public struct MyGame_Example_Vec3_Mutable: FlatBufferObject {
+ 
+-  static func validateVersion() { FlatBuffersVersion_24_3_7() }
++  static func validateVersion() { FlatBuffersVersion_24_3_25() }
+   public var __buffer: ByteBuffer! { return _accessor.bb }
+   private var _accessor: Struct
+ 
+@@ -447,7 +447,7 @@ public struct MyGame_Example_Vec3_Mutable: FlatBufferObject {
+ 
+ public struct MyGame_Example_Ability: NativeStruct, Verifiable, FlatbuffersInitializable, NativeObject {
+ 
+-  static func validateVersion() { FlatBuffersVersion_24_3_7() }
++  static func validateVersion() { FlatBuffersVersion_24_3_25() }
+ 
+   private var _id: UInt32
+   private var _distance: UInt32
+@@ -500,7 +500,7 @@ extension MyGame_Example_Ability: Encodable {
+ 
+ public struct MyGame_Example_Ability_Mutable: FlatBufferObject {
+ 
+-  static func validateVersion() { FlatBuffersVersion_24_3_7() }
++  static func validateVersion() { FlatBuffersVersion_24_3_25() }
+
+----------------------------------------
+
+File: tests/swift/tests/Tests/FlatBuffers.Test.SwiftTests/more_defaults_generated.swift
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -29,7 +29,7 @@ extension ABC: Encodable {
+ 
+ public struct MoreDefaults: FlatBufferObject, Verifiable, ObjectAPIPacker {
+ 
+-  static func validateVersion() { FlatBuffersVersion_24_3_7() }
++  static func validateVersion() { FlatBuffersVersion_24_3_25() }
+   public var __buffer: ByteBuffer! { return _accessor.bb }
+   private var _accessor: Table
+ 
+
+----------------------------------------
+
+File: tests/swift/tests/Tests/FlatBuffers.Test.SwiftTests/nan_inf_test_generated.swift
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -6,7 +6,7 @@ import FlatBuffers
+ 
+ public struct Swift_Tests_NanInfTable: FlatBufferObject, Verifiable {
+ 
+-  static func validateVersion() { FlatBuffersVersion_24_3_7() }
++  static func validateVersion() { FlatBuffersVersion_24_3_25() }
+   public var __buffer: ByteBuffer! { return _accessor.bb }
+   private var _accessor: Table
+ 
+
+----------------------------------------
+
+File: tests/swift/tests/Tests/FlatBuffers.Test.SwiftTests/optional_scalars_generated.swift
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -29,7 +29,7 @@ extension optional_scalars_OptionalByte: Encodable {
+ 
+ public struct optional_scalars_ScalarStuff: FlatBufferObject, Verifiable {
+ 
+-  static func validateVersion() { FlatBuffersVersion_24_3_7() }
++  static func validateVersion() { FlatBuffersVersion_24_3_25() }
+   public var __buffer: ByteBuffer! { return _accessor.bb }
+   private var _accessor: Table
+ 
+
+----------------------------------------
+
+File: tests/swift/tests/Tests/FlatBuffers.Test.SwiftTests/union_vector_generated.swift
+Status: modified
+Changes: +9 -9
+Diff:
+@@ -120,7 +120,7 @@ public struct GadgetUnion {
+ }
+ public struct Rapunzel: NativeStruct, Verifiable, FlatbuffersInitializable, NativeObject {
+ 
+-  static func validateVersion() { FlatBuffersVersion_24_3_7() }
++  static func validateVersion() { FlatBuffersVersion_24_3_25() }
+ 
+   private var _hairLength: Int32
+ 
+@@ -163,7 +163,7 @@ extension Rapunzel: Encodable {
+ 
+ public struct Rapunzel_Mutable: FlatBufferObject {
+ 
+-  static func validateVersion() { FlatBuffersVersion_24_3_7() }
++  static func validateVersion() { FlatBuffersVersion_24_3_25() }
+   public var __buffer: ByteBuffer! { return _accessor.bb }
+   private var _accessor: Struct
+ 
+@@ -188,7 +188,7 @@ public struct Rapunzel_Mutable: FlatBufferObject {
+ 
+ public struct BookReader: NativeStruct, Verifiable, FlatbuffersInitializable, NativeObject {
+ 
+-  static func validateVersion() { FlatBuffersVersion_24_3_7() }
++  static func validateVersion() { FlatBuffersVersion_24_3_25() }
+ 
+   private var _booksRead: Int32
+ 
+
+----------------------------------------
+
+File: tests/swift/tests/Tests/FlatBuffers.Test.SwiftTests/vector_has_test_generated.swift
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -6,7 +6,7 @@ import FlatBuffers
+ 
+ public struct Swift_Tests_Vectors: FlatBufferObject, Verifiable {
+ 
+-  static func validateVersion() { FlatBuffersVersion_24_3_7() }
++  static func validateVersion() { FlatBuffersVersion_24_3_25() }
+   public var __buffer: ByteBuffer! { return _accessor.bb }
+   private var _accessor: Table
+ 
+
+----------------------------------------
+
+File: tests/type_field_collsion/Collision.cs
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -13,7 +13,7 @@ public struct Collision : IFlatbufferObject
+ {
+   private Table __p;
+   public ByteBuffer ByteBuffer { get { return __p.bb; } }
+-  public static void ValidateVersion() { FlatBufferConstants.FLATBUFFERS_24_3_7(); }
++  public static void ValidateVersion() { FlatBufferConstants.FLATBUFFERS_24_3_25(); }
+   public static Collision GetRootAsCollision(ByteBuffer _bb) { return GetRootAsCollision(_bb, new Collision()); }
+   public static Collision GetRootAsCollision(ByteBuffer _bb, Collision obj) { return (obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb)); }
+   public static bool VerifyCollision(ByteBuffer _bb) {Google.FlatBuffers.Verifier verifier = new Google.FlatBuffers.Verifier(_bb); return verifier.VerifyBuffer("", false, CollisionVerify.Verify); }
+
+----------------------------------------
+
+File: tests/union_underlying_type_test_generated.h
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -10,7 +10,7 @@
+ // generated, otherwise it may not be compatible.
+ static_assert(FLATBUFFERS_VERSION_MAJOR == 24 &&
+               FLATBUFFERS_VERSION_MINOR == 3 &&
+-              FLATBUFFERS_VERSION_REVISION == 7,
++              FLATBUFFERS_VERSION_REVISION == 25,
+              "Non-compatible flatbuffers version included");
+ 
+ namespace UnionUnderlyingType {
+
+----------------------------------------
+
+File: tests/union_value_collsion/union_value_collision_generated.cs
+Status: modified
+Changes: +3 -3
+Diff:
+@@ -189,7 +189,7 @@ public struct IntValue : IFlatbufferObject
+ {
+   private Table __p;
+   public ByteBuffer ByteBuffer { get { return __p.bb; } }
+-  public static void ValidateVersion() { FlatBufferConstants.FLATBUFFERS_24_3_7(); }
++  public static void ValidateVersion() { FlatBufferConstants.FLATBUFFERS_24_3_25(); }
+   public static IntValue GetRootAsIntValue(ByteBuffer _bb) { return GetRootAsIntValue(_bb, new IntValue()); }
+   public static IntValue GetRootAsIntValue(ByteBuffer _bb, IntValue obj) { return (obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb)); }
+   public void __init(int _i, ByteBuffer _bb) { __p = new Table(_i, _bb); }
+@@ -250,7 +250,7 @@ public struct Collide : IFlatbufferObject
+
+----------------------------------------
+
+File: tests/union_vector/Attacker.cs
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -10,7 +10,7 @@ public struct Attacker : IFlatbufferObject
+ {
+   private Table __p;
+   public ByteBuffer ByteBuffer { get { return __p.bb; } }
+-  public static void ValidateVersion() { FlatBufferConstants.FLATBUFFERS_24_3_7(); }
++  public static void ValidateVersion() { FlatBufferConstants.FLATBUFFERS_24_3_25(); }
+   public static Attacker GetRootAsAttacker(ByteBuffer _bb) { return GetRootAsAttacker(_bb, new Attacker()); }
+   public static Attacker GetRootAsAttacker(ByteBuffer _bb, Attacker obj) { return (obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb)); }
+   public void __init(int _i, ByteBuffer _bb) { __p = new Table(_i, _bb); }
+
+----------------------------------------
+
+File: tests/union_vector/Attacker.java
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -19,7 +19,7 @@
+ 
+ @SuppressWarnings("unused")
+ public final class Attacker extends Table {
+-  public static void ValidateVersion() { Constants.FLATBUFFERS_24_3_7(); }
++  public static void ValidateVersion() { Constants.FLATBUFFERS_24_3_25(); }
+   public static Attacker getRootAsAttacker(ByteBuffer _bb) { return getRootAsAttacker(_bb, new Attacker()); }
+   public static Attacker getRootAsAttacker(ByteBuffer _bb, Attacker obj) { _bb.order(ByteOrder.LITTLE_ENDIAN); return (obj.__assign(_bb.getInt(_bb.position()) + _bb.position(), _bb)); }
+   public void __init(int _i, ByteBuffer _bb) { __reset(_i, _bb); }
+
+----------------------------------------
+
+File: tests/union_vector/Attacker.kt
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -41,7 +41,7 @@ class Attacker : Table() {
+         }
+     }
+     companion object {
+-        fun validateVersion() = Constants.FLATBUFFERS_24_3_7()
++        fun validateVersion() = Constants.FLATBUFFERS_24_3_25()
+         fun getRootAsAttacker(_bb: ByteBuffer): Attacker = getRootAsAttacker(_bb, Attacker())
+         fun getRootAsAttacker(_bb: ByteBuffer, obj: Attacker): Attacker {
+             _bb.order(ByteOrder.LITTLE_ENDIAN)
+
+----------------------------------------
+
+File: tests/union_vector/HandFan.cs
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -10,7 +10,7 @@ public struct HandFan : IFlatbufferObject
+ {
+   private Table __p;
+   public ByteBuffer ByteBuffer { get { return __p.bb; } }
+-  public static void ValidateVersion() { FlatBufferConstants.FLATBUFFERS_24_3_7(); }
++  public static void ValidateVersion() { FlatBufferConstants.FLATBUFFERS_24_3_25(); }
+   public static HandFan GetRootAsHandFan(ByteBuffer _bb) { return GetRootAsHandFan(_bb, new HandFan()); }
+   public static HandFan GetRootAsHandFan(ByteBuffer _bb, HandFan obj) { return (obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb)); }
+   public void __init(int _i, ByteBuffer _bb) { __p = new Table(_i, _bb); }
+
+----------------------------------------
+
+File: tests/union_vector/HandFan.java
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -19,7 +19,7 @@
+ 
+ @SuppressWarnings("unused")
+ public final class HandFan extends Table {
+-  public static void ValidateVersion() { Constants.FLATBUFFERS_24_3_7(); }
++  public static void ValidateVersion() { Constants.FLATBUFFERS_24_3_25(); }
+   public static HandFan getRootAsHandFan(ByteBuffer _bb) { return getRootAsHandFan(_bb, new HandFan()); }
+   public static HandFan getRootAsHandFan(ByteBuffer _bb, HandFan obj) { _bb.order(ByteOrder.LITTLE_ENDIAN); return (obj.__assign(_bb.getInt(_bb.position()) + _bb.position(), _bb)); }
+   public void __init(int _i, ByteBuffer _bb) { __reset(_i, _bb); }
+
+----------------------------------------
+
+File: tests/union_vector/HandFan.kt
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -41,7 +41,7 @@ class HandFan : Table() {
+         }
+     }
+     companion object {
+-        fun validateVersion() = Constants.FLATBUFFERS_24_3_7()
++        fun validateVersion() = Constants.FLATBUFFERS_24_3_25()
+         fun getRootAsHandFan(_bb: ByteBuffer): HandFan = getRootAsHandFan(_bb, HandFan())
+         fun getRootAsHandFan(_bb: ByteBuffer, obj: HandFan): HandFan {
+             _bb.order(ByteOrder.LITTLE_ENDIAN)
+
+----------------------------------------
+
+File: tests/union_vector/Movie.cs
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -10,7 +10,7 @@ public struct Movie : IFlatbufferObject
+ {
+   private Table __p;
+   public ByteBuffer ByteBuffer { get { return __p.bb; } }
+-  public static void ValidateVersion() { FlatBufferConstants.FLATBUFFERS_24_3_7(); }
++  public static void ValidateVersion() { FlatBufferConstants.FLATBUFFERS_24_3_25(); }
+   public static Movie GetRootAsMovie(ByteBuffer _bb) { return GetRootAsMovie(_bb, new Movie()); }
+   public static Movie GetRootAsMovie(ByteBuffer _bb, Movie obj) { return (obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb)); }
+   public static bool MovieBufferHasIdentifier(ByteBuffer _bb) { return Table.__has_identifier(_bb, "MOVI"); }
+
+----------------------------------------
+
+File: tests/union_vector/Movie.java
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -19,7 +19,7 @@
+ 
+ @SuppressWarnings("unused")
+ public final class Movie extends Table {
+-  public static void ValidateVersion() { Constants.FLATBUFFERS_24_3_7(); }
++  public static void ValidateVersion() { Constants.FLATBUFFERS_24_3_25(); }
+   public static Movie getRootAsMovie(ByteBuffer _bb) { return getRootAsMovie(_bb, new Movie()); }
+   public static Movie getRootAsMovie(ByteBuffer _bb, Movie obj) { _bb.order(ByteOrder.LITTLE_ENDIAN); return (obj.__assign(_bb.getInt(_bb.position()) + _bb.position(), _bb)); }
+   public static boolean MovieBufferHasIdentifier(ByteBuffer _bb) { return __has_identifier(_bb, "MOVI"); }
+
+----------------------------------------
+
+File: tests/union_vector/Movie.kt
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -79,7 +79,7 @@ class Movie : Table() {
+             val o = __offset(10); return if (o != 0) __vector_len(o) else 0
+         }
+     companion object {
+-        fun validateVersion() = Constants.FLATBUFFERS_24_3_7()
++        fun validateVersion() = Constants.FLATBUFFERS_24_3_25()
+         fun getRootAsMovie(_bb: ByteBuffer): Movie = getRootAsMovie(_bb, Movie())
+         fun getRootAsMovie(_bb: ByteBuffer, obj: Movie): Movie {
+             _bb.order(ByteOrder.LITTLE_ENDIAN)
+
+----------------------------------------
+
+File: tests/union_vector/union_vector_generated.h
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -10,7 +10,7 @@
+ // generated, otherwise it may not be compatible.
+ static_assert(FLATBUFFERS_VERSION_MAJOR == 24 &&
+               FLATBUFFERS_VERSION_MINOR == 3 &&
+-              FLATBUFFERS_VERSION_REVISION == 7,
++              FLATBUFFERS_VERSION_REVISION == 25,
+              "Non-compatible flatbuffers version included");
+ 
+ struct Attacker;
+
+----------------------------------------
+

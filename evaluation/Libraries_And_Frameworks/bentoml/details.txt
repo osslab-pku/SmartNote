@@ -1,0 +1,8 @@
+SmartDraft Command:
+pixi run ipython --pdb -m smartdraft.generator -- bentoml/bentoml --previous-release v1.3.1 --current-release v1.3.2 --project-domain Library --min-significance 0.05 --writing-style "Automatic" --structure-type "Change Type" --group-commits --show-significance
+
+DeepRelease Command:
+docker run -it -v $(pwd):/outputs --env GITHUB_TOKEN=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 --network host --rm fgksgf/deeprelease run bentoml/bentoml --since 202408060000 --until 202408142359 --save_dir=/outputs/bentoml
+
+ConventionalChangelog Command:
+cd ../.cache/repo/bentoml_bentoml && git checkout v1.3.2 && conventional-changelog -p angular -r 2 && git checkout -

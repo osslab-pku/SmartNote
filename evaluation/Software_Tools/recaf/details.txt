@@ -1,0 +1,8 @@
+SmartDraft Command:
+pixi run ipython --pdb -m smartdraft.generator -- Col-E/Recaf --previous-release 2.21.13 --current-release 2.21.14 --project-domain Tool --min-significance 0.1 --writing-style "Automatic" --structure-type "Change Type" --group-commits --show-significance
+
+DeepRelease Command:
+docker run -it -v $(pwd):/outputs --env GITHUB_TOKEN=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 --network host --rm fgksgf/deeprelease run Col-E/Recaf --since 202203290000 --until 202404272359 --save_dir=/outputs/recaf
+
+ConventionalChangelog Command:
+cd ../.cache/repo/Col-E_Recaf && git checkout 2.21.14 && conventional-changelog -p angular -r 2 --tag-prefix v && git checkout -

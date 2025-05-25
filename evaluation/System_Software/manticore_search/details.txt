@@ -1,0 +1,8 @@
+SmartDraft Command:
+pixi run ipython --pdb -m smartdraft.generator -- manticoresoftware/manticoresearch --previous-release 6.3.2 --current-release 6.3.4 --project-domain System --min-significance 0.1 --writing-style "Automatic" --structure-type "Change Type" --group-commits --show-significance
+
+DeepRelease Command:
+docker run -it -v $(pwd):/outputs --env GITHUB_TOKEN=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 --network host --rm fgksgf/deeprelease run manticoresoftware/manticoresearch --since 202406260000 --until 202407312359 --save_dir=/outputs/manticore_search
+
+ConventionalChangelog Command:
+cd ../.cache/repo/manticoresoftware_manticoresearch && git checkout 6.3.4 && conventional-changelog -p angular -r 2  && git checkout -

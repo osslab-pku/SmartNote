@@ -1,0 +1,12 @@
+repo_name,rn_name,commit_coverage,info_entropy,tokens_count,automated_readability_index,dale_chall_readability,entity_percent,project_domain
+bentoml/bentoml,4_zero_shot_promp_rn,0.7777777777777778,2.287783719941071,531,13.8,11.14,1.953125,Libraries_And_Frameworks
+bentoml/bentoml,3_conventional_changelog,0.38888888888888884,0.5916727785823275,581,78.4,20.58,0.3139717425431711,Libraries_And_Frameworks
+bentoml/bentoml,1_smartdraft_random_ctx,0.8333333333333334,2.0989295636909353,802,20.5,13.18,0.37735849056603776,Libraries_And_Frameworks
+bentoml/bentoml,1_smartdraft_rn_expository,0.11111111111111116,1.0,130,34.2,17.32,0.0,Libraries_And_Frameworks
+bentoml/bentoml,1_smartdraft_rn_automatic,0.8333333333333334,2.0989295636909353,1153,22.8,12.41,0.09285051067780872,Libraries_And_Frameworks
+bentoml/bentoml,1_smartdraft_no_rn_composer,1.0,1.9749375012019268,1322,22.9,11.52,0.0,Libraries_And_Frameworks
+bentoml/bentoml,0_original_rn,1.0,0.0,608,22.4,11.66,0.3215434083601286,Libraries_And_Frameworks
+bentoml/bentoml,1_smartdraft_rn_automatic_no_llm,0.05555555555555558,0.0,68,40.4,25.44,0.0,Libraries_And_Frameworks
+bentoml/bentoml,1_smartdraft_rn_descriptive,1.0,1.9749375012019268,1279,24.2,12.17,0.2544529262086514,Libraries_And_Frameworks
+bentoml/bentoml,1_smartdraft_rn_persuasive,1.0,1.9749375012019268,1351,22.7,11.97,0.1596169193934557,Libraries_And_Frameworks
+bentoml/bentoml,2_deeprelease_rn,1.0,1.3921472236645345,221,16.4,14.38,0.0,Libraries_And_Frameworks

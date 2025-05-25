@@ -1,0 +1,12 @@
+repo_name,rn_name,commit_coverage,info_entropy,tokens_count,automated_readability_index,dale_chall_readability,entity_percent,project_domain
+Col-E/Recaf,4_zero_shot_promp_rn,0.9090909090909091,2.0762893592941096,609,13.4,12.26,1.3605442176870748,Software_Tools
+Col-E/Recaf,3_conventional_changelog,0.0,0.8979066758127277,16283,49.7,11.76,0.02018265300973813,Software_Tools
+Col-E/Recaf,1_smartdraft_random_ctx,1.0,1.8879185026711327,719,20.7,13.53,0.7792207792207793,Software_Tools
+Col-E/Recaf,1_smartdraft_rn_expository,0.9090909090909091,1.789929075309999,638,38.0,14.95,0.16611295681063123,Software_Tools
+Col-E/Recaf,1_smartdraft_rn_automatic,1.0,1.8879185026711327,957,24.7,13.96,0.5241090146750524,Software_Tools
+Col-E/Recaf,1_smartdraft_no_rn_composer,0.9090909090909091,1.823067982273661,768,26.9,14.7,1.349527665317139,Software_Tools
+Col-E/Recaf,0_original_rn,0.0,0.7219280948873623,210,11.4,11.99,5.05050505050505,Software_Tools
+Col-E/Recaf,1_smartdraft_rn_automatic_no_llm,0.8636363636363636,1.7609640474436812,577,35.1,14.6,0.18761726078799248,Software_Tools
+Col-E/Recaf,1_smartdraft_rn_descriptive,1.0,1.8879185026711327,957,24.7,13.96,0.628930817610063,Software_Tools
+Col-E/Recaf,1_smartdraft_rn_persuasive,0.9090909090909091,1.789929075309999,785,26.6,13.99,0.0,Software_Tools
+Col-E/Recaf,2_deeprelease_rn,0.0,0.7219280948873623,52,14.2,18.97,1.5873015873015872,Software_Tools

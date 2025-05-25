@@ -1,0 +1,1231 @@
+Changes between v1.8.9 and v1.9.0
+================================================================================
+
+COMMITS
+--------------------------------------------------------------------------------
+
+Commit: 70c215f7e2c272fdccb9386bbbff5dbc49fdd4fb
+Author: Gustavo Passini
+Date: 2023-10-24 19:33:15+00:00
+Message: Update Tarball URL used by Homebrew (#421)
+----------------------------------------
+
+Commit: 6093b09afae744566dce1444724dde5e5c715b16
+Author: ns-yuhanl
+Date: 2023-10-26 16:39:52+00:00
+Message: Bump golang.google.org/grpc to v1.57.1 (#427)
+
+* Bump golang.google.org/grpc to v1.57.1
+
+	See https://github.com/advisories/GHSA-m425-mq94-257g
+
+* Revert "Bump golang.google.org/grpc to v1.57.1"
+
+This reverts commit 385868b36ba4c0bbea8f97af14bfc0f828d1de51.
+
+* Bump golang.google.org/grpc to v1.57.1
+----------------------------------------
+
+Commit: 7ccaf0a21fedf97d7dd429cd75f00bc0a15a882b
+Author: Scott Blum
+Date: 2023-11-22 13:54:31+00:00
+Message: indent: rip out old go 1.9 support
+----------------------------------------
+
+Commit: 79fb35f6802ae5c29290e3b95cdf76b3679ffb10
+Author: dependabot[bot]
+Date: 2023-12-26 14:20:30+00:00
+Message: Bump google.golang.org/protobuf from 1.31.0 to 1.32.0 (#437)
+
+* Bump google.golang.org/protobuf from 1.31.0 to 1.32.0
+
+Bumps google.golang.org/protobuf from 1.31.0 to 1.32.0.
+
+---
+updated-dependencies:
+- dependency-name: google.golang.org/protobuf
+  dependency-type: direct:production
+  update-type: version-update:semver-minor
+...
+
+Signed-off-by: dependabot[bot] <support@github.com>
+
+* go mod tidy?
+
+---------
+
+Signed-off-by: dependabot[bot] <support@github.com>
+Co-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>
+Co-authored-by: Scott Blum <dragonsinth@gmail.com>
+----------------------------------------
+
+Commit: f4157743ed2726ad5e8ce81b1aa6eed6de4dfc26
+Author: dependabot[bot]
+Date: 2024-01-08 21:59:50+00:00
+Message: Bump github.com/jhump/protoreflect from 1.15.3 to 1.15.4 (#436)
+
+Bumps [github.com/jhump/protoreflect](https://github.com/jhump/protoreflect) from 1.15.3 to 1.15.4.
+- [Release notes](https://github.com/jhump/protoreflect/releases)
+- [Commits](https://github.com/jhump/protoreflect/compare/v1.15.3...v1.15.4)
+
+---
+updated-dependencies:
+- dependency-name: github.com/jhump/protoreflect
+  dependency-type: direct:production
+  update-type: version-update:semver-patch
+...
+
+Signed-off-by: dependabot[bot] <support@github.com>
+Co-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>
+----------------------------------------
+
+Commit: 334e3f56ded7e1872c141d121dd7f30a877e140f
+Author: Michael Diamond
+Date: 2024-01-09 16:39:10+00:00
+Message: Expand the documentation of -max-time to clarify this sets the RPC timeout (#435)
+
+Notably, this adds the words "timeout" and "deadline" to this help text which is helpful for discovering this flag.
+----------------------------------------
+
+Commit: 24b80dfed88dceabc0daf5050bb41c188f654623
+Author: KaibutsuX
+Date: 2024-01-24 00:04:51+00:00
+Message: Added initial support for -t flag to show timings (#428)
+
+* Added initial support for -t flag to show timings
+
+Shows very basic timing data for the Dial stage (TLS setup and
+BlockingDial) and InvokeRPC method as well as the total time.
+
+* Made timing data part of the very verbose functionality
+
+* cleanup
+
+* fix
+
+---------
+
+Co-authored-by: Scott Blum <dragonsinth@gmail.com>
+----------------------------------------
+
+Commit: 252b57fd458239b1e6946c9f3cd11dd575617058
+Author: dependabot[bot]
+Date: 2024-01-29 18:38:20+00:00
+Message: Bump github.com/jhump/protoreflect from 1.15.4 to 1.15.5 (#443)
+
+Bumps [github.com/jhump/protoreflect](https://github.com/jhump/protoreflect) from 1.15.4 to 1.15.5.
+- [Release notes](https://github.com/jhump/protoreflect/releases)
+- [Commits](https://github.com/jhump/protoreflect/compare/v1.15.4...v1.15.5)
+
+---
+updated-dependencies:
+- dependency-name: github.com/jhump/protoreflect
+  dependency-type: direct:production
+  update-type: version-update:semver-patch
+...
+
+Signed-off-by: dependabot[bot] <support@github.com>
+Co-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>
+----------------------------------------
+
+Commit: 149a93e0ec14b6fa2b80b6c47c9348186f343af4
+Author: Kristopher Wuollett
+Date: 2024-01-30 16:38:15+00:00
+Message: Use localhost for default unix domain socket authority (#445)
+----------------------------------------
+
+Commit: 184c8f70b53780dcd76393188afc11d3db7eb06b
+Author: dependabot[bot]
+Date: 2024-02-07 17:30:33+00:00
+Message: Bump github.com/jhump/protoreflect from 1.15.5 to 1.15.6 (#446)
+
+Bumps [github.com/jhump/protoreflect](https://github.com/jhump/protoreflect) from 1.15.5 to 1.15.6.
+- [Release notes](https://github.com/jhump/protoreflect/releases)
+- [Commits](https://github.com/jhump/protoreflect/compare/v1.15.5...v1.15.6)
+
+---
+updated-dependencies:
+- dependency-name: github.com/jhump/protoreflect
+  dependency-type: direct:production
+  update-type: version-update:semver-patch
+...
+
+Signed-off-by: dependabot[bot] <support@github.com>
+Co-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>
+----------------------------------------
+
+Commit: 5592211a41961acc5539198f5aa60b0ce2cd9f1d
+Author: Paul Chesnais
+Date: 2024-02-12 18:49:16+00:00
+Message: Enable xDS credentials (#424)
+
+* Enable xDS credentials
+
+This change should be relatively straightforward. It is a noop outside of the
+context of xDS (as demonstrated by the fact that the tests all pass), but it
+enables xDS-provided certificates (i.e. the ones that would be
+provided/specified in GRPC_XDS_BOOTSTRAP). See proposal
+[A29](https://github.com/grpc/proposal/blob/master/A29-xds-tls-security.md#go)
+for additional detail.
+
+* Only enable xds credentials if the target is an xDS target
+
+* Update after merge
+----------------------------------------
+
+Commit: 93ea011b3680694a89ece33698c43660b0edd2db
+Author: Albin Parou
+Date: 2024-02-26 14:09:32+00:00
+Message: goreleaser: bump version & add nfmp support (#440)
+----------------------------------------
+
+Commit: 805ce40c63bdb709d44abfb4d564bceb0d01b7b2
+Author: dependabot[bot]
+Date: 2024-03-11 12:31:42+00:00
+Message: Bump github.com/golang/protobuf from 1.5.3 to 1.5.4 (#448)
+
+Bumps [github.com/golang/protobuf](https://github.com/golang/protobuf) from 1.5.3 to 1.5.4.
+- [Release notes](https://github.com/golang/protobuf/releases)
+- [Commits](https://github.com/golang/protobuf/compare/v1.5.3...v1.5.4)
+
+---
+updated-dependencies:
+- dependency-name: github.com/golang/protobuf
+  dependency-type: direct:production
+  update-type: version-update:semver-patch
+...
+
+Signed-off-by: dependabot[bot] <support@github.com>
+Co-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>
+----------------------------------------
+
+Commit: 8e76884d21253bdee205fb2d6d60d68c47c49251
+Author: Gustavo Passini
+Date: 2024-04-09 20:19:28+00:00
+Message: Brand name update (#452)
+----------------------------------------
+
+Commit: 07361b21ea1e81fbe8f2a278280fdd76f5f94c64
+Author: Joshua Humphries
+Date: 2024-04-09 21:50:10+00:00
+Message: Use latest protoreflect to fix some bugs (#453)
+
+* update to latest jhump/protoreflect
+
+* be lenient when possible if server cannot furnish all dependencies
+
+* move linting back to go 1.21 instead of latest go 1.22
+
+* make staticcheck happy
+----------------------------------------
+
+
+PULL REQUESTS
+--------------------------------------------------------------------------------
+
+PR #453: Use latest protoreflect to fix some bugs
+Author: jhump
+Merged at: 2024-04-09 21:50:10+00:00
+URL: https://github.com/fullstorydev/grpcurl/pull/453
+Description:
+The use of `AllowMissingFileDescriptors` should resolve #451 (at least in many cases) as well as similar issues that were reported starting in v1.8.8, such as #423 and #432.
+
+This also includes a fix for #417.
+
+The protoreflect repo (as well as recent versions of grpc-go) now requires Go 1.19, so I've updated the `go.mod` file and the CI configs.
+
+FWIW, grpcui will want basically the same changes (since similar things were reported there, like https://github.com/fullstorydev/grpcui/issues/279). It would be nice to cut a release of grpcurl after this is merged, and then pull that new grpcurl version into grpcui and cut a release there as well.
+----------------------------------------
+
+PR #452: Brand name update
+Author: gpassini
+Merged at: 2024-04-09 20:19:28+00:00
+URL: https://github.com/fullstorydev/grpcurl/pull/452
+Description:
+None
+----------------------------------------
+
+PR #448: Bump github.com/golang/protobuf from 1.5.3 to 1.5.4
+Author: dependabot[bot]
+Merged at: 2024-03-11 12:31:42+00:00
+URL: https://github.com/fullstorydev/grpcurl/pull/448
+Description:
+Bumps [github.com/golang/protobuf](https://github.com/golang/protobuf) from 1.5.3 to 1.5.4.
+<details>
+<summary>Release notes</summary>
+<p><em>Sourced from <a href="https://github.com/golang/protobuf/releases">github.com/golang/protobuf's releases</a>.</em></p>
+<blockquote>
+<h2>v1.5.4</h2>
+<p>Notable changes</p>
+<ul>
+<li>update descriptor.proto to latest version</li>
+</ul>
+</blockquote>
+</details>
+<details>
+<summary>Commits</summary>
+<ul>
+<li><a href="https://github.com/golang/protobuf/commit/75de7c059e36b64f01d0dd234ff2fff404ec3374"><code>75de7c0</code></a> Merge pull request <a href="https://redirect.github.com/golang/protobuf/issues/1597">#1597</a> from golang/updatedesc</li>
+<li><a href="https://github.com/golang/protobuf/commit/b7697bb698b1c56643249ef6179c7cae1478881d"><code>b7697bb</code></a> all: update descriptor.proto to latest version</li>
+<li>See full diff in <a href="https://github.com/golang/protobuf/compare/v1.5.3...v1.5.4">compare view</a></li>
+</ul>
+</details>
+<br />
+
+
+[![Dependabot compatibility score](https://dependabot-badges.githubapp.com/badges/compatibility_score?dependency-name=github.com/golang/protobuf&package-manager=go_modules&previous-version=1.5.3&new-version=1.5.4)](https://docs.github.com/en/github/managing-security-vulnerabilities/about-dependabot-security-updates#about-compatibility-scores)
+
+Dependabot will resolve any conflicts with this PR as long as you don't alter it yourself. You can also trigger a rebase manually by commenting `@dependabot rebase`.
+
+[//]: # (dependabot-automerge-start)
+[//]: # (dependabot-automerge-end)
+
+---
+
+<details>
+<summary>Dependabot commands and options</summary>
+<br />
+
+You can trigger Dependabot actions by commenting on this PR:
+- `@dependabot rebase` will rebase this PR
+- `@dependabot recreate` will recreate this PR, overwriting any edits that have been made to it
+- `@dependabot merge` will merge this PR after your CI passes on it
+- `@dependabot squash and merge` will squash and merge this PR after your CI passes on it
+- `@dependabot cancel merge` will cancel a previously requested merge and block automerging
+- `@dependabot reopen` will reopen this PR if it is closed
+- `@dependabot close` will close this PR and stop Dependabot recreating it. You can achieve the same result by closing it manually
+- `@dependabot show <dependency name> ignore conditions` will show all of the ignore conditions of the specified dependency
+- `@dependabot ignore this major version` will close this PR and stop Dependabot creating any more for this major version (unless you reopen the PR or upgrade to it yourself)
+- `@dependabot ignore this minor version` will close this PR and stop Dependabot creating any more for this minor version (unless you reopen the PR or upgrade to it yourself)
+- `@dependabot ignore this dependency` will close this PR and stop Dependabot creating any more for this dependency (unless you reopen the PR or upgrade to it yourself)
+
+
+</details>
+----------------------------------------
+
+PR #440: goreleaser: bump version & add nfmp support
+Author: Fumesover
+Merged at: 2024-02-26 14:09:32+00:00
+URL: https://github.com/fullstorydev/grpcurl/pull/440
+Description:
+Updating the config file to support goreleaser 1.21.0 (the last version which doesn't require go1.21)
+
+At the same time, I'm adding support for building the deb & rpm packages, it would make the install easier on those systems if you don't have to manually move a binary
+
+For the deb/rpm packages, I'm keeping the normal naming schemes (darwin / amd64 / ...). But for the .tar.gz files, I've kept the packages names as they were 
+
+
+# dist folder, on master
+
+```
+~> goreleaser release --snapshot --rm-dist
+  • starting release...
+  • loading config file         file=.goreleaser.yml
+  • loading environment variables
+  • getting and validating git state
+    • building...                   commit=334e3f56ded7e1872c141d121dd7f30a877e140f     latest tag=v1.8.9
+    • pipe skipped                  error=disabled during snapshot mode
+  • parsing tag
+  • setting defaults
+  • snapshotting
+    • building snapshot...          version=1.8.9-SNAPSHOT-334e3f5
+  • checking distribution directory
+    • --rm-dist is set, cleaning it up
+  • loading go mod information
+  • build prerequisites
+  • writing effective config file
+    • writing                       config=dist/config.yaml
+  • building binaries
+    • building                      binary=dist/grpcurl_windows_386/grpcurl.exe
+    • building                      binary=dist/grpcurl_linux_amd64_v1/grpcurl
+    • building                      binary=dist/grpcurl_linux_ppc64le/grpcurl
+    • building                      binary=dist/grpcurl_linux_arm64/grpcurl
+    • building                      binary=dist/grpcurl_darwin_arm64/grpcurl
+    • building                      binary=dist/grpcurl_linux_s390x/grpcurl
+    • building                      binary=dist/grpcurl_darwin_amd64_v1/grpcurl
+    • building                      binary=dist/grpcurl_linux_386/grpcurl
+    • building                      binary=dist/grpcurl_windows_amd64_v1/grpcurl.exe
+    • took: 2s
+  • archives
+    • creating                      archive=dist/grpcurl_1.8.9-SNAPSHOT-334e3f5_osx_arm64.tar.gz
+    • creating                      archive=dist/grpcurl_1.8.9-SNAPSHOT-334e3f5_windows_x86_32.zip
+    • creating                      archive=dist/grpcurl_1.8.9-SNAPSHOT-334e3f5_osx_x86_64.tar.gz
+    • creating                      archive=dist/grpcurl_1.8.9-SNAPSHOT-334e3f5_linux_ppc64le.tar.gz
+    • creating                      archive=dist/grpcurl_1.8.9-SNAPSHOT-334e3f5_linux_s390x.tar.gz
+    • creating                      archive=dist/grpcurl_1.8.9-SNAPSHOT-334e3f5_linux_arm64.tar.gz
+    • creating                      archive=dist/grpcurl_1.8.9-SNAPSHOT-334e3f5_windows_x86_64.zip
+    • creating                      archive=dist/grpcurl_1.8.9-SNAPSHOT-334e3f5_linux_x86_64.tar.gz
+    • creating                      archive=dist/grpcurl_1.8.9-SNAPSHOT-334e3f5_linux_x86_32.tar.gz
+    • took: 3s
+  • calculating checksums
+  • storing release metadata
+    • writing                       file=dist/artifacts.json
+    • writing                       file=dist/metadata.json
+  • release succeeded after 5s
+
+~> tree dist
+dist
+├── artifacts.json
+├── config.yaml
+├── grpcurl_1.8.9-SNAPSHOT-334e3f5_checksums.txt
+├── grpcurl_1.8.9-SNAPSHOT-334e3f5_linux_arm64.tar.gz
+├── grpcurl_1.8.9-SNAPSHOT-334e3f5_linux_ppc64le.tar.gz
+├── grpcurl_1.8.9-SNAPSHOT-334e3f5_linux_s390x.tar.gz
+├── grpcurl_1.8.9-SNAPSHOT-334e3f5_linux_x86_32.tar.gz
+├── grpcurl_1.8.9-SNAPSHOT-334e3f5_linux_x86_64.tar.gz
+├── grpcurl_1.8.9-SNAPSHOT-334e3f5_osx_arm64.tar.gz
+├── grpcurl_1.8.9-SNAPSHOT-334e3f5_osx_x86_64.tar.gz
+├── grpcurl_1.8.9-SNAPSHOT-334e3f5_windows_x86_32.zip
+├── grpcurl_1.8.9-SNAPSHOT-334e3f5_windows_x86_64.zip
+├── grpcurl_darwin_amd64_v1
+│   └── grpcurl
+├── grpcurl_darwin_arm64
+│   └── grpcurl
+├── grpcurl_linux_386
+│   └── grpcurl
+├── grpcurl_linux_amd64_v1
+│   └── grpcurl
+├── grpcurl_linux_arm64
+│   └── grpcurl
+├── grpcurl_linux_ppc64le
+│   └── grpcurl
+├── grpcurl_linux_s390x
+│   └── grpcurl
+├── grpcurl_windows_386
+│   └── grpcurl.exe
+├── grpcurl_windows_amd64_v1
+│   └── grpcurl.exe
+└── metadata.json
+
+10 directories, 22 files
+```
+
+# dist folder, after those changes
+
+```
+~> goreleaser release --snapshot --clean
+  • starting release...
+  • loading                                          path=.goreleaser.yml
+  • skipping announce, publish and validate...
+  • loading environment variables
+  • getting and validating git state
+    • git state                                      commit=c6f0c050d2f3f610f8c6cbabd631722748caffdd branch=goreleaser-nfpms current_tag=v1.8.9 previous_tag=v1.8.8 dirty=true
+    • pipe skipped                                   reason=disabled during snapshot mode
+  • parsing tag
+  • setting defaults
+  • snapshotting
+    • building snapshot...                           version=1.8.9-SNAPSHOT-c6f0c05
+  • checking distribution directory
+    • cleaning dist
+  • loading go mod information
+  • build prerequisites
+  • writing effective config file
+    • writing                                        config=dist/config.yaml
+  • building binaries
+    • building                                       binary=dist/grpcurl_windows_386/grpcurl.exe
+    • building                                       binary=dist/grpcurl_darwin_arm64/grpcurl
+    • building                                       binary=dist/grpcurl_linux_s390x/grpcurl
+    • building                                       binary=dist/grpcurl_darwin_amd64_v1/grpcurl
+    • building                                       binary=dist/grpcurl_windows_amd64_v1/grpcurl.exe
+    • building                                       binary=dist/grpcurl_linux_ppc64le/grpcurl
+    • building                                       binary=dist/grpcurl_linux_386/grpcurl
+    • building                                       binary=dist/grpcurl_linux_amd64_v1/grpcurl
+    • building                                       binary=dist/grpcurl_linux_arm64/grpcurl
+    • took: 2s
+  • archives
+    • creating                                       archive=dist/grpcurl_1.8.9-SNAPSHOT-c6f0c05_windows_x86_64.zip
+    • creating                                       archive=dist/grpcurl_1.8.9-SNAPSHOT-c6f0c05_linux_ppc64le.tar.gz
+    • creating                                       archive=dist/grpcurl_1.8.9-SNAPSHOT-c6f0c05_osx_arm64.tar.gz
+    • creating                                       archive=dist/grpcurl_1.8.9-SNAPSHOT-c6f0c05_linux_s390x.tar.gz
+    • creating                                       archive=dist/grpcurl_1.8.9-SNAPSHOT-c6f0c05_linux_arm64.tar.gz
+    • creating                                       archive=dist/grpcurl_1.8.9-SNAPSHOT-c6f0c05_linux_x86_32.tar.gz
+    • creating                                       archive=dist/grpcurl_1.8.9-SNAPSHOT-c6f0c05_osx_x86_64.tar.gz
+    • creating                                       archive=dist/grpcurl_1.8.9-SNAPSHOT-c6f0c05_linux_x86_64.tar.gz
+    • creating                                       archive=dist/grpcurl_1.8.9-SNAPSHOT-c6f0c05_windows_x86_32.zip
+    • took: 3s
+  • linux packages
+    • creating                                       package=grpcurl format=rpm arch=arm64 file=dist/grpcurl_1.8.9-SNAPSHOT-c6f0c05_linux_arm64.rpm
+    • creating                                       package=grpcurl format=rpm arch=s390x file=dist/grpcurl_1.8.9-SNAPSHOT-c6f0c05_linux_s390x.rpm
+    • creating                                       package=grpcurl format=rpm arch=ppc64le file=dist/grpcurl_1.8.9-SNAPSHOT-c6f0c05_linux_ppc64le.rpm
+    • creating                                       package=grpcurl format=rpm arch=amd64v1 file=dist/grpcurl_1.8.9-SNAPSHOT-c6f0c05_linux_amd64.rpm
+    • creating                                       package=grpcurl format=deb arch=amd64v1 file=dist/grpcurl_1.8.9-SNAPSHOT-c6f0c05_linux_amd64.deb
+    • creating                                       package=grpcurl format=deb arch=arm64 file=dist/grpcurl_1.8.9-SNAPSHOT-c6f0c05_linux_arm64.deb
+    • creating                                       package=grpcurl format=deb arch=ppc64le file=dist/grpcurl_1.8.9-SNAPSHOT-c6f0c05_linux_ppc64le.deb
+    • creating                                       package=grpcurl format=deb arch=386 file=dist/grpcurl_1.8.9-SNAPSHOT-c6f0c05_linux_386.deb
+    • creating                                       package=grpcurl format=deb arch=s390x file=dist/grpcurl_1.8.9-SNAPSHOT-c6f0c05_linux_s390x.deb
+    • creating                                       package=grpcurl format=rpm arch=386 file=dist/grpcurl_1.8.9-SNAPSHOT-c6f0c05_linux_386.rpm
+    • took: 1s
+  • calculating checksums
+  • storing release metadata
+    • writing                                        file=dist/artifacts.json
+    • writing                                        file=dist/metadata.json
+  • release succeeded after 6s
+  • thanks for using goreleaser!
+
+
+
+~> tree
+dist
+├── artifacts.json
+├── config.yaml
+├── grpcurl_1.8.9-SNAPSHOT-334e3f5_checksums.txt
+├── grpcurl_1.8.9-SNAPSHOT-334e3f5_linux_386.deb
+├── grpcurl_1.8.9-SNAPSHOT-334e3f5_linux_386.rpm
+├── grpcurl_1.8.9-SNAPSHOT-334e3f5_linux_amd64.deb
+├── grpcurl_1.8.9-SNAPSHOT-334e3f5_linux_amd64.rpm
+├── grpcurl_1.8.9-SNAPSHOT-334e3f5_linux_arm64.deb
+├── grpcurl_1.8.9-SNAPSHOT-334e3f5_linux_arm64.rpm
+├── grpcurl_1.8.9-SNAPSHOT-334e3f5_linux_arm64.tar.gz
+├── grpcurl_1.8.9-SNAPSHOT-334e3f5_linux_ppc64le.deb
+├── grpcurl_1.8.9-SNAPSHOT-334e3f5_linux_ppc64le.rpm
+├── grpcurl_1.8.9-SNAPSHOT-334e3f5_linux_ppc64le.tar.gz
+├── grpcurl_1.8.9-SNAPSHOT-334e3f5_linux_s390x.deb
+├── grpcurl_1.8.9-SNAPSHOT-334e3f5_linux_s390x.rpm
+├── grpcurl_1.8.9-SNAPSHOT-334e3f5_linux_s390x.tar.gz
+├── grpcurl_1.8.9-SNAPSHOT-334e3f5_linux_x86_32.tar.gz
+├── grpcurl_1.8.9-SNAPSHOT-334e3f5_linux_x86_64.tar.gz
+├── grpcurl_1.8.9-SNAPSHOT-334e3f5_osx_arm64.tar.gz
+├── grpcurl_1.8.9-SNAPSHOT-334e3f5_osx_x86_64.tar.gz
+├── grpcurl_1.8.9-SNAPSHOT-334e3f5_windows_x86_32.zip
+├── grpcurl_1.8.9-SNAPSHOT-334e3f5_windows_x86_64.zip
+├── grpcurl_darwin_amd64_v1
+│   └── grpcurl
+├── grpcurl_darwin_arm64
+│   └── grpcurl
+├── grpcurl_linux_386
+│   └── grpcurl
+├── grpcurl_linux_amd64_v1
+│   └── grpcurl
+├── grpcurl_linux_arm64
+│   └── grpcurl
+├── grpcurl_linux_ppc64le
+│   └── grpcurl
+├── grpcurl_linux_s390x
+│   └── grpcurl
+├── grpcurl_windows_386
+│   └── grpcurl.exe
+├── grpcurl_windows_amd64_v1
+│   └── grpcurl.exe
+└── metadata.json
+```
+----------------------------------------
+
+PR #424: Enable xDS credentials
+Author: PapaCharlie
+Merged at: 2024-02-12 18:49:16+00:00
+URL: https://github.com/fullstorydev/grpcurl/pull/424
+Description:
+This change should be relatively straightforward. It is a noop outside of the context of xDS (as demonstrated by the fact that the tests all pass), but it enables xDS-provided certificates (i.e. the ones that would be provided/specified in GRPC_XDS_BOOTSTRAP). See proposal [A29](https://github.com/grpc/proposal/blob/master/A29-xds-tls-security.md#go) for additional detail.
+----------------------------------------
+
+PR #446: Bump github.com/jhump/protoreflect from 1.15.5 to 1.15.6
+Author: dependabot[bot]
+Merged at: 2024-02-07 17:30:33+00:00
+URL: https://github.com/fullstorydev/grpcurl/pull/446
+Description:
+Bumps [github.com/jhump/protoreflect](https://github.com/jhump/protoreflect) from 1.15.5 to 1.15.6.
+<details>
+<summary>Release notes</summary>
+<p><em>Sourced from <a href="https://github.com/jhump/protoreflect/releases">github.com/jhump/protoreflect's releases</a>.</em></p>
+<blockquote>
+<h2>v1.15.6</h2>
+<p>This is a bugfix release to address recently identified regressions in the <code>desc/protoparse</code> package -- things that worked in v1.14.1 but did not work in v1.15.x.</p>
+<h3>&quot;github.com/jhump/protoreflect/desc/protoparse&quot;</h3>
+<p>Changes/fixes:</p>
+<ul>
+<li>The documentation for the <code>Parser.ImportPaths</code> field specifies that the field is <em>not</em> used for calls to the <code>Parser.ParseFilesButDoNotLink</code> method. This is because import paths do not need to be resolved if not linking. But as of v1.15.0, the <code>ImportPaths</code> field <em>was</em> being used for that method, and the difference in behavior could break existing programs. This has been fixed, and the behavior once again matches the spec.</li>
+<li>As of v1.15.0, if a path provided to <code>Parser.ParseFiles</code> were resolved as descriptors (via the <code>Parser.LookupImport</code> or <code>Parser.LookupImportProto</code> functions) instead of as source code (via the <code>Parser.Accessor</code> function or the default action of <code>os.Open</code>), the parse operation would fail with a &quot;no such file&quot; error. This would succeed with v1.14.1, with the descriptor being used as the input for the file instead of the file being parsed from source. So working programs could have been broken by an upgrade to v1.15.x. The package has been changed back to the v1.14.1 behavior.</li>
+</ul>
+</blockquote>
+</details>
+<details>
+<summary>Commits</summary>
+<ul>
+<li><a href="https://github.com/jhump/protoreflect/commit/e6d8c42680046722a500797e05baa094ff4f468d"><code>e6d8c42</code></a> desc/protoparse: fix recently identified regressions from v1.14 (<a href="https://redirect.github.com/jhump/protoreflect/issues/594">#594</a>)</li>
+<li>See full diff in <a href="https://github.com/jhump/protoreflect/compare/v1.15.5...v1.15.6">compare view</a></li>
+</ul>
+</details>
+<br />
+
+
+[![Dependabot compatibility score](https://dependabot-badges.githubapp.com/badges/compatibility_score?dependency-name=github.com/jhump/protoreflect&package-manager=go_modules&previous-version=1.15.5&new-version=1.15.6)](https://docs.github.com/en/github/managing-security-vulnerabilities/about-dependabot-security-updates#about-compatibility-scores)
+
+Dependabot will resolve any conflicts with this PR as long as you don't alter it yourself. You can also trigger a rebase manually by commenting `@dependabot rebase`.
+
+[//]: # (dependabot-automerge-start)
+[//]: # (dependabot-automerge-end)
+
+---
+
+<details>
+<summary>Dependabot commands and options</summary>
+<br />
+
+You can trigger Dependabot actions by commenting on this PR:
+- `@dependabot rebase` will rebase this PR
+- `@dependabot recreate` will recreate this PR, overwriting any edits that have been made to it
+- `@dependabot merge` will merge this PR after your CI passes on it
+- `@dependabot squash and merge` will squash and merge this PR after your CI passes on it
+- `@dependabot cancel merge` will cancel a previously requested merge and block automerging
+- `@dependabot reopen` will reopen this PR if it is closed
+- `@dependabot close` will close this PR and stop Dependabot recreating it. You can achieve the same result by closing it manually
+- `@dependabot show <dependency name> ignore conditions` will show all of the ignore conditions of the specified dependency
+- `@dependabot ignore this major version` will close this PR and stop Dependabot creating any more for this major version (unless you reopen the PR or upgrade to it yourself)
+- `@dependabot ignore this minor version` will close this PR and stop Dependabot creating any more for this minor version (unless you reopen the PR or upgrade to it yourself)
+- `@dependabot ignore this dependency` will close this PR and stop Dependabot creating any more for this dependency (unless you reopen the PR or upgrade to it yourself)
+
+
+</details>
+----------------------------------------
+
+PR #445: Use localhost for default unix domain socket authority
+Author: kriswuollett
+Merged at: 2024-01-30 16:38:16+00:00
+URL: https://github.com/fullstorydev/grpcurl/pull/445
+Description:
+Fixes: #442
+----------------------------------------
+
+PR #443: Bump github.com/jhump/protoreflect from 1.15.4 to 1.15.5
+Author: dependabot[bot]
+Merged at: 2024-01-29 18:38:20+00:00
+URL: https://github.com/fullstorydev/grpcurl/pull/443
+Description:
+Bumps [github.com/jhump/protoreflect](https://github.com/jhump/protoreflect) from 1.15.4 to 1.15.5.
+<details>
+<summary>Release notes</summary>
+<p><em>Sourced from <a href="https://github.com/jhump/protoreflect/releases">github.com/jhump/protoreflect's releases</a>.</em></p>
+<blockquote>
+<h2>v1.15.5</h2>
+<p>This is a bugfix release to address bugs in the <code>desc/builder</code>, <code>desc/protoparse</code>, and <code>grpcreflect</code> packages and a compatibility issue with the most recent version of <code>github.com/bufbuild/protocompile</code>.</p>
+<h3>&quot;github.com/jhump/protoreflect/desc/builder&quot;</h3>
+<p>Changes/fixes:</p>
+<ul>
+<li>A regression was introduced in v1.15.0 of this package that could cause it to fail to include some imports in a file for custom options. If the custom option in question was in a known transitive dependency, the builder could fail to add the necessary import. This has been fixed.</li>
+</ul>
+<h3>&quot;github.com/jhump/protoreflect/desc/protoparse&quot;</h3>
+<p>Changes/fixes:</p>
+<ul>
+<li>As of v1.15.0, this package uses the <a href="https://pkg.go.dev/github.com/bufbuild/protocompile"><code>github.com/bufbuild/protocompile</code></a> package under the hood as the parser. But that package is still using major version zero, since it's API has not completely stabilized. A recent release (v0.8.0) included backwards-incompatible changes that caused this repo to no longer compile. This release addresses the compile errors: this repo now uses that latest release of <code>protocompile</code> and correctly compiles against it.</li>
+<li>The use of v0.8.0 of protocompile fixes some issues in the <code>desc/protoparse</code> package that could cause it to incorrectly accept or reject some Protobuf source files. See the release notes for protocompile <a href="https://github.com/bufbuild/protocompile/releases/tag/v0.8.0">v0.8.0</a> for more details.</li>
+</ul>
+<h3>&quot;github.com/jhump/protoreflect/grpcreflect&quot;</h3>
+<p>Changes/fixes:</p>
+<ul>
+<li>The <code>grpcreflect.NewClientAuto</code> function (added in v1.14.0) returns a client that automatically falls back to using v1alpha of the reflection protocol if the server does not support v1. However, it relied on the server returning an &quot;unimplemented&quot; error to decide to fall back, but this condition has been observed to sometimes instead manifest as an &quot;unavailable&quot; error (in proxies that fail to write a 404 error before closing the connection). In those cases, the client was not correctly falling back to v1alpha. This release remedies that, so it can fallback to v1alpha when this category of error occurs.</li>
+</ul>
+</blockquote>
+</details>
+<details>
+<summary>Commits</summary>
+<ul>
+<li><a href="https://github.com/jhump/protoreflect/commit/7000dd292a1adab4ac1a258c443a840e4c204442"><code>7000dd2</code></a> update to work with latest v0.8.0 release of bufbuild/protocompile (<a href="https://redirect.github.com/jhump/protoreflect/issues/593">#593</a>)</li>
+<li><a href="https://github.com/jhump/protoreflect/commit/058e6ca5dca19b02532d383e4b128564dc5d184b"><code>058e6ca</code></a> Fix issue with missing imports for custom options in desc/builder (<a href="https://redirect.github.com/jhump/protoreflect/issues/592">#592</a>)</li>
+<li><a href="https://github.com/jhump/protoreflect/commit/bf8a7d8361451273ce8797d2fe89509b3560c0f6"><code>bf8a7d8</code></a> grpcreflect: Fallback from v1 to v1alpha on &quot;unavailable&quot; error code (<a href="https://redirect.github.com/jhump/protoreflect/issues/588">#588</a>)</li>
+<li>See full diff in <a href="https://github.com/jhump/protoreflect/compare/v1.15.4...v1.15.5">compare view</a></li>
+</ul>
+</details>
+<br />
+
+
+[![Dependabot compatibility score](https://dependabot-badges.githubapp.com/badges/compatibility_score?dependency-name=github.com/jhump/protoreflect&package-manager=go_modules&previous-version=1.15.4&new-version=1.15.5)](https://docs.github.com/en/github/managing-security-vulnerabilities/about-dependabot-security-updates#about-compatibility-scores)
+
+Dependabot will resolve any conflicts with this PR as long as you don't alter it yourself. You can also trigger a rebase manually by commenting `@dependabot rebase`.
+
+[//]: # (dependabot-automerge-start)
+[//]: # (dependabot-automerge-end)
+
+---
+
+<details>
+<summary>Dependabot commands and options</summary>
+<br />
+
+You can trigger Dependabot actions by commenting on this PR:
+- `@dependabot rebase` will rebase this PR
+- `@dependabot recreate` will recreate this PR, overwriting any edits that have been made to it
+- `@dependabot merge` will merge this PR after your CI passes on it
+- `@dependabot squash and merge` will squash and merge this PR after your CI passes on it
+- `@dependabot cancel merge` will cancel a previously requested merge and block automerging
+- `@dependabot reopen` will reopen this PR if it is closed
+- `@dependabot close` will close this PR and stop Dependabot recreating it. You can achieve the same result by closing it manually
+- `@dependabot show <dependency name> ignore conditions` will show all of the ignore conditions of the specified dependency
+- `@dependabot ignore this major version` will close this PR and stop Dependabot creating any more for this major version (unless you reopen the PR or upgrade to it yourself)
+- `@dependabot ignore this minor version` will close this PR and stop Dependabot creating any more for this minor version (unless you reopen the PR or upgrade to it yourself)
+- `@dependabot ignore this dependency` will close this PR and stop Dependabot creating any more for this dependency (unless you reopen the PR or upgrade to it yourself)
+
+
+</details>
+----------------------------------------
+
+PR #428: Added initial support for -t flag to show timings
+Author: KaibutsuX
+Merged at: 2024-01-24 00:04:52+00:00
+URL: https://github.com/fullstorydev/grpcurl/pull/428
+Description:
+Shows very basic timing data for the Dial stage (TLS setup and BlockingDial) and InvokeRPC method as well as the total time.
+----------------------------------------
+
+PR #435: Expand the documentation of -max-time to clarify this sets the RPC timeout
+Author: dimo414
+Merged at: 2024-01-09 16:39:10+00:00
+URL: https://github.com/fullstorydev/grpcurl/pull/435
+Description:
+I was looking for how to specify a RPC timeout or [deadline](https://grpc.io/docs/guides/deadlines/) via `grpcurl` and tried grepping the `--help` output, but only matched `-connect-timeout`. I found `-max-time` by browsing the codebase looking for `.WithTimeout()` calls. So the motivation of this PR is both to generally clarify the behavior of this flag and also add the words "timeout" and "deadline" specifically to this help text to aid discovery.
+----------------------------------------
+
+PR #436: Bump github.com/jhump/protoreflect from 1.15.3 to 1.15.4
+Author: dependabot[bot]
+Merged at: 2024-01-08 21:59:51+00:00
+URL: https://github.com/fullstorydev/grpcurl/pull/436
+Description:
+Bumps [github.com/jhump/protoreflect](https://github.com/jhump/protoreflect) from 1.15.3 to 1.15.4.
+<details>
+<summary>Release notes</summary>
+<p><em>Sourced from <a href="https://github.com/jhump/protoreflect/releases">github.com/jhump/protoreflect's releases</a>.</em></p>
+<blockquote>
+<h2>v1.15.4</h2>
+<p>This is a bugfix release to address bugs in the <code>desc/protoprint</code> package and a compatibility issue with the most recent version of <code>github.com/bufbuild/protocompile</code>.</p>
+<h3>&quot;github.com/jhump/protoreflect/desc/protoparse&quot;</h3>
+<p>Changes/fixes:</p>
+<ul>
+<li>As of v1.15.0, this package uses the <a href="https://pkg.go.dev/github.com/bufbuild/protocompile"><code>github.com/bufbuild/protocompile</code></a> package under the hood as the parser. But that package is still using major version zero, since it's API has not completely stabilized. A recent release (v0.7.0) included backwards-incompatible changes that caused this repo to no longer compile. This release addresses the compile errors: this repo now uses that latest release of <code>protocompile</code> and correctly compiles against it.</li>
+</ul>
+<h3>&quot;github.com/jhump/protoreflect/desc/protoprint&quot;</h3>
+<p>Changes/fixes:</p>
+<ul>
+<li>When a string literal included a double-quote character (<code>&quot;</code>), it would get printed incorrectly leading to either an incorrect string literal in some cases or an invalid and uncompilable source file in others. This has been fixed.</li>
+<li>When sorting elements in the file, if the file used proto3 syntax and had an enum with negative numeric values, the result would include the negative values first, before the zero value. This is not allowed in proto3 syntax, which requires that the zero value be the first value, so the result would be an invalid and uncompilable source file. This has been fixed.</li>
+<li>When a source file is parsed into a <code>FileDescriptorProto</code> but never linked, the descriptor may be missing the <code>type</code> field of a <code>FieldDescriptorProto</code> (since it is not known whether a named type refers to a message, group, or enum), and it may have options left in the <code>uninterpreted_options</code> field of the various options messages, which has a peculiar representation for aggregate values. When printing a descriptor that had these characteristics, they were not correctly handled, so the output of the printer would be an invalid and uncompilable source file. Both of these cases have been fixed.</li>
+</ul>
+</blockquote>
+</details>
+<details>
+<summary>Commits</summary>
+<ul>
+<li><a href="https://github.com/jhump/protoreflect/commit/f139a6debe4ec67cddb8e11df35b8a1934203c68"><code>f139a6d</code></a> update to protocompile v0.7.1; fix some incompatibilities with it (<a href="https://redirect.github.com/jhump/protoreflect/issues/586">#586</a>)</li>
+<li><a href="https://github.com/jhump/protoreflect/commit/dd8b73728bbd275698f293b06025c6da7e102393"><code>dd8b737</code></a> protoprint: fix handling of uninterpreted options (<a href="https://redirect.github.com/jhump/protoreflect/issues/584">#584</a>)</li>
+<li><a href="https://github.com/jhump/protoreflect/commit/5d002922aeacb0d8722a22949f986cd31eedd172"><code>5d00292</code></a> protoprint: when sorting elements, first value must be zero in proto3 file(<a href="https://redirect.github.com/jhump/protoreflect/issues/582">#582</a>)</li>
+<li><a href="https://github.com/jhump/protoreflect/commit/e429ee6b3537f3d1414fbe2e8352222b41559f96"><code>e429ee6</code></a> protoprint: fix bug in escaping double-quote characters (<a href="https://redirect.github.com/jhump/protoreflect/issues/580">#580</a>)</li>
+<li><a href="https://github.com/jhump/protoreflect/commit/3839451e1677ae9870ddac6e21dd2db4f3f14a7d"><code>3839451</code></a> build(deps): bump google.golang.org/grpc from 1.57.0 to 1.57.1 (<a href="https://redirect.github.com/jhump/protoreflect/issues/578">#578</a>)</li>
+<li><a href="https://github.com/jhump/protoreflect/commit/937385c353f3b07ecd5d7fd042afe8b94eddf425"><code>937385c</code></a> build(deps): bump golang.org/x/net from 0.9.0 to 0.17.0 (<a href="https://redirect.github.com/jhump/protoreflect/issues/576">#576</a>)</li>
+<li><a href="https://github.com/jhump/protoreflect/commit/a4984b210bebde4f7917a896cf18b683b6711c42"><code>a4984b2</code></a> Fix copy+paste errors</li>
+<li>See full diff in <a href="https://github.com/jhump/protoreflect/compare/v1.15.3...v1.15.4">compare view</a></li>
+</ul>
+</details>
+<br />
+
+
+[![Dependabot compatibility score](https://dependabot-badges.githubapp.com/badges/compatibility_score?dependency-name=github.com/jhump/protoreflect&package-manager=go_modules&previous-version=1.15.3&new-version=1.15.4)](https://docs.github.com/en/github/managing-security-vulnerabilities/about-dependabot-security-updates#about-compatibility-scores)
+
+Dependabot will resolve any conflicts with this PR as long as you don't alter it yourself. You can also trigger a rebase manually by commenting `@dependabot rebase`.
+
+[//]: # (dependabot-automerge-start)
+[//]: # (dependabot-automerge-end)
+
+---
+
+<details>
+<summary>Dependabot commands and options</summary>
+<br />
+
+You can trigger Dependabot actions by commenting on this PR:
+- `@dependabot rebase` will rebase this PR
+- `@dependabot recreate` will recreate this PR, overwriting any edits that have been made to it
+- `@dependabot merge` will merge this PR after your CI passes on it
+- `@dependabot squash and merge` will squash and merge this PR after your CI passes on it
+- `@dependabot cancel merge` will cancel a previously requested merge and block automerging
+- `@dependabot reopen` will reopen this PR if it is closed
+- `@dependabot close` will close this PR and stop Dependabot recreating it. You can achieve the same result by closing it manually
+- `@dependabot show <dependency name> ignore conditions` will show all of the ignore conditions of the specified dependency
+- `@dependabot ignore this major version` will close this PR and stop Dependabot creating any more for this major version (unless you reopen the PR or upgrade to it yourself)
+- `@dependabot ignore this minor version` will close this PR and stop Dependabot creating any more for this minor version (unless you reopen the PR or upgrade to it yourself)
+- `@dependabot ignore this dependency` will close this PR and stop Dependabot creating any more for this dependency (unless you reopen the PR or upgrade to it yourself)
+
+
+</details>
+----------------------------------------
+
+PR #437: Bump google.golang.org/protobuf from 1.31.0 to 1.32.0
+Author: dependabot[bot]
+Merged at: 2023-12-26 14:20:30+00:00
+URL: https://github.com/fullstorydev/grpcurl/pull/437
+Description:
+Bumps google.golang.org/protobuf from 1.31.0 to 1.32.0.
+
+
+[![Dependabot compatibility score](https://dependabot-badges.githubapp.com/badges/compatibility_score?dependency-name=google.golang.org/protobuf&package-manager=go_modules&previous-version=1.31.0&new-version=1.32.0)](https://docs.github.com/en/github/managing-security-vulnerabilities/about-dependabot-security-updates#about-compatibility-scores)
+
+Dependabot will resolve any conflicts with this PR as long as you don't alter it yourself. You can also trigger a rebase manually by commenting `@dependabot rebase`.
+
+[//]: # (dependabot-automerge-start)
+[//]: # (dependabot-automerge-end)
+
+---
+
+<details>
+<summary>Dependabot commands and options</summary>
+<br />
+
+You can trigger Dependabot actions by commenting on this PR:
+- `@dependabot rebase` will rebase this PR
+- `@dependabot recreate` will recreate this PR, overwriting any edits that have been made to it
+- `@dependabot merge` will merge this PR after your CI passes on it
+- `@dependabot squash and merge` will squash and merge this PR after your CI passes on it
+- `@dependabot cancel merge` will cancel a previously requested merge and block automerging
+- `@dependabot reopen` will reopen this PR if it is closed
+- `@dependabot close` will close this PR and stop Dependabot recreating it. You can achieve the same result by closing it manually
+- `@dependabot show <dependency name> ignore conditions` will show all of the ignore conditions of the specified dependency
+- `@dependabot ignore this major version` will close this PR and stop Dependabot creating any more for this major version (unless you reopen the PR or upgrade to it yourself)
+- `@dependabot ignore this minor version` will close this PR and stop Dependabot creating any more for this minor version (unless you reopen the PR or upgrade to it yourself)
+- `@dependabot ignore this dependency` will close this PR and stop Dependabot creating any more for this dependency (unless you reopen the PR or upgrade to it yourself)
+
+
+</details>
+----------------------------------------
+
+PR #427: Bump golang.google.org/grpc to v1.57.1
+Author: ns-yuhanl
+Merged at: 2023-10-26 16:39:53+00:00
+URL: https://github.com/fullstorydev/grpcurl/pull/427
+Description:
+- See https://github.com/advisories/GHSA-m425-mq94-257g for CVE details.
+----------------------------------------
+
+PR #421: Update Tarball URL used by Homebrew
+Author: gpassini
+Merged at: 2023-10-24 19:33:15+00:00
+URL: https://github.com/fullstorydev/grpcurl/pull/421
+Description:
+During the `bump-formula-pr` step of the release process, which updates the latest version in Homebrew, I hit the following error:
+> line 4, col 3: Use /archive/refs/tags URLs for GitHub tarballs (url is https://github.com/fullstorydev/grpcurl/archive/v1.8.9.tar.gz).
+Error: 1 problem in 1 formula detected.
+
+I fixed it by manually changing the URL to https://github.com/fullstorydev/grpcurl/archive/refs/tags/v1.8.9.tar.gz.
+
+It's certainly related to this commit from Homebrew: https://github.com/Homebrew/homebrew-core/commit/2fb3971c8235d3d88d328ebaeddaa57a67188d3a
+But I don't have more context on why they decided to change it.
+----------------------------------------
+
+PR #420: Disable CGO for improved compatibility across distros
+Author: gpassini
+Merged at: 2023-10-24 15:53:47+00:00
+URL: https://github.com/fullstorydev/grpcurl/pull/420
+Description:
+This PR disables CGO so we recover the same behaviour we had in v1.8.7, where we don't have any dependencies on C libraries expected to be found in the environment, and was raised in https://github.com/fullstorydev/grpcurl/issues/404#issuecomment-1762593336.
+
+Tested by running `make install` before and after the changes and inspecting the produced binary from a Linux machine (Debian in this case).
+**Before**
+```sh
+ldd $(which grpcurl)
+	linux-vdso.so.1 (0x00007ffe121e7000)
+	libresolv.so.2 => /lib/x86_64-linux-gnu/libresolv.so.2 (0x00007f2346e02000)
+	libpthread.so.0 => /lib/x86_64-linux-gnu/libpthread.so.0 (0x00007f2346de0000)
+	libc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00007f2346c0c000)
+	/lib64/ld-linux-x86-64.so.2 (0x00007f2346e26000)
+```
+**After**
+```sh
+ldd $(which grpcurl)
+	not a dynamic executable
+```
+----------------------------------------
+
+
+FILE CHANGES
+--------------------------------------------------------------------------------
+
+File: .circleci/config.yml
+Status: modified
+Changes: +11 -9
+Diff:
+@@ -9,12 +9,6 @@ shared_configs:
+ # Use the latest 2.1 version of CircleCI pipeline process engine. See: https://circleci.com/docs/2.0/configuration-reference
+ version: 2.1
+ jobs:
+-  build-1-18:
+-    working_directory: ~/repo
+-    docker:
+-      - image: cimg/go:1.18
+-    steps: *simple_job_steps
+-
+   build-1-19:
+     working_directory: ~/repo
+     docker:
+@@ -25,23 +19,31 @@ jobs:
+     working_directory: ~/repo
+     docker:
+
+----------------------------------------
+
+File: .goreleaser.yml
+Status: modified
+Changes: +18 -4
+Diff:
+@@ -29,12 +29,26 @@ builds:
+ 
+ archives:
+   - format: tar.gz
++    name_template: >-
++      {{ .Binary }}_{{ .Version }}_
++      {{- if eq .Os "darwin" }}osx{{ else }}{{ .Os }}{{ end }}_
++      {{- if eq .Arch "amd64" }}x86_64
++      {{- else if eq .Arch "386" }}x86_32
++      {{- else }}{{ .Arch }}{{ end }}
+
+----------------------------------------
+
+File: Dockerfile
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -1,5 +1,5 @@
+ FROM golang:1.18-alpine as builder
+-MAINTAINER FullStory Engineering
++MAINTAINER Fullstory Engineering
+ 
+ # create non-privileged group and user
+ RUN addgroup -S grpcurl && adduser -S grpcurl -G grpcurl
+
+----------------------------------------
+
+File: LICENSE
+Status: modified
+Changes: +2 -2
+Diff:
+@@ -1,6 +1,6 @@
+ The MIT License (MIT)
+ 
+-Copyright (c) 2017 FullStory, Inc
++Copyright (c) 2017 Fullstory, Inc
+ 
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of this software and associated documentation files (the "Software"), to deal
+@@ -18,4 +18,4 @@ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+
+----------------------------------------
+
+File: Makefile
+Status: modified
+Changes: +4 -2
+Diff:
+@@ -18,19 +18,21 @@ ci: deps checkgofmt checkgenerate vet staticcheck ineffassign predeclared test
+ .PHONY: deps
+ deps:
+ 	go get -d -v -t ./...
++	go mod tidy
+ 
+ .PHONY: updatedeps
+ updatedeps:
+ 	go get -d -v -t -u -f ./...
++	go mod tidy
+
+----------------------------------------
+
+File: cmd/grpcurl/go1_10.go
+Status: removed
+Changes: +0 -10
+Diff:
+@@ -1,10 +0,0 @@
+-//go:build go1.10
+-// +build go1.10
+-
+-package main
+-
+-func indent() string {
+-	// In Go 1.10 and up, the flag package automatically
+-	// adds the right indentation.
+-	return ""
+
+----------------------------------------
+
+File: cmd/grpcurl/go1_9.go
+Status: removed
+Changes: +0 -10
+Diff:
+@@ -1,10 +0,0 @@
+-//go:build !go1.10
+-// +build !go1.10
+-
+-package main
+-
+-func indent() string {
+-	// In Go 1.9 and older, we need to add indentation
+-	// after newlines in the flag doc strings.
+-	return "    \t"
+
+----------------------------------------
+
+File: cmd/grpcurl/grpcurl.go
+Status: modified
+Changes: +72 -10
+Diff:
+@@ -97,7 +97,8 @@ var (
+ 		value of the ":authority" pseudo-header in the HTTP/2 protocol. When TLS
+ 		is used, this will also be used as the server name when verifying the
+ 		server's certificate. It defaults to the address that is provided in the
+-		positional arguments.`))
++		positional arguments, or 'localhost' in the case of a unix domain
++		socket.`))
+ 	userAgent = flags.String("user-agent", "", prettify(`
+ 		If set, the specified value will be added to the User-Agent header set
+ 		by the grpc-go library.
+@@ -133,9 +134,11 @@ var (
+ 		is received for this same period then the connection is closed and the
+ 		operation fails.`))
+ 	maxTime = flags.Float64("max-time", 0, prettify(`
+-		The maximum total time the operation can take, in seconds. This is
+-		useful for preventing batch jobs that use grpcurl from hanging due to
+-		slow or bad network links or due to incorrect stream method usage.`))
++		The maximum total time the operation can take, in seconds. This sets a
++                timeout on the gRPC context, allowing both client and server to give up
++		after the deadline has past. This is useful for preventing batch jobs
++                that use grpcurl from hanging due to slow or bad network links or due
++		to incorrect stream method usage.`))
+ 	maxMsgSz = flags.Int("max-msg-sz", 0, prettify(`
+ 		The maximum encoded size of a response message, in bytes, that grpcurl
+ 		will accept. If not specified, defaults to 4,194,304 (4 megabytes).`))
+@@ -153,7 +156,7 @@ var (
+ 	verbose = flags.Bool("v", false, prettify(`
+ 		Enable verbose output.`))
+ 	veryVerbose = flags.Bool("vv", false, prettify(`
+-		Enable very verbose output.`))
++		Enable very verbose output (includes timing data).`))
+ 	serverName = flags.String("servername", "", prettify(`
+ 		Override server name when validating TLS certificate. This flag is
+ 		ignored if -plaintext or -insecure is used.
+@@ -274,6 +277,32 @@ func (cs compositeSource) AllExtensionsForType(typeName string) ([]*desc.FieldDe
+ 	return exts, nil
+ }
+ 
++type timingData struct {
++	Title  string
++	Start  time.Time
++	Value  time.Duration
++	Parent *timingData
++	Sub    []*timingData
++}
++
++func (d *timingData) Child(title string) *timingData {
++	if d == nil {
++		return nil
++	}
++	child := &timingData{Title: title, Start: time.Now()}
++	d.Sub = append(d.Sub, child)
++	return child
++}
++
++func (d *timingData) Done() {
++	if d == nil {
++		return
++	}
++	if d.Value == 0 {
++		d.Value = time.Since(d.Start)
+
+----------------------------------------
+
+File: desc_source.go
+Status: modified
+Changes: +2 -2
+Diff:
+@@ -5,7 +5,7 @@ import (
+ 	"errors"
+ 	"fmt"
+ 	"io"
+-	"io/ioutil"
++	"os"
+ 	"sync"
+ 
+ 	"github.com/golang/protobuf/proto" //lint:ignore SA1019 we have to import this because it appears in exported API
+@@ -41,7 +41,7 @@ type DescriptorSource interface {
+
+----------------------------------------
+
+File: desc_source_test.go
+Status: modified
+Changes: +2 -2
+Diff:
+@@ -2,7 +2,7 @@ package grpcurl
+ 
+ import (
+ 	"bytes"
+-	"io/ioutil"
++	"os"
+ 	"testing"
+ 
+ 	"github.com/golang/protobuf/proto" //lint:ignore SA1019 we have to import this because it appears in exported API
+@@ -34,7 +34,7 @@ func TestWriteProtoset(t *testing.T) {
+
+----------------------------------------
+
+File: go.mod
+Status: modified
+Changes: +19 -19
+Diff:
+@@ -1,31 +1,31 @@
+ module github.com/fullstorydev/grpcurl
+ 
+-go 1.18
++go 1.19
+ 
+ require (
+-	github.com/golang/protobuf v1.5.3
+-	github.com/jhump/protoreflect v1.15.3
+-	google.golang.org/grpc v1.57.0
+-	google.golang.org/protobuf v1.31.0
++	github.com/golang/protobuf v1.5.4
++	github.com/jhump/protoreflect v1.16.0
++	google.golang.org/grpc v1.61.0
++	google.golang.org/protobuf v1.33.1-0.20240408130810-98873a205002
+ )
+ 
+
+----------------------------------------
+
+File: go.sum
+Status: modified
+Changes: +59 -47
+Diff:
+@@ -1,11 +1,11 @@
+ cloud.google.com/go v0.26.0/go.mod h1:aQUYkXzVsufM+DwF1aE+0xfcU+56JwCaLick0ClmMTw=
+-cloud.google.com/go/compute v1.19.1 h1:am86mquDUgjGNWxiGn+5PGLbmgiWXlE/yNWpIpNvuXY=
+-cloud.google.com/go/compute v1.19.1/go.mod h1:6ylj3a05WF8leseCdIf77NK0g1ey+nj5IKd5/kvShxE=
++cloud.google.com/go/compute v1.23.3 h1:6sVlXXBmbd7jNX0Ipq0trII3e4n1/MsADLK6a+aiVlk=
++cloud.google.com/go/compute v1.23.3/go.mod h1:VCgBUoMnIVIR0CscqQiPJLAG25E3ZRZMzcFZeQ+h8CI=
+ cloud.google.com/go/compute/metadata v0.2.3 h1:mg4jlk7mCAj6xXp9UJ4fjI9VUI5rubuGBW5aJ7UnBMY=
+ cloud.google.com/go/compute/metadata v0.2.3/go.mod h1:VAV5nSsACxMJvgaAuX6Pk2AawlZn8kiOGuCv6gTkwuA=
+ github.com/BurntSushi/toml v0.3.1/go.mod h1:xHWCNGjB5oqiDr8zfno3MHue2Ht5sIBksp03qcyfWMU=
+-github.com/bufbuild/protocompile v0.6.0 h1:Uu7WiSQ6Yj9DbkdnOe7U4mNKp58y9WDMKDn28/ZlunY=
+-github.com/bufbuild/protocompile v0.6.0/go.mod h1:YNP35qEYoYGme7QMtz5SBCoN4kL4g12jTtjuzRNdjpE=
++github.com/bufbuild/protocompile v0.10.0 h1:+jW/wnLMLxaCEG8AX9lD0bQ5v9h1RUiMKOBOT5ll9dM=
++github.com/bufbuild/protocompile v0.10.0/go.mod h1:G9qQIQo0xZ6Uyj6CMNz0saGmx2so+KONo8/KrELABiY=
+ github.com/census-instrumentation/opencensus-proto v0.2.1/go.mod h1:f6KPmirojxKA12rnyqOA5BBL4O983OfeGPqjHWSTneU=
+ github.com/census-instrumentation/opencensus-proto v0.4.1 h1:iKLQ0xPNFxR/2hzXZMrBo8f1j86j5WHzznCCQxV/b8g=
+ github.com/census-instrumentation/opencensus-proto v0.4.1/go.mod h1:4T9NM4+4Vw91VeyqjLS6ao50K5bOcLKN6Q42XnYaRYw=
+@@ -15,92 +15,104 @@ github.com/client9/misspell v0.3.4/go.mod h1:qj6jICC3Q7zFZvVWo7KLAzC3yx5G7kyvSDk
+ github.com/cncf/udpa/go v0.0.0-20220112060539-c52dc94e7fbe h1:QQ3GSy+MqSHxm/d8nCtnAiZdYFd45cYZPs8vOOIYKfk=
+ github.com/cncf/udpa/go v0.0.0-20220112060539-c52dc94e7fbe/go.mod h1:6pvJx4me5XPnfI9Z40ddWsdw2W/uZgQLFXToKeRcDiI=
+ github.com/cncf/xds/go v0.0.0-20210922020428-25de7278fc84/go.mod h1:eXthEFrGJvWHgFFCl3hGmgk+/aYT6PnTQLykKQRLhEs=
+-github.com/cncf/xds/go v0.0.0-20230607035331-e9ce68804cb4 h1:/inchEIKaYC1Akx+H+gqO04wryn5h75LSazbRlnya1k=
+-github.com/cncf/xds/go v0.0.0-20230607035331-e9ce68804cb4/go.mod h1:eXthEFrGJvWHgFFCl3hGmgk+/aYT6PnTQLykKQRLhEs=
++github.com/cncf/xds/go v0.0.0-20231109132714-523115ebc101 h1:7To3pQ+pZo0i3dsWEbinPNFs5gPSBOsJtx3wTT94VBY=
++github.com/cncf/xds/go v0.0.0-20231109132714-523115ebc101/go.mod h1:eXthEFrGJvWHgFFCl3hGmgk+/aYT6PnTQLykKQRLhEs=
+ github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
+ github.com/envoyproxy/go-control-plane v0.9.0/go.mod h1:YTl/9mNaCwkRvm6d1a2C3ymFceY/DCBVvsKhRF0iEA4=
+-github.com/envoyproxy/go-control-plane v0.11.1-0.20230524094728-9239064ad72f h1:7T++XKzy4xg7PKy+bM+Sa9/oe1OC88yz2hXQUISoXfA=
+-github.com/envoyproxy/go-control-plane v0.11.1-0.20230524094728-9239064ad72f/go.mod h1:sfYdkwUW4BA3PbKjySwjJy+O4Pu0h62rlqCMHNk+K+Q=
++github.com/envoyproxy/go-control-plane v0.11.1 h1:wSUXTlLfiAQRWs2F+p+EKOY9rUyis1MyGqJ2DIk5HpM=
++github.com/envoyproxy/go-control-plane v0.11.1/go.mod h1:uhMcXKCQMEJHiAb0w+YGefQLaTEw+YhGluxZkrTmD0g=
+ github.com/envoyproxy/protoc-gen-validate v0.1.0/go.mod h1:iSmxcyjqTsJpI2R4NaDN7+kN2VEUnK/pcBlmesArF7c=
+-github.com/envoyproxy/protoc-gen-validate v0.10.1 h1:c0g45+xCJhdgFGw7a5QAfdS4byAbud7miNWJ1WwEVf8=
+-github.com/envoyproxy/protoc-gen-validate v0.10.1/go.mod h1:DRjgyB0I43LtJapqN6NiRwroiAU2PaFuvk/vjgh61ss=
++github.com/envoyproxy/protoc-gen-validate v1.0.2 h1:QkIBuU5k+x7/QXPvPPnWXWlCdaBFApVqftFV6k087DA=
++github.com/envoyproxy/protoc-gen-validate v1.0.2/go.mod h1:GpiZQP3dDbg4JouG/NNS7QWXpgx6x8QiMKdmN72jogE=
+ github.com/golang/glog v0.0.0-20160126235308-23def4e6c14b/go.mod h1:SBH7ygxi8pfUlaOkMMuAQtPIUF8ecWP5IEl/CR7VP2Q=
+-github.com/golang/groupcache v0.0.0-20200121045136-8c9f03a8e57e/go.mod h1:cIg4eruTrX1D+g88fzRXU5OdNfaM+9IcxsU14FzY7Hc=
+ github.com/golang/mock v1.1.1/go.mod h1:oTYuIxOrZwtPieC+H1uAHpcLFnEyAGVDL/k47Jfbm0A=
+ github.com/golang/protobuf v1.2.0/go.mod h1:6lQm79b+lXiMfvg/cZm0SGofjICqVBUtrP5yJMmIC1U=
+-github.com/golang/protobuf v1.3.1/go.mod h1:6lQm79b+lXiMfvg/cZm0SGofjICqVBUtrP5yJMmIC1U=
+ github.com/golang/protobuf v1.3.2/go.mod h1:6lQm79b+lXiMfvg/cZm0SGofjICqVBUtrP5yJMmIC1U=
+ github.com/golang/protobuf v1.5.0/go.mod h1:FsONVRAS9T7sI+LIUmWTfcYkHO4aIWwzhcaSAoJOfIk=
+-github.com/golang/protobuf v1.5.3 h1:KhyjKVUg7Usr/dYsdSqoFveMYd5ko72D+zANwlG1mmg=
+-github.com/golang/protobuf v1.5.3/go.mod h1:XVQd3VNwM+JqD3oG2Ue2ip4fOMUkwXdXDdiuN0vRsmY=
++github.com/golang/protobuf v1.5.2/go.mod h1:XVQd3VNwM+JqD3oG2Ue2ip4fOMUkwXdXDdiuN0vRsmY=
++github.com/golang/protobuf v1.5.4 h1:i7eJL8qZTpSEXOPTxNKhASYpMn+8e5Q6AdndVa1dWek=
++github.com/golang/protobuf v1.5.4/go.mod h1:lnTiLA8Wa4RWRcIUkrtSVa5nRhsEGBg48fD6rSs7xps=
+ github.com/google/go-cmp v0.2.0/go.mod h1:oXzfMopK8JAjlY9xF4vHSVASa0yLyX7SntLO5aqRK0M=
+ github.com/google/go-cmp v0.5.5/go.mod h1:v8dTdLbMG2kIc/vJvl+f65V22dbkXbowE6jgT/gNBxE=
+-github.com/google/go-cmp v0.5.9 h1:O2Tfq5qg4qc4AmwVlvv0oLiVAGB7enBSJ2x2DqQFi38=
+-github.com/google/uuid v1.3.0 h1:t6JiXgmwXMjEs8VusXIJk2BXHsn+wx8BZdTaoZ5fu7I=
+-github.com/iancoleman/strcase v0.2.0/go.mod h1:iwCmte+B7n89clKwxIoIXy/HfoL7AsD47ZCWhYzw7ho=
+-github.com/jhump/protoreflect v1.15.3 h1:6SFRuqU45u9hIZPJAoZ8c28T3nK64BNdp9w6jFonzls=
+-github.com/jhump/protoreflect v1.15.3/go.mod h1:4ORHmSBmlCW8fh3xHmJMGyul1zNqZK4Elxc8qKP+p1k=
+
+----------------------------------------
+
+File: grpcurl.go
+Status: modified
+Changes: +23 -14
+Diff:
+@@ -14,7 +14,6 @@ import (
+ 	"encoding/base64"
+ 	"errors"
+ 	"fmt"
+-	"io/ioutil"
+ 	"net"
+ 	"os"
+ 	"regexp"
+@@ -28,6 +27,7 @@ import (
+ 	"google.golang.org/grpc"
+ 	"google.golang.org/grpc/credentials"
+ 	"google.golang.org/grpc/credentials/insecure"
++	xdsCredentials "google.golang.org/grpc/credentials/xds"
+ 	"google.golang.org/grpc/metadata"
+ 	protov2 "google.golang.org/protobuf/proto"
+ 	"google.golang.org/protobuf/types/descriptorpb"
+@@ -544,7 +544,7 @@ func ClientTLSConfig(insecureSkipVerify bool, cacertFile, clientCertFile, client
+ 	} else if cacertFile != "" {
+ 		// Create a certificate pool from the certificate authority
+ 		certPool := x509.NewCertPool()
+-		ca, err := ioutil.ReadFile(cacertFile)
++		ca, err := os.ReadFile(cacertFile)
+ 		if err != nil {
+ 			return nil, fmt.Errorf("could not read ca certificate: %v", err)
+ 		}
+@@ -581,7 +581,7 @@ func ServerTransportCredentials(cacertFile, serverCertFile, serverKeyFile string
+ 	if cacertFile != "" {
+ 		// Create a certificate pool from the certificate authority
+ 		certPool := x509.NewCertPool()
+
+----------------------------------------
+
+File: internal/testing/cmd/bankdemo/main.go
+Status: modified
+Changes: +2 -3
+Diff:
+@@ -7,7 +7,6 @@ import (
+ 	"encoding/json"
+ 	"flag"
+ 	"fmt"
+-	"io/ioutil"
+ 	"net"
+ 	"os"
+ 	"os/signal"
+@@ -130,7 +129,7 @@ type svr struct {
+ }
+
+----------------------------------------
+
+File: releasing/README.md
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -63,7 +63,7 @@ The last step is to update the Homebrew recipe to use the latest version. First,
+ 
+ ```sh
+ # download the source archive from GitHub
+-URL=https://github.com/fullstorydev/grpcurl/archive/v2.3.4.tar.gz
++URL=https://github.com/fullstorydev/grpcurl/archive/refs/tags/v2.3.4.tar.gz
+ curl -L -o tmp.tgz $URL
+ # and compute the SHA
+ SHA="$(sha256sum < tmp.tgz | awk '{ print $1 }')"
+
+----------------------------------------
+
+File: releasing/do-release.sh
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -55,7 +55,7 @@ rm VERSION
+ 
+ # Homebrew release
+ 
+-URL="https://github.com/fullstorydev/grpcurl/archive/${VERSION}.tar.gz"
++URL="https://github.com/fullstorydev/grpcurl/archive/refs/tags/${VERSION}.tar.gz"
+ curl -L -o tmp.tgz "$URL"
+ SHA="$(sha256sum < tmp.tgz | awk '{ print $1 }')"
+ rm tmp.tgz
+
+----------------------------------------
+

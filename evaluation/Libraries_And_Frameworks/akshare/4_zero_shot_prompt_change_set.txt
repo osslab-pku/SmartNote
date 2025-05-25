@@ -1,0 +1,193 @@
+Changes between release-v1.14.61 and release-v1.14.62
+================================================================================
+
+COMMITS
+--------------------------------------------------------------------------------
+
+Commit: 6e8ba66a4bfce213c66fadec5775f69c5451a0a4
+Author: jindaxiang
+Date: 2024-08-16 06:04:49+00:00
+Message: docs: update date
+----------------------------------------
+
+Commit: ba9ffb5b90d935ab8e94664760fb2abe52192160
+Author: jindaxiang
+Date: 2024-08-18 09:32:04+00:00
+Message: docs: update docs
+----------------------------------------
+
+Commit: 3c38e2bcf5f786950c964f0a26e89b461424e948
+Author: jindaxiang
+Date: 2024-08-18 09:32:22+00:00
+Message: docs: update date
+----------------------------------------
+
+Commit: 2bd0c01176c0e678bab98e9a0eacdbed0db9a224
+Author: x
+Date: 2024-08-16 13:07:13+00:00
+Message: Update stock_ztb_em.py
+
+Added a case where the date is too long ago
+
+if len(data_json["data"]["pool"]) == 0:
+        return pd.DataFrame()
+----------------------------------------
+
+Commit: 657e06fc32a717a547668e56b8b512bbd9ab2efd
+Author: jindaxiang
+Date: 2024-08-18 09:40:29+00:00
+Message: fix: fix stock_zt_pool_em
+----------------------------------------
+
+Commit: af80e167718f88a8568a6f97735accb8d474e397
+Author: jindaxiang
+Date: 2024-08-18 09:40:51+00:00
+Message: feat: add version 1.14.62
+----------------------------------------
+
+
+PULL REQUESTS
+--------------------------------------------------------------------------------
+
+PR #5133: 涨停板行情 stock_ztb_em.py 获取太久远数据报错
+Author: xuzzz-eatman
+Merged at: 2024-08-18 09:38:38+00:00
+URL: https://github.com/akfamily/akshare/pull/5133
+Description:
+当日期太久远时data_json["data"]不为None，而data_json["data"]["pool"]为None，因此添加判断并返回空dataframe
+----------------------------------------
+
+PR #5135: Dev
+Author: albertandking
+Merged at: 2024-08-18 09:33:31+00:00
+URL: https://github.com/akfamily/akshare/pull/5135
+Description:
+None
+----------------------------------------
+
+PR #5132: docs: update date
+Author: albertandking
+Merged at: 2024-08-16 06:08:55+00:00
+URL: https://github.com/akfamily/akshare/pull/5132
+Description:
+None
+----------------------------------------
+
+PR #5131: Dev
+Author: albertandking
+Merged at: 2024-08-15 10:58:47+00:00
+URL: https://github.com/akfamily/akshare/pull/5131
+Description:
+None
+----------------------------------------
+
+
+FILE CHANGES
+--------------------------------------------------------------------------------
+
+File: akshare/__init__.py
+Status: modified
+Changes: +2 -1
+Diff:
+@@ -2872,9 +2872,10 @@
+ 1.14.59 fix: fix macro_cnbs interface
+ 1.14.60 fix: fix bond_zh_cov_info_ths interface
+ 1.14.61 fix: fix stock_fund_flow_individual interface
++1.14.62 fix: fix stock_zt_pool_em interface
+ """
+ 
+-__version__ = "1.14.61"
++__version__ = "1.14.62"
+ __author__ = "AKFamily"
+
+----------------------------------------
+
+File: akshare/stock_feature/stock_ztb_em.py
+Status: modified
+Changes: +10 -2
+Diff:
+@@ -1,7 +1,7 @@
+ #!/usr/bin/env python
+ # -*- coding:utf-8 -*-
+ """
+-Date: 2024/4/25 20:00
++Date: 2024/8/18 17:30
+ Desc: 首页-行情中心-涨停板行情-涨停股池
+ https://quote.eastmoney.com/ztb/detail#type=ztgc
+ 
+@@ -44,6 +44,8 @@ def stock_zt_pool_em(date: str = "20231129") -> pd.DataFrame:
+     data_json = r.json()
+     if data_json["data"] is None:
+         return pd.DataFrame()
++    if len(data_json["data"]["pool"]) == 0:
++        return pd.DataFrame()
+     temp_df = pd.DataFrame(data_json["data"]["pool"])
+     temp_df.reset_index(inplace=True)
+     temp_df["index"] = range(1, len(temp_df) + 1)
+
+----------------------------------------
+
+File: docs/changelog.md
+Status: modified
+Changes: +6 -0
+Diff:
+@@ -80,6 +80,10 @@
+ 
+ ## 更新说明详情
+ 
++1.14.62 fix: fix stock_zt_pool_em interface
++
++    1. 修复 stock_zt_pool_em 接口
++
+ 1.14.61 fix: fix stock_fund_flow_individual interface
+ 
+
+----------------------------------------
+
+File: docs/data/stock/stock.md
+Status: modified
+Changes: +27 -25
+Diff:
+@@ -9046,7 +9046,7 @@ print(stock_fund_flow_individual_df)
+ 
+ 接口: stock_fund_flow_concept
+ 
+-目标地址: http://data.10jqka.com.cn/funds/gnzjl/#refCountId=data_55f13c2c_254
++目标地址: https://data.10jqka.com.cn/funds/gnzjl/#refCountId=data_55f13c2c_254
+ 
+ 描述: 同花顺-数据中心-资金流向-概念资金流
+ 
+@@ -9086,18 +9086,19 @@ print(stock_fund_flow_concept_df)
+ 数据示例-即时
+ 
+ ```
+-      序号        行业      行业指数     行业-涨跌幅  ...  公司家数   领涨股     领涨股-涨跌幅     当前价
+-0      1      送转填权  1071.770   2.81%  ...    12  神宇股份  20.00%   18.96
+-1      2        大豆  2147.220   1.61%  ...     3  丰乐种业   2.94%   13.67
+-2      3      特钢概念  2655.760   1.38%  ...    19  钢研高纳   4.46%   23.18
+-3      4  同花顺漂亮100   951.187   1.26%  ...   100  爱尔眼科  10.97%   70.63
+-4      5   国家大基金持股   965.188   1.23%  ...    23  北方华创   5.16%  163.97
+-..   ...       ...       ...     ...  ...   ...   ...     ...     ...
+-266  267     高送转预期   653.076  -2.83%  ...    15  震裕科技   3.53%   74.70
+-267  268     拼多多概念   812.286  -2.86%  ...    11  兆驰股份  -0.18%    5.64
+-268  269      医美概念  1371.420  -2.90%  ...    39  爱尔眼科  10.97%   70.63
+-269  270        乳业  2101.210  -2.94%  ...    30  ST科迪   2.97%    2.08
+
+----------------------------------------
+
+File: docs/introduction.md
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -6,7 +6,7 @@
+ **风险提示**：[AKShare](https://github.com/akfamily/akshare) 开源财经数据接口库所采集的数据皆来自公开的数据源，不涉及任何个人隐私数据和非公开数据。
+ 同时本项目提供的数据接口及相关数据仅用于学术研究，任何个人、机构及团体使用本项目的数据接口及相关数据请注意商业风险。
+ 
+-1. 本文档更新时间：**2024-08-15**；
++1. 本文档更新时间：**2024-08-18**；
+ 2. 如有 [AKShare](https://github.com/akfamily/akshare) 库、文档及数据的相关问题，请在 [AKShare Issues](https://github.com/akfamily/akshare/issues) 中提 Issues；
+ 3. 欢迎关注 **数据科学实战** 微信公众号；<div><img src="https://jfds-1252952517.cos.ap-chengdu.myqcloud.com/akshare/readme/qrcode/ds.png"></div>
+ 4. **知识星球【数据科学实战】** 2024 全新改版，聚焦于量化投资内容，欢迎加入 **知识星球【数据科学实战】** 高质量社区，里面有丰富的视频课程、问答、文章、书籍及代码等内容：
+
+----------------------------------------
+

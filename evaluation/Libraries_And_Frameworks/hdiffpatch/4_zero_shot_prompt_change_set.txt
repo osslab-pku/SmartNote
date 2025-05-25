@@ -1,0 +1,1457 @@
+Changes between v4.7.0 and v4.8.0
+================================================================================
+
+COMMITS
+--------------------------------------------------------------------------------
+
+Commit: 619dcc714a773f3faefd89c0bb532096f1037cb1
+Author: sisong
+Date: 2024-07-13 00:55:24+00:00
+Message: update doc;
+----------------------------------------
+
+Commit: 043d7c7d9268e4cf7dbab244035ec90a89f8a8fe
+Author: sisong
+Date: 2024-07-16 03:12:13+00:00
+Message: support Android15 16KB PageSize
+----------------------------------------
+
+Commit: 86cf861f5ed3fe473835d83d179cf036bd647f11
+Author: sisong
+Date: 2024-07-16 03:20:44+00:00
+Message: update version;
+----------------------------------------
+
+Commit: 1c910c1e8e94ae547a9705a6851c7176edd876cf
+Author: sisong
+Date: 2024-07-17 13:46:04+00:00
+Message: hdiffz added "-c-ldef" ;   used libdeflate compressor, compatible with -c-zlib, faster or better than zlib;
+----------------------------------------
+
+Commit: 79271b972dabd260693d3b15c188330ea681dda0
+Author: sisong
+Date: 2024-07-18 05:18:53+00:00
+Message: ldef(libdeflate) compressor support multi-thread parallel;
+interface hdiff_TCompress added member compressTypeForDisplay;
+----------------------------------------
+
+Commit: 14671924a651d7dbc66fa79fc6bcd8bfa3401d77
+Author: sisong
+Date: 2024-07-18 05:58:26+00:00
+Message: recode pzlibCompressPlugin;
+----------------------------------------
+
+Commit: 025ab2a6a011ab844771d7d1e45715b45afb7d01
+Author: sisong
+Date: 2024-07-19 10:04:49+00:00
+Message: hdiffz fix recode test diffFile, add var isSingleCompressedBsDiff;
+----------------------------------------
+
+Commit: c105f3e31942d30c5bf2803790450977104c97c6
+Author: sisong
+Date: 2024-07-19 10:05:20+00:00
+Message: added ldefDecompressPlugin(used libdeflate), speed is zlib decompressor 2x!  NOTE: now not support any all deflate encoding.
+----------------------------------------
+
+Commit: f47c56be622f84c087f7d4a80802421e36b30618
+Author: sisong
+Date: 2024-07-19 22:54:29+00:00
+Message: recode ldefDecompressPlugin, retry by libdefalte when decompress fail.
+----------------------------------------
+
+Commit: 82677fe3c18d2f8bb9db8064a1a7fca7ff6d7fa0
+Author: sisong
+Date: 2024-07-23 06:02:04+00:00
+Message: ldefDecompressPlugin(used libdeflate),  now support any all deflate encoding.
+----------------------------------------
+
+Commit: 7963697de4100e08f664a5fdf270aa6bac1a182c
+Author: sisong
+Date: 2024-07-24 00:52:21+00:00
+Message: dispose deflate code last_block_end state;
+----------------------------------------
+
+Commit: a615980a4f3ca4dd99d95b5147c52f1160543db8
+Author: sisong
+Date: 2024-07-24 02:14:37+00:00
+Message: hpatchz support ldefDecompressPlugin(used libdeflate), speed is zlib decompressor 2x!
+----------------------------------------
+
+Commit: f32803695974beca5167cae5bd6239ed4311562a
+Author: sisong
+Date: 2024-07-24 05:28:53+00:00
+Message: make buid with LDEF (libdeflate) ok;
+----------------------------------------
+
+Commit: c4f1a4f309a08da4ddf0be75b93807596e074e40
+Author: sisong
+Date: 2024-07-24 06:38:44+00:00
+Message: code::blocks build ok;
+----------------------------------------
+
+Commit: b25926877af59a454c89192e59f3a06c0417d1cb
+Author: sisong
+Date: 2024-07-24 14:03:34+00:00
+Message: xcode build ok;
+----------------------------------------
+
+Commit: e42f404ff14e2aea2280a6497d41e22baf484325
+Author: sisong
+Date: 2024-07-24 14:04:09+00:00
+Message: update version & doc & CI;
+----------------------------------------
+
+Commit: 7dc2e668f49a6b0a7b39d03382c57ef6c22679e1
+Author: sisong
+Date: 2024-07-24 23:40:26+00:00
+Message: vc hpatchz arm build ok, fixed CI;
+----------------------------------------
+
+Commit: 8e7976a72670d3fa35c021b675d9bdf452d9dc42
+Author: sisong
+Date: 2024-07-24 23:52:47+00:00
+Message: fixed iOS SDK build;
+----------------------------------------
+
+Commit: 0d09620360b9050c50dca8deb5f0edabf317db3e
+Author: sisong
+Date: 2024-07-25 08:59:07+00:00
+Message: hpatchz now default closed libdeflate decompressor;
+----------------------------------------
+
+Commit: 33f35172cba43b537bb56463efd2cef883f62516
+Author: sisong
+Date: 2024-07-26 02:29:46+00:00
+Message: recode makefile;  add _IS_NEED_decompressor_ldef_replace_zlib;
+----------------------------------------
+
+Commit: 4c752d8a96452e754d59e34ca8952405e4f0cc7e
+Author: housisong
+Date: 2024-07-26 04:13:04+00:00
+Message: Merge pull request #391 from sisong/dev
+
+hdiffz added "-c-ldef" ; used libdeflate compressor, compatible with zlib.
+----------------------------------------
+
+
+PULL REQUESTS
+--------------------------------------------------------------------------------
+
+PR #391: hdiffz added "-c-ldef" ; used libdeflate compressor, compatible with zlib.
+Author: sisong
+Merged at: 2024-07-26 04:13:04+00:00
+URL: https://github.com/sisong/HDiffPatch/pull/391
+Description:
+Android libhpatchz.so support Android 15 with 16KB page size
+
+----------------------------------------
+
+PR #389: support "hdiffz -BSD -SD" create diffFile new format: endsley/bsdiff …
+Author: sisong
+Merged at: 2024-07-12 06:42:49+00:00
+URL: https://github.com/sisong/HDiffPatch/pull/389
+Description:
+hdiffz cmline add -neq option: for check oldData!=newData;    
+fix & recode hpatchz SFX logic;
+----------------------------------------
+
+
+FILE CHANGES
+--------------------------------------------------------------------------------
+
+File: .github/workflows/ci.yml
+Status: modified
+Changes: +21 -11
+Diff:
+@@ -10,24 +10,29 @@ jobs:
+       - uses: actions/checkout@v2
+       - name: makeInit
+         run: |
+-          make LZMA=0 ZSTD=0 MD5=0 -j
++          make LDEF=0 LZMA=0 ZSTD=0 MD5=0 -j
+           make clean
+-      - name: makeUnDef
++      - name: makeNoAll
+         run: |
+           git clone --depth=1 https://github.com/sisong/libmd5.git ../libmd5
+           git clone --depth=1 https://github.com/sisong/lzma.git ../lzma
+           git clone --depth=1 https://github.com/sisong/zstd.git ../zstd
+-          make DIR_DIFF=0 MT=0 BSD=0 VCD=0 ZLIB=0 BZIP2=0 -j
++          make DIR_DIFF=0 MT=0 BSD=0 VCD=0 ZLIB=0 LDEF=0 BZIP2=0 -j
++          make clean
++      - name: makeNoldef
++        run: |
++          make LDEF=0 -j
+           make clean
+       - name: makeAll
+         run: |
++          git clone --depth=1 https://github.com/sisong/zlib.git ../zlib
++          git clone --depth=1 https://github.com/sisong/libdeflate.git ../libdeflate
+           make -j
+           make clean
+-      - name: makeByCode
++      - name: makeByBz2Code
+         run: |
+-          git clone --depth=1 https://github.com/sisong/zlib.git ../zlib
+           git clone --depth=1 https://github.com/sisong/bzip2.git ../bzip2
+-          make ZLIB=1 BZIP2=1 -j
+
+----------------------------------------
+
+File: CHANGELOG.md
+Status: modified
+Changes: +9 -1
+Diff:
+@@ -2,6 +2,14 @@
+ 
+ full changelog at: https://github.com/sisong/HDiffPatch/commits   
+ 
++## [v4.8.0](https://github.com/sisong/HDiffPatch/tree/v4.8.0) - 2024-07-26
++### Added
++* cmdline hdiffz support option "-c-ldef-{1..12}"; used libdeflate compressor, compatible with -c-zlib, faster or better than zlib;
++ (hpatchz now default closed libdeflate decompressor)
++* add plugin ldefCompressPlugin, pldefCompressPlugin, ldefDecompressPlugin;
++### Changed
+
+----------------------------------------
+
+File: Makefile
+Status: modified
+Changes: +55 -14
+Diff:
+@@ -1,12 +1,22 @@
+ # args
+ DIR_DIFF := 1
+ MT       := 1
++# used libdeflate?
++LDEF     := 1
+ # 0: not need zlib;  1: compile zlib source code;  2: used -lz to link zlib lib;
+-ZLIB     := 2
++ifeq ($(LDEF),0)
++  ZLIB     := 2
++else
++  ZLIB     := 1
++endif
+ # 0: not need lzma;  1: compile lzma source code;  2: used -llzma to link lzma lib;
+ LZMA     := 1
++# lzma decompressor used arm64 asm optimize? 
+ ARM64ASM := 0
+-RISCV32  := 0
++# lzma only can used software CRC? (no hardware CRC)
++USE_CRC_EMU := 0
++# supported atomic uint64?
++ATOMIC_U64 := 1
+ # 0: not need zstd;  1: compile zstd source code;  2: used -lzstd to link zstd lib;
+ ZSTD     := 1
+ MD5      := 1
+@@ -17,9 +27,9 @@ CL  	 := 0
+ M32      := 0
+ # build for out min size
+ MINS     := 0
+-# support VCDIFF? 
++# need support VCDIFF? 
+ VCD      := 1
+-# support bsdiff&bspatch?
++# need support bsdiff&bspatch?
+ BSD      := 1
+ ifeq ($(OS),Windows_NT) # mingw?
+   CC    := gcc
+@@ -28,10 +38,21 @@ else
+   # 0: not need bzip2 (must BSD=0);  1: compile bzip2 source code;  2: used -lbz2 to link bzip2 lib;
+   BZIP2 := 2
+ endif
+-ifeq ($(BZIP2),0)
+-  ifeq ($(BSD),0)
+
+----------------------------------------
+
+File: README.md
+Status: modified
+Changes: +16 -9
+Diff:
+@@ -1,5 +1,5 @@
+ # [HDiffPatch]
+-[![release](https://img.shields.io/badge/release-v4.7.0-blue.svg)](https://github.com/sisong/HDiffPatch/releases) 
++[![release](https://img.shields.io/badge/release-v4.8.0-blue.svg)](https://github.com/sisong/HDiffPatch/releases) 
+ [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/sisong/HDiffPatch/blob/master/LICENSE) 
+ [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-blue.svg)](https://github.com/sisong/HDiffPatch/pulls)
+ [![+issue Welcome](https://img.shields.io/github/issues-raw/sisong/HDiffPatch?color=green&label=%2Bissue%20welcome)](https://github.com/sisong/HDiffPatch/issues)   
+@@ -10,7 +10,7 @@
+ 
+ [HDiffPatch] is a C\C++ library and command-line tools for **diff** & **patch** between binary files or directories(folder); cross-platform; fast running; create small delta/differential; support large files and limit memory requires when diff & patch.   
+ 
+-[HDiffPatch] defines its own patch file format, this lib is also compatible with the [bsdiff4] patch file format and partially compatible with the [open-vcdiff] and [xdelta3] patch file format [VCDIFF(RFC 3284)].   
++[HDiffPatch] defines its own patch file format, this lib is also compatible with the [bsdiff4] & [endsley/bsdiff] patch file format and [partially compatible](https://github.com/sisong/HDiffPatch/issues/369#issuecomment-1869798843) with the [open-vcdiff] & [xdelta3] patch file format [VCDIFF(RFC 3284)].   
+ 
+ if need patch (OTA) on embedded systems,MCU,NB-IoT..., see demo [HPatchLite], +[tinyuz] decompressor can run on 1KB RAM devices!   
+ 
+@@ -30,6 +30,7 @@ NOTE: *This library does not deal with file metadata, such as file last wirte ti
+ [HPatchLite]: https://github.com/sisong/HPatchLite
+ [tinyuz]: https://github.com/sisong/tinyuz
+ [bsdiff4]: http://www.daemonology.net/bsdiff/
++[endsley/bsdiff]: https://github.com/mendsley/bsdiff
+ [xdelta3]: https://github.com/jmacd/xdelta
+ [open-vcdiff]: https://github.com/google/open-vcdiff
+ [archive-patcher]: https://github.com/google/archive-patcher
+@@ -49,17 +50,19 @@ apply the delta:
+ `$ cd <dir>/HDiffPatch`   
+ ### Linux or MacOS X ###
+ Try:   
+-`$ make LZMA=0 ZSTD=0 MD5=0`   
++`$ make LDEF=0 LZMA=0 ZSTD=0 MD5=0`   
+ bzip2 : if the build fails with `fatal error: bzlib.h: No such file or directory`, use your system's package manager to install the libbz2 package and try again; or download & make with libbz2 source code:
+
+----------------------------------------
+
+File: README_cn.md
+Status: modified
+Changes: +18 -10
+Diff:
+@@ -1,5 +1,5 @@
+ # [HDiffPatch]
+-[![release](https://img.shields.io/badge/release-v4.7.0-blue.svg)](https://github.com/sisong/HDiffPatch/releases) 
++[![release](https://img.shields.io/badge/release-v4.8.0-blue.svg)](https://github.com/sisong/HDiffPatch/releases) 
+ [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/sisong/HDiffPatch/blob/master/LICENSE) 
+ [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-blue.svg)](https://github.com/sisong/HDiffPatch/pulls)
+ [![+issue Welcome](https://img.shields.io/github/issues-raw/sisong/HDiffPatch?color=green&label=%2Bissue%20welcome)](https://github.com/sisong/HDiffPatch/issues)   
+@@ -10,7 +10,7 @@
+ 
+ [HDiffPatch] 是一个C\C++库和命令行工具，用于在二进制文件或文件夹之间执行 **diff**(创建补丁) 和 **patch**(打补丁)；跨平台、运行速度快、创建的补丁小、支持巨大的文件并且diff和patch时都可以控制内存占用量。   
+ 
+-[HDiffPatch] 定义了自己的补丁包格式，同时这个库也完全兼容了 [bsdiff4] 的补丁包格式，并部分兼容 [open-vcdiff] 和 [xdelta3] 的补丁包格式 [VCDIFF(RFC 3284)]。   
++[HDiffPatch] 定义了自己的补丁包格式，同时这个库也完全兼容了 [bsdiff4] 和 [endsley/bsdiff] 的补丁包格式，并[部分兼容](https://github.com/sisong/HDiffPatch/issues/369#issuecomment-1869798843)了 [open-vcdiff] 和 [xdelta3] 的补丁包格式 [VCDIFF(RFC 3284)]。   
+ 
+ 如果你需要在嵌入式系统(MCU、NB-IoT)等设备上进行增量更新(OTA), 可以看看例子 [HPatchLite], +[tinyuz] 解压缩器可以在1KB内存的设备上运行!   
+ 
+@@ -30,6 +30,7 @@
+ [HPatchLite]: https://github.com/sisong/HPatchLite
+ [tinyuz]: https://github.com/sisong/tinyuz
+ [bsdiff4]: http://www.daemonology.net/bsdiff/
++[endsley/bsdiff]: https://github.com/mendsley/bsdiff
+ [xdelta3]: https://github.com/jmacd/xdelta
+ [open-vcdiff]: https://github.com/google/open-vcdiff
+ [archive-patcher]: https://github.com/google/archive-patcher
+@@ -49,17 +50,19 @@
+ `$ cd <dir>/HDiffPatch`   
+ ### Linux or MacOS X ###
+ 试试:   
+-`$ make LZMA=0 ZSTD=0 MD5=0`   
++`$ make LDEF=0 LZMA=0 ZSTD=0 MD5=0`   
+ bzip2 : 如果编译失败，显示 `fatal error: bzlib.h: No such file or directory`，请使用系统的包管理器安装libbz2，然后再试一次；或者下载并使用libbz2源代码来编译:
+ ```
+ $ git clone https://github.com/sisong/bzip2.git ../bzip2
+-$ make LZMA=0 ZSTD=0 MD5=0 BZIP2=1
+
+----------------------------------------
+
+File: builds/android_ndk_jni_mk/Application.mk
+Status: modified
+Changes: +1 -0
+Diff:
+@@ -3,5 +3,6 @@ APP_CFLAGS += -s -Wno-error=format-security
+ APP_CFLAGS += -fvisibility=hidden -fvisibility-inlines-hidden
+ APP_CFLAGS += -ffunction-sections -fdata-sections
+ APP_LDFLAGS += -s -Wl,--gc-sections,--as-needed
++APP_LDFLAGS += -Wl,-z,max-page-size=16384
+ APP_BUILD_SCRIPT := Android.mk
+ APP_ABI := armeabi armeabi-v7a arm64-v8a x86 x86_64
+
+----------------------------------------
+
+File: builds/codeblocks/HDiffZ.cbp
+Status: modified
+Changes: +17 -0
+Diff:
+@@ -71,6 +71,8 @@
+ 			<Add directory="../../../lzma/C/" />
+ 			<Add directory="../../../zstd/lib" />
+ 			<Add directory="../../../libmd5" />
++			<Add directory="../../../libdeflate" />
++			<Add directory="../../../zlib" />
+ 		</Compiler>
+ 		<Linker>
+ 			<Add library="pthread" />
+@@ -97,6 +99,18 @@
+ 		<Unit filename="../../../bzip2/randtable.c">
+ 			<Option compilerVar="CC" />
+
+----------------------------------------
+
+File: builds/codeblocks/HPatchZ.cbp
+Status: modified
+Changes: +14 -0
+Diff:
+@@ -70,6 +70,8 @@
+ 			<Add directory="../../../lzma/C/" />
+ 			<Add directory="../../../zstd/lib" />
+ 			<Add directory="../../../libmd5" />
++			<Add directory="../../../libdeflate" />
++			<Add directory="../../../zlib" />
+ 		</Compiler>
+ 		<Unit filename="../../../bzip2/blocksort.c">
+ 			<Option compilerVar="CC" />
+@@ -93,6 +95,15 @@
+ 		<Unit filename="../../../bzip2/randtable.c">
+
+----------------------------------------
+
+File: builds/codeblocks/unitTest.cbp
+Status: modified
+Changes: +12 -0
+Diff:
+@@ -31,12 +31,17 @@
+ 		<Compiler>
+ 			<Add option="-Wall" />
+ 			<Add option="-fexceptions" />
++			<Add option="-D_IS_NEED_DIR_DIFF_PATCH=0" />
+ 		</Compiler>
+ 		<Linker>
+ 			<Add library="libz" />
+ 			<Add library="libbz2" />
+ 			<Add library="libpthread" />
+
+----------------------------------------
+
+File: builds/vc/HDiffPatch.sln
+Status: modified
+Changes: +20 -2
+Diff:
+@@ -1,6 +1,6 @@
+ Microsoft Visual Studio Solution File, Format Version 12.00
+-# Visual Studio Version 16
+-VisualStudioVersion = 16.0.31402.337
++# Visual Studio Version 17
++VisualStudioVersion = 17.10.35027.167
+ MinimumVisualStudioVersion = 10.0.40219.1
+ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "hdiffz", "hdiffz.vcxproj", "{63934A83-25F5-4161-B19D-DFBAB1C257F1}"
+ 	ProjectSection(ProjectDependencies) = postProject
+@@ -27,6 +27,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "zlib", "zlib.vcxproj", "{35
+ EndProject
+ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "testHashClash", "testHashClash.vcxproj", "{22873560-BDA7-4915-8C7D-DF7C380B4E55}"
+ EndProject
+
+----------------------------------------
+
+File: builds/vc/HDiffZ.vcxproj
+Status: modified
+Changes: +11 -8
+Diff:
+@@ -132,60 +132,60 @@
+   <PropertyGroup Label="UserMacros" />
+   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+     <LinkIncremental>true</LinkIncremental>
+-    <IncludePath>..\..\..\zlib;..\..\..\bzip2;..\..\..\zstd\lib;..\..\..\zstd\lib\common;..\..\..\zstd\lib\compress;..\..\..\zstd\lib\decompress;..\..\..\lz4\lib;..\..\..\lzma\C;..\..\..\lzham_codec\include;..\..\..\brotli\c\include;..\..\..\libmd5;$(IncludePath)</IncludePath>
++    <IncludePath>..\..\..\zlib;..\..\..\bzip2;..\..\..\zstd\lib;..\..\..\zstd\lib\common;..\..\..\zstd\lib\compress;..\..\..\zstd\lib\decompress;..\..\..\lz4\lib;..\..\..\lzma\C;..\..\..\lzham_codec\include;..\..\..\brotli\c\include;..\..\..\libmd5;..\..\..\libdeflate;$(IncludePath)</IncludePath>
+     <ReferencePath>$(ReferencePath)</ReferencePath>
+     <OutDir>$(Configuration)\$(Platform)\</OutDir>
+     <IntDir>$(Configuration)\$(Platform)\obj\</IntDir>
+   </PropertyGroup>
+   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">
+     <LinkIncremental>true</LinkIncremental>
+-    <IncludePath>..\..\..\zlib;..\..\..\bzip2;..\..\..\zstd\lib;..\..\..\zstd\lib\common;..\..\..\zstd\lib\compress;..\..\..\zstd\lib\decompress;..\..\..\lz4\lib;..\..\..\lzma\C;..\..\..\lzham_codec\include;..\..\..\brotli\c\include;..\..\..\libmd5;$(IncludePath)</IncludePath>
++    <IncludePath>..\..\..\zlib;..\..\..\bzip2;..\..\..\zstd\lib;..\..\..\zstd\lib\common;..\..\..\zstd\lib\compress;..\..\..\zstd\lib\decompress;..\..\..\lz4\lib;..\..\..\lzma\C;..\..\..\lzham_codec\include;..\..\..\brotli\c\include;..\..\..\libmd5;..\..\..\libdeflate;$(IncludePath)</IncludePath>
+     <ReferencePath>$(ReferencePath)</ReferencePath>
+     <OutDir>$(Configuration)\$(Platform)\</OutDir>
+     <IntDir>$(Configuration)\$(Platform)\obj\</IntDir>
+   </PropertyGroup>
+   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+     <LinkIncremental>true</LinkIncremental>
+-    <IncludePath>..\..\..\zlib;..\..\..\bzip2;..\..\..\zstd\lib;..\..\..\zstd\lib\common;..\..\..\zstd\lib\compress;..\..\..\zstd\lib\decompress;..\..\..\lz4\lib;..\..\..\lzma\C;..\..\..\lzham_codec\include;..\..\..\brotli\c\include;..\..\..\libmd5;$(IncludePath)</IncludePath>
++    <IncludePath>..\..\..\zlib;..\..\..\bzip2;..\..\..\zstd\lib;..\..\..\zstd\lib\common;..\..\..\zstd\lib\compress;..\..\..\zstd\lib\decompress;..\..\..\lz4\lib;..\..\..\lzma\C;..\..\..\lzham_codec\include;..\..\..\brotli\c\include;..\..\..\libmd5;..\..\..\libdeflate;$(IncludePath)</IncludePath>
+     <ReferencePath>$(ReferencePath)</ReferencePath>
+     <OutDir>$(Configuration)\$(Platform)\</OutDir>
+     <IntDir>$(Configuration)\$(Platform)\obj\</IntDir>
+   </PropertyGroup>
+
+----------------------------------------
+
+File: builds/vc/HPatchZ.vcxproj
+Status: modified
+Changes: +11 -8
+Diff:
+@@ -132,60 +132,60 @@
+   <PropertyGroup Label="UserMacros" />
+   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+     <LinkIncremental>true</LinkIncremental>
+-    <IncludePath>..\..\..\zlib;..\..\..\bzip2;..\..\..\zstd\lib;..\..\..\zstd\lib\common;..\..\..\zstd\lib\compress;..\..\..\zstd\lib\decompress;..\..\..\lz4\lib;..\..\..\lzma\C;..\..\..\lzham_codec\include;..\..\..\brotli\c\include;..\..\..\libmd5;$(IncludePath)</IncludePath>
++    <IncludePath>..\..\..\zlib;..\..\..\bzip2;..\..\..\zstd\lib;..\..\..\zstd\lib\common;..\..\..\zstd\lib\compress;..\..\..\zstd\lib\decompress;..\..\..\lz4\lib;..\..\..\lzma\C;..\..\..\lzham_codec\include;..\..\..\brotli\c\include;..\..\..\libmd5;..\..\..\libdeflate;$(IncludePath)</IncludePath>
+     <ReferencePath>$(ReferencePath)</ReferencePath>
+     <OutDir>$(Configuration)\$(Platform)\</OutDir>
+     <IntDir>$(Configuration)\$(Platform)\obj\</IntDir>
+   </PropertyGroup>
+   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">
+     <LinkIncremental>true</LinkIncremental>
+-    <IncludePath>..\..\..\zlib;..\..\..\bzip2;..\..\..\zstd\lib;..\..\..\zstd\lib\common;..\..\..\zstd\lib\compress;..\..\..\zstd\lib\decompress;..\..\..\lz4\lib;..\..\..\lzma\C;..\..\..\lzham_codec\include;..\..\..\brotli\c\include;..\..\..\libmd5;$(IncludePath)</IncludePath>
++    <IncludePath>..\..\..\zlib;..\..\..\bzip2;..\..\..\zstd\lib;..\..\..\zstd\lib\common;..\..\..\zstd\lib\compress;..\..\..\zstd\lib\decompress;..\..\..\lz4\lib;..\..\..\lzma\C;..\..\..\lzham_codec\include;..\..\..\brotli\c\include;..\..\..\libmd5;..\..\..\libdeflate;$(IncludePath)</IncludePath>
+     <ReferencePath>$(ReferencePath)</ReferencePath>
+     <OutDir>$(Configuration)\$(Platform)\</OutDir>
+     <IntDir>$(Configuration)\$(Platform)\obj\</IntDir>
+   </PropertyGroup>
+   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+     <LinkIncremental>true</LinkIncremental>
+-    <IncludePath>..\..\..\zlib;..\..\..\bzip2;..\..\..\zstd\lib;..\..\..\zstd\lib\common;..\..\..\zstd\lib\compress;..\..\..\zstd\lib\decompress;..\..\..\lz4\lib;..\..\..\lzma\C;..\..\..\lzham_codec\include;..\..\..\brotli\c\include;..\..\..\libmd5;$(IncludePath)</IncludePath>
++    <IncludePath>..\..\..\zlib;..\..\..\bzip2;..\..\..\zstd\lib;..\..\..\zstd\lib\common;..\..\..\zstd\lib\compress;..\..\..\zstd\lib\decompress;..\..\..\lz4\lib;..\..\..\lzma\C;..\..\..\lzham_codec\include;..\..\..\brotli\c\include;..\..\..\libmd5;..\..\..\libdeflate;$(IncludePath)</IncludePath>
+     <ReferencePath>$(ReferencePath)</ReferencePath>
+     <OutDir>$(Configuration)\$(Platform)\</OutDir>
+     <IntDir>$(Configuration)\$(Platform)\obj\</IntDir>
+   </PropertyGroup>
+
+----------------------------------------
+
+File: builds/vc/libdeflate.vcxproj
+Status: added
+Changes: +332 -0
+Diff:
+@@ -0,0 +1,332 @@
++<?xml version="1.0" encoding="utf-8"?>
++<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
++  <ItemGroup Label="ProjectConfigurations">
++    <ProjectConfiguration Include="Debug|ARM">
++      <Configuration>Debug</Configuration>
++      <Platform>ARM</Platform>
++    </ProjectConfiguration>
++    <ProjectConfiguration Include="Debug|ARM64">
++      <Configuration>Debug</Configuration>
++      <Platform>ARM64</Platform>
++    </ProjectConfiguration>
++    <ProjectConfiguration Include="Debug|Win32">
++      <Configuration>Debug</Configuration>
++      <Platform>Win32</Platform>
++    </ProjectConfiguration>
++    <ProjectConfiguration Include="Release|ARM">
++      <Configuration>Release</Configuration>
++      <Platform>ARM</Platform>
++    </ProjectConfiguration>
++    <ProjectConfiguration Include="Release|ARM64">
++      <Configuration>Release</Configuration>
++      <Platform>ARM64</Platform>
++    </ProjectConfiguration>
++    <ProjectConfiguration Include="Release|Win32">
++      <Configuration>Release</Configuration>
++      <Platform>Win32</Platform>
++    </ProjectConfiguration>
++    <ProjectConfiguration Include="Debug|x64">
++      <Configuration>Debug</Configuration>
++      <Platform>x64</Platform>
++    </ProjectConfiguration>
++    <ProjectConfiguration Include="Release|x64">
++      <Configuration>Release</Configuration>
++      <Platform>x64</Platform>
++    </ProjectConfiguration>
++  </ItemGroup>
++  <ItemGroup>
++    <ClCompile Include="..\..\..\libdeflate\lib\arm\cpu_features.c">
++      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
++      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
++      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
++      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
++    </ClCompile>
++    <ClCompile Include="..\..\..\libdeflate\lib\crc32.c" />
++    <ClCompile Include="..\..\..\libdeflate\lib\deflate_compress.c" />
++    <ClCompile Include="..\..\..\libdeflate\lib\deflate_decompress.c" />
++    <ClCompile Include="..\..\..\libdeflate\lib\utils.c" />
++    <ClCompile Include="..\..\..\libdeflate\lib\x86\cpu_features.c">
++      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</ExcludedFromBuild>
++      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</ExcludedFromBuild>
++      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">true</ExcludedFromBuild>
++      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">true</ExcludedFromBuild>
++    </ClCompile>
++  </ItemGroup>
++  <PropertyGroup Label="Globals">
++    <VCProjectVersion>17.0</VCProjectVersion>
++    <Keyword>Win32Proj</Keyword>
++    <ProjectGuid>{4ffa1879-e1a6-4b99-b9d1-3265f48dae0d}</ProjectGuid>
++    <RootNamespace>libdeflate</RootNamespace>
++    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
++  </PropertyGroup>
++  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
++  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
++    <ConfigurationType>StaticLibrary</ConfigurationType>
++    <UseDebugLibraries>true</UseDebugLibraries>
++    <PlatformToolset>v143</PlatformToolset>
++    <CharacterSet>Unicode</CharacterSet>
++  </PropertyGroup>
++  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" Label="Configuration">
++    <ConfigurationType>StaticLibrary</ConfigurationType>
++    <UseDebugLibraries>true</UseDebugLibraries>
++    <PlatformToolset>v143</PlatformToolset>
++    <CharacterSet>Unicode</CharacterSet>
++  </PropertyGroup>
++  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
++    <ConfigurationType>StaticLibrary</ConfigurationType>
++    <UseDebugLibraries>false</UseDebugLibraries>
++    <PlatformToolset>v143</PlatformToolset>
++    <WholeProgramOptimization>true</WholeProgramOptimization>
++    <CharacterSet>Unicode</CharacterSet>
++  </PropertyGroup>
++  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" Label="Configuration">
++    <ConfigurationType>StaticLibrary</ConfigurationType>
++    <UseDebugLibraries>false</UseDebugLibraries>
++    <PlatformToolset>v143</PlatformToolset>
++    <WholeProgramOptimization>true</WholeProgramOptimization>
++    <CharacterSet>Unicode</CharacterSet>
++  </PropertyGroup>
++  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
++    <ConfigurationType>StaticLibrary</ConfigurationType>
++    <UseDebugLibraries>true</UseDebugLibraries>
++    <PlatformToolset>v143</PlatformToolset>
++    <CharacterSet>Unicode</CharacterSet>
++  </PropertyGroup>
++  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'" Label="Configuration">
++    <ConfigurationType>StaticLibrary</ConfigurationType>
++    <UseDebugLibraries>true</UseDebugLibraries>
++    <PlatformToolset>v143</PlatformToolset>
++    <CharacterSet>Unicode</CharacterSet>
++  </PropertyGroup>
++  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
++    <ConfigurationType>StaticLibrary</ConfigurationType>
++    <UseDebugLibraries>false</UseDebugLibraries>
++    <PlatformToolset>v143</PlatformToolset>
++    <WholeProgramOptimization>true</WholeProgramOptimization>
++    <CharacterSet>Unicode</CharacterSet>
++  </PropertyGroup>
++  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'" Label="Configuration">
++    <ConfigurationType>StaticLibrary</ConfigurationType>
++    <UseDebugLibraries>false</UseDebugLibraries>
+
+----------------------------------------
+
+File: builds/xcode/HDiffPatch.xcworkspace/contents.xcworkspacedata
+Status: modified
+Changes: +6 -0
+Diff:
+@@ -23,6 +23,12 @@
+    <Group
+       location = "container:"
+       name = "lib">
++      <FileRef
++         location = "group:zlib.xcodeproj">
++      </FileRef>
++      <FileRef
++         location = "group:libdeflate.xcodeproj">
++      </FileRef>
+
+----------------------------------------
+
+File: builds/xcode/HDiffPatch.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings
+Status: added
+Changes: +8 -0
+Diff:
+@@ -0,0 +1,8 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
++<plist version="1.0">
++<dict>
++	<key>PreviewsEnabled</key>
++	<false/>
++</dict>
++</plist>
+
+----------------------------------------
+
+File: builds/xcode/hdiffz.xcodeproj/project.pbxproj
+Status: modified
+Changes: +12 -2
+Diff:
+@@ -8,6 +8,8 @@
+ 
+ /* Begin PBXBuildFile section */
+ 		0D225ADB2A997B6200DBD5B1 /* liblzma.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D225ADA2A997B6200DBD5B1 /* liblzma.a */; };
++		0D5690472AB02E90006657AC /* liblibdeflate.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D5690462AB02E90006657AC /* liblibdeflate.a */; };
++		0D5690492AB02E97006657AC /* libzlib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D5690482AB02E97006657AC /* libzlib.a */; };
+ 		0D571A66275CEB3B00672D57 /* libzstd.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D571A65275CEB3B00672D57 /* libzstd.a */; };
+ 		0D571A69275CF68900672D57 /* match_block.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0D571A68275CF68900672D57 /* match_block.cpp */; };
+ 		0D571A6F275CF71A00672D57 /* bspatch_wrapper.c in Sources */ = {isa = PBXBuildFile; fileRef = 0D571A6B275CF71A00672D57 /* bspatch_wrapper.c */; };
+@@ -31,7 +33,6 @@
+ 		D690ABBB1F2079E80089DC57 /* suffix_string.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D690ABB21F2079E80089DC57 /* suffix_string.cpp */; };
+ 		D690ABBC1F2079E80089DC57 /* patch.c in Sources */ = {isa = PBXBuildFile; fileRef = D690ABB51F2079E80089DC57 /* patch.c */; };
+ 		D690AEFB1F2097C90089DC57 /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D690AEFA1F2097C90089DC57 /* libbz2.tbd */; };
+-		D690AEFD1F2097D30089DC57 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D690AEFC1F2097D30089DC57 /* libz.tbd */; };
+ 		D69EECD9220BD8E2001EF085 /* compress_parallel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D69EECD8220BD8E2001EF085 /* compress_parallel.cpp */; };
+ 		D69EECDF220C49DE001EF085 /* parallel_channel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D69EECDB220C49DE001EF085 /* parallel_channel.cpp */; };
+ 		D69EECE0220C49DE001EF085 /* parallel_import.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D69EECDD220C49DE001EF085 /* parallel_import.cpp */; };
+@@ -58,6 +59,8 @@
+ 
+ /* Begin PBXFileReference section */
+ 		0D225ADA2A997B6200DBD5B1 /* liblzma.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = liblzma.a; sourceTree = BUILT_PRODUCTS_DIR; };
+
+----------------------------------------
+
+File: builds/xcode/hpatchz.xcodeproj/project.pbxproj
+Status: modified
+Changes: +12 -6
+Diff:
+@@ -8,12 +8,13 @@
+ 
+ /* Begin PBXBuildFile section */
+ 		0D225C102AB01FAA00DBD5B1 /* liblzma.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D225C0F2AB01FAA00DBD5B1 /* liblzma.a */; };
++		0D5690432AB02E69006657AC /* liblibdeflate.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D5690422AB02E69006657AC /* liblibdeflate.a */; };
++		0D5690452AB02E6C006657AC /* libzlib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D5690442AB02E6C006657AC /* libzlib.a */; };
+ 		0D571A5C275CE9CE00672D57 /* libzstd.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D571A5B275CE9CE00672D57 /* libzstd.a */; };
+ 		0D571A62275CEAE900672D57 /* bspatch_wrapper.c in Sources */ = {isa = PBXBuildFile; fileRef = 0D571A61275CEAE900672D57 /* bspatch_wrapper.c */; };
+ 		0DA2A8E52910E70D000E86E1 /* vcpatch_wrapper.c in Sources */ = {isa = PBXBuildFile; fileRef = 0DA2A8E42910E70D000E86E1 /* vcpatch_wrapper.c */; };
+ 		D6241AE521DE47EC00E2846A /* new_stream.c in Sources */ = {isa = PBXBuildFile; fileRef = D6241AE321DE47EC00E2846A /* new_stream.c */; };
+ 		D64B4BEF2077AAAA0039C38B /* hpatchz.c in Sources */ = {isa = PBXBuildFile; fileRef = D64B4BEE2077AAAA0039C38B /* hpatchz.c */; };
+-		D64B4BF92077B9090039C38B /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D64B4BF82077B9090039C38B /* libz.tbd */; };
+ 		D64B4BFB2077B91A0039C38B /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D64B4BFA2077B91A0039C38B /* libbz2.tbd */; };
+ 		D67D3BF421D3C5870050632A /* ref_stream.c in Sources */ = {isa = PBXBuildFile; fileRef = D67D3BF121D3C5870050632A /* ref_stream.c */; };
+ 		D67D3BF521D3C5870050632A /* dir_patch.c in Sources */ = {isa = PBXBuildFile; fileRef = D67D3BF221D3C5870050632A /* dir_patch.c */; };
+@@ -40,6 +41,8 @@
+ /* Begin PBXFileReference section */
+ 		0D225B192A99893300DBD5B1 /* liblzma.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = liblzma.a; sourceTree = BUILT_PRODUCTS_DIR; };
+ 		0D225C0F2AB01FAA00DBD5B1 /* liblzma.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = liblzma.a; sourceTree = BUILT_PRODUCTS_DIR; };
++		0D5690422AB02E69006657AC /* liblibdeflate.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = liblibdeflate.a; sourceTree = BUILT_PRODUCTS_DIR; };
++		0D5690442AB02E6C006657AC /* libzlib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libzlib.a; sourceTree = BUILT_PRODUCTS_DIR; };
+ 		0D571A5B275CE9CE00672D57 /* libzstd.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libzstd.a; sourceTree = BUILT_PRODUCTS_DIR; };
+ 		0D571A61275CEAE900672D57 /* bspatch_wrapper.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = bspatch_wrapper.c; path = ../../bsdiff_wrapper/bspatch_wrapper.c; sourceTree = "<group>"; };
+ 		0DA2A8E42910E70D000E86E1 /* vcpatch_wrapper.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = vcpatch_wrapper.c; path = ../../vcdiff_wrapper/vcpatch_wrapper.c; sourceTree = "<group>"; };
+@@ -52,7 +55,6 @@
+ 		D64B4BF22077AB550039C38B /* _clock_for_demo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _clock_for_demo.h; path = ../../_clock_for_demo.h; sourceTree = "<group>"; };
+ 		D64B4BF32077AB550039C38B /* decompress_plugin_demo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = decompress_plugin_demo.h; path = ../../decompress_plugin_demo.h; sourceTree = "<group>"; };
+ 		D64B4BF42077AB550039C38B /* file_for_patch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = file_for_patch.h; path = ../../file_for_patch.h; sourceTree = "<group>"; };
+-		D64B4BF82077B9090039C38B /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+ 		D64B4BFA2077B91A0039C38B /* libbz2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = usr/lib/libbz2.tbd; sourceTree = SDKROOT; };
+ 		D6553CB3165FA1A9009D4C44 /* hpatchz */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = hpatchz; sourceTree = BUILT_PRODUCTS_DIR; };
+
+----------------------------------------
+
+File: builds/xcode/libdeflate.xcodeproj/project.pbxproj
+Status: added
+Changes: +286 -0
+Diff:
+@@ -0,0 +1,286 @@
++// !$*UTF8*$!
++{
++	archiveVersion = 1;
++	classes = {
++	};
++	objectVersion = 55;
++	objects = {
++
++/* Begin PBXBuildFile section */
++		0D0A720C2B555D1B00D6E0D1 /* cpu_features.c in Sources */ = {isa = PBXBuildFile; fileRef = 0D0A720B2B555D1B00D6E0D1 /* cpu_features.c */; };
++		0D0A72102B555D9400D6E0D1 /* deflate_decompress.c in Sources */ = {isa = PBXBuildFile; fileRef = 0D0A720D2B555D9400D6E0D1 /* deflate_decompress.c */; };
++		0D0A72112B555D9400D6E0D1 /* utils.c in Sources */ = {isa = PBXBuildFile; fileRef = 0D0A720E2B555D9400D6E0D1 /* utils.c */; };
++		0D0A72122B555D9400D6E0D1 /* deflate_compress.c in Sources */ = {isa = PBXBuildFile; fileRef = 0D0A720F2B555D9400D6E0D1 /* deflate_compress.c */; };
++/* End PBXBuildFile section */
++
++/* Begin PBXFileReference section */
++		0D0A71FE2B555BFB00D6E0D1 /* liblibdeflate.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = liblibdeflate.a; sourceTree = BUILT_PRODUCTS_DIR; };
++		0D0A720B2B555D1B00D6E0D1 /* cpu_features.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = cpu_features.c; path = ../../../libdeflate/lib/x86/cpu_features.c; sourceTree = "<group>"; };
++		0D0A720D2B555D9400D6E0D1 /* deflate_decompress.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = deflate_decompress.c; path = ../../../libdeflate/lib/deflate_decompress.c; sourceTree = "<group>"; };
++		0D0A720E2B555D9400D6E0D1 /* utils.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = utils.c; path = ../../../libdeflate/lib/utils.c; sourceTree = "<group>"; };
++		0D0A720F2B555D9400D6E0D1 /* deflate_compress.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = deflate_compress.c; path = ../../../libdeflate/lib/deflate_compress.c; sourceTree = "<group>"; };
++/* End PBXFileReference section */
++
++/* Begin PBXFrameworksBuildPhase section */
++		0D0A71FC2B555BFB00D6E0D1 /* Frameworks */ = {
++			isa = PBXFrameworksBuildPhase;
++			buildActionMask = 2147483647;
++			files = (
++			);
++			runOnlyForDeploymentPostprocessing = 0;
++		};
++/* End PBXFrameworksBuildPhase section */
++
++/* Begin PBXGroup section */
++		0D0A71F52B555BFB00D6E0D1 = {
++			isa = PBXGroup;
++			children = (
++				0D0A720F2B555D9400D6E0D1 /* deflate_compress.c */,
++				0D0A720D2B555D9400D6E0D1 /* deflate_decompress.c */,
++				0D0A720E2B555D9400D6E0D1 /* utils.c */,
++				0D0A720B2B555D1B00D6E0D1 /* cpu_features.c */,
++				0D0A71FF2B555BFB00D6E0D1 /* Products */,
++			);
++			sourceTree = "<group>";
++		};
++		0D0A71FF2B555BFB00D6E0D1 /* Products */ = {
++			isa = PBXGroup;
++			children = (
++				0D0A71FE2B555BFB00D6E0D1 /* liblibdeflate.a */,
++			);
++			name = Products;
++			sourceTree = "<group>";
++		};
++/* End PBXGroup section */
++
++/* Begin PBXHeadersBuildPhase section */
++		0D0A71FA2B555BFB00D6E0D1 /* Headers */ = {
++			isa = PBXHeadersBuildPhase;
++			buildActionMask = 2147483647;
++			files = (
++			);
++			runOnlyForDeploymentPostprocessing = 0;
++		};
++/* End PBXHeadersBuildPhase section */
++
++/* Begin PBXNativeTarget section */
++		0D0A71FD2B555BFB00D6E0D1 /* libdeflate */ = {
++			isa = PBXNativeTarget;
++			buildConfigurationList = 0D0A72022B555BFB00D6E0D1 /* Build configuration list for PBXNativeTarget "libdeflate" */;
++			buildPhases = (
++				0D0A71FA2B555BFB00D6E0D1 /* Headers */,
++				0D0A71FB2B555BFB00D6E0D1 /* Sources */,
++				0D0A71FC2B555BFB00D6E0D1 /* Frameworks */,
++			);
++			buildRules = (
++			);
++			dependencies = (
++			);
++			name = libdeflate;
++			productName = libdeflate;
++			productReference = 0D0A71FE2B555BFB00D6E0D1 /* liblibdeflate.a */;
++			productType = "com.apple.product-type.library.static";
++		};
++/* End PBXNativeTarget section */
++
++/* Begin PBXProject section */
++		0D0A71F62B555BFB00D6E0D1 /* Project object */ = {
++			isa = PBXProject;
++			attributes = {
++				BuildIndependentTargetsInParallel = 1;
++				LastUpgradeCheck = 1310;
++				TargetAttributes = {
++					0D0A71FD2B555BFB00D6E0D1 = {
++						CreatedOnToolsVersion = 13.1;
+
+----------------------------------------
+
+File: builds/xcode/libdeflate.xcodeproj/project.xcworkspace/contents.xcworkspacedata
+Status: added
+Changes: +7 -0
+Diff:
+@@ -0,0 +1,7 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<Workspace
++   version = "1.0">
++   <FileRef
++      location = "self:libdeflate.xcodeproj">
++   </FileRef>
++</Workspace>
+
+----------------------------------------
+
+File: builds/xcode/lzma.xcodeproj/project.pbxproj
+Status: modified
+Changes: +0 -2
+Diff:
+@@ -460,7 +460,6 @@
+ 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+ 				CLANG_WARN_UNREACHABLE_CODE = YES;
+ 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+-				CODE_SIGN_IDENTITY = "-";
+ 				COPY_PHASE_STRIP = NO;
+ 				DEBUG_INFORMATION_FORMAT = dwarf;
+ 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+@@ -515,7 +514,6 @@
+ 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+
+----------------------------------------
+
+File: builds/xcode/zlib.xcodeproj/project.pbxproj
+Status: added
+Changes: +308 -0
+Diff:
+@@ -0,0 +1,308 @@
++// !$*UTF8*$!
++{
++	archiveVersion = 1;
++	classes = {
++	};
++	objectVersion = 48;
++	objects = {
++
++/* Begin PBXBuildFile section */
++		D6DA376020468A05009AEF45 /* inflate.c in Sources */ = {isa = PBXBuildFile; fileRef = D6DA363B20468A05009AEF45 /* inflate.c */; };
++		D6DA376520468A05009AEF45 /* deflate.c in Sources */ = {isa = PBXBuildFile; fileRef = D6DA364820468A05009AEF45 /* deflate.c */; };
++		D6DA37AC20468A05009AEF45 /* crc32.c in Sources */ = {isa = PBXBuildFile; fileRef = D6DA372220468A05009AEF45 /* crc32.c */; };
++		D6DA37AE20468A05009AEF45 /* zutil.c in Sources */ = {isa = PBXBuildFile; fileRef = D6DA372520468A05009AEF45 /* zutil.c */; };
++		D6DA37BE20468A05009AEF45 /* inftrees.c in Sources */ = {isa = PBXBuildFile; fileRef = D6DA374120468A05009AEF45 /* inftrees.c */; };
++		D6DA37C120468A05009AEF45 /* trees.c in Sources */ = {isa = PBXBuildFile; fileRef = D6DA374B20468A05009AEF45 /* trees.c */; };
++		D6DA37C420468A05009AEF45 /* inffast.c in Sources */ = {isa = PBXBuildFile; fileRef = D6DA375820468A05009AEF45 /* inffast.c */; };
++		D6DA37C520468A05009AEF45 /* adler32.c in Sources */ = {isa = PBXBuildFile; fileRef = D6DA375920468A05009AEF45 /* adler32.c */; };
++/* End PBXBuildFile section */
++
++/* Begin PBXFileReference section */
++		D6888897204688D30042E2B3 /* libzlib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libzlib.a; sourceTree = BUILT_PRODUCTS_DIR; };
++		D6DA363B20468A05009AEF45 /* inflate.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = inflate.c; sourceTree = "<group>"; };
++		D6DA364820468A05009AEF45 /* deflate.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = deflate.c; sourceTree = "<group>"; };
++		D6DA372220468A05009AEF45 /* crc32.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = crc32.c; sourceTree = "<group>"; };
++		D6DA372520468A05009AEF45 /* zutil.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = zutil.c; sourceTree = "<group>"; };
++		D6DA374120468A05009AEF45 /* inftrees.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = inftrees.c; sourceTree = "<group>"; };
++		D6DA374B20468A05009AEF45 /* trees.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = trees.c; sourceTree = "<group>"; };
++		D6DA375820468A05009AEF45 /* inffast.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = inffast.c; sourceTree = "<group>"; };
++		D6DA375920468A05009AEF45 /* adler32.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = adler32.c; sourceTree = "<group>"; };
++/* End PBXFileReference section */
++
++/* Begin PBXFrameworksBuildPhase section */
++		D6888894204688D30042E2B3 /* Frameworks */ = {
++			isa = PBXFrameworksBuildPhase;
++			buildActionMask = 2147483647;
++			files = (
++			);
++			runOnlyForDeploymentPostprocessing = 0;
++		};
++/* End PBXFrameworksBuildPhase section */
++
++/* Begin PBXGroup section */
++		D688888E204688D30042E2B3 = {
++			isa = PBXGroup;
++			children = (
++				D6DA363820468A05009AEF45 /* zlib */,
++				D6888898204688D30042E2B3 /* Products */,
++			);
++			sourceTree = "<group>";
++		};
++		D6888898204688D30042E2B3 /* Products */ = {
++			isa = PBXGroup;
++			children = (
++				D6888897204688D30042E2B3 /* libzlib.a */,
++			);
++			name = Products;
++			sourceTree = "<group>";
++		};
++		D6DA363820468A05009AEF45 /* zlib */ = {
++			isa = PBXGroup;
++			children = (
++				D6DA363B20468A05009AEF45 /* inflate.c */,
++				D6DA364820468A05009AEF45 /* deflate.c */,
++				D6DA372220468A05009AEF45 /* crc32.c */,
++				D6DA372520468A05009AEF45 /* zutil.c */,
++				D6DA374120468A05009AEF45 /* inftrees.c */,
++				D6DA374B20468A05009AEF45 /* trees.c */,
++				D6DA375820468A05009AEF45 /* inffast.c */,
++				D6DA375920468A05009AEF45 /* adler32.c */,
++			);
++			name = zlib;
++			path = ../../../zlib;
++			sourceTree = "<group>";
++		};
++/* End PBXGroup section */
++
++/* Begin PBXHeadersBuildPhase section */
++		D6888895204688D30042E2B3 /* Headers */ = {
++			isa = PBXHeadersBuildPhase;
++			buildActionMask = 2147483647;
++			files = (
++			);
++			runOnlyForDeploymentPostprocessing = 0;
++		};
++/* End PBXHeadersBuildPhase section */
++
++/* Begin PBXNativeTarget section */
++		D6888896204688D30042E2B3 /* zlib */ = {
++			isa = PBXNativeTarget;
++			buildConfigurationList = D688889B204688D30042E2B3 /* Build configuration list for PBXNativeTarget "zlib" */;
++			buildPhases = (
++				D6888893204688D30042E2B3 /* Sources */,
++				D6888894204688D30042E2B3 /* Frameworks */,
++				D6888895204688D30042E2B3 /* Headers */,
++			);
++			buildRules = (
++			);
++			dependencies = (
++			);
++			name = zlib;
++			productName = zlib;
++			productReference = D6888897204688D30042E2B3 /* libzlib.a */;
+
+----------------------------------------
+
+File: builds/xcode/zlib.xcodeproj/project.xcworkspace/contents.xcworkspacedata
+Status: added
+Changes: +7 -0
+Diff:
+@@ -0,0 +1,7 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<Workspace
++   version = "1.0">
++   <FileRef
++      location = "self:zlib.xcodeproj">
++   </FileRef>
++</Workspace>
+
+----------------------------------------
+
+File: builds/xcode_iOS_hpatchz/hpatchz.xcodeproj/project.pbxproj
+Status: modified
+Changes: +32 -6
+Diff:
+@@ -510,13 +510,19 @@
+ 				GCC_PREPROCESSOR_DEFINITIONS = (
+ 					"DEBUG=1",
+ 					Z7_ST,
+-					USE_CRC_EMU,
+ 					ZSTD_STATIC_LINKING_ONLY,
+ 					"ZSTD_HAVE_WEAK_SYMBOLS=0",
+ 					"ZSTD_TRACE=0",
+ 					"ZSTD_DISABLE_ASM=1",
+ 					"ZSTDLIB_VISIBLE=",
+ 					"ZSTDLIB_HIDDEN=",
++					"_IS_NEED_DEFAULT_CompressPlugin=0",
++					_CompressPlugin_zlib,
++					_CompressPlugin_bz2,
++					_CompressPlugin_lzma,
++					_CompressPluginlzma2,
++					_CompressPlugin_zstd,
++					_CompressPlugn_7zXZ,
+ 					"$(inherited)",
+ 				);
+ 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+@@ -584,13 +590,19 @@
+ 				GCC_PREPROCESSOR_DEFINITIONS = (
+ 					NDEBUG,
+ 					Z7_ST,
+-					USE_CRC_EMU,
+ 					ZSTD_STATIC_LINKING_ONLY,
+ 					"ZSTD_HAVE_WEAK_SYMBOLS=0",
+ 					"ZSTD_TRACE=0",
+ 					"ZSTD_DISABLE_ASM=1",
+
+----------------------------------------
+
+File: checksum_plugin_demo.h
+Status: modified
+Changes: +6 -3
+Diff:
+@@ -60,13 +60,16 @@
+ 
+ #ifdef  _ChecksumPlugin_crc32
+ #if (_IsNeedIncludeDefaultChecksumHead)
+-# ifdef _CompressPlugin_ldef
++# ifndef _IS_USED_LIBDEFLATE_CRC32
++#   define _IS_USED_LIBDEFLATE_CRC32    0
++#endif
++#if (_IS_USED_LIBDEFLATE_CRC32)
+ #   include "libdeflate.h" // https://github.com/ebiggers/libdeflate
+
+----------------------------------------
+
+File: compress_plugin_demo.h
+Status: modified
+Changes: +208 -42
+Diff:
+@@ -28,8 +28,10 @@
+ #ifndef HDiff_compress_plugin_demo_h
+ #define HDiff_compress_plugin_demo_h
+ //compress plugin demo:
+-//  zlibCompressPlugin
+-//  pzlibCompressPlugin
++//  zlibCompressPlugin      // zlib's deflate encoding
++//  pzlibCompressPlugin     // compatible with zlib's deflate encoding
++//  ldefCompressPlugin      // compatible with zlib's deflate encoding
++//  pldefCompressPlugin     // compatible with zlib's deflate encoding
+ //  bz2CompressPlugin
+ //  pbz2CompressPlugin
+ //  lzmaCompressPlugin
+@@ -41,8 +43,7 @@
+ //  lzhamCompressPlugin
+ //  tuzCompressPlugin
+ 
+-
+-// _7zXZCompressPlugin : support for create_vcdiff(), as "xdelta3 -S lzma ..."
++// _7zXZCompressPlugin : support for create_vcdiff(), compatible with "xdelta3 -S lzma ..."
+ 
+ #include "libHDiffPatch/HDiff/diff_types.h"
+ #include "compress_parallel.h"
+@@ -102,13 +103,13 @@ static const char*  _fun_name(void){            \
+     return kCompressType;                       \
+ }
+ 
+-hpatch_inline static
++static
+ hpatch_StreamPos_t _default_maxCompressedSize(hpatch_StreamPos_t dataSize){
+     hpatch_StreamPos_t result=dataSize+(dataSize>>3)+1024*2;
+     assert(result>dataSize);
+     return result;
+ }
+-hpatch_inline static
++static
+ int _default_setParallelThreadNumber(hdiff_TCompress* compressPlugin,int threadNum){
+     return 1;
+ }
+@@ -233,11 +234,11 @@ int _default_setParallelThreadNumber(hdiff_TCompress* compressPlugin,int threadN
+         data_buf=_temp_buf+sizeof(_zlib_TCompress)+kCompressBufSize;
+         if (!self) _compress_error_return("deflateInit2()");
+         if (plugin->isNeedSaveWindowBits){
+-            unsigned char* pchar=(unsigned char*)&plugin->windowBits;
++            const unsigned char* pchar=(const unsigned char*)&plugin->windowBits;
+             if (!out_code->write(out_code,0,pchar,pchar+1)) _compress_error_return("out_code->write()");
+             ++result;
+         }
+-        do {
++        while (readFromPos<in_data->streamSize){
+             size_t readLen=kCompressBufSize;
+             if (readLen>(hpatch_StreamPos_t)(in_data->streamSize-readFromPos))
+                 readLen=(size_t)(in_data->streamSize-readFromPos);
+@@ -247,7 +248,7 @@ int _default_setParallelThreadNumber(hdiff_TCompress* compressPlugin,int threadN
+             if (!_zlib_compress_part(self,data_buf,data_buf+readLen,
+                                      (readFromPos==in_data->streamSize),&result,&outStream_isCanceled))
+                 _compress_error_return("_zlib_compress_part()");
+-        } while (readFromPos<in_data->streamSize);
++        }
+     clear:
+         if (!_zlib_compress_close_by(compressPlugin,self))
+             { result=kCompressFailResult; if (strlen(errAt)==0) errAt="deflateEnd()"; }
+@@ -272,62 +273,73 @@ int _default_setParallelThreadNumber(hdiff_TCompress* compressPlugin,int threadN
+         plugin->thread_num=threadNum;
+         return threadNum;
+     }
+-    static hdiff_compressBlockHandle _pzlib_openBlockCompressor(hdiff_TParallelCompress* pc){
+-        return pc;
+-    }
+     static void _pzlib_closeBlockCompressor(hdiff_TParallelCompress* pc,
+                                             hdiff_compressBlockHandle blockCompressor){
+-        assert(blockCompressor==pc);
++        z_stream* stream=(z_stream*)blockCompressor;
++        if (!stream) return;
++        if (stream->state!=0){
++            int ret=deflateEnd(stream);
++            assert((Z_OK==ret)|(Z_DATA_ERROR==ret));
++        }
++        free(stream);
++    }
++    static hdiff_compressBlockHandle _pzlib_openBlockCompressor(hdiff_TParallelCompress* pc){
++        const TCompressPlugin_pzlib* plugin=(const TCompressPlugin_pzlib*)pc->import;
++        z_stream* stream=(z_stream*)malloc(sizeof(z_stream));
++        if (!stream) return 0;
++        memset(stream,0,sizeof(z_stream));
++        int err = deflateInit2(stream,plugin->base.compress_level,Z_DEFLATED,
++                               plugin->base.windowBits,plugin->base.mem_level,Z_DEFAULT_STRATEGY);
++        if (err!=Z_OK){//error
++            _pzlib_closeBlockCompressor(pc,stream);
++            return 0;
++        }
++        return stream;
+     }
+     static int _pzlib_compress2(Bytef* dest,uLongf* destLen,const unsigned char* block_data,
+                                 const unsigned char* block_dictEnd,const unsigned char* block_dataEnd,
+-                                int level,int mem_level,int windowBits,int isEndBlock){
+-        z_stream stream;
++                                int isEndBlock,z_stream* stream){
+         int err;
+-        stream.next_in   = (Bytef*)block_dictEnd;
+-        stream.avail_in  = (uInt)(block_dataEnd-block_dictEnd);
+-        stream.next_out  = dest;
+-        stream.avail_out = (uInt)*destLen;
+-        stream.zalloc = 0;
+-        stream.zfree  = 0;
+-        stream.opaque = 0;
+-        err = deflateInit2(&stream,level,Z_DEFLATED,windowBits,mem_level,Z_DEFAULT_STRATEGY);
+-        if (err != Z_OK) return err;
+         #define _check_zlib_err(_must_V) { if (err!=(_must_V)) goto _errorReturn; } 
++        err=deflateReset(stream);
++        _check_zlib_err(Z_OK);
++        stream->next_in   = (Bytef*)block_dictEnd;
++        stream->avail_in  = (uInt)(block_dataEnd-block_dictEnd);
++        stream->next_out  = dest;
++        stream->avail_out = (uInt)*destLen;
++        stream->total_out = 0;
+         if (block_data<block_dictEnd){
+-            err=deflateSetDictionary(&stream,(Bytef*)block_data,(uInt)(block_dictEnd-block_data));
++            err=deflateSetDictionary(stream,(Bytef*)block_data,(uInt)(block_dictEnd-block_data));
+             _check_zlib_err(Z_OK);
+         }
+
+----------------------------------------
+
+File: decompress_plugin_demo.h
+Status: modified
+Changes: +320 -19
+Diff:
+@@ -28,7 +28,8 @@
+ #ifndef HPatch_decompress_plugin_demo_h
+ #define HPatch_decompress_plugin_demo_h
+ //decompress plugin demo:
+-//  zlibDecompressPlugin;
++//  zlibDecompressPlugin;   // support all deflate encoding by zlib
++//  ldefDecompressPlugin;   // optimized deompress speed for deflate encoding
+ //  bz2DecompressPlugin;
+ //  lzmaDecompressPlugin;
+ //  lzma2DecompressPlugin;
+@@ -190,21 +191,21 @@ static void __dec_free(void* _, void* address){
+         return result;
+     }
+ 
+-    static hpatch_BOOL _zlib_reset_for_next_node(_zlib_TDecompress* self){
+-        //backup
+-        Bytef*   next_out_back=self->d_stream.next_out;
+-        Bytef*   next_in_back=self->d_stream.next_in;
+-        unsigned int avail_out_back=self->d_stream.avail_out;
+-        unsigned int avail_in_back=self->d_stream.avail_in;
+-        //reset
+-        if (Z_OK!=inflateReset(&self->d_stream)) _dec_onDecErr_rt();
+-        //restore
+-        self->d_stream.next_out=next_out_back;
+-        self->d_stream.next_in=next_in_back;
+-        self->d_stream.avail_out=avail_out_back;
+-        self->d_stream.avail_in=avail_in_back;
+-        return hpatch_TRUE;
+-    }
++        static hpatch_BOOL _zlib_reset_for_next_node(z_stream* d_stream){
++            //backup
++            Bytef*   next_out_back=d_stream->next_out;
++            Bytef*   next_in_back=d_stream->next_in;
++            unsigned int avail_out_back=d_stream->avail_out;
++            unsigned int avail_in_back=d_stream->avail_in;
++                //reset
++            if (Z_OK!=inflateReset(d_stream)) return hpatch_FALSE;
++                //restore
++            d_stream->next_out=next_out_back;
++            d_stream->next_in=next_in_back;
++            d_stream->avail_out=avail_out_back;
++            d_stream->avail_in=avail_in_back;
++            return hpatch_TRUE;
++        }
+     static hpatch_BOOL __zlib_do_inflate(hpatch_decompressHandle decompressHandle){
+         _zlib_TDecompress* self=(_zlib_TDecompress*)decompressHandle;
+         uInt avail_out_back,avail_in_back;
+@@ -229,8 +230,8 @@ static void __dec_free(void* _, void* address){
+                 _dec_onDecErr_rt();//error;
+         }else if (ret==Z_STREAM_END){
+             if (self->d_stream.avail_in+codeLen>0){ //next compress node!
+-                if (!_zlib_reset_for_next_node(self))
+-                    return hpatch_FALSE;//error;
++                if (!_zlib_reset_for_next_node(&self->d_stream))
++                    _dec_onDecErr_rt();//error;
+             }else{//all end
+                 if (self->d_stream.avail_out!=0)
+                     _dec_onDecErr_rt();//error;
+@@ -257,7 +258,7 @@ static void __dec_free(void* _, void* address){
+                                                         hpatch_decompressHandle decompressHandle){
+         _zlib_TDecompress* self=(_zlib_TDecompress*)decompressHandle;
+         while (self->code_begin!=self->code_end){ //for end tag code
+-            unsigned char _empty;
++            unsigned char _empty=0;
+             self->d_stream.next_out = &_empty;
+             self->d_stream.avail_out=0;
+             if (!__zlib_do_inflate(self))
+@@ -272,7 +273,307 @@ static void __dec_free(void* _, void* address){
+     static hpatch_TDecompress zlibDecompressPlugin_deflate={_zlib_is_can_open,_zlib_decompress_open_deflate,
+                                                     _zlib_decompress_close,_zlib_decompress_part};
+ #endif//_CompressPlugin_zlib
++
++
++#ifdef  _CompressPlugin_ldef
++#if (_IsNeedIncludeDefaultCompressHead)
++#   include "libdeflate.h" // https://github.com/sisong/libdeflate/tree/stream-mt based on https://github.com/ebiggers/libdeflate
++#   if (_CompressPlugin_ldef_is_use_zlib)
++#       include "zlib.h" // https://github.com/sisong/zlib/tree/bit_pos_padding based on https://github.com/madler/zlib
++#   endif
++#endif
++    static const size_t _de_ldef_kDictSize = 1024*32;
++    static const size_t _de_ldef_kMaxBlockSize =1024*32*19; 
++    // used _de_ldef_kMaxBlockSize*2 memory; optimized speed for
++    //   libdefalte & zlib's deflate code ..., when theirs input deflate code compress block size<=_de_ldef_kMaxBlockSize/2;
++    // if (_de_ldef_kMaxBlockSize>=compress block size>_de_ldef_kMaxBlockSize/2) speed will little slower;
++    // if (compress block size>_de_ldef_kMaxBlockSize) && if (_CompressPlugin_ldef_is_use_zlib!=0),
++    //   then swap to zlib decompressor & very slower (slower than zlib); && if (_CompressPlugin_ldef_is_use_zlib==0) will decompress fail. 
++ 
++    typedef struct _ldef_TDecompress{
++        hpatch_StreamPos_t code_begin;
++        hpatch_StreamPos_t code_end;
++        const struct hpatch_TStreamInput* codeStream;
++        
++        unsigned char*  data_buf;
++        size_t          data_buf_size;
++        unsigned char*  code_buf;
++        size_t          code_buf_size;
++        struct libdeflate_decompressor* d;
++        hpatch_dec_error_t  decError;
++
++        size_t      data_cur;
++        size_t      out_cur;
++        size_t      code_cur;
++    #if (_CompressPlugin_ldef_is_use_zlib)
++        hpatch_BOOL is_swap_to_zlib;
++        z_stream    d_stream;
++    #endif
++    } _ldef_TDecompress;
++
++  #if (_CompressPlugin_ldef_is_use_zlib)
++    static hpatch_inline hpatch_BOOL _ldef_is_swap_to_zlib(_ldef_TDecompress* self){
++        return self->is_swap_to_zlib;
++    }
++        static hpatch_BOOL _ldef_decompress_part(hpatch_decompressHandle decompressHandle,
++                                                 unsigned char* out_part_data,unsigned char* out_part_data_end);
++    static hpatch_BOOL _ldef_swap_from_zlib(_ldef_TDecompress* self){
++        const size_t out_part_len=self->d_stream.avail_out;
++        self->is_swap_to_zlib=hpatch_FALSE;
++        libdeflate_deflate_decompress_block_reset(self->d);
++        {
++            unsigned long shift_v;
++            unsigned int shift_bit;
++            zlib_inflate_shift_value(&self->d_stream,&shift_v,&shift_bit);
++            if (shift_bit>>3) _dec_onDecErr_rt();
++            libdeflate_deflate_decompress_set_state(self->d,(shift_v<<3)|shift_bit);
+
+----------------------------------------
+
+File: hdiffz.cpp
+Status: modified
+Changes: +69 -27
+Diff:
+@@ -66,21 +66,31 @@
+ #if (_IS_NEED_DEFAULT_CompressPlugin)
+ //===== select needs decompress plugins or change to your plugin=====
+ #   define _CompressPlugin_zlib  // memory requires less
++#   define _CompressPlugin_ldef  // faster or better compress than zlib / (now used ldef+zlib decompressor)
+ #   define _CompressPlugin_bz2
+ #   define _CompressPlugin_lzma  // better compresser
+ #   define _CompressPlugin_lzma2 // better compresser
+-#   define _CompressPlugin_zstd  // better compresser / faster decompresser
++#   define _CompressPlugin_zstd  // better compresser / faster decompressor
+ #if (_IS_NEED_VCDIFF)
+-#   define _CompressPlugin_7zXZ  //only for VCDIFF
++#   define _CompressPlugin_7zXZ  //only for VCDIFF, used lzma2
+ #endif
++
+ #endif
+ #if (_IS_NEED_ALL_CompressPlugin)
+ //===== select needs decompress plugins or change to your plugin=====
+-#   define _CompressPlugin_lz4   // faster compresser / faster decompresser
+-#   define _CompressPlugin_lz4hc // faster decompresser
+-#   define _CompressPlugin_brotli// better compresser / faster decompresser
++#   define _CompressPlugin_lz4   // faster compresser / faster decompressor
++#   define _CompressPlugin_lz4hc // compress slower & better than lz4 / (used lz4 decompressor) 
++#   define _CompressPlugin_brotli// better compresser / faster decompressor
+ #   define _CompressPlugin_lzham // better compresser / decompress faster than lzma2
+-#   define _CompressPlugin_tuz   // decompress requires tiny code(.text) & ram
++#   define _CompressPlugin_tuz   // slower compresser / decompress requires tiny code(.text) & ram
++#endif
++#ifdef _CompressPlugin_ldef
++#   ifndef _CompressPlugin_ldef_is_use_zlib
++#       define _CompressPlugin_ldef_is_use_zlib         1 //now ldef need zlib decompressor for any all of deflate code
++#   endif
++#   ifndef _IS_NEED_decompressor_ldef_replace_zlib
++#       define _IS_NEED_decompressor_ldef_replace_zlib  0 
++#   endif
+ #endif
+ 
+ #if (_IS_NEED_BSDIFF)
+@@ -184,7 +194,7 @@ static void printUsage(){
+ #if (_IS_NEED_BSDIFF)
+            "  -BSD\n"
+            "      create diffFile compatible with bsdiff4, unsupport input directory(folder).\n"
+-           "      support run with -SD (not used stepSize), then create single compressed\n"
++           "      also support run with -SD (not used stepSize), then create single compressed\n"
+            "      diffFile compatible with endsley/bsdiff (https://github.com/mendsley/bsdiff).\n"
+ #endif
+ #if (_IS_NEED_VCDIFF)
+@@ -227,13 +237,20 @@ static void printUsage(){
+            "            support run by multi-thread parallel, fast!\n"
+ #   endif
+ #endif
++#ifdef _CompressPlugin_ldef
++           "        -c-ldef[-{1..12}]               DEFAULT level 12\n"
++           "            compatible with -c-zlib, faster or better compress than zlib;\n"
++           "            used libdeflate compressor, & dictBits always 15.\n"
++#   if (_IS_USED_MULTITHREAD)
++           "            support run by multi-thread parallel, fast!\n"
++#   endif
++#endif
+ #ifdef _CompressPlugin_bz2
+            "        -c-bzip2[-{1..9}]               (or -bz2) DEFAULT level 9\n"
+ #   if (_IS_USED_MULTITHREAD)
+            "        -c-pbzip2[-{1..9}]              (or -pbz2) DEFAULT level 8\n"
+            "            support run by multi-thread parallel, fast!\n"
+            "            NOTE: code not compatible with it compressed by -c-bzip2!\n"
+-           "               and code size may be larger than if it compressed by -c-bzip2.\n"
+ #   endif
+ #endif
+ #ifdef _CompressPlugin_lzma
+@@ -503,8 +520,12 @@ static hpatch_BOOL _getIsVcDiffFile(const char* diffFileName) {
+ #define _try_rt_dec(dec) { if (dec.is_can_open(compressType)) return &dec; }
+ 
+ static hpatch_TDecompress* __find_decompressPlugin(const char* compressType){
+-#ifdef  _CompressPlugin_zlib
+
+----------------------------------------
+
+File: hpatchz.c
+Status: modified
+Changes: +21 -2
+Diff:
+@@ -78,7 +78,14 @@
+ #endif
+ #if (_IS_NEED_DEFAULT_CompressPlugin)
+ //===== select needs decompress plugins or change to your plugin=====
+-#   define _CompressPlugin_zlib
++#   ifndef _IS_NEED_decompressor_ldef_replace_zlib
++#       define _IS_NEED_decompressor_ldef_replace_zlib  0 
++#   endif
++#   if (_IS_NEED_decompressor_ldef_replace_zlib)
++#       define _CompressPlugin_ldef  //optimized zlib&ldef's deflate code decompress speed by libdeflate
++#   else
++#       define _CompressPlugin_zlib
++#   endif
+ #   define _CompressPlugin_bz2
+ #   define _CompressPlugin_lzma
+
+----------------------------------------
+
+File: libHDiffPatch/HDiff/diff_types.h
+Status: modified
+Changes: +1 -0
+Diff:
+@@ -103,6 +103,7 @@ extern "C"
+         hpatch_StreamPos_t          (*compress)(const struct hdiff_TCompress* compressPlugin,
+                                                 const hpatch_TStreamOutput*   out_code,
+                                                 const hpatch_TStreamInput*    in_data);
++        const char*        (*compressTypeForDisplay)(void);//like compressType but just for display,can NULL
+     } hdiff_TCompress;
+     
+     static hpatch_inline
+
+----------------------------------------
+
+File: libHDiffPatch/HPatch/patch.c
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -1626,7 +1626,7 @@ static hpatch_BOOL _cache_old_load(const hpatch_TStreamInput*oldData,
+                                    _TArrayCovers* arrayCovers,hpatch_size_t maxCachedLen,hpatch_size_t sumCacheLen,
+                                    TByte* old_cache,TByte* old_cache_end,TByte* cache_buf_end){
+     const hpatch_size_t kMinSpaceLen   =(1<<(20+2));//跳过seekTime*speed长度的空间(SSD可以更小)时间上划得来,否则就顺序访问;
+-    const hpatch_size_t kAccessPageSize=(1<<(10+2));//页面对齐访问;
++    const hpatch_size_t kAccessPageSize=4096;//磁盘页面对齐访问(只和速度有关，但影响不大);
+     hpatch_BOOL result=hpatch_TRUE;
+     hpatch_size_t cur_i=0,i;
+     const hpatch_size_t coverCount=arrayCovers->coverCount;
+
+----------------------------------------
+
+File: libHDiffPatch/HPatch/patch_types.h
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -37,7 +37,7 @@ extern "C" {
+ #endif
+ 
+ #define HDIFFPATCH_VERSION_MAJOR    4
+-#define HDIFFPATCH_VERSION_MINOR    7
++#define HDIFFPATCH_VERSION_MINOR    8
+ #define HDIFFPATCH_VERSION_RELEASE  0
+ 
+ #define _HDIFFPATCH_VERSION          HDIFFPATCH_VERSION_MAJOR.HDIFFPATCH_VERSION_MINOR.HDIFFPATCH_VERSION_RELEASE
+
+----------------------------------------
+
+File: test/unit_test.cpp
+Status: modified
+Changes: +8 -2
+Diff:
+@@ -151,8 +151,14 @@ static hsync_TDictCompress* _getDictCompressPlugin(){
+ #endif
+ }
+ 
+-#define _IS_USES_MY_RAND
+-#ifdef _IS_USES_MY_RAND
++#ifndef _IS_USES_MY_RAND
++#  define _IS_USES_MY_RAND 1
++#endif
++#if (_IS_USES_MY_RAND)
+
+----------------------------------------
+

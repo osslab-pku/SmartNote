@@ -1,0 +1,8 @@
+SmartDraft Command:
+pixi run ipython --pdb -m smartdraft.generator -- questdb/questdb --previous-release 8.0.3 --current-release 8.1.0 --project-domain System --min-significance 0.1 --writing-style "Automatic" --structure-type "Change Type" --group-commits --show-significance
+
+DeepRelease Command:
+docker run -it -v $(pwd):/outputs --env GITHUB_TOKEN=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 --network host --rm fgksgf/deeprelease run questdb/questdb --since 202407170000 --until 202407242359 --save_dir=/outputs/questdb
+
+ConventionalChangelog Command:
+cd ../.cache/repo/questdb_questdb && git checkout 8.1.0 && conventional-changelog -p angular -r 2 && git checkout -

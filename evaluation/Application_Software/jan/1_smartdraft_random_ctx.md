@@ -1,0 +1,4 @@
+# v0.5.2
+## 🐛 fix
+- Release 0.5.2 includes significant updates and improvements. The model dropdown search now prioritizes downloaded models and filters based on configured models. A new spell check configuration for chat input allows toggling spell checking on or off. The Claude 3.5 Sonnet model offers superior performance. Improved path validation, better handling of long thread titles, and added tooltip messages to toolbar icons enhance user guidance. A toggle button expands the log section in the troubleshooting modal for better readability. [#3158](https://github.com/janhq/jan/pull/3158)
+- The update fixes handling of long words and thread titles without spaces, ensures the right panel remains visible, and corrects search bar autofocus. It adds right-click settings on thread items, improves error handling for missing API keys, and resolves various linting issues. [#3160](https://github.com/janhq/jan/pull/3160)

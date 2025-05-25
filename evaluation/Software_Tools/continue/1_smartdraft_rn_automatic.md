@@ -1,0 +1,22 @@
+# v0.8.45-vscode
+## ✨ feat
+- Support for Llama 3.1 and gpt-4o-mini models, improved indexing performance, and enhanced codebase quality with more accurate file name and path searches. [#1750](https://github.com/continuedev/continue/pull/1750) <span style='color:grey;'>(significance=0.34)</span>
+- Enhanced onboarding with an embeddings model, new model styling, and a toast notification for configuration updates. Added a free trial card to onboarding and a blinking dot to the IndexingProgressBar. Includes small fixes and UI tweaks, such as better gap sizes and corrected pull commands for the embed model. [#1931](https://github.com/continuedev/continue/pull/1931) <span style='color:grey;'>(significance=0.25)</span>
+- Updated documentation links to reflect the new structure. Added a guide for using Llama 3.1 with Continue. [#1812](https://github.com/continuedev/continue/pull/1812) <span style='color:grey;'>(significance=0.15)</span>
+
+## 🐛 fix
+- Enhanced context rendering, cached imports for autocomplete, and added toast notification for configuration updates. Updated onboarding with an embeddings model, improved UI styling, and added a free trial card. Fixed context retention in fullscreen mode and supported Node.js versions below 20 for streaming response handling. [#1930](https://github.com/continuedev/continue/pull/1930) <span style='color:grey;'>(significance=0.16)</span>
+
+## 🔧 chore
+- Support for Llama 3.1, gpt-4o-mini, and WatsonX+Granite models added. Significant improvements to indexing performance, codebase quality, and accuracy. Enhanced docs indexing and management. Fixed Gemini embeddings provider issue. [5309067](https://github.com/continuedev/continue/commit/5309067ac0e55ac1f464c1b24b8facf2d06896bd) <span style='color:grey;'>(significance=0.21)</span>
+- Added support for .prompt files and a new onboarding experience. Improved indexing reliability, testing, and fixed autocomplete text positioning and timing. [823dcd6](https://github.com/continuedev/continue/commit/823dcd6e66180ed74039d335980a8bc253239606) <span style='color:grey;'>(significance=0.20)</span>
+- Enhancements and fixes include improvements to the onboarding process, user interface tweaks, new features like toast notifications for configuration updates, and enhanced indexing progress reporting. Addresses bugs with context retention in fullscreen mode and GUI rendering problems. Introduces new documentation and schema for the "OS" provider, and updates the contributing guidelines and branch policy. [#1934](https://github.com/continuedev/continue/pull/1934) <span style='color:grey;'>(significance=0.20)</span>
+- Added partial autocomplete acceptance and an autocomplete status bar spinner. Fixed a bug causing duplicate completions. [2eafdff](https://github.com/continuedev/continue/commit/2eafdff54b1a77c6d403fa26a64c6793d7a4dfb9) <span style='color:grey;'>(significance=0.13)</span>
+- Commented out steps related to running tests for the extension on different operating systems in the CI configuration. [e2f7380](https://github.com/continuedev/continue/commit/e2f7380ee86a8e3483e3f5de5bba708565cde164) <span style='color:grey;'>(significance=0.16)</span>
+- Updated the version in the package.json file. [029dc5a](https://github.com/continuedev/continue/commit/029dc5aceac1df7cbde5f955f693a86c647eab61) <span style='color:grey;'>(significance=0.16)</span>
+- Modified the CI configuration and adjusted the session expiration logic in the WorkOsAuthProvider class. [9bf3fac](https://github.com/continuedev/continue/commit/9bf3facee0f722ea082054698f8d74fa4c5168ad) <span style='color:grey;'>(significance=0.15)</span>
+
+## 📚 docs
+- The recommended models now include the latest versions of DeepSeek Coder, referred to as DeepSeek Coder v2. [7b99524](https://github.com/continuedev/continue/commit/7b99524d16999af78a00b198724d3beb45334ff1) <span style='color:grey;'>(significance=0.23)</span>
+- Added a link to the Autocomplete (beta) page in the Features section of the documentation. [#1879](https://github.com/continuedev/continue/pull/1879) <span style='color:grey;'>(significance=0.21)</span>
+- Updated the copyright year in the extension READMEs. [#1856](https://github.com/continuedev/continue/pull/1856) <span style='color:grey;'>(significance=0.14)</span>

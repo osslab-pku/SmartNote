@@ -1,0 +1,8 @@
+SmartDraft Command:
+pixi run ipython --pdb -m smartdraft.generator -- stakater/Reloader --previous-release v1.0.120 --current-release v1.0.121 --project-domain Tool --min-significance 0.1 --writing-style "Automatic" --structure-type "Change Type" --group-commits --show-significance
+
+DeepRelease Command:
+docker run -it -v $(pwd):/outputs --env GITHUB_TOKEN=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 --network host --rm fgksgf/deeprelease run stakater/Reloader --since 202408070000 --until 202408072359 --save_dir=/outputs/reloader
+
+ConventionalChangelog Command:
+cd ../.cache/repo/stakater_Reloader && git checkout v1.0.121 && conventional-changelog -p angular -r 2 && git checkout -

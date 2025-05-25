@@ -1,0 +1,1437 @@
+Changes between 6.3.2 and 6.3.4
+================================================================================
+
+COMMITS
+--------------------------------------------------------------------------------
+
+Commit: cdf13094135728314d73ce41e0be5086588afce8
+Author: Sergey Nikolaev
+Date: 2024-06-26 11:58:38+00:00
+Message: manual: updated Changelog
+----------------------------------------
+
+Commit: 2fc2e9b8f7685e7f9371008b31a3da3d819e78e5
+Author: Sergey Nikolaev
+Date: 2024-06-26 14:01:40+00:00
+Message: executor 1.1.6 in deps.txt
+----------------------------------------
+
+Commit: d02b0fda3927f06fc696e5736f8d63395c0a164c
+Author: Sergey Nikolaev
+Date: 2024-06-27 04:37:47+00:00
+Message: manual: improve cutoff section by adding info about how it works with aggregations
+----------------------------------------
+
+Commit: 24d77c8706c6b1cd76575e530e17c602816360ab
+Author: Ilya Kuznetsov
+Date: 2024-06-27 14:45:53+00:00
+Message: fixed join filter on columnar attributes from right table when attribute is not in the select list
+----------------------------------------
+
+Commit: 662e8e3a59ad2c21ae50bef7d09069fc67eea945
+Author: Ilya Kuznetsov
+Date: 2024-06-28 08:11:33+00:00
+Message: fixed left join returning non-matching entries when match() over right table is used
+----------------------------------------
+
+Commit: 24e69f735f95705e22b3a704e0f5a6ac68699aa4
+Author: Stas Klinov
+Date: 2024-06-28 07:59:25+00:00
+Message: fixed crash on mva min or max for empty mva array; fixed #2332; added regression to test 119
+----------------------------------------
+
+Commit: 5cf62e2fd44cc11d89d9891192a8e7cfe80ffb4c
+Author: Stas Klinov
+Date: 2024-07-07 06:52:51+00:00
+Message: fixed range aggregation result set for infinite range case; fixed #2339; added case to test 466
+----------------------------------------
+
+Commit: 76aeb4d196ece8da427d66ff2e832141810ca05b
+Author: Stas Klinov
+Date: 2024-07-02 10:26:37+00:00
+Message: fixed xxhash build on visual studio and gcc; fixed #2343
+----------------------------------------
+
+Commit: 92aab9914b7597dfe027345a6dacda7716cdd9ba
+Author: Ilya Kuznetsov
+Date: 2024-06-21 09:20:45+00:00
+Message: fixed calculation of presort/prefilter expressions that depend on joined attributes
+----------------------------------------
+
+Commit: 122150f92ab14278e639791c053c052734fa3e71
+Author: Stas Klinov
+Date: 2024-07-09 10:56:09+00:00
+Message: fixed save of disk chunk at RT index with hitless_words; added case to test 408; fixed #2350
+----------------------------------------
+
+Commit: e7d72c8afa650a942ccead4c90accc1008fcb358
+Author: Stas Klinov
+Date: 2024-06-06 13:23:00+00:00
+Message: disabled local_df calculation for all wildcard terms in the query; fixed performance for full text queries with wildcards and RT index with multiple disk chunks; fixed #2280
+----------------------------------------
+
+Commit: f55d215245cdd79130d6940006b3974018597079
+Author: Stas Klinov
+Date: 2024-07-03 12:27:25+00:00
+Message: fixed sort property depends on the properties order at the aggs node; added cases to test 334; fixed #2364
+----------------------------------------
+
+Commit: bff5ebd26c61f8ce6389157c3a6f0dcea268a821
+Author: Stas Klinov
+Date: 2024-07-07 15:45:00+00:00
+Message: fixed error on full-text vs filter order at the JSON query; added case to test 334; fixed #2368
+----------------------------------------
+
+Commit: 30b318f84b63436f30f5c26d9c35a6abc7ef6b8e
+Author: snikolaev
+Date: 2024-07-12 11:50:10+00:00
+Message: updated deps
+----------------------------------------
+
+Commit: 69b8eaf68820ed67d2eb8b434e5d9fabff0be0f9
+Author: Don Hardman
+Date: 2024-06-04 10:23:44+00:00
+Message: CI improvements in building test kit and auto tag feature/tag for test-kit (#2271)
+
+* Tag docker test kit with tag and branch in case we have it
+
+* Detect dev suffix for building test kit and refactor it to be easier to read
+
+* Fix issue with proper branch/tag detection on the stage we push docker image for test-kit
+
+* Fix issue in tag fetching
+
+* Try to fix tag detection
+
+* Fix issue with incorrect tags we used in docker push script
+
+* Change current_branch detection to work both in pull request and in the original branch
+----------------------------------------
+
+Commit: c8af6d10b5e9c80a12ffb83dff82abc79e883a00
+Author: snikolaev
+Date: 2024-07-16 06:35:21+00:00
+Message: bumped version to 6.3.4
+----------------------------------------
+
+Commit: 7e7c5d9ed7ad66611d1c9f690bc2d32ff73fb5d0
+Author: snikolaev
+Date: 2024-07-16 06:40:58+00:00
+Message: Copied a few clt tests from the master branch to pass CI
+----------------------------------------
+
+Commit: e748c12b34857fb2f3dc24e617db87b9ac24e3e2
+Author: Sergey Nikolaev
+Date: 2024-07-18 06:44:59+00:00
+Message: improve in test_kit_docker_build.sh: look for non-dev packages in release_candidate
+----------------------------------------
+
+Commit: d5fcd380aeaf128ec0842a722416ba35b0b28aa5
+Author: Sergey Nikolaev
+Date: 2024-07-18 11:39:23+00:00
+Message: updated deps.txt
+----------------------------------------
+
+Commit: 74e48b9e84287810795c3171f94de7e3a08b63ae
+Author: Sergey Nikolaev
+Date: 2024-05-29 07:17:50+00:00
+Message: manual: added info about integration with DBeaver (#2205)
+
+* Added info about integration with DBeaver
+
+* Apply suggestions from code review
+
+* manual: fixed a broken link
+
+* Updated documentation for Dbeaver
+
+---------
+
+Co-authored-by: nick <nick@manticoresearch.com>
+----------------------------------------
+
+Commit: ad4574cf7bddeefde9cec6d7a506e468fca345ed
+Author: snikolaev
+Date: 2024-07-31 03:02:56+00:00
+Message: manual: 6.3.4 changelog
+----------------------------------------
+
+Commit: c78f758a6bc240959c0bd7fc42644bb1d40d4b31
+Author: snikolaev
+Date: 2024-07-31 03:35:47+00:00
+Message: updated latest_release_version to 6.3.4
+----------------------------------------
+
+
+PULL REQUESTS
+--------------------------------------------------------------------------------
+
+PR #2455: Update Low-level_tokenization.md
+Author: ArtemBro
+Merged at: 2024-07-30 10:59:41+00:00
+URL: https://github.com/manticoresoftware/manticoresearch/pull/2455
+Description:
+blend_mode
+.dog. example - missed dot
+
+----------------------------------------
+
+PR #2456: Binlog fixes
+Author: klirichek
+Merged at: 2024-07-30 11:02:24+00:00
+URL: https://github.com/manticoresoftware/manticoresearch/pull/2456
+Description:
+#2429, #2430
+
+
+----------------------------------------
+
+PR #2316: removed fake nested aggs support in HTTP search endpoint
+Author: sanikolaev
+Merged at: 2024-06-26 15:37:41+00:00
+URL: https://github.com/manticoresoftware/manticoresearch/pull/2316
+Description:
+Related issue https://github.com/manticoresoftware/manticoresearch/issues/2306
+
+This PR is to just build the packages so far.
+----------------------------------------
+
+PR #2359: fixed rename of the external files on alter and create table
+Author: tomatolog
+Merged at: 2024-07-06 13:01:06+00:00
+URL: https://github.com/manticoresoftware/manticoresearch/pull/2359
+Description:
+None
+----------------------------------------
+
+PR #2434: set new default for max_packet_size to 128Mb
+Author: tomatolog
+Merged at: 2024-07-24 11:49:54+00:00
+URL: https://github.com/manticoresoftware/manticoresearch/pull/2434
+Description:
+to make sure all CI tests passed well
+----------------------------------------
+
+PR #2443: fixed xxhash build on gcc
+Author: tomatolog
+Merged at: 2024-07-24 10:28:02+00:00
+URL: https://github.com/manticoresoftware/manticoresearch/pull/2443
+Description:
+to test build at all CI actions
+----------------------------------------
+
+PR #2459: Win zlib
+Author: tomatolog
+Merged at: 2024-07-30 08:20:24+00:00
+URL: https://github.com/manticoresoftware/manticoresearch/pull/2459
+Description:
+to test Github CI build and test
+----------------------------------------
+
+PR #2450: 🆕 Update mcl version
+Author: githubmanticore
+Merged at: 2024-07-29 14:18:14+00:00
+URL: https://github.com/manticoresoftware/manticoresearch/pull/2450
+Description:
+Update [mcl](https://github.com/manticoresoftware/columnar) version to: 2.3.1 24072718 eb62283 which includes:
+
+[`eb62283`](https://github.com/manticoresoftware/columnar/commit/eb6228357fcffd698e5de2b381c62eb3720b0078) updated manticore commit hash
+[`b707d5b`](https://github.com/manticoresoftware/columnar/commit/b707d5b0eec0383cdae12730d36eb8a25bc26ce2) added native exclude filter handling via bitmaps
+[`3fb88e6`](https://github.com/manticoresoftware/columnar/commit/3fb88e65fa6575a40d80cbf96b45ad3383b39c46) fixed fullscan (NOTNULL) filters on strings
+[`020c82e`](https://github.com/manticoresoftware/columnar/commit/020c82ede0903f898a685cae0b5d8fcb19027771) fixed handling of exclude filters on table encoding in columnar accessor
+[`e7fc892`](https://github.com/manticoresoftware/columnar/commit/e7fc8926c6551a38e8b93ac62d34b96ddcd788bb) updated manticore commit hash to commit without gzip ubertest in the columnar and secondary
+[`70c710e`](https://github.com/manticoresoftware/columnar/commit/70c710e044e33bdb1dc2d9c129a4166ee3c8ab6b) updated manticore commit hash to commit without gzip ubertest in the columnar repository
+[`126d768`](https://github.com/manticoresoftware/columnar/commit/126d7685cdda542572e5ecc5ff5ff67b429303a5) updated manticore commit hash to regenerate win build cache with zlib
+
+----------------------------------------
+
+PR #2457: 🆕 Update buddy version
+Author: githubmanticore
+Merged at: 2024-07-29 09:28:34+00:00
+URL: https://github.com/manticoresoftware/manticoresearch/pull/2457
+Description:
+Update [buddy](https://github.com/manticoresoftware/manticoresearch-buddy) version to: 2.3.13 24072908 4dfa0fc which includes:
+
+[`4dfa0fc`](https://github.com/manticoresoftware/manticoresearch-buddy/commit/4dfa0fc2d504f4cb7c050e5f211f2bdc1a82e71f) Fix issue with expanding keywords when we return empty array and improve regex for parsing options in CALL AUTOCOMPLETE to make it just right
+[`8b2ee45`](https://github.com/manticoresoftware/manticoresearch-buddy/commit/8b2ee455fa5a5973f45408db4662a1a7a64194e5) Add more logging for expanding keywords and fix some issues with fuzziness
+[`8dbf98d`](https://github.com/manticoresoftware/manticoresearch-buddy/commit/8dbf98d640c2f1ad6c24af2f88502c4538382e10) Implement various fixes after we found while testing and improvements in logic
+
+----------------------------------------
+
+PR #2453: Fixed misc JSON SI related issues
+Author: glookka
+Merged at: 2024-07-27 18:12:18+00:00
+URL: https://github.com/manticoresoftware/manticoresearch/pull/2453
+Description:
+Fixed misc JSON SI related issues
+----------------------------------------
+
+PR #2451: Changing supported versions
+Author: PavelShilin89
+Merged at: 2024-07-26 16:31:29+00:00
+URL: https://github.com/manticoresoftware/manticoresearch/pull/2451
+Description:
+Slight change in supported versions in the mysqldump supported versions test
+----------------------------------------
+
+PR #2445: 🆕 Update buddy version
+Author: githubmanticore
+Merged at: 2024-07-25 04:14:02+00:00
+URL: https://github.com/manticoresoftware/manticoresearch/pull/2445
+Description:
+Update [buddy](https://github.com/manticoresoftware/manticoresearch-buddy) version to: 2.3.13 24072503 92187fb which includes:
+
+[`92187fb`](https://github.com/manticoresoftware/manticoresearch-buddy/commit/92187fbed678a5d633eb1b13ca50fdba736f397c) Use expansion_len in favor of delta_len we have instead of expansion_limit in autocomplete to avoid confusion
+
+----------------------------------------
+
+PR #2440: added support for content-encoding:gzip for all HTTP requests
+Author: tomatolog
+Merged at: 2024-07-23 13:33:14+00:00
+URL: https://github.com/manticoresoftware/manticoresearch/pull/2440
+Description:
+to check test 339 will pass everywhere or gzip cases should be moved into separate case 
+----------------------------------------
+
+PR #2428: Test/create table like existing table with data
+Author: PavelShilin89
+Merged at: 2024-07-22 21:15:40+00:00
+URL: https://github.com/manticoresoftware/manticoresearch/pull/2428
+Description:
+**Type of Change**
+New feature
+
+**Description of the Change:**
+Created - test for checking `CREATE TABLE new_table LIKE existing_table`. Tested for correct copying of external files (wordforms, stopwords, exceptions).
+
+**Related Issue:**
+https://github.com/manticoresoftware/manticoresearch/issues/1788
+
+----------------------------------------
+
+PR #2421: 🆕 Update buddy version
+Author: githubmanticore
+Merged at: 2024-07-19 04:02:03+00:00
+URL: https://github.com/manticoresoftware/manticoresearch/pull/2421
+Description:
+Update [buddy](https://github.com/manticoresoftware/manticoresearch-buddy) version to: 2.3.13 24071902 f3d1591 which includes:
+
+[`f3d1591`](https://github.com/manticoresoftware/manticoresearch-buddy/commit/f3d159143c6aa9084f8140a3d49ee09c8671b78b) Update Table.php
+[`5e54154`](https://github.com/manticoresoftware/manticoresearch-buddy/commit/5e5415448037cb2a2567cec6682597347c698ead) Revert it after fix: do not escape table names on alter cluster query
+[`b7a9cb6`](https://github.com/manticoresoftware/manticoresearch-buddy/commit/b7a9cb65a41c7664e22b10e196ac15dd17b45568) Rewrite the sharding logic to make alter cluster add grouping with multiple tables in one shot
+[`bbaff9d`](https://github.com/manticoresoftware/manticoresearch-buddy/commit/bbaff9d16eb4e5e64337067ea9e5ed966d9380ce) Fuzzy relevance improvements (#316)
+[`a8b279a`](https://github.com/manticoresoftware/manticoresearch-buddy/commit/a8b279af559ce10f4114a53346c11138480f22bb) Fix: check that we have data in state table while initializing sharding
+[`2e342ae`](https://github.com/manticoresoftware/manticoresearch-buddy/commit/2e342aed2306970264d90d31ef63af10f0e6b388) Fixed a couple of mistypes (#320)
+
+----------------------------------------
+
+PR #2433: fixed allocation of the max_packet_size buffer for the initial socket probe
+Author: tomatolog
+Merged at: 2024-07-18 15:56:55+00:00
+URL: https://github.com/manticoresoftware/manticoresearch/pull/2433
+Description:
+test of all stages of the CI
+----------------------------------------
+
+PR #2424: manticore_new_cluster broken (PR)
+Author: manticoresearch
+Merged at: 2024-07-17 11:21:58+00:00
+URL: https://github.com/manticoresoftware/manticoresearch/pull/2424
+Description:
+Related issue https://github.com/manticoresoftware/manticoresearch/issues/2423
+----------------------------------------
+
+PR #2416: Fixed knn queries vs distributed tables
+Author: glookka
+Merged at: 2024-07-14 13:07:26+00:00
+URL: https://github.com/manticoresoftware/manticoresearch/pull/2416
+Description:
+Fixed knn queries vs distributed tables
+----------------------------------------
+
+PR #2413: Fixed total_relation vs multiquery with cutoff
+Author: glookka
+Merged at: 2024-07-14 11:35:12+00:00
+URL: https://github.com/manticoresoftware/manticoresearch/pull/2413
+Description:
+Fixed total_relation vs multiquery with cutoff
+----------------------------------------
+
+PR #2412: Fixed SHOW CREATE TABLE vs SI; fixed SI filter transforms when SI is unavailable
+Author: glookka
+Merged at: 2024-07-13 11:35:44+00:00
+URL: https://github.com/manticoresoftware/manticoresearch/pull/2412
+Description:
+Fixed SHOW CREATE TABLE vs SI; fixed SI filter transforms when SI is unavailable
+----------------------------------------
+
+PR #2409: 🆕 Update buddy version
+Author: githubmanticore
+Merged at: 2024-07-11 20:31:04+00:00
+URL: https://github.com/manticoresoftware/manticoresearch/pull/2409
+Description:
+Update [buddy](https://github.com/manticoresoftware/manticoresearch-buddy) version to: 2.3.13 24071113 280df64 which includes:
+
+[`280df64`](https://github.com/manticoresoftware/manticoresearch-buddy/commit/280df6454d6e9c5b4c10e631726af5d1bd7a9952) Fix/queues fixes (#319)
+
+----------------------------------------
+
+PR #2390: per-index binlog
+Author: klirichek
+Merged at: 2024-07-11 15:56:56+00:00
+URL: https://github.com/manticoresoftware/manticoresearch/pull/2390
+Description:
+- New feature
+- Documentation update
+
+**Description of the Change:**
+
+**Related Issue (provide the link):**
+
+WIP (need proofread doc changes; need the test)
+----------------------------------------
+
+PR #2408: 🆕 Update buddy version
+Author: githubmanticore
+Merged at: 2024-07-11 11:18:51+00:00
+URL: https://github.com/manticoresoftware/manticoresearch/pull/2408
+Description:
+Update [buddy](https://github.com/manticoresoftware/manticoresearch-buddy) version to: 2.3.13 24071110 bb696a3 which includes:
+
+[`bb696a3`](https://github.com/manticoresoftware/manticoresearch-buddy/commit/bb696a33afc94c918fd93350d75de59aaa1d953a) Adjust waiting factor for sharding dequeue and fix comparision
+[`3f530d9`](https://github.com/manticoresoftware/manticoresearch-buddy/commit/3f530d984a6fac2fc6e81d29bd994e52f095a04e) Add timeout option for create sharded table syntax
+
+----------------------------------------
+
+PR #2394: 🆕 Update backup version
+Author: githubmanticore
+Merged at: 2024-07-11 09:13:34+00:00
+URL: https://github.com/manticoresoftware/manticoresearch/pull/2394
+Description:
+Update [backup](https://github.com/manticoresoftware/manticoresearch-backup) version to: 1.3.9 24070908 cce9fdb which includes:
+
+[`cce9fdb`](https://github.com/manticoresoftware/manticoresearch-backup/commit/cce9fdb43baebf0ed3cccfbbf55b34a847446b57) Move clt-tests under test directory and update CLT version to the latest one
+[`0162f4a`](https://github.com/manticoresoftware/manticoresearch-backup/commit/0162f4a6f9ce370363854e85d9423f173d5e59fe) Extend test to cover lemmatizers backup and restore
+[`33d9c3d`](https://github.com/manticoresoftware/manticoresearch-backup/commit/33d9c3d121edde27fcdb53f1304770712f6a817b) Fix: look for *.pak files only to backup morphology and avoid backing it all
+
+----------------------------------------
+
+PR #2399: Fixed filtering by json.string in right table on table join
+Author: glookka
+Merged at: 2024-07-10 07:08:08+00:00
+URL: https://github.com/manticoresoftware/manticoresearch/pull/2399
+Description:
+Fixed filtering by json.string in right table on table join
+----------------------------------------
+
+PR #2397: Fixed a crash on fetching attr dependencies at rset merge
+Author: glookka
+Merged at: 2024-07-09 16:17:06+00:00
+URL: https://github.com/manticoresoftware/manticoresearch/pull/2397
+Description:
+Fixed a crash on fetching attr dependencies at rset merge
+----------------------------------------
+
+PR #2391: Update integrations tests
+Author: PavelShilin89
+Merged at: 2024-07-08 17:42:33+00:00
+URL: https://github.com/manticoresoftware/manticoresearch/pull/2391
+Description:
+Updated the nightly integration tests to pass when the version is updated. 
+----------------------------------------
+
+PR #2388: 🆕 Update buddy version
+Author: githubmanticore
+Merged at: 2024-07-08 08:29:47+00:00
+URL: https://github.com/manticoresoftware/manticoresearch/pull/2388
+Description:
+Update [buddy](https://github.com/manticoresoftware/manticoresearch-buddy) version to: 2.3.13 24070805 2931a1f which includes:
+
+[`2931a1f`](https://github.com/manticoresoftware/manticoresearch-buddy/commit/2931a1f7faad3a89d9010d31d893109ea26fc09b) Introduce lazy loading for core labels like versions that before we initialized once on startup of metric thread
+
+----------------------------------------
+
+PR #2386: Added support for json objects in IS NULL filters
+Author: glookka
+Merged at: 2024-07-06 11:20:55+00:00
+URL: https://github.com/manticoresoftware/manticoresearch/pull/2386
+Description:
+Added support for json objects in IS NULL filters
+----------------------------------------
+
+PR #2387: 🆕 Update buddy version
+Author: githubmanticore
+Merged at: 2024-07-07 11:09:21+00:00
+URL: https://github.com/manticoresoftware/manticoresearch/pull/2387
+Description:
+Update [buddy](https://github.com/manticoresoftware/manticoresearch-buddy) version to: 2.3.13 24070710 3dcc61f which includes:
+
+[`3dcc61f`](https://github.com/manticoresoftware/manticoresearch-buddy/commit/3dcc61f7dc55ee6956587d358fbdc38565691b45) Update core (#314)
+
+----------------------------------------
+
+PR #2383: Update test-supported-mysqldump-versions.rec
+Author: PavelShilin89
+Merged at: 2024-07-05 14:43:25+00:00
+URL: https://github.com/manticoresoftware/manticoresearch/pull/2383
+Description:
+**Type of change**
+New function
+
+**Description of change:**
+Update test-supported-mysqldump-versions.rec, mysqldump 9 support is now available.
+
+**Related issue (specify reference):**
+https://github.com/manticoresoftware/manticoresearch/issues/2374
+----------------------------------------
+
+PR #2382: Fixed json SI vs IN() filters; fixed filter include/exclude handling
+Author: glookka
+Merged at: 2024-07-05 11:11:13+00:00
+URL: https://github.com/manticoresoftware/manticoresearch/pull/2382
+Description:
+Fixed json SI vs IN() filters; fixed filter include/exclude handling
+----------------------------------------
+
+PR #2378: 🆕 Update buddy version
+Author: githubmanticore
+Merged at: 2024-07-04 13:59:30+00:00
+URL: https://github.com/manticoresoftware/manticoresearch/pull/2378
+Description:
+Update [buddy](https://github.com/manticoresoftware/manticoresearch-buddy) version to: 2.3.13 24070411 b468b73 which includes:
+
+[`b468b73`](https://github.com/manticoresoftware/manticoresearch-buddy/commit/b468b73fbfcde6860648886519ecc6180e718cef) Fix issue when we unable to parse input matches due to we expect keys to be string only but it may be integer also in match json request
+[`5fe5693`](https://github.com/manticoresoftware/manticoresearch-buddy/commit/5fe56933581f3abcd202bfe39df4d71dad6ec19c) Update composer deps
+[`635ee73`](https://github.com/manticoresoftware/manticoresearch-buddy/commit/635ee7345921c7ab02f64c85296310399fabb5f6) Handle JSON requests for fuzzy search and refactor the whole fuzzy search handling
+[`f073fbc`](https://github.com/manticoresoftware/manticoresearch-buddy/commit/f073fbc16042b6ea3437c1ef88f877a6668fe3d9) Update composer deps
+[`738e2aa`](https://github.com/manticoresoftware/manticoresearch-buddy/commit/738e2aa80e5a3147f6823a99f02d88ee05a5584b) Implement spell correction with layouts and add options parsing to the CALL AUTOCOMPLETE
+[`7d9b5f6`](https://github.com/manticoresoftware/manticoresearch-buddy/commit/7d9b5f63d54d969677be0ca89fff78fa94744f58) Make sure that we do not repeat ourselves on last word in query suggestion logic
+
+----------------------------------------
+
+PR #2371: Changed json field name -> SI name conversion
+Author: glookka
+Merged at: 2024-07-03 10:27:49+00:00
+URL: https://github.com/manticoresoftware/manticoresearch/pull/2371
+Description:
+Changed json field name -> SI name conversion
+----------------------------------------
+
+PR #2330: Tests/integrations
+Author: PavelShilin89
+Merged at: 2024-07-02 15:54:42+00:00
+URL: https://github.com/manticoresoftware/manticoresearch/pull/2330
+Description:
+Created integration tests, separated logstash and filebeat tests
+----------------------------------------
+
+PR #2360: CI: updates in CLT tests due to RHEL 7 EOL
+Author: sanikolaev
+Merged at: 2024-07-02 04:05:30+00:00
+URL: https://github.com/manticoresoftware/manticoresearch/pull/2360
+Description:
+None
+----------------------------------------
+
+PR #2358: Update test-character-transformation-when-sending-to-buddy.rec
+Author: PavelShilin89
+Merged at: 2024-07-01 19:54:57+00:00
+URL: https://github.com/manticoresoftware/manticoresearch/pull/2358
+Description:
+Small update to the query in the test to work correctly. 
+
+----------------------------------------
+
+PR #2357: 🆕 Update mcl version
+Author: githubmanticore
+Merged at: 2024-07-01 10:25:26+00:00
+URL: https://github.com/manticoresoftware/manticoresearch/pull/2357
+Description:
+Update [mcl](https://github.com/manticoresoftware/columnar) version to: 2.3.1 24070110 42f2b06 which includes:
+
+[`42f2b06`](https://github.com/manticoresoftware/columnar/commit/42f2b0641c4248b49e2e72e02817698a47fb51a6) updated manticore commit hash
+[`4b93e3a`](https://github.com/manticoresoftware/columnar/commit/4b93e3adffec778f2ef6f97a87d66803b9874165) updated manticore commit hash
+[`4223c52`](https://github.com/manticoresoftware/columnar/commit/4223c525aed2cfb704ae9a0b439e5fac034913d0) implemented NOTNULL filter type for secondary indexes
+
+----------------------------------------
+
+PR #2353: Added IS NULL/IS NOT NULL filter support to secondary indexes for json attributes
+Author: glookka
+Merged at: 2024-06-30 19:54:21+00:00
+URL: https://github.com/manticoresoftware/manticoresearch/pull/2353
+Description:
+Added IS NULL/IS NOT NULL filter support to secondary indexes for json attributes
+----------------------------------------
+
+PR #2310: Implemented secondary indexes for json attributes
+Author: glookka
+Merged at: 2024-06-29 14:53:36+00:00
+URL: https://github.com/manticoresoftware/manticoresearch/pull/2310
+Description:
+Implemented secondary indexes for json attributes
+----------------------------------------
+
+PR #2336: Create test-integrations-filebeat.rec
+Author: PavelShilin89
+Merged at: 2024-06-28 14:19:42+00:00
+URL: https://github.com/manticoresoftware/manticoresearch/pull/2336
+Description:
+Created test-integrations-filebit.rec. Tesing latest Filebeat versions in CLT tests
+----------------------------------------
+
+PR #2345: Fixed left join returning non-matching entries when match() over right table is used
+Author: glookka
+Merged at: 2024-06-28 08:43:54+00:00
+URL: https://github.com/manticoresoftware/manticoresearch/pull/2345
+Description:
+Fixed left join returning non-matching entries when match() over right table is used
+----------------------------------------
+
+PR #2341: Fixed join filter on columnar attributes from right table when attribute is not in the select list
+Author: glookka
+Merged at: 2024-06-27 15:11:53+00:00
+URL: https://github.com/manticoresoftware/manticoresearch/pull/2341
+Description:
+Fixed join filter on columnar attributes from right table when attribute is not in the select list
+----------------------------------------
+
+PR #2340: Update rhel-release-install.rec
+Author: PavelShilin89
+Merged at: 2024-06-27 12:50:33+00:00
+URL: https://github.com/manticoresoftware/manticoresearch/pull/2340
+Description:
+Update rhel-release-install.rec, now all packages are deleted correctly.
+----------------------------------------
+
+PR #2334: Fixed join on filter with two json attributes
+Author: glookka
+Merged at: 2024-06-26 17:08:16+00:00
+URL: https://github.com/manticoresoftware/manticoresearch/pull/2334
+Description:
+Fixed join on filter with two json attributes
+----------------------------------------
+
+
+FILE CHANGES
+--------------------------------------------------------------------------------
+
+File: cmake/GetxxHash.cmake
+Status: modified
+Changes: +2 -2
+Diff:
+@@ -1,8 +1,8 @@
+ cmake_minimum_required ( VERSION 3.17 FATAL_ERROR )
+ 
+ set ( XXH_REPO "https://github.com/manticoresoftware/xxHash" )
+-set ( XXH_REV "c037109" )
+-set ( XXH_SRC_MD5 "f39588501d0a3842bc6ec470b05b147e" )
++set ( XXH_REV "71c6c93" )
++set ( XXH_SRC_MD5 "705f9786460daf8712670eff92d94778" )
+ 
+ set ( XXH_GITHUB "${XXH_REPO}/archive/${XXH_REV}.zip" )
+
+----------------------------------------
+
+File: deps.txt
+Status: modified
+Changes: +2 -2
+Diff:
+@@ -1,7 +1,7 @@
+ backup 1.3.8 24052208 57fc406
+-buddy 2.3.10 24052208 7612a4f
++buddy 2.3.12 24071807 45f6b91
+ mcl 2.3.0 24052206 88a01c3
+-executor 1.1.5 24052203 c55bc2b
++executor 1.1.12 24071807 0565a65
+ tzdata 1.0.0 240522 a8aa66e
+ ---
+ ! Do not change the separator that splits this desc from the data
+
+----------------------------------------
+
+File: dist/test_kit_docker_build.sh
+Status: modified
+Changes: +60 -54
+Diff:
+@@ -1,88 +1,93 @@
+ #!/bin/bash
+ set -e
+ 
+-
+ git clone https://github.com/manticoresoftware/docker.git docker
+ cd docker
+ 
+-repo_urls=("https://repo.manticoresearch.com/repository/manticoresearch_jammy_dev/dists/jammy/main/binary-amd64/"
+-		   "https://repo.manticoresearch.com/repository/manticoresearch_jammy/dists/jammy/main/binary-amd64/")
+-
+-# Fetch the pages from each repository and store them in temporary files
+-for index in "${!repo_urls[@]}"; do
+-	curl -s "${repo_urls[$index]}" > "/tmp/packages_${index}"
+-done
+-
+ # We set it later when parse deps.txt
+ executor_dev_path=
+ 
++# Extra function to use
++# Get semver suffix in format -dev or empty string depending on version provided
++get_semver_suffix() {
++	local version="$1"
++	last_digit=$(echo "$version" | awk -F. '{print $NF}')
++	if [ $(( last_digit % 2 )) -eq 0 ]; then
++		echo "_release_candidate"
++	else
++		echo "_dev"
++	fi
++}
++
++# Downloads a package from a repository by given package name, version, date, commit, and architecture
++download_package() {
++	package="$1"
++	version="$2"
++	date="$3"
++	commit="$4"
++	arch="$5"
++
++	file_name="${package}_${version}-${date}-${commit}_${arch}.deb"
++	file_url="${repo_url}/${file_name}"
++	echo "Wgetting from $file_url"
++	wget -q -O "../build/${file_name}" "$file_url"
++
++	# For executor, we need to download the dev version and also extra package
++	if [ "$package" = 'manticore-executor' ]; then
++		echo "Wgetting from https://github.com/manticoresoftware/executor/releases/download/v${version}/manticore-executor_${version}-${date}-${commit}_linux_amd64-dev.tar.gz"
++		wget -q -O 'manticore-executor-dev.tar.gz' "https://github.com/manticoresoftware/executor/releases/download/v${version}/manticore-executor_${version}-${date}-${commit}_linux_amd64-dev.tar.gz"
++		tar -xzf 'manticore-executor-dev.tar.gz'
++		executor_dev_path=$(realpath "manticore-executor_${version}-${date}-${commit}_linux_amd64-dev/manticore-executor")
++
++		# Also add extra package
++		download_package "manticore-extra" "${version}" "${date}" "${commit}" "all"
++	fi
++}
++
+ # Read deps.txt line by line
+
+----------------------------------------
+
+File: dist/test_kit_docker_push.sh
+Status: modified
+Changes: +41 -4
+Diff:
+@@ -8,18 +8,55 @@ if ! (docker info | grep Username) > /dev/null 2>&1; then
+   exit 1
+ fi
+ 
+-img_url="ghcr.io/${REPO_OWNER}/manticoresearch:test-kit-${BUILD_COMMIT}"
++# Helper to fix tag naming from branch -> docker tag allowance
++sanitize_tag() {
++    local name=$1
++    # Replace / with _
++    name=$(echo "$name" | tr '/' '_')
++    # Remove all characters that are not allowed in Docker tags
++    # Docker tag rules: https://docs.docker.com/engine/reference/commandline/tag/
++    # Tags can only contain lowercase and uppercase letters, digits, underscores, periods, and dashes
++    name=$(echo "$name" | sed 's/[^a-zA-Z0-9_.-]//g')
++    echo "$name"
++}
++
++# Current branch name
++if [ "$GITHUB_EVENT_NAME" == "pull_request" ]; then
++	current_branch="$GITHUB_HEAD_REF"
+
+----------------------------------------
+
+File: manual/Changelog.md
+Status: modified
+Changes: +30 -1
+Diff:
+@@ -1,5 +1,34 @@
+ # Changelog
+ 
++# Version 6.3.4
++Released: July 31st 2024
++
++Version 6.3.4 continues the 6.3 series and includes only minor improvements and bug fixes.
++
++### Minor changes
++* [Issue #1130](https://github.com/manticoresoftware/manticoresearch/issues/1130) Added support for [DBeaver](../Integration/DBeaver.md#Integration-with-DBeaver).
++* [Issue #2146](https://github.com/manticoresoftware/manticoresearch/issues/2146) Improved escaping of delimiters in word forms and exceptions.
++* [Issue #2268](https://github.com/manticoresoftware/manticoresearch/issues/2268) Improved external files renaming on copy for CREATE and ALTER TABLE statements.
++* [Issue #2315](https://github.com/manticoresoftware/manticoresearch/issues/2315) Added string comparison operators to SELECT list expressions.
++* [Issue #2363](https://github.com/manticoresoftware/manticoresearch/issues/2363) Added support for null values in Elastic-like bulk requests.
+
+----------------------------------------
+
+File: manual/Integration/DBeaver.md
+Status: added
+Changes: +71 -0
+Diff:
+@@ -0,0 +1,71 @@
++# Integration with DBeaver
++
++[DBeaver](https://dbeaver.io/) is a SQL client software application and a database administration tool. For MySQL databases, it applies the JDBC application programming interface to interact with them via a JDBC driver. 
++
++Manticore allows you to use DBeaver for working with data stored in Manticore tables the same way as if it was stored in a MySQL database.
++
++## Settings to use
++
++To start working with Manticore in DBeaver, follow these steps:
++
++- Choose the `New database connection` option in DBeaver's UI
++- Choose `SQL` -> `MySQL` as DBeaver's database driver 
++- Set the `Server host` and `Port` options corresponding to the host and port of your Manticore instance (keep the `database` field empty)
++- Set `root/<empty password>` as authentication credentials
++
++
++## Functions available
++
++Since Manticore does not fully support MySQL, only a part of DBeaver's functionality is available when working with Manticore.
++
++You will be able to:
++- View, create, delete, and rename tables
++- Add and drop table columns
+
+----------------------------------------
+
+File: manual/README.md
+Status: modified
+Changes: +1 -0
+Diff:
+@@ -176,6 +176,7 @@
+ * [⪢ Integration]
+     * [Logstash](Integration/Logstash.md)
+     * [Filebeat](Integration/Filebeat.md)
++    * [DBeaver](Integration/DBeaver.md)
+ * [⪢ Extensions]
+     * [SphinxSE](Extensions/SphinxSE.md)
+     * [FEDERATED](Extensions/FEDERATED.md)
+
+----------------------------------------
+
+File: manual/Searching/Options.md
+Status: modified
+Changes: +72 -0
+Diff:
+@@ -132,6 +132,78 @@ Integer. Max found matches threshold. The value is selected automatically if not
+ 
+ In case Manticore cannot calculate the exact matching documents count, you will see `total_relation: gte` in the query [meta information](../Node_info_and_management/SHOW_META.md#SHOW-META), which means that the actual count is **Greater Than or Equal** to the total (`total_found` in `SHOW META` via SQL, `hits.total` in JSON via HTTP). If the total value is precise, you'll get `total_relation: eq`.
+ 
++<!-- example cutoff_aggregation -->
++Note: Using `cutoff` in aggregation queries is not recommended, as it can produce meaningless results.
++
++<!-- request Example -->
++
++Using cutoff in an aggregation query can lead to incorrect results
++```
++drop table if exists t
++--------------
++
++Query OK, 0 rows affected (0.02 sec)
++
++--------------
++create table t(a int)
++--------------
++
++Query OK, 0 rows affected (0.04 sec)
++
++--------------
++insert into t(a) values(1),(2),(3),(1),(2),(3)
++--------------
++
+
+----------------------------------------
+
+File: manual/latest_release_version
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -1 +1 @@
+-6.3.2
++6.3.4
+
+----------------------------------------
+
+File: src/aggrexpr.cpp
+Status: modified
+Changes: +8 -1
+Diff:
+@@ -430,14 +430,21 @@ static void FormatKeyDate ( const DateRangeSetting_t & tRange, int iNow, RangeKe
+ 
+ void GetRangeKeyNames ( const AggrRangeSetting_t & tRanges, RangeNameHash_t & hRangeNames )
+ {
++	if ( tRanges.GetLength()==1 && tRanges.m_bOpenLeft && tRanges.m_bOpenRight )
++	{
++		auto & tDesc = hRangeNames.AddUnique ( 0 );
++		tDesc.m_sKey = "*-*";
++		return;
++	}
+
+----------------------------------------
+
+File: src/joinsorter.cpp
+Status: modified
+Changes: +144 -20
+Diff:
+@@ -84,6 +84,25 @@ static StrVec_t ParseGroupBy ( const CSphString & sGroupBy )
+ }
+ 
+ 
++static void FetchAttrDependencies ( IntVec_t & dAttrIds, const ISphSchema & tSchema )
++{
++	for ( auto i : dAttrIds )
++	{
++		const CSphColumnInfo & tAttr = tSchema.GetAttr(i);
++		if ( !tAttr.m_pExpr )
++			continue;
++
++		int iOldLen = dAttrIds.GetLength();
++		tAttr.m_pExpr->Command ( SPH_EXPR_GET_DEPENDENT_COLS, &dAttrIds );
++		for ( int iNewAttr = iOldLen; iNewAttr < dAttrIds.GetLength(); iNewAttr++ )
++			if ( dAttrIds[iNewAttr]==i )
++				dAttrIds.Remove(iNewAttr);
++	}
++
++	dAttrIds.Uniq();
++}
++
++
+ CSphVector<std::pair<int,bool>> FetchJoinRightTableFilters ( const CSphVector<CSphFilterSettings> & dFilters, const ISphSchema & tSchema, const char * szJoinedIndex )
+ {
+ 	CSphString sPrefix;
+@@ -494,7 +513,7 @@ class JoinSorter_c : public ISphMatchSorter
+ 	std::unique_ptr<ISphMatchSorter> m_pSorter;
+ 	std::unique_ptr<ISphMatchSorter> m_pOriginalSorter;
+ 	std::unique_ptr<ISphMatchSorter> m_pRightSorter;
+-	std::unique_ptr<ISphSchema>		m_pRightSorterSchema;
++	std::unique_ptr<ISphSchema>		m_pRightSorterRsetSchema;
+ 	const BYTE *					m_pBlobPool = nullptr;
+ 	const CSphColumnInfo *			m_pAttrNullBitmask = nullptr;
+ 	CSphSwapVector<CSphMatch>		m_dMatches;
+@@ -505,6 +524,8 @@ class JoinSorter_c : public ISphMatchSorter
+ 	int								m_iDynamicSize = 0;
+ 	bool							m_bFinalCalcOnly = false;
+ 	const ISphSchema *				m_pSorterSchema = nullptr;
++	CSphVector<ContextCalcItem_t>	m_dCalcPrefilter;
++	CSphVector<ContextCalcItem_t>	m_dCalcPresort;
+ 	CSphVector<ContextCalcItem_t>	m_dAggregates;
+ 
+ 	MatchCache_c					m_tCache;
+@@ -519,6 +540,7 @@ class JoinSorter_c : public ISphMatchSorter
+ 	bool		SetupJoinQuery ( int iDynamicSize, CSphString & sError );
+ 	bool		SetupJoinSorter ( CSphString & sError );
+ 	void		SetupJoinAttrRemap();
++	void		SetupDependentAttrCalc ( const IntVec_t & dJoinedAttrs );
+ 	void		SetupSorterSchema();
+ 	void		SetupNullMask();
+ 	void		SetupAggregates();
+@@ -531,7 +553,16 @@ class JoinSorter_c : public ISphMatchSorter
+ 	void		AddToJoinSelectList ( const CSphString & sExpr, const CSphString & sAlias, const char * szRemapPrefix );
+ 	void		AddToJoinSelectList ( const CSphString & sExpr, const CSphString & sAlias, int iSorterAttrId, bool bConvertJsonType=false );
+ 	void		AddOnFilterToFilterTree ( int iFilterId );
++
++	void		AddStarItemsToJoinSelectList();
++	void		AddQueryItemsToJoinSelectList();
++	void		AddGroupbyItemsToJoinSelectList();
++	void		AddRemappedStringItemsToJoinSelectList();
++	void		AddExpressionItemsToJoinSelectList();
++	void		AddDocidToJoinSelectList();
++
+ 	void		SetupJoinSelectList();
++
+ 	void		RepackJsonFieldAsStr ( const CSphMatch & tSrcMatch, const CSphAttrLocator & tLocSrc, const CSphAttrLocator & tLocDst );
+ 	void		ProduceCacheSizeWarning ( CSphString & sWarning );
+ 	void		PopulateStoredFields();
+@@ -696,17 +727,56 @@ bool JoinSorter_c::SetupJoinSorter ( CSphString & sError )
+ 	if ( !m_pRightSorter )
+ 		return false;
+ 
+-	m_pRightSorterSchema = std::unique_ptr<ISphSchema> ( m_pRightSorter->GetSchema()->CloneMe() );
+-	assert(m_pRightSorterSchema);
++	m_pRightSorterRsetSchema = std::unique_ptr<ISphSchema> ( m_pRightSorter->GetSchema()->CloneMe() );
++	assert(m_pRightSorterRsetSchema);
+ 
+ 	return true;
+ }
+ 
+ 
++void JoinSorter_c::SetupDependentAttrCalc ( const IntVec_t & dJoinedAttrs )
++{
++	// find expressions that depend on joined attrs
++	for ( int i = 0; i < m_pSorterSchema->GetAttrsCount(); i++ )
++	{
++		const CSphColumnInfo & tAttr = m_pSorterSchema->GetAttr(i);
++		if ( !tAttr.m_pExpr )
++			continue;
++
++		IntVec_t dDeps;
++		dDeps.Add(i);
++		FetchAttrDependencies ( dDeps, *m_pSorterSchema );
++
++		bool bFound = false;
++		for ( auto iJoinedAttr : dJoinedAttrs )
++			for ( auto iDep : dDeps )
++				bFound |= iJoinedAttr==iDep;
++
++		if ( !bFound )
++			continue;
+
+----------------------------------------
+
+File: src/queryfilter.cpp
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -50,7 +50,7 @@ void ISphQueryFilter::GetKeywords ( CSphVector<CSphKeywordInfo> & dKeywords, Exp
+ 		const BYTE* sMultiform = m_pTokenizer->GetTokenizedMultiform();
+ 		strncpy ( (char*)sTokenized, sMultiform ? (const char*)sMultiform : (const char*)sWord, sizeof ( sTokenized ) - 1 );
+ 
+-		if ( tCtx.m_bAlowExpansion && ( !m_tFoldSettings.m_bFoldWildcards || m_tFoldSettings.m_bStats ) && sphHasExpandableWildcards ( (const char*)sWord ) )
++		if ( tCtx.m_bAllowExpansion && ( !m_tFoldSettings.m_bFoldWildcards || m_tFoldSettings.m_bStats ) && sphHasExpandableWildcards ( (const char*)sWord ) )
+ 		{
+ 			dQposWildcards.Add ( iQpos );
+ 
+
+----------------------------------------
+
+File: src/queuecreator.cpp
+Status: modified
+Changes: +20 -3
+Diff:
+@@ -695,8 +695,15 @@ void QueueCreator_c::ExtraAddSortkeys ( const int * dAttrs )
+ 		if ( dAttrs[i]>=0 )
+ 		{
+ 			const auto & tAttr = m_pSorterSchema->GetAttr ( dAttrs[i] );
+-			m_bJoinedGroupSort |= IsJoinAttr ( tAttr.m_sName );
++			m_bJoinedGroupSort |= tAttr.IsJoined();
+ 			m_hExtra.Add ( tAttr.m_sName );
++
++			// check if dependent columns are joined
++			IntVec_t dCols;
++			dCols.Add ( dAttrs[i] );
++			FetchDependencyChains(dCols);
++			for ( auto iCol : dCols )
++				m_bJoinedGroupSort |= m_pSorterSchema->GetAttr(iCol).IsJoined();
+ 		}
+ }
+ 
+@@ -741,9 +748,17 @@ void QueueCreator_c::FetchDependencyChains ( IntVec_t & dDependentCols )
+ 
+
+----------------------------------------
+
+File: src/sphinx.cpp
+Status: modified
+Changes: +1 -0
+Diff:
+@@ -9661,6 +9661,7 @@ bool CSphIndex_VLN::DoGetKeywords ( CSphVector <CSphKeywordInfo> & dKeywords, co
+ 	tExpCtx.m_bMergeSingles = false;
+ 	tExpCtx.m_eHitless = m_tSettings.m_eHitless;
+ 	tExpCtx.m_iCutoff = tSettings.m_iCutoff;
++	tExpCtx.m_bAllowExpansion = tSettings.m_bAllowExpansion;
+ 
+ 	tAotFilter.GetKeywords ( dKeywords, tExpCtx );
+ 	return true;
+
+----------------------------------------
+
+File: src/sphinxexpr.cpp
+Status: modified
+Changes: +7 -4
+Diff:
+@@ -7192,6 +7192,9 @@ class Expr_MVAAggr_c : public Expr_WithLocator_c
+ 	int64_t Int64Eval ( const CSphMatch & tMatch ) const final
+ 	{
+ 		auto dMva = tMatch.FetchAttrData ( m_tLocator, m_pBlobPool );
++		if ( !dMva.second )
++			return 0;
++
+ 		int nValues = dMva.second / sizeof(T);
+ 
+ 		const T * L = (const T *)dMva.first;
+@@ -9231,14 +9234,14 @@ int ExprParser_t::AddNodeFunc ( int iFunc, int iArg )
+ 
+ 		if ( dRetTypes[0]!=SPH_ATTR_INTEGER && dRetTypes[0]!=SPH_ATTR_BIGINT && dRetTypes[0]!=SPH_ATTR_FLOAT && dRetTypes[0]!=SPH_ATTR_TIMESTAMP )
+ 		{
+
+----------------------------------------
+
+File: src/sphinxint.h
+Status: modified
+Changes: +3 -2
+Diff:
+@@ -1170,8 +1170,8 @@ struct ExpansionContext_t : public ExpansionTrait_t
+ 	int m_iMinInfixLen					= 0;
+ 	bool m_bMergeSingles				= false;
+ 	CSphScopedPayload * m_pPayloads		= nullptr;
+-	int m_iCutoff = -1;
+-	bool m_bAlowExpansion				= true;
++	int m_iCutoff						= -1;
++	bool m_bAllowExpansion				= true;
+ 
+ 	ExpansionStats_t m_tExpansionStats;
+
+----------------------------------------
+
+File: src/sphinxjsonquery.cpp
+Status: modified
+Changes: +123 -93
+Diff:
+@@ -275,6 +275,18 @@ bool CheckRootNode ( const JsonObj_c & tRoot, CSphString & sError )
+ 	return true;
+ }
+ 
++static JsonObj_c FindFullTextQueryNode ( const JsonObj_c & tRoot )
++{
++	for ( JsonObj_c tChild : tRoot )
++	{
++		if ( !IsFilter ( tChild ) )
++			return tChild;
++	}
++
++	return tRoot[0];
++}
++
++
+ bool QueryParserJson_c::ParseQuery ( XQQuery_t & tParsed, const char * szQuery, const CSphQuery * pQuery, TokenizerRefPtr_c pQueryTokenizerQL, TokenizerRefPtr_c pQueryTokenizerJson, const CSphSchema * pSchema, const DictRefPtr_c & pDict, const CSphIndexSettings & tSettings, const CSphBitvec * pMorphFields ) const
+ {
+ 	JsonObj_c tRoot ( szQuery );
+@@ -295,7 +307,8 @@ bool QueryParserJson_c::ParseQuery ( XQQuery_t & tParsed, const char * szQuery,
+ 	QueryTreeBuilder_c tBuilder ( pQuery, std::move ( pQueryTokenizerQL ), tSettings );
+ 	tBuilder.Setup ( pSchema, pQueryTokenizerJson->Clone ( SPH_CLONE ), pMyDict, &tParsed, tSettings );
+ 
+-	XQNode_t * pRoot = ConstructNode ( tRoot[0], tBuilder );
++	const JsonObj_c tFtNode = FindFullTextQueryNode ( tRoot );
++	XQNode_t * pRoot = ConstructNode ( tFtNode, tBuilder );
+ 	if ( tBuilder.IsError() )
+ 	{
+ 		tBuilder.Cleanup();
+@@ -3625,6 +3638,87 @@ static bool ParseAggrComposite ( const JsonObj_c & tBucket, JsonAggr_t & tAggr,
+ 	return true;
+ }
+ 
++static bool ParseAggsNode ( const JsonObj_c & tBucket, const JsonObj_c & tJsonItem, bool bRoot, JsonAggr_t & tItem, CSphString & sError )
++{
++	if ( !tBucket.IsObj() )
++	{
++		sError.SetSprintf ( R"("aggs" bucket '%s' should be an object)", tItem.m_sBucketName.cstr() );
++		return false;
++	}
++
++	if ( !StrEq ( tBucket.Name(), "composite" ) && !tBucket.FetchStrItem ( tItem.m_sCol, "field", sError, false ) )
++		return false;
++
++	tBucket.FetchIntItem ( tItem.m_iSize, "size", sError, true );
++	int iShardSize = 0;
++	tBucket.FetchIntItem ( iShardSize, "shard_size", sError, true );
++	tItem.m_iSize = Max ( tItem.m_iSize, iShardSize ); // FIXME!!! use (size * 1.5 + 10) for shard size
++	tItem.m_eAggrFunc = GetAggrFunc ( tBucket, !bRoot );
++	switch ( tItem.m_eAggrFunc )
++	{
++	case Aggr_e::DATE_HISTOGRAM:
++		if ( !ParseAggrDateHistogram ( tBucket, tItem, sError ) )
++			return false;
++		tItem.m_iSize = Max ( tItem.m_iSize, 1000 ); // set max_matches to min\max / interval
++	break;
++
++	case Aggr_e::HISTOGRAM:
++		if ( !ParseAggrHistogram ( tBucket, tItem, sError ) )
++			return false;
++		tItem.m_iSize = Max ( tItem.m_iSize, 1000 ); // set max_matches to min\max / interval
++	break;
++
++	case Aggr_e::RANGE:
++		if ( !ParseAggrRange ( tBucket, tItem, false, sError ) )
++			return false;
++		tItem.m_iSize = Max ( tItem.m_iSize, tItem.m_tRange.GetLength() + 1 ); // set max_matches to buckets count + _all bucket
++		break;
++
++	case Aggr_e::DATE_RANGE:
++		if ( !ParseAggrRange ( tBucket, tItem, true, sError ) )
++			return false;
++		tItem.m_iSize = Max ( tItem.m_iSize, tItem.m_tDateRange.GetLength() + 1 ); // set max_matches to buckets count + _all bucket
++		break;
++	case Aggr_e::COMPOSITE:
++		if ( !ParseAggrComposite ( tJsonItem, tItem, sError ) )
++			return false;
++		break;
++	case Aggr_e::MIN:
++	case Aggr_e::MAX:
++	case Aggr_e::SUM:
++	case Aggr_e::AVG:
++		tItem.m_iSize = 1;
++		break;
++			
++	default: break;
+
+----------------------------------------
+
+File: src/sphinxrt.cpp
+Status: modified
+Changes: +6 -3
+Diff:
+@@ -3687,7 +3687,7 @@ bool RtIndex_c::WriteDocs ( SaveDiskDataContext_t & tCtx, CSphWriter & tWriterDi
+ 
+ 				tWriterDocs.ZipOffset ( tRowID - std::exchange ( tLastRowID, tRowID ) );
+ 				tWriterDocs.ZipInt ( pDoc->m_uHits );
+-				if ( pDoc->m_uHits==1 )
++				if ( pDoc->m_uHits==1 && pWord->m_bHasHitlist )
+ 				{
+ 					tWriterDocs.ZipInt ( pDoc->m_uHit & 0x7FFFFFUL );
+ 					tWriterDocs.ZipInt ( pDoc->m_uHit >> 23 );
+@@ -7703,6 +7703,9 @@ bool RtIndex_c::MultiQuery ( CSphQueryResult & tResult, const CSphQuery & tQuery
+
+----------------------------------------
+
+File: src/sphinxversion.h.in
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -1,5 +1,5 @@
+ // this is the main place where version number is defined
+-#define VERNUMBERS "6.3.2"
++#define VERNUMBERS "6.3.4"
+ // GIT_COMMIT_ID "$Format:%h$"
+ // GIT_TIMESTAMP_ID "$Format:%ci$"
+ // GIT_EPOCH_ID "$Format:%ct$"
+
+----------------------------------------
+
+File: test/clt-tests/installation/deb-dev-update.rec
+Status: modified
+Changes: +15 -2
+Diff:
+@@ -30,14 +30,14 @@ apt-get install -y manticore manticore-extra > /dev/null 2>&1; echo $?
+ ––– input –––
+ searchd --version
+ ––– output –––
+-Manticore %{SEMVER} %{COMMITDATE} (columnar %{SEMVER} %{COMMITDATE}) (secondary %{SEMVER} %{COMMITDATE})
++Manticore %{SEMVER} %{COMMITDATE} (columnar %{SEMVER} %{COMMITDATE}) (secondary %{SEMVER} %{COMMITDATE}) (knn %{SEMVER} %{COMMITDATE})
+ Copyright (c) 2001-2016, Andrew Aksyonoff
+ Copyright (c) 2008-2016, Sphinx Technologies Inc (http://sphinxsearch.com)
+ Copyright (c) 2017-%{YEAR}, Manticore Software LTD (https://manticoresearch.com)
+ ––– input –––
+ manticore-executor -v
+
+----------------------------------------
+
+File: test/clt-tests/installation/rhel-dev-install.rec
+Status: modified
+Changes: +10 -0
+Diff:
+@@ -1,4 +1,7 @@
+ ––– input –––
++sed -i s/mirror.centos.org/vault.centos.org/g /etc/yum.repos.d/*.repo; sed -i s/^#.*baseurl=http/baseurl=http/g /etc/yum.repos.d/*.repo
++––– output –––
++––– input –––
+ yum install -y --skip-broken mariadb mariadb105 which procps > /dev/null 2>&1; echo $?
+ ––– output –––
+ 0
+@@ -26,3 +29,10 @@ Zend Engine #!/v[0-9]+\.[0-9]+\.[0-9]+/!#, Copyright (c) Zend Technologies
+ ––– block: start-searchd-dev –––
+
+----------------------------------------
+
+File: test/clt-tests/installation/rhel-dev-update.rec
+Status: modified
+Changes: +16 -2
+Diff:
+@@ -4,10 +4,24 @@
+ ––– block: check-backup –––
+ ––– block: check-version/export-current-version –––
+ ––– input –––
+-yum -y --enablerepo manticore-dev update manticore manticore-extra manticore-common manticore-server manticore-server-core manticore-tools manticore-executor manticore-buddy manticore-backup manticore-columnar-lib manticore-server-core-debuginfo manticore-tools-debuginfo manticore-columnar-lib-debuginfo  manticore-icudata manticore-galera > /dev/null 2>&1; echo $?
++yum -y --setopt=tsflags=noscripts remove 'manticore*' > /dev/null 2>&1; echo $?
++––– output –––
++0
++––– input –––
++yum install -y -q https://repo.manticoresearch.com/manticore-repo.noarch.rpm > /dev/null 2>&1; echo $?
+
+----------------------------------------
+
+File: test/test_119/model.bin
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -1 +1 @@
+-a:2:{i:0;a:35:{i:0;a:3:{s:8:"sphinxql";s:56:"select * from test where match('test') order by fval asc";s:10:"total_rows";i:4;s:4:"rows";a:4:{i:0;a:4:{s:2:"id";s:1:"4";s:5:"title";s:9:"test four";s:4:"ival";s:2:"22";s:4:"fval";s:10:"-40.000000";}i:1;a:4:{s:2:"id";s:1:"3";s:5:"title";s:10:"test three";s:4:"ival";s:2:"11";s:4:"fval";s:10:"-30.000000";}i:2;a:4:{s:2:"id";s:1:"1";s:5:"title";s:8:"test one";s:4:"ival";s:2:"11";s:4:"fval";s:9:"10.000000";}i:3;a:4:{s:2:"id";s:1:"2";s:5:"title";s:8:"test two";s:4:"ival";s:2:"11";s:4:"fval";s:9:"20.000000";}}}i:1;a:3:{s:8:"sphinxql";s:69:"select *, fval+1 as f1 from test where match('test') order by f1 desc";s:10:"total_rows";i:4;s:4:"rows";a:4:{i:0;a:5:{s:2:"id";s:1:"2";s:5:"title";s:8:"test two";s:4:"ival";s:2:"11";s:4:"fval";s:9:"20.000000";s:2:"f1";s:9:"21.000000";}i:1;a:5:{s:2:"id";s:1:"1";s:5:"title";s:8:"test one";s:4:"ival";s:2:"11";s:4:"fval";s:9:"10.000000";s:2:"f1";s:9:"11.000000";}i:2;a:5:{s:2:"id";s:1:"3";s:5:"title";s:10:"test three";s:4:"ival";s:2:"11";s:4:"fval";s:10:"-30.000000";s:2:"f1";s:10:"-29.000000";}i:3;a:5:{s:2:"id";s:1:"4";s:5:"title";s:9:"test four";s:4:"ival";s:2:"22";s:4:"fval";s:10:"-40.000000";s:2:"f1";s:10:"-39.000000";}}}i:2;a:3:{s:8:"sphinxql";s:32:"select * from test group by fval";s:10:"total_rows";i:4;s:4:"rows";a:4:{i:0;a:4:{s:2:"id";s:1:"1";s:5:"title";s:8:"test one";s:4:"ival";s:2:"11";s:4:"fval";s:9:"10.000000";}i:1;a:4:{s:2:"id";s:1:"2";s:5:"title";s:8:"test two";s:4:"ival";s:2:"11";s:4:"fval";s:9:"20.000000";}i:2;a:4:{s:2:"id";s:1:"3";s:5:"title";s:10:"test three";s:4:"ival";s:2:"11";s:4:"fval";s:10:"-30.000000";}i:3;a:4:{s:2:"id";s:1:"4";s:5:"title";s:9:"test four";s:4:"ival";s:2:"22";s:4:"fval";s:10:"-40.000000";}}}i:3;a:3:{s:8:"sphinxql";s:44:"select *, ival-1 as i1 from test group by i1";s:10:"total_rows";i:2;s:4:"rows";a:2:{i:0;a:5:{s:2:"id";s:1:"1";s:5:"title";s:8:"test one";s:4:"ival";s:2:"11";s:4:"fval";s:9:"10.000000";s:2:"i1";s:2:"10";}i:1;a:5:{s:2:"id";s:1:"4";s:5:"title";s:9:"test four";s:4:"ival";s:2:"22";s:4:"fval";s:10:"-40.000000";s:2:"i1";s:2:"21";}}}i:4;a:3:{s:8:"sphinxql";s:59:"select *, weight()+ival as i1 from test where match('test')";s:10:"total_rows";i:4;s:4:"rows";a:4:{i:0;a:5:{s:2:"id";s:1:"1";s:5:"title";s:8:"test one";s:4:"ival";s:2:"11";s:4:"fval";s:9:"10.000000";s:2:"i1";s:4:"1315";}i:1;a:5:{s:2:"id";s:1:"2";s:5:"title";s:8:"test two";s:4:"ival";s:2:"11";s:4:"fval";s:9:"20.000000";s:2:"i1";s:4:"1315";}i:2;a:5:{s:2:"id";s:1:"3";s:5:"title";s:10:"test three";s:4:"ival";s:2:"11";s:4:"fval";s:10:"-30.000000";s:2:"i1";s:4:"1315";}i:3;a:5:{s:2:"id";s:1:"4";s:5:"title";s:9:"test four";s:4:"ival";s:2:"22";s:4:"fval";s:10:"-40.000000";s:2:"i1";s:4:"1326";}}}i:5;a:3:{s:8:"sphinxql";s:71:"select *, weight()+ival as i1 from test where match('test') and i1>1315";s:10:"total_rows";i:1;s:4:"rows";a:1:{i:0;a:5:{s:2:"id";s:1:"4";s:5:"title";s:9:"test four";s:4:"ival";s:2:"22";s:4:"fval";s:10:"-40.000000";s:2:"i1";s:4:"1326";}}}i:6;a:3:{s:8:"sphinxql";s:92:"select *, weight() as w, w+ival as i1, i1+10 as i2 from test where match('test') and i2>1325";s:10:"total_rows";i:1;s:4:"rows";a:1:{i:0;a:7:{s:2:"id";s:1:"4";s:5:"title";s:9:"test four";s:4:"ival";s:2:"22";s:4:"fval";s:10:"-40.000000";s:1:"w";s:4:"1304";s:2:"i1";s:4:"1326";s:2:"i2";s:4:"1336";}}}i:7;a:3:{s:8:"sphinxql";s:66:"select *, 10+ival as i1, 50+i1 as i2 from test where match('test')";s:10:"total_rows";i:4;s:4:"rows";a:4:{i:0;a:6:{s:2:"id";s:1:"1";s:5:"title";s:8:"test one";s:4:"ival";s:2:"11";s:4:"fval";s:9:"10.000000";s:2:"i1";s:2:"21";s:2:"i2";s:2:"71";}i:1;a:6:{s:2:"id";s:1:"2";s:5:"title";s:8:"test two";s:4:"ival";s:2:"11";s:4:"fval";s:9:"20.000000";s:2:"i1";s:2:"21";s:2:"i2";s:2:"71";}i:2;a:6:{s:2:"id";s:1:"3";s:5:"title";s:10:"test three";s:4:"ival";s:2:"11";s:4:"fval";s:10:"-30.000000";s:2:"i1";s:2:"21";s:2:"i2";s:2:"71";}i:3;a:6:{s:2:"id";s:1:"4";s:5:"title";s:9:"test four";s:4:"ival";s:2:"22";s:4:"fval";s:10:"-40.000000";s:2:"i1";s:2:"32";s:2:"i2";s:2:"82";}}}i:8;a:3:{s:8:"sphinxql";s:46:"select *, 10+ival as i1, 50+i1 as i2 from test";s:10:"total_rows";i:4;s:4:"rows";a:4:{i:0;a:6:{s:2:"id";s:1:"1";s:5:"title";s:8:"test one";s:4:"ival";s:2:"11";s:4:"fval";s:9:"10.000000";s:2:"i1";s:2:"21";s:2:"i2";s:2:"71";}i:1;a:6:{s:2:"id";s:1:"2";s:5:"title";s:8:"test two";s:4:"ival";s:2:"11";s:4:"fval";s:9:"20.000000";s:2:"i1";s:2:"21";s:2:"i2";s:2:"71";}i:2;a:6:{s:2:"id";s:1:"3";s:5:"title";s:10:"test three";s:4:"ival";s:2:"11";s:4:"fval";s:10:"-30.000000";s:2:"i1";s:2:"21";s:2:"i2";s:2:"71";}i:3;a:6:{s:2:"id";s:1:"4";s:5:"title";s:9:"test four";s:4:"ival";s:2:"22";s:4:"fval";s:10:"-40.000000";s:2:"i1";s:2:"32";s:2:"i2";s:2:"82";}}}i:9;a:3:{s:8:"sphinxql";s:59:"select *, 10+ival as i1, 50+i1 as i2, i2*10 as i3 from test";s:10:"total_rows";i:4;s:4:"rows";a:4:{i:0;a:7:{s:2:"id";s:1:"1";s:5:"title";s:8:"test one";s:4:"ival";s:2:"11";s:4:"fval";s:9:"10.000000";s:2:"i1";s:2:"21";s:2:"i2";s:2:"71";s:2:"i3";s:3:"710";}i:1;a:7:{s:2:"id";s:1:"2";s:5:"title";s:8:"test two";s:4:"ival";s:2:"11";s:4:"fval";s:9:"20.000000";s:2:"i1";s:2:"21";s:2:"i2";s:2:"71";s:2:"i3";s:3:"710";}i:2;a:7:{s:2:"id";s:1:"3";s:5:"title";s:10:"test three";s:4:"ival";s:2:"11";s:4:"fval";s:10:"-30.000000";s:2:"i1";s:2:"21";s:2:"i2";s:2:"71";s:2:"i3";s:3:"710";}i:3;a:7:{s:2:"id";s:1:"4";s:5:"title";s:9:"test four";s:4:"ival";s:2:"22";s:4:"fval";s:10:"-40.000000";s:2:"i1";s:2:"32";s:2:"i2";s:2:"82";s:2:"i3";s:3:"820";}}}i:10;a:3:{s:8:"sphinxql";s:62:"select *, 10+ival as i1, 50+i1 as i2, i2*10-i1 as i3 from test";s:10:"total_rows";i:4;s:4:"rows";a:4:{i:0;a:7:{s:2:"id";s:1:"1";s:5:"title";s:8:"test one";s:4:"ival";s:2:"11";s:4:"fval";s:9:"10.000000";s:2:"i1";s:2:"21";s:2:"i2";s:2:"71";s:2:"i3";s:3:"689";}i:1;a:7:{s:2:"id";s:1:"2";s:5:"title";s:8:"test two";s:4:"ival";s:2:"11";s:4:"fval";s:9:"20.000000";s:2:"i1";s:2:"21";s:2:"i2";s:2:"71";s:2:"i3";s:3:"689";}i:2;a:7:{s:2:"id";s:1:"3";s:5:"title";s:10:"test three";s:4:"ival";s:2:"11";s:4:"fval";s:10:"-30.000000";s:2:"i1";s:2:"21";s:2:"i2";s:2:"71";s:2:"i3";s:3:"689";}i:3;a:7:{s:2:"id";s:1:"4";s:5:"title";s:9:"test four";s:4:"ival";s:2:"22";s:4:"fval";s:10:"-40.000000";s:2:"i1";s:2:"32";s:2:"i2";s:2:"82";s:2:"i3";s:3:"788";}}}i:11;a:3:{s:8:"sphinxql";s:61:"select *, 10+ival as i1, 50+i1 as i2, i2*fval as i3 from test";s:10:"total_rows";i:4;s:4:"rows";a:4:{i:0;a:7:{s:2:"id";s:1:"1";s:5:"title";s:8:"test one";s:4:"ival";s:2:"11";s:4:"fval";s:9:"10.000000";s:2:"i1";s:2:"21";s:2:"i2";s:2:"71";s:2:"i3";s:10:"710.000000";}i:1;a:7:{s:2:"id";s:1:"2";s:5:"title";s:8:"test two";s:4:"ival";s:2:"11";s:4:"fval";s:9:"20.000000";s:2:"i1";s:2:"21";s:2:"i2";s:2:"71";s:2:"i3";s:11:"1420.000000";}i:2;a:7:{s:2:"id";s:1:"3";s:5:"title";s:10:"test three";s:4:"ival";s:2:"11";s:4:"fval";s:10:"-30.000000";s:2:"i1";s:2:"21";s:2:"i2";s:2:"71";s:2:"i3";s:12:"-2130.000000";}i:3;a:7:{s:2:"id";s:1:"4";s:5:"title";s:9:"test four";s:4:"ival";s:2:"22";s:4:"fval";s:10:"-40.000000";s:2:"i1";s:2:"32";s:2:"i2";s:2:"82";s:2:"i3";s:12:"-3280.000000";}}}i:12;a:3:{s:8:"sphinxql";s:77:"select *, 10+ival as i1, 50+i1 as i2, i2*fval as i3 from test order by i3 asc";s:10:"total_rows";i:4;s:4:"rows";a:4:{i:0;a:7:{s:2:"id";s:1:"4";s:5:"title";s:9:"test four";s:4:"ival";s:2:"22";s:4:"fval";s:10:"-40.000000";s:2:"i1";s:2:"32";s:2:"i2";s:2:"82";s:2:"i3";s:12:"-3280.000000";}i:1;a:7:{s:2:"id";s:1:"3";s:5:"title";s:10:"test three";s:4:"ival";s:2:"11";s:4:"fval";s:10:"-30.000000";s:2:"i1";s:2:"21";s:2:"i2";s:2:"71";s:2:"i3";s:12:"-2130.000000";}i:2;a:7:{s:2:"id";s:1:"1";s:5:"title";s:8:"test one";s:4:"ival";s:2:"11";s:4:"fval";s:9:"10.000000";s:2:"i1";s:2:"21";s:2:"i2";s:2:"71";s:2:"i3";s:10:"710.000000";}i:3;a:7:{s:2:"id";s:1:"2";s:5:"title";s:8:"test two";s:4:"ival";s:2:"11";s:4:"fval";s:9:"20.000000";s:2:"i1";s:2:"21";s:2:"i2";s:2:"71";s:2:"i3";s:11:"1420.000000";}}}i:13;a:3:{s:8:"sphinxql";s:86:"select *, 10+ival as i1, 50+i1 as i2, i2*fval as i3 from test order by i1 asc, i3 desc";s:10:"total_rows";i:4;s:4:"rows";a:4:{i:0;a:7:{s:2:"id";s:1:"2";s:5:"title";s:8:"test two";s:4:"ival";s:2:"11";s:4:"fval";s:9:"20.000000";s:2:"i1";s:2:"21";s:2:"i2";s:2:"71";s:2:"i3";s:11:"1420.000000";}i:1;a:7:{s:2:"id";s:1:"1";s:5:"title";s:8:"test one";s:4:"ival";s:2:"11";s:4:"fval";s:9:"10.000000";s:2:"i1";s:2:"21";s:2:"i2";s:2:"71";s:2:"i3";s:10:"710.000000";}i:2;a:7:{s:2:"id";s:1:"3";s:5:"title";s:10:"test three";s:4:"ival";s:2:"11";s:4:"fval";s:10:"-30.000000";s:2:"i1";s:2:"21";s:2:"i2";s:2:"71";s:2:"i3";s:12:"-2130.000000";}i:3;a:7:{s:2:"id";s:1:"4";s:5:"title";s:9:"test four";s:4:"ival";s:2:"22";s:4:"fval";s:10:"-40.000000";s:2:"i1";s:2:"32";s:2:"i2";s:2:"82";s:2:"i3";s:12:"-3280.000000";}}}i:14;a:3:{s:8:"sphinxql";s:73:"select *, 10+ival as i1, 50+i1 as i2, i2*fval as i3 from test group by i2";s:10:"total_rows";i:2;s:4:"rows";a:2:{i:0;a:7:{s:2:"id";s:1:"1";s:5:"title";s:8:"test one";s:4:"ival";s:2:"11";s:4:"fval";s:9:"10.000000";s:2:"i1";s:2:"21";s:2:"i2";s:2:"71";s:2:"i3";s:10:"710.000000";}i:1;a:7:{s:2:"id";s:1:"4";s:5:"title";s:9:"test four";s:4:"ival";s:2:"22";s:4:"fval";s:10:"-40.000000";s:2:"i1";s:2:"32";s:2:"i2";s:2:"82";s:2:"i3";s:12:"-3280.000000";}}}i:15;a:3:{s:8:"sphinxql";s:71:"select *, 10+ival as i1, 50+i1 as i2, i2*id as i3 from test group by i3";s:10:"total_rows";i:4;s:4:"rows";a:4:{i:0;a:7:{s:2:"id";s:1:"1";s:5:"title";s:8:"test one";s:4:"ival";s:2:"11";s:4:"fval";s:9:"10.000000";s:2:"i1";s:2:"21";s:2:"i2";s:2:"71";s:2:"i3";s:2:"71";}i:1;a:7:{s:2:"id";s:1:"2";s:5:"title";s:8:"test two";s:4:"ival";s:2:"11";s:4:"fval";s:9:"20.000000";s:2:"i1";s:2:"21";s:2:"i2";s:2:"71";s:2:"i3";s:3:"142";}i:2;a:7:{s:2:"id";s:1:"3";s:5:"title";s:10:"test three";s:4:"ival";s:2:"11";s:4:"fval";s:10:"-30.000000";s:2:"i1";s:2:"21";s:2:"i2";s:2:"71";s:2:"i3";s:3:"213";}i:3;a:7:{s:2:"id";s:1:"4";s:5:"title";s:9:"test four";s:4:"ival";s:2:"22";s:4:"fval";s:10:"-40.000000";s:2:"i1";s:2:"32";s:2:"i2";s:2:"82";s:2:"i3";s:3:"328";}}}i:16;a:3:{s:8:"sphinxql";s:54:"select *, IN ( mva, 11 ) as cnd1 from mva where cnd1=1";s:10:"total_rows";i:1;s:4:"rows";a:1:{i:0;a:5:{s:2:"id";s:2:"10";s:4:"test";s:4:"test";s:3:"idd";s:1:"1";s:3:"mva";s:11:"10,11,12,13";s:4:"cnd1";s:1:"1";}}}i:17;a:3:{s:8:"sphinxql";s:113:"select id, idd1, idd2, idd1 + idd2 as i2 from final group by idd1 order by id desc limit 0,2 option max_matches=4";s:10:"total_rows";i:2;s:4:"rows";a:2:{i:0;a:4:{s:2:"id";s:2:"35";s:4:"idd1";s:3:"305";s:4:"idd2";s:5:"35000";s:2:"i2";s:5:"35305";}i:1;a:4:{s:2:"id";s:2:"34";s:4:"idd1";s:3:"304";s:4:"idd2";s:5:"34000";s:2:"i2";s:5:"34304";}}}i:18;a:3:{s:8:"sphinxql";s:113:"select id, idd1, idd2, idd1 + idd2 as i2 from final group by idd1 order by id desc limit 2,2 option max_matches=4";s:10:"total_rows";i:2;s:4:"rows";a:2:{i:0;a:4:{s:2:"id";s:2:"33";s:4:"idd1";s:3:"303";s:4:"idd2";s:5:"33000";s:2:"i2";s:5:"33303";}i:1;a:4:{s:2:"id";s:2:"32";s:4:"idd1";s:3:"302";s:4:"idd2";s:5:"32000";s:2:"i2";s:5:"32302";}}}i:19;a:3:{s:8:"sphinxql";s:35:"select * from test where fval<=10.0";s:10:"total_rows";i:3;s:4:"rows";a:3:{i:0;a:4:{s:2:"id";s:1:"1";s:5:"title";s:8:"test one";s:4:"ival";s:2:"11";s:4:"fval";s:9:"10.000000";}i:1;a:4:{s:2:"id";s:1:"3";s:5:"title";s:10:"test three";s:4:"ival";s:2:"11";s:4:"fval";s:10:"-30.000000";}i:2;a:4:{s:2:"id";s:1:"4";s:5:"title";s:9:"test four";s:4:"ival";s:2:"22";s:4:"fval";s:10:"-40.000000";}}}i:20;a:3:{s:8:"sphinxql";s:35:"select * from test where fval>=10.0";s:10:"total_rows";i:2;s:4:"rows";a:2:{i:0;a:4:{s:2:"id";s:1:"1";s:5:"title";s:8:"test one";s:4:"ival";s:2:"11";s:4:"fval";s:9:"10.000000";}i:1;a:4:{s:2:"id";s:1:"2";s:5:"title";s:8:"test two";s:4:"ival";s:2:"11";s:4:"fval";s:9:"20.000000";}}}i:21;a:3:{s:8:"sphinxql";s:34:"select * from test where fval<10.0";s:10:"total_rows";i:2;s:4:"rows";a:2:{i:0;a:4:{s:2:"id";s:1:"3";s:5:"title";s:10:"test three";s:4:"ival";s:2:"11";s:4:"fval";s:10:"-30.000000";}i:1;a:4:{s:2:"id";s:1:"4";s:5:"title";s:9:"test four";s:4:"ival";s:2:"22";s:4:"fval";s:10:"-40.000000";}}}i:22;a:3:{s:8:"sphinxql";s:34:"select * from test where fval>10.0";s:10:"total_rows";i:1;s:4:"rows";a:1:{i:0;a:4:{s:2:"id";s:1:"2";s:5:"title";s:8:"test two";s:4:"ival";s:2:"11";s:4:"fval";s:9:"20.000000";}}}i:23;a:3:{s:8:"sphinxql";s:34:"select * from test where fval=10.0";s:10:"total_rows";i:1;s:4:"rows";a:1:{i:0;a:4:{s:2:"id";s:1:"1";s:5:"title";s:8:"test one";s:4:"ival";s:2:"11";s:4:"fval";s:9:"10.000000";}}}i:24;a:3:{s:8:"sphinxql";s:35:"select * from test where fval<>10.0";s:10:"total_rows";i:3;s:4:"rows";a:3:{i:0;a:4:{s:2:"id";s:1:"2";s:5:"title";s:8:"test two";s:4:"ival";s:2:"11";s:4:"fval";s:9:"20.000000";}i:1;a:4:{s:2:"id";s:1:"3";s:5:"title";s:10:"test three";s:4:"ival";s:2:"11";s:4:"fval";s:10:"-30.000000";}i:2;a:4:{s:2:"id";s:1:"4";s:5:"title";s:9:"test four";s:4:"ival";s:2:"22";s:4:"fval";s:10:"-40.000000";}}}i:25;a:2:{s:8:"sphinxql";s:44:"select * from test_lengths where title_len=0";s:10:"total_rows";i:0;}i:26;a:3:{s:8:"sphinxql";s:44:"select * from test_lengths where title_len=2";s:10:"total_rows";i:4;s:4:"rows";a:4:{i:0;a:5:{s:2:"id";s:1:"1";s:5:"title";s:8:"test one";s:4:"ival";s:2:"11";s:4:"fval";s:9:"10.000000";s:9:"title_len";s:1:"2";}i:1;a:5:{s:2:"id";s:1:"2";s:5:"title";s:8:"test two";s:4:"ival";s:2:"11";s:4:"fval";s:9:"20.000000";s:9:"title_len";s:1:"2";}i:2;a:5:{s:2:"id";s:1:"3";s:5:"title";s:10:"test three";s:4:"ival";s:2:"11";s:4:"fval";s:10:"-30.000000";s:9:"title_len";s:1:"2";}i:3;a:5:{s:2:"id";s:1:"4";s:5:"title";s:9:"test four";s:4:"ival";s:2:"22";s:4:"fval";s:10:"-40.000000";s:9:"title_len";s:1:"2";}}}i:27;a:3:{s:8:"sphinxql";s:45:"select 50+ival*10 as ii1, 50+bad*10 from test";s:5:"errno";i:1064;s:5:"error";s:44:"table test: parse error: unknown column: bad";}i:28;a:3:{s:8:"sphinxql";s:63:"select ival*ival as p, sum(p), avg(p), min(p), max(p) from test";s:10:"total_rows";i:1;s:4:"rows";a:1:{i:0;a:5:{s:1:"p";s:3:"121";s:6:"sum(p)";s:3:"847";s:6:"avg(p)";s:10:"211.750000";s:6:"min(p)";s:3:"121";s:6:"max(p)";s:3:"484";}}}i:29;a:3:{s:8:"sphinxql";s:31:"select mva a, least(a) from mva";s:10:"total_rows";i:1;s:4:"rows";a:1:{i:0;a:2:{s:1:"a";s:11:"10,11,12,13";s:8:"least(a)";s:2:"10";}}}i:30;a:3:{s:8:"sphinxql";s:43:"select *, ival<>11 as a from test where a>0";s:10:"total_rows";i:1;s:4:"rows";a:1:{i:0;a:5:{s:2:"id";s:1:"4";s:5:"title";s:9:"test four";s:4:"ival";s:2:"22";s:4:"fval";s:10:"-40.000000";s:1:"a";s:1:"1";}}}i:31;a:3:{s:8:"sphinxql";s:56:"select *, ival<>11 and ival<>12 as a from test where a>0";s:10:"total_rows";i:1;s:4:"rows";a:1:{i:0;a:5:{s:2:"id";s:1:"4";s:5:"title";s:9:"test four";s:4:"ival";s:2:"22";s:4:"fval";s:10:"-40.000000";s:1:"a";s:1:"1";}}}i:32;a:3:{s:8:"sphinxql";s:69:"select *, ival<>11 and ival<>12 and ival<>13 as a from test where a>0";s:10:"total_rows";i:1;s:4:"rows";a:1:{i:0;a:5:{s:2:"id";s:1:"4";s:5:"title";s:9:"test four";s:4:"ival";s:2:"22";s:4:"fval";s:10:"-40.000000";s:1:"a";s:1:"1";}}}i:33;a:3:{s:8:"sphinxql";s:82:"select *, ival<>11 and ival<>12 and ival<>13 and ival<>14 as a from test where a>0";s:10:"total_rows";i:1;s:4:"rows";a:1:{i:0;a:5:{s:2:"id";s:1:"4";s:5:"title";s:9:"test four";s:4:"ival";s:2:"22";s:4:"fval";s:10:"-40.000000";s:1:"a";s:1:"1";}}}i:34;a:3:{s:8:"sphinxql";s:92:"select *, ival<>11 and ival<>12 and ival<>13 and ival<>14 and id>=4 as a from test where a>0";s:10:"total_rows";i:1;s:4:"rows";a:1:{i:0;a:5:{s:2:"id";s:1:"4";s:5:"title";s:9:"test four";s:4:"ival";s:2:"22";s:4:"fval";s:10:"-40.000000";s:1:"a";s:1:"1";}}}}i:1;a:35:{i:0;a:3:{s:8:"sphinxql";s:56:"select * from test where match('test') order by fval asc";s:10:"total_rows";i:4;s:4:"rows";a:4:{i:0;a:4:{s:2:"id";s:1:"4";s:5:"title";s:9:"test four";s:4:"ival";s:2:"22";s:4:"fval";s:10:"-40.000000";}i:1;a:4:{s:2:"id";s:1:"3";s:5:"title";s:10:"test three";s:4:"ival";s:2:"11";s:4:"fval";s:10:"-30.000000";}i:2;a:4:{s:2:"id";s:1:"1";s:5:"title";s:8:"test one";s:4:"ival";s:2:"11";s:4:"fval";s:9:"10.000000";}i:3;a:4:{s:2:"id";s:1:"2";s:5:"title";s:8:"test two";s:4:"ival";s:2:"11";s:4:"fval";s:9:"20.000000";}}}i:1;a:3:{s:8:"sphinxql";s:69:"select *, fval+1 as f1 from test where match('test') order by f1 desc";s:10:"total_rows";i:4;s:4:"rows";a:4:{i:0;a:5:{s:2:"id";s:1:"2";s:5:"title";s:8:"test two";s:4:"ival";s:2:"11";s:4:"fval";s:9:"20.000000";s:2:"f1";s:9:"21.000000";}i:1;a:5:{s:2:"id";s:1:"1";s:5:"title";s:8:"test one";s:4:"ival";s:2:"11";s:4:"fval";s:9:"10.000000";s:2:"f1";s:9:"11.000000";}i:2;a:5:{s:2:"id";s:1:"3";s:5:"title";s:10:"test three";s:4:"ival";s:2:"11";s:4:"fval";s:10:"-30.000000";s:2:"f1";s:10:"-29.000000";}i:3;a:5:{s:2:"id";s:1:"4";s:5:"title";s:9:"test four";s:4:"ival";s:2:"22";s:4:"fval";s:10:"-40.000000";s:2:"f1";s:10:"-39.000000";}}}i:2;a:3:{s:8:"sphinxql";s:32:"select * from test group by fval";s:10:"total_rows";i:4;s:4:"rows";a:4:{i:0;a:4:{s:2:"id";s:1:"1";s:5:"title";s:8:"test one";s:4:"ival";s:2:"11";s:4:"fval";s:9:"10.000000";}i:1;a:4:{s:2:"id";s:1:"2";s:5:"title";s:8:"test two";s:4:"ival";s:2:"11";s:4:"fval";s:9:"20.000000";}i:2;a:4:{s:2:"id";s:1:"3";s:5:"title";s:10:"test three";s:4:"ival";s:2:"11";s:4:"fval";s:10:"-30.000000";}i:3;a:4:{s:2:"id";s:1:"4";s:5:"title";s:9:"test four";s:4:"ival";s:2:"22";s:4:"fval";s:10:"-40.000000";}}}i:3;a:3:{s:8:"sphinxql";s:44:"select *, ival-1 as i1 from test group by i1";s:10:"total_rows";i:2;s:4:"rows";a:2:{i:0;a:5:{s:2:"id";s:1:"1";s:5:"title";s:8:"test one";s:4:"ival";s:2:"11";s:4:"fval";s:9:"10.000000";s:2:"i1";s:2:"10";}i:1;a:5:{s:2:"id";s:1:"4";s:5:"title";s:9:"test four";s:4:"ival";s:2:"22";s:4:"fval";s:10:"-40.000000";s:2:"i1";s:2:"21";}}}i:4;a:3:{s:8:"sphinxql";s:59:"select *, weight()+ival as i1 from test where match('test')";s:10:"total_rows";i:4;s:4:"rows";a:4:{i:0;a:5:{s:2:"id";s:1:"1";s:5:"title";s:8:"test one";s:4:"ival";s:2:"11";s:4:"fval";s:9:"10.000000";s:2:"i1";s:4:"1315";}i:1;a:5:{s:2:"id";s:1:"2";s:5:"title";s:8:"test two";s:4:"ival";s:2:"11";s:4:"fval";s:9:"20.000000";s:2:"i1";s:4:"1315";}i:2;a:5:{s:2:"id";s:1:"3";s:5:"title";s:10:"test three";s:4:"ival";s:2:"11";s:4:"fval";s:10:"-30.000000";s:2:"i1";s:4:"1315";}i:3;a:5:{s:2:"id";s:1:"4";s:5:"title";s:9:"test four";s:4:"ival";s:2:"22";s:4:"fval";s:10:"-40.000000";s:2:"i1";s:4:"1326";}}}i:5;a:3:{s:8:"sphinxql";s:71:"select *, weight()+ival as i1 from test where match('test') and i1>1315";s:10:"total_rows";i:1;s:4:"rows";a:1:{i:0;a:5:{s:2:"id";s:1:"4";s:5:"title";s:9:"test four";s:4:"ival";s:2:"22";s:4:"fval";s:10:"-40.000000";s:2:"i1";s:4:"1326";}}}i:6;a:3:{s:8:"sphinxql";s:92:"select *, weight() as w, w+ival as i1, i1+10 as i2 from test where match('test') and i2>1325";s:10:"total_rows";i:1;s:4:"rows";a:1:{i:0;a:7:{s:2:"id";s:1:"4";s:5:"title";s:9:"test four";s:4:"ival";s:2:"22";s:4:"fval";s:10:"-40.000000";s:1:"w";s:4:"1304";s:2:"i1";s:4:"1326";s:2:"i2";s:4:"1336";}}}i:7;a:3:{s:8:"sphinxql";s:66:"select *, 10+ival as i1, 50+i1 as i2 from test where match('test')";s:10:"total_rows";i:4;s:4:"rows";a:4:{i:0;a:6:{s:2:"id";s:1:"1";s:5:"title";s:8:"test one";s:4:"ival";s:2:"11";s:4:"fval";s:9:"10.000000";s:2:"i1";s:2:"21";s:2:"i2";s:2:"71";}i:1;a:6:{s:2:"id";s:1:"2";s:5:"title";s:8:"test two";s:4:"ival";s:2:"11";s:4:"fval";s:9:"20.000000";s:2:"i1";s:2:"21";s:2:"i2";s:2:"71";}i:2;a:6:{s:2:"id";s:1:"3";s:5:"title";s:10:"test three";s:4:"ival";s:2:"11";s:4:"fval";s:10:"-30.000000";s:2:"i1";s:2:"21";s:2:"i2";s:2:"71";}i:3;a:6:{s:2:"id";s:1:"4";s:5:"title";s:9:"test four";s:4:"ival";s:2:"22";s:4:"fval";s:10:"-40.000000";s:2:"i1";s:2:"32";s:2:"i2";s:2:"82";}}}i:8;a:3:{s:8:"sphinxql";s:46:"select *, 10+ival as i1, 50+i1 as i2 from test";s:10:"total_rows";i:4;s:4:"rows";a:4:{i:0;a:6:{s:2:"id";s:1:"1";s:5:"title";s:8:"test one";s:4:"ival";s:2:"11";s:4:"fval";s:9:"10.000000";s:2:"i1";s:2:"21";s:2:"i2";s:2:"71";}i:1;a:6:{s:2:"id";s:1:"2";s:5:"title";s:8:"test two";s:4:"ival";s:2:"11";s:4:"fval";s:9:"20.000000";s:2:"i1";s:2:"21";s:2:"i2";s:2:"71";}i:2;a:6:{s:2:"id";s:1:"3";s:5:"title";s:10:"test three";s:4:"ival";s:2:"11";s:4:"fval";s:10:"-30.000000";s:2:"i1";s:2:"21";s:2:"i2";s:2:"71";}i:3;a:6:{s:2:"id";s:1:"4";s:5:"title";s:9:"test four";s:4:"ival";s:2:"22";s:4:"fval";s:10:"-40.000000";s:2:"i1";s:2:"32";s:2:"i2";s:2:"82";}}}i:9;a:3:{s:8:"sphinxql";s:59:"select *, 10+ival as i1, 50+i1 as i2, i2*10 as i3 from test";s:10:"total_rows";i:4;s:4:"rows";a:4:{i:0;a:7:{s:2:"id";s:1:"1";s:5:"title";s:8:"test one";s:4:"ival";s:2:"11";s:4:"fval";s:9:"10.000000";s:2:"i1";s:2:"21";s:2:"i2";s:2:"71";s:2:"i3";s:3:"710";}i:1;a:7:{s:2:"id";s:1:"2";s:5:"title";s:8:"test two";s:4:"ival";s:2:"11";s:4:"fval";s:9:"20.000000";s:2:"i1";s:2:"21";s:2:"i2";s:2:"71";s:2:"i3";s:3:"710";}i:2;a:7:{s:2:"id";s:1:"3";s:5:"title";s:10:"test three";s:4:"ival";s:2:"11";s:4:"fval";s:10:"-30.000000";s:2:"i1";s:2:"21";s:2:"i2";s:2:"71";s:2:"i3";s:3:"710";}i:3;a:7:{s:2:"id";s:1:"4";s:5:"title";s:9:"test four";s:4:"ival";s:2:"22";s:4:"fval";s:10:"-40.000000";s:2:"i1";s:2:"32";s:2:"i2";s:2:"82";s:2:"i3";s:3:"820";}}}i:10;a:3:{s:8:"sphinxql";s:62:"select *, 10+ival as i1, 50+i1 as i2, i2*10-i1 as i3 from test";s:10:"total_rows";i:4;s:4:"rows";a:4:{i:0;a:7:{s:2:"id";s:1:"1";s:5:"title";s:8:"test one";s:4:"ival";s:2:"11";s:4:"fval";s:9:"10.000000";s:2:"i1";s:2:"21";s:2:"i2";s:2:"71";s:2:"i3";s:3:"689";}i:1;a:7:{s:2:"id";s:1:"2";s:5:"title";s:8:"test two";s:4:"ival";s:2:"11";s:4:"fval";s:9:"20.000000";s:2:"i1";s:2:"21";s:2:"i2";s:2:"71";s:2:"i3";s:3:"689";}i:2;a:7:{s:2:"id";s:1:"3";s:5:"title";s:10:"test three";s:4:"ival";s:2:"11";s:4:"fval";s:10:"-30.000000";s:2:"i1";s:2:"21";s:2:"i2";s:2:"71";s:2:"i3";s:3:"689";}i:3;a:7:{s:2:"id";s:1:"4";s:5:"title";s:9:"test four";s:4:"ival";s:2:"22";s:4:"fval";s:10:"-40.000000";s:2:"i1";s:2:"32";s:2:"i2";s:2:"82";s:2:"i3";s:3:"788";}}}i:11;a:3:{s:8:"sphinxql";s:61:"select *, 10+ival as i1, 50+i1 as i2, i2*fval as i3 from test";s:10:"total_rows";i:4;s:4:"rows";a:4:{i:0;a:7:{s:2:"id";s:1:"1";s:5:"title";s:8:"test one";s:4:"ival";s:2:"11";s:4:"fval";s:9:"10.000000";s:2:"i1";s:2:"21";s:2:"i2";s:2:"71";s:2:"i3";s:10:"710.000000";}i:1;a:7:{s:2:"id";s:1:"2";s:5:"title";s:8:"test two";s:4:"ival";s:2:"11";s:4:"fval";s:9:"20.000000";s:2:"i1";s:2:"21";s:2:"i2";s:2:"71";s:2:"i3";s:11:"1420.000000";}i:2;a:7:{s:2:"id";s:1:"3";s:5:"title";s:10:"test three";s:4:"ival";s:2:"11";s:4:"fval";s:10:"-30.000000";s:2:"i1";s:2:"21";s:2:"i2";s:2:"71";s:2:"i3";s:12:"-2130.000000";}i:3;a:7:{s:2:"id";s:1:"4";s:5:"title";s:9:"test four";s:4:"ival";s:2:"22";s:4:"fval";s:10:"-40.000000";s:2:"i1";s:2:"32";s:2:"i2";s:2:"82";s:2:"i3";s:12:"-3280.000000";}}}i:12;a:3:{s:8:"sphinxql";s:77:"select *, 10+ival as i1, 50+i1 as i2, i2*fval as i3 from test order by i3 asc";s:10:"total_rows";i:4;s:4:"rows";a:4:{i:0;a:7:{s:2:"id";s:1:"4";s:5:"title";s:9:"test four";s:4:"ival";s:2:"22";s:4:"fval";s:10:"-40.000000";s:2:"i1";s:2:"32";s:2:"i2";s:2:"82";s:2:"i3";s:12:"-3280.000000";}i:1;a:7:{s:2:"id";s:1:"3";s:5:"title";s:10:"test three";s:4:"ival";s:2:"11";s:4:"fval";s:10:"-30.000000";s:2:"i1";s:2:"21";s:2:"i2";s:2:"71";s:2:"i3";s:12:"-2130.000000";}i:2;a:7:{s:2:"id";s:1:"1";s:5:"title";s:8:"test one";s:4:"ival";s:2:"11";s:4:"fval";s:9:"10.000000";s:2:"i1";s:2:"21";s:2:"i2";s:2:"71";s:2:"i3";s:10:"710.000000";}i:3;a:7:{s:2:"id";s:1:"2";s:5:"title";s:8:"test two";s:4:"ival";s:2:"11";s:4:"fval";s:9:"20.000000";s:2:"i1";s:2:"21";s:2:"i2";s:2:"71";s:2:"i3";s:11:"1420.000000";}}}i:13;a:3:{s:8:"sphinxql";s:86:"select *, 10+ival as i1, 50+i1 as i2, i2*fval as i3 from test order by i1 asc, i3 desc";s:10:"total_rows";i:4;s:4:"rows";a:4:{i:0;a:7:{s:2:"id";s:1:"2";s:5:"title";s:8:"test two";s:4:"ival";s:2:"11";s:4:"fval";s:9:"20.000000";s:2:"i1";s:2:"21";s:2:"i2";s:2:"71";s:2:"i3";s:11:"1420.000000";}i:1;a:7:{s:2:"id";s:1:"1";s:5:"title";s:8:"test one";s:4:"ival";s:2:"11";s:4:"fval";s:9:"10.000000";s:2:"i1";s:2:"21";s:2:"i2";s:2:"71";s:2:"i3";s:10:"710.000000";}i:2;a:7:{s:2:"id";s:1:"3";s:5:"title";s:10:"test three";s:4:"ival";s:2:"11";s:4:"fval";s:10:"-30.000000";s:2:"i1";s:2:"21";s:2:"i2";s:2:"71";s:2:"i3";s:12:"-2130.000000";}i:3;a:7:{s:2:"id";s:1:"4";s:5:"title";s:9:"test four";s:4:"ival";s:2:"22";s:4:"fval";s:10:"-40.000000";s:2:"i1";s:2:"32";s:2:"i2";s:2:"82";s:2:"i3";s:12:"-3280.000000";}}}i:14;a:3:{s:8:"sphinxql";s:73:"select *, 10+ival as i1, 50+i1 as i2, i2*fval as i3 from test group by i2";s:10:"total_rows";i:2;s:4:"rows";a:2:{i:0;a:7:{s:2:"id";s:1:"1";s:5:"title";s:8:"test one";s:4:"ival";s:2:"11";s:4:"fval";s:9:"10.000000";s:2:"i1";s:2:"21";s:2:"i2";s:2:"71";s:2:"i3";s:10:"710.000000";}i:1;a:7:{s:2:"id";s:1:"4";s:5:"title";s:9:"test four";s:4:"ival";s:2:"22";s:4:"fval";s:10:"-40.000000";s:2:"i1";s:2:"32";s:2:"i2";s:2:"82";s:2:"i3";s:12:"-3280.000000";}}}i:15;a:3:{s:8:"sphinxql";s:71:"select *, 10+ival as i1, 50+i1 as i2, i2*id as i3 from test group by i3";s:10:"total_rows";i:4;s:4:"rows";a:4:{i:0;a:7:{s:2:"id";s:1:"1";s:5:"title";s:8:"test one";s:4:"ival";s:2:"11";s:4:"fval";s:9:"10.000000";s:2:"i1";s:2:"21";s:2:"i2";s:2:"71";s:2:"i3";s:2:"71";}i:1;a:7:{s:2:"id";s:1:"2";s:5:"title";s:8:"test two";s:4:"ival";s:2:"11";s:4:"fval";s:9:"20.000000";s:2:"i1";s:2:"21";s:2:"i2";s:2:"71";s:2:"i3";s:3:"142";}i:2;a:7:{s:2:"id";s:1:"3";s:5:"title";s:10:"test three";s:4:"ival";s:2:"11";s:4:"fval";s:10:"-30.000000";s:2:"i1";s:2:"21";s:2:"i2";s:2:"71";s:2:"i3";s:3:"213";}i:3;a:7:{s:2:"id";s:1:"4";s:5:"title";s:9:"test four";s:4:"ival";s:2:"22";s:4:"fval";s:10:"-40.000000";s:2:"i1";s:2:"32";s:2:"i2";s:2:"82";s:2:"i3";s:3:"328";}}}i:16;a:3:{s:8:"sphinxql";s:54:"select *, IN ( mva, 11 ) as cnd1 from mva where cnd1=1";s:10:"total_rows";i:1;s:4:"rows";a:1:{i:0;a:5:{s:2:"id";s:2:"10";s:4:"test";s:4:"test";s:3:"idd";s:1:"1";s:3:"mva";s:11:"10,11,12,13";s:4:"cnd1";s:1:"1";}}}i:17;a:3:{s:8:"sphinxql";s:113:"select id, idd1, idd2, idd1 + idd2 as i2 from final group by idd1 order by id desc limit 0,2 option max_matches=4";s:10:"total_rows";i:2;s:4:"rows";a:2:{i:0;a:4:{s:2:"id";s:2:"35";s:4:"idd1";s:3:"305";s:4:"idd2";s:5:"35000";s:2:"i2";s:5:"35305";}i:1;a:4:{s:2:"id";s:2:"34";s:4:"idd1";s:3:"304";s:4:"idd2";s:5:"34000";s:2:"i2";s:5:"34304";}}}i:18;a:3:{s:8:"sphinxql";s:113:"select id, idd1, idd2, idd1 + idd2 as i2 from final group by idd1 order by id desc limit 2,2 option max_matches=4";s:10:"total_rows";i:2;s:4:"rows";a:2:{i:0;a:4:{s:2:"id";s:2:"33";s:4:"idd1";s:3:"303";s:4:"idd2";s:5:"33000";s:2:"i2";s:5:"33303";}i:1;a:4:{s:2:"id";s:2:"32";s:4:"idd1";s:3:"302";s:4:"idd2";s:5:"32000";s:2:"i2";s:5:"32302";}}}i:19;a:3:{s:8:"sphinxql";s:35:"select * from test where fval<=10.0";s:10:"total_rows";i:3;s:4:"rows";a:3:{i:0;a:4:{s:2:"id";s:1:"1";s:5:"title";s:8:"test one";s:4:"ival";s:2:"11";s:4:"fval";s:9:"10.000000";}i:1;a:4:{s:2:"id";s:1:"3";s:5:"title";s:10:"test three";s:4:"ival";s:2:"11";s:4:"fval";s:10:"-30.000000";}i:2;a:4:{s:2:"id";s:1:"4";s:5:"title";s:9:"test four";s:4:"ival";s:2:"22";s:4:"fval";s:10:"-40.000000";}}}i:20;a:3:{s:8:"sphinxql";s:35:"select * from test where fval>=10.0";s:10:"total_rows";i:2;s:4:"rows";a:2:{i:0;a:4:{s:2:"id";s:1:"1";s:5:"title";s:8:"test one";s:4:"ival";s:2:"11";s:4:"fval";s:9:"10.000000";}i:1;a:4:{s:2:"id";s:1:"2";s:5:"title";s:8:"test two";s:4:"ival";s:2:"11";s:4:"fval";s:9:"20.000000";}}}i:21;a:3:{s:8:"sphinxql";s:34:"select * from test where fval<10.0";s:10:"total_rows";i:2;s:4:"rows";a:2:{i:0;a:4:{s:2:"id";s:1:"3";s:5:"title";s:10:"test three";s:4:"ival";s:2:"11";s:4:"fval";s:10:"-30.000000";}i:1;a:4:{s:2:"id";s:1:"4";s:5:"title";s:9:"test four";s:4:"ival";s:2:"22";s:4:"fval";s:10:"-40.000000";}}}i:22;a:3:{s:8:"sphinxql";s:34:"select * from test where fval>10.0";s:10:"total_rows";i:1;s:4:"rows";a:1:{i:0;a:4:{s:2:"id";s:1:"2";s:5:"title";s:8:"test two";s:4:"ival";s:2:"11";s:4:"fval";s:9:"20.000000";}}}i:23;a:3:{s:8:"sphinxql";s:34:"select * from test where fval=10.0";s:10:"total_rows";i:1;s:4:"rows";a:1:{i:0;a:4:{s:2:"id";s:1:"1";s:5:"title";s:8:"test one";s:4:"ival";s:2:"11";s:4:"fval";s:9:"10.000000";}}}i:24;a:3:{s:8:"sphinxql";s:35:"select * from test where fval<>10.0";s:10:"total_rows";i:3;s:4:"rows";a:3:{i:0;a:4:{s:2:"id";s:1:"2";s:5:"title";s:8:"test two";s:4:"ival";s:2:"11";s:4:"fval";s:9:"20.000000";}i:1;a:4:{s:2:"id";s:1:"3";s:5:"title";s:10:"test three";s:4:"ival";s:2:"11";s:4:"fval";s:10:"-30.000000";}i:2;a:4:{s:2:"id";s:1:"4";s:5:"title";s:9:"test four";s:4:"ival";s:2:"22";s:4:"fval";s:10:"-40.000000";}}}i:25;a:2:{s:8:"sphinxql";s:44:"select * from test_lengths where title_len=0";s:10:"total_rows";i:0;}i:26;a:3:{s:8:"sphinxql";s:44:"select * from test_lengths where title_len=2";s:10:"total_rows";i:4;s:4:"rows";a:4:{i:0;a:5:{s:2:"id";s:1:"1";s:5:"title";s:8:"test one";s:4:"ival";s:2:"11";s:4:"fval";s:9:"10.000000";s:9:"title_len";s:1:"2";}i:1;a:5:{s:2:"id";s:1:"2";s:5:"title";s:8:"test two";s:4:"ival";s:2:"11";s:4:"fval";s:9:"20.000000";s:9:"title_len";s:1:"2";}i:2;a:5:{s:2:"id";s:1:"3";s:5:"title";s:10:"test three";s:4:"ival";s:2:"11";s:4:"fval";s:10:"-30.000000";s:9:"title_len";s:1:"2";}i:3;a:5:{s:2:"id";s:1:"4";s:5:"title";s:9:"test four";s:4:"ival";s:2:"22";s:4:"fval";s:10:"-40.000000";s:9:"title_len";s:1:"2";}}}i:27;a:3:{s:8:"sphinxql";s:45:"select 50+ival*10 as ii1, 50+bad*10 from test";s:5:"errno";i:1064;s:5:"error";s:44:"table test: parse error: unknown column: bad";}i:28;a:3:{s:8:"sphinxql";s:63:"select ival*ival as p, sum(p), avg(p), min(p), max(p) from test";s:10:"total_rows";i:1;s:4:"rows";a:1:{i:0;a:5:{s:1:"p";s:3:"121";s:6:"sum(p)";s:3:"847";s:6:"avg(p)";s:10:"211.750000";s:6:"min(p)";s:3:"121";s:6:"max(p)";s:3:"484";}}}i:29;a:3:{s:8:"sphinxql";s:31:"select mva a, least(a) from mva";s:10:"total_rows";i:1;s:4:"rows";a:1:{i:0;a:2:{s:1:"a";s:11:"10,11,12,13";s:8:"least(a)";s:2:"10";}}}i:30;a:3:{s:8:"sphinxql";s:43:"select *, ival<>11 as a from test where a>0";s:10:"total_rows";i:1;s:4:"rows";a:1:{i:0;a:5:{s:2:"id";s:1:"4";s:5:"title";s:9:"test four";s:4:"ival";s:2:"22";s:4:"fval";s:10:"-40.000000";s:1:"a";s:1:"1";}}}i:31;a:3:{s:8:"sphinxql";s:56:"select *, ival<>11 and ival<>12 as a from test where a>0";s:10:"total_rows";i:1;s:4:"rows";a:1:{i:0;a:5:{s:2:"id";s:1:"4";s:5:"title";s:9:"test four";s:4:"ival";s:2:"22";s:4:"fval";s:10:"-40.000000";s:1:"a";s:1:"1";}}}i:32;a:3:{s:8:"sphinxql";s:69:"select *, ival<>11 and ival<>12 and ival<>13 as a from test where a>0";s:10:"total_rows";i:1;s:4:"rows";a:1:{i:0;a:5:{s:2:"id";s:1:"4";s:5:"title";s:9:"test four";s:4:"ival";s:2:"22";s:4:"fval";s:10:"-40.000000";s:1:"a";s:1:"1";}}}i:33;a:3:{s:8:"sphinxql";s:82:"select *, ival<>11 and ival<>12 and ival<>13 and ival<>14 as a from test where a>0";s:10:"total_rows";i:1;s:4:"rows";a:1:{i:0;a:5:{s:2:"id";s:1:"4";s:5:"title";s:9:"test four";s:4:"ival";s:2:"22";s:4:"fval";s:10:"-40.000000";s:1:"a";s:1:"1";}}}i:34;a:3:{s:8:"sphinxql";s:92:"select *, ival<>11 and ival<>12 and ival<>13 and ival<>14 and id>=4 as a from test where a>0";s:10:"total_rows";i:1;s:4:"rows";a:1:{i:0;a:5:{s:2:"id";s:1:"4";s:5:"title";s:9:"test four";s:4:"ival";s:2:"22";s:4:"fval";s:10:"-40.000000";s:1:"a";s:1:"1";}}}}}
+\ No newline at end of file
++a:2:{i:0;a:37:{i:0;a:3:{s:8:"sphinxql";s:56:"select * from test where match('test') order by fval asc";s:10:"total_rows";i:4;s:4:"rows";a:4:{i:0;a:4:{s:2:"id";s:1:"4";s:5:"title";s:9:"test four";s:4:"ival";s:2:"22";s:4:"fval";s:10:"-40.000000";}i:1;a:4:{s:2:"id";s:1:"3";s:5:"title";s:10:"test three";s:4:"ival";s:2:"11";s:4:"fval";s:10:"-30.000000";}i:2;a:4:{s:2:"id";s:1:"1";s:5:"title";s:8:"test one";s:4:"ival";s:2:"11";s:4:"fval";s:9:"10.000000";}i:3;a:4:{s:2:"id";s:1:"2";s:5:"title";s:8:"test two";s:4:"ival";s:2:"11";s:4:"fval";s:9:"20.000000";}}}i:1;a:3:{s:8:"sphinxql";s:69:"select *, fval+1 as f1 from test where match('test') order by f1 desc";s:10:"total_rows";i:4;s:4:"rows";a:4:{i:0;a:5:{s:2:"id";s:1:"2";s:5:"title";s:8:"test two";s:4:"ival";s:2:"11";s:4:"fval";s:9:"20.000000";s:2:"f1";s:9:"21.000000";}i:1;a:5:{s:2:"id";s:1:"1";s:5:"title";s:8:"test one";s:4:"ival";s:2:"11";s:4:"fval";s:9:"10.000000";s:2:"f1";s:9:"11.000000";}i:2;a:5:{s:2:"id";s:1:"3";s:5:"title";s:10:"test three";s:4:"ival";s:2:"11";s:4:"fval";s:10:"-30.000000";s:2:"f1";s:10:"-29.000000";}i:3;a:5:{s:2:"id";s:1:"4";s:5:"title";s:9:"test four";s:4:"ival";s:2:"22";s:4:"fval";s:10:"-40.000000";s:2:"f1";s:10:"-39.000000";}}}i:2;a:3:{s:8:"sphinxql";s:32:"select * from test group by fval";s:10:"total_rows";i:4;s:4:"rows";a:4:{i:0;a:4:{s:2:"id";s:1:"1";s:5:"title";s:8:"test one";s:4:"ival";s:2:"11";s:4:"fval";s:9:"10.000000";}i:1;a:4:{s:2:"id";s:1:"2";s:5:"title";s:8:"test two";s:4:"ival";s:2:"11";s:4:"fval";s:9:"20.000000";}i:2;a:4:{s:2:"id";s:1:"3";s:5:"title";s:10:"test three";s:4:"ival";s:2:"11";s:4:"fval";s:10:"-30.000000";}i:3;a:4:{s:2:"id";s:1:"4";s:5:"title";s:9:"test four";s:4:"ival";s:2:"22";s:4:"fval";s:10:"-40.000000";}}}i:3;a:3:{s:8:"sphinxql";s:44:"select *, ival-1 as i1 from test group by i1";s:10:"total_rows";i:2;s:4:"rows";a:2:{i:0;a:5:{s:2:"id";s:1:"1";s:5:"title";s:8:"test one";s:4:"ival";s:2:"11";s:4:"fval";s:9:"10.000000";s:2:"i1";s:2:"10";}i:1;a:5:{s:2:"id";s:1:"4";s:5:"title";s:9:"test four";s:4:"ival";s:2:"22";s:4:"fval";s:10:"-40.000000";s:2:"i1";s:2:"21";}}}i:4;a:3:{s:8:"sphinxql";s:59:"select *, weight()+ival as i1 from test where match('test')";s:10:"total_rows";i:4;s:4:"rows";a:4:{i:0;a:5:{s:2:"id";s:1:"1";s:5:"title";s:8:"test one";s:4:"ival";s:2:"11";s:4:"fval";s:9:"10.000000";s:2:"i1";s:4:"1315";}i:1;a:5:{s:2:"id";s:1:"2";s:5:"title";s:8:"test two";s:4:"ival";s:2:"11";s:4:"fval";s:9:"20.000000";s:2:"i1";s:4:"1315";}i:2;a:5:{s:2:"id";s:1:"3";s:5:"title";s:10:"test three";s:4:"ival";s:2:"11";s:4:"fval";s:10:"-30.000000";s:2:"i1";s:4:"1315";}i:3;a:5:{s:2:"id";s:1:"4";s:5:"title";s:9:"test four";s:4:"ival";s:2:"22";s:4:"fval";s:10:"-40.000000";s:2:"i1";s:4:"1326";}}}i:5;a:3:{s:8:"sphinxql";s:71:"select *, weight()+ival as i1 from test where match('test') and i1>1315";s:10:"total_rows";i:1;s:4:"rows";a:1:{i:0;a:5:{s:2:"id";s:1:"4";s:5:"title";s:9:"test four";s:4:"ival";s:2:"22";s:4:"fval";s:10:"-40.000000";s:2:"i1";s:4:"1326";}}}i:6;a:3:{s:8:"sphinxql";s:92:"select *, weight() as w, w+ival as i1, i1+10 as i2 from test where match('test') and i2>1325";s:10:"total_rows";i:1;s:4:"rows";a:1:{i:0;a:7:{s:2:"id";s:1:"4";s:5:"title";s:9:"test four";s:4:"ival";s:2:"22";s:4:"fval";s:10:"-40.000000";s:1:"w";s:4:"1304";s:2:"i1";s:4:"1326";s:2:"i2";s:4:"1336";}}}i:7;a:3:{s:8:"sphinxql";s:66:"select *, 10+ival as i1, 50+i1 as i2 from test where match('test')";s:10:"total_rows";i:4;s:4:"rows";a:4:{i:0;a:6:{s:2:"id";s:1:"1";s:5:"title";s:8:"test one";s:4:"ival";s:2:"11";s:4:"fval";s:9:"10.000000";s:2:"i1";s:2:"21";s:2:"i2";s:2:"71";}i:1;a:6:{s:2:"id";s:1:"2";s:5:"title";s:8:"test two";s:4:"ival";s:2:"11";s:4:"fval";s:9:"20.000000";s:2:"i1";s:2:"21";s:2:"i2";s:2:"71";}i:2;a:6:{s:2:"id";s:1:"3";s:5:"title";s:10:"test three";s:4:"ival";s:2:"11";s:4:"fval";s:10:"-30.000000";s:2:"i1";s:2:"21";s:2:"i2";s:2:"71";}i:3;a:6:{s:2:"id";s:1:"4";s:5:"title";s:9:"test four";s:4:"ival";s:2:"22";s:4:"fval";s:10:"-40.000000";s:2:"i1";s:2:"32";s:2:"i2";s:2:"82";}}}i:8;a:3:{s:8:"sphinxql";s:46:"select *, 10+ival as i1, 50+i1 as i2 from test";s:10:"total_rows";i:4;s:4:"rows";a:4:{i:0;a:6:{s:2:"id";s:1:"1";s:5:"title";s:8:"test one";s:4:"ival";s:2:"11";s:4:"fval";s:9:"10.000000";s:2:"i1";s:2:"21";s:2:"i2";s:2:"71";}i:1;a:6:{s:2:"id";s:1:"2";s:5:"title";s:8:"test two";s:4:"ival";s:2:"11";s:4:"fval";s:9:"20.000000";s:2:"i1";s:2:"21";s:2:"i2";s:2:"71";}i:2;a:6:{s:2:"id";s:1:"3";s:5:"title";s:10:"test three";s:4:"ival";s:2:"11";s:4:"fval";s:10:"-30.000000";s:2:"i1";s:2:"21";s:2:"i2";s:2:"71";}i:3;a:6:{s:2:"id";s:1:"4";s:5:"title";s:9:"test four";s:4:"ival";s:2:"22";s:4:"fval";s:10:"-40.000000";s:2:"i1";s:2:"32";s:2:"i2";s:2:"82";}}}i:9;a:3:{s:8:"sphinxql";s:59:"select *, 10+ival as i1, 50+i1 as i2, i2*10 as i3 from test";s:10:"total_rows";i:4;s:4:"rows";a:4:{i:0;a:7:{s:2:"id";s:1:"1";s:5:"title";s:8:"test one";s:4:"ival";s:2:"11";s:4:"fval";s:9:"10.000000";s:2:"i1";s:2:"21";s:2:"i2";s:2:"71";s:2:"i3";s:3:"710";}i:1;a:7:{s:2:"id";s:1:"2";s:5:"title";s:8:"test two";s:4:"ival";s:2:"11";s:4:"fval";s:9:"20.000000";s:2:"i1";s:2:"21";s:2:"i2";s:2:"71";s:2:"i3";s:3:"710";}i:2;a:7:{s:2:"id";s:1:"3";s:5:"title";s:10:"test three";s:4:"ival";s:2:"11";s:4:"fval";s:10:"-30.000000";s:2:"i1";s:2:"21";s:2:"i2";s:2:"71";s:2:"i3";s:3:"710";}i:3;a:7:{s:2:"id";s:1:"4";s:5:"title";s:9:"test four";s:4:"ival";s:2:"22";s:4:"fval";s:10:"-40.000000";s:2:"i1";s:2:"32";s:2:"i2";s:2:"82";s:2:"i3";s:3:"820";}}}i:10;a:3:{s:8:"sphinxql";s:62:"select *, 10+ival as i1, 50+i1 as i2, i2*10-i1 as i3 from test";s:10:"total_rows";i:4;s:4:"rows";a:4:{i:0;a:7:{s:2:"id";s:1:"1";s:5:"title";s:8:"test one";s:4:"ival";s:2:"11";s:4:"fval";s:9:"10.000000";s:2:"i1";s:2:"21";s:2:"i2";s:2:"71";s:2:"i3";s:3:"689";}i:1;a:7:{s:2:"id";s:1:"2";s:5:"title";s:8:"test two";s:4:"ival";s:2:"11";s:4:"fval";s:9:"20.000000";s:2:"i1";s:2:"21";s:2:"i2";s:2:"71";s:2:"i3";s:3:"689";}i:2;a:7:{s:2:"id";s:1:"3";s:5:"title";s:10:"test three";s:4:"ival";s:2:"11";s:4:"fval";s:10:"-30.000000";s:2:"i1";s:2:"21";s:2:"i2";s:2:"71";s:2:"i3";s:3:"689";}i:3;a:7:{s:2:"id";s:1:"4";s:5:"title";s:9:"test four";s:4:"ival";s:2:"22";s:4:"fval";s:10:"-40.000000";s:2:"i1";s:2:"32";s:2:"i2";s:2:"82";s:2:"i3";s:3:"788";}}}i:11;a:3:{s:8:"sphinxql";s:61:"select *, 10+ival as i1, 50+i1 as i2, i2*fval as i3 from test";s:10:"total_rows";i:4;s:4:"rows";a:4:{i:0;a:7:{s:2:"id";s:1:"1";s:5:"title";s:8:"test one";s:4:"ival";s:2:"11";s:4:"fval";s:9:"10.000000";s:2:"i1";s:2:"21";s:2:"i2";s:2:"71";s:2:"i3";s:10:"710.000000";}i:1;a:7:{s:2:"id";s:1:"2";s:5:"title";s:8:"test two";s:4:"ival";s:2:"11";s:4:"fval";s:9:"20.000000";s:2:"i1";s:2:"21";s:2:"i2";s:2:"71";s:2:"i3";s:11:"1420.000000";}i:2;a:7:{s:2:"id";s:1:"3";s:5:"title";s:10:"test three";s:4:"ival";s:2:"11";s:4:"fval";s:10:"-30.000000";s:2:"i1";s:2:"21";s:2:"i2";s:2:"71";s:2:"i3";s:12:"-2130.000000";}i:3;a:7:{s:2:"id";s:1:"4";s:5:"title";s:9:"test four";s:4:"ival";s:2:"22";s:4:"fval";s:10:"-40.000000";s:2:"i1";s:2:"32";s:2:"i2";s:2:"82";s:2:"i3";s:12:"-3280.000000";}}}i:12;a:3:{s:8:"sphinxql";s:77:"select *, 10+ival as i1, 50+i1 as i2, i2*fval as i3 from test order by i3 asc";s:10:"total_rows";i:4;s:4:"rows";a:4:{i:0;a:7:{s:2:"id";s:1:"4";s:5:"title";s:9:"test four";s:4:"ival";s:2:"22";s:4:"fval";s:10:"-40.000000";s:2:"i1";s:2:"32";s:2:"i2";s:2:"82";s:2:"i3";s:12:"-3280.000000";}i:1;a:7:{s:2:"id";s:1:"3";s:5:"title";s:10:"test three";s:4:"ival";s:2:"11";s:4:"fval";s:10:"-30.000000";s:2:"i1";s:2:"21";s:2:"i2";s:2:"71";s:2:"i3";s:12:"-2130.000000";}i:2;a:7:{s:2:"id";s:1:"1";s:5:"title";s:8:"test one";s:4:"ival";s:2:"11";s:4:"fval";s:9:"10.000000";s:2:"i1";s:2:"21";s:2:"i2";s:2:"71";s:2:"i3";s:10:"710.000000";}i:3;a:7:{s:2:"id";s:1:"2";s:5:"title";s:8:"test two";s:4:"ival";s:2:"11";s:4:"fval";s:9:"20.000000";s:2:"i1";s:2:"21";s:2:"i2";s:2:"71";s:2:"i3";s:11:"1420.000000";}}}i:13;a:3:{s:8:"sphinxql";s:86:"select *, 10+ival as i1, 50+i1 as i2, i2*fval as i3 from test order by i1 asc, i3 desc";s:10:"total_rows";i:4;s:4:"rows";a:4:{i:0;a:7:{s:2:"id";s:1:"2";s:5:"title";s:8:"test two";s:4:"ival";s:2:"11";s:4:"fval";s:9:"20.000000";s:2:"i1";s:2:"21";s:2:"i2";s:2:"71";s:2:"i3";s:11:"1420.000000";}i:1;a:7:{s:2:"id";s:1:"1";s:5:"title";s:8:"test one";s:4:"ival";s:2:"11";s:4:"fval";s:9:"10.000000";s:2:"i1";s:2:"21";s:2:"i2";s:2:"71";s:2:"i3";s:10:"710.000000";}i:2;a:7:{s:2:"id";s:1:"3";s:5:"title";s:10:"test three";s:4:"ival";s:2:"11";s:4:"fval";s:10:"-30.000000";s:2:"i1";s:2:"21";s:2:"i2";s:2:"71";s:2:"i3";s:12:"-2130.000000";}i:3;a:7:{s:2:"id";s:1:"4";s:5:"title";s:9:"test four";s:4:"ival";s:2:"22";s:4:"fval";s:10:"-40.000000";s:2:"i1";s:2:"32";s:2:"i2";s:2:"82";s:2:"i3";s:12:"-3280.000000";}}}i:14;a:3:{s:8:"sphinxql";s:73:"select *, 10+ival as i1, 50+i1 as i2, i2*fval as i3 from test group by i2";s:10:"total_rows";i:2;s:4:"rows";a:2:{i:0;a:7:{s:2:"id";s:1:"1";s:5:"title";s:8:"test one";s:4:"ival";s:2:"11";s:4:"fval";s:9:"10.000000";s:2:"i1";s:2:"21";s:2:"i2";s:2:"71";s:2:"i3";s:10:"710.000000";}i:1;a:7:{s:2:"id";s:1:"4";s:5:"title";s:9:"test four";s:4:"ival";s:2:"22";s:4:"fval";s:10:"-40.000000";s:2:"i1";s:2:"32";s:2:"i2";s:2:"82";s:2:"i3";s:12:"-3280.000000";}}}i:15;a:3:{s:8:"sphinxql";s:71:"select *, 10+ival as i1, 50+i1 as i2, i2*id as i3 from test group by i3";s:10:"total_rows";i:4;s:4:"rows";a:4:{i:0;a:7:{s:2:"id";s:1:"1";s:5:"title";s:8:"test one";s:4:"ival";s:2:"11";s:4:"fval";s:9:"10.000000";s:2:"i1";s:2:"21";s:2:"i2";s:2:"71";s:2:"i3";s:2:"71";}i:1;a:7:{s:2:"id";s:1:"2";s:5:"title";s:8:"test two";s:4:"ival";s:2:"11";s:4:"fval";s:9:"20.000000";s:2:"i1";s:2:"21";s:2:"i2";s:2:"71";s:2:"i3";s:3:"142";}i:2;a:7:{s:2:"id";s:1:"3";s:5:"title";s:10:"test three";s:4:"ival";s:2:"11";s:4:"fval";s:10:"-30.000000";s:2:"i1";s:2:"21";s:2:"i2";s:2:"71";s:2:"i3";s:3:"213";}i:3;a:7:{s:2:"id";s:1:"4";s:5:"title";s:9:"test four";s:4:"ival";s:2:"22";s:4:"fval";s:10:"-40.000000";s:2:"i1";s:2:"32";s:2:"i2";s:2:"82";s:2:"i3";s:3:"328";}}}i:16;a:3:{s:8:"sphinxql";s:54:"select *, IN ( mva, 11 ) as cnd1 from mva where cnd1=1";s:10:"total_rows";i:1;s:4:"rows";a:1:{i:0;a:5:{s:2:"id";s:2:"10";s:4:"test";s:4:"test";s:3:"idd";s:1:"1";s:3:"mva";s:11:"10,11,12,13";s:4:"cnd1";s:1:"1";}}}i:17;a:3:{s:8:"sphinxql";s:113:"select id, idd1, idd2, idd1 + idd2 as i2 from final group by idd1 order by id desc limit 0,2 option max_matches=4";s:10:"total_rows";i:2;s:4:"rows";a:2:{i:0;a:4:{s:2:"id";s:2:"35";s:4:"idd1";s:3:"305";s:4:"idd2";s:5:"35000";s:2:"i2";s:5:"35305";}i:1;a:4:{s:2:"id";s:2:"34";s:4:"idd1";s:3:"304";s:4:"idd2";s:5:"34000";s:2:"i2";s:5:"34304";}}}i:18;a:3:{s:8:"sphinxql";s:113:"select id, idd1, idd2, idd1 + idd2 as i2 from final group by idd1 order by id desc limit 2,2 option max_matches=4";s:10:"total_rows";i:2;s:4:"rows";a:2:{i:0;a:4:{s:2:"id";s:2:"33";s:4:"idd1";s:3:"303";s:4:"idd2";s:5:"33000";s:2:"i2";s:5:"33303";}i:1;a:4:{s:2:"id";s:2:"32";s:4:"idd1";s:3:"302";s:4:"idd2";s:5:"32000";s:2:"i2";s:5:"32302";}}}i:19;a:3:{s:8:"sphinxql";s:35:"select * from test where fval<=10.0";s:10:"total_rows";i:3;s:4:"rows";a:3:{i:0;a:4:{s:2:"id";s:1:"1";s:5:"title";s:8:"test one";s:4:"ival";s:2:"11";s:4:"fval";s:9:"10.000000";}i:1;a:4:{s:2:"id";s:1:"3";s:5:"title";s:10:"test three";s:4:"ival";s:2:"11";s:4:"fval";s:10:"-30.000000";}i:2;a:4:{s:2:"id";s:1:"4";s:5:"title";s:9:"test four";s:4:"ival";s:2:"22";s:4:"fval";s:10:"-40.000000";}}}i:20;a:3:{s:8:"sphinxql";s:35:"select * from test where fval>=10.0";s:10:"total_rows";i:2;s:4:"rows";a:2:{i:0;a:4:{s:2:"id";s:1:"1";s:5:"title";s:8:"test one";s:4:"ival";s:2:"11";s:4:"fval";s:9:"10.000000";}i:1;a:4:{s:2:"id";s:1:"2";s:5:"title";s:8:"test two";s:4:"ival";s:2:"11";s:4:"fval";s:9:"20.000000";}}}i:21;a:3:{s:8:"sphinxql";s:34:"select * from test where fval<10.0";s:10:"total_rows";i:2;s:4:"rows";a:2:{i:0;a:4:{s:2:"id";s:1:"3";s:5:"title";s:10:"test three";s:4:"ival";s:2:"11";s:4:"fval";s:10:"-30.000000";}i:1;a:4:{s:2:"id";s:1:"4";s:5:"title";s:9:"test four";s:4:"ival";s:2:"22";s:4:"fval";s:10:"-40.000000";}}}i:22;a:3:{s:8:"sphinxql";s:34:"select * from test where fval>10.0";s:10:"total_rows";i:1;s:4:"rows";a:1:{i:0;a:4:{s:2:"id";s:1:"2";s:5:"title";s:8:"test two";s:4:"ival";s:2:"11";s:4:"fval";s:9:"20.000000";}}}i:23;a:3:{s:8:"sphinxql";s:34:"select * from test where fval=10.0";s:10:"total_rows";i:1;s:4:"rows";a:1:{i:0;a:4:{s:2:"id";s:1:"1";s:5:"title";s:8:"test one";s:4:"ival";s:2:"11";s:4:"fval";s:9:"10.000000";}}}i:24;a:3:{s:8:"sphinxql";s:35:"select * from test where fval<>10.0";s:10:"total_rows";i:3;s:4:"rows";a:3:{i:0;a:4:{s:2:"id";s:1:"2";s:5:"title";s:8:"test two";s:4:"ival";s:2:"11";s:4:"fval";s:9:"20.000000";}i:1;a:4:{s:2:"id";s:1:"3";s:5:"title";s:10:"test three";s:4:"ival";s:2:"11";s:4:"fval";s:10:"-30.000000";}i:2;a:4:{s:2:"id";s:1:"4";s:5:"title";s:9:"test four";s:4:"ival";s:2:"22";s:4:"fval";s:10:"-40.000000";}}}i:25;a:2:{s:8:"sphinxql";s:44:"select * from test_lengths where title_len=0";s:10:"total_rows";i:0;}i:26;a:3:{s:8:"sphinxql";s:44:"select * from test_lengths where title_len=2";s:10:"total_rows";i:4;s:4:"rows";a:4:{i:0;a:5:{s:2:"id";s:1:"1";s:5:"title";s:8:"test one";s:4:"ival";s:2:"11";s:4:"fval";s:9:"10.000000";s:9:"title_len";s:1:"2";}i:1;a:5:{s:2:"id";s:1:"2";s:5:"title";s:8:"test two";s:4:"ival";s:2:"11";s:4:"fval";s:9:"20.000000";s:9:"title_len";s:1:"2";}i:2;a:5:{s:2:"id";s:1:"3";s:5:"title";s:10:"test three";s:4:"ival";s:2:"11";s:4:"fval";s:10:"-30.000000";s:9:"title_len";s:1:"2";}i:3;a:5:{s:2:"id";s:1:"4";s:5:"title";s:9:"test four";s:4:"ival";s:2:"22";s:4:"fval";s:10:"-40.000000";s:9:"title_len";s:1:"2";}}}i:27;a:3:{s:8:"sphinxql";s:45:"select 50+ival*10 as ii1, 50+bad*10 from test";s:5:"errno";i:1064;s:5:"error";s:44:"table test: parse error: unknown column: bad";}i:28;a:3:{s:8:"sphinxql";s:63:"select ival*ival as p, sum(p), avg(p), min(p), max(p) from test";s:10:"total_rows";i:1;s:4:"rows";a:1:{i:0;a:5:{s:1:"p";s:3:"121";s:6:"sum(p)";s:3:"847";s:6:"avg(p)";s:10:"211.750000";s:6:"min(p)";s:3:"121";s:6:"max(p)";s:3:"484";}}}i:29;a:3:{s:8:"sphinxql";s:31:"select mva a, least(a) from mva";s:10:"total_rows";i:1;s:4:"rows";a:1:{i:0;a:2:{s:1:"a";s:11:"10,11,12,13";s:8:"least(a)";s:2:"10";}}}i:30;a:3:{s:8:"sphinxql";s:43:"select *, ival<>11 as a from test where a>0";s:10:"total_rows";i:1;s:4:"rows";a:1:{i:0;a:5:{s:2:"id";s:1:"4";s:5:"title";s:9:"test four";s:4:"ival";s:2:"22";s:4:"fval";s:10:"-40.000000";s:1:"a";s:1:"1";}}}i:31;a:3:{s:8:"sphinxql";s:56:"select *, ival<>11 and ival<>12 as a from test where a>0";s:10:"total_rows";i:1;s:4:"rows";a:1:{i:0;a:5:{s:2:"id";s:1:"4";s:5:"title";s:9:"test four";s:4:"ival";s:2:"22";s:4:"fval";s:10:"-40.000000";s:1:"a";s:1:"1";}}}i:32;a:3:{s:8:"sphinxql";s:69:"select *, ival<>11 and ival<>12 and ival<>13 as a from test where a>0";s:10:"total_rows";i:1;s:4:"rows";a:1:{i:0;a:5:{s:2:"id";s:1:"4";s:5:"title";s:9:"test four";s:4:"ival";s:2:"22";s:4:"fval";s:10:"-40.000000";s:1:"a";s:1:"1";}}}i:33;a:3:{s:8:"sphinxql";s:82:"select *, ival<>11 and ival<>12 and ival<>13 and ival<>14 as a from test where a>0";s:10:"total_rows";i:1;s:4:"rows";a:1:{i:0;a:5:{s:2:"id";s:1:"4";s:5:"title";s:9:"test four";s:4:"ival";s:2:"22";s:4:"fval";s:10:"-40.000000";s:1:"a";s:1:"1";}}}i:34;a:3:{s:8:"sphinxql";s:92:"select *, ival<>11 and ival<>12 and ival<>13 and ival<>14 and id>=4 as a from test where a>0";s:10:"total_rows";i:1;s:4:"rows";a:1:{i:0;a:5:{s:2:"id";s:1:"4";s:5:"title";s:9:"test four";s:4:"ival";s:2:"22";s:4:"fval";s:10:"-40.000000";s:1:"a";s:1:"1";}}}i:35;a:2:{s:8:"sphinxql";s:40:"UPDATE mva SET mva = () WHERE id in (10)";s:14:"total_affected";i:1;}i:36;a:3:{s:8:"sphinxql";s:54:"select id, mva a, least(a) lt, greatest(a) gr from mva";s:10:"total_rows";i:1;s:4:"rows";a:1:{i:0;a:4:{s:2:"id";s:2:"10";s:1:"a";s:0:"";s:2:"lt";s:1:"0";s:2:"gr";s:1:"0";}}}}i:1;a:37:{i:0;a:3:{s:8:"sphinxql";s:56:"select * from test where match('test') order by fval asc";s:10:"total_rows";i:4;s:4:"rows";a:4:{i:0;a:4:{s:2:"id";s:1:"4";s:5:"title";s:9:"test four";s:4:"ival";s:2:"22";s:4:"fval";s:10:"-40.000000";}i:1;a:4:{s:2:"id";s:1:"3";s:5:"title";s:10:"test three";s:4:"ival";s:2:"11";s:4:"fval";s:10:"-30.000000";}i:2;a:4:{s:2:"id";s:1:"1";s:5:"title";s:8:"test one";s:4:"ival";s:2:"11";s:4:"fval";s:9:"10.000000";}i:3;a:4:{s:2:"id";s:1:"2";s:5:"title";s:8:"test two";s:4:"ival";s:2:"11";s:4:"fval";s:9:"20.000000";}}}i:1;a:3:{s:8:"sphinxql";s:69:"select *, fval+1 as f1 from test where match('test') order by f1 desc";s:10:"total_rows";i:4;s:4:"rows";a:4:{i:0;a:5:{s:2:"id";s:1:"2";s:5:"title";s:8:"test two";s:4:"ival";s:2:"11";s:4:"fval";s:9:"20.000000";s:2:"f1";s:9:"21.000000";}i:1;a:5:{s:2:"id";s:1:"1";s:5:"title";s:8:"test one";s:4:"ival";s:2:"11";s:4:"fval";s:9:"10.000000";s:2:"f1";s:9:"11.000000";}i:2;a:5:{s:2:"id";s:1:"3";s:5:"title";s:10:"test three";s:4:"ival";s:2:"11";s:4:"fval";s:10:"-30.000000";s:2:"f1";s:10:"-29.000000";}i:3;a:5:{s:2:"id";s:1:"4";s:5:"title";s:9:"test four";s:4:"ival";s:2:"22";s:4:"fval";s:10:"-40.000000";s:2:"f1";s:10:"-39.000000";}}}i:2;a:3:{s:8:"sphinxql";s:32:"select * from test group by fval";s:10:"total_rows";i:4;s:4:"rows";a:4:{i:0;a:4:{s:2:"id";s:1:"1";s:5:"title";s:8:"test one";s:4:"ival";s:2:"11";s:4:"fval";s:9:"10.000000";}i:1;a:4:{s:2:"id";s:1:"2";s:5:"title";s:8:"test two";s:4:"ival";s:2:"11";s:4:"fval";s:9:"20.000000";}i:2;a:4:{s:2:"id";s:1:"3";s:5:"title";s:10:"test three";s:4:"ival";s:2:"11";s:4:"fval";s:10:"-30.000000";}i:3;a:4:{s:2:"id";s:1:"4";s:5:"title";s:9:"test four";s:4:"ival";s:2:"22";s:4:"fval";s:10:"-40.000000";}}}i:3;a:3:{s:8:"sphinxql";s:44:"select *, ival-1 as i1 from test group by i1";s:10:"total_rows";i:2;s:4:"rows";a:2:{i:0;a:5:{s:2:"id";s:1:"1";s:5:"title";s:8:"test one";s:4:"ival";s:2:"11";s:4:"fval";s:9:"10.000000";s:2:"i1";s:2:"10";}i:1;a:5:{s:2:"id";s:1:"4";s:5:"title";s:9:"test four";s:4:"ival";s:2:"22";s:4:"fval";s:10:"-40.000000";s:2:"i1";s:2:"21";}}}i:4;a:3:{s:8:"sphinxql";s:59:"select *, weight()+ival as i1 from test where match('test')";s:10:"total_rows";i:4;s:4:"rows";a:4:{i:0;a:5:{s:2:"id";s:1:"1";s:5:"title";s:8:"test one";s:4:"ival";s:2:"11";s:4:"fval";s:9:"10.000000";s:2:"i1";s:4:"1315";}i:1;a:5:{s:2:"id";s:1:"2";s:5:"title";s:8:"test two";s:4:"ival";s:2:"11";s:4:"fval";s:9:"20.000000";s:2:"i1";s:4:"1315";}i:2;a:5:{s:2:"id";s:1:"3";s:5:"title";s:10:"test three";s:4:"ival";s:2:"11";s:4:"fval";s:10:"-30.000000";s:2:"i1";s:4:"1315";}i:3;a:5:{s:2:"id";s:1:"4";s:5:"title";s:9:"test four";s:4:"ival";s:2:"22";s:4:"fval";s:10:"-40.000000";s:2:"i1";s:4:"1326";}}}i:5;a:3:{s:8:"sphinxql";s:71:"select *, weight()+ival as i1 from test where match('test') and i1>1315";s:10:"total_rows";i:1;s:4:"rows";a:1:{i:0;a:5:{s:2:"id";s:1:"4";s:5:"title";s:9:"test four";s:4:"ival";s:2:"22";s:4:"fval";s:10:"-40.000000";s:2:"i1";s:4:"1326";}}}i:6;a:3:{s:8:"sphinxql";s:92:"select *, weight() as w, w+ival as i1, i1+10 as i2 from test where match('test') and i2>1325";s:10:"total_rows";i:1;s:4:"rows";a:1:{i:0;a:7:{s:2:"id";s:1:"4";s:5:"title";s:9:"test four";s:4:"ival";s:2:"22";s:4:"fval";s:10:"-40.000000";s:1:"w";s:4:"1304";s:2:"i1";s:4:"1326";s:2:"i2";s:4:"1336";}}}i:7;a:3:{s:8:"sphinxql";s:66:"select *, 10+ival as i1, 50+i1 as i2 from test where match('test')";s:10:"total_rows";i:4;s:4:"rows";a:4:{i:0;a:6:{s:2:"id";s:1:"1";s:5:"title";s:8:"test one";s:4:"ival";s:2:"11";s:4:"fval";s:9:"10.000000";s:2:"i1";s:2:"21";s:2:"i2";s:2:"71";}i:1;a:6:{s:2:"id";s:1:"2";s:5:"title";s:8:"test two";s:4:"ival";s:2:"11";s:4:"fval";s:9:"20.000000";s:2:"i1";s:2:"21";s:2:"i2";s:2:"71";}i:2;a:6:{s:2:"id";s:1:"3";s:5:"title";s:10:"test three";s:4:"ival";s:2:"11";s:4:"fval";s:10:"-30.000000";s:2:"i1";s:2:"21";s:2:"i2";s:2:"71";}i:3;a:6:{s:2:"id";s:1:"4";s:5:"title";s:9:"test four";s:4:"ival";s:2:"22";s:4:"fval";s:10:"-40.000000";s:2:"i1";s:2:"32";s:2:"i2";s:2:"82";}}}i:8;a:3:{s:8:"sphinxql";s:46:"select *, 10+ival as i1, 50+i1 as i2 from test";s:10:"total_rows";i:4;s:4:"rows";a:4:{i:0;a:6:{s:2:"id";s:1:"1";s:5:"title";s:8:"test one";s:4:"ival";s:2:"11";s:4:"fval";s:9:"10.000000";s:2:"i1";s:2:"21";s:2:"i2";s:2:"71";}i:1;a:6:{s:2:"id";s:1:"2";s:5:"title";s:8:"test two";s:4:"ival";s:2:"11";s:4:"fval";s:9:"20.000000";s:2:"i1";s:2:"21";s:2:"i2";s:2:"71";}i:2;a:6:{s:2:"id";s:1:"3";s:5:"title";s:10:"test three";s:4:"ival";s:2:"11";s:4:"fval";s:10:"-30.000000";s:2:"i1";s:2:"21";s:2:"i2";s:2:"71";}i:3;a:6:{s:2:"id";s:1:"4";s:5:"title";s:9:"test four";s:4:"ival";s:2:"22";s:4:"fval";s:10:"-40.000000";s:2:"i1";s:2:"32";s:2:"i2";s:2:"82";}}}i:9;a:3:{s:8:"sphinxql";s:59:"select *, 10+ival as i1, 50+i1 as i2, i2*10 as i3 from test";s:10:"total_rows";i:4;s:4:"rows";a:4:{i:0;a:7:{s:2:"id";s:1:"1";s:5:"title";s:8:"test one";s:4:"ival";s:2:"11";s:4:"fval";s:9:"10.000000";s:2:"i1";s:2:"21";s:2:"i2";s:2:"71";s:2:"i3";s:3:"710";}i:1;a:7:{s:2:"id";s:1:"2";s:5:"title";s:8:"test two";s:4:"ival";s:2:"11";s:4:"fval";s:9:"20.000000";s:2:"i1";s:2:"21";s:2:"i2";s:2:"71";s:2:"i3";s:3:"710";}i:2;a:7:{s:2:"id";s:1:"3";s:5:"title";s:10:"test three";s:4:"ival";s:2:"11";s:4:"fval";s:10:"-30.000000";s:2:"i1";s:2:"21";s:2:"i2";s:2:"71";s:2:"i3";s:3:"710";}i:3;a:7:{s:2:"id";s:1:"4";s:5:"title";s:9:"test four";s:4:"ival";s:2:"22";s:4:"fval";s:10:"-40.000000";s:2:"i1";s:2:"32";s:2:"i2";s:2:"82";s:2:"i3";s:3:"820";}}}i:10;a:3:{s:8:"sphinxql";s:62:"select *, 10+ival as i1, 50+i1 as i2, i2*10-i1 as i3 from test";s:10:"total_rows";i:4;s:4:"rows";a:4:{i:0;a:7:{s:2:"id";s:1:"1";s:5:"title";s:8:"test one";s:4:"ival";s:2:"11";s:4:"fval";s:9:"10.000000";s:2:"i1";s:2:"21";s:2:"i2";s:2:"71";s:2:"i3";s:3:"689";}i:1;a:7:{s:2:"id";s:1:"2";s:5:"title";s:8:"test two";s:4:"ival";s:2:"11";s:4:"fval";s:9:"20.000000";s:2:"i1";s:2:"21";s:2:"i2";s:2:"71";s:2:"i3";s:3:"689";}i:2;a:7:{s:2:"id";s:1:"3";s:5:"title";s:10:"test three";s:4:"ival";s:2:"11";s:4:"fval";s:10:"-30.000000";s:2:"i1";s:2:"21";s:2:"i2";s:2:"71";s:2:"i3";s:3:"689";}i:3;a:7:{s:2:"id";s:1:"4";s:5:"title";s:9:"test four";s:4:"ival";s:2:"22";s:4:"fval";s:10:"-40.000000";s:2:"i1";s:2:"32";s:2:"i2";s:2:"82";s:2:"i3";s:3:"788";}}}i:11;a:3:{s:8:"sphinxql";s:61:"select *, 10+ival as i1, 50+i1 as i2, i2*fval as i3 from test";s:10:"total_rows";i:4;s:4:"rows";a:4:{i:0;a:7:{s:2:"id";s:1:"1";s:5:"title";s:8:"test one";s:4:"ival";s:2:"11";s:4:"fval";s:9:"10.000000";s:2:"i1";s:2:"21";s:2:"i2";s:2:"71";s:2:"i3";s:10:"710.000000";}i:1;a:7:{s:2:"id";s:1:"2";s:5:"title";s:8:"test two";s:4:"ival";s:2:"11";s:4:"fval";s:9:"20.000000";s:2:"i1";s:2:"21";s:2:"i2";s:2:"71";s:2:"i3";s:11:"1420.000000";}i:2;a:7:{s:2:"id";s:1:"3";s:5:"title";s:10:"test three";s:4:"ival";s:2:"11";s:4:"fval";s:10:"-30.000000";s:2:"i1";s:2:"21";s:2:"i2";s:2:"71";s:2:"i3";s:12:"-2130.000000";}i:3;a:7:{s:2:"id";s:1:"4";s:5:"title";s:9:"test four";s:4:"ival";s:2:"22";s:4:"fval";s:10:"-40.000000";s:2:"i1";s:2:"32";s:2:"i2";s:2:"82";s:2:"i3";s:12:"-3280.000000";}}}i:12;a:3:{s:8:"sphinxql";s:77:"select *, 10+ival as i1, 50+i1 as i2, i2*fval as i3 from test order by i3 asc";s:10:"total_rows";i:4;s:4:"rows";a:4:{i:0;a:7:{s:2:"id";s:1:"4";s:5:"title";s:9:"test four";s:4:"ival";s:2:"22";s:4:"fval";s:10:"-40.000000";s:2:"i1";s:2:"32";s:2:"i2";s:2:"82";s:2:"i3";s:12:"-3280.000000";}i:1;a:7:{s:2:"id";s:1:"3";s:5:"title";s:10:"test three";s:4:"ival";s:2:"11";s:4:"fval";s:10:"-30.000000";s:2:"i1";s:2:"21";s:2:"i2";s:2:"71";s:2:"i3";s:12:"-2130.000000";}i:2;a:7:{s:2:"id";s:1:"1";s:5:"title";s:8:"test one";s:4:"ival";s:2:"11";s:4:"fval";s:9:"10.000000";s:2:"i1";s:2:"21";s:2:"i2";s:2:"71";s:2:"i3";s:10:"710.000000";}i:3;a:7:{s:2:"id";s:1:"2";s:5:"title";s:8:"test two";s:4:"ival";s:2:"11";s:4:"fval";s:9:"20.000000";s:2:"i1";s:2:"21";s:2:"i2";s:2:"71";s:2:"i3";s:11:"1420.000000";}}}i:13;a:3:{s:8:"sphinxql";s:86:"select *, 10+ival as i1, 50+i1 as i2, i2*fval as i3 from test order by i1 asc, i3 desc";s:10:"total_rows";i:4;s:4:"rows";a:4:{i:0;a:7:{s:2:"id";s:1:"2";s:5:"title";s:8:"test two";s:4:"ival";s:2:"11";s:4:"fval";s:9:"20.000000";s:2:"i1";s:2:"21";s:2:"i2";s:2:"71";s:2:"i3";s:11:"1420.000000";}i:1;a:7:{s:2:"id";s:1:"1";s:5:"title";s:8:"test one";s:4:"ival";s:2:"11";s:4:"fval";s:9:"10.000000";s:2:"i1";s:2:"21";s:2:"i2";s:2:"71";s:2:"i3";s:10:"710.000000";}i:2;a:7:{s:2:"id";s:1:"3";s:5:"title";s:10:"test three";s:4:"ival";s:2:"11";s:4:"fval";s:10:"-30.000000";s:2:"i1";s:2:"21";s:2:"i2";s:2:"71";s:2:"i3";s:12:"-2130.000000";}i:3;a:7:{s:2:"id";s:1:"4";s:5:"title";s:9:"test four";s:4:"ival";s:2:"22";s:4:"fval";s:10:"-40.000000";s:2:"i1";s:2:"32";s:2:"i2";s:2:"82";s:2:"i3";s:12:"-3280.000000";}}}i:14;a:3:{s:8:"sphinxql";s:73:"select *, 10+ival as i1, 50+i1 as i2, i2*fval as i3 from test group by i2";s:10:"total_rows";i:2;s:4:"rows";a:2:{i:0;a:7:{s:2:"id";s:1:"1";s:5:"title";s:8:"test one";s:4:"ival";s:2:"11";s:4:"fval";s:9:"10.000000";s:2:"i1";s:2:"21";s:2:"i2";s:2:"71";s:2:"i3";s:10:"710.000000";}i:1;a:7:{s:2:"id";s:1:"4";s:5:"title";s:9:"test four";s:4:"ival";s:2:"22";s:4:"fval";s:10:"-40.000000";s:2:"i1";s:2:"32";s:2:"i2";s:2:"82";s:2:"i3";s:12:"-3280.000000";}}}i:15;a:3:{s:8:"sphinxql";s:71:"select *, 10+ival as i1, 50+i1 as i2, i2*id as i3 from test group by i3";s:10:"total_rows";i:4;s:4:"rows";a:4:{i:0;a:7:{s:2:"id";s:1:"1";s:5:"title";s:8:"test one";s:4:"ival";s:2:"11";s:4:"fval";s:9:"10.000000";s:2:"i1";s:2:"21";s:2:"i2";s:2:"71";s:2:"i3";s:2:"71";}i:1;a:7:{s:2:"id";s:1:"2";s:5:"title";s:8:"test two";s:4:"ival";s:2:"11";s:4:"fval";s:9:"20.000000";s:2:"i1";s:2:"21";s:2:"i2";s:2:"71";s:2:"i3";s:3:"142";}i:2;a:7:{s:2:"id";s:1:"3";s:5:"title";s:10:"test three";s:4:"ival";s:2:"11";s:4:"fval";s:10:"-30.000000";s:2:"i1";s:2:"21";s:2:"i2";s:2:"71";s:2:"i3";s:3:"213";}i:3;a:7:{s:2:"id";s:1:"4";s:5:"title";s:9:"test four";s:4:"ival";s:2:"22";s:4:"fval";s:10:"-40.000000";s:2:"i1";s:2:"32";s:2:"i2";s:2:"82";s:2:"i3";s:3:"328";}}}i:16;a:3:{s:8:"sphinxql";s:54:"select *, IN ( mva, 11 ) as cnd1 from mva where cnd1=1";s:10:"total_rows";i:1;s:4:"rows";a:1:{i:0;a:5:{s:2:"id";s:2:"10";s:4:"test";s:4:"test";s:3:"idd";s:1:"1";s:3:"mva";s:11:"10,11,12,13";s:4:"cnd1";s:1:"1";}}}i:17;a:3:{s:8:"sphinxql";s:113:"select id, idd1, idd2, idd1 + idd2 as i2 from final group by idd1 order by id desc limit 0,2 option max_matches=4";s:10:"total_rows";i:2;s:4:"rows";a:2:{i:0;a:4:{s:2:"id";s:2:"35";s:4:"idd1";s:3:"305";s:4:"idd2";s:5:"35000";s:2:"i2";s:5:"35305";}i:1;a:4:{s:2:"id";s:2:"34";s:4:"idd1";s:3:"304";s:4:"idd2";s:5:"34000";s:2:"i2";s:5:"34304";}}}i:18;a:3:{s:8:"sphinxql";s:113:"select id, idd1, idd2, idd1 + idd2 as i2 from final group by idd1 order by id desc limit 2,2 option max_matches=4";s:10:"total_rows";i:2;s:4:"rows";a:2:{i:0;a:4:{s:2:"id";s:2:"33";s:4:"idd1";s:3:"303";s:4:"idd2";s:5:"33000";s:2:"i2";s:5:"33303";}i:1;a:4:{s:2:"id";s:2:"32";s:4:"idd1";s:3:"302";s:4:"idd2";s:5:"32000";s:2:"i2";s:5:"32302";}}}i:19;a:3:{s:8:"sphinxql";s:35:"select * from test where fval<=10.0";s:10:"total_rows";i:3;s:4:"rows";a:3:{i:0;a:4:{s:2:"id";s:1:"1";s:5:"title";s:8:"test one";s:4:"ival";s:2:"11";s:4:"fval";s:9:"10.000000";}i:1;a:4:{s:2:"id";s:1:"3";s:5:"title";s:10:"test three";s:4:"ival";s:2:"11";s:4:"fval";s:10:"-30.000000";}i:2;a:4:{s:2:"id";s:1:"4";s:5:"title";s:9:"test four";s:4:"ival";s:2:"22";s:4:"fval";s:10:"-40.000000";}}}i:20;a:3:{s:8:"sphinxql";s:35:"select * from test where fval>=10.0";s:10:"total_rows";i:2;s:4:"rows";a:2:{i:0;a:4:{s:2:"id";s:1:"1";s:5:"title";s:8:"test one";s:4:"ival";s:2:"11";s:4:"fval";s:9:"10.000000";}i:1;a:4:{s:2:"id";s:1:"2";s:5:"title";s:8:"test two";s:4:"ival";s:2:"11";s:4:"fval";s:9:"20.000000";}}}i:21;a:3:{s:8:"sphinxql";s:34:"select * from test where fval<10.0";s:10:"total_rows";i:2;s:4:"rows";a:2:{i:0;a:4:{s:2:"id";s:1:"3";s:5:"title";s:10:"test three";s:4:"ival";s:2:"11";s:4:"fval";s:10:"-30.000000";}i:1;a:4:{s:2:"id";s:1:"4";s:5:"title";s:9:"test four";s:4:"ival";s:2:"22";s:4:"fval";s:10:"-40.000000";}}}i:22;a:3:{s:8:"sphinxql";s:34:"select * from test where fval>10.0";s:10:"total_rows";i:1;s:4:"rows";a:1:{i:0;a:4:{s:2:"id";s:1:"2";s:5:"title";s:8:"test two";s:4:"ival";s:2:"11";s:4:"fval";s:9:"20.000000";}}}i:23;a:3:{s:8:"sphinxql";s:34:"select * from test where fval=10.0";s:10:"total_rows";i:1;s:4:"rows";a:1:{i:0;a:4:{s:2:"id";s:1:"1";s:5:"title";s:8:"test one";s:4:"ival";s:2:"11";s:4:"fval";s:9:"10.000000";}}}i:24;a:3:{s:8:"sphinxql";s:35:"select * from test where fval<>10.0";s:10:"total_rows";i:3;s:4:"rows";a:3:{i:0;a:4:{s:2:"id";s:1:"2";s:5:"title";s:8:"test two";s:4:"ival";s:2:"11";s:4:"fval";s:9:"20.000000";}i:1;a:4:{s:2:"id";s:1:"3";s:5:"title";s:10:"test three";s:4:"ival";s:2:"11";s:4:"fval";s:10:"-30.000000";}i:2;a:4:{s:2:"id";s:1:"4";s:5:"title";s:9:"test four";s:4:"ival";s:2:"22";s:4:"fval";s:10:"-40.000000";}}}i:25;a:2:{s:8:"sphinxql";s:44:"select * from test_lengths where title_len=0";s:10:"total_rows";i:0;}i:26;a:3:{s:8:"sphinxql";s:44:"select * from test_lengths where title_len=2";s:10:"total_rows";i:4;s:4:"rows";a:4:{i:0;a:5:{s:2:"id";s:1:"1";s:5:"title";s:8:"test one";s:4:"ival";s:2:"11";s:4:"fval";s:9:"10.000000";s:9:"title_len";s:1:"2";}i:1;a:5:{s:2:"id";s:1:"2";s:5:"title";s:8:"test two";s:4:"ival";s:2:"11";s:4:"fval";s:9:"20.000000";s:9:"title_len";s:1:"2";}i:2;a:5:{s:2:"id";s:1:"3";s:5:"title";s:10:"test three";s:4:"ival";s:2:"11";s:4:"fval";s:10:"-30.000000";s:9:"title_len";s:1:"2";}i:3;a:5:{s:2:"id";s:1:"4";s:5:"title";s:9:"test four";s:4:"ival";s:2:"22";s:4:"fval";s:10:"-40.000000";s:9:"title_len";s:1:"2";}}}i:27;a:3:{s:8:"sphinxql";s:45:"select 50+ival*10 as ii1, 50+bad*10 from test";s:5:"errno";i:1064;s:5:"error";s:44:"table test: parse error: unknown column: bad";}i:28;a:3:{s:8:"sphinxql";s:63:"select ival*ival as p, sum(p), avg(p), min(p), max(p) from test";s:10:"total_rows";i:1;s:4:"rows";a:1:{i:0;a:5:{s:1:"p";s:3:"121";s:6:"sum(p)";s:3:"847";s:6:"avg(p)";s:10:"211.750000";s:6:"min(p)";s:3:"121";s:6:"max(p)";s:3:"484";}}}i:29;a:3:{s:8:"sphinxql";s:31:"select mva a, least(a) from mva";s:10:"total_rows";i:1;s:4:"rows";a:1:{i:0;a:2:{s:1:"a";s:11:"10,11,12,13";s:8:"least(a)";s:2:"10";}}}i:30;a:3:{s:8:"sphinxql";s:43:"select *, ival<>11 as a from test where a>0";s:10:"total_rows";i:1;s:4:"rows";a:1:{i:0;a:5:{s:2:"id";s:1:"4";s:5:"title";s:9:"test four";s:4:"ival";s:2:"22";s:4:"fval";s:10:"-40.000000";s:1:"a";s:1:"1";}}}i:31;a:3:{s:8:"sphinxql";s:56:"select *, ival<>11 and ival<>12 as a from test where a>0";s:10:"total_rows";i:1;s:4:"rows";a:1:{i:0;a:5:{s:2:"id";s:1:"4";s:5:"title";s:9:"test four";s:4:"ival";s:2:"22";s:4:"fval";s:10:"-40.000000";s:1:"a";s:1:"1";}}}i:32;a:3:{s:8:"sphinxql";s:69:"select *, ival<>11 and ival<>12 and ival<>13 as a from test where a>0";s:10:"total_rows";i:1;s:4:"rows";a:1:{i:0;a:5:{s:2:"id";s:1:"4";s:5:"title";s:9:"test four";s:4:"ival";s:2:"22";s:4:"fval";s:10:"-40.000000";s:1:"a";s:1:"1";}}}i:33;a:3:{s:8:"sphinxql";s:82:"select *, ival<>11 and ival<>12 and ival<>13 and ival<>14 as a from test where a>0";s:10:"total_rows";i:1;s:4:"rows";a:1:{i:0;a:5:{s:2:"id";s:1:"4";s:5:"title";s:9:"test four";s:4:"ival";s:2:"22";s:4:"fval";s:10:"-40.000000";s:1:"a";s:1:"1";}}}i:34;a:3:{s:8:"sphinxql";s:92:"select *, ival<>11 and ival<>12 and ival<>13 and ival<>14 and id>=4 as a from test where a>0";s:10:"total_rows";i:1;s:4:"rows";a:1:{i:0;a:5:{s:2:"id";s:1:"4";s:5:"title";s:9:"test four";s:4:"ival";s:2:"22";s:4:"fval";s:10:"-40.000000";s:1:"a";s:1:"1";}}}i:35;a:2:{s:8:"sphinxql";s:40:"UPDATE mva SET mva = () WHERE id in (10)";s:14:"total_affected";i:1;}i:36;a:3:{s:8:"sphinxql";s:54:"select id, mva a, least(a) lt, greatest(a) gr from mva";s:10:"total_rows";i:1;s:4:"rows";a:1:{i:0;a:4:{s:2:"id";s:2:"10";s:1:"a";s:0:"";s:2:"lt";s:1:"0";s:2:"gr";s:1:"0";}}}}}
+\ No newline at end of file
+
+----------------------------------------
+
+File: test/test_119/test.xml
+Status: modified
+Changes: +4 -0
+Diff:
+@@ -152,6 +152,10 @@ INSERT INTO `test_table` VALUES
+ 	select *, ival&lt;>11 and ival&lt;>12 and ival&lt;>13 and ival&lt;>14 as a from test where a>0;
+ 	select *, ival&lt;>11 and ival&lt;>12 and ival&lt;>13 and ival&lt;>14 and id>=4 as a from test where a>0;
+ 
++	<!-- regression: crash on mva min or max for empty mva array -->
++	UPDATE mva SET mva = () WHERE id in (10);
++	select id, mva a, least(a) lt, greatest(a) gr from mva;
++
+ </sphinxql>
+ </queries>
+
+----------------------------------------
+
+File: test/test_278/model.bin
+Status: modified
+Changes: +0 -0
+
+----------------------------------------
+
+File: test/test_278/test.xml
+Status: modified
+Changes: +6 -0
+Diff:
+@@ -331,6 +331,12 @@ select id, count(*) from join1 left join join2 on join1.id=join2.id;
+ select id, * from join1 join join2 on join1.id=join2.id;
+ select id, count(*) from join1 join join2 on join1.id=join2.id;
+ 
++<!-- CONCAT of joined json -->
++select to_string(join2.j.table) as table2, concat(to_string(j.table), table2) as test from join1 join join2 on join1.id = join2.id;
++
++<!-- sort by CONCAT of joined json -->
++select to_string(join2.j.table) as table2, concat(to_string(j.table), table2) as test from join1 join join2 on join1.id = join2.id order by test asc;
++
+
+----------------------------------------
+
+File: test/test_279/model.bin
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -1 +1 @@
+-a:1:{i:0;a:27:{i:0;a:2:{s:8:"sphinxql";s:105:"CREATE TABLE users (id bigint, name text, surname text, email text, reg_date timestamp) engine='columnar'";s:14:"total_affected";i:0;}i:1;a:2:{s:8:"sphinxql";s:184:"CREATE TABLE orders (id bigint, user_id bigint, name text, description text, price float, order_date timestamp, attr json, region_id int, confirm bool, analogs multi) engine='columnar'";s:14:"total_affected";i:0;}i:2;a:2:{s:8:"sphinxql";s:107:"INSERT INTO users (id, name, surname, email, reg_date) VALUES (1, 'Fedor', 'Zaycev', '1@1.com', 1708865549)";s:14:"total_affected";i:1;}i:3;a:2:{s:8:"sphinxql";s:214:"INSERT INTO orders (id, user_id, name, description, price, order_date, attr, region_id, confirm, analogs) VALUES (0, 1, 'iPhone', '14Pro', 1500.50, 1708866233, '{"color":"black","size":14}', 178, 'TRUE', (9,11,15))";s:14:"total_affected";i:1;}i:4;a:3:{s:8:"sphinxql";s:94:"SELECT id, name FROM users INNER JOIN orders ON users.id=orders.user_id ORDER BY orders.id ASC";s:10:"total_rows";i:1;s:4:"rows";a:1:{i:0;a:2:{s:2:"id";s:1:"1";s:4:"name";s:5:"Fedor";}}}i:5;a:2:{s:8:"sphinxql";s:16:"DROP TABLE users";s:14:"total_affected";i:0;}i:6;a:2:{s:8:"sphinxql";s:17:"DROP TABLE orders";s:14:"total_affected";i:0;}i:7;a:2:{s:8:"sphinxql";s:35:"CREATE TABLE tbl1 engine='columnar'";s:14:"total_affected";i:0;}i:8;a:2:{s:8:"sphinxql";s:34:"CREATE TABLE tbl2 (tbl1_id bigint)";s:14:"total_affected";i:0;}i:9;a:2:{s:8:"sphinxql";s:27:"INSERT INTO tbl1 VALUES (1)";s:14:"total_affected";i:1;}i:10;a:2:{s:8:"sphinxql";s:30:"INSERT INTO tbl2 VALUES (1, 1)";s:14:"total_affected";i:1;}i:11;a:3:{s:8:"sphinxql";s:69:"select id from tbl1 join tbl2 on tbl1.id=tbl2.tbl1_id order by id asc";s:10:"total_rows";i:1;s:4:"rows";a:1:{i:0;a:1:{s:2:"id";s:1:"1";}}}i:12;a:2:{s:8:"sphinxql";s:15:"drop table tbl2";s:14:"total_affected";i:0;}i:13;a:2:{s:8:"sphinxql";s:15:"drop table tbl1";s:14:"total_affected";i:0;}i:14;a:2:{s:8:"sphinxql";s:111:"create table join1 ( id bigint, title text, string_id integer, tmp string attribute, j json ) engine='columnar'";s:14:"total_affected";i:0;}i:15;a:2:{s:8:"sphinxql";s:93:"create table join2 ( id bigint, title text, name string attribute, j json ) engine='columnar'";s:14:"total_affected";i:0;}i:16;a:2:{s:8:"sphinxql";s:76:"insert into join1 values (1, 'title1', 1, 'tmp1', '{"a":1,"table":"join1"}')";s:14:"total_affected";i:1;}i:17;a:2:{s:8:"sphinxql";s:76:"insert into join1 values (2, 'title2', 2, 'tmp2', '{"b":2,"table":"join1"}')";s:14:"total_affected";i:1;}i:18;a:2:{s:8:"sphinxql";s:76:"insert into join1 values (3, 'title3', 3, 'tmp3', '{"c":3,"table":"join1"}')";s:14:"total_affected";i:1;}i:19;a:2:{s:8:"sphinxql";s:76:"insert into join1 values (4, 'title4', 4, 'tmp4', '{"d":4,"table":"join1"}')";s:14:"total_affected";i:1;}i:20;a:2:{s:8:"sphinxql";s:74:"insert into join2 values (1, 'title1', 'name1', '{"a":1,"table":"join2"}')";s:14:"total_affected";i:1;}i:21;a:2:{s:8:"sphinxql";s:74:"insert into join2 values (2, 'title2', 'name2', '{"b":2,"table":"join2"}')";s:14:"total_affected";i:1;}i:22;a:2:{s:8:"sphinxql";s:74:"insert into join2 values (3, 'title3', 'name3', '{"b":2,"table":"join2"}')";s:14:"total_affected";i:1;}i:23;a:3:{s:8:"sphinxql";s:117:"select * from join1 inner join join2 on join1.string_id = join2.id where join2.name = 'name1' or id=2 order by id asc";s:10:"total_rows";i:2;s:4:"rows";a:2:{i:0;a:9:{s:2:"id";s:1:"1";s:5:"title";s:6:"title1";s:9:"string_id";s:1:"1";s:3:"tmp";s:4:"tmp1";s:1:"j";s:23:"{"a":1,"table":"join1"}";s:8:"join2.id";s:1:"1";s:10:"join2.name";s:5:"name1";s:7:"join2.j";s:23:"{"a":1,"table":"join2"}";s:11:"join2.title";s:6:"title1";}i:1;a:9:{s:2:"id";s:1:"2";s:5:"title";s:6:"title2";s:9:"string_id";s:1:"2";s:3:"tmp";s:4:"tmp2";s:1:"j";s:23:"{"b":2,"table":"join1"}";s:8:"join2.id";s:1:"2";s:10:"join2.name";s:5:"name2";s:7:"join2.j";s:23:"{"b":2,"table":"join2"}";s:11:"join2.title";s:6:"title2";}}}i:24;a:3:{s:8:"sphinxql";s:108:"select * from join1 inner join join2 on join1.string_id = join2.id where id=1 or join2.j.b=2 order by id asc";s:10:"total_rows";i:3;s:4:"rows";a:3:{i:0;a:10:{s:2:"id";s:1:"1";s:5:"title";s:6:"title1";s:9:"string_id";s:1:"1";s:3:"tmp";s:4:"tmp1";s:1:"j";s:23:"{"a":1,"table":"join1"}";s:8:"join2.id";s:1:"1";s:10:"join2.name";s:5:"name1";s:7:"join2.j";s:23:"{"a":1,"table":"join2"}";s:11:"join2.title";s:6:"title1";s:9:"join2.j.b";s:1:"0";}i:1;a:10:{s:2:"id";s:1:"2";s:5:"title";s:6:"title2";s:9:"string_id";s:1:"2";s:3:"tmp";s:4:"tmp2";s:1:"j";s:23:"{"b":2,"table":"join1"}";s:8:"join2.id";s:1:"2";s:10:"join2.name";s:5:"name2";s:7:"join2.j";s:23:"{"b":2,"table":"join2"}";s:11:"join2.title";s:6:"title2";s:9:"join2.j.b";s:1:"2";}i:2;a:10:{s:2:"id";s:1:"3";s:5:"title";s:6:"title3";s:9:"string_id";s:1:"3";s:3:"tmp";s:4:"tmp3";s:1:"j";s:23:"{"c":3,"table":"join1"}";s:8:"join2.id";s:1:"3";s:10:"join2.name";s:5:"name3";s:7:"join2.j";s:23:"{"b":2,"table":"join2"}";s:11:"join2.title";s:6:"title3";s:9:"join2.j.b";s:1:"2";}}}i:25;a:2:{s:8:"sphinxql";s:16:"drop table join1";s:14:"total_affected";i:0;}i:26;a:2:{s:8:"sphinxql";s:16:"drop table join2";s:14:"total_affected";i:0;}}}
+\ No newline at end of file
++a:1:{i:0;a:41:{i:0;a:2:{s:8:"sphinxql";s:105:"CREATE TABLE users (id bigint, name text, surname text, email text, reg_date timestamp) engine='columnar'";s:14:"total_affected";i:0;}i:1;a:2:{s:8:"sphinxql";s:184:"CREATE TABLE orders (id bigint, user_id bigint, name text, description text, price float, order_date timestamp, attr json, region_id int, confirm bool, analogs multi) engine='columnar'";s:14:"total_affected";i:0;}i:2;a:2:{s:8:"sphinxql";s:107:"INSERT INTO users (id, name, surname, email, reg_date) VALUES (1, 'Fedor', 'Zaycev', '1@1.com', 1708865549)";s:14:"total_affected";i:1;}i:3;a:2:{s:8:"sphinxql";s:214:"INSERT INTO orders (id, user_id, name, description, price, order_date, attr, region_id, confirm, analogs) VALUES (0, 1, 'iPhone', '14Pro', 1500.50, 1708866233, '{"color":"black","size":14}', 178, 'TRUE', (9,11,15))";s:14:"total_affected";i:1;}i:4;a:3:{s:8:"sphinxql";s:94:"SELECT id, name FROM users INNER JOIN orders ON users.id=orders.user_id ORDER BY orders.id ASC";s:10:"total_rows";i:1;s:4:"rows";a:1:{i:0;a:2:{s:2:"id";s:1:"1";s:4:"name";s:5:"Fedor";}}}i:5;a:2:{s:8:"sphinxql";s:16:"DROP TABLE users";s:14:"total_affected";i:0;}i:6;a:2:{s:8:"sphinxql";s:17:"DROP TABLE orders";s:14:"total_affected";i:0;}i:7;a:2:{s:8:"sphinxql";s:35:"CREATE TABLE tbl1 engine='columnar'";s:14:"total_affected";i:0;}i:8;a:2:{s:8:"sphinxql";s:34:"CREATE TABLE tbl2 (tbl1_id bigint)";s:14:"total_affected";i:0;}i:9;a:2:{s:8:"sphinxql";s:27:"INSERT INTO tbl1 VALUES (1)";s:14:"total_affected";i:1;}i:10;a:2:{s:8:"sphinxql";s:30:"INSERT INTO tbl2 VALUES (1, 1)";s:14:"total_affected";i:1;}i:11;a:3:{s:8:"sphinxql";s:69:"select id from tbl1 join tbl2 on tbl1.id=tbl2.tbl1_id order by id asc";s:10:"total_rows";i:1;s:4:"rows";a:1:{i:0;a:1:{s:2:"id";s:1:"1";}}}i:12;a:2:{s:8:"sphinxql";s:15:"drop table tbl2";s:14:"total_affected";i:0;}i:13;a:2:{s:8:"sphinxql";s:15:"drop table tbl1";s:14:"total_affected";i:0;}i:14;a:2:{s:8:"sphinxql";s:111:"create table join1 ( id bigint, title text, string_id integer, tmp string attribute, j json ) engine='columnar'";s:14:"total_affected";i:0;}i:15;a:2:{s:8:"sphinxql";s:93:"create table join2 ( id bigint, title text, name string attribute, j json ) engine='columnar'";s:14:"total_affected";i:0;}i:16;a:2:{s:8:"sphinxql";s:76:"insert into join1 values (1, 'title1', 1, 'tmp1', '{"a":1,"table":"join1"}')";s:14:"total_affected";i:1;}i:17;a:2:{s:8:"sphinxql";s:76:"insert into join1 values (2, 'title2', 2, 'tmp2', '{"b":2,"table":"join1"}')";s:14:"total_affected";i:1;}i:18;a:2:{s:8:"sphinxql";s:76:"insert into join1 values (3, 'title3', 3, 'tmp3', '{"c":3,"table":"join1"}')";s:14:"total_affected";i:1;}i:19;a:2:{s:8:"sphinxql";s:76:"insert into join1 values (4, 'title4', 4, 'tmp4', '{"d":4,"table":"join1"}')";s:14:"total_affected";i:1;}i:20;a:2:{s:8:"sphinxql";s:74:"insert into join2 values (1, 'title1', 'name1', '{"a":1,"table":"join2"}')";s:14:"total_affected";i:1;}i:21;a:2:{s:8:"sphinxql";s:74:"insert into join2 values (2, 'title2', 'name2', '{"b":2,"table":"join2"}')";s:14:"total_affected";i:1;}i:22;a:2:{s:8:"sphinxql";s:74:"insert into join2 values (3, 'title3', 'name3', '{"b":2,"table":"join2"}')";s:14:"total_affected";i:1;}i:23;a:3:{s:8:"sphinxql";s:117:"select * from join1 inner join join2 on join1.string_id = join2.id where join2.name = 'name1' or id=2 order by id asc";s:10:"total_rows";i:2;s:4:"rows";a:2:{i:0;a:9:{s:2:"id";s:1:"1";s:5:"title";s:6:"title1";s:9:"string_id";s:1:"1";s:3:"tmp";s:4:"tmp1";s:1:"j";s:23:"{"a":1,"table":"join1"}";s:8:"join2.id";s:1:"1";s:10:"join2.name";s:5:"name1";s:7:"join2.j";s:23:"{"a":1,"table":"join2"}";s:11:"join2.title";s:6:"title1";}i:1;a:9:{s:2:"id";s:1:"2";s:5:"title";s:6:"title2";s:9:"string_id";s:1:"2";s:3:"tmp";s:4:"tmp2";s:1:"j";s:23:"{"b":2,"table":"join1"}";s:8:"join2.id";s:1:"2";s:10:"join2.name";s:5:"name2";s:7:"join2.j";s:23:"{"b":2,"table":"join2"}";s:11:"join2.title";s:6:"title2";}}}i:24;a:3:{s:8:"sphinxql";s:108:"select * from join1 inner join join2 on join1.string_id = join2.id where id=1 or join2.j.b=2 order by id asc";s:10:"total_rows";i:3;s:4:"rows";a:3:{i:0;a:10:{s:2:"id";s:1:"1";s:5:"title";s:6:"title1";s:9:"string_id";s:1:"1";s:3:"tmp";s:4:"tmp1";s:1:"j";s:23:"{"a":1,"table":"join1"}";s:8:"join2.id";s:1:"1";s:10:"join2.name";s:5:"name1";s:7:"join2.j";s:23:"{"a":1,"table":"join2"}";s:11:"join2.title";s:6:"title1";s:9:"join2.j.b";s:1:"0";}i:1;a:10:{s:2:"id";s:1:"2";s:5:"title";s:6:"title2";s:9:"string_id";s:1:"2";s:3:"tmp";s:4:"tmp2";s:1:"j";s:23:"{"b":2,"table":"join1"}";s:8:"join2.id";s:1:"2";s:10:"join2.name";s:5:"name2";s:7:"join2.j";s:23:"{"b":2,"table":"join2"}";s:11:"join2.title";s:6:"title2";s:9:"join2.j.b";s:1:"2";}i:2;a:10:{s:2:"id";s:1:"3";s:5:"title";s:6:"title3";s:9:"string_id";s:1:"3";s:3:"tmp";s:4:"tmp3";s:1:"j";s:23:"{"c":3,"table":"join1"}";s:8:"join2.id";s:1:"3";s:10:"join2.name";s:5:"name3";s:7:"join2.j";s:23:"{"b":2,"table":"join2"}";s:11:"join2.title";s:6:"title3";s:9:"join2.j.b";s:1:"2";}}}i:25;a:2:{s:8:"sphinxql";s:16:"drop table join1";s:14:"total_affected";i:0;}i:26;a:2:{s:8:"sphinxql";s:16:"drop table join2";s:14:"total_affected";i:0;}i:27;a:2:{s:8:"sphinxql";s:111:"create table join1 ( id bigint, title text, string_id integer, tmp string attribute, j json ) engine='columnar'";s:14:"total_affected";i:0;}i:28;a:2:{s:8:"sphinxql";s:112:"create table join2 ( id bigint, title text, string_id integer, name string attribute engine='columnar', j json )";s:14:"total_affected";i:0;}i:29;a:2:{s:8:"sphinxql";s:85:"insert into join1 values (1, 'title1', 1, 'tmp1', '{"sort":5,"a":1,"table":"join1"}')";s:14:"total_affected";i:1;}i:30;a:2:{s:8:"sphinxql";s:85:"insert into join1 values (2, 'title2', 2, 'tmp2', '{"sort":6,"b":2,"table":"join1"}')";s:14:"total_affected";i:1;}i:31;a:2:{s:8:"sphinxql";s:85:"insert into join1 values (3, 'title3', 3, 'tmp3', '{"sort":7,"c":3,"table":"join1"}')";s:14:"total_affected";i:1;}i:32;a:2:{s:8:"sphinxql";s:85:"insert into join1 values (4, 'title4', 4, 'tmp4', '{"sort":8,"d":4,"table":"join1"}')";s:14:"total_affected";i:1;}i:33;a:2:{s:8:"sphinxql";s:87:"insert into join2 values (1, 'title1', 1, 'name1', '{"sort":10,"a":1,"table":"join2"}')";s:14:"total_affected";i:1;}i:34;a:2:{s:8:"sphinxql";s:86:"insert into join2 values (2, 'title2', 2, 'name2', '{"sort":5,"b":2,"table":"join2"}')";s:14:"total_affected";i:1;}i:35;a:3:{s:8:"sphinxql";s:100:"select id from join1 left join join2 on join1.string_id = join2.string_id where join2.name = 'name2'";s:10:"total_rows";i:1;s:4:"rows";a:1:{i:0;a:1:{s:2:"id";s:1:"2";}}}i:36;a:3:{s:8:"sphinxql";s:101:"select id from join1 inner join join2 on join1.string_id = join2.string_id where join2.name = 'name2'";s:10:"total_rows";i:1;s:4:"rows";a:1:{i:0;a:1:{s:2:"id";s:1:"2";}}}i:37;a:3:{s:8:"sphinxql";s:214:"select title, uint(join2.j.sort) as table2, weight() * (j.sort + table2) as test2 from join1 left join join2 on join1.string_id = join2.string_id where join2.name = 'name2' or join2.name is null order by test2 desc";s:10:"total_rows";i:3;s:4:"rows";a:3:{i:0;a:3:{s:5:"title";s:6:"title2";s:6:"table2";s:1:"5";s:5:"test2";s:2:"11";}i:1;a:3:{s:5:"title";s:6:"title4";s:6:"table2";s:4:"NULL";s:5:"test2";s:1:"8";}i:2;a:3:{s:5:"title";s:6:"title3";s:6:"table2";s:4:"NULL";s:5:"test2";s:1:"7";}}}i:38;a:3:{s:8:"sphinxql";s:207:"select title, join2.title, uint(join2.j.sort) as table2, weight() * (j.sort + table2) as test2 from join1 left join join2 on join1.string_id = join2.string_id where match('title2', join2) order by test2 desc";s:10:"total_rows";i:1;s:4:"rows";a:1:{i:0;a:4:{s:5:"title";s:6:"title2";s:11:"join2.title";s:6:"title2";s:6:"table2";s:1:"5";s:5:"test2";s:2:"11";}}}i:39;a:2:{s:8:"sphinxql";s:16:"drop table join1";s:14:"total_affected";i:0;}i:40;a:2:{s:8:"sphinxql";s:16:"drop table join2";s:14:"total_affected";i:0;}}}
+\ No newline at end of file
+
+----------------------------------------
+
+File: test/test_279/test.xml
+Status: modified
+Changes: +27 -0
+Diff:
+@@ -64,6 +64,33 @@ select * from join1 inner join join2 on join1.string_id = join2.id where id=1 or
+ drop table join1;
+ drop table join2;
+ 
++create table join1 ( id bigint, title text, string_id integer, tmp string attribute, j json ) engine='columnar';
++create table join2 ( id bigint, title text, string_id integer, name string attribute engine='columnar', j json );
++
++insert into join1 values (1, 'title1', 1, 'tmp1', '{"sort":5,"a":1,"table":"join1"}');
++insert into join1 values (2, 'title2', 2, 'tmp2', '{"sort":6,"b":2,"table":"join1"}');
++insert into join1 values (3, 'title3', 3, 'tmp3', '{"sort":7,"c":3,"table":"join1"}');
++insert into join1 values (4, 'title4', 4, 'tmp4', '{"sort":8,"d":4,"table":"join1"}');
+
+----------------------------------------
+
+File: test/test_334/model.bin
+Status: modified
+Changes: +17 -5
+Diff:
+@@ -1,4 +1,4 @@
+-a:1:{i:0;a:85:{i:0;a:6:{s:13:"http_endpoint";s:11:"json/search";s:11:"http_method";s:4:"POST";s:12:"http_request";s:68:"{ "index": "test1", "query": { "match": { "content": "first" } } } }";s:4:"rows";s:145:"{"timed_out":false,"hits":{"total":1,"total_relation":"eq","hits":[{"_id":1,"_score":1704,"_source":{"title":"1st","content":"first","gid":1}}]}}";s:9:"http_code";i:200;s:4:"http";i:1;}i:1;a:6:{s:13:"http_endpoint";s:11:"json/search";s:11:"http_method";s:4:"POST";s:12:"http_request";s:79:"{ "index": "test1", "query": { "match": { "content,title": "1st second" } } } }";s:4:"rows";s:222:"{"timed_out":false,"hits":{"total":2,"total_relation":"eq","hits":[{"_id":1,"_score":1602,"_source":{"title":"1st","content":"first","gid":1}},{"_id":2,"_score":1602,"_source":{"title":"2nd","content":"second","gid":2}}]}}";s:9:"http_code";i:200;s:4:"http";i:1;}i:2;a:6:{s:13:"http_endpoint";s:11:"json/search";s:11:"http_method";s:4:"POST";s:12:"http_request";s:80:"{ "index": "test1", "query": { "match": { "content, title": "1st second" } } } }";s:4:"rows";s:113:"{"error":"table test1: query error: error parsing field list: invalid field block operator syntax near ' title'"}";s:9:"http_code";i:500;s:4:"http";i:1;}i:3;a:6:{s:13:"http_endpoint";s:11:"json/search";s:11:"http_method";s:4:"POST";s:12:"http_request";s:73:"{ "index": "test1", "query": { "match": { "content": "3rd fourth" } } } }";s:4:"rows";s:146:"{"timed_out":false,"hits":{"total":1,"total_relation":"eq","hits":[{"_id":4,"_score":1602,"_source":{"title":"4th","content":"fourth","gid":4}}]}}";s:9:"http_code";i:200;s:4:"http";i:1;}i:4;a:6:{s:13:"http_endpoint";s:11:"json/search";s:11:"http_method";s:4:"POST";s:12:"http_request";s:71:"{ "index": "test1", "query": { "match": { "title": "3rd fourth" } } } }";s:4:"rows";s:145:"{"timed_out":false,"hits":{"total":1,"total_relation":"eq","hits":[{"_id":3,"_score":1602,"_source":{"title":"3rd","content":"third","gid":3}}]}}";s:9:"http_code";i:200;s:4:"http";i:1;}i:5;a:6:{s:13:"http_endpoint";s:11:"json/search";s:11:"http_method";s:4:"POST";s:12:"http_request";s:67:"{ "index": "test1", "query": { "match": { "*": "3rd fourth" } } } }";s:4:"rows";s:222:"{"timed_out":false,"hits":{"total":2,"total_relation":"eq","hits":[{"_id":3,"_score":1602,"_source":{"title":"3rd","content":"third","gid":3}},{"_id":4,"_score":1602,"_source":{"title":"4th","content":"fourth","gid":4}}]}}";s:9:"http_code";i:200;s:4:"http";i:1;}i:6;a:6:{s:13:"http_endpoint";s:11:"json/search";s:11:"http_method";s:4:"POST";s:12:"http_request";s:70:"{ "index": "test1", "query": { "match": { "_all": "3rd fourth" } } } }";s:4:"rows";s:222:"{"timed_out":false,"hits":{"total":2,"total_relation":"eq","hits":[{"_id":3,"_score":1602,"_source":{"title":"3rd","content":"third","gid":3}},{"_id":4,"_score":1602,"_source":{"title":"4th","content":"fourth","gid":4}}]}}";s:9:"http_code";i:200;s:4:"http";i:1;}i:7;a:6:{s:13:"http_endpoint";s:11:"json/search";s:11:"http_method";s:4:"POST";s:12:"http_request";s:52:"{ "index": "test1", "query": { "match_all": {} } } }";s:4:"rows";s:436:"{"timed_out":false,"hits":{"total":5,"total_relation":"eq","hits":[{"_id":1,"_score":1,"_source":{"title":"1st","content":"first","gid":1}},{"_id":2,"_score":1,"_source":{"title":"2nd","content":"second","gid":2}},{"_id":3,"_score":1,"_source":{"title":"3rd","content":"third","gid":3}},{"_id":4,"_score":1,"_source":{"title":"4th","content":"fourth","gid":4}},{"_id":5,"_score":1,"_source":{"title":"5th","content":"fifth","gid":5}}]}}";s:9:"http_code";i:200;s:4:"http";i:1;}i:8;a:6:{s:13:"http_endpoint";s:11:"json/search";s:11:"http_method";s:4:"POST";s:12:"http_request";s:69:"{ "index": "*", "query": { "match": { "_all": "first thought" } } } }";s:4:"rows";s:417:"{"timed_out":false,"hits":{"total":3,"total_relation":"eq","hits":[{"_id":1,"_score":1602,"_source":{"title":"1st","content":"first","gid":1}},{"_id":15,"_score":1428,"_source":{"title":"15th","content":"No wonder, Trevize thought, it was indulging itself in this way.","gid":15}},{"_id":16,"_score":1428,"_source":{"title":"","content":"No wonder, Trevize thought, it was indulging itself in this way.","gid":16}}]}}";s:9:"http_code";i:200;s:4:"http";i:1;}i:9;a:6:{s:13:"http_endpoint";s:11:"json/search";s:11:"http_method";s:4:"POST";s:12:"http_request";s:72:"{ "index": "_all", "query": { "match": { "_all": "first thought" } } } }";s:4:"rows";s:417:"{"timed_out":false,"hits":{"total":3,"total_relation":"eq","hits":[{"_id":1,"_score":1602,"_source":{"title":"1st","content":"first","gid":1}},{"_id":15,"_score":1428,"_source":{"title":"15th","content":"No wonder, Trevize thought, it was indulging itself in this way.","gid":15}},{"_id":16,"_score":1428,"_source":{"title":"","content":"No wonder, Trevize thought, it was indulging itself in this way.","gid":16}}]}}";s:9:"http_code";i:200;s:4:"http";i:1;}i:10;a:6:{s:13:"http_endpoint";s:11:"json/search";s:11:"http_method";s:4:"POST";s:12:"http_request";s:107:"{ "index": "test2", "query": { "match": { "content,title": { "query":"glanced on", "operator":"and" } } } }";s:4:"rows";s:234:"{"timed_out":false,"hits":{"total":1,"total_relation":"eq","hits":[{"_id":10,"_score":1621,"_source":{"title":"10th","content":"Trevize glanced now and then at Bliss`s face, which seemed entirely concentrated on Bander.","gid":10}}]}}";s:9:"http_code";i:200;s:4:"http";i:1;}i:11;a:6:{s:13:"http_endpoint";s:11:"json/search";s:11:"http_method";s:4:"POST";s:12:"http_request";s:106:"{ "index": "test2", "query": { "match": { "content,title": { "query":"glanced on", "operator":"or" } } } }";s:4:"rows";s:548:"{"timed_out":false,"hits":{"total":3,"total_relation":"eq","hits":[{"_id":10,"_score":1621,"_source":{"title":"10th","content":"Trevize glanced now and then at Bliss`s face, which seemed entirely concentrated on Bander.","gid":10}},{"_id":11,"_score":1516,"_source":{"title":"11th","content":"Trevize had grown quite certain he knew what was going on.","gid":11}},{"_id":13,"_score":1516,"_source":{"title":"13th","content":"There was no way it could speak to robots on a basis of intellectual equality, and certainly not to animals.","gid":13}}]}}";s:9:"http_code";i:200;s:4:"http";i:1;}i:12;a:6:{s:13:"http_endpoint";s:11:"json/search";s:11:"http_method";s:4:"POST";s:12:"http_request";s:88:"{ "index": "test2", "query": { "bool" : { "must" : { "match" : { "_all" : "on" } } } } }";s:4:"rows";s:548:"{"timed_out":false,"hits":{"total":3,"total_relation":"eq","hits":[{"_id":10,"_score":1533,"_source":{"title":"10th","content":"Trevize glanced now and then at Bliss`s face, which seemed entirely concentrated on Bander.","gid":10}},{"_id":11,"_score":1533,"_source":{"title":"11th","content":"Trevize had grown quite certain he knew what was going on.","gid":11}},{"_id":13,"_score":1533,"_source":{"title":"13th","content":"There was no way it could speak to robots on a basis of intellectual equality, and certainly not to animals.","gid":13}}]}}";s:9:"http_code";i:200;s:4:"http";i:1;}i:13;a:6:{s:13:"http_endpoint";s:11:"json/search";s:11:"http_method";s:4:"POST";s:12:"http_request";s:88:"{ "index": "test2", "query": { "bool" : { "must" : { "match" : { "_all" : "to" } } } } }";s:4:"rows";s:618:"{"timed_out":false,"hits":{"total":3,"total_relation":"eq","hits":[{"_id":14,"_score":1552,"_source":{"title":"14th","content":"To speak to its fellow-Solarians would be, to it, unpleasant, and what communication there must be would be forced, and never spontaneous.","gid":14}},{"_id":13,"_score":1546,"_source":{"title":"13th","content":"There was no way it could speak to robots on a basis of intellectual equality, and certainly not to animals.","gid":13}},{"_id":12,"_score":1533,"_source":{"title":"12th","content":"Bander, despite its paean to freedom, found this unique opportunity irresistible.","gid":12}}]}}";s:9:"http_code";i:200;s:4:"http";i:1;}i:14;a:6:{s:13:"http_endpoint";s:11:"json/search";s:11:"http_method";s:4:"POST";s:12:"http_request";s:124:"{ "index": "test2", "query": { "bool" : { "must": [ { "match" : { "_all" : "to" } }, { "match" : { "_all" : "on" } } ] } } }";s:4:"rows";s:251:"{"timed_out":false,"hits":{"total":1,"total_relation":"eq","hits":[{"_id":13,"_score":1539,"_source":{"title":"13th","content":"There was no way it could speak to robots on a basis of intellectual equality, and certainly not to animals.","gid":13}}]}}";s:9:"http_code";i:200;s:4:"http";i:1;}i:15;a:6:{s:13:"http_endpoint";s:11:"json/search";s:11:"http_method";s:4:"POST";s:12:"http_request";s:95:"{ "index": "test2", "query": { "bool" : { "should" : { "match" : { "_all" : "glanced" } } } } }";s:4:"rows";s:234:"{"timed_out":false,"hits":{"total":1,"total_relation":"eq","hits":[{"_id":10,"_score":1709,"_source":{"title":"10th","content":"Trevize glanced now and then at Bliss`s face, which seemed entirely concentrated on Bander.","gid":10}}]}}";s:9:"http_code";i:200;s:4:"http";i:1;}i:16;a:6:{s:13:"http_endpoint";s:11:"json/search";s:11:"http_method";s:4:"POST";s:12:"http_request";s:95:"{ "index": "test2", "query": { "bool" : { "should" : { "match" : { "_all" : "despite" } } } } }";s:4:"rows";s:224:"{"timed_out":false,"hits":{"total":1,"total_relation":"eq","hits":[{"_id":12,"_score":1709,"_source":{"title":"12th","content":"Bander, despite its paean to freedom, found this unique opportunity irresistible.","gid":12}}]}}";s:9:"http_code";i:200;s:4:"http";i:1;}i:17;a:6:{s:13:"http_endpoint";s:11:"json/search";s:11:"http_method";s:4:"POST";s:12:"http_request";s:137:"{ "index": "test2", "query": { "bool" : { "should": [ { "match" : { "_all" : "glanced " } }, { "match" : { "_all" : "despite" } } ] } } }";s:4:"rows";s:389:"{"timed_out":false,"hits":{"total":2,"total_relation":"eq","hits":[{"_id":10,"_score":1604,"_source":{"title":"10th","content":"Trevize glanced now and then at Bliss`s face, which seemed entirely concentrated on Bander.","gid":10}},{"_id":12,"_score":1604,"_source":{"title":"12th","content":"Bander, despite its paean to freedom, found this unique opportunity irresistible.","gid":12}}]}}";s:9:"http_code";i:200;s:4:"http";i:1;}i:18;a:6:{s:13:"http_endpoint";s:11:"json/search";s:11:"http_method";s:4:"POST";s:12:"http_request";s:158:"{ "index": "test2", "query": { "bool": { "must": { "match" : { "_all" : "glanced grown paean" } },	"must_not":	{ "match" : { "_all" : "irresistible" } } } } }";s:4:"rows";s:366:"{"timed_out":false,"hits":{"total":2,"total_relation":"eq","hits":[{"_id":10,"_score":1552,"_source":{"title":"10th","content":"Trevize glanced now and then at Bliss`s face, which seemed entirely concentrated on Bander.","gid":10}},{"_id":11,"_score":1552,"_source":{"title":"11th","content":"Trevize had grown quite certain he knew what was going on.","gid":11}}]}}";s:9:"http_code";i:200;s:4:"http";i:1;}i:19;a:6:{s:13:"http_endpoint";s:11:"json/search";s:11:"http_method";s:4:"POST";s:12:"http_request";s:200:"{ "index": "test2", "query": { "bool": { "must": { "match" : { "_all" : "glanced grown paean" } }, "must_not": [ { "match" : { "_all" : "irresistible" } }, { "match" : { "_all" : "certain" } } ] } } }";s:4:"rows";s:234:"{"timed_out":false,"hits":{"total":1,"total_relation":"eq","hits":[{"_id":10,"_score":1541,"_source":{"title":"10th","content":"Trevize glanced now and then at Bliss`s face, which seemed entirely concentrated on Bander.","gid":10}}]}}";s:9:"http_code";i:200;s:4:"http";i:1;}i:20;a:6:{s:13:"http_endpoint";s:11:"json/search";s:11:"http_method";s:4:"POST";s:12:"http_request";s:143:"{ "index": "test2", "query": { "bool": { "must": { "match" : { "_all" : "glanced grown" } }, "should": { "match" : { "_all" : "paean" } } } } }";s:4:"rows";s:366:"{"timed_out":false,"hits":{"total":2,"total_relation":"eq","hits":[{"_id":10,"_score":1569,"_source":{"title":"10th","content":"Trevize glanced now and then at Bliss`s face, which seemed entirely concentrated on Bander.","gid":10}},{"_id":11,"_score":1569,"_source":{"title":"11th","content":"Trevize had grown quite certain he knew what was going on.","gid":11}}]}}";s:9:"http_code";i:200;s:4:"http";i:1;}i:21;a:6:{s:13:"http_endpoint";s:11:"json/search";s:11:"http_method";s:4:"POST";s:12:"http_request";s:89:"{
++a:1:{i:0;a:89:{i:0;a:6:{s:13:"http_endpoint";s:11:"json/search";s:11:"http_method";s:4:"POST";s:12:"http_request";s:68:"{ "index": "test1", "query": { "match": { "content": "first" } } } }";s:4:"rows";s:145:"{"timed_out":false,"hits":{"total":1,"total_relation":"eq","hits":[{"_id":1,"_score":1704,"_source":{"title":"1st","content":"first","gid":1}}]}}";s:9:"http_code";i:200;s:4:"http";i:1;}i:1;a:6:{s:13:"http_endpoint";s:11:"json/search";s:11:"http_method";s:4:"POST";s:12:"http_request";s:79:"{ "index": "test1", "query": { "match": { "content,title": "1st second" } } } }";s:4:"rows";s:222:"{"timed_out":false,"hits":{"total":2,"total_relation":"eq","hits":[{"_id":1,"_score":1602,"_source":{"title":"1st","content":"first","gid":1}},{"_id":2,"_score":1602,"_source":{"title":"2nd","content":"second","gid":2}}]}}";s:9:"http_code";i:200;s:4:"http";i:1;}i:2;a:6:{s:13:"http_endpoint";s:11:"json/search";s:11:"http_method";s:4:"POST";s:12:"http_request";s:80:"{ "index": "test1", "query": { "match": { "content, title": "1st second" } } } }";s:4:"rows";s:113:"{"error":"table test1: query error: error parsing field list: invalid field block operator syntax near ' title'"}";s:9:"http_code";i:500;s:4:"http";i:1;}i:3;a:6:{s:13:"http_endpoint";s:11:"json/search";s:11:"http_method";s:4:"POST";s:12:"http_request";s:73:"{ "index": "test1", "query": { "match": { "content": "3rd fourth" } } } }";s:4:"rows";s:146:"{"timed_out":false,"hits":{"total":1,"total_relation":"eq","hits":[{"_id":4,"_score":1602,"_source":{"title":"4th","content":"fourth","gid":4}}]}}";s:9:"http_code";i:200;s:4:"http";i:1;}i:4;a:6:{s:13:"http_endpoint";s:11:"json/search";s:11:"http_method";s:4:"POST";s:12:"http_request";s:71:"{ "index": "test1", "query": { "match": { "title": "3rd fourth" } } } }";s:4:"rows";s:145:"{"timed_out":false,"hits":{"total":1,"total_relation":"eq","hits":[{"_id":3,"_score":1602,"_source":{"title":"3rd","content":"third","gid":3}}]}}";s:9:"http_code";i:200;s:4:"http";i:1;}i:5;a:6:{s:13:"http_endpoint";s:11:"json/search";s:11:"http_method";s:4:"POST";s:12:"http_request";s:67:"{ "index": "test1", "query": { "match": { "*": "3rd fourth" } } } }";s:4:"rows";s:222:"{"timed_out":false,"hits":{"total":2,"total_relation":"eq","hits":[{"_id":3,"_score":1602,"_source":{"title":"3rd","content":"third","gid":3}},{"_id":4,"_score":1602,"_source":{"title":"4th","content":"fourth","gid":4}}]}}";s:9:"http_code";i:200;s:4:"http";i:1;}i:6;a:6:{s:13:"http_endpoint";s:11:"json/search";s:11:"http_method";s:4:"POST";s:12:"http_request";s:70:"{ "index": "test1", "query": { "match": { "_all": "3rd fourth" } } } }";s:4:"rows";s:222:"{"timed_out":false,"hits":{"total":2,"total_relation":"eq","hits":[{"_id":3,"_score":1602,"_source":{"title":"3rd","content":"third","gid":3}},{"_id":4,"_score":1602,"_source":{"title":"4th","content":"fourth","gid":4}}]}}";s:9:"http_code";i:200;s:4:"http";i:1;}i:7;a:6:{s:13:"http_endpoint";s:11:"json/search";s:11:"http_method";s:4:"POST";s:12:"http_request";s:52:"{ "index": "test1", "query": { "match_all": {} } } }";s:4:"rows";s:436:"{"timed_out":false,"hits":{"total":5,"total_relation":"eq","hits":[{"_id":1,"_score":1,"_source":{"title":"1st","content":"first","gid":1}},{"_id":2,"_score":1,"_source":{"title":"2nd","content":"second","gid":2}},{"_id":3,"_score":1,"_source":{"title":"3rd","content":"third","gid":3}},{"_id":4,"_score":1,"_source":{"title":"4th","content":"fourth","gid":4}},{"_id":5,"_score":1,"_source":{"title":"5th","content":"fifth","gid":5}}]}}";s:9:"http_code";i:200;s:4:"http";i:1;}i:8;a:6:{s:13:"http_endpoint";s:11:"json/search";s:11:"http_method";s:4:"POST";s:12:"http_request";s:69:"{ "index": "*", "query": { "match": { "_all": "first thought" } } } }";s:4:"rows";s:417:"{"timed_out":false,"hits":{"total":3,"total_relation":"eq","hits":[{"_id":1,"_score":1602,"_source":{"title":"1st","content":"first","gid":1}},{"_id":15,"_score":1428,"_source":{"title":"15th","content":"No wonder, Trevize thought, it was indulging itself in this way.","gid":15}},{"_id":16,"_score":1428,"_source":{"title":"","content":"No wonder, Trevize thought, it was indulging itself in this way.","gid":16}}]}}";s:9:"http_code";i:200;s:4:"http";i:1;}i:9;a:6:{s:13:"http_endpoint";s:11:"json/search";s:11:"http_method";s:4:"POST";s:12:"http_request";s:72:"{ "index": "_all", "query": { "match": { "_all": "first thought" } } } }";s:4:"rows";s:417:"{"timed_out":false,"hits":{"total":3,"total_relation":"eq","hits":[{"_id":1,"_score":1602,"_source":{"title":"1st","content":"first","gid":1}},{"_id":15,"_score":1428,"_source":{"title":"15th","content":"No wonder, Trevize thought, it was indulging itself in this way.","gid":15}},{"_id":16,"_score":1428,"_source":{"title":"","content":"No wonder, Trevize thought, it was indulging itself in this way.","gid":16}}]}}";s:9:"http_code";i:200;s:4:"http";i:1;}i:10;a:6:{s:13:"http_endpoint";s:11:"json/search";s:11:"http_method";s:4:"POST";s:12:"http_request";s:107:"{ "index": "test2", "query": { "match": { "content,title": { "query":"glanced on", "operator":"and" } } } }";s:4:"rows";s:234:"{"timed_out":false,"hits":{"total":1,"total_relation":"eq","hits":[{"_id":10,"_score":1621,"_source":{"title":"10th","content":"Trevize glanced now and then at Bliss`s face, which seemed entirely concentrated on Bander.","gid":10}}]}}";s:9:"http_code";i:200;s:4:"http";i:1;}i:11;a:6:{s:13:"http_endpoint";s:11:"json/search";s:11:"http_method";s:4:"POST";s:12:"http_request";s:106:"{ "index": "test2", "query": { "match": { "content,title": { "query":"glanced on", "operator":"or" } } } }";s:4:"rows";s:548:"{"timed_out":false,"hits":{"total":3,"total_relation":"eq","hits":[{"_id":10,"_score":1621,"_source":{"title":"10th","content":"Trevize glanced now and then at Bliss`s face, which seemed entirely concentrated on Bander.","gid":10}},{"_id":11,"_score":1516,"_source":{"title":"11th","content":"Trevize had grown quite certain he knew what was going on.","gid":11}},{"_id":13,"_score":1516,"_source":{"title":"13th","content":"There was no way it could speak to robots on a basis of intellectual equality, and certainly not to animals.","gid":13}}]}}";s:9:"http_code";i:200;s:4:"http";i:1;}i:12;a:6:{s:13:"http_endpoint";s:11:"json/search";s:11:"http_method";s:4:"POST";s:12:"http_request";s:88:"{ "index": "test2", "query": { "bool" : { "must" : { "match" : { "_all" : "on" } } } } }";s:4:"rows";s:548:"{"timed_out":false,"hits":{"total":3,"total_relation":"eq","hits":[{"_id":10,"_score":1533,"_source":{"title":"10th","content":"Trevize glanced now and then at Bliss`s face, which seemed entirely concentrated on Bander.","gid":10}},{"_id":11,"_score":1533,"_source":{"title":"11th","content":"Trevize had grown quite certain he knew what was going on.","gid":11}},{"_id":13,"_score":1533,"_source":{"title":"13th","content":"There was no way it could speak to robots on a basis of intellectual equality, and certainly not to animals.","gid":13}}]}}";s:9:"http_code";i:200;s:4:"http";i:1;}i:13;a:6:{s:13:"http_endpoint";s:11:"json/search";s:11:"http_method";s:4:"POST";s:12:"http_request";s:88:"{ "index": "test2", "query": { "bool" : { "must" : { "match" : { "_all" : "to" } } } } }";s:4:"rows";s:618:"{"timed_out":false,"hits":{"total":3,"total_relation":"eq","hits":[{"_id":14,"_score":1552,"_source":{"title":"14th","content":"To speak to its fellow-Solarians would be, to it, unpleasant, and what communication there must be would be forced, and never spontaneous.","gid":14}},{"_id":13,"_score":1546,"_source":{"title":"13th","content":"There was no way it could speak to robots on a basis of intellectual equality, and certainly not to animals.","gid":13}},{"_id":12,"_score":1533,"_source":{"title":"12th","content":"Bander, despite its paean to freedom, found this unique opportunity irresistible.","gid":12}}]}}";s:9:"http_code";i:200;s:4:"http";i:1;}i:14;a:6:{s:13:"http_endpoint";s:11:"json/search";s:11:"http_method";s:4:"POST";s:12:"http_request";s:124:"{ "index": "test2", "query": { "bool" : { "must": [ { "match" : { "_all" : "to" } }, { "match" : { "_all" : "on" } } ] } } }";s:4:"rows";s:251:"{"timed_out":false,"hits":{"total":1,"total_relation":"eq","hits":[{"_id":13,"_score":1539,"_source":{"title":"13th","content":"There was no way it could speak to robots on a basis of intellectual equality, and certainly not to animals.","gid":13}}]}}";s:9:"http_code";i:200;s:4:"http";i:1;}i:15;a:6:{s:13:"http_endpoint";s:11:"json/search";s:11:"http_method";s:4:"POST";s:12:"http_request";s:95:"{ "index": "test2", "query": { "bool" : { "should" : { "match" : { "_all" : "glanced" } } } } }";s:4:"rows";s:234:"{"timed_out":false,"hits":{"total":1,"total_relation":"eq","hits":[{"_id":10,"_score":1709,"_source":{"title":"10th","content":"Trevize glanced now and then at Bliss`s face, which seemed entirely concentrated on Bander.","gid":10}}]}}";s:9:"http_code";i:200;s:4:"http";i:1;}i:16;a:6:{s:13:"http_endpoint";s:11:"json/search";s:11:"http_method";s:4:"POST";s:12:"http_request";s:95:"{ "index": "test2", "query": { "bool" : { "should" : { "match" : { "_all" : "despite" } } } } }";s:4:"rows";s:224:"{"timed_out":false,"hits":{"total":1,"total_relation":"eq","hits":[{"_id":12,"_score":1709,"_source":{"title":"12th","content":"Bander, despite its paean to freedom, found this unique opportunity irresistible.","gid":12}}]}}";s:9:"http_code";i:200;s:4:"http";i:1;}i:17;a:6:{s:13:"http_endpoint";s:11:"json/search";s:11:"http_method";s:4:"POST";s:12:"http_request";s:137:"{ "index": "test2", "query": { "bool" : { "should": [ { "match" : { "_all" : "glanced " } }, { "match" : { "_all" : "despite" } } ] } } }";s:4:"rows";s:389:"{"timed_out":false,"hits":{"total":2,"total_relation":"eq","hits":[{"_id":10,"_score":1604,"_source":{"title":"10th","content":"Trevize glanced now and then at Bliss`s face, which seemed entirely concentrated on Bander.","gid":10}},{"_id":12,"_score":1604,"_source":{"title":"12th","content":"Bander, despite its paean to freedom, found this unique opportunity irresistible.","gid":12}}]}}";s:9:"http_code";i:200;s:4:"http";i:1;}i:18;a:6:{s:13:"http_endpoint";s:11:"json/search";s:11:"http_method";s:4:"POST";s:12:"http_request";s:158:"{ "index": "test2", "query": { "bool": { "must": { "match" : { "_all" : "glanced grown paean" } },	"must_not":	{ "match" : { "_all" : "irresistible" } } } } }";s:4:"rows";s:366:"{"timed_out":false,"hits":{"total":2,"total_relation":"eq","hits":[{"_id":10,"_score":1552,"_source":{"title":"10th","content":"Trevize glanced now and then at Bliss`s face, which seemed entirely concentrated on Bander.","gid":10}},{"_id":11,"_score":1552,"_source":{"title":"11th","content":"Trevize had grown quite certain he knew what was going on.","gid":11}}]}}";s:9:"http_code";i:200;s:4:"http";i:1;}i:19;a:6:{s:13:"http_endpoint";s:11:"json/search";s:11:"http_method";s:4:"POST";s:12:"http_request";s:200:"{ "index": "test2", "query": { "bool": { "must": { "match" : { "_all" : "glanced grown paean" } }, "must_not": [ { "match" : { "_all" : "irresistible" } }, { "match" : { "_all" : "certain" } } ] } } }";s:4:"rows";s:234:"{"timed_out":false,"hits":{"total":1,"total_relation":"eq","hits":[{"_id":10,"_score":1541,"_source":{"title":"10th","content":"Trevize glanced now and then at Bliss`s face, which seemed entirely concentrated on Bander.","gid":10}}]}}";s:9:"http_code";i:200;s:4:"http";i:1;}i:20;a:6:{s:13:"http_endpoint";s:11:"json/search";s:11:"http_method";s:4:"POST";s:12:"http_request";s:143:"{ "index": "test2", "query": { "bool": { "must": { "match" : { "_all" : "glanced grown" } }, "should": { "match" : { "_all" : "paean" } } } } }";s:4:"rows";s:366:"{"timed_out":false,"hits":{"total":2,"total_relation":"eq","hits":[{"_id":10,"_score":1569,"_source":{"title":"10th","content":"Trevize glanced now and then at Bliss`s face, which seemed entirely concentrated on Bander.","gid":10}},{"_id":11,"_score":1569,"_source":{"title":"11th","content":"Trevize had grown quite certain he knew what was going on.","gid":11}}]}}";s:9:"http_code";i:200;s:4:"http";i:1;}i:21;a:6:{s:13:"http_endpoint";s:11:"json/search";s:11:"http_method";s:4:"POST";s:12:"http_request";s:89:"{
+   "index":"test2",
+   "query":
+   {
+@@ -163,7 +163,7 @@ a:1:{i:0;a:85:{i:0;a:6:{s:13:"http_endpoint";s:11:"json/search";s:11:"http_metho
+     "query_string": "b",
+     "equals": { "gid": 1 }
+   }
+-}";s:4:"rows";s:70:"{"error":"\"query\" has multiple full-text properties, use bool node"}";s:9:"http_code";i:400;s:4:"http";i:1;}i:83;a:6:{s:13:"http_endpoint";s:11:"json/search";s:11:"http_method";s:4:"POST";s:12:"http_request";s:318:"{
++}";s:4:"rows";s:70:"{"error":"\"query\" has multiple full-text properties, use bool node"}";s:9:"http_code";i:400;s:4:"http";i:1;}i:83;a:6:{s:13:"http_endpoint";s:11:"json/search";s:11:"http_method";s:4:"POST";s:12:"http_request";s:319:"{
+   "index": "test10",
+   "query":{
+     "bool":{
+@@ -172,11 +172,11 @@ a:1:{i:0;a:85:{i:0;a:6:{s:13:"http_endpoint";s:11:"json/search";s:11:"http_metho
+
+----------------------------------------
+
+File: test/test_334/test.xml
+Status: modified
+Changes: +28 -1
+Diff:
+@@ -610,7 +610,7 @@ select * from dist_gr2 facet gid facet tag;;
+             "should":[
+                 { "bool":{
+                   "must":[ { "term" : { "content" : "in" } } ],
+-                  "must_not":[ { "exist" : { "field" : "title" } } ]
++                  "must_not":[ { "exists" : { "field" : "title" } } ]
+                 }
+               } ]
+   } } ] } }
+@@ -653,5 +653,32 @@ select * from dist_gr2 facet gid facet tag;;
+ }
+ </query>
+ 
++<!-- facets with sort defined as order property at aggregate bucket -->
+
+----------------------------------------
+
+File: test/test_408/model.bin
+Status: modified
+Changes: +2 -2
+
+----------------------------------------
+
+File: test/test_408/test.xml
+Status: modified
+Changes: +31 -0
+Diff:
+@@ -80,6 +80,26 @@ index hit_1
+ 	hitless_words 	= <this_test/>/words3.txt
+ }
+ 
++index some2
++{
++    type = rt    
++	rt_field = t1
++    rt_field = t2
++	path = <data_path/>/some2
++
++	hitless_words = <this_test/>/words1.txt
++}
++
++index all2
+
+----------------------------------------
+
+File: test/test_466/model.bin
+Status: modified
+Changes: +2 -2
+Diff:
+@@ -1,4 +1,4 @@
+-a:1:{i:0;a:27:{i:0;a:6:{s:13:"http_endpoint";s:11:"json/search";s:11:"http_method";s:4:"POST";s:12:"http_request";s:119:"{ "index": "test_group1", "size":0, "aggs":{ "gr_1": { "histogram": { "field": "code", "interval":50, "size": 40 } }} }";s:4:"rows";s:239:"{"timed_out":false,"hits":{"total":10,"total_relation":"eq","hits":[]},"aggregations":{"gr_1":{"buckets":[{"key":100,"doc_count":3},{"key":150,"doc_count":1},{"key":200,"doc_count":2},{"key":300,"doc_count":2},{"key":400,"doc_count":2}]}}}";s:9:"http_code";i:200;s:4:"http";i:1;}i:1;a:6:{s:13:"http_endpoint";s:11:"json/search";s:11:"http_method";s:4:"POST";s:12:"http_request";s:133:"{ "index": "test_group2", "size":0, "aggs":{ "gr_1": { "histogram": { "field": "code", "interval":50, "keyed":true, "size": 40 } }} }";s:4:"rows";s:269:"{"timed_out":false,"hits":{"total":10,"total_relation":"eq","hits":[]},"aggregations":{"gr_1":{"buckets":{"100":{"key":100,"doc_count":5},"150":{"key":150,"doc_count":1},"200":{"key":200,"doc_count":1},"300":{"key":300,"doc_count":1},"400":{"key":400,"doc_count":2}}}}}";s:9:"http_code";i:200;s:4:"http";i:1;}i:2;a:6:{s:13:"http_endpoint";s:11:"json/search";s:11:"http_method";s:4:"POST";s:12:"http_request";s:119:"{ "index": "test_group1,test_group2", "size":0, "aggs":{ "gr_1": { "histogram": { "field": "code", "interval":90 } }} }";s:4:"rows";s:213:"{"timed_out":false,"hits":{"total":20,"total_relation":"eq","hits":[]},"aggregations":{"gr_1":{"buckets":[{"key":90,"doc_count":10},{"key":180,"doc_count":3},{"key":270,"doc_count":3},{"key":360,"doc_count":4}]}}}";s:9:"http_code";i:200;s:4:"http";i:1;}i:3;a:6:{s:13:"http_endpoint";s:11:"json/search";s:11:"http_method";s:4:"POST";s:12:"http_request";s:134:"{ "index": "test_group1,test_group2", "size":0, "aggs":{ "gr_1": { "histogram": { "field": "code", "interval":100, "keyed":true } }} }";s:4:"rows";s:238:"{"timed_out":false,"hits":{"total":20,"total_relation":"eq","hits":[]},"aggregations":{"gr_1":{"buckets":{"100":{"key":100,"doc_count":10},"200":{"key":200,"doc_count":3},"300":{"key":300,"doc_count":3},"400":{"key":400,"doc_count":4}}}}}";s:9:"http_code";i:200;s:4:"http";i:1;}i:4;a:3:{s:8:"sphinxql";s:122:"select id, code, count(*), histogram(code, {hist_interval=90}) as c from test_group1,test_group2 group by c order by c asc";s:10:"total_rows";i:4;s:4:"rows";a:4:{i:0;a:4:{s:2:"id";s:2:"21";s:4:"code";s:3:"100";s:8:"count(*)";s:2:"10";s:1:"c";s:2:"90";}i:1;a:4:{s:2:"id";s:1:"4";s:4:"code";s:3:"201";s:8:"count(*)";s:1:"3";s:1:"c";s:3:"180";}i:2;a:4:{s:2:"id";s:2:"28";s:4:"code";s:3:"300";s:8:"count(*)";s:1:"3";s:1:"c";s:3:"270";}i:3;a:4:{s:2:"id";s:2:"24";s:4:"code";s:3:"404";s:8:"count(*)";s:1:"4";s:1:"c";s:3:"360";}}}i:5;a:3:{s:8:"sphinxql";s:123:"select id, code, count(*), histogram(code, {hist_interval=100}) as c from test_group1,test_group2 group by c order by c asc";s:10:"total_rows";i:4;s:4:"rows";a:4:{i:0;a:4:{s:2:"id";s:2:"21";s:4:"code";s:3:"100";s:8:"count(*)";s:2:"10";s:1:"c";s:3:"100";}i:1;a:4:{s:2:"id";s:1:"4";s:4:"code";s:3:"201";s:8:"count(*)";s:1:"3";s:1:"c";s:3:"200";}i:2;a:4:{s:2:"id";s:2:"28";s:4:"code";s:3:"300";s:8:"count(*)";s:1:"3";s:1:"c";s:3:"300";}i:3;a:4:{s:2:"id";s:2:"24";s:4:"code";s:3:"404";s:8:"count(*)";s:1:"4";s:1:"c";s:3:"400";}}}i:6;a:6:{s:13:"http_endpoint";s:11:"json/search";s:11:"http_method";s:4:"POST";s:12:"http_request";s:160:"{ "index": "test_group1,test_group2", "size":0, "aggs":{ "gr_1": { "range": { "field": "code", "ranges": [{"to":150},{"from":150, "to":300},{"from":300}] } }} }";s:4:"rows";s:241:"{"timed_out":false,"hits":{"total":20,"total_relation":"eq","hits":[]},"aggregations":{"gr_1":{"buckets":[{"key":"*-150","to":150,"doc_count":8},{"key":"150-300","from":150,"to":300,"doc_count":5},{"key":"300-*","from":300,"doc_count":7}]}}}";s:9:"http_code";i:200;s:4:"http";i:1;}i:7;a:6:{s:13:"http_endpoint";s:11:"json/search";s:11:"http_method";s:4:"POST";s:12:"http_request";s:340:"{ "index": "test_group1,test_group2", "size":0, "aggs":{
++a:1:{i:0;a:28:{i:0;a:6:{s:13:"http_endpoint";s:11:"json/search";s:11:"http_method";s:4:"POST";s:12:"http_request";s:119:"{ "index": "test_group1", "size":0, "aggs":{ "gr_1": { "histogram": { "field": "code", "interval":50, "size": 40 } }} }";s:4:"rows";s:239:"{"timed_out":false,"hits":{"total":10,"total_relation":"eq","hits":[]},"aggregations":{"gr_1":{"buckets":[{"key":100,"doc_count":3},{"key":150,"doc_count":1},{"key":200,"doc_count":2},{"key":300,"doc_count":2},{"key":400,"doc_count":2}]}}}";s:9:"http_code";i:200;s:4:"http";i:1;}i:1;a:6:{s:13:"http_endpoint";s:11:"json/search";s:11:"http_method";s:4:"POST";s:12:"http_request";s:133:"{ "index": "test_group2", "size":0, "aggs":{ "gr_1": { "histogram": { "field": "code", "interval":50, "keyed":true, "size": 40 } }} }";s:4:"rows";s:269:"{"timed_out":false,"hits":{"total":10,"total_relation":"eq","hits":[]},"aggregations":{"gr_1":{"buckets":{"100":{"key":100,"doc_count":5},"150":{"key":150,"doc_count":1},"200":{"key":200,"doc_count":1},"300":{"key":300,"doc_count":1},"400":{"key":400,"doc_count":2}}}}}";s:9:"http_code";i:200;s:4:"http";i:1;}i:2;a:6:{s:13:"http_endpoint";s:11:"json/search";s:11:"http_method";s:4:"POST";s:12:"http_request";s:119:"{ "index": "test_group1,test_group2", "size":0, "aggs":{ "gr_1": { "histogram": { "field": "code", "interval":90 } }} }";s:4:"rows";s:213:"{"timed_out":false,"hits":{"total":20,"total_relation":"eq","hits":[]},"aggregations":{"gr_1":{"buckets":[{"key":90,"doc_count":10},{"key":180,"doc_count":3},{"key":270,"doc_count":3},{"key":360,"doc_count":4}]}}}";s:9:"http_code";i:200;s:4:"http";i:1;}i:3;a:6:{s:13:"http_endpoint";s:11:"json/search";s:11:"http_method";s:4:"POST";s:12:"http_request";s:134:"{ "index": "test_group1,test_group2", "size":0, "aggs":{ "gr_1": { "histogram": { "field": "code", "interval":100, "keyed":true } }} }";s:4:"rows";s:238:"{"timed_out":false,"hits":{"total":20,"total_relation":"eq","hits":[]},"aggregations":{"gr_1":{"buckets":{"100":{"key":100,"doc_count":10},"200":{"key":200,"doc_count":3},"300":{"key":300,"doc_count":3},"400":{"key":400,"doc_count":4}}}}}";s:9:"http_code";i:200;s:4:"http";i:1;}i:4;a:3:{s:8:"sphinxql";s:122:"select id, code, count(*), histogram(code, {hist_interval=90}) as c from test_group1,test_group2 group by c order by c asc";s:10:"total_rows";i:4;s:4:"rows";a:4:{i:0;a:4:{s:2:"id";s:2:"21";s:4:"code";s:3:"100";s:8:"count(*)";s:2:"10";s:1:"c";s:2:"90";}i:1;a:4:{s:2:"id";s:1:"4";s:4:"code";s:3:"201";s:8:"count(*)";s:1:"3";s:1:"c";s:3:"180";}i:2;a:4:{s:2:"id";s:2:"28";s:4:"code";s:3:"300";s:8:"count(*)";s:1:"3";s:1:"c";s:3:"270";}i:3;a:4:{s:2:"id";s:2:"24";s:4:"code";s:3:"404";s:8:"count(*)";s:1:"4";s:1:"c";s:3:"360";}}}i:5;a:3:{s:8:"sphinxql";s:123:"select id, code, count(*), histogram(code, {hist_interval=100}) as c from test_group1,test_group2 group by c order by c asc";s:10:"total_rows";i:4;s:4:"rows";a:4:{i:0;a:4:{s:2:"id";s:2:"21";s:4:"code";s:3:"100";s:8:"count(*)";s:2:"10";s:1:"c";s:3:"100";}i:1;a:4:{s:2:"id";s:1:"4";s:4:"code";s:3:"201";s:8:"count(*)";s:1:"3";s:1:"c";s:3:"200";}i:2;a:4:{s:2:"id";s:2:"28";s:4:"code";s:3:"300";s:8:"count(*)";s:1:"3";s:1:"c";s:3:"300";}i:3;a:4:{s:2:"id";s:2:"24";s:4:"code";s:3:"404";s:8:"count(*)";s:1:"4";s:1:"c";s:3:"400";}}}i:6;a:6:{s:13:"http_endpoint";s:11:"json/search";s:11:"http_method";s:4:"POST";s:12:"http_request";s:160:"{ "index": "test_group1,test_group2", "size":0, "aggs":{ "gr_1": { "range": { "field": "code", "ranges": [{"to":150},{"from":150, "to":300},{"from":300}] } }} }";s:4:"rows";s:241:"{"timed_out":false,"hits":{"total":20,"total_relation":"eq","hits":[]},"aggregations":{"gr_1":{"buckets":[{"key":"*-150","to":150,"doc_count":8},{"key":"150-300","from":150,"to":300,"doc_count":5},{"key":"300-*","from":300,"doc_count":7}]}}}";s:9:"http_code";i:200;s:4:"http";i:1;}i:7;a:6:{s:13:"http_endpoint";s:11:"json/search";s:11:"http_method";s:4:"POST";s:12:"http_request";s:340:"{ "index": "test_group1,test_group2", "size":0, "aggs":{
+ "gr_1":       { "range": { "field": "code", "keyed":true, "ranges": [{"from":150, "to":200}, {"from":200, "to":300}, {"from":300, "to":404}] } },
+ "gr_outside": { "range": { "field": "code", "keyed":true, "ranges": [{"to":150},                                     {"from":404}] } }
+ }}";s:4:"rows";s:342:"{"timed_out":false,"hits":{"total":20,"total_relation":"eq","hits":[]},"aggregations":{"gr_1":{"buckets":{"150-200":{"from":150,"to":200,"doc_count":2},"200-300":{"from":200,"to":300,"doc_count":3},"300-404":{"from":300,"to":404,"doc_count":4}}},"gr_outside":{"buckets":{"*-150":{"to":150,"doc_count":8},"404-*":{"from":404,"doc_count":3}}}}}";s:9:"http_code";i:200;s:4:"http";i:1;}i:8;a:3:{s:8:"sphinxql";s:158:"select id, code, count(*), range(code, {range_to=150},{range_from=150,range_to=300},{range_from=300}) c from test_group1,test_group2 group by c order by c asc";s:10:"total_rows";i:3;s:4:"rows";a:3:{i:0;a:4:{s:2:"id";s:2:"21";s:4:"code";s:3:"100";s:8:"count(*)";s:1:"8";s:1:"c";s:1:"0";}i:1;a:4:{s:2:"id";s:2:"23";s:4:"code";s:3:"161";s:8:"count(*)";s:1:"5";s:1:"c";s:1:"1";}i:2;a:4:{s:2:"id";s:2:"24";s:4:"code";s:3:"404";s:8:"count(*)";s:1:"7";s:1:"c";s:1:"2";}}}i:9;a:3:{s:10:"total_rows";i:1;s:4:"rows";a:1:{i:0;a:5:{s:2:"id";s:2:"21";s:4:"code";s:3:"100";s:8:"count(*)";s:2:"20";s:2:"c1";s:1:"3";s:2:"c2";s:1:"0";}}s:8:"sphinxql";s:274:"select id, code, count(*), range(code, {range_from=150,range_to=200},{range_from=200,range_to=300},{range_from=300,range_to=404}) c1, range(code, {range_to=150}, {range_from=404}) c2 from test_group1,test_group2 facet c1 as r1 order by c1 asc facet c2 as r2 order by c2 asc;";}i:10;a:3:{s:10:"total_rows";i:4;s:4:"rows";a:4:{i:0;a:2:{s:2:"r1";s:1:"0";s:8:"count(*)";s:1:"2";}i:1;a:2:{s:2:"r1";s:1:"1";s:8:"count(*)";s:1:"3";}i:2;a:2:{s:2:"r1";s:1:"2";s:8:"count(*)";s:1:"4";}i:3;a:2:{s:2:"r1";s:1:"3";s:8:"count(*)";s:2:"11";}}s:8:"sphinxql";s:42:" /* result 2 of previous multistatement */";}i:11;a:3:{s:10:"total_rows";i:3;s:4:"rows";a:3:{i:0;a:2:{s:2:"r2";s:1:"0";s:8:"count(*)";s:1:"8";}i:1;a:2:{s:2:"r2";s:1:"1";s:8:"count(*)";s:1:"3";}i:2;a:2:{s:2:"r2";s:1:"2";s:8:"count(*)";s:1:"9";}}s:8:"sphinxql";s:41:"/* result 3 of previous multistatement */";}i:12;a:6:{s:13:"http_endpoint";s:11:"json/search";s:11:"http_method";s:4:"POST";s:12:"http_request";s:159:"{ "index": "test_group1,test_group2", "size":0, "aggs":{ "gr_1": { "range": { "field": "code", "ranges": [{"from":200, "to":300},{"from":400, "to":415}] } }} }";s:4:"rows";s:213:"{"timed_out":false,"hits":{"total":20,"total_relation":"eq","hits":[]},"aggregations":{"gr_1":{"buckets":[{"key":"200-300","from":200,"to":300,"doc_count":3},{"key":"400-415","from":400,"to":415,"doc_count":4}]}}}";s:9:"http_code";i:200;s:4:"http";i:1;}i:13;a:3:{s:10:"total_rows";i:1;s:4:"rows";a:1:{i:0;a:4:{s:2:"id";s:2:"21";s:4:"code";s:3:"100";s:8:"count(*)";s:2:"20";s:2:"c1";s:1:"2";}}s:8:"sphinxql";s:163:"select id, code, count(*), range(code, {range_from=200,range_to=300},{range_from=400,range_to=415}) c1 from test_group1,test_group2 facet c1 as r1 order by c1 asc;";}i:14;a:3:{s:10:"total_rows";i:3;s:4:"rows";a:3:{i:0;a:2:{s:2:"r1";s:1:"0";s:8:"count(*)";s:1:"3";}i:1;a:2:{s:2:"r1";s:1:"1";s:8:"count(*)";s:1:"4";}i:2;a:2:{s:2:"r1";s:1:"2";s:8:"count(*)";s:2:"13";}}s:8:"sphinxql";s:42:" /* result 2 of previous multistatement */";}i:15;a:6:{s:13:"http_endpoint";s:11:"json/search";s:11:"http_method";s:4:"POST";s:12:"http_request";s:361:"{
+@@ -74,4 +74,4 @@ a:1:{i:0;a:27:{i:0;a:6:{s:13:"http_endpoint";s:11:"json/search";s:11:"http_metho
+             }
+         }
+     }
+
+----------------------------------------
+
+File: test/test_466/test.xml
+Status: modified
+Changes: +2 -1
+Diff:
+@@ -295,7 +295,8 @@ insert into table_multi1 (id,title,brand_id,j) values
+ }
+ </query>
+ 
+-
++<!-- aggs.ranges with empty or open range -->
++<query endpoint="json/search">{ "index": "test_group1", "size":0, "aggs":{ "gr_1": { "range": { "field": "code", "ranges": [{}] } }} }</query>
+ 
+ </queries>
+ </test>
+
+----------------------------------------
+

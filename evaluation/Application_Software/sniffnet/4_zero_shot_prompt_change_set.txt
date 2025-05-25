@@ -1,0 +1,3798 @@
+Changes between v1.3.0 and v1.3.1
+================================================================================
+
+COMMITS
+--------------------------------------------------------------------------------
+
+Commit: 0f9e759d3bfe9ce2326e3f4180254114aca2c36b
+Author: Charpy
+Date: 2024-04-08 17:30:05+00:00
+Message: Update translations_3.rs
+
+French translation for v1.3
+Thx !
+----------------------------------------
+
+Commit: 152d7a27b2cea90d928ba1507cc8bb8c63cfa241
+Author: luca3s
+Date: 2024-04-08 18:14:47+00:00
+Message: new german translations added.
+old adjusted
+----------------------------------------
+
+Commit: 2e68f0de71654e5859b898b78b78a9caabee1c58
+Author: luca3s
+Date: 2024-04-08 18:24:18+00:00
+Message: formatted
+----------------------------------------
+
+Commit: cdf1744da3f6f9f56da45dcda5fd73e084195f5b
+Author: DinarShagaliev
+Date: 2024-04-08 21:52:41+00:00
+Message: Added russian translation v3. Fixed wrong translations in v1 and v2
+----------------------------------------
+
+Commit: 7cffaeae15ec44a251a39e81b644e5a49c53ee43
+Author: DinarShagaliev
+Date: 2024-04-08 21:55:30+00:00
+Message: Added russian translation v3. Fixed wrong translations in v1 and v2
+----------------------------------------
+
+Commit: 76236104029728a2bc7e81d90bfecd54485dc112
+Author: DinarShagaliev
+Date: 2024-04-08 21:59:49+00:00
+Message: Added russian translation v3. Fixed wrong translations in v1 and v2
+----------------------------------------
+
+Commit: 834d36364f51ebfd6886d854f41ed3883ffe7da1
+Author: Dinar Shagaliev
+Date: 2024-04-08 22:35:48+00:00
+Message: Update translations_2.rs
+----------------------------------------
+
+Commit: dfcadebb7a5527f6636d5f6a69d15f70d2e185e5
+Author: ervinpopescu
+Date: 2024-04-09 18:26:45+00:00
+Message: Translations for v1.3
+----------------------------------------
+
+Commit: 587afd5cccc676d3e0c7bbf81acc1db47a21958f
+Author: dependabot[bot]
+Date: 2024-04-10 03:55:57+00:00
+Message: build(deps): bump rstest from 0.18.2 to 0.19.0
+
+Bumps [rstest](https://github.com/la10736/rstest) from 0.18.2 to 0.19.0.
+- [Release notes](https://github.com/la10736/rstest/releases)
+- [Changelog](https://github.com/la10736/rstest/blob/master/CHANGELOG.md)
+- [Commits](https://github.com/la10736/rstest/compare/v0.18.2...v0.19.0)
+
+---
+updated-dependencies:
+- dependency-name: rstest
+  dependency-type: direct:production
+  update-type: version-update:semver-minor
+...
+
+Signed-off-by: dependabot[bot] <support@github.com>
+----------------------------------------
+
+Commit: c0af290c205d15f1ca47a110c4c7314d6cdd5217
+Author: hirotake111
+Date: 2024-04-13 08:33:28+00:00
+Message: add Japanese translation
+----------------------------------------
+
+Commit: 213771252d89360b9a251342ba69fba00009abab
+Author: Giuliano Bellini
+Date: 2024-04-13 08:35:18+00:00
+Message: Merge pull request #500 from GyulyVGC/dependabot/cargo/main/rstest-0.19.0
+
+build(deps): bump rstest from 0.18.2 to 0.19.0
+----------------------------------------
+
+Commit: 4ae584443dc756db8a8f2ac893a29679982ada96
+Author: Giuliano Bellini
+Date: 2024-04-14 16:37:45+00:00
+Message: Merge branch 'main' into patch-3
+----------------------------------------
+
+Commit: fab119328b92f0dbcf2ae66486baf904b856dd03
+Author: Giuliano Bellini
+Date: 2024-04-14 20:26:14+00:00
+Message: Merge pull request #494 from Charpy/patch-3
+
+Update translations_3.rs
+----------------------------------------
+
+Commit: 587cf022038bc0b94d39c419e604319804d009bf
+Author: ImgBotApp
+Date: 2024-04-15 16:15:48+00:00
+Message: [ImgBot] Optimize images
+
+/resources/repository/pages/catppuccin.png -- 212.71kb -> 151.11kb (28.96%)
+
+Signed-off-by: ImgBotApp <ImgBotHelp@gmail.com>
+----------------------------------------
+
+Commit: dea8ab8f92f381953b44c4d5b6bb56d0cf6b1797
+Author: Giuliano Bellini
+Date: 2024-04-15 20:43:30+00:00
+Message: Merge pull request #508 from GyulyVGC/imgbot
+
+[ImgBot] Optimize images
+----------------------------------------
+
+Commit: ac258d2ababb4ee76f4ce7d4bdaae6f6f987a62f
+Author: Giuliano Bellini s294739
+Date: 2024-04-15 21:58:02+00:00
+Message: add method to check if language is up to date and fix merge conflicts
+----------------------------------------
+
+Commit: b0b73fc5428062c720d8193ec186960d85707d65
+Author: Giuliano Bellini s294739
+Date: 2024-04-15 22:05:57+00:00
+Message: updated CHANGELOG
+----------------------------------------
+
+Commit: 5b92515bf169735d9a3eeafbf10087a54030d6be
+Author: Giuliano Bellini
+Date: 2024-04-15 22:25:35+00:00
+Message: Merge pull request #495 from luca3s/main
+
+new german translations
+----------------------------------------
+
+Commit: 031de0d35afa10a662f452572397eaf6b1071af6
+Author: dependabot[bot]
+Date: 2024-04-16 03:27:53+00:00
+Message: build(deps): bump chrono from 0.4.37 to 0.4.38
+
+Bumps [chrono](https://github.com/chronotope/chrono) from 0.4.37 to 0.4.38.
+- [Release notes](https://github.com/chronotope/chrono/releases)
+- [Changelog](https://github.com/chronotope/chrono/blob/main/CHANGELOG.md)
+- [Commits](https://github.com/chronotope/chrono/compare/v0.4.37...v0.4.38)
+
+---
+updated-dependencies:
+- dependency-name: chrono
+  dependency-type: direct:production
+  update-type: version-update:semver-patch
+...
+
+Signed-off-by: dependabot[bot] <support@github.com>
+----------------------------------------
+
+Commit: 25672e6edc82726fbf452f560831d017d3f4b60b
+Author: mkadir
+Date: 2024-04-16 12:46:54+00:00
+Message:  translations update with v 1.3 for Uzbek lang
+----------------------------------------
+
+Commit: 798e337c0c899d0e852fdd67d85ae8f45da481a1
+Author: dependabot[bot]
+Date: 2024-04-17 03:39:55+00:00
+Message: build(deps): bump serde from 1.0.197 to 1.0.198
+
+Bumps [serde](https://github.com/serde-rs/serde) from 1.0.197 to 1.0.198.
+- [Release notes](https://github.com/serde-rs/serde/releases)
+- [Commits](https://github.com/serde-rs/serde/compare/v1.0.197...v1.0.198)
+
+---
+updated-dependencies:
+- dependency-name: serde
+  dependency-type: direct:production
+  update-type: version-update:semver-patch
+...
+
+Signed-off-by: dependabot[bot] <support@github.com>
+----------------------------------------
+
+Commit: a5b9bf13ddf29c35fda688ceadb3bd590619f346
+Author: Hubert@Home
+Date: 2024-04-09 05:58:25+00:00
+Message: feat(translation): Add v1.3 polish translation
+----------------------------------------
+
+Commit: a60ec35644b93649eb0ee4e7b37fd01e39964bbb
+Author: Hubert@Home
+Date: 2024-04-09 06:00:21+00:00
+Message: chore(translation): Minor adjustments to the PL translation to make it sound more "natural"
+----------------------------------------
+
+Commit: bf2ebc45b119c0af340fd528e94af0a31787ff5c
+Author: Hubert@Home
+Date: 2024-04-09 06:07:25+00:00
+Message: chore(translation): Remove misleading "WIP" comment & fix punctuation
+----------------------------------------
+
+Commit: 75f305164d72b288ea90e6c834671fe8407147d4
+Author: Hubert@Home
+Date: 2024-04-17 21:28:07+00:00
+Message: fix(translation): Resolve after-rebase conflicts
+----------------------------------------
+
+Commit: c26f414afcd7af9c68eab69489920ab92ab5b6a0
+Author: gyulyvgc
+Date: 2024-04-18 19:49:10+00:00
+Message: fix issue #505 (cannot exit thumbnail mode on Ubuntu)
+----------------------------------------
+
+Commit: 24864895e9cbec72bdc1f39dfb08c86af345c2a2
+Author: Giuliano Bellini s294739
+Date: 2024-04-19 15:19:07+00:00
+Message: add keyboard shortucut to toggle thumbnail mode
+----------------------------------------
+
+Commit: 50dfa2a07e161b7b35c83d80b9fd6f6ca389aa6e
+Author: dependabot[bot]
+Date: 2024-04-19 19:51:13+00:00
+Message: build(deps): bump rustls from 0.22.3 to 0.22.4
+
+Bumps [rustls](https://github.com/rustls/rustls) from 0.22.3 to 0.22.4.
+- [Release notes](https://github.com/rustls/rustls/releases)
+- [Changelog](https://github.com/rustls/rustls/blob/main/CHANGELOG.md)
+- [Commits](https://github.com/rustls/rustls/compare/v/0.22.3...v/0.22.4)
+
+---
+updated-dependencies:
+- dependency-name: rustls
+  dependency-type: indirect
+...
+
+Signed-off-by: dependabot[bot] <support@github.com>
+----------------------------------------
+
+Commit: f8f56c385c4b61e58876acd55ddef6646234ac38
+Author: Giuliano Bellini
+Date: 2024-04-19 20:41:19+00:00
+Message: Merge pull request #513 from GyulyVGC/dependabot/cargo/rustls-0.22.4
+
+build(deps): bump rustls from 0.22.3 to 0.22.4
+----------------------------------------
+
+Commit: d6c9b35d2f35ecea94fb1620cf49108ad860fc0b
+Author: Giuliano Bellini s294739
+Date: 2024-04-20 09:28:18+00:00
+Message: add missing character and update CHANGELOG
+----------------------------------------
+
+Commit: 6ca38bfe2c42ddbc263039137bb2b95b73efbcdf
+Author: Giuliano Bellini
+Date: 2024-04-20 09:40:26+00:00
+Message: Merge pull request #498 from Kiruyuto/v1.3-polish-translations
+
+Update polish translation for v1.3
+----------------------------------------
+
+Commit: 2cb90fadd9d2bffa47721ab171d6d7e40a1300b3
+Author: Giuliano Bellini s294739
+Date: 2024-04-20 10:22:10+00:00
+Message: created script to subset font files to only include necessary glyphs
+----------------------------------------
+
+Commit: 06d1b7372c0f4ae6e7d468e421980a4c6de33ff5
+Author: dependabot[bot]
+Date: 2024-04-22 03:18:26+00:00
+Message: build(deps): bump serial_test from 3.0.0 to 3.1.0
+
+Bumps [serial_test](https://github.com/palfrey/serial_test) from 3.0.0 to 3.1.0.
+- [Release notes](https://github.com/palfrey/serial_test/releases)
+- [Commits](https://github.com/palfrey/serial_test/compare/v3.0.0...v3.1.0)
+
+---
+updated-dependencies:
+- dependency-name: serial_test
+  dependency-type: direct:production
+  update-type: version-update:semver-minor
+...
+
+Signed-off-by: dependabot[bot] <support@github.com>
+----------------------------------------
+
+Commit: 2ed98dbf4bda183988f3117464f92df41194955e
+Author: Giuliano Bellini
+Date: 2024-04-26 14:34:07+00:00
+Message: Merge pull request #509 from GyulyVGC/dependabot/cargo/main/chrono-0.4.38
+
+build(deps): bump chrono from 0.4.37 to 0.4.38
+----------------------------------------
+
+Commit: eef95e309542fe04732ea9c780222a9765ce16bf
+Author: Giuliano Bellini
+Date: 2024-04-26 14:34:58+00:00
+Message: Merge pull request #511 from GyulyVGC/dependabot/cargo/main/serde-1.0.198
+
+build(deps): bump serde from 1.0.197 to 1.0.198
+----------------------------------------
+
+Commit: df7b047d7804e5d22b53cce47c2acfadfaa4fb39
+Author: dependabot[bot]
+Date: 2024-04-26 14:35:33+00:00
+Message: build(deps): bump pcap from 1.3.0 to 2.0.0
+
+Bumps [pcap](https://github.com/rust-pcap/pcap) from 1.3.0 to 2.0.0.
+- [Changelog](https://github.com/rust-pcap/pcap/blob/main/CHANGELOG.md)
+- [Commits](https://github.com/rust-pcap/pcap/commits)
+
+---
+updated-dependencies:
+- dependency-name: pcap
+  dependency-type: direct:production
+  update-type: version-update:semver-major
+...
+
+Signed-off-by: dependabot[bot] <support@github.com>
+----------------------------------------
+
+Commit: 9d379ed207022050668fba70b3c385c20bc88b09
+Author: Giuliano Bellini
+Date: 2024-04-26 14:36:05+00:00
+Message: Merge pull request #517 from GyulyVGC/dependabot/cargo/main/serial_test-3.1.0
+
+build(deps): bump serial_test from 3.0.0 to 3.1.0
+----------------------------------------
+
+Commit: ab1dae42c0ffe6ff3ac9b3de1ecd4ba41662e34f
+Author: Giuliano Bellini
+Date: 2024-04-26 14:42:45+00:00
+Message: Merge pull request #516 from GyulyVGC/dependabot/cargo/main/pcap-2.0.0
+
+build(deps): bump pcap from 1.3.0 to 2.0.0
+----------------------------------------
+
+Commit: 93c42fb03cee59456bf1ed44a0c54e1790f69d85
+Author: Giuliano Bellini s294739
+Date: 2024-04-26 20:24:43+00:00
+Message: fix merge conflicts
+----------------------------------------
+
+Commit: 05d5a87e7d301aaa1783b06830746c77cc211b1d
+Author: Giuliano Bellini s294739
+Date: 2024-04-26 20:51:03+00:00
+Message: add missing character and update CHANGELOG
+----------------------------------------
+
+Commit: 95b4efbed1ab2b4e2cfaa658fdcbdbead9bcd9e3
+Author: allcontributors[bot]
+Date: 2024-04-26 20:58:57+00:00
+Message: docs: add Dinozavvvr as a contributor for translation (#519)
+
+* docs: update CONTRIBUTORS.md [skip ci]
+
+* docs: update .all-contributorsrc [skip ci]
+
+---------
+
+Co-authored-by: allcontributors[bot] <46447321+allcontributors[bot]@users.noreply.github.com>
+----------------------------------------
+
+Commit: 3a1256a76c48a4972c1106860cd6ce1807192f38
+Author: Giuliano Bellini
+Date: 2024-04-26 21:00:02+00:00
+Message: Merge pull request #496 from Dinozavvvr/main
+
+Added Russian translation for v3
+----------------------------------------
+
+Commit: 1ee630ae4d4e1c1a8f3c3a5a057de61d02984000
+Author: vcrn
+Date: 2024-04-29 06:39:49+00:00
+Message: Update Swedish translation to v1.3
+----------------------------------------
+
+Commit: 461486f4d7d347b2c36197e6105fcc629c413912
+Author: Giuliano Bellini s294739
+Date: 2024-04-29 20:30:00+00:00
+Message: update deps
+----------------------------------------
+
+Commit: a848f8042e57d5d5c5f24a10bfe4d9f21786e022
+Author: CosminPerRam
+Date: 2024-04-29 21:34:12+00:00
+Message: remove to string extra occurences
+----------------------------------------
+
+Commit: cac8aae9823091672e520b57566f9fef606194da
+Author: CosminPerRam
+Date: 2024-04-29 23:23:40+00:00
+Message: feat: remove possible String usages in translations
+----------------------------------------
+
+Commit: c638c3b2b155aef47f538fcb9f1978096842d4cc
+Author: CosminPerRam
+Date: 2024-04-29 23:30:13+00:00
+Message: feat: remove more .to_string usages
+----------------------------------------
+
+Commit: 4b0dd5cecc79a16f9a5370b6de1c29ee8a20ffd5
+Author: CosminPerRam
+Date: 2024-04-29 23:30:40+00:00
+Message: chore: fix fmt
+----------------------------------------
+
+Commit: f08b4b2572dfa5c13cb33b172e5c1dfe76399cbe
+Author: CosminPerRam
+Date: 2024-04-29 23:36:26+00:00
+Message: feat: move assignment of svg_style
+----------------------------------------
+
+Commit: 247fb62ff6e8c2b55051c49cc3c09ec0b08d48dd
+Author: dependabot[bot]
+Date: 2024-05-02 03:19:02+00:00
+Message: build(deps): bump serde from 1.0.199 to 1.0.200
+
+Bumps [serde](https://github.com/serde-rs/serde) from 1.0.199 to 1.0.200.
+- [Release notes](https://github.com/serde-rs/serde/releases)
+- [Commits](https://github.com/serde-rs/serde/compare/v1.0.199...v1.0.200)
+
+---
+updated-dependencies:
+- dependency-name: serde
+  dependency-type: direct:production
+  update-type: version-update:semver-patch
+...
+
+Signed-off-by: dependabot[bot] <support@github.com>
+----------------------------------------
+
+Commit: ec1a8fe3c1db752b7fb4a6118bd26b331f349af1
+Author: Giuliano Bellini
+Date: 2024-05-02 07:35:15+00:00
+Message: Merge pull request #526 from GyulyVGC/dependabot/cargo/main/serde-1.0.200
+
+build(deps): bump serde from 1.0.199 to 1.0.200
+----------------------------------------
+
+Commit: f3acc041e589e75730ec018b48c8b423df700e97
+Author: Giuliano Bellini s294739
+Date: 2024-05-10 19:15:40+00:00
+Message: fix new clippy lints and update deps
+----------------------------------------
+
+Commit: 64cf251b013cc6f87b71d350b310be26728aec0a
+Author: Giuliano Bellini s294739
+Date: 2024-05-10 19:38:31+00:00
+Message: update deps in Cargo.toml
+----------------------------------------
+
+Commit: c0f1f7002b0d234353409978b6845c4225c27208
+Author: allcontributors[bot]
+Date: 2024-05-10 19:40:50+00:00
+Message: docs: add abdullahdevrel as a contributor for ideas, and content (#534)
+
+* docs: update CONTRIBUTORS.md [skip ci]
+
+* docs: update .all-contributorsrc [skip ci]
+
+---------
+
+Co-authored-by: allcontributors[bot] <46447321+allcontributors[bot]@users.noreply.github.com>
+----------------------------------------
+
+Commit: 45a80c22f9215a1b009376dda262d316759b3e6a
+Author: Giuliano Bellini s294739
+Date: 2024-05-15 09:13:37+00:00
+Message: fix merge conflicts
+----------------------------------------
+
+Commit: c2949cdf57b9fa60074a14e0cb1da1183495ca56
+Author: Giuliano Bellini s294739
+Date: 2024-05-15 09:31:33+00:00
+Message: update CHANGELOG and set Romanian language as up to date
+----------------------------------------
+
+Commit: 586863562fba1249755c192261423fc7ebee598f
+Author: Giuliano Bellini
+Date: 2024-05-15 09:55:47+00:00
+Message: Merge pull request #499 from ervinpopescu/translations_v1.3
+
+Romanian translations for v1.3
+----------------------------------------
+
+Commit: 64bc0594f164eb5b7ca4b89446cd2d35639a620c
+Author: dependabot[bot]
+Date: 2024-05-16 03:25:21+00:00
+Message: build(deps): bump serde from 1.0.201 to 1.0.202
+
+Bumps [serde](https://github.com/serde-rs/serde) from 1.0.201 to 1.0.202.
+- [Release notes](https://github.com/serde-rs/serde/releases)
+- [Commits](https://github.com/serde-rs/serde/compare/v1.0.201...v1.0.202)
+
+---
+updated-dependencies:
+- dependency-name: serde
+  dependency-type: direct:production
+  update-type: version-update:semver-patch
+...
+
+Signed-off-by: dependabot[bot] <support@github.com>
+----------------------------------------
+
+Commit: cccce39b5586f904ac20344acddba7dc470e59d2
+Author: Giuliano Bellini
+Date: 2024-05-16 06:39:09+00:00
+Message: Merge pull request #536 from GyulyVGC/dependabot/cargo/main/serde-1.0.202
+----------------------------------------
+
+Commit: 669194f5ad71d52be2d318f4f3ad0acab0d48ebf
+Author: dependabot[bot]
+Date: 2024-05-16 06:40:10+00:00
+Message: build(deps): bump toml from 0.8.12 to 0.8.13
+
+Bumps [toml](https://github.com/toml-rs/toml) from 0.8.12 to 0.8.13.
+- [Commits](https://github.com/toml-rs/toml/compare/toml-v0.8.12...toml-v0.8.13)
+
+---
+updated-dependencies:
+- dependency-name: toml
+  dependency-type: direct:production
+  update-type: version-update:semver-patch
+...
+
+Signed-off-by: dependabot[bot] <support@github.com>
+----------------------------------------
+
+Commit: 5b01b57fae0d7b52af72aad8520cc6063cbaa03b
+Author: Giuliano Bellini
+Date: 2024-05-16 06:47:17+00:00
+Message: Merge pull request #537 from GyulyVGC/dependabot/cargo/main/toml-0.8.13
+----------------------------------------
+
+Commit: 690fe36d79abe2887fb45589b09d534b1dc63c9c
+Author: Giuliano Bellini s294739
+Date: 2024-05-19 10:01:54+00:00
+Message: fix merge conflicts
+----------------------------------------
+
+Commit: 1b723837f43e5f6071c93cb2a6011691d14ccd9f
+Author: Giuliano Bellini s294739
+Date: 2024-05-19 10:16:30+00:00
+Message: add missing character and update CHANGELOG
+----------------------------------------
+
+Commit: c0db799e99c4d7a879fe0d4e13484b18f1f55da2
+Author: Giuliano Bellini
+Date: 2024-05-19 10:21:52+00:00
+Message: Merge pull request #504 from hirotake111/japanese_translation
+
+add Japanese translation
+----------------------------------------
+
+Commit: 7cc94d043b140a99f1a50a53e5c4f8f6010b0bf0
+Author: dependabot[bot]
+Date: 2024-05-21 03:18:43+00:00
+Message: ---
+updated-dependencies:
+- dependency-name: plotters
+  dependency-type: direct:production
+  update-type: version-update:semver-patch
+...
+
+Signed-off-by: dependabot[bot] <support@github.com>
+----------------------------------------
+
+Commit: 3d7b3653481df6bb9cfb4d5c7c037d2154ac0fbe
+Author: Giuliano Bellini
+Date: 2024-05-21 08:42:14+00:00
+Message: Merge pull request #538 from GyulyVGC/dependabot/cargo/main/plotters-0.3.6
+
+build(deps): bump plotters from 0.3.5 to 0.3.6
+----------------------------------------
+
+Commit: 68aac1ed86fca2a670aae5dbada8d90807064d6c
+Author: Giuliano Bellini
+Date: 2024-05-21 09:40:55+00:00
+Message: Update SECURITY.md
+----------------------------------------
+
+Commit: 8932dd9f20cca700ca1b5a07b906bd452c7e50aa
+Author: Giuliano Bellini s294739
+Date: 2024-05-23 17:17:49+00:00
+Message: fix merge conflicts
+----------------------------------------
+
+Commit: 82a31fbc795c134bb7b9da552e320f5d14a39c99
+Author: Giuliano Bellini s294739
+Date: 2024-05-23 17:42:57+00:00
+Message: update CHANGELOG
+----------------------------------------
+
+Commit: 8998b10ed820452ad06ddc0f6d4eeff71f3ff1cb
+Author: Giuliano Bellini
+Date: 2024-05-23 17:47:32+00:00
+Message: Merge pull request #510 from Mkadir/main
+
+ translations updated with v 1.3 for Uzbek lang
+----------------------------------------
+
+Commit: 787fe4e90ccb5bdb948870f84675764e8ae53ca5
+Author: dependabot[bot]
+Date: 2024-05-24 03:42:39+00:00
+Message: Bump rodio from 0.18.0 to 0.18.1
+
+Bumps [rodio](https://github.com/RustAudio/rodio) from 0.18.0 to 0.18.1.
+- [Changelog](https://github.com/RustAudio/rodio/blob/master/CHANGELOG.md)
+- [Commits](https://github.com/RustAudio/rodio/commits)
+
+---
+updated-dependencies:
+- dependency-name: rodio
+  dependency-type: direct:production
+  update-type: version-update:semver-patch
+...
+
+Signed-off-by: dependabot[bot] <support@github.com>
+----------------------------------------
+
+Commit: 3bdb189cfb9c2698116a0a7fc88d75e1d9261893
+Author: Giuliano Bellini
+Date: 2024-05-24 06:28:25+00:00
+Message: Merge pull request #539 from GyulyVGC/dependabot/cargo/main/rodio-0.18.1
+----------------------------------------
+
+Commit: dde1dbdc8a706c817ec5a69b24e71d2145a11edb
+Author: Giuliano Bellini s294739
+Date: 2024-05-25 13:15:08+00:00
+Message: Merge branch 'main' into improve-thumbnail
+----------------------------------------
+
+Commit: 993a963c5e5088ea1225c795eb213527abc3d728
+Author: Giuliano Bellini s294739
+Date: 2024-05-25 13:16:24+00:00
+Message: don't show duplicated entries in network hosts list of the thumbnail
+----------------------------------------
+
+Commit: 43f5ae2914ea63831b7c0afa5569f0ee7cb08287
+Author: dependabot[bot]
+Date: 2024-05-27 03:10:14+00:00
+Message: Bump etherparse from 0.14.3 to 0.15.0
+
+Bumps [etherparse](https://github.com/JulianSchmid/etherparse) from 0.14.3 to 0.15.0.
+- [Release notes](https://github.com/JulianSchmid/etherparse/releases)
+- [Changelog](https://github.com/JulianSchmid/etherparse/blob/master/changelog.md)
+- [Commits](https://github.com/JulianSchmid/etherparse/compare/v0.14.3...v0.15.0)
+
+---
+updated-dependencies:
+- dependency-name: etherparse
+  dependency-type: direct:production
+  update-type: version-update:semver-minor
+...
+
+Signed-off-by: dependabot[bot] <support@github.com>
+----------------------------------------
+
+Commit: 16f08920b01728e2516f6f644460ee74bee25826
+Author: dependabot[bot]
+Date: 2024-05-27 03:10:33+00:00
+Message: Bump serde from 1.0.202 to 1.0.203
+
+Bumps [serde](https://github.com/serde-rs/serde) from 1.0.202 to 1.0.203.
+- [Release notes](https://github.com/serde-rs/serde/releases)
+- [Commits](https://github.com/serde-rs/serde/compare/v1.0.202...v1.0.203)
+
+---
+updated-dependencies:
+- dependency-name: serde
+  dependency-type: direct:production
+  update-type: version-update:semver-patch
+...
+
+Signed-off-by: dependabot[bot] <support@github.com>
+----------------------------------------
+
+Commit: 8777366f86d84031452e23b4879ccca3ac64ccac
+Author: Giuliano Bellini
+Date: 2024-05-27 09:34:29+00:00
+Message: Merge pull request #541 from GyulyVGC/dependabot/cargo/main/serde-1.0.203
+
+Bump serde from 1.0.202 to 1.0.203
+----------------------------------------
+
+Commit: 0dbba6d1511bcda67afd757ec606905cbc447363
+Author: dependabot[bot]
+Date: 2024-05-31 03:32:50+00:00
+Message: Bump rstest from 0.19.0 to 0.20.0
+
+Bumps [rstest](https://github.com/la10736/rstest) from 0.19.0 to 0.20.0.
+- [Release notes](https://github.com/la10736/rstest/releases)
+- [Changelog](https://github.com/la10736/rstest/blob/master/CHANGELOG.md)
+- [Commits](https://github.com/la10736/rstest/compare/v0.19.0...v0.20.0)
+
+---
+updated-dependencies:
+- dependency-name: rstest
+  dependency-type: direct:production
+  update-type: version-update:semver-minor
+...
+
+Signed-off-by: dependabot[bot] <support@github.com>
+----------------------------------------
+
+Commit: 2e88334f55121bfb5f23ef6fa5bd791c318021ad
+Author: Giuliano Bellini
+Date: 2024-05-31 06:38:29+00:00
+Message: Merge pull request #543 from GyulyVGC/dependabot/cargo/main/rstest-0.20.0
+----------------------------------------
+
+Commit: 9163e95e5b3eedb93958800c178782fb2a7bbd64
+Author: Giuliano Bellini s294739
+Date: 2024-05-31 20:40:47+00:00
+Message: added Persian translation for v1.3 (commented: RTL not supported yet)
+----------------------------------------
+
+Commit: 1f7858b78aa71dbae81b63864008f4166003bdcb
+Author: Giuliano Bellini s294739
+Date: 2024-06-01 19:37:50+00:00
+Message: fix etherparse 0.15 build error
+----------------------------------------
+
+Commit: 918e1db9b06c0557a839d49898eb746bd6cc2a8d
+Author: Giuliano Bellini
+Date: 2024-06-01 19:46:51+00:00
+Message: Merge pull request #540 from GyulyVGC/dependabot/cargo/main/etherparse-0.15.0
+
+Bump etherparse from 0.14.3 to 0.15.0
+----------------------------------------
+
+Commit: 354be4c723f3bf2e42ea4cef82a9ead6a2bea0b8
+Author: dependabot[bot]
+Date: 2024-06-03 03:26:58+00:00
+Message: Bump rstest from 0.20.0 to 0.21.0
+
+Bumps [rstest](https://github.com/la10736/rstest) from 0.20.0 to 0.21.0.
+- [Release notes](https://github.com/la10736/rstest/releases)
+- [Changelog](https://github.com/la10736/rstest/blob/master/CHANGELOG.md)
+- [Commits](https://github.com/la10736/rstest/compare/v0.20.0...v0.21.0)
+
+---
+updated-dependencies:
+- dependency-name: rstest
+  dependency-type: direct:production
+  update-type: version-update:semver-minor
+...
+
+Signed-off-by: dependabot[bot] <support@github.com>
+----------------------------------------
+
+Commit: ec41706b3455c8ca540a3e955c6555d51b38565f
+Author: Giuliano Bellini
+Date: 2024-06-03 06:40:53+00:00
+Message: Merge pull request #544 from GyulyVGC/dependabot/cargo/main/rstest-0.21.0
+----------------------------------------
+
+Commit: a7e9ff2dc32b7591a25f87e1fb93082213e4c082
+Author: dependabot[bot]
+Date: 2024-06-04 03:14:22+00:00
+Message: Bump toml from 0.8.13 to 0.8.14
+
+Bumps [toml](https://github.com/toml-rs/toml) from 0.8.13 to 0.8.14.
+- [Commits](https://github.com/toml-rs/toml/compare/toml-v0.8.13...toml-v0.8.14)
+
+---
+updated-dependencies:
+- dependency-name: toml
+  dependency-type: direct:production
+  update-type: version-update:semver-patch
+...
+
+Signed-off-by: dependabot[bot] <support@github.com>
+----------------------------------------
+
+Commit: 5dacb196e78ad336ef79979c3a3e3ebe77329f95
+Author: Giuliano Bellini
+Date: 2024-06-04 08:31:25+00:00
+Message: Merge pull request #545 from GyulyVGC/dependabot/cargo/main/toml-0.8.14
+----------------------------------------
+
+Commit: 61b6d6b365859d3a7b4c44649dd9b2e9e2cdd037
+Author: Giuliano Bellini s294739
+Date: 2024-06-05 20:51:05+00:00
+Message: increased the range of selectable zoom values (fixes #542)
+----------------------------------------
+
+Commit: a254ba56337711d0747fb51941061a932edb6204
+Author: Giuliano Bellini s294739
+Date: 2024-06-05 20:51:17+00:00
+Message: Merge branch 'main' of github.com:GyulyVGC/sniffnet
+----------------------------------------
+
+Commit: c34dd6ecdee6f59206946466f0e8cbc700c9f422
+Author: Giuliano Bellini s294739
+Date: 2024-06-06 20:15:47+00:00
+Message: fix zoom slider step
+----------------------------------------
+
+Commit: 8221e36a70e199d8a935b2a49b66449256d3a47b
+Author: Giuliano Bellini
+Date: 2024-06-06 20:52:16+00:00
+Message: Merge branch 'main' into remove_to_string_extra_occurences
+----------------------------------------
+
+Commit: 9e23926b1117c9c0f8ab2db2f94f203c8bd79404
+Author: Giuliano Bellini s294739
+Date: 2024-06-06 20:54:50+00:00
+Message: update CHANGELOG
+----------------------------------------
+
+Commit: dbcdc899f1d7108893f0abde1d12d6d6b83b8f1e
+Author: allcontributors[bot]
+Date: 2024-06-06 20:59:23+00:00
+Message: docs: add CosminPerRam as a contributor for code (#546)
+
+* docs: update CONTRIBUTORS.md [skip ci]
+
+* docs: update .all-contributorsrc [skip ci]
+
+---------
+
+Co-authored-by: allcontributors[bot] <46447321+allcontributors[bot]@users.noreply.github.com>
+----------------------------------------
+
+Commit: d54c77fb6390a3fd034207a5cb6bf087cf175923
+Author: Giuliano Bellini
+Date: 2024-06-06 21:00:55+00:00
+Message: Merge pull request #524 from CosminPerRam/remove_to_string_extra_occurences
+
+Reduce usage of `String` in translations code.
+----------------------------------------
+
+Commit: fad521a8f5fb41e260ee0bdada53633a3d72a560
+Author: Giuliano Bellini s294739
+Date: 2024-06-15 13:39:11+00:00
+Message: added new sample theme: sniffnet_rebrand.toml
+----------------------------------------
+
+Commit: 24f1623b155dee5beca7bc0162a955eeb8100f01
+Author: Giuliano Bellini s294739
+Date: 2024-06-15 14:42:39+00:00
+Message: fix new clippy lints
+----------------------------------------
+
+Commit: d113c26376ba1397ceb506277e23170c762cbef9
+Author: Giuliano Bellini s294739
+Date: 2024-06-19 20:43:55+00:00
+Message: update deps
+----------------------------------------
+
+Commit: d37bf8e6feeca2362d89e31683dfb0ed4ea0fe6a
+Author: Giuliano Bellini s294739
+Date: 2024-06-29 08:14:41+00:00
+Message: fix merge conflicts
+----------------------------------------
+
+Commit: c4c5d5eb577b13d95ec6b272f748668076c29fb3
+Author: Giuliano Bellini s294739
+Date: 2024-06-29 08:23:11+00:00
+Message: update CHANGELOG
+----------------------------------------
+
+Commit: 9a2e27f12e146d912c1e9194dd9a25c15ffa37ce
+Author: Giuliano Bellini s294739
+Date: 2024-06-29 08:41:45+00:00
+Message: minor translations improvement
+----------------------------------------
+
+Commit: 0758721217872ac07c1b45581c8ab178999f97ba
+Author: Giuliano Bellini
+Date: 2024-06-29 08:42:46+00:00
+Message: Merge pull request #522 from vcrn/swedish_translation_update
+
+Update Swedish translation to v1.3
+----------------------------------------
+
+Commit: 69fd9ff2e4bb0f610a89d70726603cfd5f7ecaf8
+Author: Giuliano Bellini
+Date: 2024-06-30 09:40:49+00:00
+Message: Merge branch 'main' into improve-thumbnail
+----------------------------------------
+
+Commit: d78c532a1fa74a093c5361ed76e63d2abc62859c
+Author: dependabot[bot]
+Date: 2024-07-01 03:49:29+00:00
+Message: Bump rodio from 0.18.1 to 0.19.0
+
+Bumps [rodio](https://github.com/RustAudio/rodio) from 0.18.1 to 0.19.0.
+- [Changelog](https://github.com/RustAudio/rodio/blob/master/CHANGELOG.md)
+- [Commits](https://github.com/RustAudio/rodio/commits)
+
+---
+updated-dependencies:
+- dependency-name: rodio
+  dependency-type: direct:production
+  update-type: version-update:semver-minor
+...
+
+Signed-off-by: dependabot[bot] <support@github.com>
+----------------------------------------
+
+Commit: 28be7662a69a78b49b404377a2d45a6dd4376d39
+Author: Giuliano Bellini
+Date: 2024-07-01 06:54:47+00:00
+Message: Merge pull request #550 from GyulyVGC/dependabot/cargo/main/rodio-0.19.0
+----------------------------------------
+
+Commit: 066233885530edb262b6fda8791888be87ef71f0
+Author: allcontributors[bot]
+Date: 2024-07-04 13:30:54+00:00
+Message: docs: add corneliusroemer as a contributor for ideas (#557)
+
+* docs: update CONTRIBUTORS.md [skip ci]
+
+* docs: update .all-contributorsrc [skip ci]
+
+---------
+
+Co-authored-by: allcontributors[bot] <46447321+allcontributors[bot]@users.noreply.github.com>
+----------------------------------------
+
+Commit: 355d923609b48178ff24d08fb552056f49e2b182
+Author: Giuliano Bellini s294739
+Date: 2024-07-05 09:55:05+00:00
+Message: ensure thumbnail isn't toggled too fast
+----------------------------------------
+
+Commit: cddf43c9b6944508d103cab4e30a7097598b9665
+Author: Giuliano Bellini
+Date: 2024-07-05 10:03:08+00:00
+Message: Merge pull request #512 from GyulyVGC/improve-thumbnail
+
+Thumbnail mode improvements
+----------------------------------------
+
+Commit: bbc4943c3636c9576e5553ba754e99f53236237e
+Author: Giuliano Bellini s294739
+Date: 2024-07-06 18:56:54+00:00
+Message: update CHANGELOG
+----------------------------------------
+
+Commit: 99295e956858259869ab0112ca3f0405f8b36984
+Author: Giuliano Bellini s294739
+Date: 2024-07-06 20:54:43+00:00
+Message: add keyboard shortcuts to change zoom level (fixes #554)
+----------------------------------------
+
+Commit: 3a8540a06c267e608a86bcd96f1927a67e38421d
+Author: Giuliano Bellini s294739
+Date: 2024-07-07 14:46:53+00:00
+Message: add generic MmdbCountryEntry to also support IPinfo database entries
+----------------------------------------
+
+Commit: 8dfc5da46d32d34ff0e919731d22b16fdda1d914
+Author: Giuliano Bellini s294739
+Date: 2024-07-07 15:49:41+00:00
+Message: add generic MmdbAsnEntry to also support IPinfo database entries
+----------------------------------------
+
+Commit: bedb4fcfe36a2dfc7d1e442037471fd56fb30455
+Author: dependabot[bot]
+Date: 2024-07-08 03:29:58+00:00
+Message: Bump serde from 1.0.203 to 1.0.204
+
+Bumps [serde](https://github.com/serde-rs/serde) from 1.0.203 to 1.0.204.
+- [Release notes](https://github.com/serde-rs/serde/releases)
+- [Commits](https://github.com/serde-rs/serde/compare/v1.0.203...v1.0.204)
+
+---
+updated-dependencies:
+- dependency-name: serde
+  dependency-type: direct:production
+  update-type: version-update:semver-patch
+...
+
+Signed-off-by: dependabot[bot] <support@github.com>
+----------------------------------------
+
+Commit: 90cd18ee26fc2e90406e0db4c06aec2b4587dfad
+Author: Giuliano Bellini s294739
+Date: 2024-07-13 19:35:34+00:00
+Message: added method lookup to struct MmdbReader
+----------------------------------------
+
+Commit: d6d3c273329aef9722493a4b4f746759c92b6cac
+Author: Giuliano Bellini
+Date: 2024-07-17 10:18:40+00:00
+Message: update cargo install instructions
+----------------------------------------
+
+Commit: 0f36d172fc4c3901b54630b68e6942338a763a93
+Author: Giuliano Bellini
+Date: 2024-07-17 14:28:04+00:00
+Message: Merge pull request #559 from GyulyVGC/dependabot/cargo/main/serde-1.0.204
+
+Bump serde from 1.0.203 to 1.0.204
+----------------------------------------
+
+Commit: 91c5f31ceb258c3caac599307ea25dd064f09eb4
+Author: Giuliano Bellini s294739
+Date: 2024-07-17 15:39:58+00:00
+Message: update deps
+----------------------------------------
+
+Commit: 2db69f4234f0f03b4ccf7f988dd4bf4e14737f61
+Author: dependabot[bot]
+Date: 2024-07-18 03:58:41+00:00
+Message: Bump toml from 0.8.14 to 0.8.15
+
+Bumps [toml](https://github.com/toml-rs/toml) from 0.8.14 to 0.8.15.
+- [Commits](https://github.com/toml-rs/toml/compare/toml-v0.8.14...toml-v0.8.15)
+
+---
+updated-dependencies:
+- dependency-name: toml
+  dependency-type: direct:production
+  update-type: version-update:semver-patch
+...
+
+Signed-off-by: dependabot[bot] <support@github.com>
+----------------------------------------
+
+Commit: 2872a2db514018fff924a13a7393f5e4eca6bbe9
+Author: Giuliano Bellini
+Date: 2024-07-18 07:28:43+00:00
+Message: Merge pull request #562 from GyulyVGC/dependabot/cargo/main/toml-0.8.15
+----------------------------------------
+
+Commit: dc369762542a1a9ff8cd55608c2ef279360029de
+Author: Giuliano Bellini s294739
+Date: 2024-07-18 20:11:00+00:00
+Message: test get_asn() and get_country()
+----------------------------------------
+
+Commit: da35e8bcf31d7bbd29032c95991f774423843536
+Author: Giuliano Bellini s294739
+Date: 2024-07-18 20:25:58+00:00
+Message: update CHANGELOG
+----------------------------------------
+
+Commit: 33454da934f8c5c2fc280b95921685dd6ceb5079
+Author: Giuliano Bellini s294739
+Date: 2024-07-18 20:32:21+00:00
+Message: update default MMDBs
+----------------------------------------
+
+Commit: b1af2bef4614e9005ce51f25d879c7c906898029
+Author: Giuliano Bellini
+Date: 2024-07-18 20:42:47+00:00
+Message: Merge pull request #558 from GyulyVGC/ipinfo-mmdb
+
+Add support for IPinfo MMDB format
+----------------------------------------
+
+Commit: 1e582d9ab84e997212665d52edd1afb331f1b358
+Author: Giuliano Bellini s294739
+Date: 2024-07-19 13:55:30+00:00
+Message: update upper layer service list
+----------------------------------------
+
+Commit: d2961aa4ddf47d06dbb125121183cd01f2d6bbd6
+Author: Giuliano Bellini s294739
+Date: 2024-07-19 13:57:57+00:00
+Message: update deps
+----------------------------------------
+
+Commit: 0c8801e1aa7c40322514857ffea5dca758ad5707
+Author: Giuliano Bellini s294739
+Date: 2024-07-19 14:06:16+00:00
+Message: optimize imports
+----------------------------------------
+
+Commit: fad592cf2908be4cfcc8feee3d94b7a469e76b51
+Author: Giuliano Bellini s294739
+Date: 2024-07-19 14:18:11+00:00
+Message: fix clippy pedantic lints
+----------------------------------------
+
+Commit: f506825e1da96f7a6c07ae1f161be0cb1657a2af
+Author: Giuliano Bellini s294739
+Date: 2024-07-20 19:43:50+00:00
+Message: bump version to 1.3.1
+----------------------------------------
+
+Commit: b1abe68dc5a8639b138f34c5678c16b709d5149c
+Author: Giuliano Bellini s294739
+Date: 2024-07-22 08:46:31+00:00
+Message: update CHANGELOG
+----------------------------------------
+
+Commit: ecb20f62d3475112105b4210b2cba5a652a08f16
+Author: Giuliano Bellini
+Date: 2024-07-22 09:21:38+00:00
+Message: Merge pull request #564 from GyulyVGC/v1.3.1
+
+v1.3.1
+----------------------------------------
+
+
+PULL REQUESTS
+--------------------------------------------------------------------------------
+
+PR #564: v1.3.1
+Author: GyulyVGC
+Merged at: 2024-07-22 09:21:38+00:00
+URL: https://github.com/GyulyVGC/sniffnet/pull/564
+Description:
+Preparing for Sniffnet v1.3.1 release.
+----------------------------------------
+
+PR #558: Add support for IPinfo MMDB format
+Author: GyulyVGC
+Merged at: 2024-07-18 20:42:47+00:00
+URL: https://github.com/GyulyVGC/sniffnet/pull/558
+Description:
+This PR adds support for IPinfo MMDB database format as described in #533.
+
+Now both the "standard" MMDB files and IPinfo's ones can be successfully imported and used with Sniffnet.
+
+This was achieved introducing new enums whose variants correspond to the possible different representations of database entries.
+In this way, the result of the lookup against the MMDB file will be deserialised to the proper enum variant.
+
+Fixes #533.
+----------------------------------------
+
+PR #562: Bump toml from 0.8.14 to 0.8.15
+Author: dependabot[bot]
+Merged at: 2024-07-18 07:28:44+00:00
+URL: https://github.com/GyulyVGC/sniffnet/pull/562
+Description:
+Bumps [toml](https://github.com/toml-rs/toml) from 0.8.14 to 0.8.15.
+<details>
+<summary>Commits</summary>
+<ul>
+<li><a href="https://github.com/toml-rs/toml/commit/9217e44287880ce07777ae48fb8884a184957ae2"><code>9217e44</code></a> chore: Release</li>
+<li><a href="https://github.com/toml-rs/toml/commit/003ce94f4c554e50cf81e4877874e699c7cf58c5"><code>003ce94</code></a> docs: Update changelog</li>
+<li><a href="https://github.com/toml-rs/toml/commit/b463f3d7098d3680eec40e8c28d407d86b73d114"><code>b463f3d</code></a> Merge pull request <a href="https://redirect.github.com/toml-rs/toml/issues/757">#757</a> from epage/key</li>
+<li><a href="https://github.com/toml-rs/toml/commit/3d8852b385576578a7462591f32250a919af31d0"><code>3d8852b</code></a> fix(encode): Be extra sure it can be a literal</li>
+<li><a href="https://github.com/toml-rs/toml/commit/e1bc1c3861f208283c13410848dc34d73c1b0df4"><code>e1bc1c3</code></a> refactor(encode): Pull out literal inference</li>
+<li><a href="https://github.com/toml-rs/toml/commit/fbb0ac28b5ddba66db2aef192ec6b269ea42079d"><code>fbb0ac2</code></a> test(encode): Add property-based tests for keys/strings</li>
+<li><a href="https://github.com/toml-rs/toml/commit/0b268f20c11003de0fe2a886d15816fba41f4ed3"><code>0b268f2</code></a> fix(encode): Correct encoding for key with mixed quotes</li>
+<li><a href="https://github.com/toml-rs/toml/commit/82c019557d77d4764f1128602d1b14d876d2e094"><code>82c0195</code></a> refactor(encode): Make str repr inferring clearer</li>
+<li><a href="https://github.com/toml-rs/toml/commit/330b590968e00c94a6a9d4ee3cbb1f8615cf693c"><code>330b590</code></a> refactor(encode): Extract all str repr inferring</li>
+<li><a href="https://github.com/toml-rs/toml/commit/00fb5eee54e9c8ee44860bc983753ff97e86a0da"><code>00fb5ee</code></a> test(edit): Add more roundtrip testing</li>
+<li>Additional commits viewable in <a href="https://github.com/toml-rs/toml/compare/toml-v0.8.14...toml-v0.8.15">compare view</a></li>
+</ul>
+</details>
+<br />
+
+
+[![Dependabot compatibility score](https://dependabot-badges.githubapp.com/badges/compatibility_score?dependency-name=toml&package-manager=cargo&previous-version=0.8.14&new-version=0.8.15)](https://docs.github.com/en/github/managing-security-vulnerabilities/about-dependabot-security-updates#about-compatibility-scores)
+
+Dependabot will resolve any conflicts with this PR as long as you don't alter it yourself. You can also trigger a rebase manually by commenting `@dependabot rebase`.
+
+[//]: # (dependabot-automerge-start)
+[//]: # (dependabot-automerge-end)
+
+---
+
+<details>
+<summary>Dependabot commands and options</summary>
+<br />
+
+You can trigger Dependabot actions by commenting on this PR:
+- `@dependabot rebase` will rebase this PR
+- `@dependabot recreate` will recreate this PR, overwriting any edits that have been made to it
+- `@dependabot merge` will merge this PR after your CI passes on it
+- `@dependabot squash and merge` will squash and merge this PR after your CI passes on it
+- `@dependabot cancel merge` will cancel a previously requested merge and block automerging
+- `@dependabot reopen` will reopen this PR if it is closed
+- `@dependabot close` will close this PR and stop Dependabot recreating it. You can achieve the same result by closing it manually
+- `@dependabot show <dependency name> ignore conditions` will show all of the ignore conditions of the specified dependency
+- `@dependabot ignore this major version` will close this PR and stop Dependabot creating any more for this major version (unless you reopen the PR or upgrade to it yourself)
+- `@dependabot ignore this minor version` will close this PR and stop Dependabot creating any more for this minor version (unless you reopen the PR or upgrade to it yourself)
+- `@dependabot ignore this dependency` will close this PR and stop Dependabot creating any more for this dependency (unless you reopen the PR or upgrade to it yourself)
+
+
+</details>
+----------------------------------------
+
+PR #559: Bump serde from 1.0.203 to 1.0.204
+Author: dependabot[bot]
+Merged at: 2024-07-17 14:28:04+00:00
+URL: https://github.com/GyulyVGC/sniffnet/pull/559
+Description:
+Bumps [serde](https://github.com/serde-rs/serde) from 1.0.203 to 1.0.204.
+<details>
+<summary>Release notes</summary>
+<p><em>Sourced from <a href="https://github.com/serde-rs/serde/releases">serde's releases</a>.</em></p>
+<blockquote>
+<h2>v1.0.204</h2>
+<ul>
+<li>Apply #[diagnostic::on_unimplemented] attribute on Rust 1.78+ to suggest adding serde derive or enabling a &quot;serde&quot; feature flag in dependencies (<a href="https://redirect.github.com/serde-rs/serde/issues/2767">#2767</a>, thanks <a href="https://github.com/weiznich"><code>@​weiznich</code></a>)</li>
+</ul>
+</blockquote>
+</details>
+<details>
+<summary>Commits</summary>
+<ul>
+<li><a href="https://github.com/serde-rs/serde/commit/18dcae0a77632fb4767a420c550cb41991f750b8"><code>18dcae0</code></a> Release 1.0.204</li>
+<li><a href="https://github.com/serde-rs/serde/commit/58c307f9cc28a19d73a0e2869f6addf9a8a329f9"><code>58c307f</code></a> Alphabetize list of rustc-check-cfg</li>
+<li><a href="https://github.com/serde-rs/serde/commit/8cc4809414a83de0d41eac38ecfa1040e088b61e"><code>8cc4809</code></a> Merge pull request <a href="https://redirect.github.com/serde-rs/serde/issues/2769">#2769</a> from dtolnay/onunimpl</li>
+<li><a href="https://github.com/serde-rs/serde/commit/1179158defc5351467cbd2c340b7e1498391bce4"><code>1179158</code></a> Update ui test with diagnostic::on_unimplemented from PR 2767</li>
+<li><a href="https://github.com/serde-rs/serde/commit/91aa40e749620f31bf7db01c772e672f023136b5"><code>91aa40e</code></a> Add ui test of unsatisfied serde trait bound</li>
+<li><a href="https://github.com/serde-rs/serde/commit/595019e979ebed5452b550bf901abcab2cf4e945"><code>595019e</code></a> Cut test_suite from workspace members in old toolchain CI jobs</li>
+<li><a href="https://github.com/serde-rs/serde/commit/b0d7917f88978eda264f8fbac13b46ece35f5348"><code>b0d7917</code></a> Pull in trybuild 'following types implement trait' fix</li>
+<li><a href="https://github.com/serde-rs/serde/commit/8e6637a1e44c30dffd37322a7107d434cd751722"><code>8e6637a</code></a> Merge pull request <a href="https://redirect.github.com/serde-rs/serde/issues/2767">#2767</a> from weiznich/feature/diagnostic_on_unimplemented</li>
+<li><a href="https://github.com/serde-rs/serde/commit/694fe0595358aa0857120a99041d99975b1a8a70"><code>694fe05</code></a> Use the <code>#[diagnostic::on_unimplemented]</code> attribute when possible</li>
+<li><a href="https://github.com/serde-rs/serde/commit/f3dfd2a2375d9caf15a18ec657dde51a32caf6ed"><code>f3dfd2a</code></a> Suppress dead code warning in test of unit struct remote derive</li>
+<li>Additional commits viewable in <a href="https://github.com/serde-rs/serde/compare/v1.0.203...v1.0.204">compare view</a></li>
+</ul>
+</details>
+<br />
+
+
+[![Dependabot compatibility score](https://dependabot-badges.githubapp.com/badges/compatibility_score?dependency-name=serde&package-manager=cargo&previous-version=1.0.203&new-version=1.0.204)](https://docs.github.com/en/github/managing-security-vulnerabilities/about-dependabot-security-updates#about-compatibility-scores)
+
+Dependabot will resolve any conflicts with this PR as long as you don't alter it yourself. You can also trigger a rebase manually by commenting `@dependabot rebase`.
+
+[//]: # (dependabot-automerge-start)
+[//]: # (dependabot-automerge-end)
+
+---
+
+<details>
+<summary>Dependabot commands and options</summary>
+<br />
+
+You can trigger Dependabot actions by commenting on this PR:
+- `@dependabot rebase` will rebase this PR
+- `@dependabot recreate` will recreate this PR, overwriting any edits that have been made to it
+- `@dependabot merge` will merge this PR after your CI passes on it
+- `@dependabot squash and merge` will squash and merge this PR after your CI passes on it
+- `@dependabot cancel merge` will cancel a previously requested merge and block automerging
+- `@dependabot reopen` will reopen this PR if it is closed
+- `@dependabot close` will close this PR and stop Dependabot recreating it. You can achieve the same result by closing it manually
+- `@dependabot show <dependency name> ignore conditions` will show all of the ignore conditions of the specified dependency
+- `@dependabot ignore this major version` will close this PR and stop Dependabot creating any more for this major version (unless you reopen the PR or upgrade to it yourself)
+- `@dependabot ignore this minor version` will close this PR and stop Dependabot creating any more for this minor version (unless you reopen the PR or upgrade to it yourself)
+- `@dependabot ignore this dependency` will close this PR and stop Dependabot creating any more for this dependency (unless you reopen the PR or upgrade to it yourself)
+
+
+</details>
+----------------------------------------
+
+PR #512: Thumbnail mode improvements
+Author: GyulyVGC
+Merged at: 2024-07-05 10:03:08+00:00
+URL: https://github.com/GyulyVGC/sniffnet/pull/512
+Description:
+This PR addresses some fixes and improvements related to **thumbnail mode**:
+- [x] fix cannot exit thumbnail mode in Linux (fixes #505)
+- [x] add keyboard shortcut <kbd>ctrl</kbd>+<kbd>t</kbd> to toggle thumbnail mode
+- [x] don't show duplicated entries in network hosts list of the thumbnail
+----------------------------------------
+
+PR #557: docs: add corneliusroemer as a contributor for ideas
+Author: allcontributors[bot]
+Merged at: 2024-07-04 13:30:54+00:00
+URL: https://github.com/GyulyVGC/sniffnet/pull/557
+Description:
+Adds @corneliusroemer as a contributor for ideas.
+
+This was requested by GyulyVGC [in this comment](https://github.com/GyulyVGC/sniffnet/issues/553#issuecomment-2208991169)
+
+[skip ci]
+----------------------------------------
+
+PR #550: Bump rodio from 0.18.1 to 0.19.0
+Author: dependabot[bot]
+Merged at: 2024-07-01 06:54:47+00:00
+URL: https://github.com/GyulyVGC/sniffnet/pull/550
+Description:
+Bumps [rodio](https://github.com/RustAudio/rodio) from 0.18.1 to 0.19.0.
+<details>
+<summary>Changelog</summary>
+<p><em>Sourced from <a href="https://github.com/RustAudio/rodio/blob/master/CHANGELOG.md">rodio's changelog</a>.</em></p>
+<blockquote>
+<h1>Version 0.19.0 (2024-06-29)</h1>
+<h3>Added</h3>
+<ul>
+<li>Adds a new source <code>track_position</code>. It keeps track of duration since the
+beginning of the underlying source.</li>
+</ul>
+<h3>Fixed</h3>
+<ul>
+<li>Mp4a with decodable tracks after undecodable tracks now play. This matches
+VLC's behaviour.</li>
+</ul>
+</blockquote>
+</details>
+<details>
+<summary>Commits</summary>
+<ul>
+<li>See full diff in <a href="https://github.com/RustAudio/rodio/commits">compare view</a></li>
+</ul>
+</details>
+<br />
+
+
+[![Dependabot compatibility score](https://dependabot-badges.githubapp.com/badges/compatibility_score?dependency-name=rodio&package-manager=cargo&previous-version=0.18.1&new-version=0.19.0)](https://docs.github.com/en/github/managing-security-vulnerabilities/about-dependabot-security-updates#about-compatibility-scores)
+
+Dependabot will resolve any conflicts with this PR as long as you don't alter it yourself. You can also trigger a rebase manually by commenting `@dependabot rebase`.
+
+[//]: # (dependabot-automerge-start)
+[//]: # (dependabot-automerge-end)
+
+---
+
+<details>
+<summary>Dependabot commands and options</summary>
+<br />
+
+You can trigger Dependabot actions by commenting on this PR:
+- `@dependabot rebase` will rebase this PR
+- `@dependabot recreate` will recreate this PR, overwriting any edits that have been made to it
+- `@dependabot merge` will merge this PR after your CI passes on it
+- `@dependabot squash and merge` will squash and merge this PR after your CI passes on it
+- `@dependabot cancel merge` will cancel a previously requested merge and block automerging
+- `@dependabot reopen` will reopen this PR if it is closed
+- `@dependabot close` will close this PR and stop Dependabot recreating it. You can achieve the same result by closing it manually
+- `@dependabot show <dependency name> ignore conditions` will show all of the ignore conditions of the specified dependency
+- `@dependabot ignore this major version` will close this PR and stop Dependabot creating any more for this major version (unless you reopen the PR or upgrade to it yourself)
+- `@dependabot ignore this minor version` will close this PR and stop Dependabot creating any more for this minor version (unless you reopen the PR or upgrade to it yourself)
+- `@dependabot ignore this dependency` will close this PR and stop Dependabot creating any more for this dependency (unless you reopen the PR or upgrade to it yourself)
+
+
+</details>
+----------------------------------------
+
+PR #522: Update Swedish translation to v1.3
+Author: vcrn
+Merged at: 2024-06-29 08:42:46+00:00
+URL: https://github.com/GyulyVGC/sniffnet/pull/522
+Description:
+Hi!
+
+I've added the missing Swedish translations to Sniffnet, and removed the warning of Swedish not being up to date.
+
+Thank you for maintaining Sniffnet!
+----------------------------------------
+
+PR #524: Reduce usage of `String` in translations code.
+Author: CosminPerRam
+Merged at: 2024-06-06 21:00:55+00:00
+URL: https://github.com/GyulyVGC/sniffnet/pull/524
+Description:
+This is a part of #523 (the non-lint part of it).
+This PR removes an unnecessary `to_string` call on an already `String` value and replaces per-item `.to_string()` with an entire match block `.to_string()`.
+----------------------------------------
+
+PR #546: docs: add CosminPerRam as a contributor for code
+Author: allcontributors[bot]
+Merged at: 2024-06-06 20:59:23+00:00
+URL: https://github.com/GyulyVGC/sniffnet/pull/546
+Description:
+Adds @CosminPerRam as a contributor for code.
+
+This was requested by GyulyVGC [in this comment](https://github.com/GyulyVGC/sniffnet/pull/524#issuecomment-2153395285)
+
+[skip ci]
+----------------------------------------
+
+PR #545: Bump toml from 0.8.13 to 0.8.14
+Author: dependabot[bot]
+Merged at: 2024-06-04 08:31:25+00:00
+URL: https://github.com/GyulyVGC/sniffnet/pull/545
+Description:
+Bumps [toml](https://github.com/toml-rs/toml) from 0.8.13 to 0.8.14.
+<details>
+<summary>Commits</summary>
+<ul>
+<li><a href="https://github.com/toml-rs/toml/commit/c383efa2a3b5ec2761c680773b3056c87f35f353"><code>c383efa</code></a> chore: Release</li>
+<li><a href="https://github.com/toml-rs/toml/commit/7bb178167a4bf55be852bcf360bdb9389b9ad982"><code>7bb1781</code></a> docs: Update changelog</li>
+<li><a href="https://github.com/toml-rs/toml/commit/0af6deb30b6c808ac589712d869177270ae99e09"><code>0af6deb</code></a> Merge pull request <a href="https://redirect.github.com/toml-rs/toml/issues/740">#740</a> from epage/key-quotes</li>
+<li><a href="https://github.com/toml-rs/toml/commit/c9e36e7a0fe7fb3f7c25a6f217eeb0d1182eecc5"><code>c9e36e7</code></a> fix(encode): Prefer literals over escaping double-quotes</li>
+<li><a href="https://github.com/toml-rs/toml/commit/42f7a1b3e92baf371c5e46c42fa48203870572d1"><code>42f7a1b</code></a> test(encode): Show existing quote behavior</li>
+<li><a href="https://github.com/toml-rs/toml/commit/9e6290fc72a0f9cb983aa611c817ea09a3b711f7"><code>9e6290f</code></a> chore(deps): Update compatible (dev) (<a href="https://redirect.github.com/toml-rs/toml/issues/737">#737</a>)</li>
+<li><a href="https://github.com/toml-rs/toml/commit/dbf1cc188082f2e537ffca1a6df7a2bf81444899"><code>dbf1cc1</code></a> Merge pull request <a href="https://redirect.github.com/toml-rs/toml/issues/736">#736</a> from epage/snapbox</li>
+<li><a href="https://github.com/toml-rs/toml/commit/ec9bfd71ac4e58b5d7e44f823ce70b257c741b50"><code>ec9bfd7</code></a> chore: Update to snapbox 0.6</li>
+<li><a href="https://github.com/toml-rs/toml/commit/881bf672692be0c9427db76e596f55c8d3a3c17f"><code>881bf67</code></a> chore: Remove unused features</li>
+<li><a href="https://github.com/toml-rs/toml/commit/b62c76e261b0ffb43ce6dc214070f43fb58b088e"><code>b62c76e</code></a> refactor: Resolve deprecations</li>
+<li>Additional commits viewable in <a href="https://github.com/toml-rs/toml/compare/toml-v0.8.13...toml-v0.8.14">compare view</a></li>
+</ul>
+</details>
+<br />
+
+
+[![Dependabot compatibility score](https://dependabot-badges.githubapp.com/badges/compatibility_score?dependency-name=toml&package-manager=cargo&previous-version=0.8.13&new-version=0.8.14)](https://docs.github.com/en/github/managing-security-vulnerabilities/about-dependabot-security-updates#about-compatibility-scores)
+
+Dependabot will resolve any conflicts with this PR as long as you don't alter it yourself. You can also trigger a rebase manually by commenting `@dependabot rebase`.
+
+[//]: # (dependabot-automerge-start)
+[//]: # (dependabot-automerge-end)
+
+---
+
+<details>
+<summary>Dependabot commands and options</summary>
+<br />
+
+You can trigger Dependabot actions by commenting on this PR:
+- `@dependabot rebase` will rebase this PR
+- `@dependabot recreate` will recreate this PR, overwriting any edits that have been made to it
+- `@dependabot merge` will merge this PR after your CI passes on it
+- `@dependabot squash and merge` will squash and merge this PR after your CI passes on it
+- `@dependabot cancel merge` will cancel a previously requested merge and block automerging
+- `@dependabot reopen` will reopen this PR if it is closed
+- `@dependabot close` will close this PR and stop Dependabot recreating it. You can achieve the same result by closing it manually
+- `@dependabot show <dependency name> ignore conditions` will show all of the ignore conditions of the specified dependency
+- `@dependabot ignore this major version` will close this PR and stop Dependabot creating any more for this major version (unless you reopen the PR or upgrade to it yourself)
+- `@dependabot ignore this minor version` will close this PR and stop Dependabot creating any more for this minor version (unless you reopen the PR or upgrade to it yourself)
+- `@dependabot ignore this dependency` will close this PR and stop Dependabot creating any more for this dependency (unless you reopen the PR or upgrade to it yourself)
+
+
+</details>
+----------------------------------------
+
+PR #544: Bump rstest from 0.20.0 to 0.21.0
+Author: dependabot[bot]
+Merged at: 2024-06-03 06:40:53+00:00
+URL: https://github.com/GyulyVGC/sniffnet/pull/544
+Description:
+Bumps [rstest](https://github.com/la10736/rstest) from 0.20.0 to 0.21.0.
+<details>
+<summary>Release notes</summary>
+<p><em>Sourced from <a href="https://github.com/la10736/rstest/releases">rstest's releases</a>.</em></p>
+<blockquote>
+<h2>0.21.0</h2>
+<p>Use <code>crate-name</code> feature to enable the crate rename support (enabled by default)</p>
+</blockquote>
+</details>
+<details>
+<summary>Changelog</summary>
+<p><em>Sourced from <a href="https://github.com/la10736/rstest/blob/master/CHANGELOG.md">rstest's changelog</a>.</em></p>
+<blockquote>
+<h2>[0.21.0] 2024/6/1</h2>
+<h3>Changed</h3>
+<ul>
+<li>Add feature <code>crate-name</code> enabled by default to opt-in crate rename
+support. See <a href="https://redirect.github.com/la10736/rstest/issues/258">#258</a></li>
+</ul>
+</blockquote>
+</details>
+<details>
+<summary>Commits</summary>
+<ul>
+<li><a href="https://github.com/la10736/rstest/commit/38da6bfb9640763727778c07225228ebf405500e"><code>38da6bf</code></a> Prepare 0.21.0 Release</li>
+<li><a href="https://github.com/la10736/rstest/commit/ca69788392e8b45f371939525d949b97e5b93673"><code>ca69788</code></a> bump version rstest_test to 0.13.0</li>
+<li><a href="https://github.com/la10736/rstest/commit/b6b43c6740381ddbda6bf88276a3946c8e02f049"><code>b6b43c6</code></a> Clean chackoutlist</li>
+<li><a href="https://github.com/la10736/rstest/commit/fef4f7b4f4eb1e0eb1c40b8554bdcb32b96e4a1e"><code>fef4f7b</code></a> Implemented Opt-in crate-name support Fix <a href="https://redirect.github.com/la10736/rstest/issues/258">#258</a></li>
+<li><a href="https://github.com/la10736/rstest/commit/236be92a8a7b376669c7e5c18e29cc2e4e85f84c"><code>236be92</code></a> Build should use build tests target</li>
+<li><a href="https://github.com/la10736/rstest/commit/8fde5be94fb6918492189c3f55528bd1e7962d01"><code>8fde5be</code></a> Prepare next changelog</li>
+<li>See full diff in <a href="https://github.com/la10736/rstest/compare/v0.20.0...v0.21.0">compare view</a></li>
+</ul>
+</details>
+<br />
+
+
+[![Dependabot compatibility score](https://dependabot-badges.githubapp.com/badges/compatibility_score?dependency-name=rstest&package-manager=cargo&previous-version=0.20.0&new-version=0.21.0)](https://docs.github.com/en/github/managing-security-vulnerabilities/about-dependabot-security-updates#about-compatibility-scores)
+
+Dependabot will resolve any conflicts with this PR as long as you don't alter it yourself. You can also trigger a rebase manually by commenting `@dependabot rebase`.
+
+[//]: # (dependabot-automerge-start)
+[//]: # (dependabot-automerge-end)
+
+---
+
+<details>
+<summary>Dependabot commands and options</summary>
+<br />
+
+You can trigger Dependabot actions by commenting on this PR:
+- `@dependabot rebase` will rebase this PR
+- `@dependabot recreate` will recreate this PR, overwriting any edits that have been made to it
+- `@dependabot merge` will merge this PR after your CI passes on it
+- `@dependabot squash and merge` will squash and merge this PR after your CI passes on it
+- `@dependabot cancel merge` will cancel a previously requested merge and block automerging
+- `@dependabot reopen` will reopen this PR if it is closed
+- `@dependabot close` will close this PR and stop Dependabot recreating it. You can achieve the same result by closing it manually
+- `@dependabot show <dependency name> ignore conditions` will show all of the ignore conditions of the specified dependency
+- `@dependabot ignore this major version` will close this PR and stop Dependabot creating any more for this major version (unless you reopen the PR or upgrade to it yourself)
+- `@dependabot ignore this minor version` will close this PR and stop Dependabot creating any more for this minor version (unless you reopen the PR or upgrade to it yourself)
+- `@dependabot ignore this dependency` will close this PR and stop Dependabot creating any more for this dependency (unless you reopen the PR or upgrade to it yourself)
+
+
+</details>
+----------------------------------------
+
+PR #540: Bump etherparse from 0.14.3 to 0.15.0
+Author: dependabot[bot]
+Merged at: 2024-06-01 19:46:51+00:00
+URL: https://github.com/GyulyVGC/sniffnet/pull/540
+Description:
+Bumps [etherparse](https://github.com/JulianSchmid/etherparse) from 0.14.3 to 0.15.0.
+<details>
+<summary>Release notes</summary>
+<p><em>Sourced from <a href="https://github.com/JulianSchmid/etherparse/releases">etherparse's releases</a>.</em></p>
+<blockquote>
+<h2>v0.15.0 Linux SLL Support &amp; SlicedPacket::from_ether_type Bugfix</h2>
+<h2>What's Changed</h2>
+<ul>
+<li>Add linux sll support by <a href="https://github.com/RabadanDotDev"><code>@​RabadanDotDev</code></a> in <a href="https://redirect.github.com/JulianSchmid/etherparse/pull/99">JulianSchmid/etherparse#99</a></li>
+<li>Migrate to codecov actions v4 by <a href="https://github.com/JulianSchmid"><code>@​JulianSchmid</code></a> in <a href="https://redirect.github.com/JulianSchmid/etherparse/pull/101">JulianSchmid/etherparse#101</a></li>
+<li>Corrected SlicedPacket::from_ether_type so it sets the link field by <a href="https://github.com/JulianSchmid"><code>@​JulianSchmid</code></a> in <a href="https://redirect.github.com/JulianSchmid/etherparse/pull/102">JulianSchmid/etherparse#102</a></li>
+</ul>
+<h2>New Contributors</h2>
+<ul>
+<li><a href="https://github.com/RabadanDotDev"><code>@​RabadanDotDev</code></a> made their first contribution in <a href="https://redirect.github.com/JulianSchmid/etherparse/pull/99">JulianSchmid/etherparse#99</a></li>
+</ul>
+<p><strong>Full Changelog</strong>: <a href="https://github.com/JulianSchmid/etherparse/compare/v0.14.3...v0.15.0">https://github.com/JulianSchmid/etherparse/compare/v0.14.3...v0.15.0</a></p>
+</blockquote>
+</details>
+<details>
+<summary>Changelog</summary>
+<p><em>Sourced from <a href="https://github.com/JulianSchmid/etherparse/blob/master/changelog.md">etherparse's changelog</a>.</em></p>
+<blockquote>
+<h2>0.15.0</h2>
+<ul>
+<li>Added Linux SLL Support (thanks to <a href="https://github.com/RabadanDotDev"><code>@​RabadanDotDev</code></a>)</li>
+<li>Corrected bug where <code>SlicedPacket::from_ether_type</code> would not set link field in result.</li>
+</ul>
+</blockquote>
+</details>
+<details>
+<summary>Commits</summary>
+<ul>
+<li><a href="https://github.com/JulianSchmid/etherparse/commit/2a23d8f04d430c37816f26188ab0dc2a9c6ab05f"><code>2a23d8f</code></a> Increment version number to 0.15.0</li>
+<li><a href="https://github.com/JulianSchmid/etherparse/commit/e8c89d5d945c5de9d4a5fef7841934f6708fc752"><code>e8c89d5</code></a> Update changelog</li>
+<li><a href="https://github.com/JulianSchmid/etherparse/commit/7af3a82eea83ef63486afd459e9af9715a724f88"><code>7af3a82</code></a> Resolved clippy warnings</li>
+<li><a href="https://github.com/JulianSchmid/etherparse/commit/cc9f80a497b6a91d27bc4c73a3d4e00593be2981"><code>cc9f80a</code></a> Applied rust fmt</li>
+<li><a href="https://github.com/JulianSchmid/etherparse/commit/ca4dcce0831fb83f7c07c1f592b0e955a6e06159"><code>ca4dcce</code></a> Corrected SlicedPacket::from_ether_type so it sets ethernet payload in link f...</li>
+<li><a href="https://github.com/JulianSchmid/etherparse/commit/7a9b992253230652e5d3822513a855743d6cb4c4"><code>7a9b992</code></a> Merge pull request <a href="https://redirect.github.com/JulianSchmid/etherparse/issues/101">#101</a> from JulianSchmid/fix-codecov</li>
+<li><a href="https://github.com/JulianSchmid/etherparse/commit/b0490ba49f6843aea42c80fc7aab86f8f04d7a68"><code>b0490ba</code></a> Migrate codecov job to stable toolchain</li>
+<li><a href="https://github.com/JulianSchmid/etherparse/commit/169ab45d5858314ea0f44aba712ff3a4935bec11"><code>169ab45</code></a> Migrate to codecov actions v4</li>
+<li><a href="https://github.com/JulianSchmid/etherparse/commit/b53002c2c16516c8b8929c0fd7a8c1af07359022"><code>b53002c</code></a> Merge pull request <a href="https://redirect.github.com/JulianSchmid/etherparse/issues/99">#99</a> from RabadanDotDev/add-linux-sll-support</li>
+<li><a href="https://github.com/JulianSchmid/etherparse/commit/1e764964ac3f5010998975d83892c0bcc71afd98"><code>1e76496</code></a> Applied rust fmt</li>
+<li>Additional commits viewable in <a href="https://github.com/JulianSchmid/etherparse/compare/v0.14.3...v0.15.0">compare view</a></li>
+</ul>
+</details>
+<br />
+
+
+[![Dependabot compatibility score](https://dependabot-badges.githubapp.com/badges/compatibility_score?dependency-name=etherparse&package-manager=cargo&previous-version=0.14.3&new-version=0.15.0)](https://docs.github.com/en/github/managing-security-vulnerabilities/about-dependabot-security-updates#about-compatibility-scores)
+
+Dependabot will resolve any conflicts with this PR as long as you don't alter it yourself. You can also trigger a rebase manually by commenting `@dependabot rebase`.
+
+[//]: # (dependabot-automerge-start)
+[//]: # (dependabot-automerge-end)
+
+---
+
+<details>
+<summary>Dependabot commands and options</summary>
+<br />
+
+You can trigger Dependabot actions by commenting on this PR:
+- `@dependabot rebase` will rebase this PR
+- `@dependabot recreate` will recreate this PR, overwriting any edits that have been made to it
+- `@dependabot merge` will merge this PR after your CI passes on it
+- `@dependabot squash and merge` will squash and merge this PR after your CI passes on it
+- `@dependabot cancel merge` will cancel a previously requested merge and block automerging
+- `@dependabot reopen` will reopen this PR if it is closed
+- `@dependabot close` will close this PR and stop Dependabot recreating it. You can achieve the same result by closing it manually
+- `@dependabot show <dependency name> ignore conditions` will show all of the ignore conditions of the specified dependency
+- `@dependabot ignore this major version` will close this PR and stop Dependabot creating any more for this major version (unless you reopen the PR or upgrade to it yourself)
+- `@dependabot ignore this minor version` will close this PR and stop Dependabot creating any more for this minor version (unless you reopen the PR or upgrade to it yourself)
+- `@dependabot ignore this dependency` will close this PR and stop Dependabot creating any more for this dependency (unless you reopen the PR or upgrade to it yourself)
+
+
+</details>
+----------------------------------------
+
+PR #543: Bump rstest from 0.19.0 to 0.20.0
+Author: dependabot[bot]
+Merged at: 2024-05-31 06:38:29+00:00
+URL: https://github.com/GyulyVGC/sniffnet/pull/543
+Description:
+Bumps [rstest](https://github.com/la10736/rstest) from 0.19.0 to 0.20.0.
+<details>
+<summary>Release notes</summary>
+<p><em>Sourced from <a href="https://github.com/la10736/rstest/releases">rstest's releases</a>.</em></p>
+<blockquote>
+<h2>0.20.0</h2>
+<p>Introduce #[by_ref] and add support for import rstest with another name.</p>
+</blockquote>
+</details>
+<details>
+<summary>Changelog</summary>
+<p><em>Sourced from <a href="https://github.com/la10736/rstest/blob/master/CHANGELOG.md">rstest's changelog</a>.</em></p>
+<blockquote>
+<h2>[0.20.0] 2024/5/30</h2>
+<h3>Add</h3>
+<ul>
+<li>Implemented <code>#[by_ref]</code> attribute to take get a local lifetime for test arguments.
+See <a href="https://redirect.github.com/la10736/rstest/issues/241">#241</a> for more details. Thanks to
+<a href="https://github.com/narpfel"><code>@​narpfel</code></a> for suggesting it and useful discussions.</li>
+<li>Support for import <code>rstest</code> with another name. See <a href="https://redirect.github.com/la10736/rstest/issues/221">#221</a></li>
+</ul>
+<h3>Fixed</h3>
+<ul>
+<li>Don't remove Lifetimes from test function if any. See <a href="https://redirect.github.com/la10736/rstest/issues/230">#230</a>
+<a href="https://redirect.github.com/la10736/rstest/issues/241">#241</a> for more details.</li>
+<li><a href="https://doc.rust-lang.org/std/path/struct.PathBuf.html"><code>PathBuf</code></a> does no longer need to be
+in scope when using <code>#[files]</code> (see <a href="https://redirect.github.com/la10736/rstest/pull/242">#242</a>)</li>
+<li><code>#[from(now::accept::also::path::for::fixture)]</code> See <a href="https://redirect.github.com/la10736/rstest/issues/246">#246</a>
+for more details</li>
+</ul>
+</blockquote>
+</details>
+<details>
+<summary>Commits</summary>
+<ul>
+<li><a href="https://github.com/la10736/rstest/commit/f29e6346fee09a8854e20aa4c13a50da094fde30"><code>f29e634</code></a> Dependency should have a n explicit version to be published</li>
+<li><a href="https://github.com/la10736/rstest/commit/e27ad2a4db085c714b9a98012683721f0fd5cb3d"><code>e27ad2a</code></a> Removed empty section</li>
+<li><a href="https://github.com/la10736/rstest/commit/386779448365f5bb8620f404ad485b5a82a261be"><code>3867794</code></a> Fixed docs</li>
+<li><a href="https://github.com/la10736/rstest/commit/b90fb8e0923b394223b72ab1ef63367959abfcba"><code>b90fb8e</code></a> Fix checkout list</li>
+<li><a href="https://github.com/la10736/rstest/commit/b161ad653c99b2fc5477e1547f61f78f5f982dd2"><code>b161ad6</code></a> Make clippy happy</li>
+<li><a href="https://github.com/la10736/rstest/commit/0633d4667a22a321b740b55e4055dff131fbcb0c"><code>0633d46</code></a> Update checkout list</li>
+<li><a href="https://github.com/la10736/rstest/commit/5112bf74303f91f181736127321add94592e275f"><code>5112bf7</code></a> Bump rstest_reuse version to 0.7.0</li>
+<li><a href="https://github.com/la10736/rstest/commit/aca3c60fd93b439dbe084e2ed3515bfeaa75c39c"><code>aca3c60</code></a> Removed reference on braking changes and outdate documentation about need to ...</li>
+<li><a href="https://github.com/la10736/rstest/commit/6cb91f7c6967107f6e14f9d023d3ab9789dbc699"><code>6cb91f7</code></a> Fix typos</li>
+<li><a href="https://github.com/la10736/rstest/commit/f1146a5839036983fd27a7c2606572c13d30d281"><code>f1146a5</code></a> Fix checkout lists</li>
+<li>Additional commits viewable in <a href="https://github.com/la10736/rstest/compare/v0.19.0...v0.20.0">compare view</a></li>
+</ul>
+</details>
+<br />
+
+
+[![Dependabot compatibility score](https://dependabot-badges.githubapp.com/badges/compatibility_score?dependency-name=rstest&package-manager=cargo&previous-version=0.19.0&new-version=0.20.0)](https://docs.github.com/en/github/managing-security-vulnerabilities/about-dependabot-security-updates#about-compatibility-scores)
+
+Dependabot will resolve any conflicts with this PR as long as you don't alter it yourself. You can also trigger a rebase manually by commenting `@dependabot rebase`.
+
+[//]: # (dependabot-automerge-start)
+[//]: # (dependabot-automerge-end)
+
+---
+
+<details>
+<summary>Dependabot commands and options</summary>
+<br />
+
+You can trigger Dependabot actions by commenting on this PR:
+- `@dependabot rebase` will rebase this PR
+- `@dependabot recreate` will recreate this PR, overwriting any edits that have been made to it
+- `@dependabot merge` will merge this PR after your CI passes on it
+- `@dependabot squash and merge` will squash and merge this PR after your CI passes on it
+- `@dependabot cancel merge` will cancel a previously requested merge and block automerging
+- `@dependabot reopen` will reopen this PR if it is closed
+- `@dependabot close` will close this PR and stop Dependabot recreating it. You can achieve the same result by closing it manually
+- `@dependabot show <dependency name> ignore conditions` will show all of the ignore conditions of the specified dependency
+- `@dependabot ignore this major version` will close this PR and stop Dependabot creating any more for this major version (unless you reopen the PR or upgrade to it yourself)
+- `@dependabot ignore this minor version` will close this PR and stop Dependabot creating any more for this minor version (unless you reopen the PR or upgrade to it yourself)
+- `@dependabot ignore this dependency` will close this PR and stop Dependabot creating any more for this dependency (unless you reopen the PR or upgrade to it yourself)
+
+
+</details>
+----------------------------------------
+
+PR #541: Bump serde from 1.0.202 to 1.0.203
+Author: dependabot[bot]
+Merged at: 2024-05-27 09:34:29+00:00
+URL: https://github.com/GyulyVGC/sniffnet/pull/541
+Description:
+Bumps [serde](https://github.com/serde-rs/serde) from 1.0.202 to 1.0.203.
+<details>
+<summary>Release notes</summary>
+<p><em>Sourced from <a href="https://github.com/serde-rs/serde/releases">serde's releases</a>.</em></p>
+<blockquote>
+<h2>v1.0.203</h2>
+<ul>
+<li>Documentation improvements (<a href="https://redirect.github.com/serde-rs/serde/issues/2747">#2747</a>)</li>
+</ul>
+</blockquote>
+</details>
+<details>
+<summary>Commits</summary>
+<ul>
+<li><a href="https://github.com/serde-rs/serde/commit/d5bc546ca53be0b31984a06a8ad587cbea4ca5ce"><code>d5bc546</code></a> Release 1.0.203</li>
+<li><a href="https://github.com/serde-rs/serde/commit/45ae217728e9163103c47f9bd04502368caaf446"><code>45ae217</code></a> Merge pull request <a href="https://redirect.github.com/serde-rs/serde/issues/2747">#2747</a> from dtolnay/variadic</li>
+<li><a href="https://github.com/serde-rs/serde/commit/b7b97dda7333baf6474517e3646754be54e3796b"><code>b7b97dd</code></a> Unindent implementation inside tuple_impl_body macro</li>
+<li><a href="https://github.com/serde-rs/serde/commit/5d3c563d469ef36ce5a01f1612f53883fee20db5"><code>5d3c563</code></a> Document tuple impls as fake variadic</li>
+<li><a href="https://github.com/serde-rs/serde/commit/376185458b48aeb2774ecc26422cc9499e564117"><code>3761854</code></a> Merge pull request <a href="https://redirect.github.com/serde-rs/serde/issues/2745">#2745</a> from dtolnay/docsrs</li>
+<li><a href="https://github.com/serde-rs/serde/commit/a8f14840ab3ff58f533cd27d0f91955d57f12a65"><code>a8f1484</code></a> Rely on docs.rs to define --cfg=docsrs by default</li>
+<li>See full diff in <a href="https://github.com/serde-rs/serde/compare/v1.0.202...v1.0.203">compare view</a></li>
+</ul>
+</details>
+<br />
+
+
+[![Dependabot compatibility score](https://dependabot-badges.githubapp.com/badges/compatibility_score?dependency-name=serde&package-manager=cargo&previous-version=1.0.202&new-version=1.0.203)](https://docs.github.com/en/github/managing-security-vulnerabilities/about-dependabot-security-updates#about-compatibility-scores)
+
+Dependabot will resolve any conflicts with this PR as long as you don't alter it yourself. You can also trigger a rebase manually by commenting `@dependabot rebase`.
+
+[//]: # (dependabot-automerge-start)
+[//]: # (dependabot-automerge-end)
+
+---
+
+<details>
+<summary>Dependabot commands and options</summary>
+<br />
+
+You can trigger Dependabot actions by commenting on this PR:
+- `@dependabot rebase` will rebase this PR
+- `@dependabot recreate` will recreate this PR, overwriting any edits that have been made to it
+- `@dependabot merge` will merge this PR after your CI passes on it
+- `@dependabot squash and merge` will squash and merge this PR after your CI passes on it
+- `@dependabot cancel merge` will cancel a previously requested merge and block automerging
+- `@dependabot reopen` will reopen this PR if it is closed
+- `@dependabot close` will close this PR and stop Dependabot recreating it. You can achieve the same result by closing it manually
+- `@dependabot show <dependency name> ignore conditions` will show all of the ignore conditions of the specified dependency
+- `@dependabot ignore this major version` will close this PR and stop Dependabot creating any more for this major version (unless you reopen the PR or upgrade to it yourself)
+- `@dependabot ignore this minor version` will close this PR and stop Dependabot creating any more for this minor version (unless you reopen the PR or upgrade to it yourself)
+- `@dependabot ignore this dependency` will close this PR and stop Dependabot creating any more for this dependency (unless you reopen the PR or upgrade to it yourself)
+
+
+</details>
+----------------------------------------
+
+PR #539: Bump rodio from 0.18.0 to 0.18.1
+Author: dependabot[bot]
+Merged at: 2024-05-24 06:28:25+00:00
+URL: https://github.com/GyulyVGC/sniffnet/pull/539
+Description:
+Bumps [rodio](https://github.com/RustAudio/rodio) from 0.18.0 to 0.18.1.
+<details>
+<summary>Changelog</summary>
+<p><em>Sourced from <a href="https://github.com/RustAudio/rodio/blob/master/CHANGELOG.md">rodio's changelog</a>.</em></p>
+<blockquote>
+<h1>Version 0.18.1 (2024-05-23)</h1>
+<h3>Fixed</h3>
+<ul>
+<li>Seek no longer hangs if the sink is empty.</li>
+</ul>
+</blockquote>
+</details>
+<details>
+<summary>Commits</summary>
+<ul>
+<li>See full diff in <a href="https://github.com/RustAudio/rodio/commits">compare view</a></li>
+</ul>
+</details>
+<br />
+
+
+[![Dependabot compatibility score](https://dependabot-badges.githubapp.com/badges/compatibility_score?dependency-name=rodio&package-manager=cargo&previous-version=0.18.0&new-version=0.18.1)](https://docs.github.com/en/github/managing-security-vulnerabilities/about-dependabot-security-updates#about-compatibility-scores)
+
+Dependabot will resolve any conflicts with this PR as long as you don't alter it yourself. You can also trigger a rebase manually by commenting `@dependabot rebase`.
+
+[//]: # (dependabot-automerge-start)
+[//]: # (dependabot-automerge-end)
+
+---
+
+<details>
+<summary>Dependabot commands and options</summary>
+<br />
+
+You can trigger Dependabot actions by commenting on this PR:
+- `@dependabot rebase` will rebase this PR
+- `@dependabot recreate` will recreate this PR, overwriting any edits that have been made to it
+- `@dependabot merge` will merge this PR after your CI passes on it
+- `@dependabot squash and merge` will squash and merge this PR after your CI passes on it
+- `@dependabot cancel merge` will cancel a previously requested merge and block automerging
+- `@dependabot reopen` will reopen this PR if it is closed
+- `@dependabot close` will close this PR and stop Dependabot recreating it. You can achieve the same result by closing it manually
+- `@dependabot show <dependency name> ignore conditions` will show all of the ignore conditions of the specified dependency
+- `@dependabot ignore this major version` will close this PR and stop Dependabot creating any more for this major version (unless you reopen the PR or upgrade to it yourself)
+- `@dependabot ignore this minor version` will close this PR and stop Dependabot creating any more for this minor version (unless you reopen the PR or upgrade to it yourself)
+- `@dependabot ignore this dependency` will close this PR and stop Dependabot creating any more for this dependency (unless you reopen the PR or upgrade to it yourself)
+
+
+</details>
+----------------------------------------
+
+PR #510:  translations updated with v 1.3 for Uzbek lang
+Author: Mkadir
+Merged at: 2024-05-23 17:47:32+00:00
+URL: https://github.com/GyulyVGC/sniffnet/pull/510
+Description:
+All of updated for 1.3 v
+----------------------------------------
+
+PR #538: build(deps): bump plotters from 0.3.5 to 0.3.6
+Author: dependabot[bot]
+Merged at: 2024-05-21 08:42:14+00:00
+URL: https://github.com/GyulyVGC/sniffnet/pull/538
+Description:
+Bumps [plotters](https://github.com/plotters-rs/plotters) from 0.3.5 to 0.3.6.
+<details>
+<summary>Changelog</summary>
+<p><em>Sourced from <a href="https://github.com/plotters-rs/plotters/blob/master/CHANGELOG.md">plotters's changelog</a>.</em></p>
+<blockquote>
+<h2>Plotters 0.3.6 (2024-05-20)</h2>
+<h3>Added</h3>
+<ul>
+<li>Add Clone and PartialEq traits to SeriesLabelPosition and ShapeStyle</li>
+<li>Add function to draw and save an evcxr figure</li>
+<li>Add dotted line style</li>
+</ul>
+<h3>Fixed</h3>
+<ul>
+<li>Fix bug with infinite size for collinear line segments as coordinates</li>
+<li>Fix overflow in blit_bitmap</li>
+<li>Fix dashed line algorithm</li>
+</ul>
+</blockquote>
+</details>
+<details>
+<summary>Commits</summary>
+<ul>
+<li><a href="https://github.com/plotters-rs/plotters/commit/1782858ca64d7680f260c22c5f34607cb140c5d9"><code>1782858</code></a> Merge pull request <a href="https://redirect.github.com/plotters-rs/plotters/issues/585">#585</a> from plotters-rs/update-bitmap</li>
+<li><a href="https://github.com/plotters-rs/plotters/commit/0b57a9117e5f4318da51be7b203acb8931a7551e"><code>0b57a91</code></a> Bump version to 0.3.6</li>
+<li><a href="https://github.com/plotters-rs/plotters/commit/a5d6cb2f7befc4f8aca077749174e4904bf8ba62"><code>a5d6cb2</code></a> Bump version to 0.3.6</li>
+<li><a href="https://github.com/plotters-rs/plotters/commit/24bf0638b443e4c90b94913673b2e0434e2fcc2d"><code>24bf063</code></a> Apply some clippy lints</li>
+<li><a href="https://github.com/plotters-rs/plotters/commit/f29a6e3c28ff59f9e941b92a891093485f82f446"><code>f29a6e3</code></a> Merge pull request <a href="https://redirect.github.com/plotters-rs/plotters/issues/571">#571</a> from oswald2/multiline_utf8_fix</li>
+<li><a href="https://github.com/plotters-rs/plotters/commit/4bdf5d051ab04526f7ce6f546c8ecb135291a136"><code>4bdf5d0</code></a> Merge pull request <a href="https://redirect.github.com/plotters-rs/plotters/issues/582">#582</a> from 41Leahcim/master</li>
+<li><a href="https://github.com/plotters-rs/plotters/commit/65c67401bac6de3ca2e455e53b2ec573030e1e4b"><code>65c6740</code></a> Solved a potential unaligned read vulnerability by updating criterion (https:...</li>
+<li><a href="https://github.com/plotters-rs/plotters/commit/9b05119c36d586822e32871436f6c2c5e869d99a"><code>9b05119</code></a> Merge pull request <a href="https://redirect.github.com/plotters-rs/plotters/issues/578">#578</a> from LechevSpace/chore/update-readme-backend-faq</li>
+<li><a href="https://github.com/plotters-rs/plotters/commit/01cc98fcb5e7617e6ca0b44e1296740baeac01dd"><code>01cc98f</code></a> Merge pull request <a href="https://redirect.github.com/plotters-rs/plotters/issues/574">#574</a> from el-hult/fix-562</li>
+<li><a href="https://github.com/plotters-rs/plotters/commit/0af06d3d72b267bd2c9a5b39944c14641808f43e"><code>0af06d3</code></a> Merge pull request <a href="https://redirect.github.com/plotters-rs/plotters/issues/579">#579</a> from choumarin/patch-1</li>
+<li>Additional commits viewable in <a href="https://github.com/plotters-rs/plotters/compare/v0.3.5...v0.3.6">compare view</a></li>
+</ul>
+</details>
+<br />
+
+
+[![Dependabot compatibility score](https://dependabot-badges.githubapp.com/badges/compatibility_score?dependency-name=plotters&package-manager=cargo&previous-version=0.3.5&new-version=0.3.6)](https://docs.github.com/en/github/managing-security-vulnerabilities/about-dependabot-security-updates#about-compatibility-scores)
+
+Dependabot will resolve any conflicts with this PR as long as you don't alter it yourself. You can also trigger a rebase manually by commenting `@dependabot rebase`.
+
+[//]: # (dependabot-automerge-start)
+[//]: # (dependabot-automerge-end)
+
+---
+
+<details>
+<summary>Dependabot commands and options</summary>
+<br />
+
+You can trigger Dependabot actions by commenting on this PR:
+- `@dependabot rebase` will rebase this PR
+- `@dependabot recreate` will recreate this PR, overwriting any edits that have been made to it
+- `@dependabot merge` will merge this PR after your CI passes on it
+- `@dependabot squash and merge` will squash and merge this PR after your CI passes on it
+- `@dependabot cancel merge` will cancel a previously requested merge and block automerging
+- `@dependabot reopen` will reopen this PR if it is closed
+- `@dependabot close` will close this PR and stop Dependabot recreating it. You can achieve the same result by closing it manually
+- `@dependabot show <dependency name> ignore conditions` will show all of the ignore conditions of the specified dependency
+- `@dependabot ignore this major version` will close this PR and stop Dependabot creating any more for this major version (unless you reopen the PR or upgrade to it yourself)
+- `@dependabot ignore this minor version` will close this PR and stop Dependabot creating any more for this minor version (unless you reopen the PR or upgrade to it yourself)
+- `@dependabot ignore this dependency` will close this PR and stop Dependabot creating any more for this dependency (unless you reopen the PR or upgrade to it yourself)
+
+
+</details>
+----------------------------------------
+
+PR #504: add Japanese translation
+Author: hirotake111
+Merged at: 2024-05-19 10:21:52+00:00
+URL: https://github.com/GyulyVGC/sniffnet/pull/504
+Description:
+This is a PR to add Japanese translation to v1.3 (Related issue: #60)
+
+As you may know some Japanese character are missing because of the same reason as [this](https://github.com/GyulyVGC/sniffnet/issues/60#issuecomment-1678166954). So please fill in them.
+
+
+
+
+----------------------------------------
+
+PR #537: build(deps): bump toml from 0.8.12 to 0.8.13
+Author: dependabot[bot]
+Merged at: 2024-05-16 06:47:17+00:00
+URL: https://github.com/GyulyVGC/sniffnet/pull/537
+Description:
+Bumps [toml](https://github.com/toml-rs/toml) from 0.8.12 to 0.8.13.
+<details>
+<summary>Commits</summary>
+<ul>
+<li><a href="https://github.com/toml-rs/toml/commit/912761bd748d9b6fb9eedf3a8be68ab698388a78"><code>912761b</code></a> chore: Release</li>
+<li><a href="https://github.com/toml-rs/toml/commit/40b02a3d5500fc1b3ab2f64c09175d780822d1a1"><code>40b02a3</code></a> Merge pull request <a href="https://redirect.github.com/toml-rs/toml/issues/730">#730</a> from epage/msrv</li>
+<li><a href="https://github.com/toml-rs/toml/commit/8eb5dcb6475e6ea47d4bac80927392b3dc9a2110"><code>8eb5dcb</code></a> fix: Drop MSRV to 1.65</li>
+<li><a href="https://github.com/toml-rs/toml/commit/f9249d83e5e43a605fcf214db8d779aa798ce104"><code>f9249d8</code></a> Merge pull request <a href="https://redirect.github.com/toml-rs/toml/issues/726">#726</a> from mistydemeo/fix_typo</li>
+<li><a href="https://github.com/toml-rs/toml/commit/1e3e03305bbc13f5b6468b4a44921fd5ef89f104"><code>1e3e033</code></a> docs: fix typo</li>
+<li><a href="https://github.com/toml-rs/toml/commit/adbc75b9716170d9f19798bfe33c16a814b3bea3"><code>adbc75b</code></a> chore(deps): Update Rust Stable to v1.78 (<a href="https://redirect.github.com/toml-rs/toml/issues/724">#724</a>)</li>
+<li><a href="https://github.com/toml-rs/toml/commit/f8b1b263d425a1b1f036b13d115fdc4cbb031ac4"><code>f8b1b26</code></a> Merge pull request <a href="https://redirect.github.com/toml-rs/toml/issues/725">#725</a> from epage/update</li>
+<li><a href="https://github.com/toml-rs/toml/commit/7eef906a43df1c85940c83e1cda9cefb2a010883"><code>7eef906</code></a> style: Address warnings</li>
+<li><a href="https://github.com/toml-rs/toml/commit/813ce3d757bb0276267cba1a8f8e49f5bc4b0a32"><code>813ce3d</code></a> chore(deps): Update compatible (dev) (<a href="https://redirect.github.com/toml-rs/toml/issues/723">#723</a>)</li>
+<li><a href="https://github.com/toml-rs/toml/commit/66f7f1a1989e0756cd03cb8347c2383df694d8d6"><code>66f7f1a</code></a> docs: Remove stale content from examples</li>
+<li>Additional commits viewable in <a href="https://github.com/toml-rs/toml/compare/toml-v0.8.12...toml-v0.8.13">compare view</a></li>
+</ul>
+</details>
+<br />
+
+
+[![Dependabot compatibility score](https://dependabot-badges.githubapp.com/badges/compatibility_score?dependency-name=toml&package-manager=cargo&previous-version=0.8.12&new-version=0.8.13)](https://docs.github.com/en/github/managing-security-vulnerabilities/about-dependabot-security-updates#about-compatibility-scores)
+
+Dependabot will resolve any conflicts with this PR as long as you don't alter it yourself. You can also trigger a rebase manually by commenting `@dependabot rebase`.
+
+[//]: # (dependabot-automerge-start)
+[//]: # (dependabot-automerge-end)
+
+---
+
+<details>
+<summary>Dependabot commands and options</summary>
+<br />
+
+You can trigger Dependabot actions by commenting on this PR:
+- `@dependabot rebase` will rebase this PR
+- `@dependabot recreate` will recreate this PR, overwriting any edits that have been made to it
+- `@dependabot merge` will merge this PR after your CI passes on it
+- `@dependabot squash and merge` will squash and merge this PR after your CI passes on it
+- `@dependabot cancel merge` will cancel a previously requested merge and block automerging
+- `@dependabot reopen` will reopen this PR if it is closed
+- `@dependabot close` will close this PR and stop Dependabot recreating it. You can achieve the same result by closing it manually
+- `@dependabot show <dependency name> ignore conditions` will show all of the ignore conditions of the specified dependency
+- `@dependabot ignore this major version` will close this PR and stop Dependabot creating any more for this major version (unless you reopen the PR or upgrade to it yourself)
+- `@dependabot ignore this minor version` will close this PR and stop Dependabot creating any more for this minor version (unless you reopen the PR or upgrade to it yourself)
+- `@dependabot ignore this dependency` will close this PR and stop Dependabot creating any more for this dependency (unless you reopen the PR or upgrade to it yourself)
+
+
+</details>
+----------------------------------------
+
+PR #536: build(deps): bump serde from 1.0.201 to 1.0.202
+Author: dependabot[bot]
+Merged at: 2024-05-16 06:39:09+00:00
+URL: https://github.com/GyulyVGC/sniffnet/pull/536
+Description:
+Bumps [serde](https://github.com/serde-rs/serde) from 1.0.201 to 1.0.202.
+<details>
+<summary>Release notes</summary>
+<p><em>Sourced from <a href="https://github.com/serde-rs/serde/releases">serde's releases</a>.</em></p>
+<blockquote>
+<h2>v1.0.202</h2>
+<ul>
+<li>Provide public access to RenameAllRules in serde_derive_internals (<a href="https://redirect.github.com/serde-rs/serde/issues/2743">#2743</a>)</li>
+</ul>
+</blockquote>
+</details>
+<details>
+<summary>Commits</summary>
+<ul>
+<li><a href="https://github.com/serde-rs/serde/commit/9e32a40b1c745d1d67d451cc983fab5751d394a5"><code>9e32a40</code></a> Release 1.0.202</li>
+<li><a href="https://github.com/serde-rs/serde/commit/87f635e54d5359fa0eb94b1ef0a684ee3d24cb85"><code>87f635e</code></a> Release serde_derive_internals 0.29.1</li>
+<li><a href="https://github.com/serde-rs/serde/commit/d4b2dfbde288e0ba5d4dc7852e1b8029208cf9b6"><code>d4b2dfb</code></a> Merge pull request <a href="https://redirect.github.com/serde-rs/serde/issues/2743">#2743</a> from dtolnay/renameallrules</li>
+<li><a href="https://github.com/serde-rs/serde/commit/f6ab0bc56f3df6d03974d233ffce352b0725ae09"><code>f6ab0bc</code></a> Provide public access to RenameAllRules in serde_derive_internals</li>
+<li><a href="https://github.com/serde-rs/serde/commit/48cc2a63279d4ea44a88d566b0667f65c9ea79f4"><code>48cc2a6</code></a> Replace use of a syn From impl</li>
+<li><a href="https://github.com/serde-rs/serde/commit/3202a6858a2802b5aba2fa5cf3ec8f203408db74"><code>3202a68</code></a> Skip rerunning build script on library code changes</li>
+<li>See full diff in <a href="https://github.com/serde-rs/serde/compare/v1.0.201...v1.0.202">compare view</a></li>
+</ul>
+</details>
+<br />
+
+
+[![Dependabot compatibility score](https://dependabot-badges.githubapp.com/badges/compatibility_score?dependency-name=serde&package-manager=cargo&previous-version=1.0.201&new-version=1.0.202)](https://docs.github.com/en/github/managing-security-vulnerabilities/about-dependabot-security-updates#about-compatibility-scores)
+
+Dependabot will resolve any conflicts with this PR as long as you don't alter it yourself. You can also trigger a rebase manually by commenting `@dependabot rebase`.
+
+[//]: # (dependabot-automerge-start)
+[//]: # (dependabot-automerge-end)
+
+---
+
+<details>
+<summary>Dependabot commands and options</summary>
+<br />
+
+You can trigger Dependabot actions by commenting on this PR:
+- `@dependabot rebase` will rebase this PR
+- `@dependabot recreate` will recreate this PR, overwriting any edits that have been made to it
+- `@dependabot merge` will merge this PR after your CI passes on it
+- `@dependabot squash and merge` will squash and merge this PR after your CI passes on it
+- `@dependabot cancel merge` will cancel a previously requested merge and block automerging
+- `@dependabot reopen` will reopen this PR if it is closed
+- `@dependabot close` will close this PR and stop Dependabot recreating it. You can achieve the same result by closing it manually
+- `@dependabot show <dependency name> ignore conditions` will show all of the ignore conditions of the specified dependency
+- `@dependabot ignore this major version` will close this PR and stop Dependabot creating any more for this major version (unless you reopen the PR or upgrade to it yourself)
+- `@dependabot ignore this minor version` will close this PR and stop Dependabot creating any more for this minor version (unless you reopen the PR or upgrade to it yourself)
+- `@dependabot ignore this dependency` will close this PR and stop Dependabot creating any more for this dependency (unless you reopen the PR or upgrade to it yourself)
+
+
+</details>
+----------------------------------------
+
+PR #499: Romanian translations for v1.3
+Author: ervinpopescu
+Merged at: 2024-05-15 09:55:47+00:00
+URL: https://github.com/GyulyVGC/sniffnet/pull/499
+Description:
+None
+----------------------------------------
+
+PR #534: docs: add abdullahdevrel as a contributor for ideas, and content
+Author: allcontributors[bot]
+Merged at: 2024-05-10 19:40:50+00:00
+URL: https://github.com/GyulyVGC/sniffnet/pull/534
+Description:
+Adds @abdullahdevrel as a contributor for ideas, content.
+
+This was requested by GyulyVGC [in this comment](https://github.com/GyulyVGC/sniffnet/issues/533#issuecomment-2105167425)
+
+[skip ci]
+----------------------------------------
+
+PR #526: build(deps): bump serde from 1.0.199 to 1.0.200
+Author: dependabot[bot]
+Merged at: 2024-05-02 07:35:15+00:00
+URL: https://github.com/GyulyVGC/sniffnet/pull/526
+Description:
+Bumps [serde](https://github.com/serde-rs/serde) from 1.0.199 to 1.0.200.
+<details>
+<summary>Release notes</summary>
+<p><em>Sourced from <a href="https://github.com/serde-rs/serde/releases">serde's releases</a>.</em></p>
+<blockquote>
+<h2>v1.0.200</h2>
+<ul>
+<li>Fix formatting of &quot;invalid type&quot; and &quot;invalid value&quot; deserialization error messages containing NaN or infinite floats (<a href="https://redirect.github.com/serde-rs/serde/issues/2733">#2733</a>, thanks <a href="https://github.com/jamessan"><code>@​jamessan</code></a>)</li>
+</ul>
+</blockquote>
+</details>
+<details>
+<summary>Commits</summary>
+<ul>
+<li><a href="https://github.com/serde-rs/serde/commit/cc865ac5236c094275b10bff4fa41e561b3e359f"><code>cc865ac</code></a> Release 1.0.200</li>
+<li><a href="https://github.com/serde-rs/serde/commit/2d973c1805dd9b613e89cc2375130a23f18ffa73"><code>2d973c1</code></a> Merge pull request <a href="https://redirect.github.com/serde-rs/serde/issues/2733">#2733</a> from jamessan/nan-decimal</li>
+<li><a href="https://github.com/serde-rs/serde/commit/6ca499b2dd3d520903095b202770eba2720ba9b5"><code>6ca499b</code></a> Only format Unexpected::Float with decimal point if it is finite</li>
+<li>See full diff in <a href="https://github.com/serde-rs/serde/compare/v1.0.199...v1.0.200">compare view</a></li>
+</ul>
+</details>
+<br />
+
+
+[![Dependabot compatibility score](https://dependabot-badges.githubapp.com/badges/compatibility_score?dependency-name=serde&package-manager=cargo&previous-version=1.0.199&new-version=1.0.200)](https://docs.github.com/en/github/managing-security-vulnerabilities/about-dependabot-security-updates#about-compatibility-scores)
+
+Dependabot will resolve any conflicts with this PR as long as you don't alter it yourself. You can also trigger a rebase manually by commenting `@dependabot rebase`.
+
+[//]: # (dependabot-automerge-start)
+[//]: # (dependabot-automerge-end)
+
+---
+
+<details>
+<summary>Dependabot commands and options</summary>
+<br />
+
+You can trigger Dependabot actions by commenting on this PR:
+- `@dependabot rebase` will rebase this PR
+- `@dependabot recreate` will recreate this PR, overwriting any edits that have been made to it
+- `@dependabot merge` will merge this PR after your CI passes on it
+- `@dependabot squash and merge` will squash and merge this PR after your CI passes on it
+- `@dependabot cancel merge` will cancel a previously requested merge and block automerging
+- `@dependabot reopen` will reopen this PR if it is closed
+- `@dependabot close` will close this PR and stop Dependabot recreating it. You can achieve the same result by closing it manually
+- `@dependabot show <dependency name> ignore conditions` will show all of the ignore conditions of the specified dependency
+- `@dependabot ignore this major version` will close this PR and stop Dependabot creating any more for this major version (unless you reopen the PR or upgrade to it yourself)
+- `@dependabot ignore this minor version` will close this PR and stop Dependabot creating any more for this minor version (unless you reopen the PR or upgrade to it yourself)
+- `@dependabot ignore this dependency` will close this PR and stop Dependabot creating any more for this dependency (unless you reopen the PR or upgrade to it yourself)
+
+
+</details>
+----------------------------------------
+
+PR #496: Added Russian translation for v3
+Author: Dinozavvvr
+Merged at: 2024-04-26 21:00:02+00:00
+URL: https://github.com/GyulyVGC/sniffnet/pull/496
+Description:
+Hi, added russian translation v3. Fixed wrong translations in v1 and v2 files
+----------------------------------------
+
+PR #519: docs: add Dinozavvvr as a contributor for translation
+Author: allcontributors[bot]
+Merged at: 2024-04-26 20:58:57+00:00
+URL: https://github.com/GyulyVGC/sniffnet/pull/519
+Description:
+Adds @Dinozavvvr as a contributor for translation.
+
+This was requested by GyulyVGC [in this comment](https://github.com/GyulyVGC/sniffnet/pull/496#issuecomment-2080106317)
+
+[skip ci]
+----------------------------------------
+
+PR #516: build(deps): bump pcap from 1.3.0 to 2.0.0
+Author: dependabot[bot]
+Merged at: 2024-04-26 14:42:46+00:00
+URL: https://github.com/GyulyVGC/sniffnet/pull/516
+Description:
+Bumps [pcap](https://github.com/rust-pcap/pcap) from 1.3.0 to 2.0.0.
+<details>
+<summary>Changelog</summary>
+<p><em>Sourced from <a href="https://github.com/rust-pcap/pcap/blob/main/CHANGELOG.md">pcap's changelog</a>.</em></p>
+<blockquote>
+<h2>[2.0.0] - 2024-04-21</h2>
+<h3>Changed</h3>
+<ul>
+<li>Rust Edition is now <code>2021</code>.</li>
+<li>MSRV is now <code>1.63.0</code>.</li>
+</ul>
+</blockquote>
+</details>
+<details>
+<summary>Commits</summary>
+<ul>
+<li>See full diff in <a href="https://github.com/rust-pcap/pcap/commits">compare view</a></li>
+</ul>
+</details>
+<br />
+
+
+[![Dependabot compatibility score](https://dependabot-badges.githubapp.com/badges/compatibility_score?dependency-name=pcap&package-manager=cargo&previous-version=1.3.0&new-version=2.0.0)](https://docs.github.com/en/github/managing-security-vulnerabilities/about-dependabot-security-updates#about-compatibility-scores)
+
+Dependabot will resolve any conflicts with this PR as long as you don't alter it yourself. You can also trigger a rebase manually by commenting `@dependabot rebase`.
+
+[//]: # (dependabot-automerge-start)
+[//]: # (dependabot-automerge-end)
+
+---
+
+<details>
+<summary>Dependabot commands and options</summary>
+<br />
+
+You can trigger Dependabot actions by commenting on this PR:
+- `@dependabot rebase` will rebase this PR
+- `@dependabot recreate` will recreate this PR, overwriting any edits that have been made to it
+- `@dependabot merge` will merge this PR after your CI passes on it
+- `@dependabot squash and merge` will squash and merge this PR after your CI passes on it
+- `@dependabot cancel merge` will cancel a previously requested merge and block automerging
+- `@dependabot reopen` will reopen this PR if it is closed
+- `@dependabot close` will close this PR and stop Dependabot recreating it. You can achieve the same result by closing it manually
+- `@dependabot show <dependency name> ignore conditions` will show all of the ignore conditions of the specified dependency
+- `@dependabot ignore this major version` will close this PR and stop Dependabot creating any more for this major version (unless you reopen the PR or upgrade to it yourself)
+- `@dependabot ignore this minor version` will close this PR and stop Dependabot creating any more for this minor version (unless you reopen the PR or upgrade to it yourself)
+- `@dependabot ignore this dependency` will close this PR and stop Dependabot creating any more for this dependency (unless you reopen the PR or upgrade to it yourself)
+
+
+</details>
+----------------------------------------
+
+PR #517: build(deps): bump serial_test from 3.0.0 to 3.1.0
+Author: dependabot[bot]
+Merged at: 2024-04-26 14:36:05+00:00
+URL: https://github.com/GyulyVGC/sniffnet/pull/517
+Description:
+Bumps [serial_test](https://github.com/palfrey/serial_test) from 3.0.0 to 3.1.0.
+<details>
+<summary>Release notes</summary>
+<p><em>Sourced from <a href="https://github.com/palfrey/serial_test/releases">serial_test's releases</a>.</em></p>
+<blockquote>
+<h2>v3.1.0</h2>
+<h2>What's Changed</h2>
+<ul>
+<li>Replace <code>lazy_static</code> with <code>once_cell</code> by <a href="https://github.com/Expyron"><code>@​Expyron</code></a> in <a href="https://redirect.github.com/palfrey/serial_test/pull/106">palfrey/serial_test#106</a></li>
+<li>Replace <code>dashmap</code> with <code>scc</code> by <a href="https://github.com/palfrey"><code>@​palfrey</code></a> in <a href="https://redirect.github.com/palfrey/serial_test/pull/109">palfrey/serial_test#109</a></li>
+<li>Standard test attribute worked with <code>mod</code>, others didn't (e.g. <code>tokio::test</code>) by <a href="https://github.com/palfrey"><code>@​palfrey</code></a> in <a href="https://redirect.github.com/palfrey/serial_test/pull/110">palfrey/serial_test#110</a></li>
+</ul>
+<h2>New Contributors</h2>
+<ul>
+<li><a href="https://github.com/Expyron"><code>@​Expyron</code></a> made their first contribution in <a href="https://redirect.github.com/palfrey/serial_test/pull/106">palfrey/serial_test#106</a></li>
+</ul>
+<p><strong>Full Changelog</strong>: <a href="https://github.com/palfrey/serial_test/compare/v3.0.0...v3.1.0">https://github.com/palfrey/serial_test/compare/v3.0.0...v3.1.0</a></p>
+</blockquote>
+</details>
+<details>
+<summary>Commits</summary>
+<ul>
+<li><a href="https://github.com/palfrey/serial_test/commit/25fb94855526a61aa70dba9d09d1d3fd177601be"><code>25fb948</code></a> 3.1.0</li>
+<li><a href="https://github.com/palfrey/serial_test/commit/4ccc6bd7dc9ce1f3cc08b65fe44c17e3971cf486"><code>4ccc6bd</code></a> Merge pull request <a href="https://redirect.github.com/palfrey/serial_test/issues/110">#110</a> from palfrey/serial-mod-non-core</li>
+<li><a href="https://github.com/palfrey/serial_test/commit/fb32f74f21ca7c19d26cb395270245d534534b2b"><code>fb32f74</code></a> Standard test attribute worked with mod, others didn't</li>
+<li><a href="https://github.com/palfrey/serial_test/commit/23894121ec734df7fa12c8f86d95270a8a045c82"><code>2389412</code></a> Merge pull request <a href="https://redirect.github.com/palfrey/serial_test/issues/109">#109</a> from palfrey/remove-dashmap</li>
+<li><a href="https://github.com/palfrey/serial_test/commit/14aa91f5d472a1fd2472d637c0e5a53657be514d"><code>14aa91f</code></a> Add more details fslock names</li>
+<li><a href="https://github.com/palfrey/serial_test/commit/946db45593c1e5b9368e3ccc7da1d1683fca2c1b"><code>946db45</code></a> Allow unused name for Locks</li>
+<li><a href="https://github.com/palfrey/serial_test/commit/1a634fc29b2238fffbbf71e8db7771c172ad750f"><code>1a634fc</code></a> Fix formatting</li>
+<li><a href="https://github.com/palfrey/serial_test/commit/2fdcb0c1640a05a5fc09171007052c762b01a88a"><code>2fdcb0c</code></a> Don't capture logs in test_test</li>
+<li><a href="https://github.com/palfrey/serial_test/commit/dd2e107185a7d32ad8f64473298a34c157d147ea"><code>dd2e107</code></a> Replace dashmap with scc</li>
+<li><a href="https://github.com/palfrey/serial_test/commit/b20dad699e7b50b8b33f1688f57faacb1eb3e9e1"><code>b20dad6</code></a> Merge pull request <a href="https://redirect.github.com/palfrey/serial_test/issues/107">#107</a> from palfrey/dependabot/cargo/mio-0.8.11</li>
+<li>Additional commits viewable in <a href="https://github.com/palfrey/serial_test/compare/v3.0.0...v3.1.0">compare view</a></li>
+</ul>
+</details>
+<br />
+
+
+[![Dependabot compatibility score](https://dependabot-badges.githubapp.com/badges/compatibility_score?dependency-name=serial_test&package-manager=cargo&previous-version=3.0.0&new-version=3.1.0)](https://docs.github.com/en/github/managing-security-vulnerabilities/about-dependabot-security-updates#about-compatibility-scores)
+
+Dependabot will resolve any conflicts with this PR as long as you don't alter it yourself. You can also trigger a rebase manually by commenting `@dependabot rebase`.
+
+[//]: # (dependabot-automerge-start)
+[//]: # (dependabot-automerge-end)
+
+---
+
+<details>
+<summary>Dependabot commands and options</summary>
+<br />
+
+You can trigger Dependabot actions by commenting on this PR:
+- `@dependabot rebase` will rebase this PR
+- `@dependabot recreate` will recreate this PR, overwriting any edits that have been made to it
+- `@dependabot merge` will merge this PR after your CI passes on it
+- `@dependabot squash and merge` will squash and merge this PR after your CI passes on it
+- `@dependabot cancel merge` will cancel a previously requested merge and block automerging
+- `@dependabot reopen` will reopen this PR if it is closed
+- `@dependabot close` will close this PR and stop Dependabot recreating it. You can achieve the same result by closing it manually
+- `@dependabot show <dependency name> ignore conditions` will show all of the ignore conditions of the specified dependency
+- `@dependabot ignore this major version` will close this PR and stop Dependabot creating any more for this major version (unless you reopen the PR or upgrade to it yourself)
+- `@dependabot ignore this minor version` will close this PR and stop Dependabot creating any more for this minor version (unless you reopen the PR or upgrade to it yourself)
+- `@dependabot ignore this dependency` will close this PR and stop Dependabot creating any more for this dependency (unless you reopen the PR or upgrade to it yourself)
+
+
+</details>
+----------------------------------------
+
+PR #511: build(deps): bump serde from 1.0.197 to 1.0.198
+Author: dependabot[bot]
+Merged at: 2024-04-26 14:34:58+00:00
+URL: https://github.com/GyulyVGC/sniffnet/pull/511
+Description:
+Bumps [serde](https://github.com/serde-rs/serde) from 1.0.197 to 1.0.198.
+<details>
+<summary>Release notes</summary>
+<p><em>Sourced from <a href="https://github.com/serde-rs/serde/releases">serde's releases</a>.</em></p>
+<blockquote>
+<h2>v1.0.198</h2>
+<ul>
+<li>Support serializing and deserializing <code>Saturating&lt;T&gt;</code> (<a href="https://redirect.github.com/serde-rs/serde/issues/2709">#2709</a>, thanks <a href="https://github.com/jbethune"><code>@​jbethune</code></a>)</li>
+</ul>
+</blockquote>
+</details>
+<details>
+<summary>Commits</summary>
+<ul>
+<li><a href="https://github.com/serde-rs/serde/commit/c4fb92333593ac875ca7b615398f9de9d703ba8f"><code>c4fb923</code></a> Release 1.0.198</li>
+<li><a href="https://github.com/serde-rs/serde/commit/65b7eea775fe8aa1faa1fb786811955236854867"><code>65b7eea</code></a> Merge pull request <a href="https://redirect.github.com/serde-rs/serde/issues/2729">#2729</a> from dtolnay/saturating</li>
+<li><a href="https://github.com/serde-rs/serde/commit/01cd696fd17f586aab428b1bbd11d533124a3425"><code>01cd696</code></a> Integrate Saturating&lt;T&gt; deserialization into impl_deserialize_num macro</li>
+<li><a href="https://github.com/serde-rs/serde/commit/c13b3f7e68d4c71bbe1ea825b36148eadf7de603"><code>c13b3f7</code></a> Format PR 2709</li>
+<li><a href="https://github.com/serde-rs/serde/commit/a6571ee0da2564c13b4351805fa216d233719258"><code>a6571ee</code></a> Merge pull request <a href="https://redirect.github.com/serde-rs/serde/issues/2709">#2709</a> from jbethune/master</li>
+<li><a href="https://github.com/serde-rs/serde/commit/6e38afff498d592af4ccac4cb669a86fc789207f"><code>6e38aff</code></a> Revert &quot;Temporarily disable miri on doctests&quot;</li>
+<li><a href="https://github.com/serde-rs/serde/commit/3d1b19ed906cb1c8cf4e2b4a45eea8f810115db1"><code>3d1b19e</code></a> Implement Ser+De for <code>Saturating\&lt;T&gt;</code></li>
+<li><a href="https://github.com/serde-rs/serde/commit/5b24f88e73caa9c607527b5b4696fc34263cd238"><code>5b24f88</code></a> Resolve legacy_numeric_constants clippy lints</li>
+<li><a href="https://github.com/serde-rs/serde/commit/74d06708ddff495161187ea490c4616291216346"><code>74d0670</code></a> Explicitly install a Rust toolchain for cargo-outdated job</li>
+<li><a href="https://github.com/serde-rs/serde/commit/3bfab6ef7fc80ad73eb598687c836609c14f6f8b"><code>3bfab6e</code></a> Temporarily disable miri on doctests</li>
+<li>Additional commits viewable in <a href="https://github.com/serde-rs/serde/compare/v1.0.197...v1.0.198">compare view</a></li>
+</ul>
+</details>
+<br />
+
+
+[![Dependabot compatibility score](https://dependabot-badges.githubapp.com/badges/compatibility_score?dependency-name=serde&package-manager=cargo&previous-version=1.0.197&new-version=1.0.198)](https://docs.github.com/en/github/managing-security-vulnerabilities/about-dependabot-security-updates#about-compatibility-scores)
+
+Dependabot will resolve any conflicts with this PR as long as you don't alter it yourself. You can also trigger a rebase manually by commenting `@dependabot rebase`.
+
+[//]: # (dependabot-automerge-start)
+[//]: # (dependabot-automerge-end)
+
+---
+
+<details>
+<summary>Dependabot commands and options</summary>
+<br />
+
+You can trigger Dependabot actions by commenting on this PR:
+- `@dependabot rebase` will rebase this PR
+- `@dependabot recreate` will recreate this PR, overwriting any edits that have been made to it
+- `@dependabot merge` will merge this PR after your CI passes on it
+- `@dependabot squash and merge` will squash and merge this PR after your CI passes on it
+- `@dependabot cancel merge` will cancel a previously requested merge and block automerging
+- `@dependabot reopen` will reopen this PR if it is closed
+- `@dependabot close` will close this PR and stop Dependabot recreating it. You can achieve the same result by closing it manually
+- `@dependabot show <dependency name> ignore conditions` will show all of the ignore conditions of the specified dependency
+- `@dependabot ignore this major version` will close this PR and stop Dependabot creating any more for this major version (unless you reopen the PR or upgrade to it yourself)
+- `@dependabot ignore this minor version` will close this PR and stop Dependabot creating any more for this minor version (unless you reopen the PR or upgrade to it yourself)
+- `@dependabot ignore this dependency` will close this PR and stop Dependabot creating any more for this dependency (unless you reopen the PR or upgrade to it yourself)
+
+
+</details>
+----------------------------------------
+
+PR #509: build(deps): bump chrono from 0.4.37 to 0.4.38
+Author: dependabot[bot]
+Merged at: 2024-04-26 14:34:07+00:00
+URL: https://github.com/GyulyVGC/sniffnet/pull/509
+Description:
+Bumps [chrono](https://github.com/chronotope/chrono) from 0.4.37 to 0.4.38.
+<details>
+<summary>Release notes</summary>
+<p><em>Sourced from <a href="https://github.com/chronotope/chrono/releases">chrono's releases</a>.</em></p>
+<blockquote>
+<h2>v0.4.38</h2>
+<p>This release bring a ca. 20% improvement to the performance of the formatting code, and a convenient <code>days_since</code> method for the <code>Weekday</code> type.</p>
+<p>Chrono 0.4.38 also removes the long deprecated <code>rustc-serialize</code> feature. Support for <code>rustc-serialize</code> will be <a href="https://redirect.github.com/rust-lang/rust/pull/116016">soft-destabilized in the next Rust edition</a>. Removing the feature will not break existing users of the feature; Cargo will just not update dependents that rely on it to newer versions of chrono.</p>
+<p>In chrono 0.4.36 we made an accidental breaking change by switching to <code>derive(Copy)</code> for <code>DateTime</code> instead of a manual implementation. It is reverted in this release.</p>
+<h1>Removals</h1>
+<ul>
+<li>Remove <code>rustc-serialize</code> feature (<a href="https://redirect.github.com/chronotope/chrono/issues/1548">#1548</a>, thanks <a href="https://github.com/workingjubilee"><code>@​workingjubilee</code></a>)</li>
+</ul>
+<h1>Additions</h1>
+<ul>
+<li>Add <code>Weekday::days_since</code> (<a href="https://redirect.github.com/chronotope/chrono/issues/1249">#1249</a>, based on <a href="https://redirect.github.com/chronotope/chrono/issues/216">#216</a> by <a href="https://github.com/clarfonthey"><code>@​clarfonthey</code></a>)</li>
+<li>Add <code>TimeDelta::checked_mul</code> and <code>TimeDelta::checked_div</code> (<a href="https://redirect.github.com/chronotope/chrono/issues/1565">#1565</a>, thanks <a href="https://github.com/Zomtir"><code>@​Zomtir</code></a>)</li>
+</ul>
+<h1>Fixes</h1>
+<ul>
+<li>Return error when rounding with a zero duration (<a href="https://redirect.github.com/chronotope/chrono/issues/1474">#1474</a>, thanks <a href="https://github.com/Dav1dde"><code>@​Dav1dde</code></a>)</li>
+<li>Manually implement <code>Copy</code> for <code>DateTime</code> if offset is <code>Copy</code> (<a href="https://redirect.github.com/chronotope/chrono/issues/1573">#1573</a>)</li>
+</ul>
+<h1>Internal</h1>
+<ul>
+<li>Inline <code>test_encodable_json</code> and <code>test_decodable_json</code> functions (<a href="https://redirect.github.com/chronotope/chrono/issues/1550">#1550</a>)</li>
+<li>CI: Reduce combinations in <code>cargo hack check</code> (<a href="https://redirect.github.com/chronotope/chrono/issues/1553">#1553</a>)</li>
+<li>Refactor formatting code (<a href="https://redirect.github.com/chronotope/chrono/issues/1335">#1335</a>)</li>
+<li>Optimize number formatting (<a href="https://redirect.github.com/chronotope/chrono/issues/1558">#1558</a>)</li>
+<li>Only package files needed for building and testing (<a href="https://redirect.github.com/chronotope/chrono/issues/1554">#1554</a>)</li>
+</ul>
+<p>Thanks to all contributors on behalf of the chrono team, <a href="https://github.com/djc"><code>@​djc</code></a> and <a href="https://github.com/pitdicker"><code>@​pitdicker</code></a>!</p>
+</blockquote>
+</details>
+<details>
+<summary>Commits</summary>
+<ul>
+<li><a href="https://github.com/chronotope/chrono/commit/352a35203a140e2352e5a5be62ba8dfd03b616e1"><code>352a352</code></a> Prepare 0.4.38</li>
+<li><a href="https://github.com/chronotope/chrono/commit/46d44d6074ebdfddc62778bff24551f8d7bf9695"><code>46d44d6</code></a> Manually implement <code>Copy</code> for <code>DateTime</code> if offset is <code>Copy</code></li>
+<li><a href="https://github.com/chronotope/chrono/commit/760eb660d3b6ff9c5e0d34cfa1daa83d0a815e9e"><code>760eb66</code></a> Update windows-bindgen requirement from 0.55 to 0.56</li>
+<li><a href="https://github.com/chronotope/chrono/commit/391187fff3be8ac345edb0fd859d36cb99c24316"><code>391187f</code></a> Return error when rounding with zero duration</li>
+<li><a href="https://github.com/chronotope/chrono/commit/ffc75e57054182603436b56e67c284d9fb7dec78"><code>ffc75e5</code></a> Add <code>TimeDelta::checked_mul</code> and <code>TimeDelta::checked_div</code></li>
+<li><a href="https://github.com/chronotope/chrono/commit/f8cecbe57ea6c2d7ce69c7e17ec989258a515ee0"><code>f8cecbe</code></a> Make <code>Weekday::num_days_from public</code>, rename to <code>days_since</code>.</li>
+<li><a href="https://github.com/chronotope/chrono/commit/0cfc405d3e93b1f4e8c6fd37a51449b6be7edb2c"><code>0cfc405</code></a> Optimize number formatting</li>
+<li><a href="https://github.com/chronotope/chrono/commit/74ba83ba27056e5bb610327d37c488f2b212af86"><code>74ba83b</code></a> Take <code>pad</code> by value</li>
+<li><a href="https://github.com/chronotope/chrono/commit/78e79dbabf30ba6fcf59ff6cc439c2dd944b0da0"><code>78e79db</code></a> Match on tuples in <code>format_fixed</code></li>
+<li><a href="https://github.com/chronotope/chrono/commit/f3d76c7bb0902e269b902cf1bc9d986501675c52"><code>f3d76c7</code></a> Match on tuples in <code>format_numeric</code></li>
+<li>Additional commits viewable in <a href="https://github.com/chronotope/chrono/compare/v0.4.37...v0.4.38">compare view</a></li>
+</ul>
+</details>
+<br />
+
+
+[![Dependabot compatibility score](https://dependabot-badges.githubapp.com/badges/compatibility_score?dependency-name=chrono&package-manager=cargo&previous-version=0.4.37&new-version=0.4.38)](https://docs.github.com/en/github/managing-security-vulnerabilities/about-dependabot-security-updates#about-compatibility-scores)
+
+Dependabot will resolve any conflicts with this PR as long as you don't alter it yourself. You can also trigger a rebase manually by commenting `@dependabot rebase`.
+
+[//]: # (dependabot-automerge-start)
+[//]: # (dependabot-automerge-end)
+
+---
+
+<details>
+<summary>Dependabot commands and options</summary>
+<br />
+
+You can trigger Dependabot actions by commenting on this PR:
+- `@dependabot rebase` will rebase this PR
+- `@dependabot recreate` will recreate this PR, overwriting any edits that have been made to it
+- `@dependabot merge` will merge this PR after your CI passes on it
+- `@dependabot squash and merge` will squash and merge this PR after your CI passes on it
+- `@dependabot cancel merge` will cancel a previously requested merge and block automerging
+- `@dependabot reopen` will reopen this PR if it is closed
+- `@dependabot close` will close this PR and stop Dependabot recreating it. You can achieve the same result by closing it manually
+- `@dependabot show <dependency name> ignore conditions` will show all of the ignore conditions of the specified dependency
+- `@dependabot ignore this major version` will close this PR and stop Dependabot creating any more for this major version (unless you reopen the PR or upgrade to it yourself)
+- `@dependabot ignore this minor version` will close this PR and stop Dependabot creating any more for this minor version (unless you reopen the PR or upgrade to it yourself)
+- `@dependabot ignore this dependency` will close this PR and stop Dependabot creating any more for this dependency (unless you reopen the PR or upgrade to it yourself)
+
+
+</details>
+----------------------------------------
+
+PR #498: Update polish translation for v1.3
+Author: Kiruyuto
+Merged at: 2024-04-20 09:40:26+00:00
+URL: https://github.com/GyulyVGC/sniffnet/pull/498
+Description:
+### Brief description:
+Added new translation for the v1.3 release.
+Also tweaked existing translations to be more consistent with the new ones and to make them sound more natural
+----------------------------------------
+
+PR #513: build(deps): bump rustls from 0.22.3 to 0.22.4
+Author: dependabot[bot]
+Merged at: 2024-04-19 20:41:19+00:00
+URL: https://github.com/GyulyVGC/sniffnet/pull/513
+Description:
+Bumps [rustls](https://github.com/rustls/rustls) from 0.22.3 to 0.22.4.
+<details>
+<summary>Commits</summary>
+<ul>
+<li><a href="https://github.com/rustls/rustls/commit/ae277befb5061bbd4c44fea1c2697f2da5b2f6fa"><code>ae277be</code></a> Prepare 0.22.4</li>
+<li><a href="https://github.com/rustls/rustls/commit/5374108df698e78c3e9ef8265cac311556be24af"><code>5374108</code></a> complete_io: bail out if progress is impossible</li>
+<li><a href="https://github.com/rustls/rustls/commit/00e695d68d77acf79e973271c57054139c21f9ba"><code>00e695d</code></a> Regression test for <code>complete_io</code> infinite loop bug</li>
+<li><a href="https://github.com/rustls/rustls/commit/0c6cd7ef68656de958793c7472efe450c808e5d6"><code>0c6cd7e</code></a> Don't specially handle unauthenticated close_notify alerts</li>
+<li>See full diff in <a href="https://github.com/rustls/rustls/compare/v/0.22.3...v/0.22.4">compare view</a></li>
+</ul>
+</details>
+<br />
+
+
+[![Dependabot compatibility score](https://dependabot-badges.githubapp.com/badges/compatibility_score?dependency-name=rustls&package-manager=cargo&previous-version=0.22.3&new-version=0.22.4)](https://docs.github.com/en/github/managing-security-vulnerabilities/about-dependabot-security-updates#about-compatibility-scores)
+
+Dependabot will resolve any conflicts with this PR as long as you don't alter it yourself. You can also trigger a rebase manually by commenting `@dependabot rebase`.
+
+[//]: # (dependabot-automerge-start)
+[//]: # (dependabot-automerge-end)
+
+---
+
+<details>
+<summary>Dependabot commands and options</summary>
+<br />
+
+You can trigger Dependabot actions by commenting on this PR:
+- `@dependabot rebase` will rebase this PR
+- `@dependabot recreate` will recreate this PR, overwriting any edits that have been made to it
+- `@dependabot merge` will merge this PR after your CI passes on it
+- `@dependabot squash and merge` will squash and merge this PR after your CI passes on it
+- `@dependabot cancel merge` will cancel a previously requested merge and block automerging
+- `@dependabot reopen` will reopen this PR if it is closed
+- `@dependabot close` will close this PR and stop Dependabot recreating it. You can achieve the same result by closing it manually
+- `@dependabot show <dependency name> ignore conditions` will show all of the ignore conditions of the specified dependency
+- `@dependabot ignore this major version` will close this PR and stop Dependabot creating any more for this major version (unless you reopen the PR or upgrade to it yourself)
+- `@dependabot ignore this minor version` will close this PR and stop Dependabot creating any more for this minor version (unless you reopen the PR or upgrade to it yourself)
+- `@dependabot ignore this dependency` will close this PR and stop Dependabot creating any more for this dependency (unless you reopen the PR or upgrade to it yourself)
+You can disable automated security fix PRs for this repo from the [Security Alerts page](https://github.com/GyulyVGC/sniffnet/network/alerts).
+
+</details>
+----------------------------------------
+
+PR #495: new german translations
+Author: luca3s
+Merged at: 2024-04-15 22:25:35+00:00
+URL: https://github.com/GyulyVGC/sniffnet/pull/495
+Description:
+added the new german translations. While I was at it I adjusted some old ones. 
+----------------------------------------
+
+PR #508: [ImgBot] Optimize images
+Author: imgbot[bot]
+Merged at: 2024-04-15 20:43:30+00:00
+URL: https://github.com/GyulyVGC/sniffnet/pull/508
+Description:
+## Beep boop. Your images are optimized!
+
+Your image file size has been reduced by **29%** 🎉
+
+<details>
+<summary>
+Details
+</summary>
+
+| File | Before | After | Percent reduction |
+|:--|:--|:--|:--|
+| /resources/repository/pages/catppuccin.png | 212.71kb | 151.11kb | 28.96% |
+</details>
+
+---
+
+[📝 docs](https://imgbot.net/docs) | [:octocat: repo](https://github.com/imgbot/ImgBot) | [🙋🏾 issues](https://github.com/imgbot/ImgBot/issues) | [🏪 marketplace](https://github.com/marketplace/imgbot)
+
+<i>~Imgbot - Part of [Optimole](https://optimole.com/) family</i>
+
+----------------------------------------
+
+PR #494: Update translations_3.rs
+Author: Charpy
+Merged at: 2024-04-14 20:26:15+00:00
+URL: https://github.com/GyulyVGC/sniffnet/pull/494
+Description:
+French translation for v1.3
+Thx !
+----------------------------------------
+
+PR #500: build(deps): bump rstest from 0.18.2 to 0.19.0
+Author: dependabot[bot]
+Merged at: 2024-04-13 08:35:18+00:00
+URL: https://github.com/GyulyVGC/sniffnet/pull/500
+Description:
+Bumps [rstest](https://github.com/la10736/rstest) from 0.18.2 to 0.19.0.
+<details>
+<summary>Release notes</summary>
+<p><em>Sourced from <a href="https://github.com/la10736/rstest/releases">rstest's releases</a>.</em></p>
+<blockquote>
+<p>Introduce MSRV and minor fixes</p>
+</blockquote>
+</details>
+<details>
+<summary>Changelog</summary>
+<p><em>Sourced from <a href="https://github.com/la10736/rstest/blob/master/CHANGELOG.md">rstest's changelog</a>.</em></p>
+<blockquote>
+<h2>[0.19.0] 2024/4/9</h2>
+<h3>Changed</h3>
+<ul>
+<li>Defined <code>rust-version</code> for each crate (see <a href="https://redirect.github.com/la10736/rstest/issues/235">#227</a>)</li>
+</ul>
+<h3>Fixed</h3>
+<ul>
+<li>
+<p><code>#[once]</code> fixtures now require the returned type to be
+<a href="https://doc.rust-lang.org/std/marker/trait.Sync.html"><code>Sync</code></a> to prevent UB
+when tests are executed in parallel. (see <a href="https://redirect.github.com/la10736/rstest/issues/235">#235</a>
+for more details)</p>
+</li>
+<li>
+<p><code>#[future(awt)]</code> and <code>#[awt]</code> now properly handle mutable (<code>mut</code>) parameters by treating futures as immutable and
+treating the awaited rebinding as mutable.</p>
+</li>
+</ul>
+</blockquote>
+</details>
+<details>
+<summary>Commits</summary>
+<ul>
+<li><a href="https://github.com/la10736/rstest/commit/3ffd682568b49bcd77bc69742da0fc59c1e3ea37"><code>3ffd682</code></a> Fix license links</li>
+<li><a href="https://github.com/la10736/rstest/commit/36ab06d68eff527fa325ce5464f378001ac7a161"><code>36ab06d</code></a> Fix license link</li>
+<li><a href="https://github.com/la10736/rstest/commit/941d8ac7ae08ddec7a184f219e6449e065679732"><code>941d8ac</code></a> Update changelog</li>
+<li><a href="https://github.com/la10736/rstest/commit/cdff674d16521d71f8aa2a4bb52ad934540ad692"><code>cdff674</code></a> Bump version</li>
+<li><a href="https://github.com/la10736/rstest/commit/e0624fe19846ead048135dd1f34faa71319e0748"><code>e0624fe</code></a> Fix clippy warning</li>
+<li><a href="https://github.com/la10736/rstest/commit/f7b4b57922e0dd671c793acab424b6bf858737a4"><code>f7b4b57</code></a> Shutup warning on nightly (tests)</li>
+<li><a href="https://github.com/la10736/rstest/commit/49a7d3816e51ca9137a8df8985e5abf21548add9"><code>49a7d38</code></a> Shutup warning in night</li>
+<li><a href="https://github.com/la10736/rstest/commit/b58ce22ef1cd1a24e78f8ce31b69cf43a3ddf6a3"><code>b58ce22</code></a> Set resolver in virtual manifest</li>
+<li><a href="https://github.com/la10736/rstest/commit/3c2fb9c33c0d6fbc7b173f9e9477cea60e3fd59a"><code>3c2fb9c</code></a> Properly handle mutability for awaited futures (<a href="https://redirect.github.com/la10736/rstest/issues/239">#239</a>)</li>
+<li><a href="https://github.com/la10736/rstest/commit/61a7007f666803138b2146a41804a375b3bb12cd"><code>61a7007</code></a> We're not interested about msrv for tests</li>
+<li>Additional commits viewable in <a href="https://github.com/la10736/rstest/compare/v0.18.2...v0.19.0">compare view</a></li>
+</ul>
+</details>
+<br />
+
+
+[![Dependabot compatibility score](https://dependabot-badges.githubapp.com/badges/compatibility_score?dependency-name=rstest&package-manager=cargo&previous-version=0.18.2&new-version=0.19.0)](https://docs.github.com/en/github/managing-security-vulnerabilities/about-dependabot-security-updates#about-compatibility-scores)
+
+Dependabot will resolve any conflicts with this PR as long as you don't alter it yourself. You can also trigger a rebase manually by commenting `@dependabot rebase`.
+
+[//]: # (dependabot-automerge-start)
+[//]: # (dependabot-automerge-end)
+
+---
+
+<details>
+<summary>Dependabot commands and options</summary>
+<br />
+
+You can trigger Dependabot actions by commenting on this PR:
+- `@dependabot rebase` will rebase this PR
+- `@dependabot recreate` will recreate this PR, overwriting any edits that have been made to it
+- `@dependabot merge` will merge this PR after your CI passes on it
+- `@dependabot squash and merge` will squash and merge this PR after your CI passes on it
+- `@dependabot cancel merge` will cancel a previously requested merge and block automerging
+- `@dependabot reopen` will reopen this PR if it is closed
+- `@dependabot close` will close this PR and stop Dependabot recreating it. You can achieve the same result by closing it manually
+- `@dependabot show <dependency name> ignore conditions` will show all of the ignore conditions of the specified dependency
+- `@dependabot ignore this major version` will close this PR and stop Dependabot creating any more for this major version (unless you reopen the PR or upgrade to it yourself)
+- `@dependabot ignore this minor version` will close this PR and stop Dependabot creating any more for this minor version (unless you reopen the PR or upgrade to it yourself)
+- `@dependabot ignore this dependency` will close this PR and stop Dependabot creating any more for this dependency (unless you reopen the PR or upgrade to it yourself)
+
+
+</details>
+----------------------------------------
+
+
+FILE CHANGES
+--------------------------------------------------------------------------------
+
+File: .all-contributorsrc
+Status: modified
+Changes: +37 -0
+Diff:
+@@ -456,6 +456,43 @@
+       "contributions": [
+         "financial"
+       ]
++    },
++    {
++      "login": "Dinozavvvr",
++      "name": "Dinar Shagaliev",
++      "avatar_url": "https://avatars.githubusercontent.com/u/45518871?v=4",
++      "profile": "https://github.com/Dinozavvvr",
++      "contributions": [
++        "translation"
++      ]
++    },
+
+----------------------------------------
+
+File: CHANGELOG.md
+Status: modified
+Changes: +27 -10
+Diff:
+@@ -2,6 +2,23 @@
+ 
+ All Sniffnet releases with the relative changes are documented in this file.
+ 
++## [1.3.1] - 2024-07-22
++- Thumbnail mode improvements ([#512](https://github.com/GyulyVGC/sniffnet/pull/512))
++- Support IPinfo ASN and Country databases ([#558](https://github.com/GyulyVGC/sniffnet/pull/558) — fixes [#533](https://github.com/GyulyVGC/sniffnet/issues/533))
++- Added keyboard shortcuts to change zoom level (fixes [#554](https://github.com/GyulyVGC/sniffnet/issues/554))
++- Increased the range of selectable zoom values (fixes [#542](https://github.com/GyulyVGC/sniffnet/issues/542))
++- Updated some of the existing translations to v1.3: 
++  - French ([#494](https://github.com/GyulyVGC/sniffnet/pull/494))
++  - German ([#495](https://github.com/GyulyVGC/sniffnet/pull/495))
++  - Russian ([#496](https://github.com/GyulyVGC/sniffnet/pull/496))
++  - Polish ([#498](https://github.com/GyulyVGC/sniffnet/pull/498))
++  - Romanian ([#499](https://github.com/GyulyVGC/sniffnet/pull/499))
++  - Japanese ([#504](https://github.com/GyulyVGC/sniffnet/pull/504))
++  - Uzbek ([#510](https://github.com/GyulyVGC/sniffnet/pull/510))
+
+----------------------------------------
+
+File: CONTRIBUTORS.md
+Status: modified
+Changes: +17 -11
+Diff:
+@@ -6,63 +6,69 @@ A big shout-out to all the contributors of Sniffnet ([emoji key](https://allcont
+ <table>
+   <tbody>
+     <tr>
++      <td align="center" valign="top" width="14.28%"><a href="https://github.com/abdullahdevrel"><img src="https://avatars.githubusercontent.com/u/111275753?v=4?s=100" width="100px;" alt="Abdullah"/><br /><sub><b>Abdullah</b></sub></a><br /><a href="#ideas-abdullahdevrel" title="Ideas, Planning, & Feedback">🤔</a> <a href="#content-abdullahdevrel" title="Content">🖋</a></td>
+       <td align="center" valign="top" width="14.28%"><a href="https://github.com/nitefood"><img src="https://avatars.githubusercontent.com/u/24555810?v=4?s=100" width="100px;" alt="Adriano"/><br /><sub><b>Adriano</b></sub></a><br /><a href="#ideas-nitefood" title="Ideas, Planning, & Feedback">🤔</a></td>
+       <td align="center" valign="top" width="14.28%"><a href="https://github.com/dutyrok"><img src="https://avatars.githubusercontent.com/u/68692503?v=4?s=100" width="100px;" alt="Alexandr Shashkin"/><br /><sub><b>Alexandr Shashkin</b></sub></a><br /><a href="https://github.com/GyulyVGC/sniffnet/issues?q=author%3Adutyrok" title="Bug reports">🐛</a></td>
+       <td align="center" valign="top" width="14.28%"><a href="https://github.com/AmadeusGraves"><img src="https://avatars.githubusercontent.com/u/18572939?v=4?s=100" width="100px;" alt="AmadeusGraves"/><br /><sub><b>AmadeusGraves</b></sub></a><br /><a href="#translation-AmadeusGraves" title="Translation">🌍</a></td>
+       <td align="center" valign="top" width="14.28%"><a href="https://github.com/abousis"><img src="https://avatars.githubusercontent.com/u/25039645?v=4?s=100" width="100px;" alt="Angelos Bousis"/><br /><sub><b>Angelos Bousis</b></sub></a><br /><a href="#translation-abousis" title="Translation">🌍</a></td>
+       <td align="center" valign="top" width="14.28%"><a href="https://github.com/acolombier"><img src="https://avatars.githubusercontent.com/u/7086688?v=4?s=100" width="100px;" alt="Antoine Colombier"/><br /><sub><b>Antoine Colombier</b></sub></a><br /><a href="https://github.com/GyulyVGC/sniffnet/commits?author=acolombier" title="Tests">⚠️</a> <a href="#translation-acolombier" title="Translation">🌍</a></td>
+       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Charpy"><img src="https://avatars.githubusercontent.com/u/4827568?v=4?s=100" width="100px;" alt="Charpy"/><br /><sub><b>Charpy</b></sub></a><br /><a href="#translation-Charpy" title="Translation">🌍</a></td>
+-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/colin99d"><img src="https://avatars.githubusercontent.com/u/72827203?v=4?s=100" width="100px;" alt="Colin Delahunty"/><br /><sub><b>Colin Delahunty</b></sub></a><br /><a href="https://github.com/GyulyVGC/sniffnet/commits?author=colin99d" title="Tests">⚠️</a></td>
+     </tr>
+     <tr>
++      <td align="center" valign="top" width="14.28%"><a href="https://github.com/colin99d"><img src="https://avatars.githubusercontent.com/u/72827203?v=4?s=100" width="100px;" alt="Colin Delahunty"/><br /><sub><b>Colin Delahunty</b></sub></a><br /><a href="https://github.com/GyulyVGC/sniffnet/commits?author=colin99d" title="Tests">⚠️</a></td>
++      <td align="center" valign="top" width="14.28%"><a href="https://github.com/corneliusroemer"><img src="https://avatars.githubusercontent.com/u/25161793?v=4?s=100" width="100px;" alt="Cornelius Roemer"/><br /><sub><b>Cornelius Roemer</b></sub></a><br /><a href="#ideas-corneliusroemer" title="Ideas, Planning, & Feedback">🤔</a></td>
++      <td align="center" valign="top" width="14.28%"><a href="http://cosminperram.com"><img src="https://avatars.githubusercontent.com/u/7972857?v=4?s=100" width="100px;" alt="CosminPerRam"/><br /><sub><b>CosminPerRam</b></sub></a><br /><a href="https://github.com/GyulyVGC/sniffnet/commits?author=CosminPerRam" title="Code">💻</a></td>
+       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Crirock"><img src="https://avatars.githubusercontent.com/u/101053125?v=4?s=100" width="100px;" alt="Cristiano"/><br /><sub><b>Cristiano</b></sub></a><br /><a href="https://github.com/GyulyVGC/sniffnet/commits?author=Crirock" title="Code">💻</a> <a href="#ideas-Crirock" title="Ideas, Planning, & Feedback">🤔</a></td>
+       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Cthulu201"><img src="https://avatars.githubusercontent.com/u/9865418?v=4?s=100" width="100px;" alt="Cthulu201"/><br /><sub><b>Cthulu201</b></sub></a><br /><a href="#financial-Cthulu201" title="Financial">💵</a></td>
++      <td align="center" valign="top" width="14.28%"><a href="https://github.com/Dinozavvvr"><img src="https://avatars.githubusercontent.com/u/45518871?v=4?s=100" width="100px;" alt="Dinar Shagaliev"/><br /><sub><b>Dinar Shagaliev</b></sub></a><br /><a href="#translation-Dinozavvvr" title="Translation">🌍</a></td>
+       <td align="center" valign="top" width="14.28%"><a href="https://github.com/eatingdm"><img src="https://avatars.githubusercontent.com/u/44078909?v=4?s=100" width="100px;" alt="Dominic Kim"/><br /><sub><b>Dominic Kim</b></sub></a><br /><a href="#translation-eatingdm" title="Translation">🌍</a></td>
++    </tr>
++    <tr>
+       <td align="center" valign="top" width="14.28%"><a href="https://github.com/franciscoBSalgueiro"><img src="https://avatars.githubusercontent.com/u/92053465?v=4?s=100" width="100px;" alt="Francisco Salgueiro"/><br /><sub><b>Francisco Salgueiro</b></sub></a><br /><a href="#translation-franciscoBSalgueiro" title="Translation">🌍</a></td>
+       <td align="center" valign="top" width="14.28%"><a href="https://github.com/bdantas"><img src="https://avatars.githubusercontent.com/u/5084088?v=4?s=100" width="100px;" alt="GNUser"/><br /><sub><b>GNUser</b></sub></a><br /><a href="https://github.com/GyulyVGC/sniffnet/commits?author=bdantas" title="Documentation">📖</a> <a href="#platform-bdantas" title="Packaging/porting to new platform">📦</a></td>
+       <td align="center" valign="top" width="14.28%"><a href="https://github.com/amarao"><img src="https://avatars.githubusercontent.com/u/652496?v=4?s=100" width="100px;" alt="George Shuklin"/><br /><sub><b>George Shuklin</b></sub></a><br /><a href="#translation-amarao" title="Translation">🌍</a></td>
+       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Digitalone1"><img src="https://avatars.githubusercontent.com/u/25790525?v=4?s=100" width="100px;" alt="Giusy Digital"/><br /><sub><b>Giusy Digital</b></sub></a><br /><a href="https://github.com/GyulyVGC/sniffnet/issues?q=author%3ADigitalone1" title="Bug reports">🐛</a></td>
+
+----------------------------------------
+
+File: Cargo.lock
+Status: modified
+Changes: +827 -630
+
+----------------------------------------
+
+File: Cargo.toml
+Status: modified
+Changes: +13 -16
+Diff:
+@@ -1,6 +1,6 @@
+ [package]
+ name = "sniffnet"
+-version = "1.3.0"
++version = "1.3.1"
+ authors = ["Giuliano Bellini <gyulyvgc99@gmail.com>"]
+ edition = "2021"
+ description = "Application to comfortably monitor your network traffic"
+@@ -25,9 +25,6 @@ include = [
+     "/build.rs",
+ ]
+ 
+-[target."cfg(windows)"]
+-rustflags = ["-C", "target-feature=+crt-static"]
+-
+ #═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+ 
+ [profile.release]
+@@ -38,18 +35,18 @@ strip = true
+ #═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+ 
+ [dependencies]
+-pcap = "1.3.0"
+-etherparse = "0.14.3"
+
+----------------------------------------
+
+File: README.md
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -76,7 +76,7 @@ Follow this method only if you have [Rust installed](https://www.rust-lang.org/t
+ In this case, the application binary can be built and installed with:
+ 
+ ```sh
+-cargo install sniffnet
++cargo install sniffnet --locked
+ ```
+ 
+ </details>
+
+----------------------------------------
+
+File: SECURITY.md
+Status: modified
+Changes: +5 -19
+Diff:
+@@ -6,8 +6,8 @@ Sniffnet versions currently being supported with security updates:
+ 
+ | Version | Supported          |
+ |---------|--------------------|
+-| 1.2.x   | :white_check_mark: |
+-| < 1.2   | :x:                |
++| 1.3.x   | :white_check_mark: |
++| < 1.3   | :x:                |
+ 
+ ## Reporting a Vulnerability
+ 
+@@ -19,26 +19,13 @@ At Sniffnet, we consider the security of our application a top priority. But no
+ 
+ If you discover a vulnerability, we would like to know about it so we can take steps to address it as quickly as possible. We would like to ask you to help us better protect our clients and our systems.
+ 
+
+----------------------------------------
+
+File: build.rs
+Status: modified
+Changes: +3 -1
+Diff:
+@@ -52,7 +52,7 @@ fn build_services_phf() {
+         services_map.entry(key, &val);
+         num_entries += 1;
+     }
+-    assert_eq!(num_entries, 12066);
++    assert_eq!(num_entries, 12078);
+ 
+     writeln!(
+         &mut output,
+@@ -188,6 +188,8 @@ pub static SAFE_WORDS_FOR_SERVICE_NAME: Lazy<Trie> = Lazy::new(|| {
+
+----------------------------------------
+
+File: fonts.sh
+Status: added
+Changes: +16 -0
+Diff:
+@@ -0,0 +1,16 @@
++#!/bin/zsh
++
++# Script used to subset the font files to only include the necessary glyphs
++
++FULL_FOLDER=resources/fonts/full
++SUBSET_FOLDER=resources/fonts/subset
++CHARACTERS_FILE=subset_characters.txt
++FONT_NAME=sarasa-mono-sc
++
+
+----------------------------------------
+
+File: resources/DB/GeoLite2-ASN.mmdb
+Status: modified
+Changes: +0 -0
+
+----------------------------------------
+
+File: resources/DB/GeoLite2-Country.mmdb
+Status: modified
+Changes: +0 -0
+
+----------------------------------------
+
+File: resources/fonts/full/subset_characters.txt
+Status: modified
+Changes: +17 -1
+Diff:
+@@ -210,9 +210,11 @@ z
+ Т
+ У
+ Ф
++Х
+ Ч
+ Ш
+ Щ
++Э
+ Я
+ а
+ б
+@@ -273,6 +275,7 @@ z
+ ط
+ ظ
+ ع
++غ
+ ف
+ ق
+ ل
+@@ -290,7 +293,6 @@ z
+ ۳
+ •
+ …
+-↗
+ ⏎
+ ✔
+ ✘
+@@ -332,23 +334,28 @@ z
+ ろ
+ を
+ ん
++ァ
+ ア
+ ィ
+ イ
+
+----------------------------------------
+
+File: resources/fonts/subset/sarasa-mono-sc-bold.subset.ttf
+Status: modified
+Changes: +0 -0
+
+----------------------------------------
+
+File: resources/fonts/subset/sarasa-mono-sc-regular.subset.ttf
+Status: modified
+Changes: +0 -0
+
+----------------------------------------
+
+File: resources/repository/pages/catppuccin.png
+Status: modified
+Changes: +0 -0
+
+----------------------------------------
+
+File: resources/test/ipinfo_asn_sample.mmdb
+Status: added
+Changes: +0 -0
+
+----------------------------------------
+
+File: resources/test/ipinfo_country_asn_sample.mmdb
+Status: added
+Changes: +0 -0
+
+----------------------------------------
+
+File: resources/test/ipinfo_country_sample.mmdb
+Status: added
+Changes: +0 -0
+
+----------------------------------------
+
+File: resources/themes/sniffnet_rebrand.toml
+Status: added
+Changes: +6 -0
+Diff:
+@@ -0,0 +1,6 @@
++primary = "#0f1e3c"
++secondary = "#faaa0f"
++outgoing = "#0faafa"
++text_body = "#dddddd"
++text_headers = "#0f1e3c"
++starred = "#faaa0faa"
+\ No newline at end of file
+
+----------------------------------------
+
+File: services.txt
+Status: modified
+Changes: +12 -0
+Diff:
+@@ -1384,6 +1384,8 @@ apex-mesh	912/tcp
+ apex-mesh	912/udp
+ apex-edge	913/tcp
+ apex-edge	913/udp
++rift-lies	914/tcp
++rift-ties	915/tcp
+ oftep-rpc	950/tcp
+ rndc	953/tcp
+ securenetpro-sensor	975/tcp
+@@ -4093,6 +4095,7 @@ service-ctrl	2367/tcp
+ service-ctrl	2367/udp
+ opentable	2368/tcp
+ opentable	2368/udp
++bif-p2p	2369/tcp
+ l3-hbmon	2370/tcp
+ l3-hbmon	2370/udp
+ worldwire	2371/tcp
+@@ -8941,6 +8944,7 @@ sdlog	5520/tcp
+ sdserv	5530/tcp
+ sdreport	5540/tcp
+ sdxauthd	5540/udp
++qftest-licserve	5543/tcp
+ sdadmind	5550/tcp
+ sgi-eventmond	5553/tcp
+ sgi-eventmond	5553/udp
+@@ -10358,6 +10362,7 @@ senomix07	8058/udp
+ senomix08	8059/tcp
+ senomix08	8059/udp
+ aero	8060/tcp
+
+----------------------------------------
+
+File: src/configs/types/config_device.rs
+Status: modified
+Changes: +2 -0
+Diff:
+@@ -56,6 +56,7 @@ impl ConfigDevice {
+             if device.name.eq(&self.device_name) {
+                 return MyDevice {
+                     name: device.name,
++                    #[cfg(target_os = "windows")]
+                     desc: device.desc,
+                     addresses: Arc::new(Mutex::new(device.addresses)),
+                     link_type: MyLinkType::default(),
+@@ -70,6 +71,7 @@ impl ConfigDevice {
+         });
+
+----------------------------------------
+
+File: src/countries/country_utils.rs
+Status: modified
+Changes: +15 -20
+Diff:
+@@ -286,27 +286,21 @@ fn get_flag_from_country(
+         Country::ZM => ZM,
+         Country::ZW => ZW,
+         Country::ZZ => {
+-            if is_loopback {
+-                tooltip = your_network_adapter_translation(language);
+-                svg_style = SvgType::AdaptColor;
+-                COMPUTER
++            let (flag, new_tooltip) = if is_loopback {
++                (COMPUTER, your_network_adapter_translation(language))
+             } else if traffic_type.eq(&TrafficType::Multicast) {
+-                tooltip = "Multicast".to_string();
+-                svg_style = SvgType::AdaptColor;
+-                MULTICAST
++                (MULTICAST, "Multicast")
+             } else if traffic_type.eq(&TrafficType::Broadcast) {
+-                tooltip = "Broadcast".to_string();
+-                svg_style = SvgType::AdaptColor;
+
+----------------------------------------
+
+File: src/gui/app.rs
+Status: modified
+Changes: +7 -68
+Diff:
+@@ -2,15 +2,8 @@
+ //!
+ //! It also is a wrapper of gui's main two pages: initial and run page.
+ 
+-use std::time::Duration;
+-
+-use iced::keyboard::key::Named;
+-use iced::keyboard::{Event, Key, Modifiers};
+-use iced::mouse::Event::ButtonPressed;
+ use iced::widget::Column;
+-use iced::window::Id;
+-use iced::Event::{Keyboard, Window};
+-use iced::{executor, window, Application, Command, Element, Subscription};
++use iced::{executor, Application, Command, Element, Subscription};
+ 
+ use crate::gui::components::footer::footer;
+ use crate::gui::components::header::header;
+@@ -122,66 +115,12 @@ impl Application for Sniffer {
+     }
+ 
+     fn subscription(&self) -> Subscription<Message> {
+-        const NO_MODIFIER: Modifiers = Modifiers::empty();
+-
+-        // Window subscription
+-        let window_sub = iced::event::listen_with(|event, _| match event {
+-            Window(Id::MAIN, window::Event::Focused) => Some(Message::WindowFocused),
+-            Window(Id::MAIN, window::Event::Moved { x, y }) => Some(Message::WindowMoved(x, y)),
+-            Window(Id::MAIN, window::Event::Resized { width, height }) => {
+-                Some(Message::WindowResized(width, height))
+-            }
+
+----------------------------------------
+
+File: src/gui/components/modal.rs
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -88,7 +88,7 @@ fn get_modal_header(
+     font_headers: Font,
+     color_gradient: GradientType,
+     language: Language,
+-    title: String,
++    title: &'static str,
+ ) -> Container<'static, Message, StyleType> {
+     Container::new(
+         Row::new()
+
+----------------------------------------
+
+File: src/gui/pages/connection_details_page.rs
+Status: modified
+Changes: +4 -3
+Diff:
+@@ -270,7 +270,8 @@ fn get_host_info_col(
+     language: Language,
+ ) -> Column<'static, Message, StyleType> {
+     let mut host_info_col = Column::new().spacing(4);
+-    if r_dns.parse::<IpAddr>().is_err() || (!host.asn.name.is_empty() && host.asn.number > 0) {
++    if r_dns.parse::<IpAddr>().is_err() || (!host.asn.name.is_empty() && !host.asn.code.is_empty())
++    {
+         host_info_col = host_info_col.push(Rule::horizontal(10.0));
+     }
+     if r_dns.parse::<IpAddr>().is_err() {
+
+----------------------------------------
+
+File: src/gui/pages/notifications_page.rs
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -230,7 +230,7 @@ fn bytes_notification_log(
+     language: Language,
+     font: Font,
+ ) -> Container<'static, Message, StyleType> {
+-    let mut threshold_str = threshold_translation(language);
++    let mut threshold_str = threshold_translation(language).to_string();
+     threshold_str.push_str(": ");
+     threshold_str.push_str(&ByteMultiple::formatted_string(
+         (logged_notification.threshold).into(),
+
+----------------------------------------
+
+File: src/gui/pages/settings_general_page.rs
+Status: modified
+Changes: +10 -6
+Diff:
+@@ -12,6 +12,7 @@ use crate::gui::components::button::{button_open_file, row_open_link_tooltip};
+ use crate::gui::components::tab::get_settings_tabs;
+ use crate::gui::pages::settings_notifications_page::settings_header;
+ use crate::gui::pages::types::settings_page::SettingsPage;
++use crate::gui::styles::button::ButtonType;
+ use crate::gui::styles::container::ContainerType;
+ use crate::gui::styles::style_constants::FONT_SIZE_SUBTITLE;
+ use crate::gui::styles::text::TextType;
+@@ -121,11 +122,12 @@ fn language_picklist(language: Language, font: Font) -> Container<'static, Messa
+         .align_items(Alignment::Center)
+         .spacing(10)
+         .push(language.get_flag());
+-    if ![Language::EN, Language::IT].contains(&language) {
++    if !language.is_up_to_date() {
+         flag_row = flag_row.push(
+             Tooltip::new(
+                 button(
+                     Text::new("!")
++                        .style(TextType::Danger)
+
+----------------------------------------
+
+File: src/gui/pages/thumbnail_page.rs
+Status: modified
+Changes: +25 -12
+Diff:
+@@ -13,7 +13,7 @@ use crate::gui::styles::style_constants::FONT_SIZE_FOOTER;
+ use crate::gui::styles::types::style_type::StyleType;
+ use crate::gui::types::message::Message;
+ use crate::gui::types::sniffer::Sniffer;
+-use crate::networking::types::host::Host;
++use crate::networking::types::host::{Host, ThumbnailHost};
+ use crate::networking::types::info_traffic::InfoTraffic;
+ use crate::report::get_report_entries::{get_host_entries, get_service_entries};
+ use crate::report::types::sort_type::SortType;
+@@ -71,22 +71,35 @@ fn host_col(
+         .spacing(3)
+         .width(Length::FillPortion(2));
+     let hosts = get_host_entries(info_traffic, chart_type, SortType::Neutral);
+-    let n_entry = min(hosts.len(), MAX_ENTRIES);
+-    for (host, data_info_host) in hosts.get(..n_entry).unwrap_or_default() {
+-        let flag = get_flag_tooltip(
+-            host.country,
+-            data_info_host,
+-            Language::default(),
+-            font,
+-            true,
+
+----------------------------------------
+
+File: src/gui/types/message.rs
+Status: modified
+Changes: +4 -0
+Diff:
+@@ -115,4 +115,8 @@ pub enum Message {
+     ToggleThumbnail(bool),
+     /// Drag the window
+     Drag,
++    /// Ctrl+T keys have been pressed
++    CtrlTPressed,
++    /// Edit scale factor via keyboard shortcut
++    ScaleFactorShortcut(bool),
+ }
+
+----------------------------------------
+
+File: src/gui/types/sniffer.rs
+Status: modified
+Changes: +172 -16
+Diff:
+@@ -5,14 +5,20 @@ use std::collections::{HashSet, VecDeque};
+ use std::path::PathBuf;
+ use std::sync::{Arc, Mutex};
+ use std::thread;
++use std::time::Duration;
+ 
++use iced::keyboard::key::Named;
++use iced::keyboard::{Event, Key, Modifiers};
++use iced::mouse::Event::ButtonPressed;
+ use iced::window::{Id, Level};
+-use iced::{window, Command};
++use iced::Event::{Keyboard, Window};
++use iced::{window, Command, Subscription};
+ use pcap::Device;
+ use rfd::FileHandle;
+ 
+ use crate::chart::manage_chart_data::update_charts_data;
+ use crate::configs::types::config_window::{ConfigWindow, ScaleAndCheck, ToPoint, ToSize};
++use crate::gui::app::PERIOD_TICK;
+ use crate::gui::components::types::my_modal::MyModal;
+ use crate::gui::pages::types::running_page::RunningPage;
+ use crate::gui::pages::types::settings_page::SettingsPage;
+@@ -142,6 +148,85 @@ impl Sniffer {
+         }
+     }
+ 
++    pub(crate) fn keyboard_subscription(&self) -> Subscription<Message> {
++        const NO_MODIFIER: Modifiers = Modifiers::empty();
++
++        if self.thumbnail {
++            iced::event::listen_with(|event, _| match event {
++                Keyboard(Event::KeyPressed {
++                    key,
++                    modifiers: Modifiers::COMMAND,
++                    ..
++                }) => match key.as_ref() {
++                    Key::Character("q") => Some(Message::CloseRequested),
++                    Key::Character("t") => Some(Message::CtrlTPressed),
++                    _ => None,
++                },
++                _ => None,
++            })
++        } else {
++            iced::event::listen_with(|event, _| match event {
++                Keyboard(Event::KeyPressed { key, modifiers, .. }) => match modifiers {
++                    Modifiers::COMMAND => match key.as_ref() {
++                        Key::Character("q") => Some(Message::CloseRequested),
++                        Key::Character("t") => Some(Message::CtrlTPressed),
++                        Key::Character(",") => Some(Message::OpenLastSettings),
++                        Key::Named(Named::Backspace) => Some(Message::ResetButtonPressed),
++                        Key::Character("d") => Some(Message::CtrlDPressed),
++                        Key::Named(Named::ArrowLeft) => Some(Message::ArrowPressed(false)),
++                        Key::Named(Named::ArrowRight) => Some(Message::ArrowPressed(true)),
++                        Key::Character("-") => Some(Message::ScaleFactorShortcut(false)),
++                        Key::Character("+") => Some(Message::ScaleFactorShortcut(true)),
++                        _ => None,
++                    },
++                    Modifiers::SHIFT => match key {
++                        Key::Named(Named::Tab) => Some(Message::SwitchPage(false)),
++                        _ => None,
++                    },
++                    NO_MODIFIER => match key {
++                        Key::Named(Named::Enter) => Some(Message::ReturnKeyPressed),
++                        Key::Named(Named::Escape) => Some(Message::EscKeyPressed),
++                        Key::Named(Named::Tab) => Some(Message::SwitchPage(true)),
++                        _ => None,
++                    },
++                    _ => None,
++                },
++                _ => None,
++            })
++        }
++    }
++
++    pub(crate) fn mouse_subscription(&self) -> Subscription<Message> {
++        if self.thumbnail {
++            iced::event::listen_with(|event, _| match event {
++                iced::event::Event::Mouse(ButtonPressed(_)) => Some(Message::Drag),
++                _ => None,
++            })
++        } else {
++            Subscription::none()
++        }
++    }
++
++    pub(crate) fn time_subscription(&self) -> Subscription<Message> {
++        if self.running_page.eq(&RunningPage::Init) {
++            iced::time::every(Duration::from_millis(PERIOD_TICK)).map(|_| Message::TickInit)
++        } else {
++            iced::time::every(Duration::from_millis(PERIOD_TICK)).map(|_| Message::TickRun)
++        }
++    }
++
++    pub(crate) fn window_subscription() -> Subscription<Message> {
++        iced::event::listen_with(|event, _| match event {
++            Window(Id::MAIN, window::Event::Focused) => Some(Message::WindowFocused),
++            Window(Id::MAIN, window::Event::Moved { x, y }) => Some(Message::WindowMoved(x, y)),
++            Window(Id::MAIN, window::Event::Resized { width, height }) => {
++                Some(Message::WindowResized(width, height))
++            }
++            Window(Id::MAIN, window::Event::CloseRequested) => Some(Message::CloseRequested),
++            _ => None,
++        })
+
+----------------------------------------
+
+File: src/gui/types/timing_events.rs
+Status: modified
+Changes: +16 -2
+Diff:
+@@ -1,18 +1,22 @@
++use std::ops::Sub;
+ use std::time::Duration;
+ 
+ pub struct TimingEvents {
+     /// Instant of the last window focus
+-    pub(crate) focus: std::time::Instant,
++    focus: std::time::Instant,
+     /// Instant of the last press on Copy IP button, with the related IP address
+     copy_ip: (std::time::Instant, String),
+     /// Instant of the last thumbnail mode enter
+     thumbnail_enter: std::time::Instant,
++    /// Instant of the last click on the thumbnail window
++    thumbnail_click: std::time::Instant,
+ }
+ 
+
+----------------------------------------
+
+File: src/mmdb/asn.rs
+Status: modified
+Changes: +134 -14
+Diff:
+@@ -1,23 +1,143 @@
+-use maxminddb::{geoip2, MaxMindDBError};
+-
++use crate::mmdb::types::mmdb_asn_entry::MmdbAsnEntry;
+ use crate::mmdb::types::mmdb_reader::MmdbReader;
+ use crate::networking::types::asn::Asn;
+ 
+ pub const ASN_MMDB: &[u8] = include_bytes!("../../resources/DB/GeoLite2-ASN.mmdb");
+ 
+ #[allow(clippy::module_name_repetitions)]
+-pub fn get_asn(address_to_lookup: &str, asn_db_reader: &MmdbReader) -> Asn {
+-    let asn_result: Result<geoip2::Asn, MaxMindDBError> = match asn_db_reader {
+-        MmdbReader::Default(reader) => reader.lookup(address_to_lookup.parse().unwrap()),
+-        MmdbReader::Custom(reader) => reader.lookup(address_to_lookup.parse().unwrap()),
+-    };
+-    if let Ok(res) = asn_result {
+-        if res.autonomous_system_number.is_some() && res.autonomous_system_organization.is_some() {
+-            return Asn {
+-                number: res.autonomous_system_number.unwrap(),
+-                name: res.autonomous_system_organization.unwrap().to_string(),
+-            };
+-        }
++pub fn get_asn(address: &str, asn_db_reader: &MmdbReader) -> Asn {
++    if let Ok(res) = asn_db_reader.lookup::<MmdbAsnEntry>(address.parse().unwrap()) {
++        return res.get_asn();
+     }
+     Asn::default()
+ }
++
++#[cfg(test)]
++mod tests {
++    use crate::mmdb::asn::{get_asn, ASN_MMDB};
++    use crate::mmdb::types::mmdb_reader::MmdbReader;
++
++    #[test]
++    fn test_get_asn_with_default_reader() {
++        let reader_1 = MmdbReader::from(&String::from("unknown path"), ASN_MMDB);
++        assert!(matches!(reader_1, MmdbReader::Default(_)));
++        let reader_2 = MmdbReader::from(&String::new(), ASN_MMDB);
++        assert!(matches!(reader_2, MmdbReader::Default(_)));
++        let reader_3 = MmdbReader::from(&String::from("resources/repository/hr.png"), ASN_MMDB);
++        assert!(matches!(reader_3, MmdbReader::Default(_)));
++        let reader_4 = MmdbReader::from(&String::from("resources/DB/GeoLite2-ASN.mmdb"), ASN_MMDB);
++        assert!(matches!(reader_4, MmdbReader::Custom(_)));
++        let reader_5 = MmdbReader::from(&String::from("resources/DB/GeoLite2-ASN.mmdb"), &[]);
++        assert!(matches!(reader_5, MmdbReader::Custom(_)));
++
++        for reader in vec![reader_1, reader_2, reader_3, reader_4, reader_5] {
++            // known IP
++            let res = get_asn("8.8.8.8", &reader);
++            assert_eq!(res.code, "15169");
++            assert_eq!(res.name, "GOOGLE");
+
+----------------------------------------
+
+File: src/mmdb/country.rs
+Status: modified
+Changes: +122 -13
+Diff:
+@@ -1,22 +1,131 @@
+-use maxminddb::{geoip2, MaxMindDBError};
+-
+ use crate::countries::types::country::Country;
++use crate::mmdb::types::mmdb_country_entry::MmdbCountryEntry;
+ use crate::mmdb::types::mmdb_reader::MmdbReader;
+ 
+ pub const COUNTRY_MMDB: &[u8] = include_bytes!("../../resources/DB/GeoLite2-Country.mmdb");
+ 
+ #[allow(clippy::module_name_repetitions)]
+-pub fn get_country(address_to_lookup: &str, country_db_reader: &MmdbReader) -> Country {
+-    let country_result: Result<geoip2::Country, MaxMindDBError> = match country_db_reader {
+-        MmdbReader::Default(reader) => reader.lookup(address_to_lookup.parse().unwrap()),
+-        MmdbReader::Custom(reader) => reader.lookup(address_to_lookup.parse().unwrap()),
+-    };
+-    if let Ok(res1) = country_result {
+-        if let Some(res2) = res1.country {
+-            if let Some(res3) = res2.iso_code {
+-                return Country::from_str(res3);
+-            }
+-        }
++pub fn get_country(address: &str, country_db_reader: &MmdbReader) -> Country {
++    if let Ok(res) = country_db_reader.lookup::<MmdbCountryEntry>(address.parse().unwrap()) {
++        return res.get_country();
+     }
+     Country::ZZ // unknown
+ }
++
++#[cfg(test)]
++mod tests {
++    use crate::countries::types::country::Country;
++    use crate::mmdb::country::{get_country, COUNTRY_MMDB};
++    use crate::mmdb::types::mmdb_reader::MmdbReader;
++
++    #[test]
++    fn test_get_country_with_default_reader() {
++        let reader_1 = MmdbReader::from(&String::from("unknown path"), COUNTRY_MMDB);
++        assert!(matches!(reader_1, MmdbReader::Default(_)));
++        let reader_2 = MmdbReader::from(&String::new(), COUNTRY_MMDB);
++        assert!(matches!(reader_2, MmdbReader::Default(_)));
++        let reader_3 = MmdbReader::from(&String::from("resources/repository/hr.png"), COUNTRY_MMDB);
++        assert!(matches!(reader_3, MmdbReader::Default(_)));
++        let reader_4 = MmdbReader::from(
++            &String::from("resources/DB/GeoLite2-Country.mmdb"),
++            COUNTRY_MMDB,
++        );
++        assert!(matches!(reader_4, MmdbReader::Custom(_)));
++        let reader_5 = MmdbReader::from(&String::from("resources/DB/GeoLite2-Country.mmdb"), &[]);
+
+----------------------------------------
+
+File: src/mmdb/types/mmdb_asn_entry.rs
+Status: added
+Changes: +37 -0
+Diff:
+@@ -0,0 +1,37 @@
++use serde::Deserialize;
++
++use crate::networking::types::asn::Asn;
++
++#[derive(Deserialize)]
++pub struct MmdbAsnEntry<'a> {
++    #[serde(alias = "autonomous_system_number", alias = "asn")]
++    code: MmdbAsnCode<'a>,
++    #[serde(alias = "autonomous_system_organization", alias = "as_name")]
++    name: Option<&'a str>,
++}
+
+----------------------------------------
+
+File: src/mmdb/types/mmdb_country_entry.rs
+Status: added
+Changes: +53 -0
+Diff:
+@@ -0,0 +1,53 @@
++use serde::Deserialize;
++
++use crate::countries::types::country::Country;
++
++#[derive(Deserialize)]
++#[serde(transparent)]
++pub struct MmdbCountryEntry<'a> {
++    #[serde(borrow)]
++    inner: MmdbCountryEntryInner<'a>,
++}
++
++impl MmdbCountryEntry<'_> {
++    pub fn get_country(&self) -> Country {
++        self.inner.get_country()
++    }
++}
++
+
+----------------------------------------
+
+File: src/mmdb/types/mmdb_reader.rs
+Status: modified
+Changes: +14 -9
+Diff:
+@@ -1,4 +1,7 @@
+-use maxminddb::Reader;
++use std::net::IpAddr;
++
++use maxminddb::{MaxMindDBError, Reader};
++use serde::Deserialize;
+ 
+ pub enum MmdbReader {
+     Default(Reader<&'static [u8]>),
+@@ -7,15 +10,17 @@ pub enum MmdbReader {
+ 
+
+----------------------------------------
+
+File: src/mmdb/types/mod.rs
+Status: modified
+Changes: +2 -0
+Diff:
+@@ -1 +1,3 @@
++pub mod mmdb_asn_entry;
++pub mod mmdb_country_entry;
+ pub mod mmdb_reader;
+
+----------------------------------------
+
+File: src/networking/manage_packets.rs
+Status: modified
+Changes: +6 -6
+Diff:
+@@ -5,7 +5,7 @@ use std::sync::{Arc, Mutex};
+ 
+ use chrono::Local;
+ use dns_lookup::lookup_addr;
+-use etherparse::{Ethernet2Header, LaxPacketHeaders, NetHeaders, TransportHeader};
++use etherparse::{LaxPacketHeaders, LinkHeader, NetHeaders, TransportHeader};
+ use pcap::{Address, Device};
+ 
+ use crate::mmdb::asn::get_asn;
+@@ -77,12 +77,12 @@ pub fn analyze_headers(
+ /// passed by reference on the basis of the packet header content.
+ /// Returns false if packet has to be skipped.
+ fn analyze_link_header(
+-    link_header: Option<Ethernet2Header>,
++    link_header: Option<LinkHeader>,
+     mac_address1: &mut Option<String>,
+     mac_address2: &mut Option<String>,
+
+----------------------------------------
+
+File: src/networking/types/asn.rs
+Status: modified
+Changes: +1 -1
+Diff:
+@@ -2,7 +2,7 @@
+ #[derive(Default, Clone, PartialEq, Eq, Hash, Debug)]
+ pub struct Asn {
+     /// Autonomous System number
+-    pub number: u32,
++    pub code: String,
+     /// Autonomous System name
+     pub name: String,
+ }
+
+----------------------------------------
+
+File: src/networking/types/host.rs
+Status: modified
+Changes: +12 -0
+Diff:
+@@ -11,3 +11,15 @@ pub struct Host {
+     /// Country
+     pub country: Country,
+ }
++
++/// Struct to represent a network host for representation in the thumbnail
++///
++/// This is necessary to remove possible duplicates in the thumbnail host list
++#[allow(clippy::module_name_repetitions)]
++#[derive(PartialEq)]
+
+----------------------------------------
+
+File: src/networking/types/my_device.rs
+Status: modified
+Changes: +1 -0
+Diff:
+@@ -10,6 +10,7 @@ use crate::networking::types::my_link_type::MyLinkType;
+ #[derive(Clone)]
+ pub struct MyDevice {
+     pub name: String,
++    #[cfg(target_os = "windows")]
+     pub desc: Option<String>,
+     pub addresses: Arc<Mutex<Vec<Address>>>,
+     pub link_type: MyLinkType,
+
+----------------------------------------
+
+File: src/translations/translations.rs
+Status: modified
+Changes: +85 -83
+Diff:
+@@ -12,7 +12,7 @@ pub fn choose_adapters_translation(language: Language) -> Text<'static, StyleTyp
+         Language::FR => "Sélectionnez une carte réseau à inspecter",
+         Language::ES => "Seleccione el adaptador de red que desea inspeccionar",
+         Language::PL => "Wybierz adapter sieciowy do inspekcji",
+-        Language::DE => "Wähle einen Netzwerkadapter zum inspizieren aus",
++        Language::DE => "Wähle einen Netzwerkadapter zum überwachen aus",
+         Language::UK => "Вибрати мережевий адаптер для інспекції",
+         Language::ZH => "选择需要监控的网络适配器",
+         Language::RO => "Selectați adaptor de rețea pentru a inspecta",
+@@ -310,7 +310,7 @@ pub fn ask_quit_translation(language: Language) -> Text<'static, StyleType> {
+         Language::IT => "Sei sicuro di voler interrompere questa analisi?",
+         Language::FR => "Êtes-vous sûr de vouloir quitter l'application ?",
+         Language::ES => "¿Estás seguro de que quieres dejar este análisis?",
+-        Language::PL => "Czy na pewno chcesz zakończyć analizę?",
++        Language::PL => "Jesteś pewien, że chcesz zakończyć analizę?",
+         Language::DE => "Bist du sicher, dass du diese Analyse beenden willst?",
+         Language::UK => "Чи справді хочеш закінчити аналіз?",
+         Language::ZH => "您确定退出当前监控吗?",
+@@ -328,27 +328,27 @@ pub fn ask_quit_translation(language: Language) -> Text<'static, StyleType> {
+     })
+ }
+ 
+-pub fn quit_analysis_translation(language: Language) -> String {
++pub fn quit_analysis_translation(language: Language) -> &'static str {
+     match language {
+-        Language::EN => "Quit analysis".to_string(),
+-        Language::IT => "Interrompi analisi".to_string(),
+-        Language::FR => "Quitter l'analyse".to_string(),
+-        Language::ES => "Quitar el análisis".to_string(),
+-        Language::PL => "Zakończ analize".to_string(),
+-        Language::DE => "Analyse beenden".to_string(),
+-        Language::UK => "Закінчити аналіз".to_string(),
+-        Language::ZH => "退出监控".to_string(),
+-        Language::RO => "Renunță la analiză".to_string(),
+-        Language::KO => "분석종료".to_string(),
+-        Language::TR => "Analizden çık".to_string(),
+-        Language::RU => "Закончить анализ".to_string(),
+-        Language::PT => "Sair da análise".to_string(),
+-        Language::EL => "Έξοδος ανάλυσης".to_string(),
+-        // Language::FA => "خروج از تحلیل".to_string(),
+-        Language::SV => "Avsluta analys".to_string(),
+-        Language::FI => "Lopeta analyysi".to_string(),
+-        Language::JA => "分析の終了".to_string(),
+-        Language::UZ => "Tahlildan chiqish".to_string(),
++        Language::EN => "Quit analysis",
++        Language::IT => "Interrompi analisi",
++        Language::FR => "Quitter l'analyse",
++        Language::ES => "Quitar el análisis",
++        Language::PL => "Zakończ analize",
++        Language::DE => "Analyse beenden",
++        Language::UK => "Закінчити аналіз",
++        Language::ZH => "退出监控",
++        Language::RO => "Renunță la analiză",
++        Language::KO => "분석종료",
++        Language::TR => "Analizden çık",
++        Language::RU => "Закончить анализ",
++        Language::PT => "Sair da análise",
++        Language::EL => "Έξοδος ανάλυσης",
++        // Language::FA => "خروج از تحلیل",
++        Language::SV => "Avsluta analys",
++        Language::FI => "Lopeta analyysi",
++        Language::JA => "分析の終了",
++        Language::UZ => "Tahlildan chiqish",
+     }
+ }
+ 
+@@ -376,27 +376,27 @@ pub fn ask_clear_all_translation(language: Language) -> Text<'static, StyleType>
+     })
+ }
+ 
+-pub fn clear_all_translation(language: Language) -> String {
++pub fn clear_all_translation(language: Language) -> &'static str {
+     match language {
+-        Language::EN => "Clear all".to_string(),
+-        Language::IT => "Elimina tutto".to_string(),
+-        Language::FR => "Tout effacer".to_string(),
+-        Language::ES => "Borrar todo".to_string(),
+-        Language::PL => "Wyczyść wszystko".to_string(),
+-        Language::DE => "Alle leeren".to_string(),
+-        Language::UK => "Видалити все".to_string(),
+-        Language::ZH => "清除所有".to_string(),
+-        Language::RO => "Ștergeți tot".to_string(),
+-        Language::KO => "모두 지우기".to_string(),
+-        Language::TR => "Hepsini temizle".to_string(),
+-        Language::RU => "Очистить всё".to_string(),
+-        Language::PT => "Limpar tudo".to_string(),
+-        Language::EL => "Εκκαθάριση όλων".to_string(),
+-        // Language::FA => "پاک کردن همه".to_string(),
+-        Language::SV => "Radera alla".to_string(),
+-        Language::FI => "Tyhjennä kaikki".to_string(),
+-        Language::JA => "すべて削除".to_string(),
+-        Language::UZ => "Barchasini tozalash".to_string(),
++        Language::EN => "Clear all",
++        Language::IT => "Elimina tutto",
++        Language::FR => "Tout effacer",
++        Language::ES => "Borrar todo",
++        Language::PL => "Wyczyść wszystko",
++        Language::DE => "Alle löschen",
++        Language::UK => "Видалити все",
++        Language::ZH => "清除所有",
++        Language::RO => "Ștergeți tot",
++        Language::KO => "모두 지우기",
++        Language::TR => "Hepsini temizle",
++        Language::RU => "Очистить всё",
++        Language::PT => "Limpar tudo",
++        Language::EL => "Εκκαθάριση όλων",
++        // Language::FA => "پاک کردن همه",
++        Language::SV => "Radera alla",
++        Language::FI => "Tyhjennä kaikki",
++        Language::JA => "すべて削除",
++        Language::UZ => "Barchasini tozalash",
+     }
+
+----------------------------------------
+
+File: src/translations/translations_2.rs
+Status: modified
+Changes: +10 -13
+Diff:
+@@ -150,10 +150,10 @@ pub fn only_top_30_items_translation(language: Language) -> &'static str {
+     match language {
+         Language::EN => "Only the top 30 items are displayed here",
+         Language::IT => "Solo i 30 maggiori elementi sono mostrati qui",
+-        Language::RU => "Тут показываются только первые 30 предметы",
++        Language::RU => "Показываются только первые 30 элементов",
+         Language::SV => "Endast de 30 främsta föremål visas här",
+         Language::FI => "Vain 30 parasta kohteita näytetään tässä",
+-        Language::DE => "Nur die obersten 30 artikel werden hier angezeigt",
++        Language::DE => "Nur die obersten 30 Elemente werden hier angezeigt",
+         Language::TR => "Sadece ilk 30 öğeler burda gösterilmektedir",
+         // Language::FA => "تنها ۳۰ موارد برتر در اینجا نمایش داده شده اند",
+         Language::ES => "Aquí sólo se muestran los 30 primeros elementos",
+@@ -193,7 +193,7 @@ pub fn only_top_30_items_translation(language: Language) -> &'static str {
+ //     }
+ // }
+ 
+-pub fn local_translation(language: Language) -> String {
++pub fn local_translation(language: Language) -> &'static str {
+     match language {
+         Language::EN => "Local network",
+         Language::IT => "Rete locale",
+@@ -215,17 +215,16 @@ pub fn local_translation(language: Language) -> String {
+         Language::PT => "Rede local",
+         _ => "Local network",
+     }
+-    .to_string()
+ }
+ 
+-pub fn unknown_translation(language: Language) -> String {
+
+----------------------------------------
+
+File: src/translations/translations_3.rs
+Status: modified
+Changes: +194 -18
+Diff:
+@@ -8,95 +8,176 @@ use crate::{Language, StyleType};
+ // This is referred to settings (General settings)
+ pub fn general_translation(language: Language) -> &'static str {
+     match language {
+-        Language::EN => "General",
++        Language::EN | Language::RO => "General",
++        // Language::FA => "عمومی",
+         Language::ES => "Generales",
+         Language::IT => "Generali",
++        Language::FR => "Général",
++        Language::DE => "Allgemein",
++        Language::PL => "Ogólne",
++        Language::RU => "Общие",
++        Language::JA => "一般",
++        Language::UZ => "Asosiy",
++        Language::SV => "Allmänt",
+         _ => "General",
+     }
+ }
+ 
+ pub fn zoom_translation(language: Language) -> &'static str {
+     match language {
+-        Language::EN | Language::IT | Language::ES => "Zoom",
++        Language::EN
++        | Language::IT
++        | Language::ES
++        | Language::FR
++        | Language::DE
++        | Language::RO
++        | Language::SV => "Zoom",
++        // Language::FA => "بزرگنمایی",
++        Language::PL => "Powiększenie",
++        Language::RU => "Масштаб интерфейса",
++        Language::JA => "ズーム",
++        Language::UZ => "Kattalashtirish",
+         _ => "Zoom",
+     }
+ }
+ 
+ pub fn mmdb_files_translation(language: Language) -> &'static str {
+     match language {
+         Language::EN => "Database files",
++        // Language::FA => "پرونده های پایگاه داده",
+         Language::ES => "Archivos de la base de datos",
+         Language::IT => "File di database",
++        Language::FR => "Fichiers de la base de données",
++        Language::DE => "Datenbank Dateien",
++        Language::PL => "Pliki bazy danych",
++        Language::RU => "Файлы базы данных",
++        Language::RO => "Fișiere bază de date",
++        Language::JA => "データベース ファイル",
++        Language::UZ => "Ma'lumotlar bazasi fayllari",
++        Language::SV => "Databasfiler",
+         _ => "Database files",
+     }
+ }
+ 
+ pub fn params_not_editable_translation(language: Language) -> &'static str {
+     match language {
+         Language::EN => "The following parameters can't be modified during the analysis",
++        // Language::FA => "مولفه های روبرو هنگام تحلیل قابل تغییر نیستند",
+         Language::ES => "Los siguientes parámetros no pueden modificarse durante el análisis",
+         Language::IT => "I seguenti parametri non sono modificabili durante l'analisi",
++        Language::FR => "Les paramètres suivants ne peuvent pas être modifiés durant l'analyse",
++        Language::DE => "Die folgenden Paramter können während der Analyse nicht verändert werden",
++        Language::PL => "Następujące parametry nie mogą być modyfikowane podczas analizy",
++        Language::RU => "Следующие параметры не могут быть изменены во время анализа трафика",
++        Language::RO => "Următorii parametri nu sunt modificabili în timpul analizei",
++        Language::JA => "以下のパラメーターは分析中は変更できません",
++        Language::UZ => "Tahlil vaqtida quydagi parametrlarni o'zgartirib bo'lmaydi",
++        Language::SV => "Följande parametrar kan inte ändras under analysen",
+         _ => "The following parameters can't be modified during the analysis",
+     }
+ }
+ 
+-// pub fn file_path_translation(language: Language) -> &'static str {
+-//     match language {
+-//         Language::EN => "File path",
+-//         Language::IT => "Percorso del file",
+-//         _ => "File path",
+-//     }
+-// }
+-
+ pub fn custom_style_translation(language: Language) -> &'static str {
+     match language {
+         Language::EN => "Custom style",
++        // Language::FA => "شیوه سفارشی",
+         Language::ES => "Estilo personalizado",
+         Language::IT => "Stile personalizzato",
++        Language::FR => "Style personnalisé",
++        Language::DE => "Benutzerdefinierter Stil",
++        Language::PL => "Niestandardowy styl",
++        Language::RU => "Свой стиль",
++        Language::RO => "Temă personalizată",
++        Language::JA => "カスタム スタイル",
++        Language::UZ => "Moslashtirilgan uslub",
++        Language::SV => "Anpassad stil",
+         _ => "Custom style",
+     }
+ }
+ 
+ pub fn copy_translation(language: Language) -> &'static str {
+     match language {
+         Language::EN => "Copy",
++        // Language::FA => "رونوشت",
+         Language::IT | Language::ES => "Copia",
++        Language::FR | Language::RO => "Copie",
++        Language::DE => "Kopieren",
++        Language::PL => "Kopiuj",
++        Language::RU => "Скопировать",
++        Language::JA => "コピー",
++        Language::UZ => "Nusxalash",
++        Language::SV => "Kopia",
+         _ => "Copy",
+     }
+ }
+ 
+ pub fn port_translation(language: Language) -> &'static str {
+     match language {
+-        Language::EN => "Port",
++        Language::EN
++        | Language::FR
++        | Language::DE
++        | Language::PL
++        | Language::RO
++        | Language::UZ
++        | Language::SV => "Port",
++        // Language::FA => "درگاه",
+         Language::ES => "Puerto",
+
+----------------------------------------
+
+File: src/translations/types/language.rs
+Status: modified
+Changes: +16 -0
+Diff:
+@@ -104,6 +104,22 @@ impl Language {
+         })))
+         .width(FLAGS_WIDTH_BIG)
+     }
++
++    pub fn is_up_to_date(self) -> bool {
++        matches!(
++            self,
++            Language::FR
++                | Language::EN
+
+----------------------------------------
+

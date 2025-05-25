@@ -1,0 +1,8 @@
+SmartDraft Command:
+pixi run ipython --pdb -m smartdraft.generator -- getumbrel/umbrel --previous-release 1.2.0-beta.2 --current-release 1.2.0 --project-domain System --min-significance 0.1 --writing-style "Automatic" --structure-type "Change Type" --group-commits --show-significance
+
+DeepRelease Command:
+docker run -it -v $(pwd):/outputs --env GITHUB_TOKEN=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 --network host --rm fgksgf/deeprelease run getumbrel/umbrel --since 202406160000 --until 202406182359 --save_dir=/outputs/umbrelos
+
+ConventionalChangelog Command:
+cd ../.cache/repo/getumbrel_umbrel && git checkout 1.2.0 && conventional-changelog -p angular -r 2 && git checkout -

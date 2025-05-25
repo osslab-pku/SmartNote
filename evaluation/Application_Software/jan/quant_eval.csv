@@ -1,0 +1,12 @@
+repo_name,rn_name,commit_coverage,info_entropy,tokens_count,automated_readability_index,dale_chall_readability,entity_percent,project_domain
+janhq/jan,4_zero_shot_promp_rn,0.0,2.0870793466088498,515,14.4,11.35,4.448742746615087,Application_Software
+janhq/jan,3_conventional_changelog,0.5714285714285714,0.6962122601251458,1155,71.0,17.44,0.2991772625280479,Application_Software
+janhq/jan,1_smartdraft_random_ctx,1.0,0.0,203,14.3,13.87,4.225352112676056,Application_Software
+janhq/jan,1_smartdraft_rn_expository,1.0,0.0,130,39.7,20.45,0.0,Application_Software
+janhq/jan,1_smartdraft_rn_automatic,1.0,1.0,286,15.3,13.01,4.332129963898916,Application_Software
+janhq/jan,1_smartdraft_no_rn_composer,1.0,0.0,280,15.1,11.95,3.169014084507042,Application_Software
+janhq/jan,0_original_rn,1.0,1.8350287858219632,474,21.2,13.78,1.3544018058690745,Application_Software
+janhq/jan,1_smartdraft_rn_automatic_no_llm,1.0,0.0,112,34.8,20.48,0.0,Application_Software
+janhq/jan,1_smartdraft_rn_descriptive,1.0,1.0,232,19.4,13.9,3.1963470319634704,Application_Software
+janhq/jan,1_smartdraft_rn_persuasive,1.0,1.0,286,15.3,13.01,4.332129963898916,Application_Software
+janhq/jan,2_deeprelease_rn,1.0,1.0,28,9.7,17.39,0.0,Application_Software

@@ -1,0 +1,1 @@
+# [1.9.0](https://github.com/fullstorydev/grpcurl/compare/v1.8.9...v1.9.0) (2024-04-09)

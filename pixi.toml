@@ -1,0 +1,54 @@
+[project]
+authors = ["hrz6976 <hrz6976@hotmail.com>"]
+channels = ["conda-forge"]
+description = "Add a short description here"
+name = "smartdraft"
+platforms = ["linux-64", "win-64"]
+version = "0.1.0"
+
+[tasks]
+
+[dependencies]
+python = "~=3.9"
+tqdm = "~=4.64.1"
+numpy = "~=1.26.1"
+scipy = "~=1.11.3"  # It fails to handle ~= in pypi-dependencies
+                    # maybe submit a bug report?
+scikit-learn = "~=1.0.2"
+pytest = "~=7.2.2"
+networkx = "~=2.6.3"
+pandas = "~=1.3.5"
+pip = ">=24.2,<25"
+jupyter = ">=1.0.0,<2"
+ipykernel = ">=6.29.5,<7"
+dynaconf = ">=3.2.6,<4"
+pyarrow = ">=17.0.0,<18"
+pygwalker = ">=0.3.17,<0.4"
+shap = ">=0.44.1,<0.45"
+tabulate = ">=0.9.0,<0.10"
+plotly = ">=5.23.0,<6"
+seaborn = ">=0.13.2,<0.14"
+gitpython = ">=3.1.43,<4"
+pygithub = ">=2.3.0,<3"
+loguru = ">=0.7.2,<0.8"
+multiprocess = ">=0.70.16,<0.71"
+ruff = ">=0.6.1,<0.7"
+mypy = ">=1.11.1,<2"
+tiktoken = ">=0.7.0,<0.8"
+dacite = ">=1.8.1,<2"
+brotli = ">=1.1.0,<2"
+textstat = ">=0.7.3,<0.8"
+nltk = ">=3.9.1,<4"
+
+[pypi-dependencies]
+multimodal-transformers = ">=0.3.1, <0.4"
+skimpy = ">=0.0.8, <0.0.9"
+xgboost = ">=2.1.1, <3"
+kaleido = ">=0.2.1, <0.3"
+semver = ">=3.0.2, <4"
+pydriller = ">=2.6, <3"
+openai = ">=1.30.5, <1.31"
+pyyaml = ">=6.0.1, <6.1"
+
+[system-requirements]
+linux = '4.19'

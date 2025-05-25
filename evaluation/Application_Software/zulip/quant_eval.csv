@@ -1,0 +1,12 @@
+repo_name,rn_name,commit_coverage,info_entropy,tokens_count,automated_readability_index,dale_chall_readability,entity_percent,project_domain
+zulip/zulip,4_zero_shot_promp_rn,0.0,2.556656707462823,547,16.8,11.89,7.534246575342466,Application_Software
+zulip/zulip,3_conventional_changelog,0.0,0.2219407328532109,6527,52.0,13.68,0.05397382269599245,Application_Software
+zulip/zulip,1_smartdraft_random_ctx,1.0,1.4591479170272448,291,41.3,15.94,6.028368794326241,Application_Software
+zulip/zulip,1_smartdraft_rn_expository,1.0,1.4591479170272448,291,41.3,15.94,5.673758865248227,Application_Software
+zulip/zulip,1_smartdraft_rn_automatic,1.0,1.4591479170272448,387,48.3,15.99,4.843304843304843,Application_Software
+zulip/zulip,1_smartdraft_no_rn_composer,1.0,1.792481250360578,398,46.6,15.85,4.788732394366197,Application_Software
+zulip/zulip,0_original_rn,0.0,0.0,272,13.5,12.77,11.76470588235294,Application_Software
+zulip/zulip,1_smartdraft_rn_automatic_no_llm,1.0,1.792481250360578,398,46.6,15.85,4.788732394366197,Application_Software
+zulip/zulip,1_smartdraft_rn_descriptive,1.0,1.792481250360578,856,19.2,12.71,2.057142857142857,Application_Software
+zulip/zulip,1_smartdraft_rn_persuasive,1.0,1.792481250360578,843,19.3,12.19,1.7162471395881007,Application_Software
+zulip/zulip,2_deeprelease_rn,0.0,1.8496017527145814,674,68.9,19.21,0.9523809523809524,Application_Software
