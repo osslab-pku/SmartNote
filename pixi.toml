@@ -39,6 +39,7 @@ dacite = ">=1.8.1,<2"
 brotli = ">=1.1.0,<2"
 textstat = ">=0.7.3,<0.8"
 nltk = ">=3.9.1,<4"
+httpx = ">=0.28.1,<0.29"
 
 [pypi-dependencies]
 multimodal-transformers = ">=0.3.1, <0.4"

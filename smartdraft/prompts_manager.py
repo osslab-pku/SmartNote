@@ -3,6 +3,7 @@ import openai
 import time
 import tiktoken
 from loguru import logger
+import httpx
 
 from .dtypes import PROJECT_DOMAIN_TYPE, STRUCTURE_TYPE, ReleaseNoteEntry, OpenAIConfig
 from .config import settings
@@ -39,9 +40,17 @@ def _limit_str_len(s: str):
 class PromptsManager:
     def __init__(self, openai_config: OpenAIConfig):
         # create an OpenAI client
+        httpx_proxy = None
+        try:
+            httpx_proxy = settings.proxy.https
+        except (KeyError, AttributeError):
+            pass
+
+        proxy_httpx_client = httpx.Client(proxy=httpx_proxy)
         self.openai_client = openai.Client(
             api_key=openai_config.api_key,
             base_url=openai_config.base_url,
+            http_client=proxy_httpx_client,
         )
         self._oai_conf = openai_config
         self.tokenizer = tiktoken.encoding_for_model(openai_config.model)
