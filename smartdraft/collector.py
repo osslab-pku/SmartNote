@@ -1,6 +1,6 @@
 import os
 import github
-from github import Github, GithubException
+from github import Github, GithubException, UnknownObjectException
 import re
 from typing import Literal, Optional, Tuple, List, Union
 from math import log
@@ -525,11 +525,27 @@ def collect_commits(
                 desc="Fetching releases",
                 total=repo_gh.get_releases().totalCount,
             ))
+    elif prev_release == cur_release:
+        logger.error(f"Previous release '{prev_release}' is the same as current release '{cur_release}'. Please specify 2 different releases.")
+        exit()
     else:
         logger.info(f"Fetching {prev_release}, {cur_release} for {name_with_owner}")
+
+        try:
+            tag = prev_release
+            gh_pre_releases = repo_gh.get_release(tag)
+            tag = cur_release
+            gh_cur_releases = repo_gh.get_release(cur_release)
+        except UnknownObjectException as e:
+            if e.status == 404:
+                logger.error(f"No GitHub release found for tag '{tag}' in {repo_gh.full_name}.")
+                exit()
+            else:
+                raise
+            
         _gh_releases = [
-            repo_gh.get_release(prev_release),
-            repo_gh.get_release(cur_release),
+            gh_pre_releases,
+            gh_cur_releases,
         ]
     
     _releases = []
@@ -555,6 +571,10 @@ def collect_commits(
 
     df_releases = process_releases(repo, _releases)
     df_commits = get_commit_stats(repo, df_releases, gh)
+    
+    if len(df_commits) == 0:
+        logger.error( f"No commits found in {name_with_owner} between {df_releases.iloc[0]['tag']} and {df_releases.iloc[1]['tag']}. Please ensure that the release tags are different and that the git diff returns at least 1 commit.")
+        exit()
 
     del _repo_stats["name"]
     _repo_stats["domain"] = project_domain
