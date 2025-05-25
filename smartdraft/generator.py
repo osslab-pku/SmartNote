@@ -3,6 +3,7 @@ from pathlib import Path
 from typing import List, Dict, Optional
 from loguru import logger
 from github import Github
+from github.GithubException import GithubException
 import re
 from dacite import from_dict
 import pandas as pd
@@ -468,7 +469,15 @@ class ReleaseNoteGenerator:
                     f"structure_type={structure_type}, min_significance={min_significance}")
         
         if project_domain == 'Automatic':
-            gh_repo = self._gh.get_repo(repo_name)
+            try:
+                gh_repo = self._gh.get_repo(repo_name)
+            except GithubException as e:
+                if e.status == 404:
+                    logger.error(f"Repository '{repo_name}' not found (404).")
+                    exit()
+                else:
+                    logger.error(f"GitHub API error: {e.status} - {e.data.get('message')}")
+                    exit()
             # get description and readme
             repo_desc = gh_repo.description
             repo_readme = gh_repo.get_readme().decoded_content.decode()
