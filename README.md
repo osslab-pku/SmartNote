@@ -110,3 +110,45 @@ Setting the minimum significance threshold to 0 means no commits will be removed
 
 ## 3.5. Commit Grouping
 The `--group-commits` arg determines whether commits are grouped by their associated pull request. Grouping commits helps improve readability by making the release note more concise. We recommend you group commits. 
+
+## Citation
+
+You can cite the paper using any of the following formats:
+
+---
+
+### 🔹 BibTeX
+```
+@article{daneshyan2025smartnote,
+  title     = {SmartNote: An LLM-Powered, Personalised Release Note Generator That Just Works},
+  author    = {Farbod Daneshyan and Runzhi He and Jianyu Wu and Minghui Zhou},
+  journal   = {Proceedings of the ACM on Software Engineering},
+  volume    = {2},
+  number    = {FSE},
+  article   = {FSE075},
+  year      = {2025},
+  month     = {July},
+  pages     = {24},
+  doi       = {10.1145/3729345},
+  url       = {https://doi.org/10.1145/3729345}
+}
+```
+---
+
+### 🔹 APA
+```
+Daneshyan, F., He, R., Wu, J., & Zhou, M. (2025). *SmartNote: An LLM-powered, personalised release note generator that just works*. _Proceedings of the ACM on Software Engineering_, 2(FSE), Article FSE075. https://doi.org/10.1145/3729345
+```
+---
+
+### 🔹 MLA
+```
+Daneshyan, Farbod, et al. "SmartNote: An LLM-Powered, Personalised Release Note Generator That Just Works." _Proceedings of the ACM on Software Engineering_, vol. 2, no. FSE, 2025, Article FSE075. https://doi.org/10.1145/3729345
+```
+---
+
+### 🔹 IEEE
+```
+F. Daneshyan, R. He, J. Wu, and M. Zhou, "SmartNote: An LLM-Powered, Personalised Release Note Generator That Just Works," _Proc. ACM Softw. Eng._, vol. 2, no. FSE, Art. FSE075, Jul. 2025, pp. 1–24. https://doi.org/10.1145/3729345
+```
+
