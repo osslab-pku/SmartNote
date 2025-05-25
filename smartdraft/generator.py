@@ -3,7 +3,7 @@ from pathlib import Path
 from typing import List, Dict, Optional
 from loguru import logger
 from github import Github
-from github.GithubException import GithubException
+from github.GithubException import GithubException, UnknownObjectException
 import re
 from dacite import from_dict
 import pandas as pd
@@ -480,7 +480,15 @@ class ReleaseNoteGenerator:
                     exit()
             # get description and readme
             repo_desc = gh_repo.description
-            repo_readme = gh_repo.get_readme().decoded_content.decode()
+            repo_readme = ""
+            try:
+                repo_readme = gh_repo.get_readme().decoded_content.decode()
+            except UnknownObjectException as e:
+                if e.status == 404:
+                    logger.error(f"No README found for repository '{gh_repo.full_name}', unable to automatically determine project domain. Please re-run and manually specify the domain.")
+                    exit()
+                else:
+                    raise  # re-raise if it's not a 404
             # send for classification
             project_domain = self._pm.determine_project_domain(repo_desc, repo_readme)
         

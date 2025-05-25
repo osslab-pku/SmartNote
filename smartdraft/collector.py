@@ -66,9 +66,16 @@ def get_stats_ghapi(
     try:
         repo = gh.get_repo(repo_name)
         _prs = repo.get_pulls(state="all").totalCount
+        commits_total_count = 0
+        try:
+            commits_total_count = repo.get_commits().totalCount
+        except GithubException as e:
+            if e.status == 409 and "Git Repository is empty" in str(e.data.get("message", "")):
+                logger.error(f"Repository '{repo.full_name}' is empty, can't continue.")
+                exit()
         return dict(
             name=repo.full_name,
-            commits=repo.get_commits().totalCount,
+            commits=commits_total_count,
             contributors=repo.get_contributors().totalCount,
             issues=repo.get_issues(state="all").totalCount - _prs,
             prs=_prs,
