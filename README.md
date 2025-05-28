@@ -44,7 +44,10 @@ api_key = "sk-AABBCCDDEEFFGGHHIIJJKKLLMMNNOOPPQQRRSS"
 # https = "http://127.0.0.1:1080" # optional
 ```
 
-## 2.4. Usage
+## 2.4. Local LLM
+SmartNote is designed to work with any LLM that has a compatible OpenAI API backend. We recommend users use [ollama](https://github.com/ollama/ollama). Follow their instructions to get started. Once your local LLM is deployed you can change the base url in the `.secrets.toml` file. 
+
+## 2.5. Usage
 
 The `smartdraft` module now supports a simple CLI interface. Below is an example of how to use the CLI to generate release notes for QuestDB between versions 8.0.3 and 8.1.0.
 
@@ -56,7 +59,7 @@ Note: Remove the `group-commits` flag to disable it. Similarly, remove `show-sig
 
 We suggest you run the command above in an interactive python shell to debug any issues that may arise. When an exception is raised, run `interact` to enter the interactive mode and inspect the variables.
 
-## 2.5. Command Line Arguments
+## 2.6. Command Line Arguments
 
 | Argument Name         | Description                                                                                                                                 |
 |-----------------------|---------------------------------------------------------------------------------------------------------------------------------------------|

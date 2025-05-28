@@ -21,7 +21,7 @@ release_types = ['Major', 'Minor', 'Patch', 'Unknown']
 datasets = "datasets/"
 plots = "plots/"
 models = "models/"
-cache = "cache/"
+cache = ".cache/"
 results = "results/"
 
 [embed]
