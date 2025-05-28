@@ -9,7 +9,7 @@ settings = None
 def load_settings():
     global settings
     settings = Dynaconf(
-        envvar_prefix="SMARTDRAFT",
+        envvar_prefix="SMARTNOTE",
         settings_files=['settings.toml', '.secrets.toml'],
         merge_enabled=True,
     )

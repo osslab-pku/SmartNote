@@ -40,12 +40,12 @@ zstd -cd docker_image.tar.zst | docker load
 To generate release notes for a project:
 
 ```bash
-docker run --rm -it -e SMARTDRAFT_GITHUB__TOKEN="ghp_XXXXXXXXXXXXXXXX" -e SMARTDRAFT_OPENAI__API_KEY="sk-XXXXXXXXXXXXXXXXX" --gpus all smartdraft twpayne/chezmoi --previous-release v2.52.0 --current-release v2.52.1 --group-commits --show-significance
+docker run --rm -it -e SMARTNOTE_GITHUB__TOKEN="ghp_XXXXXXXXXXXXXXXX" -e SMARTNOTE_OPENAI__API_KEY="sk-XXXXXXXXXXXXXXXXX" --gpus all smartnote twpayne/chezmoi --previous-release v2.52.0 --current-release v2.52.1 --group-commits --show-significance
 ```
 
 Note: Remove the `group-commits` flag to disable it. Similarly, remove `show-significance` flag to disable it. We list and explain the personalisation options in Section 4.
 
-Though we have not tested it, the docker image should work with any OpenAI-compliant LLM API (e.g., Cloudflare's AI Gateway or DeepSeek's API). You may set the `SMARTDRAFT_OPENAI__BASE_URL` environment variable to the API's base URL.
+Though we have not tested it, the docker image should work with any OpenAI-compliant LLM API (e.g., Cloudflare's AI Gateway or DeepSeek's API). You may set the `SMARTNOTE_OPENAI__BASE_URL` environment variable to the API's base URL.
 
 ## 2.2.1 Argument Breakdown
 | Component                                                                                                 | Description                                                                                                                     |
@@ -53,10 +53,10 @@ Though we have not tested it, the docker image should work with any OpenAI-compl
 | `docker run`                                                                                              | Runs a Docker container.                                                                                                        |
 | `--rm`                                                                                                    | Automatically removes the container once it exits.                                                                              |
 | `-it`                                                                                                     | Allocates an interactive terminal (useful for command-line tools).                                                              |
-| `-e SMARTDRAFT_GITHUB__TOKEN="ghp_XXXXXXXXXXXXXXXX"`                                                      | Sets the environment variable `SMARTDRAFT_GITHUB__TOKEN` to your GitHub Token for authentication with GitHub.                                           |
-| `-e SMARTDRAFT_OPENAI__API_KEY="sk-XXXXXXXXXXXXXXXXX"`                                                   | Sets the environment variable `SMARTDRAFT_OPENAI__API_KEY` to your OpenAI API key for authenticatation with the OpenAI API.                                |
+| `-e SMARTNOTE_GITHUB__TOKEN="ghp_XXXXXXXXXXXXXXXX"`                                                      | Sets the environment variable `SMARTNOTE_GITHUB__TOKEN` to your GitHub Token for authentication with GitHub.                                           |
+| `-e SMARTNOTE_OPENAI__API_KEY="sk-XXXXXXXXXXXXXXXXX"`                                                   | Sets the environment variable `SMARTNOTE_OPENAI__API_KEY` to your OpenAI API key for authenticatation with the OpenAI API.                                |
 | `--gpus all`                                                                                              | Grants the container access to all available GPUs.                                                                              |
-| `smartdraft`                                                                                              | The name of the Docker image being used (pre-built and includes the SmartDraft binary).                          |
+| `smartnote`                                                                                              | The name of the Docker image being used (pre-built and includes the SmartNote binary).                          |
 | `twpayne/chezmoi`                                                                                         | The name of the project repository being analysed.                                                                              |
 | `--previous-release v2.52.0`                                                                              | Specifies the previous release tag to compare against.                                                                          |
 | `--current-release v2.52.1`                                                                               | Specifies the new/current release tag.                                                                                          |

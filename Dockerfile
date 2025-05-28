@@ -26,15 +26,15 @@ COPY ./models/cls_gte_xgb/cls_gte_xgb_split.json /app/models/cls_gte_xgb/
 COPY ./models/flt_gte_xgb/flt_xgb_kfold_1.json /app/models/flt_gte_xgb/
 # Copy required files to the final image
 COPY ./settings.toml config.py /app/
-COPY ./smartdraft/ /app/smartdraft/
+COPY ./smartnote/ /app/smartnote/
 
 # Require environment variables
-ENV SMARTDRAFT_GITHUB__TOKEN=""
-ENV SMARTDRAFT_OPENAI__API_KEY=""
-ENV SMARTDRAFT_OPENAI__BASE_URL="https://api.openai.com/v1"
+ENV SMARTNOTE_GITHUB__TOKEN=""
+ENV SMARTNOTE_OPENAI__API_KEY=""
+ENV SMARTNOTE_OPENAI__BASE_URL="https://api.openai.com/v1"
 ENV HF_ENDPOINT="https://hf-mirror.com"
 ENV HF_HOME="/app/.cache/"
 ENV TIKTOKEN_CACHE="/app/.cache/tiktoken"
 
 # Run the shell-hook script
-ENTRYPOINT ["/bin/bash", "/shell-hook.sh", "python3", "-m", "smartdraft.generator"]
+ENTRYPOINT ["/bin/bash", "/shell-hook.sh", "python3", "-m", "smartnote.generator"]

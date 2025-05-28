@@ -13,7 +13,7 @@ from semver import VersionInfo
 from pydriller import Repository, ModificationType, Git as PyGit
 from loguru import logger
 from dacite import from_dict
-from smartdraft.prompts_manager import PromptsManager
+from smartnote.prompts_manager import PromptsManager
 
 from .config import settings
 from .languages import get_lang_names, infer_langids_onehot

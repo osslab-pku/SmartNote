@@ -49,10 +49,10 @@ SmartNote is designed to work with any LLM that has a compatible OpenAI API back
 
 ## 2.5. Usage
 
-The `smartdraft` module now supports a simple CLI interface. Below is an example of how to use the CLI to generate release notes for QuestDB between versions 8.0.3 and 8.1.0.
+The `smartnote` module now supports a simple CLI interface. Below is an example of how to use the CLI to generate release notes for QuestDB between versions 8.0.3 and 8.1.0.
 
 ```bash
-pixi run ipython --pdb -m smartdraft.generator -- questdb/questdb --previous-release 8.0.3 --current-release 8.1.0 --project-domain System --min-significance 0.15 --writing-style "Automatic" --structure-type "Change Type" --group-commits --show-significance
+pixi run ipython --pdb -m smartnote.generator -- questdb/questdb --previous-release 8.0.3 --current-release 8.1.0 --project-domain System --min-significance 0.15 --writing-style "Automatic" --structure-type "Change Type" --group-commits --show-significance
 ```
 
 Note: Remove the `group-commits` flag to disable it. Similarly, remove `show-significance` flag to disable it.
