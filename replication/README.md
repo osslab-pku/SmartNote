@@ -40,7 +40,7 @@ zstd -cd docker_image.tar.zst | docker load
 To generate release notes for a project:
 
 ```bash
-docker run --rm -it -e SMARTNOTE_GITHUB__TOKEN="ghp_XXXXXXXXXXXXXXXX" -e SMARTNOTE_OPENAI__API_KEY="sk-XXXXXXXXXXXXXXXXX" --gpus all smartnote twpayne/chezmoi --previous-release v2.52.0 --current-release v2.52.1 --group-commits --show-significance
+docker run --rm -it -e SMARTNOTE_GITHUB__TOKEN="ghp_XXXXXXXXXXXXXXXX" -e SMARTNOTE_OPENAI__API_KEY="sk-XXXXXXXXXXXXXXXXX" --gpus all smartnote:v2 twpayne/chezmoi --previous-release v2.52.0 --current-release v2.52.1 --group-commits --show-significance
 ```
 
 Note: Remove the `group-commits` flag to disable it. Similarly, remove `show-significance` flag to disable it. We list and explain the personalisation options in Section 4.
