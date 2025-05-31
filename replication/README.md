@@ -1,5 +1,5 @@
 # Download
-Replication Package Download Link: [https://doi.org/10.6084/m9.figshare.26994352.v2](https://doi.org/10.6084/m9.figshare.26994352.v2)
+Replication Package Download Link: [https://doi.org/10.6084/m9.figshare.26994352](https://doi.org/10.6084/m9.figshare.26994352)
 
 # 1. File Structure
 
