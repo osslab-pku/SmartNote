@@ -1,0 +1,24 @@
+# Ignore clutter, not needed files
+__pycache__/
+*.pyc
+*.pyo
+*.swp
+.git/
+.vscode/
+*.log
+*.pyd
+*.zst
+*.tar
+.pixi/
+.rattler/
+*.ipynb
+tests/
+
+# DO NOT exclude these, since you're copying them:
+# smartnote/
+# .cache/
+# models/
+# pixi.toml
+# pixi.lock
+# settings.toml
+# config.py

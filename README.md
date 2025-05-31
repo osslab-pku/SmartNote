@@ -1,13 +1,37 @@
 # 1. About
 SmartNote is a release note generation tool aimed at generating release notes **personalized** to your **project domain** and **audience type**. It does this by providing configurability and utilizating what is colloquially referred to as AI. More specifically, SmartNote utilizes **Supervised Learning** for classification and prioirity scoring and **LLMs (Large Language Models)** for summarization and formatting.
 
-## 1.1 Replication
-We have provided a docker image for those who want to simply generate a release note. For more information please see the README.md file in the replication folder. 
+## 1.1 Docker Image
+For ease of use, we provide a docker image with all the dependencies installed. Simply call the docker command with the desired variables. Below we provide an example and the environment variable information. For more information please see the README.md file in the replication folder.
 
-# 2. Setup Instructions
+```bash
+docker pull ghcr.io/osslab-pku/smartnote:v2
+```
+
+### 1.1.1 Example Command
+
+To generate release notes for a project run the following command:
+
+```bash
+docker run --rm -it -e SMARTNOTE_GITHUB__TOKEN="ghp_XXXXXXXXXXXXXXXX" -e SMARTNOTE_OPENAI__API_KEY="sk-XXXXXXXXXXXXXXXXX" --gpus all smartnote:v2 twpayne/chezmoi --previous-release v2.52.0 --current-release v2.52.1 --group-commits --show-significance
+```
+
+### 1.1.2 Environment Variables
+
+| Variable             | Description                                                      | Default Value                         |
+|----------------------------------|------------------------------------------------------------------|----------------------------------------|
+| `SMARTNOTE_GITHUB__TOKEN`        | GitHub token used for accessing repository metadata and commits. | *(empty)*                              |
+| `SMARTNOTE_OPENAI__API_KEY`      | API key for authenticating requests to OpenAI.                   | *(empty)*                              |
+| `SMARTNOTE_OPENAI__BASE_URL`     | Base URL for OpenAI API requests.                                | `https://api.openai.com/v1`            |
+| `HF_ENDPOINT`                    | Mirror endpoint for Hugging Face to speed up or reroute traffic. | `https://hf-mirror.com`                |
+| `HF_HOME`                        | Cache directory for Hugging Face models and token files.         | `/app/.cache/`                         |
+| `TIKTOKEN_CACHE`                 | Directory for caching `tiktoken` tokenizer data.                 | `/app/.cache/tiktoken`                 |
+
+
+# 2. Source Setup Instructions
 Before using SmartNote you need to prepare your working environment by installing the dependencies and correctly setting up the configuration file. Below you can find details on how to do that.
 
-## 2.1 Set up prerequisites
+## 2.1 Prerequisites
 We use conda and pixi for managing the dependencies of the project. To install:
 ```bash
 # install miniforge
@@ -19,7 +43,7 @@ curl -fsSL https://pixi.sh/install.sh | bash
 
 The commands above are for unix-like systems (Linux, MacOS). For Windows, you can download the Miniforge installer from [here](https://github.com/conda-forge/miniforge) and pixi from [here](https://pixi.sh).
 
-## 2.2 Install dependencies
+## 2.2 Dependencies
 To install the dependencies and activate the environment, run the following command:
 ```bash
 pixi install  # install dependencies

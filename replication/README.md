@@ -56,12 +56,23 @@ Though we have not tested it, the docker image should work with any OpenAI-compl
 | `-e SMARTNOTE_GITHUB__TOKEN="ghp_XXXXXXXXXXXXXXXX"`                                                      | Sets the environment variable `SMARTNOTE_GITHUB__TOKEN` to your GitHub Token for authentication with GitHub.                                           |
 | `-e SMARTNOTE_OPENAI__API_KEY="sk-XXXXXXXXXXXXXXXXX"`                                                   | Sets the environment variable `SMARTNOTE_OPENAI__API_KEY` to your OpenAI API key for authenticatation with the OpenAI API.                                |
 | `--gpus all`                                                                                              | Grants the container access to all available GPUs.                                                                              |
-| `smartnote`                                                                                              | The name of the Docker image being used (pre-built and includes the SmartNote binary).                          |
+| `smartnote:v2`                                                                                              | The name of the Docker image being used (pre-built and includes the SmartNote binary).                          |
 | `twpayne/chezmoi`                                                                                         | The name of the project repository being analysed.                                                                              |
 | `--previous-release v2.52.0`                                                                              | Specifies the previous release tag to compare against.                                                                          |
 | `--current-release v2.52.1`                                                                               | Specifies the new/current release tag.                                                                                          |
 | `--group-commits`                                                                                         | Groups similar commits together in the release notes.                                                                           |
 | `--show-significance`                                                                                     | Appends a significance score to each commit in the release note output.                                                         |
+
+## 2.2.2 Environment Variables
+
+| Variable             | Description                                                      | Default Value                         |
+|----------------------------------|------------------------------------------------------------------|----------------------------------------|
+| `SMARTNOTE_GITHUB__TOKEN`        | GitHub token used for accessing repository metadata and commits. | *(empty)*                              |
+| `SMARTNOTE_OPENAI__API_KEY`      | API key for authenticating requests to OpenAI.                   | *(empty)*                              |
+| `SMARTNOTE_OPENAI__BASE_URL`     | Base URL for OpenAI API requests.                                | `https://api.openai.com/v1`            |
+| `HF_ENDPOINT`                    | Mirror endpoint for Hugging Face to speed up or reroute traffic. | `https://hf-mirror.com`                |
+| `HF_HOME`                        | Cache directory for Hugging Face models and token files.         | `/app/.cache/`                         |
+| `TIKTOKEN_CACHE`                 | Directory for caching `tiktoken` tokenizer data.                 | `/app/.cache/tiktoken`                 |
 
 
 ## 2.3 LLM Key
@@ -133,7 +144,7 @@ The writing style determines how the content of the release note document is wor
 
 | #  | Writing Style | Description                                                                                                                                                                                                                                   |
 |----|---------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| -1 | Automatic     | The writing style will automatically be determined by the project domain. See the [project domain](#31-project-domain) section for more details on which project domain utilizes which writing style.                                         |
+| -1 | Automatic     | The writing style will automatically be determined by the project domain. See the project domain section for more details on which project domain utilizes which writing style.                                         |
 | 0  | Persuasive    | In addition to presenting the content of related commits/PRs/issues, provide additional information to help developers understand the changes, such as the rationale behind the changes, the impact of the changes, and guides for upgrading. |
 | 1  | Descriptive   | Rephrase the content of change-related commits/PRs/issues to increase the readability and summarize the content of similar commits/PRs/issues.                                                                                                |
 | 2  | Expository    | Directly list the content (usually title) of change-related commits/PRs/issues.                                                                                                                                                               |

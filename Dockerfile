@@ -1,11 +1,18 @@
 FROM ghcr.io/prefix-dev/pixi:latest
 
+LABEL org.opencontainers.image.description="SmartNote is a release note generation tool aimed at generating release notes personalized to your project domain and audience type."
+LABEL org.opencontainers.image.licenses="Mulan PSL v2"
+LABEL org.opencontainers.image.source="https://github.com/osslab-pku/SmartNote/"
+LABEL org.opencontainers.image.title="SmartNote"
+LABEL org.opencontainers.image.url="https://github.com/osslab-pku/SmartNote/"
+LABEL org.opencontainers.image.version="v2"
+
 # copy pixi.toml and pixi.lock to the container
 COPY ./pixi.toml ./pixi.lock /app/
 WORKDIR /app
 # run the `install` command (or any other). This will also install the dependencies into `/app/.pixi`
 # assumes that you have a `prod` environment defined in your pixi.toml
-RUN pixi install
+RUN pixi install && rm -rf ~/.cache/rattler
 # Create the shell-hook bash script to activate the environment
 RUN pixi shell-hook > /shell-hook.sh
 # RUN echo 'export LOGURU_COLORIZE="NO"' >> /shell-hook.sh
@@ -22,8 +29,8 @@ COPY ./.cache/hub/ /app/.cache/hub/
 COPY ./.cache/modules/ /app/.cache/modules/
 COPY ./.cache/tiktoken/ /app/.cache/tiktoken/
 # Copy classifier models
-COPY ./models/cls_gte_xgb/cls_gte_xgb_split.json /app/models/cls_gte_xgb/
-COPY ./models/flt_gte_xgb/flt_xgb_kfold_1.json /app/models/flt_gte_xgb/
+COPY ./models/gte_xgb_cls_model.json /app/models/
+COPY ./models/gte_xgb_flt_model.json /app/models/
 # Copy required files to the final image
 COPY ./settings.toml config.py /app/
 COPY ./smartnote/ /app/smartnote/
