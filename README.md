@@ -5,15 +5,15 @@ SmartNote is a release note generation tool aimed at generating release notes **
 For ease of use, we provide a docker image with all the dependencies installed. Simply call the docker command with the desired variables. Below we provide an example and the environment variable information. For more information please see the README.md file in the replication folder.
 
 ```bash
-docker pull ghcr.io/osslab-pku/smartnote:v2
+docker pull ghcr.io/osslab-pku/smartnote:latest
 ```
 
 ### 1.1.1 Example Command
 
-To generate release notes for a project run the following command:
+To generate release notes for a project run the following command. Please replace the GitHub and OpenAI keys with your own, for more information you can check the README.md file in the replication folder.
 
 ```bash
-docker run --rm -it -e SMARTNOTE_GITHUB__TOKEN="ghp_XXXXXXXXXXXXXXXX" -e SMARTNOTE_OPENAI__API_KEY="sk-XXXXXXXXXXXXXXXXX" --gpus all smartnote:v2 twpayne/chezmoi --previous-release v2.52.0 --current-release v2.52.1 --group-commits --show-significance
+docker run --rm -it -e SMARTNOTE_GITHUB__TOKEN="ghp_XXXXXXXXXXXXXXXX" -e SMARTNOTE_OPENAI__API_KEY="sk-XXXXXXXXXXXXXXXXX" --gpus all ghcr.io/osslab-pku/smartnote:latest twpayne/chezmoi --previous-release v2.52.0 --current-release v2.52.1 --group-commits --show-significance
 ```
 
 ### 1.1.2 Environment Variables
